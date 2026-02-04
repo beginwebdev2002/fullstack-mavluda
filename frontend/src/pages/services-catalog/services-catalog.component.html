@@ -6,12 +6,12 @@
       <div class="max-w-3xl">
         <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-primary/30 bg-primary/5 w-fit">
           <span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
-          <span class="text-primary text-xs font-bold uppercase tracking-widest">Available for Booking</span>
+          <span class="text-primary text-xs font-bold uppercase tracking-widest" i18n="@@servicesAvailable">Available for Booking</span>
         </div>
         <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-white mb-6">
-          Refined <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#edd685] to-primary">Services</span>
+          <ng-container i18n="@@servicesRefined">Refined</ng-container> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#edd685] to-primary" i18n="@@servicesTitleSuffix">Services</span>
         </h1>
-        <p class="text-gray-400 text-lg leading-relaxed border-l-2 border-primary/30 pl-6">
+        <p class="text-gray-400 text-lg leading-relaxed border-l-2 border-primary/30 pl-6" i18n="@@servicesDescription">
           A curated selection of medical aesthetic treatments and professional visage services designed to enhance your natural beauty through precision and artistry.
         </p>
       </div>
@@ -27,7 +27,7 @@
         <aside class="w-full lg:w-64 flex-shrink-0">
           <div class="sticky top-24">
             <div class="flex items-center justify-between mb-6 pb-2 border-b border-[#ffffff10]">
-              <h3 class="text-lg font-bold uppercase tracking-wider text-white">Refine</h3>
+              <h3 class="text-lg font-bold uppercase tracking-wider text-white" i18n="@@servicesRefineTitle">Refine</h3>
               <span class="material-symbols-outlined text-primary text-sm">filter_list</span>
             </div>
             <ul class="space-y-1">
@@ -46,9 +46,9 @@
               }
             </ul>
             <div class="mt-12 p-6 rounded-2xl bg-[#121212] border border-[#ffffff10]">
-              <h4 class="text-primary font-bold mb-2">Need Guidance?</h4>
-              <p class="text-xs text-gray-400 mb-4 leading-relaxed">Schedule a preliminary consultation to discuss your specific needs and expected results.</p>
-              <a class="text-xs font-bold text-white border-b border-primary pb-0.5 hover:text-primary transition-colors" href="#">Contact Support</a>
+              <h4 class="text-primary font-bold mb-2" i18n="@@servicesGuidanceTitle">Need Guidance?</h4>
+              <p class="text-xs text-gray-400 mb-4 leading-relaxed" i18n="@@servicesGuidanceText">Schedule a preliminary consultation to discuss your specific needs and expected results.</p>
+              <a class="text-xs font-bold text-white border-b border-primary pb-0.5 hover:text-primary transition-colors" href="#" i18n="@@servicesContactSupport">Contact Support</a>
             </div>
           </div>
         </aside>
@@ -64,7 +64,7 @@
                        class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 filter saturate-[0.9] group-hover:saturate-100"/>
                   <div class="absolute bottom-6 right-6 z-20">
                     <div class="bg-black/80 backdrop-blur-md border border-primary/40 pl-4 pr-5 py-2 rounded-full flex items-center gap-3">
-                      <span class="text-[10px] text-gray-300 uppercase tracking-wider font-medium">Honorarium</span>
+                      <span class="text-[10px] text-gray-300 uppercase tracking-wider font-medium" i18n="@@servicesHonorarium">Honorarium</span>
                       <span class="text-primary font-bold text-sm tracking-tight">{{ service.price | number }} TJS</span>
                     </div>
                   </div>
@@ -75,7 +75,7 @@
                   <p class="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3">{{ service.description }}</p>
                   <div class="mt-auto">
                     <button class="w-full h-12 rounded-xl bg-primary hover:bg-primary-hover text-[#0A0A0A] text-sm font-bold uppercase tracking-wider shadow-gold hover:shadow-gold-glow transition-all flex items-center justify-center gap-2 btn-primary-shimmer active:scale-[0.98]">
-                      <span>Secure Consultation</span>
+                      <span i18n="@@servicesSecureConsultation">Secure Consultation</span>
                       <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
                     </button>
                   </div>
@@ -85,14 +85,14 @@
              @if (filteredServices().length === 0) {
                 <div class="md:col-span-2 text-center py-20 border border-dashed border-white/10 rounded-2xl">
                     <span class="material-symbols-outlined text-gold/30 text-5xl">sentiment_dissatisfied</span>
-                    <h3 class="mt-4 font-display text-2xl text-white">No Services Found</h3>
-                    <p class="mt-2 text-text-muted italic">Please adjust your filter criteria.</p>
+                    <h3 class="mt-4 font-display text-2xl text-white" i18n="@@servicesNoFound">No Services Found</h3>
+                    <p class="mt-2 text-text-muted italic" i18n="@@servicesAdjustFilter">Please adjust your filter criteria.</p>
                 </div>
               }
           </div>
           <div class="mt-16 flex justify-center">
             <button class="px-8 py-4 border border-[#333] hover:border-primary text-gray-400 hover:text-primary rounded-lg uppercase tracking-widest text-xs font-bold transition-all flex items-center gap-2">
-              Load More Services
+              <span i18n="@@servicesLoadMore">Load More Services</span>
               <span class="material-symbols-outlined text-sm">expand_more</span>
             </button>
           </div>

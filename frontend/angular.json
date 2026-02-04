@@ -3,11 +3,18 @@
   "version": 1,
   "newProjectRoot": "",
   "projects": {
-    "app": {
+    "mavluda-beauty": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "./",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ru": "src/locale/messages.ru.xlf",
+          "tg": "src/locale/messages.tj.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -17,7 +24,10 @@
               "browser": "."
             },
             "browser": "index.tsx",
-            "tsConfig": "tsconfig.json"
+            "tsConfig": "tsconfig.json",
+            "polyfills": [
+              "@angular/localize/init"
+            ]
           },
           "configurations": {
             "production": {
@@ -27,6 +37,15 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "en": {
+              "localize": ["en-US"]
+            },
+            "ru": {
+              "localize": ["ru"]
+            },
+            "tg": {
+              "localize": ["tg"]
             }
           },
           "defaultConfiguration": "production"
@@ -38,13 +57,22 @@
           },
           "configurations": {
             "production": {
-              "buildTarget": "app:build:production"
+              "buildTarget": "mavluda-beauty:build:production"
             },
             "development": {
-              "buildTarget": "app:build:development"
+              "buildTarget": "mavluda-beauty:build:production"
+            },
+            "en": {
+              "buildTarget": "mavluda-beauty:build:production,en"
+            },
+            "ru": {
+              "buildTarget": "mavluda-beauty:build:production,ru"
+            },
+            "tg": {
+              "buildTarget": "mavluda-beauty:build:production,tg"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "production"
         }
       }
     }

@@ -5,12 +5,12 @@
   <!-- Header Section -->
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
     <div>
-      <h1 class="text-4xl font-serif text-gray-900 mb-2">Bridal Gown Collection</h1>
-      <p class="text-gray-500 font-light text-lg">Exquisite wedding dresses and their characteristics.</p>
+      <h1 class="text-4xl font-serif text-gray-900 mb-2" i18n="@@veilAdminTitle">Bridal Gown Collection</h1>
+      <p class="text-gray-500 font-light text-lg" i18n="@@veilAdminSubtitle">Exquisite wedding dresses and their characteristics.</p>
     </div>
     <button (click)="openAddModal()" class="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-medium">
       <span class="material-symbols-outlined text-xl">add</span>
-      <span>Add New Gown</span>
+      <span i18n="@@veilAdminAddBtn">Add New Gown</span>
     </button>
   </div>
 
@@ -59,11 +59,11 @@
         <div class="flex items-center justify-between pt-2">
           <div class="flex items-center gap-2">
             <span class="w-2.5 h-2.5 rounded-full" [class]="veil.stock > 0 ? 'bg-green-500 ' + (veil.stock > 1 ? 'animate-pulse' : '') : 'bg-yellow-500'"></span>
-            <span class="text-sm font-medium text-gray-900">{{ veil.stock > 0 ? veil.stock + ' Available' : 'Out of Stock' }}</span>
+            <span class="text-sm font-medium text-gray-900"><ng-container *ngIf="veil.stock > 0; else outStock"><ng-container i18n="@@veilAvailable">{{ veil.stock }} Available</ng-container></ng-container><ng-template #outStock><ng-container i18n="@@veilOutOfStock">Out of Stock</ng-container></ng-template></span>
           </div>
           <button (click)="openEditModal(veil)" class="flex items-center gap-1 text-primary hover:text-primary-hover transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform">
             <span class="material-symbols-outlined text-base">edit</span>
-            Edit
+            <span i18n="@@veilAdminEdit">Edit</span>
           </button>
         </div>
 
@@ -83,7 +83,7 @@
             
             <div class="bg-gray-50 px-6 py-4 border-b border-gray-100 flex justify-between items-center">
               <h3 class="text-xl font-serif font-bold text-gray-900">
-                {{ tempVeil.id === 0 ? 'Add New Gown' : 'Edit Gown Details' }}
+                @if(tempVeil.id === 0) { <span i18n="@@veilModalTitleNew">Add New Gown</span> } @else { <span i18n="@@veilModalTitleEdit">Edit Gown Details</span> }
               </h3>
               <button (click)="closeEditModal()" class="text-gray-400 hover:text-gray-500 transition-colors">
                 <span class="material-symbols-outlined">close</span>
@@ -160,7 +160,7 @@
 
             <div class="bg-gray-50 px-6 py-4 flex flex-row-reverse border-t border-gray-100 gap-3">
               <button (click)="saveVeil()" type="button" class="inline-flex justify-center rounded-lg bg-gold px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-gold/30 hover:bg-gold-dark hover:shadow-gold/50 transition-all transform active:scale-95">
-                {{ tempVeil.id === 0 ? 'Create Gown' : 'Save Changes' }}
+                @if(tempVeil.id === 0) { <span i18n="@@veilBtnCreate">Create Gown</span> } @else { <span i18n="@@veilBtnSave">Save Changes</span> }
               </button>
               <button (click)="closeEditModal()" type="button" class="inline-flex justify-center rounded-lg bg-white px-4 py-2 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-all">
                 Cancel

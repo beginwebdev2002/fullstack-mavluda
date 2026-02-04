@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" target-language="ru-RU" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="authHeaderSubtitle" datatype="html">
+        <source> Medical Luxury Ecosystem </source>
+        <target>Медицинская экосистема класса люкс</target>
+      </trans-unit>
+      <trans-unit id="authRoleClient" datatype="html">
+        <source>Client Portal</source>
+        <target>Портал клиента</target>
+      </trans-unit>
+      <trans-unit id="authRoleAdmin" datatype="html">
+        <source>Admin Access</source>
+        <target>Доступ администратора</target>
+      </trans-unit>
+      <trans-unit id="authEmailLabel" datatype="html">
+        <source>Email Address</source>
+        <target>Адрес электронной почты</target>
+      </trans-unit>
+      <trans-unit id="authPasswordLabel" datatype="html">
+        <source>Password</source>
+        <target>Пароль</target>
+      </trans-unit>
+      <trans-unit id="authRememberMe" datatype="html">
+        <source>Remember me</source>
+        <target>Запомнить меня</target>
+      </trans-unit>
+      <trans-unit id="authForgotPassword" datatype="html">
+        <source>Forgot password?</source>
+        <target>Забыли пароль?</target>
+      </trans-unit>
+      <trans-unit id="authSigningIn" datatype="html">
+        <source>Signing In...</source>
+        <target>Вход...</target>
+      </trans-unit>
+      <trans-unit id="authSignIn" datatype="html">
+        <source>Sign In</source>
+        <target>Войти</target>
+      </trans-unit>
+      <trans-unit id="authOr" datatype="html">
+        <source>Or</source>
+        <target>Или</target>
+      </trans-unit>
+      <trans-unit id="authTelegram" datatype="html">
+        <source>Continue with Telegram</source>
+        <target>Продолжить через Telegram</target>
+      </trans-unit>
+      <trans-unit id="authSecurity" datatype="html">
+        <source> Secure Access • End-to-End Encrypted </source>
+        <target>Безопасный доступ • Сквозное шифрование</target>
+      </trans-unit>
+      <trans-unit id="authSwitchTheme" datatype="html">
+        <source>Switch Theme</source>
+        <target>Сменить тему</target>
+      </trans-unit>
+      <trans-unit id="authCopyright" datatype="html">
+        <source> © 2024 Mavluda Azizova. All rights reserved. </source>
+        <target>© 2024 Mavluda Azizova. Все права защищены.</target>
+      </trans-unit>
+      <trans-unit id="dashboardTitle" datatype="html">
+        <source>Dashboard Overview</source>
+        <target>Обзор панели</target>
+      </trans-unit>
+      <trans-unit id="dashboardExport" datatype="html">
+        <source> Export Data </source>
+        <target>Экспорт</target>
+      </trans-unit>
+      <trans-unit id="dashboardNew" datatype="html">
+        <source> New + </source>
+        <target>Новый +</target>
+      </trans-unit>
+      <trans-unit id="dashboardRevenueTitle" datatype="html">
+        <source>Revenue Analytics</source>
+        <target>Аналитика доходов</target>
+      </trans-unit>
+      <trans-unit id="dashboardRevenueSubtitle" datatype="html">
+        <source>Monthly performance overview</source>
+        <target>Месячный обзор эффективности</target>
+      </trans-unit>
+      <trans-unit id="dashboardLast30Days" datatype="html">
+        <source>Last 30 Days</source>
+        <target>Последние 30 дней</target>
+      </trans-unit>
+      <trans-unit id="dashboardActivityTitle" datatype="html">
+        <source>Recent Activity</source>
+        <target>Недавняя активность</target>
+      </trans-unit>
+      <trans-unit id="headerSearchPlaceholder" datatype="html">
+        <source>Search...</source>
+        <target>Поиск...</target>
+      </trans-unit>
+      <trans-unit id="headerClientSite" datatype="html">
+        <source>Client Site</source>
+        <target>Сайт клиента</target>
+      </trans-unit>
+      <trans-unit id="sidebar.dashboard" datatype="html">
+        <source>Dashboard</source>
+        <target>Дашборд</target>
+      </trans-unit>
+      <trans-unit id="sidebar.veil" datatype="html">
+        <source>Veil</source>
+        <target>Вейл</target>
+      </trans-unit>
+      <trans-unit id="sidebar.services" datatype="html">
+        <source>Services</source>
+        <target>Услуги</target>
+      </trans-unit>
+      <trans-unit id="sidebar.clients" datatype="html">
+        <source>Clients</source>
+        <target>Клиенты</target>
+      </trans-unit>
+      <trans-unit id="sidebar.gallery" datatype="html">
+        <source>Gallery</source>
+        <target>Галерея</target>
+      </trans-unit>
+      <trans-unit id="sidebar.settings" datatype="html">
+        <source>Settings</source>
+        <target>Настройки</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

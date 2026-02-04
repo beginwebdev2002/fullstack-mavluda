@@ -3,8 +3,8 @@
   <!-- Header -->
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
     <div>
-      <h2 class="font-serif text-4xl text-gray-900 mb-2">Gallery &amp; Portfolio</h2>
-      <p class="text-gray-500">Manage your luxury portfolio imagery and categories.</p>
+      <h2 class="font-serif text-4xl text-gray-900 mb-2" i18n="@@galleryTitle">Gallery &amp; Portfolio</h2>
+      <p class="text-gray-500" i18n="@@gallerySubtitle">Manage your luxury portfolio imagery and categories.</p>
     </div>
     <div class="flex space-x-3">
       <div class="flex bg-white rounded-lg p-1 border border-gray-200">
@@ -27,7 +27,7 @@
       </div>
       <button (click)="openAddModal()" class="flex items-center px-5 py-2.5 bg-primary hover:bg-primary-hover text-white rounded-lg shadow-gold hover:shadow-gold-lg transition-all font-medium">
         <span class="material-symbols-outlined mr-2">add_photo_alternate</span>
-        Upload New Image
+        <span i18n="@@galleryBtnUpload">Upload New Image</span>
       </button>
     </div>
   </div>
@@ -42,7 +42,7 @@
           ? 'border-primary text-primary' 
           : 'border-transparent text-gray-500 hover:text-gray-700'"
       >
-        {{ filter === 'All' ? 'All Images' : filter }}
+        @if(filter === 'All') { <ng-container i18n="@@galleryFilterAll">All Images</ng-container> } @else { {{ filter }} }
       </button>
     }
   </div>
@@ -60,8 +60,8 @@
     <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform">
       <span class="material-symbols-outlined text-3xl text-primary">cloud_upload</span>
     </div>
-    <h3 class="font-serif text-lg text-gray-800 mb-1">Drag and drop files here</h3>
-    <p class="text-sm text-gray-500">Supported formats: JPG, PNG, WEBP (Max 5MB)</p>
+    <h3 class="font-serif text-lg text-gray-800 mb-1" i18n="@@galleryDragDropTitle">Drag and drop files here</h3>
+    <p class="text-sm text-gray-500" i18n="@@galleryDragDropSubtitle">Supported formats: JPG, PNG, WEBP (Max 5MB)</p>
   </div>
 
   @if (viewMode() === 'grid') {
@@ -90,7 +90,7 @@
               </div>
               <button (click)="openModal(image)" class="flex items-center gap-1.5 text-xs font-medium text-gray-500 hover:text-primary transition-all opacity-0 group-hover:opacity-100 duration-300" aria-label="Edit image details">
                 <span class="material-symbols-outlined !text-base">edit</span>
-                Edit
+                <span i18n="@@galleryGridEdit">Edit</span>
               </button>
             </div>
           </div>
@@ -104,13 +104,13 @@
           <table class="min-w-full divide-y divide-gray-100">
               <thead class="bg-gray-50">
                   <tr>
-                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Image</th>
-                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">File Info</th>
-                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
-                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" i18n="@@galleryTableImage">Image</th>
+                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" i18n="@@galleryTableInfo">File Info</th>
+                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" i18n="@@galleryTableCategory">Category</th>
+                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" i18n="@@galleryTableDate">Date</th>
+                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" i18n="@@galleryTableStatus">Status</th>
                       <th scope="col" class="relative px-6 py-3">
-                          <span class="sr-only">Actions</span>
+                          <span class="sr-only" i18n="@@galleryTableActions">Actions</span>
                       </th>
                   </tr>
               </thead>
@@ -139,8 +139,8 @@
                               </span>
                           </td>
                           <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium space-x-4">
-                              <button (click)="openModal(image)" class="text-primary hover:text-primary-hover transition-colors">Edit</button>
-                              <button (click)="deleteImage(image.id)" class="text-red-500 hover:text-red-700 transition-colors">Delete</button>
+                              <button (click)="openModal(image)" class="text-primary hover:text-primary-hover transition-colors" i18n="@@galleryActionEdit">Edit</button>
+                              <button (click)="deleteImage(image.id)" class="text-red-500 hover:text-red-700 transition-colors" i18n="@@galleryActionDelete">Delete</button>
                           </td>
                       </tr>
                   }
@@ -156,7 +156,9 @@
   <div class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-page-enter">
     <div class="bg-white rounded-xl shadow-2xl w-full max-w-3xl overflow-hidden animate-slide-up">
       <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
-        <h3 class="font-display text-xl text-gray-900">{{ currentImage.id === 0 ? 'Upload New Image' : 'Edit Image Details' }}</h3>
+        <h3 class="font-display text-xl text-gray-900">
+          @if(currentImage.id === 0) { <span i18n="@@galleryModalTitleNew">Upload New Image</span> } @else { <span i18n="@@galleryModalTitleEdit">Edit Image Details</span> }
+        </h3>
         <button (click)="closeModal()" class="text-gray-400 hover:text-gray-600">
           <span class="material-symbols-outlined">close</span>
         </button>
@@ -164,20 +166,20 @@
       <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-x-8">
         <!-- Image Uploader -->
         <div class="space-y-2 mb-6 md:mb-0">
-          <label class="block text-sm font-medium text-gray-700">Image Preview</label>
+          <label class="block text-sm font-medium text-gray-700" i18n="@@galleryLabelPreview">Image Preview</label>
           <div (click)="fileInput.click()" class="aspect-[4/3] w-full rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center relative group cursor-pointer hover:border-primary transition-colors bg-gray-50">
               @if (currentImage.url) {
                   <img [src]="currentImage.url" alt="Image preview" class="w-full h-full object-cover rounded-lg absolute inset-0">
                   <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                     <div class="text-center text-white">
                       <span class="material-symbols-outlined text-3xl">edit</span>
-                      <p class="text-xs mt-1 font-semibold">Change Image</p>
+                      <p class="text-xs mt-1 font-semibold" i18n="@@galleryChangeImage">Change Image</p>
                     </div>
                   </div>
               } @else {
                   <div class="text-center text-gray-500">
                       <span class="material-symbols-outlined text-4xl">add_photo_alternate</span>
-                      <p class="text-xs mt-2 font-semibold">Click to upload</p>
+                      <p class="text-xs mt-2 font-semibold" i18n="@@galleryClickToUpload">Click to upload</p>
                   </div>
               }
           </div>
@@ -187,11 +189,11 @@
         <!-- Form Fields -->
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Title</label>
+            <label class="block text-sm font-medium text-gray-700 mb-1" i18n="@@galleryLabelTitle">Title</label>
             <input [(ngModel)]="currentImage.title" class="w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm" type="text"/>
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Category</label>
+            <label class="block text-sm font-medium text-gray-700 mb-1" i18n="@@galleryLabelCategory">Category</label>
             <select [(ngModel)]="currentImage.category" class="w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm">
               @for(cat of filters; track cat) {
                 @if(cat !== 'All') {
@@ -201,19 +203,19 @@
             </select>
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Alt Text</label>
+            <label class="block text-sm font-medium text-gray-700 mb-1" i18n="@@galleryLabelAlt">Alt Text</label>
             <input [(ngModel)]="currentImage.alt" class="w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm" type="text"/>
           </div>
         </div>
       </div>
       <div class="px-6 py-4 bg-gray-50 flex justify-end space-x-3">
-        <button (click)="closeModal()" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg text-sm font-medium transition-colors">Cancel</button>
+        <button (click)="closeModal()" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg text-sm font-medium transition-colors" i18n="@@galleryBtnCancel">Cancel</button>
         <button 
           (click)="saveImage()" 
           class="px-4 py-2 bg-primary text-black hover:bg-primary-hover rounded-lg text-sm font-medium transition-colors shadow-md disabled:bg-gray-300 disabled:cursor-not-allowed"
           [disabled]="currentImage.id === 0 && !currentImage.url"
         >
-          {{ currentImage.id === 0 ? 'Upload Image' : 'Save Changes' }}
+          @if(currentImage.id === 0) { <span i18n="@@galleryBtnUploadImage">Upload Image</span> } @else { <span i18n="@@galleryBtnSaveChanges">Save Changes</span> }
         </button>
       </div>
     </div>
@@ -240,7 +242,7 @@
              @if (isImageLoading()) {
                 <div class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm">
                     <div class="w-12 h-12 border-4 border-white/20 border-t-gold rounded-full animate-spin mb-3"></div>
-                    <p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-medium animate-pulse">Loading Asset</p>
+                    <p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-medium animate-pulse" i18n="@@galleryLoading">Loading Asset</p>
                 </div>
              }
 
@@ -255,7 +257,7 @@
              >
           </div>
           
-          <p class="text-white/40 text-xs mt-6 font-medium tracking-[0.3em] uppercase animate-fade-in text-center">Mavluda Beauty • Portfolio</p>
+          <p class="text-white/40 text-xs mt-6 font-medium tracking-[0.3em] uppercase animate-fade-in text-center" i18n="@@galleryFooter">Mavluda Beauty • Portfolio</p>
       </div>
   </div>
 }

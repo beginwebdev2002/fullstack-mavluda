@@ -33,6 +33,7 @@ import { LanguageSwitcherComponent } from '../../features/language-selection/lan
             type="text" 
             class="block w-full pl-10 pr-3 py-2.5 border border-gray-200 rounded-lg leading-5 bg-gray-50 placeholder-gray-400 text-gray-900 focus:outline-none focus:bg-white focus:ring-1 focus:ring-gold focus:border-gold sm:text-sm transition-all duration-200" 
             placeholder="Search..."
+            i18n-placeholder="Header search placeholder@@headerSearchPlaceholder"
           >
         </div>
       </div>
@@ -42,7 +43,7 @@ import { LanguageSwitcherComponent } from '../../features/language-selection/lan
         
         <!-- Client View Button -->
         <a routerLink="/user/home" class="hidden md:flex items-center gap-2 px-4 py-2 text-xs font-bold text-gold border border-gold rounded-full hover:bg-gold hover:text-white transition-all duration-300 uppercase tracking-widest shadow-gold-sm hover:shadow-gold group">
-           <span>Client Site</span>
+           <span i18n="Client Site link text@@headerClientSite">Client Site</span>
            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-0.5 transition-transform"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         </a>
 

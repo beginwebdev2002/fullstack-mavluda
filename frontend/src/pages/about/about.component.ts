@@ -18,7 +18,7 @@ export class AboutComponent {
   contactForm = this.fb.group({
     fullName: ['', Validators.required],
     phoneNumber: ['', Validators.required],
-    serviceOfInterest: ['Select a treatment...', Validators.required],
+    serviceOfInterest: ['', Validators.required],
     message: ['']
   });
 

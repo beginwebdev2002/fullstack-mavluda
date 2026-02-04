@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="authHeaderSubtitle" datatype="html">
+        <source> Medical Luxury Ecosystem </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">24,30</context>
+        </context-group>
+        <note priority="1" from="description">Auth header subtitle</note>
+      </trans-unit>
+      <trans-unit id="authRoleClient" datatype="html">
+        <source>Client Portal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">42,46</context>
+        </context-group>
+        <note priority="1" from="description">Auth role client</note>
+      </trans-unit>
+      <trans-unit id="authRoleAdmin" datatype="html">
+        <source>Admin Access</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">53,57</context>
+        </context-group>
+        <note priority="1" from="description">Auth role admin</note>
+      </trans-unit>
+      <trans-unit id="authEmailLabel" datatype="html">
+        <source>Email Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">63,67</context>
+        </context-group>
+        <note priority="1" from="description">Auth email label</note>
+      </trans-unit>
+      <trans-unit id="authPasswordLabel" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">85,89</context>
+        </context-group>
+        <note priority="1" from="description">Auth password label</note>
+      </trans-unit>
+      <trans-unit id="authRememberMe" datatype="html">
+        <source>Remember me</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">120,124</context>
+        </context-group>
+        <note priority="1" from="description">Auth remember me</note>
+      </trans-unit>
+      <trans-unit id="authForgotPassword" datatype="html">
+        <source>Forgot password?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">127,132</context>
+        </context-group>
+        <note priority="1" from="description">Auth forgot password</note>
+      </trans-unit>
+      <trans-unit id="authSigningIn" datatype="html">
+        <source>Signing In...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">157,160</context>
+        </context-group>
+        <note priority="1" from="description">Auth signing in</note>
+      </trans-unit>
+      <trans-unit id="authSignIn" datatype="html">
+        <source>Sign In</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">159,161</context>
+        </context-group>
+        <note priority="1" from="description">Auth sign in button</note>
+      </trans-unit>
+      <trans-unit id="authOr" datatype="html">
+        <source>Or</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">174,176</context>
+        </context-group>
+        <note priority="1" from="description">Auth divider or</note>
+      </trans-unit>
+      <trans-unit id="authTelegram" datatype="html">
+        <source>Continue with Telegram</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">197,204</context>
+        </context-group>
+        <note priority="1" from="description">Auth telegram button</note>
+      </trans-unit>
+      <trans-unit id="authSecurity" datatype="html">
+        <source> Secure Access • End-to-End Encrypted </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">210,215</context>
+        </context-group>
+        <note priority="1" from="description">Auth footer security</note>
+      </trans-unit>
+      <trans-unit id="authSwitchTheme" datatype="html">
+        <source>Switch Theme</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">221,224</context>
+        </context-group>
+        <note priority="1" from="description">Auth switch theme</note>
+      </trans-unit>
+      <trans-unit id="authCopyright" datatype="html">
+        <source> © 2024 Mavluda Azizova. All rights reserved. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
+          <context context-type="linenumber">232,236</context>
+        </context-group>
+        <note priority="1" from="description">Auth copyright</note>
+      </trans-unit>
+      <trans-unit id="dashboardTitle" datatype="html">
+        <source>Dashboard Overview</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">6,9</context>
+        </context-group>
+        <note priority="1" from="description">Dashboard title</note>
+      </trans-unit>
+      <trans-unit id="dashboardExport" datatype="html">
+        <source> Export Data </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+        <note priority="1" from="description">Dashboard export</note>
+      </trans-unit>
+      <trans-unit id="dashboardNew" datatype="html">
+        <source> New + </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">14,20</context>
+        </context-group>
+        <note priority="1" from="description">Dashboard new</note>
+      </trans-unit>
+      <trans-unit id="dashboardRevenueTitle" datatype="html">
+        <source>Revenue Analytics</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+        <note priority="1" from="description">Dashboard revenue title</note>
+      </trans-unit>
+      <trans-unit id="dashboardRevenueSubtitle" datatype="html">
+        <source>Monthly performance overview</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">46,48</context>
+        </context-group>
+        <note priority="1" from="description">Dashboard revenue subtitle</note>
+      </trans-unit>
+      <trans-unit id="dashboardLast30Days" datatype="html">
+        <source>Last 30 Days</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">49,53</context>
+        </context-group>
+        <note priority="1" from="description">Dashboard last 30 days</note>
+      </trans-unit>
+      <trans-unit id="dashboardActivityTitle" datatype="html">
+        <source>Recent Activity</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">73,76</context>
+        </context-group>
+        <note priority="1" from="description">Dashboard activity title</note>
+      </trans-unit>
+      <trans-unit id="headerSearchPlaceholder" datatype="html">
+        <source>Search...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/widgets/header/header.component.ts</context>
+          <context context-type="linenumber">35,40</context>
+        </context-group>
+        <note priority="1" from="description">Header search placeholder</note>
+      </trans-unit>
+      <trans-unit id="headerClientSite" datatype="html">
+        <source>Client Site</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/widgets/header/header.component.ts</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+        <note priority="1" from="description">Client Site link text</note>
+      </trans-unit>
+      <trans-unit id="sidebar.dashboard" datatype="html">
+        <source>Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/widgets/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.veil" datatype="html">
+        <source>Veil</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/widgets/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.services" datatype="html">
+        <source>Services</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/widgets/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.clients" datatype="html">
+        <source>Clients</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/widgets/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.gallery" datatype="html">
+        <source>Gallery</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/widgets/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sidebar.settings" datatype="html">
+        <source>Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/widgets/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

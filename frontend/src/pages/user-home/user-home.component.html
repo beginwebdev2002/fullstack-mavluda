@@ -7,21 +7,21 @@
             <div class="flex flex-col gap-8 order-2 lg:order-1">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 w-fit">
                     <span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
-                    <span class="text-primary text-xs font-bold uppercase tracking-widest">Medical Aesthetics</span>
+                    <span class="text-primary text-xs font-bold uppercase tracking-widest" i18n="@@homeLabelMedicalAesthetics">Medical Aesthetics</span>
                 </div>
                 <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif font-bold leading-[1.1] tracking-tight text-white">
-                    Redefining <br/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#edd685] to-primary">Aesthetic Excellence</span>
+                    <ng-container i18n="@@homeHeroTitleLine1">Redefining</ng-container> <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#edd685] to-primary" i18n="@@homeHeroTitleLine2">Aesthetic Excellence</span>
                 </h1>
-                <p class="text-gray-400 text-lg leading-relaxed max-w-xl border-l-2 border-primary/30 pl-6">
+                <p class="text-gray-400 text-lg leading-relaxed max-w-xl border-l-2 border-primary/30 pl-6" i18n="@@homeHeroSubtitle">
                     Mavluda Azizova — Elite Visagiste & Medical Aesthetics Specialist. Where advanced Medical Science meets artistic precision for natural, transformative results.
                 </p>
                 <div class="flex flex-wrap gap-4 pt-4">
                     <button class="h-14 min-w-[200px] px-8 bg-primary hover:bg-primary-hover text-[#0A0A0A] text-base font-bold uppercase tracking-wider rounded transition-all shadow-gold flex items-center justify-center gap-2 group btn-primary-shimmer active:scale-[0.98]">
-                        <span>Secure Consultation</span>
+                        <span i18n="@@homeBtnSecureConsultation">Secure Consultation</span>
                         <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
                     </button>
-                    <a routerLink="/user/portfolio" class="h-14 min-w-[180px] px-8 bg-transparent border border-[#ffffff30] hover:border-primary hover:text-primary text-white text-base font-bold uppercase tracking-wider rounded transition-all flex items-center justify-center">
+                    <a routerLink="/user/portfolio" class="h-14 min-w-[180px] px-8 bg-transparent border border-[#ffffff30] hover:border-primary hover:text-primary text-white text-base font-bold uppercase tracking-wider rounded transition-all flex items-center justify-center" i18n="@@homeBtnViewPortfolio">
                         View Portfolio
                     </a>
                 </div>
@@ -32,7 +32,7 @@
                         <img ngSrc="https://lh3.googleusercontent.com/aida-public/AB6AXuCN_i0UQ2DDBO3oiICvkDjAAQV4CBheKjtZbeV5zkQ3A3tngd9-v_70jN19UdyigQVFmmIJDEC6KKFrFXpRZnADtipZUJtbLTQrkC2elu6cCE8YLFAfsNR4Sy2SSAkC9vrYzA1VIzXnfpODZ7BB0sLbToeWMEeyWAB73l2Knzq96QXhRvBQlRlC3T7NRYn2TyQGjGmRmuoej4liuPk-DWB4caahTA2ZC7ui3ZRdGP1RwFDSRGLLzJclNcKQCbsaytClAoq-wBZgNMuu" width="40" height="40" alt="Client Portrait 2" class="h-10 w-10 rounded-full border-2 border-background-dark object-cover"/>
                         <img ngSrc="https://lh3.googleusercontent.com/aida-public/AB6AXuD08o6hF5_pbFiIJqYs4VYYrPPviAtlB2PjR4z2lZYzuT3rcSqK7UbUQNiOic7Y-5L8OgQjXfDI3pcgi0scXP-E6zXsJwv5g2J3sX89thdN8QagJQQCwGJWt96_rVAjbhNezpl35TsKsDKDFcyUdrK2qT0yPcFM3kP0hOXpqC8ZB7OFulzRzNGWHZR0Hw2QbGd77Id8wWieXLWUC7eU1JKb3MgO6TXvXzAJQth53BY6a91dqAL2kuvJKelagAgLC2sRUWQy1FQ6Ul7i" width="40" height="40" alt="Client Portrait 3" class="h-10 w-10 rounded-full border-2 border-background-dark object-cover"/>
                     </div>
-                    <p><span class="text-primary font-bold">500+</span> Satisfied Clients</p>
+                    <p i18n="@@homeSatisfiedClients"><span class="text-primary font-bold">500+</span> Satisfied Clients</p>
                 </div>
             </div>
             <!-- Image Visual -->
@@ -44,8 +44,8 @@
                     <div class="absolute bottom-8 left-8 right-8 z-20">
                         <div class="bg-[#1a1a1a]/90 backdrop-blur-md p-4 rounded-lg border border-[#333] flex items-center justify-between gap-4">
                             <div>
-                                <p class="text-xs text-primary font-bold uppercase mb-1">Clinic Status</p>
-                                <p class="text-white text-sm font-medium">Accepting New Patients</p>
+                                <p class="text-xs text-primary font-bold uppercase mb-1" i18n="@@homeClinicStatus">Clinic Status</p>
+                                <p class="text-white text-sm font-medium" i18n="@@homeAcceptingPatients">Accepting New Patients</p>
                             </div>
                             <div class="h-10 w-10 rounded-full bg-primary flex items-center justify-center text-background-dark">
                                 <span class="material-symbols-outlined">check_circle</span>
@@ -63,7 +63,7 @@
 <!-- Partners / Trust Section -->
 <section class="w-full py-16 bg-background-card border-y border-[#222] overflow-hidden">
     <div class="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-        <p class="text-sm font-medium text-gray-400 uppercase tracking-[0.2em] mb-12">Trusted Partners & Medical Boards</p>
+        <p class="text-sm font-medium text-gray-400 uppercase tracking-[0.2em] mb-12" i18n="@@homeTrustedPartners">Trusted Partners & Medical Boards</p>
         <div class="relative w-full overflow-hidden mask-gradient-lr">
             <div class="flex animate-marquee whitespace-nowrap">
                 <div class="flex-shrink-0 flex items-center justify-around gap-12 lg:gap-20 opacity-60 grayscale px-6 lg:px-10">

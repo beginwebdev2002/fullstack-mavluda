@@ -3,14 +3,14 @@
   <!-- Header -->
   <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
     <div>
-      <h1 class="font-display text-3xl font-medium text-gray-900">Dashboard Overview</h1>
+      <h1 class="font-display text-3xl font-medium text-gray-900" i18n="Dashboard title@@dashboardTitle">Dashboard Overview</h1>
       <p class="text-gray-500 mt-1 text-sm">Tuesday, 24 October 2024</p>
     </div>
     <div class="flex items-center gap-3">
-      <button class="px-4 py-2 bg-white border border-gray-200 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors">
+      <button class="px-4 py-2 bg-white border border-gray-200 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors" i18n="Dashboard export@@dashboardExport">
         Export Data
       </button>
-      <button class="px-4 py-2 bg-black text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors shadow-lg">
+      <button class="px-4 py-2 bg-black text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors shadow-lg" i18n="Dashboard new@@dashboardNew">
         New +
       </button>
     </div>
@@ -42,11 +42,11 @@
     <div class="lg:col-span-2 bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
       <div class="flex items-center justify-between mb-6">
         <div>
-          <h2 class="font-display text-xl font-semibold text-gray-900">Revenue Analytics</h2>
-          <p class="text-sm text-gray-500">Monthly performance overview</p>
+          <h2 class="font-display text-xl font-semibold text-gray-900" i18n="Dashboard revenue title@@dashboardRevenueTitle">Revenue Analytics</h2>
+          <p class="text-sm text-gray-500" i18n="Dashboard revenue subtitle@@dashboardRevenueSubtitle">Monthly performance overview</p>
         </div>
         <button class="flex items-center gap-1 text-sm text-gray-700 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition-colors">
-          Last 30 Days
+          <span i18n="Dashboard last 30 days@@dashboardLast30Days">Last 30 Days</span>
           <span class="material-symbols-outlined text-sm">expand_more</span>
         </button>
       </div>
@@ -70,7 +70,7 @@
 
     <!-- Recent Activity -->
     <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-      <h2 class="font-display text-xl font-semibold text-gray-900 mb-6">Recent Activity</h2>
+      <h2 class="font-display text-xl font-semibold text-gray-900 mb-6" i18n="Dashboard activity title@@dashboardActivityTitle">Recent Activity</h2>
       <div class="space-y-6 relative">
         <div class="absolute left-4 top-2 bottom-2 w-px bg-gray-100"></div>
         @for (item of activities(); track item.id; let i = $index) {

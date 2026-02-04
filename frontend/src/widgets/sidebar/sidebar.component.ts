@@ -29,8 +29,8 @@ interface MenuItem {
           </div>
            <!-- Text -->
            <div class="flex flex-col">
-             <h2 class="font-display text-lg font-bold text-white leading-tight tracking-wide">Mavluda</h2>
-             <p class="text-[10px] uppercase text-primary tracking-widest font-medium mt-0.5">Admin Console</p>
+             <h2 class="font-display text-lg font-bold text-white leading-tight tracking-wide" i18n="@@sidebarBrandName">Mavluda</h2>
+             <p class="text-[10px] uppercase text-primary tracking-widest font-medium mt-0.5" i18n="@@sidebarAdminConsole">Admin Console</p>
            </div>
          </div>
       </div>
@@ -65,9 +65,9 @@ interface MenuItem {
           </div>
           <div class="ml-3">
             <p class="text-sm font-medium text-white">Mavluda A.</p>
-            <p class="text-xs text-gray-500">Super Admin</p>
+            <p class="text-xs text-gray-500" i18n="@@sidebarSuperAdmin">Super Admin</p>
           </div>
-          <span class="material-symbols-outlined ml-auto text-gray-500 text-lg">logout</span>
+          <span class="material-symbols-outlined ml-auto text-gray-500 text-lg" i18n-title="@@sidebarLogout" title="Logout">logout</span>
         </div>
       </div>
     </aside>
@@ -80,37 +80,37 @@ export class SidebarComponent {
 
   menuItems = signal<MenuItem[]>([
     { 
-      label: 'Dashboard', 
+      label: $localize`:@@sidebar.dashboard:Dashboard`, 
       route: '/admin/dashboard', 
       exact: true,
       icon: '<span class="material-symbols-outlined">grid_view</span>'
     },
     { 
-      label: 'Veil', 
+      label: $localize`:@@sidebar.veil:Veil`, 
       route: '/admin/veil', 
       exact: false,
       icon: '<span class="material-symbols-outlined">checkroom</span>' 
     },
     { 
-      label: 'Services', 
+      label: $localize`:@@sidebar.services:Services`, 
       route: '/admin/services', 
       exact: false,
       icon: '<span class="material-symbols-outlined">spa</span>'
     },
     { 
-      label: 'Clients', 
+      label: $localize`:@@sidebar.clients:Clients`, 
       route: '/admin/clients', 
       exact: false,
       icon: '<span class="material-symbols-outlined">group</span>'
     },
     {
-      label: 'Gallery',
+      label: $localize`:@@sidebar.gallery:Gallery`,
       route: '/admin/gallery',
       exact: false,
       icon: '<span class="material-symbols-outlined">collections</span>'
     },
     {
-      label: 'Settings',
+      label: $localize`:@@sidebar.settings:Settings`,
       route: '/admin/settings',
       exact: false,
       icon: '<span class="material-symbols-outlined">settings</span>'

@@ -4,11 +4,11 @@
     <!-- Header Section -->
     <section class="relative pt-24 pb-12 text-center">
         <div class="mx-auto max-w-3xl px-6">
-            <p class="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4 animate-pulse">Excellence in Detail</p>
+            <p class="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4 animate-pulse" i18n="@@portfolioTagline">Excellence in Detail</p>
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Portfolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#edd685] to-primary">Gallery</span>
+                <ng-container i18n="@@portfolioTitle">Portfolio</ng-container> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#edd685] to-primary" i18n="@@portfolioTitleHighlight">Gallery</span>
             </h1>
-            <p class="text-gray-400 text-lg leading-relaxed">
+            <p class="text-gray-400 text-lg leading-relaxed" i18n="@@portfolioDesc">
                 A curated showcase of transformative medical aesthetics and high-fashion visage artistry. Witness the convergence of science and beauty.
             </p>
         </div>
@@ -56,7 +56,7 @@
 
             <div class="mt-16 flex justify-center">
                 <button class="group flex items-center gap-3 px-8 py-4 bg-transparent border border-[#333] hover:border-primary rounded-full transition-all duration-300">
-                    <span class="text-sm font-bold uppercase tracking-widest text-white group-hover:text-primary transition-colors">Load More Works</span>
+                    <span class="text-sm font-bold uppercase tracking-widest text-white group-hover:text-primary transition-colors" i18n="@@portfolioBtnLoadMore">Load More Works</span>
                     <span class="material-symbols-outlined text-gray-500 group-hover:text-primary transition-colors group-hover:translate-y-1">expand_more</span>
                 </button>
             </div>

@@ -1,6 +1,6 @@
 
 import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 type SettingsTab = 'Business Profile' | 'Social Matrix' | 'General Info' | 'Additional Links';
@@ -25,7 +25,7 @@ interface AdditionalLink {
 @Component({
   selector: 'app-settings',
   standalone: true,
-  imports: [CommonModule, FormsModule, NgOptimizedImage],
+  imports: [CommonModule, FormsModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss']
