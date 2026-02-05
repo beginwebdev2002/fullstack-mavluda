@@ -81,8 +81,8 @@ export class LanguageSwitcherComponent {
     
     let targetLocale = '';
     switch(lang.code) {
-      case 'ru': targetLocale = 'ru-RU'; break;
-      case 'tj': targetLocale = 'tg-TJ'; break;
+      case 'ru': targetLocale = 'ru'; break;
+      case 'tj': targetLocale = 'tg'; break;
       case 'en': targetLocale = 'en-US'; break;
       default: targetLocale = 'en-US';
     }
@@ -111,7 +111,7 @@ export class LanguageSwitcherComponent {
     
     let newPath = currentPath;
     const segments = currentPath.split('/').filter(Boolean);
-    const possibleLocales = ['en-US', 'ru-RU', 'tg-TJ', 'en', 'ru', 'tg'];
+    const possibleLocales = ['en-US', 'ru', 'tg', 'en', 'ru-RU', 'tg-TJ'];
     
     if (possibleLocales.includes(segments[0])) {
       segments[0] = targetLocale;

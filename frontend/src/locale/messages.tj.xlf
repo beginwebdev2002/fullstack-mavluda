@@ -2,231 +2,1153 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="appBrandName" datatype="html">
+        <source>Mavluda Beauty</source>
+        <target>Mavluda Beauty</target>
+      </trans-unit>
+      <trans-unit id="appBrandSubtitle" datatype="html">
+        <source>Medical Luxury Ecosystem</source>
+        <target>Экосистемаи тиббии олӣ</target>
+      </trans-unit>
+      <trans-unit id="appAuthenticating" datatype="html">
+        <source>Authenticating Securely</source>
+        <target>Воридшавии бехатар</target>
+      </trans-unit>
+      <trans-unit id="aboutPinnacle" datatype="html">
+        <source>The Pinnacle of </source>
+        <target>Қуллаи </target>
+      </trans-unit>
+      <trans-unit id="aboutArtistry" datatype="html">
+        <source>Aesthetic Artistry</source>
+        <target>Ҳунари эстетикӣ</target>
+      </trans-unit>
+      <trans-unit id="aboutIntroResult" datatype="html">
+        <source> Mavluda Azizova stands at the vanguard of medical aesthetics in Tajikistan, harmonizing advanced dermatological science with the delicate touch of high-end artistry. </source>
+        <target> Мавлюда Азизова дар сафи пеши эстетикаи тиббӣ дар Тоҷикистон қарор дорад ва илми пешрафтаи дерматологиро бо ламсӣ нозуки санъати олӣ ҳамоҳанг месозад. </target>
+      </trans-unit>
+      <trans-unit id="aboutPhilosophy" datatype="html">
+        <source> With over a decade of clinical excellence, our center is founded on the philosophy that true beauty is not constructed, but revealed. We employ FDA-approved technologies and bespoke protocols to ensure every treatment is as unique as the individual receiving it. In our sanctuary of transformation, privacy is paramount, and perfection is the only standard. </source>
+        <target> Маркази мо бо таҷрибаи зиёда аз даҳсолаи клиникӣ дар асоси фалсафае таъсис ёфтааст, ки зебоии ҳақиқӣ сохта намешавад, балки ошкор мегардад. Мо технологияҳои тасдиқшудаи FDA ва протоколҳои инфиродиро истифода мебарем, то боварӣ ҳосил кунем, ки ҳар як расмиёт ба монанди шахсе, ки онро мегирад, беназир аст. Дар макони тағйирёбии мо, махфият аҳамияти аввалиндараҷа дорад ва камолот стандарти ягона аст. </target>
+      </trans-unit>
+      <trans-unit id="aboutSanctuaryTitle" datatype="html">
+        <source>Private Sanctuary</source>
+        <target>Паноҳгоҳи хусусӣ</target>
+      </trans-unit>
+      <trans-unit id="aboutContactLocation" datatype="html">
+        <source>Contact &amp; Location</source>
+        <target>Тамос ва Ҷойгиршавӣ</target>
+      </trans-unit>
+      <trans-unit id="aboutVisitCenter" datatype="html">
+        <source>Visit the Center</source>
+        <target>Ба марказ ташриф оред</target>
+      </trans-unit>
+      <trans-unit id="aboutAddress" datatype="html">
+        <source>Rudaki Avenue 127, Suite 402<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>Dushanbe, Tajikistan</source>
+        <target>Хиёбони Рӯдакӣ 127, Офиси 402<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>Душанбе, Тоҷикистон</target>
+      </trans-unit>
+      <trans-unit id="aboutConciergeLine" datatype="html">
+        <source>Concierge Line</source>
+        <target>Хатти маълумот</target>
+      </trans-unit>
+      <trans-unit id="aboutPhoneNumber" datatype="html">
+        <source>+992 (90) 000-0000</source>
+        <target>+992 (90) 000-0000</target>
+      </trans-unit>
+      <trans-unit id="aboutAvailability" datatype="html">
+        <source>Available 9:00 AM - 8:00 PM</source>
+        <target>Дастрас аз 9:00 то 20:00</target>
+      </trans-unit>
+      <trans-unit id="aboutDigitalInquiries" datatype="html">
+        <source>Digital Inquiries</source>
+        <target>Дархостҳои рақамӣ</target>
+      </trans-unit>
+      <trans-unit id="aboutConnectSocials" datatype="html">
+        <source>Connect via Socials</source>
+        <target>Бо шабакаҳои иҷтимоӣ пайваст шавед</target>
+      </trans-unit>
+      <trans-unit id="aboutSocialChat" datatype="html">
+        <source>Chat</source>
+        <target>Чат</target>
+      </trans-unit>
+      <trans-unit id="aboutSocialJoin" datatype="html">
+        <source>Join</source>
+        <target>Ҳамроҳ шудан</target>
+      </trans-unit>
+      <trans-unit id="aboutSocialView" datatype="html">
+        <source>View</source>
+        <target>Намоиш</target>
+      </trans-unit>
+      <trans-unit id="aboutSocialLike" datatype="html">
+        <source>Like</source>
+        <target>Пайравӣ</target>
+      </trans-unit>
+      <trans-unit id="aboutVIPInquiry" datatype="html">
+        <source>VIP Inquiry</source>
+        <target>Дархости VIP</target>
+      </trans-unit>
+      <trans-unit id="aboutVIPDesc" datatype="html">
+        <source>Request a private consultation. Our team will contact you within 24 hours.</source>
+        <target>Машварати хусусиро дархост кунед. Дастаи мо дар давоми 24 соат бо шумо тамос мегирад.</target>
+      </trans-unit>
+      <trans-unit id="formFullName" datatype="html">
+        <source>Full Name</source>
+        <target>Ному насаб</target>
+      </trans-unit>
+      <trans-unit id="formFullNamePlaceholder" datatype="html">
+        <source>e.g. Malika Karimova</source>
+        <target>мас. Малика Каримова</target>
+      </trans-unit>
+      <trans-unit id="formPhone" datatype="html">
+        <source>Phone Number</source>
+        <target>Рақами телефон</target>
+      </trans-unit>
+      <trans-unit id="formPhonePlaceholder" datatype="html">
+        <source>+992 ...</source>
+        <target>+992 ...</target>
+      </trans-unit>
+      <trans-unit id="formServiceInterest" datatype="html">
+        <source>Service of Interest</source>
+        <target>Хизматрасонии дилхоҳ</target>
+      </trans-unit>
+      <trans-unit id="formSelectTreatment" datatype="html">
+        <source>Select a treatment...</source>
+        <target>Расмиётро интихоб кунед...</target>
+      </trans-unit>
+      <trans-unit id="formMedicalFacial" datatype="html">
+        <source>Medical Facial</source>
+        <target>Нигоҳубини тиббии рӯй</target>
+      </trans-unit>
+      <trans-unit id="formLaserTreatment" datatype="html">
+        <source>Laser Treatment</source>
+        <target>Табобати лазерӣ</target>
+      </trans-unit>
+      <trans-unit id="formInjectables" datatype="html">
+        <source>Injectables (Botox/Fillers)</source>
+        <target>Сӯзандоруҳо (Ботокс/Филлерҳо)</target>
+      </trans-unit>
+      <trans-unit id="formVisagiste" datatype="html">
+        <source>Visagiste Consultation</source>
+        <target>Машварати визажист</target>
+      </trans-unit>
+      <trans-unit id="formMessage" datatype="html">
+        <source>Message</source>
+        <target>Паём</target>
+      </trans-unit>
+      <trans-unit id="formMessagePlaceholder" datatype="html">
+        <source>Tell us about your aesthetic goals...</source>
+        <target>Дар бораи мақсадҳои эстетикии худ ба мо бигӯед...</target>
+      </trans-unit>
+      <trans-unit id="formSubmit" datatype="html">
+        <source>Submit Request</source>
+        <target>Ирсоли дархост</target>
+      </trans-unit>
+      <trans-unit id="aboutMapLabel" datatype="html">
+        <source>Mavluda Azizova Center</source>
+        <target>Маркази Мавлюда Азизова</target>
+      </trans-unit>
       <trans-unit id="authHeaderSubtitle" datatype="html">
         <source> Medical Luxury Ecosystem </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">24,30</context>
-        </context-group>
-        <note priority="1" from="description">Auth header subtitle</note>
+        <target> Экосистемаи тиббии олӣ </target>
       </trans-unit>
       <trans-unit id="authRoleClient" datatype="html">
         <source>Client Portal</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">42,46</context>
-        </context-group>
-        <note priority="1" from="description">Auth role client</note>
+        <target>Портали мизоҷ</target>
       </trans-unit>
       <trans-unit id="authRoleAdmin" datatype="html">
         <source>Admin Access</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">53,57</context>
-        </context-group>
-        <note priority="1" from="description">Auth role admin</note>
+        <target>Дастрасии админ</target>
       </trans-unit>
       <trans-unit id="authEmailLabel" datatype="html">
         <source>Email Address</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">63,67</context>
-        </context-group>
-        <note priority="1" from="description">Auth email label</note>
+        <target>Почтаи электронӣ</target>
       </trans-unit>
       <trans-unit id="authPasswordLabel" datatype="html">
         <source>Password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">85,89</context>
-        </context-group>
-        <note priority="1" from="description">Auth password label</note>
+        <target>Рамз</target>
       </trans-unit>
       <trans-unit id="authRememberMe" datatype="html">
         <source>Remember me</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">120,124</context>
-        </context-group>
-        <note priority="1" from="description">Auth remember me</note>
+        <target>Маро ба хотир гир</target>
       </trans-unit>
       <trans-unit id="authForgotPassword" datatype="html">
         <source>Forgot password?</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">127,132</context>
-        </context-group>
-        <note priority="1" from="description">Auth forgot password</note>
+        <target>Рамзро фаромӯш кардед?</target>
       </trans-unit>
       <trans-unit id="authSigningIn" datatype="html">
         <source>Signing In...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">157,160</context>
-        </context-group>
-        <note priority="1" from="description">Auth signing in</note>
+        <target>Воридшавӣ...</target>
       </trans-unit>
       <trans-unit id="authSignIn" datatype="html">
         <source>Sign In</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">159,161</context>
-        </context-group>
-        <note priority="1" from="description">Auth sign in button</note>
+        <target>Ворид шудан</target>
       </trans-unit>
       <trans-unit id="authOr" datatype="html">
         <source>Or</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">174,176</context>
-        </context-group>
-        <note priority="1" from="description">Auth divider or</note>
+        <target>Ё</target>
       </trans-unit>
       <trans-unit id="authTelegram" datatype="html">
         <source>Continue with Telegram</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">197,204</context>
-        </context-group>
-        <note priority="1" from="description">Auth telegram button</note>
+        <target>Идома бо Telegram</target>
       </trans-unit>
       <trans-unit id="authSecurity" datatype="html">
         <source> Secure Access • End-to-End Encrypted </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">210,215</context>
-        </context-group>
-        <note priority="1" from="description">Auth footer security</note>
+        <target> Дастрасии бехатар • Рамзгузории пурра </target>
       </trans-unit>
       <trans-unit id="authSwitchTheme" datatype="html">
         <source>Switch Theme</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">221,224</context>
-        </context-group>
-        <note priority="1" from="description">Auth switch theme</note>
+        <target>Иваз кардани мавзӯъ</target>
       </trans-unit>
       <trans-unit id="authCopyright" datatype="html">
         <source> © 2024 Mavluda Azizova. All rights reserved. </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/auth/auth.component.html</context>
-          <context context-type="linenumber">232,236</context>
-        </context-group>
-        <note priority="1" from="description">Auth copyright</note>
+        <target> © 2024 Мавлюда Азизова. Ҳама ҳуқуқ маҳфуз аст. </target>
       </trans-unit>
       <trans-unit id="dashboardTitle" datatype="html">
         <source>Dashboard Overview</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
-          <context context-type="linenumber">6,9</context>
-        </context-group>
-        <note priority="1" from="description">Dashboard title</note>
+        <target>Шарҳи панели идоракунӣ</target>
       </trans-unit>
       <trans-unit id="dashboardExport" datatype="html">
         <source> Export Data </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
-          <context context-type="linenumber">11,13</context>
-        </context-group>
-        <note priority="1" from="description">Dashboard export</note>
+        <target> Содироти маълумот </target>
       </trans-unit>
       <trans-unit id="dashboardNew" datatype="html">
         <source> New + </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
-          <context context-type="linenumber">14,20</context>
-        </context-group>
-        <note priority="1" from="description">Dashboard new</note>
+        <target> Нав + </target>
       </trans-unit>
       <trans-unit id="dashboardRevenueTitle" datatype="html">
         <source>Revenue Analytics</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
-          <context context-type="linenumber">45,46</context>
-        </context-group>
-        <note priority="1" from="description">Dashboard revenue title</note>
+        <target>Таҳлили даромад</target>
       </trans-unit>
       <trans-unit id="dashboardRevenueSubtitle" datatype="html">
         <source>Monthly performance overview</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
-          <context context-type="linenumber">46,48</context>
-        </context-group>
-        <note priority="1" from="description">Dashboard revenue subtitle</note>
+        <target>Шарҳи иҷрои моҳона</target>
       </trans-unit>
       <trans-unit id="dashboardLast30Days" datatype="html">
         <source>Last 30 Days</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
-          <context context-type="linenumber">49,53</context>
-        </context-group>
-        <note priority="1" from="description">Dashboard last 30 days</note>
+        <target>30 рӯзи охир</target>
       </trans-unit>
       <trans-unit id="dashboardActivityTitle" datatype="html">
         <source>Recent Activity</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.html</context>
-          <context context-type="linenumber">73,76</context>
-        </context-group>
-        <note priority="1" from="description">Dashboard activity title</note>
+        <target>Фаъолияти охирин</target>
+      </trans-unit>
+      <trans-unit id="dashboardStatAppts" datatype="html">
+        <source>Appointments Today</source>
+        <target>Вохӯриҳои имрӯз</target>
+      </trans-unit>
+      <trans-unit id="dashboardStatRevenue" datatype="html">
+        <source>Total Revenue</source>
+        <target>Даромади умумӣ</target>
+      </trans-unit>
+      <trans-unit id="dashboardStatClients" datatype="html">
+        <source>New Clients</source>
+        <target>Мизоҷони нав</target>
+      </trans-unit>
+      <trans-unit id="dashboardStatRentals" datatype="html">
+        <source>Active Rentals</source>
+        <target>Иҷораҳои фаъол</target>
+      </trans-unit>
+      <trans-unit id="dashboardActivityAppt" datatype="html">
+        <source>New appointment booked</source>
+        <target>Вохӯрии нав банд шуд</target>
+      </trans-unit>
+      <trans-unit id="time2mAgo" datatype="html">
+        <source>2m ago</source>
+        <target>2 дақ пеш</target>
+      </trans-unit>
+      <trans-unit id="dashboardActivityInventory" datatype="html">
+        <source>Inventory alert</source>
+        <target>Огоҳии инвентаризатсия</target>
+      </trans-unit>
+      <trans-unit id="time1hAgo" datatype="html">
+        <source>1h ago</source>
+        <target>1 соат пеш</target>
+      </trans-unit>
+      <trans-unit id="dashboardActivityService" datatype="html">
+        <source>Service completed</source>
+        <target>Хизматрасонӣ анҷом ёфт</target>
+      </trans-unit>
+      <trans-unit id="time3hAgo" datatype="html">
+        <source>3h ago</source>
+        <target>3 соат пеш</target>
+      </trans-unit>
+      <trans-unit id="dashboardActivityStock" datatype="html">
+        <source>Veil stock updated</source>
+        <target>Захираи вуал нав карда шуд</target>
+      </trans-unit>
+      <trans-unit id="time5hAgo" datatype="html">
+        <source>5h ago</source>
+        <target>5 соат пеш</target>
+      </trans-unit>
+      <trans-unit id="galleryTitle" datatype="html">
+        <source>Gallery &amp; Portfolio</source>
+        <target>Галерея ва Портфолио</target>
+      </trans-unit>
+      <trans-unit id="gallerySubtitle" datatype="html">
+        <source>Manage your luxury portfolio imagery and categories.</source>
+        <target>Идоракунии тасвирҳо ва категорияҳои портфолиои люксии худ.</target>
+      </trans-unit>
+      <trans-unit id="galleryBtnUpload" datatype="html">
+        <source>Upload New Image</source>
+        <target>Боргузории тасвири нав</target>
+      </trans-unit>
+      <trans-unit id="galleryFilterAll" datatype="html">
+        <source>All Images</source>
+        <target>Ҳама тасвирҳо</target>
+      </trans-unit>
+      <trans-unit id="galleryDragDropTitle" datatype="html">
+        <source>Drag and drop files here</source>
+        <target>Файлҳоро ба ин ҷо кашед</target>
+      </trans-unit>
+      <trans-unit id="galleryDragDropSubtitle" datatype="html">
+        <source>Supported formats: JPG, PNG, WEBP (Max 5MB)</source>
+        <target>Форматҳои дастгиришаванда: JPG, PNG, WEBP (Макс. 5МБ)</target>
+      </trans-unit>
+      <trans-unit id="galleryGridEdit" datatype="html">
+        <source>Edit</source>
+        <target>Таҳрир</target>
+      </trans-unit>
+      <trans-unit id="galleryTableImage" datatype="html">
+        <source>Image</source>
+        <target>Тасвир</target>
+      </trans-unit>
+      <trans-unit id="galleryTableInfo" datatype="html">
+        <source>File Info</source>
+        <target>Инфои файл</target>
+      </trans-unit>
+      <trans-unit id="galleryTableCategory" datatype="html">
+        <source>Category</source>
+        <target>Категория</target>
+      </trans-unit>
+      <trans-unit id="galleryTableDate" datatype="html">
+        <source>Date</source>
+        <target>Сана</target>
+      </trans-unit>
+      <trans-unit id="galleryTableStatus" datatype="html">
+        <source>Status</source>
+        <target>Ҳолат</target>
+      </trans-unit>
+      <trans-unit id="galleryTableActions" datatype="html">
+        <source>Actions</source>
+        <target>Амалҳо</target>
+      </trans-unit>
+      <trans-unit id="galleryActionEdit" datatype="html">
+        <source>Edit</source>
+        <target>Таҳрир</target>
+      </trans-unit>
+      <trans-unit id="galleryActionDelete" datatype="html">
+        <source>Delete</source>
+        <target>Нест кардан</target>
+      </trans-unit>
+      <trans-unit id="galleryModalTitleNew" datatype="html">
+        <source>Upload New Image</source>
+        <target>Боргузории тасвири нав</target>
+      </trans-unit>
+      <trans-unit id="galleryModalTitleEdit" datatype="html">
+        <source>Edit Image Details</source>
+        <target>Таҳрири тафсилоти тасвир</target>
+      </trans-unit>
+      <trans-unit id="galleryLabelPreview" datatype="html">
+        <source>Image Preview</source>
+        <target>Пешнамоиши тасвир</target>
+      </trans-unit>
+      <trans-unit id="galleryChangeImage" datatype="html">
+        <source>Change Image</source>
+        <target>Иваз кардани тасвир</target>
+      </trans-unit>
+      <trans-unit id="galleryClickToUpload" datatype="html">
+        <source>Click to upload</source>
+        <target>Барои боргузорӣ клик кунед</target>
+      </trans-unit>
+      <trans-unit id="galleryLabelTitle" datatype="html">
+        <source>Title</source>
+        <target>Ном</target>
+      </trans-unit>
+      <trans-unit id="galleryLabelCategory" datatype="html">
+        <source>Category</source>
+        <target>Категория</target>
+      </trans-unit>
+      <trans-unit id="galleryLabelAlt" datatype="html">
+        <source>Alt Text</source>
+        <target>Матни алтернативӣ</target>
+      </trans-unit>
+      <trans-unit id="galleryBtnCancel" datatype="html">
+        <source>Cancel</source>
+        <target>Бекор кардан</target>
+      </trans-unit>
+      <trans-unit id="galleryBtnUploadImage" datatype="html">
+        <source>Upload Image</source>
+        <target>Боргузории тасвир</target>
+      </trans-unit>
+      <trans-unit id="galleryBtnSaveChanges" datatype="html">
+        <source>Save Changes</source>
+        <target>Захираи тағйирот</target>
+      </trans-unit>
+      <trans-unit id="galleryLoading" datatype="html">
+        <source>Loading Asset</source>
+        <target>Боргузории ресурс</target>
+      </trans-unit>
+      <trans-unit id="galleryFooter" datatype="html">
+        <source>Mavluda Beauty • Portfolio</source>
+        <target>Mavluda Beauty • Портфолио</target>
+      </trans-unit>
+      <trans-unit id="portfolioTagline" datatype="html">
+        <source>Excellence in Detail</source>
+        <target>Бартарии дар ҷузъиёт</target>
+      </trans-unit>
+      <trans-unit id="portfolioTitle" datatype="html">
+        <source>Portfolio</source>
+        <target>Портфолио</target>
+      </trans-unit>
+      <trans-unit id="portfolioTitleHighlight" datatype="html">
+        <source>Gallery</source>
+        <target>Галерея</target>
+      </trans-unit>
+      <trans-unit id="portfolioDesc" datatype="html">
+        <source> A curated showcase of transformative medical aesthetics and high-fashion visage artistry. Witness the convergence of science and beauty. </source>
+        <target> Намоишгоҳи махсуси эстетикаи тиббӣ ва санъати визажи сатҳи олӣ. Шоҳиди ҳамбастагии илм ва зебоӣ бошед. </target>
+      </trans-unit>
+      <trans-unit id="portfolioBtnLoadMore" datatype="html">
+        <source>Load More Works</source>
+        <target>Боргузории корҳои бештар</target>
+      </trans-unit>
+      <trans-unit id="servicesAvailable" datatype="html">
+        <source>Available for Booking</source>
+        <target>Дастрас барои брон</target>
+      </trans-unit>
+      <trans-unit id="servicesRefined" datatype="html">
+        <source>Refined</source>
+        <target>Нафис</target>
+      </trans-unit>
+      <trans-unit id="servicesTitleSuffix" datatype="html">
+        <source>Services</source>
+        <target>Хизматрасониҳо</target>
+      </trans-unit>
+      <trans-unit id="servicesDescription" datatype="html">
+        <source> A curated selection of medical aesthetic treatments and professional visage services designed to enhance your natural beauty through precision and artistry. </source>
+        <target> Интихоби махсуси табобатҳои эстетикии тиббӣ ва хизматрасониҳои касбии визаж, ки барои беҳтар кардани зебоии табиии шумо бо дақиқӣ ва маҳорат тарҳрезӣ шудаанд. </target>
+      </trans-unit>
+      <trans-unit id="servicesRefineTitle" datatype="html">
+        <source>Refine</source>
+        <target>Тоза кардан</target>
+      </trans-unit>
+      <trans-unit id="servicesGuidanceTitle" datatype="html">
+        <source>Need Guidance?</source>
+        <target>Ба роҳнамоӣ ниёз доред?</target>
+      </trans-unit>
+      <trans-unit id="servicesGuidanceText" datatype="html">
+        <source>Schedule a preliminary consultation to discuss your specific needs and expected results.</source>
+        <target>Барои муҳокимаи ниёзҳои мушаххас ва натиҷаҳои интизоршаванда машварати пешакӣ таъин кунед.</target>
+      </trans-unit>
+      <trans-unit id="servicesContactSupport" datatype="html">
+        <source>Contact Support</source>
+        <target>Тамос бо дастгирӣ</target>
+      </trans-unit>
+      <trans-unit id="servicesHonorarium" datatype="html">
+        <source>Honorarium</source>
+        <target>Гонoрар</target>
+      </trans-unit>
+      <trans-unit id="servicesSecureConsultation" datatype="html">
+        <source>Secure Consultation</source>
+        <target>Машварати бехатар</target>
+      </trans-unit>
+      <trans-unit id="servicesNoFound" datatype="html">
+        <source>No Services Found</source>
+        <target>Хизматрасонӣ ёфт нашуд</target>
+      </trans-unit>
+      <trans-unit id="servicesAdjustFilter" datatype="html">
+        <source>Please adjust your filter criteria.</source>
+        <target>Лутфан меъёрҳои филтри худро танзим кунед.</target>
+      </trans-unit>
+      <trans-unit id="servicesLoadMore" datatype="html">
+        <source>Load More Services</source>
+        <target>Боргузории хизматрасониҳои бештар</target>
+      </trans-unit>
+      <trans-unit id="servicesTitle" datatype="html">
+        <source>Services &amp; Treatments</source>
+        <target>Хизматрасониҳо ва Табобатҳо</target>
+      </trans-unit>
+      <trans-unit id="servicesSubtitle" datatype="html">
+        <source>Manage your luxury treatment offerings.</source>
+        <target>Идоракунии пешниҳодҳои табобати люксии шумо.</target>
+      </trans-unit>
+      <trans-unit id="servicesAddButton" datatype="html">
+        <source>Add Service</source>
+        <target>Иловаи хизматрасонӣ</target>
+      </trans-unit>
+      <trans-unit id="servicesFilterAll" datatype="html">
+        <source>All Services</source>
+        <target>Ҳама хизматрасониҳо</target>
+      </trans-unit>
+      <trans-unit id="colServiceName" datatype="html">
+        <source>Service Name</source>
+        <target>Номи хизматрасонӣ</target>
+      </trans-unit>
+      <trans-unit id="colCategory" datatype="html">
+        <source>Category</source>
+        <target>Категория</target>
+      </trans-unit>
+      <trans-unit id="colDuration" datatype="html">
+        <source>Duration</source>
+        <target>Давомнокӣ</target>
+      </trans-unit>
+      <trans-unit id="colPrice" datatype="html">
+        <source>Price</source>
+        <target>Нарх</target>
+      </trans-unit>
+      <trans-unit id="colStatus" datatype="html">
+        <source>Status</source>
+        <target>Ҳолат</target>
+      </trans-unit>
+      <trans-unit id="colEdit" datatype="html">
+        <source>Edit</source>
+        <target>Таҳрир</target>
+      </trans-unit>
+      <trans-unit id="statusActive" datatype="html">
+        <source>Active</source>
+        <target>Фаъол</target>
+      </trans-unit>
+      <trans-unit id="statusInactive" datatype="html">
+        <source>Inactive</source>
+        <target>Ғайрифаъол</target>
+      </trans-unit>
+      <trans-unit id="servicesEditAction" datatype="html">
+        <source>Edit</source>
+        <target>Таҳрир</target>
+      </trans-unit>
+      <trans-unit id="servicesNoServices" datatype="html">
+        <source>No services found.</source>
+        <target>Хизматрасониҳо ёфт нашуданд.</target>
+      </trans-unit>
+      <trans-unit id="servicesAddNew" datatype="html">
+        <source>Add a new service</source>
+        <target>Иловаи хизматрасонии нав</target>
+      </trans-unit>
+      <trans-unit id="servicesEditDetails" datatype="html">
+        <source> Edit Details </source>
+        <target> Таҳрири тафсилот </target>
+      </trans-unit>
+      <trans-unit id="servicesModalTitleNew" datatype="html">
+        <source>Add New Service</source>
+        <target>Иловаи хизматрасонии нав</target>
+      </trans-unit>
+      <trans-unit id="servicesModalTitleEdit" datatype="html">
+        <source>Edit Service</source>
+        <target>Таҳрири хизматрасонӣ</target>
+      </trans-unit>
+      <trans-unit id="fieldServiceName" datatype="html">
+        <source>Service Name</source>
+        <target>Номи хизматрасонӣ</target>
+      </trans-unit>
+      <trans-unit id="fieldCategory" datatype="html">
+        <source>Category</source>
+        <target>Категория</target>
+      </trans-unit>
+      <trans-unit id="fieldPrice" datatype="html">
+        <source>Price (TJS)</source>
+        <target>Нарх (ТҶС)</target>
+      </trans-unit>
+      <trans-unit id="fieldDuration" datatype="html">
+        <source>Duration</source>
+        <target>Давомнокӣ</target>
+      </trans-unit>
+      <trans-unit id="fieldStatus" datatype="html">
+        <source>Status</source>
+        <target>Ҳолат</target>
+      </trans-unit>
+      <trans-unit id="servicesBtnCreate" datatype="html">
+        <source>Create Service</source>
+        <target>Эҷоди хизматрасонӣ</target>
+      </trans-unit>
+      <trans-unit id="servicesBtnSave" datatype="html">
+        <source>Save Changes</source>
+        <target>Захираи тағйирот</target>
+      </trans-unit>
+      <trans-unit id="actionCancel" datatype="html">
+        <source>Cancel</source>
+        <target>Бекор кардан</target>
+      </trans-unit>
+      <trans-unit id="serviceBotox" datatype="html">
+        <source>Botox Treatment</source>
+        <target>Табобати Ботокс</target>
+      </trans-unit>
+      <trans-unit id="catInjectables" datatype="html">
+        <source>Injectables</source>
+        <target>Сӯзандоруҳо</target>
+      </trans-unit>
+      <trans-unit id="duration30" datatype="html">
+        <source>30 min</source>
+        <target>30 дақ</target>
+      </trans-unit>
+      <trans-unit id="serviceGoldFacial" datatype="html">
+        <source>Luxury Gold Facial</source>
+        <target>Нигоҳубини тиллоии рӯй</target>
+      </trans-unit>
+      <trans-unit id="catFacials" datatype="html">
+        <source>Facials</source>
+        <target>Нигоҳубини рӯй</target>
+      </trans-unit>
+      <trans-unit id="duration60" datatype="html">
+        <source>60 min</source>
+        <target>60 дақ</target>
+      </trans-unit>
+      <trans-unit id="serviceLaserBody" datatype="html">
+        <source>Laser Hair Removal (Full Body)</source>
+        <target>Тозакунии мӯй бо лазер (Тамоми бадан)</target>
+      </trans-unit>
+      <trans-unit id="catLaser" datatype="html">
+        <source>Laser</source>
+        <target>Лазер</target>
+      </trans-unit>
+      <trans-unit id="duration90" datatype="html">
+        <source>90 min</source>
+        <target>90 дақ</target>
+      </trans-unit>
+      <trans-unit id="serviceLipFillers" datatype="html">
+        <source>Lip Fillers (Juvederm)</source>
+        <target>Пуркунандаҳои лаб (Juvederm)</target>
+      </trans-unit>
+      <trans-unit id="duration45" datatype="html">
+        <source>45 min</source>
+        <target>45 дақ</target>
+      </trans-unit>
+      <trans-unit id="serviceChemicalPeel" datatype="html">
+        <source>Chemical Peel</source>
+        <target>Пилинги химиявӣ</target>
+      </trans-unit>
+      <trans-unit id="filterAll" datatype="html">
+        <source>All</source>
+        <target>Ҳама</target>
+      </trans-unit>
+      <trans-unit id="filterInjectables" datatype="html">
+        <source>Injectables</source>
+        <target>Сӯзандоруҳо</target>
+      </trans-unit>
+      <trans-unit id="filterFacials" datatype="html">
+        <source>Facials</source>
+        <target>Нигоҳубини рӯй</target>
+      </trans-unit>
+      <trans-unit id="filterLaser" datatype="html">
+        <source>Laser</source>
+        <target>Лазер</target>
+      </trans-unit>
+      <trans-unit id="settingsTitle" datatype="html">
+        <source>Management of &apos;About&apos; &amp; Core Info</source>
+        <target>Идоракунии &apos;Дар бораи&apos; ва Маълумоти асосӣ</target>
+      </trans-unit>
+      <trans-unit id="settingsSubtitle" datatype="html">
+        <source>Configure public-facing business profile and social matrices.</source>
+        <target>Натанзими профили тиҷоратии ҷамъиятӣ ва матритсаҳои иҷтимоӣ.</target>
+      </trans-unit>
+      <trans-unit id="settingsTabProfile" datatype="html">
+        <source>Business Profile</source>
+        <target>Профили тиҷоратӣ</target>
+      </trans-unit>
+      <trans-unit id="settingsTabSocial" datatype="html">
+        <source>Social Matrix</source>
+        <target>Матритсаи иҷтимоӣ</target>
+      </trans-unit>
+      <trans-unit id="settingsTabGeneral" datatype="html">
+        <source>General Info</source>
+        <target>Маълумоти умумӣ</target>
+      </trans-unit>
+      <trans-unit id="settingsTabLinks" datatype="html">
+        <source>Additional Links</source>
+        <target>Истинодҳои иловагӣ</target>
+      </trans-unit>
+      <trans-unit id="settingsSectionProfile" datatype="html">
+        <source>Business Profile</source>
+        <target>Профили тиҷоратӣ</target>
+      </trans-unit>
+      <trans-unit id="settingsBtnSave" datatype="html">
+        <source> Save Changes </source>
+        <target> Захираи тағйирот </target>
+      </trans-unit>
+      <trans-unit id="settingsLabelPhone" datatype="html">
+        <source>Phone Number</source>
+        <target>Рақами телефон</target>
+      </trans-unit>
+      <trans-unit id="settingsLabelAddress" datatype="html">
+        <source>Official Address</source>
+        <target>Суроғаи расмӣ</target>
+      </trans-unit>
+      <trans-unit id="settingsLabelLat" datatype="html">
+        <source>Latitude</source>
+        <target>Арз</target>
+      </trans-unit>
+      <trans-unit id="settingsLabelLong" datatype="html">
+        <source>Longitude</source>
+        <target>Тӯл</target>
+      </trans-unit>
+      <trans-unit id="settingsLabelMap" datatype="html">
+        <source>Map Preview</source>
+        <target>Пешнамоиши харита</target>
+      </trans-unit>
+      <trans-unit id="settingsSectionSocial" datatype="html">
+        <source>Social Matrix</source>
+        <target>Матритсаи иҷтимоӣ</target>
+      </trans-unit>
+      <trans-unit id="settingsBtnAddPlatform" datatype="html">
+        <source>Add Platform</source>
+        <target>Иловаи платформа</target>
+      </trans-unit>
+      <trans-unit id="settingsSectionGeneral" datatype="html">
+        <source>General Info &amp; Philosophy</source>
+        <target>Маълумоти умумӣ ва Фалсафа</target>
+      </trans-unit>
+      <trans-unit id="settingsLabelBio" datatype="html">
+        <source>Center Biography (Multi-language)</source>
+        <target>Тарҷумаи ҳоли марказ (Бисёрзабона)</target>
+      </trans-unit>
+      <trans-unit id="settingsLabelPhilosophy" datatype="html">
+        <source>Beauty Philosophy</source>
+        <target>Фалсафаи зебоӣ</target>
+      </trans-unit>
+      <trans-unit id="settingsSectionLinks" datatype="html">
+        <source>Additional Links</source>
+        <target>Истинодҳои иловагӣ</target>
+      </trans-unit>
+      <trans-unit id="settingsBtnAddLink" datatype="html">
+        <source>Add New Link</source>
+        <target>Иловаи истиноди нав</target>
+      </trans-unit>
+      <trans-unit id="settingsTableLabel" datatype="html">
+        <source>Label</source>
+        <target>Нишона</target>
+      </trans-unit>
+      <trans-unit id="settingsTableTarget" datatype="html">
+        <source>Target URL</source>
+        <target>URL-и мақсаднок</target>
+      </trans-unit>
+      <trans-unit id="settingsTableCategory" datatype="html">
+        <source>Category</source>
+        <target>Категория</target>
+      </trans-unit>
+      <trans-unit id="settingsTableAction" datatype="html">
+        <source>Action</source>
+        <target>Амал</target>
+      </trans-unit>
+      <trans-unit id="settingsLastUpdated" datatype="html">
+        <source>Last updated:</source>
+        <target>Охирин навсозӣ:</target>
+      </trans-unit>
+      <trans-unit id="settingsBtnDiscard" datatype="html">
+        <source>Discard All</source>
+        <target>Бекор кардани ҳама</target>
+      </trans-unit>
+      <trans-unit id="settingsBtnPublish" datatype="html">
+        <source>Publish Changes</source>
+        <target>Нашри тағйирот</target>
+      </trans-unit>
+      <trans-unit id="homeLabelMedicalAesthetics" datatype="html">
+        <source>Medical Aesthetics</source>
+        <target>Эстетикаи Тиббӣ</target>
+      </trans-unit>
+      <trans-unit id="homeHeroTitleLine1" datatype="html">
+        <source>Redefining</source>
+        <target>Бознамуд</target>
+      </trans-unit>
+      <trans-unit id="homeHeroTitleLine2" datatype="html">
+        <source>Aesthetic Excellence</source>
+        <target>Камолоти Эстетикӣ</target>
+      </trans-unit>
+      <trans-unit id="homeHeroSubtitle" datatype="html">
+        <source> Mavluda Azizova — Elite Visagiste &amp; Medical Aesthetics Specialist. Where advanced Medical Science meets artistic precision for natural, transformative results. </source>
+        <target> Мавлюда Азизова — Визажисти элитӣ ва мутахассиси эстетикаи тиббӣ. Дар ҷое ки илми пешрафтаи тиббӣ бо дақиқии рассомӣ барои натиҷаҳои табиӣ ва тағйирёбанда вомехӯрад. </target>
+      </trans-unit>
+      <trans-unit id="homeBtnSecureConsultation" datatype="html">
+        <source>Secure Consultation</source>
+        <target>Машварати бехатар</target>
+      </trans-unit>
+      <trans-unit id="homeBtnViewPortfolio" datatype="html">
+        <source> View Portfolio </source>
+        <target> Намоиши портфолио </target>
+      </trans-unit>
+      <trans-unit id="homeSatisfiedClients" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-primary font-bold&quot;&gt;"/>500+<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Satisfied Clients</source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-primary font-bold&quot;&gt;"/>500+<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Мизоҷони қаноатманд</target>
+      </trans-unit>
+      <trans-unit id="homeClinicStatus" datatype="html">
+        <source>Clinic Status</source>
+        <target>Ҳолати клиника</target>
+      </trans-unit>
+      <trans-unit id="homeAcceptingPatients" datatype="html">
+        <source>Accepting New Patients</source>
+        <target>Қабули беморони нав</target>
+      </trans-unit>
+      <trans-unit id="homeTrustedPartners" datatype="html">
+        <source>Trusted Partners &amp; Medical Boards</source>
+        <target>Шарикони боэътимод ва шӯроҳои тиббӣ</target>
+      </trans-unit>
+      <trans-unit id="profileClientID" datatype="html">
+        <source>Client ID: #<x id="INTERPOLATION" equiv-text="{{ user.id }}"/></source>
+        <target>ID мизоҷ: #<x id="INTERPOLATION" equiv-text="{{ user.id }}"/></target>
+      </trans-unit>
+      <trans-unit id="profileBtnEdit" datatype="html">
+        <source> Edit Profile </source>
+        <target> Таҳрири профил </target>
+      </trans-unit>
+      <trans-unit id="profileNavOverview" datatype="html">
+        <source>Overview</source>
+        <target>Шарҳ</target>
+      </trans-unit>
+      <trans-unit id="profileNavAppointments" datatype="html">
+        <source>Appointments</source>
+        <target>Тандурустӣ</target>
+      </trans-unit>
+      <trans-unit id="profileNavMedicalRecords" datatype="html">
+        <source>Medical Records</source>
+        <target>Сабтҳои тиббӣ</target>
+      </trans-unit>
+      <trans-unit id="profileNavSettings" datatype="html">
+        <source>Settings</source>
+        <target>Танзимот</target>
+      </trans-unit>
+      <trans-unit id="profileConciergeTitle" datatype="html">
+        <source>Concierge Support</source>
+        <target>Дастгирии консерж</target>
+      </trans-unit>
+      <trans-unit id="profileConciergeDesc" datatype="html">
+        <source>Direct line to your personal aesthetic coordinator.</source>
+        <target>Хатти мустақим ба координатори шахсии эстетикии шумо.</target>
+      </trans-unit>
+      <trans-unit id="profileConciergeBtn" datatype="html">
+        <source>Contact Now</source>
+        <target>Ҳоло тамос гиред</target>
+      </trans-unit>
+      <trans-unit id="profileDashboardTitle" datatype="html">
+        <source>Private Dashboard</source>
+        <target>Панели хусусӣ</target>
+      </trans-unit>
+      <trans-unit id="profileWelcome" datatype="html">
+        <source>Welcome back, <x id="INTERPOLATION" equiv-text="{{ user.name.split(&apos; &apos;)[0] }}"/></source>
+        <target>Хуш омадед, <x id="INTERPOLATION" equiv-text="{{ user.name.split(&apos; &apos;)[0] }}"/></target>
+      </trans-unit>
+      <trans-unit id="profileDateLabel" datatype="html">
+        <source>Today is</source>
+        <target>Имрӯз</target>
+      </trans-unit>
+      <trans-unit id="profileUpcomingTitle" datatype="html">
+        <source>Upcoming Appointment</source>
+        <target>Вохӯрии навбатӣ</target>
+      </trans-unit>
+      <trans-unit id="profileBtnReschedule" datatype="html">
+        <source>Reschedule</source>
+        <target>Тағйири вақт</target>
+      </trans-unit>
+      <trans-unit id="profileBtnDetails" datatype="html">
+        <source>Details</source>
+        <target>Тафсилот</target>
+      </trans-unit>
+      <trans-unit id="profileLoyaltyTitle" datatype="html">
+        <source>Loyalty &amp; Rewards</source>
+        <target>Садоқат ва Мукофотҳо</target>
+      </trans-unit>
+      <trans-unit id="profilePointsEarned" datatype="html">
+        <source>Points Earned</source>
+        <target>Балҳои ҷамъшуда</target>
+      </trans-unit>
+      <trans-unit id="profilePointsToNext" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ loyalty.pointsToNext }}"/> points until Platinum Status</source>
+        <target><x id="INTERPOLATION" equiv-text="{{ loyalty.pointsToNext }}"/> бал то Статуси Платина</target>
+      </trans-unit>
+      <trans-unit id="profileNextReward" datatype="html">
+        <source>Next Reward:</source>
+        <target>Мукофоти навбатӣ:</target>
+      </trans-unit>
+      <trans-unit id="profileRedeem" datatype="html">
+        <source>Redeem</source>
+        <target>Истифода бурдан</target>
+      </trans-unit>
+      <trans-unit id="profileProceduresTitle" datatype="html">
+        <source>Recent Procedures</source>
+        <target>Расмиёти охирин</target>
+      </trans-unit>
+      <trans-unit id="profileViewAll" datatype="html">
+        <source>View All History</source>
+        <target>Намоиши тамоми таърих</target>
+      </trans-unit>
+      <trans-unit id="profileTableDate" datatype="html">
+        <source>Date</source>
+        <target>Сана</target>
+      </trans-unit>
+      <trans-unit id="profileTableService" datatype="html">
+        <source>Service</source>
+        <target>Хизматрасонӣ</target>
+      </trans-unit>
+      <trans-unit id="profileTableSpecialist" datatype="html">
+        <source>Specialist</source>
+        <target>Мутахассис</target>
+      </trans-unit>
+      <trans-unit id="profileTableAction" datatype="html">
+        <source>Action</source>
+        <target>Амал</target>
+      </trans-unit>
+      <trans-unit id="profileNoteTitle" datatype="html">
+        <source>Latest Medical Note Summary</source>
+        <target>Хулосаи охирини сабти тиббӣ</target>
+      </trans-unit>
+      <trans-unit id="profileNoteRecorder" datatype="html">
+        <source>Recorded by:</source>
+        <target>Сабтшуда аз ҷониби:</target>
+      </trans-unit>
+      <trans-unit id="profileNoteDate" datatype="html">
+        <source>Date:</source>
+        <target>Сана:</target>
+      </trans-unit>
+      <trans-unit id="profileNoteHistory" datatype="html">
+        <source> Full History </source>
+        <target> Таърихи пурра </target>
+      </trans-unit>
+      <trans-unit id="userStatusGold" datatype="html">
+        <source>Gold Member</source>
+        <target>Аъзои Тиллоӣ</target>
+      </trans-unit>
+      <trans-unit id="apptStatusConfirmed" datatype="html">
+        <source>Confirmed</source>
+        <target>Тасдиқ шудааст</target>
+      </trans-unit>
+      <trans-unit id="apptDate" datatype="html">
+        <source>October 28, 2024</source>
+        <target>28 октябри 2024</target>
+      </trans-unit>
+      <trans-unit id="apptService" datatype="html">
+        <source>Full Face Rejuvenation</source>
+        <target>Омодасозии пурраи рӯй</target>
+      </trans-unit>
+      <trans-unit id="loyaltyTierGold" datatype="html">
+        <source>Gold Tier</source>
+        <target>Дараҷаи тиллоӣ</target>
+      </trans-unit>
+      <trans-unit id="loyaltyReward" datatype="html">
+        <source>Comp. Skin Analysis</source>
+        <target>Таҳлили пӯст</target>
+      </trans-unit>
+      <trans-unit id="procHydra" datatype="html">
+        <source>HydraFacial Elite</source>
+        <target>HydraFacial Elite</target>
+      </trans-unit>
+      <trans-unit id="catSkin" datatype="html">
+        <source>Skin Therapy</source>
+        <target>Терапияи пӯст</target>
+      </trans-unit>
+      <trans-unit id="statusView" datatype="html">
+        <source>View Results</source>
+        <target>Намоиши натиҷаҳо</target>
+      </trans-unit>
+      <trans-unit id="procBotox" datatype="html">
+        <source>Botulinum Therapy</source>
+        <target>Терапияи ботулинум</target>
+      </trans-unit>
+      <trans-unit id="catMedical" datatype="html">
+        <source>Medical Aesthetics</source>
+        <target>Эстетикаи Тиббӣ</target>
+      </trans-unit>
+      <trans-unit id="procGlamour" datatype="html">
+        <source>Evening Glamour</source>
+        <target>Гламури шабона</target>
+      </trans-unit>
+      <trans-unit id="catVisage" datatype="html">
+        <source>Professional Visage</source>
+        <target>Визажи касбӣ</target>
+      </trans-unit>
+      <trans-unit id="statusArchived" datatype="html">
+        <source>Archived</source>
+        <target>Архившуда</target>
+      </trans-unit>
+      <trans-unit id="noteSummary" datatype="html">
+        <source>Skin sensitivity slightly elevated during last session. Recommended reducing retinol usage frequency to 2x/week for the next 14 days. Hydration levels have improved significantly since August.</source>
+        <target>Ҳассосияти пӯст дар давоми сеанси охирин каме баланд шуд. Тавсия дода мешавад, ки истифодаи ретинол то 2 маротиба дар як ҳафта барои 14 рӯзи оянда кам карда шавад. Сатҳи намнокӣ аз моҳи август ба таври назаррас беҳтар шудааст.</target>
+      </trans-unit>
+      <trans-unit id="veilAdminTitle" datatype="html">
+        <source>Bridal Gown Collection</source>
+        <target>Коллексияи либосҳои арӯсӣ</target>
+      </trans-unit>
+      <trans-unit id="veilAdminSubtitle" datatype="html">
+        <source>Exquisite wedding dresses and their characteristics.</source>
+        <target>Либосҳои арӯсии нафис ва хусусиятҳои онҳо.</target>
+      </trans-unit>
+      <trans-unit id="veilAdminAddBtn" datatype="html">
+        <source>Add New Gown</source>
+        <target>Иловаи либоси нав</target>
+      </trans-unit>
+      <trans-unit id="veilAvailable" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ veil.stock }}"/> Available</source>
+        <target><x id="INTERPOLATION" equiv-text="{{ veil.stock }}"/> Дастрас</target>
+      </trans-unit>
+      <trans-unit id="veilOutOfStock" datatype="html">
+        <source>Out of Stock</source>
+        <target>Мавҷуд нест</target>
+      </trans-unit>
+      <trans-unit id="veilAdminEdit" datatype="html">
+        <source>Edit</source>
+        <target>Таҳрир</target>
+      </trans-unit>
+      <trans-unit id="veilModalTitleNew" datatype="html">
+        <source>Add New Gown</source>
+        <target>Иловаи либоси нав</target>
+      </trans-unit>
+      <trans-unit id="veilModalTitleEdit" datatype="html">
+        <source>Edit Gown Details</source>
+        <target>Таҳрири тафсилоти либос</target>
+      </trans-unit>
+      <trans-unit id="veilBtnCreate" datatype="html">
+        <source>Create Gown</source>
+        <target>Эҷоди либос</target>
+      </trans-unit>
+      <trans-unit id="veilBtnSave" datatype="html">
+        <source>Save Changes</source>
+        <target>Захираи тағйирот</target>
+      </trans-unit>
+      <trans-unit id="catalogTagline" datatype="html">
+        <source>Timeless Elegance</source>
+        <target>Зебогии ҷовидона</target>
+      </trans-unit>
+      <trans-unit id="catalogTitle" datatype="html">
+        <source>Bridal</source>
+        <target>Арӯсӣ</target>
+      </trans-unit>
+      <trans-unit id="catalogTitleSuffix" datatype="html">
+        <source>Collection</source>
+        <target>Коллексия</target>
+      </trans-unit>
+      <trans-unit id="catalogDescription" datatype="html">
+        <source> Discover our curated selection of haute couture gowns. Each piece is a masterpiece of design, crafted to celebrate the unique beauty of every bride. </source>
+        <target> Интихоби мо аз либосҳои 'haute couture'-ро кашф кунед. Ҳар як порча шоҳасари тарроҳӣ буда, барои ситоиши зебогии беназири ҳар як арӯс офарида шудааст. </target>
+      </trans-unit>
+      <trans-unit id="catalogLabelNew" datatype="html">
+        <source>New Arrival</source>
+        <target>Воридоти нав</target>
+      </trans-unit>
+      <trans-unit id="catalogLabelBestSeller" datatype="html">
+        <source>Best Seller</source>
+        <target>Пурфурӯштарин</target>
+      </trans-unit>
+      <trans-unit id="catalogViewDetails" datatype="html">
+        <source>View Details</source>
+        <target>Намоиши тафсилот</target>
+      </trans-unit>
+      <trans-unit id="catalogLoadMore" datatype="html">
+        <source>Load More Gowns</source>
+        <target>Боргузории либосҳои бештар</target>
+      </trans-unit>
+      <trans-unit id="catalogBookFitting" datatype="html">
+        <source>Book a Fitting</source>
+        <target>Брон кардани ченкунӣ</target>
+      </trans-unit>
+      <trans-unit id="catalogLoading" datatype="html">
+        <source>Loading Asset</source>
+        <target>Боргузории ресурс</target>
+      </trans-unit>
+      <trans-unit id="catalogFooter" datatype="html">
+        <source>Mavluda Beauty • Bridal Collection</source>
+        <target>Mavluda Beauty • Коллексияи арӯсӣ</target>
       </trans-unit>
       <trans-unit id="headerSearchPlaceholder" datatype="html">
         <source>Search...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/widgets/header/header.component.ts</context>
-          <context context-type="linenumber">35,40</context>
-        </context-group>
-        <note priority="1" from="description">Header search placeholder</note>
+        <target>Ҷустуҷӯ...</target>
       </trans-unit>
       <trans-unit id="headerClientSite" datatype="html">
         <source>Client Site</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/widgets/header/header.component.ts</context>
-          <context context-type="linenumber">46,47</context>
-        </context-group>
-        <note priority="1" from="description">Client Site link text</note>
+        <target>Сайти мизоҷ</target>
+      </trans-unit>
+      <trans-unit id="navHome" datatype="html">
+        <source>Home</source>
+        <target>Асосӣ</target>
+      </trans-unit>
+      <trans-unit id="navCollection" datatype="html">
+        <source>Collection</source>
+        <target>Коллексия</target>
+      </trans-unit>
+      <trans-unit id="navServices" datatype="html">
+        <source>Services</source>
+        <target>Хизматрасониҳо</target>
+      </trans-unit>
+      <trans-unit id="navPortfolio" datatype="html">
+        <source>Portfolio</source>
+        <target>Портфолио</target>
+      </trans-unit>
+      <trans-unit id="navAbout" datatype="html">
+        <source>About</source>
+        <target>Дар бораи</target>
+      </trans-unit>
+      <trans-unit id="navContact" datatype="html">
+        <source>Contact</source>
+        <target>Тамос</target>
+      </trans-unit>
+      <trans-unit id="navProfile" datatype="html">
+        <source>Profile</source>
+        <target>Профил</target>
+      </trans-unit>
+      <trans-unit id="footerBrandDesc" datatype="html">
+        <source> Experience the pinnacle of medical aesthetics. Combining artistry with clinical safety to reveal your most radiant self. </source>
+        <target> Таҷрибаи қуллаи эстетикаи тиббӣ. Муттаҳид кардани маҳорат бо бехатарии клиникӣ барои ошкор кардани худшиносии дурахшонтарини шумо. </target>
+      </trans-unit>
+      <trans-unit id="footerMenuTitle" datatype="html">
+        <source>Menu</source>
+        <target>Меню</target>
+      </trans-unit>
+      <trans-unit id="footerLegalTitle" datatype="html">
+        <source>Legal</source>
+        <target>Ҳуқуқӣ</target>
+      </trans-unit>
+      <trans-unit id="footerPrivacy" datatype="html">
+        <source>Privacy Policy</source>
+        <target>Сиёсати махфият</target>
+      </trans-unit>
+      <trans-unit id="footerTerms" datatype="html">
+        <source>Terms of Service</source>
+        <target>Шартҳои хизматрасонӣ</target>
+      </trans-unit>
+      <trans-unit id="footerDisclaimer" datatype="html">
+        <source>Medical Disclaimer</source>
+        <target>Радди масъулияти тиббӣ</target>
+      </trans-unit>
+      <trans-unit id="footerCopyright" datatype="html">
+        <source>© 2024 Mavluda Azizova. All rights reserved.</source>
+        <target>© 2024 Мавлюда Азизова. Ҳама ҳуқуқ маҳфуз аст.</target>
+      </trans-unit>
+      <trans-unit id="footerCredits" datatype="html">
+        <source>Designed with Luxury &amp; Care.</source>
+        <target>Бо бошамат ва ғамхорӣ тарҳрезӣ шудааст.</target>
+      </trans-unit>
+      <trans-unit id="sidebarBrandName" datatype="html">
+        <source>Mavluda</source>
+        <target>Mavluda</target>
+      </trans-unit>
+      <trans-unit id="sidebarAdminConsole" datatype="html">
+        <source>Admin Console</source>
+        <target>Консоли админ</target>
+      </trans-unit>
+      <trans-unit id="sidebarSuperAdmin" datatype="html">
+        <source>Super Admin</source>
+        <target>Супер Админ</target>
+      </trans-unit>
+      <trans-unit id="sidebarLogout" datatype="html">
+        <source>Logout</source>
+        <target>Баромадан</target>
       </trans-unit>
       <trans-unit id="sidebar.dashboard" datatype="html">
         <source>Dashboard</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/widgets/sidebar/sidebar.component.ts</context>
-          <context context-type="linenumber">83</context>
-        </context-group>
+        <target>Дашборд</target>
       </trans-unit>
       <trans-unit id="sidebar.veil" datatype="html">
         <source>Veil</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/widgets/sidebar/sidebar.component.ts</context>
-          <context context-type="linenumber">89</context>
-        </context-group>
+        <target>Вуаль</target>
       </trans-unit>
       <trans-unit id="sidebar.services" datatype="html">
         <source>Services</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/widgets/sidebar/sidebar.component.ts</context>
-          <context context-type="linenumber">95</context>
-        </context-group>
+        <target>Хизматрасониҳо</target>
       </trans-unit>
       <trans-unit id="sidebar.clients" datatype="html">
         <source>Clients</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/widgets/sidebar/sidebar.component.ts</context>
-          <context context-type="linenumber">101</context>
-        </context-group>
+        <target>Мизоҷон</target>
       </trans-unit>
       <trans-unit id="sidebar.gallery" datatype="html">
         <source>Gallery</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/widgets/sidebar/sidebar.component.ts</context>
-          <context context-type="linenumber">107</context>
-        </context-group>
+        <target>Галерея</target>
       </trans-unit>
       <trans-unit id="sidebar.settings" datatype="html">
         <source>Settings</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/widgets/sidebar/sidebar.component.ts</context>
-          <context context-type="linenumber">113</context>
-        </context-group>
+        <target>Танзимот</target>
       </trans-unit>
     </body>
   </file>

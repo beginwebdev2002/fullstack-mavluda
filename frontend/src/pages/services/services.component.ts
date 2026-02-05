@@ -22,14 +22,14 @@ interface ServiceItem {
 })
 export class ServicesPageComponent {
   services = signal<ServiceItem[]>([
-    { id: 1, name: 'Botox Treatment', category: 'Injectables', price: 350, duration: '30 min', active: true },
-    { id: 2, name: 'Luxury Gold Facial', category: 'Facials', price: 180, duration: '60 min', active: true },
-    { id: 3, name: 'Laser Hair Removal (Full Body)', category: 'Laser', price: 400, duration: '90 min', active: true },
-    { id: 4, name: 'Lip Fillers (Juvederm)', category: 'Injectables', price: 600, duration: '45 min', active: true },
-    { id: 5, name: 'Chemical Peel', category: 'Facials', price: 120, duration: '30 min', active: false },
+    { id: 1, name: $localize`:@@serviceBotox:Botox Treatment`, category: $localize`:@@catInjectables:Injectables`, price: 350, duration: $localize`:@@duration30:30 min`, active: true },
+    { id: 2, name: $localize`:@@serviceGoldFacial:Luxury Gold Facial`, category: $localize`:@@catFacials:Facials`, price: 180, duration: $localize`:@@duration60:60 min`, active: true },
+    { id: 3, name: $localize`:@@serviceLaserBody:Laser Hair Removal (Full Body)`, category: $localize`:@@catLaser:Laser`, price: 400, duration: $localize`:@@duration90:90 min`, active: true },
+    { id: 4, name: $localize`:@@serviceLipFillers:Lip Fillers (Juvederm)`, category: $localize`:@@catInjectables:Injectables`, price: 600, duration: $localize`:@@duration45:45 min`, active: true },
+    { id: 5, name: $localize`:@@serviceChemicalPeel:Chemical Peel`, category: $localize`:@@catFacials:Facials`, price: 120, duration: $localize`:@@duration30:30 min`, active: false },
   ]);
 
-  filters = ['All', 'Injectables', 'Facials', 'Laser'];
+  filters = [$localize`:@@filterAll:All`, $localize`:@@filterInjectables:Injectables`, $localize`:@@filterFacials:Facials`, $localize`:@@filterLaser:Laser`];
   activeFilter = signal('All');
   viewMode = signal<'list' | 'card'>('list');
   

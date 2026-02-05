@@ -422,6 +422,90 @@
         </context-group>
         <note priority="1" from="description">Dashboard activity title</note>
       </trans-unit>
+      <trans-unit id="dashboardStatAppts" datatype="html">
+        <source>Appointments Today</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboardStatRevenue" datatype="html">
+        <source>Total Revenue</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboardStatClients" datatype="html">
+        <source>New Clients</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboardStatRentals" datatype="html">
+        <source>Active Rentals</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboardActivityAppt" datatype="html">
+        <source>New appointment booked</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time2mAgo" datatype="html">
+        <source>2m ago</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboardActivityInventory" datatype="html">
+        <source>Inventory alert</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time1hAgo" datatype="html">
+        <source>1h ago</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboardActivityService" datatype="html">
+        <source>Service completed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time3hAgo" datatype="html">
+        <source>3h ago</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboardActivityStock" datatype="html">
+        <source>Veil stock updated</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time5hAgo" datatype="html">
+        <source>5h ago</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="galleryTitle" datatype="html">
         <source>Gallery &amp; Portfolio</source>
         <context-group purpose="location">
@@ -942,6 +1026,130 @@
           <context context-type="linenumber">228,233</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="serviceBotox" datatype="html">
+        <source>Botox Treatment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catInjectables" datatype="html">
+        <source>Injectables</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="duration30" datatype="html">
+        <source>30 min</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serviceGoldFacial" datatype="html">
+        <source>Luxury Gold Facial</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catFacials" datatype="html">
+        <source>Facials</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="duration60" datatype="html">
+        <source>60 min</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serviceLaserBody" datatype="html">
+        <source>Laser Hair Removal (Full Body)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catLaser" datatype="html">
+        <source>Laser</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="duration90" datatype="html">
+        <source>90 min</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serviceLipFillers" datatype="html">
+        <source>Lip Fillers (Juvederm)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="duration45" datatype="html">
+        <source>45 min</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="serviceChemicalPeel" datatype="html">
+        <source>Chemical Peel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filterAll" datatype="html">
+        <source>All</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filterInjectables" datatype="html">
+        <source>Injectables</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filterFacials" datatype="html">
+        <source>Facials</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filterLaser" datatype="html">
+        <source>Laser</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/services/services.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="settingsTitle" datatype="html">
         <source>Management of &apos;About&apos; &amp; Core Info</source>
         <context-group purpose="location">
@@ -1417,6 +1625,115 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/pages/user-profile/user-profile.component.html</context>
           <context context-type="linenumber">186,193</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="userStatusGold" datatype="html">
+        <source>Gold Member</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="apptStatusConfirmed" datatype="html">
+        <source>Confirmed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="apptDate" datatype="html">
+        <source>October 28, 2024</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="apptService" datatype="html">
+        <source>Full Face Rejuvenation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loyaltyTierGold" datatype="html">
+        <source>Gold Tier</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loyaltyReward" datatype="html">
+        <source>Comp. Skin Analysis</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="procHydra" datatype="html">
+        <source>HydraFacial Elite</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catSkin" datatype="html">
+        <source>Skin Therapy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="statusView" datatype="html">
+        <source>View Results</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="procBotox" datatype="html">
+        <source>Botulinum Therapy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catMedical" datatype="html">
+        <source>Medical Aesthetics</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="procGlamour" datatype="html">
+        <source>Evening Glamour</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catVisage" datatype="html">
+        <source>Professional Visage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="statusArchived" datatype="html">
+        <source>Archived</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noteSummary" datatype="html">
+        <source>Skin sensitivity slightly elevated during last session. Recommended reducing retinol usage frequency to 2x/week for the next 14 days. Hydration levels have improved significantly since August.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/pages/user-profile/user-profile.component.ts</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="veilAdminTitle" datatype="html">

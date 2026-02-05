@@ -1,10 +1,154 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" target-language="ru-RU" datatype="plaintext" original="ng2.template">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="appBrandName" datatype="html">
+        <source>Mavluda Beauty</source>
+        <target>Mavluda Beauty</target>
+      </trans-unit>
+      <trans-unit id="appBrandSubtitle" datatype="html">
+        <source>Medical Luxury Ecosystem</source>
+        <target>Экосистема медицинской роскоши</target>
+      </trans-unit>
+      <trans-unit id="appAuthenticating" datatype="html">
+        <source>Authenticating Securely</source>
+        <target>Безопасная аутентификация</target>
+      </trans-unit>
+      <trans-unit id="aboutPinnacle" datatype="html">
+        <source>The Pinnacle of </source>
+        <target>Вершина </target>
+      </trans-unit>
+      <trans-unit id="aboutArtistry" datatype="html">
+        <source>Aesthetic Artistry</source>
+        <target>Эстетического искусства</target>
+      </trans-unit>
+      <trans-unit id="aboutIntroResult" datatype="html">
+        <source> Mavluda Azizova stands at the vanguard of medical aesthetics in Tajikistan, harmonizing advanced dermatological science with the delicate touch of high-end artistry. </source>
+        <target> Мавлюда Азизова стоит в авангарде медицинской эстетики в Таджикистане, объединяя передовую дерматологическую науку с тонким прикосновением высокого искусства. </target>
+      </trans-unit>
+      <trans-unit id="aboutPhilosophy" datatype="html">
+        <source> With over a decade of clinical excellence, our center is founded on the philosophy that true beauty is not constructed, but revealed. We employ FDA-approved technologies and bespoke protocols to ensure every treatment is as unique as the individual receiving it. In our sanctuary of transformation, privacy is paramount, and perfection is the only standard. </source>
+        <target> Имея более чем десятилетний опыт клинического совершенства, наш центр основан на философии, что истинная красота не создается, а раскрывается. Мы используем одобренные FDA технологии и индивидуальные протоколы, чтобы гарантировать, что каждая процедура уникальна, как и человек, получающий ее. В нашем святилище трансформации конфиденциальность имеет первостепенное значение, а совершенство - единственный стандарт. </target>
+      </trans-unit>
+      <trans-unit id="aboutSanctuaryTitle" datatype="html">
+        <source>Private Sanctuary</source>
+        <target>Частное святилище</target>
+      </trans-unit>
+      <trans-unit id="aboutContactLocation" datatype="html">
+        <source>Contact &amp; Location</source>
+        <target>Контакты и местоположение</target>
+      </trans-unit>
+      <trans-unit id="aboutVisitCenter" datatype="html">
+        <source>Visit the Center</source>
+        <target>Посетите центр</target>
+      </trans-unit>
+      <trans-unit id="aboutAddress" datatype="html">
+        <source>Rudaki Avenue 127, Suite 402<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>Dushanbe, Tajikistan</source>
+        <target>Проспект Рудаки 127, Офис 402<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>Душанбе, Таджикистан</target>
+      </trans-unit>
+      <trans-unit id="aboutConciergeLine" datatype="html">
+        <source>Concierge Line</source>
+        <target>Линия консьержа</target>
+      </trans-unit>
+      <trans-unit id="aboutPhoneNumber" datatype="html">
+        <source>+992 (90) 000-0000</source>
+        <target>+992 (90) 000-0000</target>
+      </trans-unit>
+      <trans-unit id="aboutAvailability" datatype="html">
+        <source>Available 9:00 AM - 8:00 PM</source>
+        <target>Доступно с 9:00 до 20:00</target>
+      </trans-unit>
+      <trans-unit id="aboutDigitalInquiries" datatype="html">
+        <source>Digital Inquiries</source>
+        <target>Цифровые запросы</target>
+      </trans-unit>
+      <trans-unit id="aboutConnectSocials" datatype="html">
+        <source>Connect via Socials</source>
+        <target>Связь через соцсети</target>
+      </trans-unit>
+      <trans-unit id="aboutSocialChat" datatype="html">
+        <source>Chat</source>
+        <target>Чат</target>
+      </trans-unit>
+      <trans-unit id="aboutSocialJoin" datatype="html">
+        <source>Join</source>
+        <target>Присоединиться</target>
+      </trans-unit>
+      <trans-unit id="aboutSocialView" datatype="html">
+        <source>View</source>
+        <target>Смотреть</target>
+      </trans-unit>
+      <trans-unit id="aboutSocialLike" datatype="html">
+        <source>Like</source>
+        <target>Нравится</target>
+      </trans-unit>
+      <trans-unit id="aboutVIPInquiry" datatype="html">
+        <source>VIP Inquiry</source>
+        <target>VIP запрос</target>
+      </trans-unit>
+      <trans-unit id="aboutVIPDesc" datatype="html">
+        <source>Request a private consultation. Our team will contact you within 24 hours.</source>
+        <target>Запросите частную консультацию. Наша команда свяжется с вами в течение 24 часов.</target>
+      </trans-unit>
+      <trans-unit id="formFullName" datatype="html">
+        <source>Full Name</source>
+        <target>ФИО</target>
+      </trans-unit>
+      <trans-unit id="formFullNamePlaceholder" datatype="html">
+        <source>e.g. Malika Karimova</source>
+        <target>например, Малика Каримова</target>
+      </trans-unit>
+      <trans-unit id="formPhone" datatype="html">
+        <source>Phone Number</source>
+        <target>Номер телефона</target>
+      </trans-unit>
+      <trans-unit id="formPhonePlaceholder" datatype="html">
+        <source>+992 ...</source>
+        <target>+992 ...</target>
+      </trans-unit>
+      <trans-unit id="formServiceInterest" datatype="html">
+        <source>Service of Interest</source>
+        <target>Интересующая услуга</target>
+      </trans-unit>
+      <trans-unit id="formSelectTreatment" datatype="html">
+        <source>Select a treatment...</source>
+        <target>Выберите процедуру...</target>
+      </trans-unit>
+      <trans-unit id="formMedicalFacial" datatype="html">
+        <source>Medical Facial</source>
+        <target>Медицинский уход за лицом</target>
+      </trans-unit>
+      <trans-unit id="formLaserTreatment" datatype="html">
+        <source>Laser Treatment</source>
+        <target>Лазерная обработка</target>
+      </trans-unit>
+      <trans-unit id="formInjectables" datatype="html">
+        <source>Injectables (Botox/Fillers)</source>
+        <target>Инъекции (Ботокс/Филлеры)</target>
+      </trans-unit>
+      <trans-unit id="formVisagiste" datatype="html">
+        <source>Visagiste Consultation</source>
+        <target>Консультация визажиста</target>
+      </trans-unit>
+      <trans-unit id="formMessage" datatype="html">
+        <source>Message</source>
+        <target>Сообщение</target>
+      </trans-unit>
+      <trans-unit id="formMessagePlaceholder" datatype="html">
+        <source>Tell us about your aesthetic goals...</source>
+        <target>Расскажите нам о ваших эстетических целях...</target>
+      </trans-unit>
+      <trans-unit id="formSubmit" datatype="html">
+        <source>Submit Request</source>
+        <target>Отправить запрос</target>
+      </trans-unit>
+      <trans-unit id="aboutMapLabel" datatype="html">
+        <source>Mavluda Azizova Center</source>
+        <target>Центр Мавлюды Азизовой</target>
+      </trans-unit>
       <trans-unit id="authHeaderSubtitle" datatype="html">
         <source> Medical Luxury Ecosystem </source>
-        <target>Медицинская экосистема класса люкс</target>
+        <target> Экосистема медицинской роскоши </target>
       </trans-unit>
       <trans-unit id="authRoleClient" datatype="html">
         <source>Client Portal</source>
@@ -16,7 +160,7 @@
       </trans-unit>
       <trans-unit id="authEmailLabel" datatype="html">
         <source>Email Address</source>
-        <target>Адрес электронной почты</target>
+        <target>Электронная почта</target>
       </trans-unit>
       <trans-unit id="authPasswordLabel" datatype="html">
         <source>Password</source>
@@ -48,7 +192,7 @@
       </trans-unit>
       <trans-unit id="authSecurity" datatype="html">
         <source> Secure Access • End-to-End Encrypted </source>
-        <target>Безопасный доступ • Сквозное шифрование</target>
+        <target> Безопасный доступ • Сквозное шифрование </target>
       </trans-unit>
       <trans-unit id="authSwitchTheme" datatype="html">
         <source>Switch Theme</source>
@@ -56,19 +200,19 @@
       </trans-unit>
       <trans-unit id="authCopyright" datatype="html">
         <source> © 2024 Mavluda Azizova. All rights reserved. </source>
-        <target>© 2024 Mavluda Azizova. Все права защищены.</target>
+        <target> © 2024 Мавлюда Азизова. Все права защищены. </target>
       </trans-unit>
       <trans-unit id="dashboardTitle" datatype="html">
         <source>Dashboard Overview</source>
-        <target>Обзор панели</target>
+        <target>Обзор панели управления</target>
       </trans-unit>
       <trans-unit id="dashboardExport" datatype="html">
         <source> Export Data </source>
-        <target>Экспорт</target>
+        <target> Экспорт данных </target>
       </trans-unit>
       <trans-unit id="dashboardNew" datatype="html">
         <source> New + </source>
-        <target>Новый +</target>
+        <target> Новый + </target>
       </trans-unit>
       <trans-unit id="dashboardRevenueTitle" datatype="html">
         <source>Revenue Analytics</source>
@@ -76,7 +220,7 @@
       </trans-unit>
       <trans-unit id="dashboardRevenueSubtitle" datatype="html">
         <source>Monthly performance overview</source>
-        <target>Месячный обзор эффективности</target>
+        <target>Обзор ежемесячной эффективности</target>
       </trans-unit>
       <trans-unit id="dashboardLast30Days" datatype="html">
         <source>Last 30 Days</source>
@@ -86,6 +230,818 @@
         <source>Recent Activity</source>
         <target>Недавняя активность</target>
       </trans-unit>
+      <trans-unit id="dashboardStatAppts" datatype="html">
+        <source>Appointments Today</source>
+        <target>Записи на сегодня</target>
+      </trans-unit>
+      <trans-unit id="dashboardStatRevenue" datatype="html">
+        <source>Total Revenue</source>
+        <target>Общий доход</target>
+      </trans-unit>
+      <trans-unit id="dashboardStatClients" datatype="html">
+        <source>New Clients</source>
+        <target>Новые клиенты</target>
+      </trans-unit>
+      <trans-unit id="dashboardStatRentals" datatype="html">
+        <source>Active Rentals</source>
+        <target>Активные аренды</target>
+      </trans-unit>
+      <trans-unit id="dashboardActivityAppt" datatype="html">
+        <source>New appointment booked</source>
+        <target>Забронирована новая встреча</target>
+      </trans-unit>
+      <trans-unit id="time2mAgo" datatype="html">
+        <source>2m ago</source>
+        <target>2 мин назад</target>
+      </trans-unit>
+      <trans-unit id="dashboardActivityInventory" datatype="html">
+        <source>Inventory alert</source>
+        <target>Оповещение нвентаря</target>
+      </trans-unit>
+      <trans-unit id="time1hAgo" datatype="html">
+        <source>1h ago</source>
+        <target>1 ч назад</target>
+      </trans-unit>
+      <trans-unit id="dashboardActivityService" datatype="html">
+        <source>Service completed</source>
+        <target>Услуга выполнена</target>
+      </trans-unit>
+      <trans-unit id="time3hAgo" datatype="html">
+        <source>3h ago</source>
+        <target>3 ч назад</target>
+      </trans-unit>
+      <trans-unit id="dashboardActivityStock" datatype="html">
+        <source>Veil stock updated</source>
+        <target>Обновлен запас вуалей</target>
+      </trans-unit>
+      <trans-unit id="time5hAgo" datatype="html">
+        <source>5h ago</source>
+        <target>5 ч назад</target>
+      </trans-unit>
+      <trans-unit id="galleryTitle" datatype="html">
+        <source>Gallery &amp; Portfolio</source>
+        <target>Галерея и Портфолио</target>
+      </trans-unit>
+      <trans-unit id="gallerySubtitle" datatype="html">
+        <source>Manage your luxury portfolio imagery and categories.</source>
+        <target>Управляйте изображениями и категориями вашего портфолио люкс-класса.</target>
+      </trans-unit>
+      <trans-unit id="galleryBtnUpload" datatype="html">
+        <source>Upload New Image</source>
+        <target>Загрузить новое изображение</target>
+      </trans-unit>
+      <trans-unit id="galleryFilterAll" datatype="html">
+        <source>All Images</source>
+        <target>Все изображения</target>
+      </trans-unit>
+      <trans-unit id="galleryDragDropTitle" datatype="html">
+        <source>Drag and drop files here</source>
+        <target>Перетащите файлы сюда</target>
+      </trans-unit>
+      <trans-unit id="galleryDragDropSubtitle" datatype="html">
+        <source>Supported formats: JPG, PNG, WEBP (Max 5MB)</source>
+        <target>Поддерживаемые форматы: JPG, PNG, WEBP (Макс. 5МБ)</target>
+      </trans-unit>
+      <trans-unit id="galleryGridEdit" datatype="html">
+        <source>Edit</source>
+        <target>Редактировать</target>
+      </trans-unit>
+      <trans-unit id="galleryTableImage" datatype="html">
+        <source>Image</source>
+        <target>Изображение</target>
+      </trans-unit>
+      <trans-unit id="galleryTableInfo" datatype="html">
+        <source>File Info</source>
+        <target>Инфо о файле</target>
+      </trans-unit>
+      <trans-unit id="galleryTableCategory" datatype="html">
+        <source>Category</source>
+        <target>Категория</target>
+      </trans-unit>
+      <trans-unit id="galleryTableDate" datatype="html">
+        <source>Date</source>
+        <target>Дата</target>
+      </trans-unit>
+      <trans-unit id="galleryTableStatus" datatype="html">
+        <source>Status</source>
+        <target>Статус</target>
+      </trans-unit>
+      <trans-unit id="galleryTableActions" datatype="html">
+        <source>Actions</source>
+        <target>Действия</target>
+      </trans-unit>
+      <trans-unit id="galleryActionEdit" datatype="html">
+        <source>Edit</source>
+        <target>Редактировать</target>
+      </trans-unit>
+      <trans-unit id="galleryActionDelete" datatype="html">
+        <source>Delete</source>
+        <target>Удалить</target>
+      </trans-unit>
+      <trans-unit id="galleryModalTitleNew" datatype="html">
+        <source>Upload New Image</source>
+        <target>Загрузить новое изображение</target>
+      </trans-unit>
+      <trans-unit id="galleryModalTitleEdit" datatype="html">
+        <source>Edit Image Details</source>
+        <target>Редактировать детали изображения</target>
+      </trans-unit>
+      <trans-unit id="galleryLabelPreview" datatype="html">
+        <source>Image Preview</source>
+        <target>Предпросмотр изображения</target>
+      </trans-unit>
+      <trans-unit id="galleryChangeImage" datatype="html">
+        <source>Change Image</source>
+        <target>Изменить изображение</target>
+      </trans-unit>
+      <trans-unit id="galleryClickToUpload" datatype="html">
+        <source>Click to upload</source>
+        <target>Нажмите для загрузки</target>
+      </trans-unit>
+      <trans-unit id="galleryLabelTitle" datatype="html">
+        <source>Title</source>
+        <target>Название</target>
+      </trans-unit>
+      <trans-unit id="galleryLabelCategory" datatype="html">
+        <source>Category</source>
+        <target>Категория</target>
+      </trans-unit>
+      <trans-unit id="galleryLabelAlt" datatype="html">
+        <source>Alt Text</source>
+        <target>Альтернативный текст</target>
+      </trans-unit>
+      <trans-unit id="galleryBtnCancel" datatype="html">
+        <source>Cancel</source>
+        <target>Отмена</target>
+      </trans-unit>
+      <trans-unit id="galleryBtnUploadImage" datatype="html">
+        <source>Upload Image</source>
+        <target>Загрузить изображение</target>
+      </trans-unit>
+      <trans-unit id="galleryBtnSaveChanges" datatype="html">
+        <source>Save Changes</source>
+        <target>Сохранить изменения</target>
+      </trans-unit>
+      <trans-unit id="galleryLoading" datatype="html">
+        <source>Loading Asset</source>
+        <target>Загрузка ресурса</target>
+      </trans-unit>
+      <trans-unit id="galleryFooter" datatype="html">
+        <source>Mavluda Beauty • Portfolio</source>
+        <target>Mavluda Beauty • Портфолио</target>
+      </trans-unit>
+      <trans-unit id="portfolioTagline" datatype="html">
+        <source>Excellence in Detail</source>
+        <target>Совершенство в деталях</target>
+      </trans-unit>
+      <trans-unit id="portfolioTitle" datatype="html">
+        <source>Portfolio</source>
+        <target>Портфолио</target>
+      </trans-unit>
+      <trans-unit id="portfolioTitleHighlight" datatype="html">
+        <source>Gallery</source>
+        <target>Галерея</target>
+      </trans-unit>
+      <trans-unit id="portfolioDesc" datatype="html">
+        <source> A curated showcase of transformative medical aesthetics and high-fashion visage artistry. Witness the convergence of science and beauty. </source>
+        <target> Курируемая витрина трансформационной медицинской эстетики и искусства визажа высокой моды. Станьте свидетелем слияния науки и красоты. </target>
+      </trans-unit>
+      <trans-unit id="portfolioBtnLoadMore" datatype="html">
+        <source>Load More Works</source>
+        <target>Загрузить больше работ</target>
+      </trans-unit>
+      <trans-unit id="servicesAvailable" datatype="html">
+        <source>Available for Booking</source>
+        <target>Доступно для бронирования</target>
+      </trans-unit>
+      <trans-unit id="servicesRefined" datatype="html">
+        <source>Refined</source>
+        <target>Изысканные</target>
+      </trans-unit>
+      <trans-unit id="servicesTitleSuffix" datatype="html">
+        <source>Services</source>
+        <target>Услуги</target>
+      </trans-unit>
+      <trans-unit id="servicesDescription" datatype="html">
+        <source> A curated selection of medical aesthetic treatments and professional visage services designed to enhance your natural beauty through precision and artistry. </source>
+        <target> Курируемый выбор медицинских эстетических процедур и профессиональных услуг визажа, созданных для подчеркивания вашей естественной красоты с точностью и мастерством. </target>
+      </trans-unit>
+      <trans-unit id="servicesRefineTitle" datatype="html">
+        <source>Refine</source>
+        <target>Уточнить</target>
+      </trans-unit>
+      <trans-unit id="servicesGuidanceTitle" datatype="html">
+        <source>Need Guidance?</source>
+        <target>Нужна помощь?</target>
+      </trans-unit>
+      <trans-unit id="servicesGuidanceText" datatype="html">
+        <source>Schedule a preliminary consultation to discuss your specific needs and expected results.</source>
+        <target>Запишитесь на предварительную консультацию, чтобы обсудить ваши конкретные потребности и ожидаемые результаты.</target>
+      </trans-unit>
+      <trans-unit id="servicesContactSupport" datatype="html">
+        <source>Contact Support</source>
+        <target>Связаться с поддержкой</target>
+      </trans-unit>
+      <trans-unit id="servicesHonorarium" datatype="html">
+        <source>Honorarium</source>
+        <target>Гонорар</target>
+      </trans-unit>
+      <trans-unit id="servicesSecureConsultation" datatype="html">
+        <source>Secure Consultation</source>
+        <target>Безопасная консультация</target>
+      </trans-unit>
+      <trans-unit id="servicesNoFound" datatype="html">
+        <source>No Services Found</source>
+        <target>Услуги не найдены</target>
+      </trans-unit>
+      <trans-unit id="servicesAdjustFilter" datatype="html">
+        <source>Please adjust your filter criteria.</source>
+        <target>Пожалуйста, измените критерии фильтра.</target>
+      </trans-unit>
+      <trans-unit id="servicesLoadMore" datatype="html">
+        <source>Load More Services</source>
+        <target>Загрузить больше услуг</target>
+      </trans-unit>
+      <trans-unit id="servicesTitle" datatype="html">
+        <source>Services &amp; Treatments</source>
+        <target>Услуги и Процедуры</target>
+      </trans-unit>
+      <trans-unit id="servicesSubtitle" datatype="html">
+        <source>Manage your luxury treatment offerings.</source>
+        <target>Управляйте вашими предложениями роскошных процедур.</target>
+      </trans-unit>
+      <trans-unit id="servicesAddButton" datatype="html">
+        <source>Add Service</source>
+        <target>Добавить услугу</target>
+      </trans-unit>
+      <trans-unit id="servicesFilterAll" datatype="html">
+        <source>All Services</source>
+        <target>Все услуги</target>
+      </trans-unit>
+      <trans-unit id="colServiceName" datatype="html">
+        <source>Service Name</source>
+        <target>Название услуги</target>
+      </trans-unit>
+      <trans-unit id="colCategory" datatype="html">
+        <source>Category</source>
+        <target>Категория</target>
+      </trans-unit>
+      <trans-unit id="colDuration" datatype="html">
+        <source>Duration</source>
+        <target>Длительность</target>
+      </trans-unit>
+      <trans-unit id="colPrice" datatype="html">
+        <source>Price</source>
+        <target>Цена</target>
+      </trans-unit>
+      <trans-unit id="colStatus" datatype="html">
+        <source>Status</source>
+        <target>Статус</target>
+      </trans-unit>
+      <trans-unit id="colEdit" datatype="html">
+        <source>Edit</source>
+        <target>Редактировать</target>
+      </trans-unit>
+      <trans-unit id="statusActive" datatype="html">
+        <source>Active</source>
+        <target>Активный</target>
+      </trans-unit>
+      <trans-unit id="statusInactive" datatype="html">
+        <source>Inactive</source>
+        <target>Неактивный</target>
+      </trans-unit>
+      <trans-unit id="servicesEditAction" datatype="html">
+        <source>Edit</source>
+        <target>Редактировать</target>
+      </trans-unit>
+      <trans-unit id="servicesNoServices" datatype="html">
+        <source>No services found.</source>
+        <target>Услуги не найдены.</target>
+      </trans-unit>
+      <trans-unit id="servicesAddNew" datatype="html">
+        <source>Add a new service</source>
+        <target>Добавить новую услугу</target>
+      </trans-unit>
+      <trans-unit id="servicesEditDetails" datatype="html">
+        <source> Edit Details </source>
+        <target> Редактировать детали </target>
+      </trans-unit>
+      <trans-unit id="servicesModalTitleNew" datatype="html">
+        <source>Add New Service</source>
+        <target>Добавить новую услугу</target>
+      </trans-unit>
+      <trans-unit id="servicesModalTitleEdit" datatype="html">
+        <source>Edit Service</source>
+        <target>Редактировать услугу</target>
+      </trans-unit>
+      <trans-unit id="fieldServiceName" datatype="html">
+        <source>Service Name</source>
+        <target>Название услуги</target>
+      </trans-unit>
+      <trans-unit id="fieldCategory" datatype="html">
+        <source>Category</source>
+        <target>Категория</target>
+      </trans-unit>
+      <trans-unit id="fieldPrice" datatype="html">
+        <source>Price (TJS)</source>
+        <target>Цена (TJS)</target>
+      </trans-unit>
+      <trans-unit id="fieldDuration" datatype="html">
+        <source>Duration</source>
+        <target>Длительность</target>
+      </trans-unit>
+      <trans-unit id="fieldStatus" datatype="html">
+        <source>Status</source>
+        <target>Статус</target>
+      </trans-unit>
+      <trans-unit id="servicesBtnCreate" datatype="html">
+        <source>Create Service</source>
+        <target>Создать услугу</target>
+      </trans-unit>
+      <trans-unit id="servicesBtnSave" datatype="html">
+        <source>Save Changes</source>
+        <target>Сохранить изменения</target>
+      </trans-unit>
+      <trans-unit id="actionCancel" datatype="html">
+        <source>Cancel</source>
+        <target>Отмена</target>
+      </trans-unit>
+      <trans-unit id="serviceBotox" datatype="html">
+        <source>Botox Treatment</source>
+        <target>Ботокс терапия</target>
+      </trans-unit>
+      <trans-unit id="catInjectables" datatype="html">
+        <source>Injectables</source>
+        <target>Инъекционные</target>
+      </trans-unit>
+      <trans-unit id="duration30" datatype="html">
+        <source>30 min</source>
+        <target>30 мин</target>
+      </trans-unit>
+      <trans-unit id="serviceGoldFacial" datatype="html">
+        <source>Luxury Gold Facial</source>
+        <target>Роскошный золотой уход за лицом</target>
+      </trans-unit>
+      <trans-unit id="catFacials" datatype="html">
+        <source>Facials</source>
+        <target>Уход за лицом</target>
+      </trans-unit>
+      <trans-unit id="duration60" datatype="html">
+        <source>60 min</source>
+        <target>60 мин</target>
+      </trans-unit>
+      <trans-unit id="serviceLaserBody" datatype="html">
+        <source>Laser Hair Removal (Full Body)</source>
+        <target>Лазерная эпиляция (Все тело)</target>
+      </trans-unit>
+      <trans-unit id="catLaser" datatype="html">
+        <source>Laser</source>
+        <target>Лазер</target>
+      </trans-unit>
+      <trans-unit id="duration90" datatype="html">
+        <source>90 min</source>
+        <target>90 мин</target>
+      </trans-unit>
+      <trans-unit id="serviceLipFillers" datatype="html">
+        <source>Lip Fillers (Juvederm)</source>
+        <target>Увеличение губ (Juvederm)</target>
+      </trans-unit>
+      <trans-unit id="duration45" datatype="html">
+        <source>45 min</source>
+        <target>45 мин</target>
+      </trans-unit>
+      <trans-unit id="serviceChemicalPeel" datatype="html">
+        <source>Chemical Peel</source>
+        <target>Химический пилинг</target>
+      </trans-unit>
+      <trans-unit id="filterAll" datatype="html">
+        <source>All</source>
+        <target>Все</target>
+      </trans-unit>
+      <trans-unit id="filterInjectables" datatype="html">
+        <source>Injectables</source>
+        <target>Инъекционные</target>
+      </trans-unit>
+      <trans-unit id="filterFacials" datatype="html">
+        <source>Facials</source>
+        <target>Уход за лицом</target>
+      </trans-unit>
+      <trans-unit id="filterLaser" datatype="html">
+        <source>Laser</source>
+        <target>Лазер</target>
+      </trans-unit>
+      <trans-unit id="settingsTitle" datatype="html">
+        <source>Management of &apos;About&apos; &amp; Core Info</source>
+        <target>Управление &apos;О нас&apos; и основной информацией</target>
+      </trans-unit>
+      <trans-unit id="settingsSubtitle" datatype="html">
+        <source>Configure public-facing business profile and social matrices.</source>
+        <target>Настройка публичного бизнес-профиля и социальных матриц.</target>
+      </trans-unit>
+      <trans-unit id="settingsTabProfile" datatype="html">
+        <source>Business Profile</source>
+        <target>Бизнес профиль</target>
+      </trans-unit>
+      <trans-unit id="settingsTabSocial" datatype="html">
+        <source>Social Matrix</source>
+        <target>Социальная матрица</target>
+      </trans-unit>
+      <trans-unit id="settingsTabGeneral" datatype="html">
+        <source>General Info</source>
+        <target>Общая информация</target>
+      </trans-unit>
+      <trans-unit id="settingsTabLinks" datatype="html">
+        <source>Additional Links</source>
+        <target>Дополнительные ссылки</target>
+      </trans-unit>
+      <trans-unit id="settingsSectionProfile" datatype="html">
+        <source>Business Profile</source>
+        <target>Бизнес профиль</target>
+      </trans-unit>
+      <trans-unit id="settingsBtnSave" datatype="html">
+        <source> Save Changes </source>
+        <target> Сохранить изменения </target>
+      </trans-unit>
+      <trans-unit id="settingsLabelPhone" datatype="html">
+        <source>Phone Number</source>
+        <target>Номер телефона</target>
+      </trans-unit>
+      <trans-unit id="settingsLabelAddress" datatype="html">
+        <source>Official Address</source>
+        <target>Официальный адрес</target>
+      </trans-unit>
+      <trans-unit id="settingsLabelLat" datatype="html">
+        <source>Latitude</source>
+        <target>Широта</target>
+      </trans-unit>
+      <trans-unit id="settingsLabelLong" datatype="html">
+        <source>Longitude</source>
+        <target>Долгота</target>
+      </trans-unit>
+      <trans-unit id="settingsLabelMap" datatype="html">
+        <source>Map Preview</source>
+        <target>Предпросмотр карты</target>
+      </trans-unit>
+      <trans-unit id="settingsSectionSocial" datatype="html">
+        <source>Social Matrix</source>
+        <target>Социальная матрица</target>
+      </trans-unit>
+      <trans-unit id="settingsBtnAddPlatform" datatype="html">
+        <source>Add Platform</source>
+        <target>Добавить платформу</target>
+      </trans-unit>
+      <trans-unit id="settingsSectionGeneral" datatype="html">
+        <source>General Info &amp; Philosophy</source>
+        <target>Общая информация и философия</target>
+      </trans-unit>
+      <trans-unit id="settingsLabelBio" datatype="html">
+        <source>Center Biography (Multi-language)</source>
+        <target>Биография центра (Мультиязычная)</target>
+      </trans-unit>
+      <trans-unit id="settingsLabelPhilosophy" datatype="html">
+        <source>Beauty Philosophy</source>
+        <target>Философия красоты</target>
+      </trans-unit>
+      <trans-unit id="settingsSectionLinks" datatype="html">
+        <source>Additional Links</source>
+        <target>Дополнительные ссылки</target>
+      </trans-unit>
+      <trans-unit id="settingsBtnAddLink" datatype="html">
+        <source>Add New Link</source>
+        <target>Добавить новую ссылку</target>
+      </trans-unit>
+      <trans-unit id="settingsTableLabel" datatype="html">
+        <source>Label</source>
+        <target>Метка</target>
+      </trans-unit>
+      <trans-unit id="settingsTableTarget" datatype="html">
+        <source>Target URL</source>
+        <target>Целевой URL</target>
+      </trans-unit>
+      <trans-unit id="settingsTableCategory" datatype="html">
+        <source>Category</source>
+        <target>Категория</target>
+      </trans-unit>
+      <trans-unit id="settingsTableAction" datatype="html">
+        <source>Action</source>
+        <target>Действие</target>
+      </trans-unit>
+      <trans-unit id="settingsLastUpdated" datatype="html">
+        <source>Last updated:</source>
+        <target>Последнее обновление:</target>
+      </trans-unit>
+      <trans-unit id="settingsBtnDiscard" datatype="html">
+        <source>Discard All</source>
+        <target>Отменить все</target>
+      </trans-unit>
+      <trans-unit id="settingsBtnPublish" datatype="html">
+        <source>Publish Changes</source>
+        <target>Опубликовать изменения</target>
+      </trans-unit>
+      <trans-unit id="homeLabelMedicalAesthetics" datatype="html">
+        <source>Medical Aesthetics</source>
+        <target>Медицинская Эстетика</target>
+      </trans-unit>
+      <trans-unit id="homeHeroTitleLine1" datatype="html">
+        <source>Redefining</source>
+        <target>Переопределяя</target>
+      </trans-unit>
+      <trans-unit id="homeHeroTitleLine2" datatype="html">
+        <source>Aesthetic Excellence</source>
+        <target>Эстетическое Совершенство</target>
+      </trans-unit>
+      <trans-unit id="homeHeroSubtitle" datatype="html">
+        <source> Mavluda Azizova — Elite Visagiste &amp; Medical Aesthetics Specialist. Where advanced Medical Science meets artistic precision for natural, transformative results. </source>
+        <target> Мавлюда Азизова — Элитный визажист и специалист по медицинской эстетике. Где передовая медицинская наука встречается с художественной точностью для естественных, преображающих результатов. </target>
+      </trans-unit>
+      <trans-unit id="homeBtnSecureConsultation" datatype="html">
+        <source>Secure Consultation</source>
+        <target>Безопасная консультация</target>
+      </trans-unit>
+      <trans-unit id="homeBtnViewPortfolio" datatype="html">
+        <source> View Portfolio </source>
+        <target> Смотреть портфолио </target>
+      </trans-unit>
+      <trans-unit id="homeSatisfiedClients" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-primary font-bold&quot;&gt;"/>500+<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Satisfied Clients</source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-primary font-bold&quot;&gt;"/>500+<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Довольных клиентов</target>
+      </trans-unit>
+      <trans-unit id="homeClinicStatus" datatype="html">
+        <source>Clinic Status</source>
+        <target>Статус клиники</target>
+      </trans-unit>
+      <trans-unit id="homeAcceptingPatients" datatype="html">
+        <source>Accepting New Patients</source>
+        <target>Прием новых пациентов</target>
+      </trans-unit>
+      <trans-unit id="homeTrustedPartners" datatype="html">
+        <source>Trusted Partners &amp; Medical Boards</source>
+        <target>Надежные партнеры и медицинские советы</target>
+      </trans-unit>
+      <trans-unit id="profileClientID" datatype="html">
+        <source>Client ID: #<x id="INTERPOLATION" equiv-text="{{ user.id }}"/></source>
+        <target>ID клиента: #<x id="INTERPOLATION" equiv-text="{{ user.id }}"/></target>
+      </trans-unit>
+      <trans-unit id="profileBtnEdit" datatype="html">
+        <source> Edit Profile </source>
+        <target> Редактировать профиль </target>
+      </trans-unit>
+      <trans-unit id="profileNavOverview" datatype="html">
+        <source>Overview</source>
+        <target>Обзор</target>
+      </trans-unit>
+      <trans-unit id="profileNavAppointments" datatype="html">
+        <source>Appointments</source>
+        <target>Записи</target>
+      </trans-unit>
+      <trans-unit id="profileNavMedicalRecords" datatype="html">
+        <source>Medical Records</source>
+        <target>Медицинские записи</target>
+      </trans-unit>
+      <trans-unit id="profileNavSettings" datatype="html">
+        <source>Settings</source>
+        <target>Настройки</target>
+      </trans-unit>
+      <trans-unit id="profileConciergeTitle" datatype="html">
+        <source>Concierge Support</source>
+        <target>Консьерж-поддержка</target>
+      </trans-unit>
+      <trans-unit id="profileConciergeDesc" datatype="html">
+        <source>Direct line to your personal aesthetic coordinator.</source>
+        <target>Прямая линия с вашим персональным эстетическим координатором.</target>
+      </trans-unit>
+      <trans-unit id="profileConciergeBtn" datatype="html">
+        <source>Contact Now</source>
+        <target>Связаться сейчас</target>
+      </trans-unit>
+      <trans-unit id="profileDashboardTitle" datatype="html">
+        <source>Private Dashboard</source>
+        <target>Личная панель</target>
+      </trans-unit>
+      <trans-unit id="profileWelcome" datatype="html">
+        <source>Welcome back, <x id="INTERPOLATION" equiv-text="{{ user.name.split(&apos; &apos;)[0] }}"/></source>
+        <target>С возвращением, <x id="INTERPOLATION" equiv-text="{{ user.name.split(&apos; &apos;)[0] }}"/></target>
+      </trans-unit>
+      <trans-unit id="profileDateLabel" datatype="html">
+        <source>Today is</source>
+        <target>Сегодня</target>
+      </trans-unit>
+      <trans-unit id="profileUpcomingTitle" datatype="html">
+        <source>Upcoming Appointment</source>
+        <target>Предстоящая встреча</target>
+      </trans-unit>
+      <trans-unit id="profileBtnReschedule" datatype="html">
+        <source>Reschedule</source>
+        <target>Перенести</target>
+      </trans-unit>
+      <trans-unit id="profileBtnDetails" datatype="html">
+        <source>Details</source>
+        <target>Детали</target>
+      </trans-unit>
+      <trans-unit id="profileLoyaltyTitle" datatype="html">
+        <source>Loyalty &amp; Rewards</source>
+        <target>Лояльность и Награды</target>
+      </trans-unit>
+      <trans-unit id="profilePointsEarned" datatype="html">
+        <source>Points Earned</source>
+        <target>Заработанные баллы</target>
+      </trans-unit>
+      <trans-unit id="profilePointsToNext" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ loyalty.pointsToNext }}"/> points until Platinum Status</source>
+        <target><x id="INTERPOLATION" equiv-text="{{ loyalty.pointsToNext }}"/> баллов до Платинового статуса</target>
+      </trans-unit>
+      <trans-unit id="profileNextReward" datatype="html">
+        <source>Next Reward:</source>
+        <target>Следующая награда:</target>
+      </trans-unit>
+      <trans-unit id="profileRedeem" datatype="html">
+        <source>Redeem</source>
+        <target>Использовать</target>
+      </trans-unit>
+      <trans-unit id="profileProceduresTitle" datatype="html">
+        <source>Recent Procedures</source>
+        <target>Недавние процедуры</target>
+      </trans-unit>
+      <trans-unit id="profileViewAll" datatype="html">
+        <source>View All History</source>
+        <target>Смотреть всю историю</target>
+      </trans-unit>
+      <trans-unit id="profileTableDate" datatype="html">
+        <source>Date</source>
+        <target>Дата</target>
+      </trans-unit>
+      <trans-unit id="profileTableService" datatype="html">
+        <source>Service</source>
+        <target>Услуга</target>
+      </trans-unit>
+      <trans-unit id="profileTableSpecialist" datatype="html">
+        <source>Specialist</source>
+        <target>Специалист</target>
+      </trans-unit>
+      <trans-unit id="profileTableAction" datatype="html">
+        <source>Action</source>
+        <target>Действие</target>
+      </trans-unit>
+      <trans-unit id="profileNoteTitle" datatype="html">
+        <source>Latest Medical Note Summary</source>
+        <target>Сводка последней медицинской записи</target>
+      </trans-unit>
+      <trans-unit id="profileNoteRecorder" datatype="html">
+        <source>Recorded by:</source>
+        <target>Записано:</target>
+      </trans-unit>
+      <trans-unit id="profileNoteDate" datatype="html">
+        <source>Date:</source>
+        <target>Дата:</target>
+      </trans-unit>
+      <trans-unit id="profileNoteHistory" datatype="html">
+        <source> Full History </source>
+        <target> Полная история </target>
+      </trans-unit>
+      <trans-unit id="userStatusGold" datatype="html">
+        <source>Gold Member</source>
+        <target>Золотой участник</target>
+      </trans-unit>
+      <trans-unit id="apptStatusConfirmed" datatype="html">
+        <source>Confirmed</source>
+        <target>Подтверждена</target>
+      </trans-unit>
+      <trans-unit id="apptDate" datatype="html">
+        <source>October 28, 2024</source>
+        <target>28 октября 2024</target>
+      </trans-unit>
+      <trans-unit id="apptService" datatype="html">
+        <source>Full Face Rejuvenation</source>
+        <target>Омоложение всего лица</target>
+      </trans-unit>
+      <trans-unit id="loyaltyTierGold" datatype="html">
+        <source>Gold Tier</source>
+        <target>Золотой уровень</target>
+      </trans-unit>
+      <trans-unit id="loyaltyReward" datatype="html">
+        <source>Comp. Skin Analysis</source>
+        <target>Комп. анализ кожи</target>
+      </trans-unit>
+      <trans-unit id="procHydra" datatype="html">
+        <source>HydraFacial Elite</source>
+        <target>HydraFacial Elite</target>
+      </trans-unit>
+      <trans-unit id="catSkin" datatype="html">
+        <source>Skin Therapy</source>
+        <target>Терапия кожи</target>
+      </trans-unit>
+      <trans-unit id="statusView" datatype="html">
+        <source>View Results</source>
+        <target>Смотреть результаты</target>
+      </trans-unit>
+      <trans-unit id="procBotox" datatype="html">
+        <source>Botulinum Therapy</source>
+        <target>Ботулинотерапия</target>
+      </trans-unit>
+      <trans-unit id="catMedical" datatype="html">
+        <source>Medical Aesthetics</source>
+        <target>Медицинская Эстетика</target>
+      </trans-unit>
+      <trans-unit id="procGlamour" datatype="html">
+        <source>Evening Glamour</source>
+        <target>Вечерний гламур</target>
+      </trans-unit>
+      <trans-unit id="catVisage" datatype="html">
+        <source>Professional Visage</source>
+        <target>Профессиональный визаж</target>
+      </trans-unit>
+      <trans-unit id="statusArchived" datatype="html">
+        <source>Archived</source>
+        <target>Архивировано</target>
+      </trans-unit>
+      <trans-unit id="noteSummary" datatype="html">
+        <source>Skin sensitivity slightly elevated during last session. Recommended reducing retinol usage frequency to 2x/week for the next 14 days. Hydration levels have improved significantly since August.</source>
+        <target>Чувствительность кожи была немного повышена во время последнего сеанса. Рекомендуется снизить частоту использования ретинола до 2 раз в неделю в течение следующих 14 дней. Уровень увлажненности значительно улучшился с августа.</target>
+      </trans-unit>
+      <trans-unit id="veilAdminTitle" datatype="html">
+        <source>Bridal Gown Collection</source>
+        <target>Коллекция свадебных платьев</target>
+      </trans-unit>
+      <trans-unit id="veilAdminSubtitle" datatype="html">
+        <source>Exquisite wedding dresses and their characteristics.</source>
+        <target>Изысканные свадебные платья и их характеристики.</target>
+      </trans-unit>
+      <trans-unit id="veilAdminAddBtn" datatype="html">
+        <source>Add New Gown</source>
+        <target>Добавить новое платье</target>
+      </trans-unit>
+      <trans-unit id="veilAvailable" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ veil.stock }}"/> Available</source>
+        <target><x id="INTERPOLATION" equiv-text="{{ veil.stock }}"/> Доступно</target>
+      </trans-unit>
+      <trans-unit id="veilOutOfStock" datatype="html">
+        <source>Out of Stock</source>
+        <target>Нет в наличии</target>
+      </trans-unit>
+      <trans-unit id="veilAdminEdit" datatype="html">
+        <source>Edit</source>
+        <target>Редактировать</target>
+      </trans-unit>
+      <trans-unit id="veilModalTitleNew" datatype="html">
+        <source>Add New Gown</source>
+        <target>Добавить новое платье</target>
+      </trans-unit>
+      <trans-unit id="veilModalTitleEdit" datatype="html">
+        <source>Edit Gown Details</source>
+        <target>Редактировать детали платья</target>
+      </trans-unit>
+      <trans-unit id="veilBtnCreate" datatype="html">
+        <source>Create Gown</source>
+        <target>Создать платье</target>
+      </trans-unit>
+      <trans-unit id="veilBtnSave" datatype="html">
+        <source>Save Changes</source>
+        <target>Сохранить изменения</target>
+      </trans-unit>
+      <trans-unit id="catalogTagline" datatype="html">
+        <source>Timeless Elegance</source>
+        <target>Вечная Элегантность</target>
+      </trans-unit>
+      <trans-unit id="catalogTitle" datatype="html">
+        <source>Bridal</source>
+        <target>Свадебная</target>
+      </trans-unit>
+      <trans-unit id="catalogTitleSuffix" datatype="html">
+        <source>Collection</source>
+        <target>Коллекция</target>
+      </trans-unit>
+      <trans-unit id="catalogDescription" datatype="html">
+        <source> Discover our curated selection of haute couture gowns. Each piece is a masterpiece of design, crafted to celebrate the unique beauty of every bride. </source>
+        <target> Откройте для себя наш курируемый выбор платьев высокой моды. Каждое изделие — шедевр дизайна, созданный, чтобы воспеть уникальную красоту каждой невесты. </target>
+      </trans-unit>
+      <trans-unit id="catalogLabelNew" datatype="html">
+        <source>New Arrival</source>
+        <target>Новое поступление</target>
+      </trans-unit>
+      <trans-unit id="catalogLabelBestSeller" datatype="html">
+        <source>Best Seller</source>
+        <target>Хит продаж</target>
+      </trans-unit>
+      <trans-unit id="catalogViewDetails" datatype="html">
+        <source>View Details</source>
+        <target>Смотреть детали</target>
+      </trans-unit>
+      <trans-unit id="catalogLoadMore" datatype="html">
+        <source>Load More Gowns</source>
+        <target>Загрузить больше платьев</target>
+      </trans-unit>
+      <trans-unit id="catalogBookFitting" datatype="html">
+        <source>Book a Fitting</source>
+        <target>Записаться на примерку</target>
+      </trans-unit>
+      <trans-unit id="catalogLoading" datatype="html">
+        <source>Loading Asset</source>
+        <target>Загрузка ресурса</target>
+      </trans-unit>
+      <trans-unit id="catalogFooter" datatype="html">
+        <source>Mavluda Beauty • Bridal Collection</source>
+        <target>Mavluda Beauty • Свадебная коллекция</target>
+      </trans-unit>
       <trans-unit id="headerSearchPlaceholder" datatype="html">
         <source>Search...</source>
         <target>Поиск...</target>
@@ -94,13 +1050,89 @@
         <source>Client Site</source>
         <target>Сайт клиента</target>
       </trans-unit>
+      <trans-unit id="navHome" datatype="html">
+        <source>Home</source>
+        <target>Главная</target>
+      </trans-unit>
+      <trans-unit id="navCollection" datatype="html">
+        <source>Collection</source>
+        <target>Коллекция</target>
+      </trans-unit>
+      <trans-unit id="navServices" datatype="html">
+        <source>Services</source>
+        <target>Услуги</target>
+      </trans-unit>
+      <trans-unit id="navPortfolio" datatype="html">
+        <source>Portfolio</source>
+        <target>Портфолио</target>
+      </trans-unit>
+      <trans-unit id="navAbout" datatype="html">
+        <source>About</source>
+        <target>О нас</target>
+      </trans-unit>
+      <trans-unit id="navContact" datatype="html">
+        <source>Contact</source>
+        <target>Контакты</target>
+      </trans-unit>
+      <trans-unit id="navProfile" datatype="html">
+        <source>Profile</source>
+        <target>Профиль</target>
+      </trans-unit>
+      <trans-unit id="footerBrandDesc" datatype="html">
+        <source> Experience the pinnacle of medical aesthetics. Combining artistry with clinical safety to reveal your most radiant self. </source>
+        <target> Испытайте вершину медицинской эстетики. Сочетание мастерства с клинической безопасностью для раскрытия вашей самой сияющей версии. </target>
+      </trans-unit>
+      <trans-unit id="footerMenuTitle" datatype="html">
+        <source>Menu</source>
+        <target>Меню</target>
+      </trans-unit>
+      <trans-unit id="footerLegalTitle" datatype="html">
+        <source>Legal</source>
+        <target>Юридическая инфо</target>
+      </trans-unit>
+      <trans-unit id="footerPrivacy" datatype="html">
+        <source>Privacy Policy</source>
+        <target>Политика конфиденциальности</target>
+      </trans-unit>
+      <trans-unit id="footerTerms" datatype="html">
+        <source>Terms of Service</source>
+        <target>Условия обслуживания</target>
+      </trans-unit>
+      <trans-unit id="footerDisclaimer" datatype="html">
+        <source>Medical Disclaimer</source>
+        <target>Медицинский отказ от ответственности</target>
+      </trans-unit>
+      <trans-unit id="footerCopyright" datatype="html">
+        <source>© 2024 Mavluda Azizova. All rights reserved.</source>
+        <target>© 2024 Мавлюда Азизова. Все права защищены.</target>
+      </trans-unit>
+      <trans-unit id="footerCredits" datatype="html">
+        <source>Designed with Luxury &amp; Care.</source>
+        <target>Создано с роскошью и заботой.</target>
+      </trans-unit>
+      <trans-unit id="sidebarBrandName" datatype="html">
+        <source>Mavluda</source>
+        <target>Mavluda</target>
+      </trans-unit>
+      <trans-unit id="sidebarAdminConsole" datatype="html">
+        <source>Admin Console</source>
+        <target>Консоль админа</target>
+      </trans-unit>
+      <trans-unit id="sidebarSuperAdmin" datatype="html">
+        <source>Super Admin</source>
+        <target>Супер Админ</target>
+      </trans-unit>
+      <trans-unit id="sidebarLogout" datatype="html">
+        <source>Logout</source>
+        <target>Выйти</target>
+      </trans-unit>
       <trans-unit id="sidebar.dashboard" datatype="html">
         <source>Dashboard</source>
         <target>Дашборд</target>
       </trans-unit>
       <trans-unit id="sidebar.veil" datatype="html">
         <source>Veil</source>
-        <target>Вейл</target>
+        <target>Вуаль</target>
       </trans-unit>
       <trans-unit id="sidebar.services" datatype="html">
         <source>Services</source>
