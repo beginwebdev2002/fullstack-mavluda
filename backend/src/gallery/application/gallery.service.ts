@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { Gallery } from '../domain/gallery.entity';
-import { GalleryRepository } from '../infrastructure/repositories/gallery.repository';
+import { Gallery } from '@gallery/domain/gallery.entity';
+import { GalleryRepository } from '@gallery/infrastructure/repositories/gallery.repository';
 
 @Injectable()
 export class GalleryService {

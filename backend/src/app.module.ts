@@ -1,9 +1,7 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import configuration from './common/config/configuration';
-import { validate } from './common/config/env.validation';
+import { AppConfigModule } from './common/config/app-config.module';
 import { DatabaseModule } from './common/database/database.module';
 import { UserModule } from './user/user.module';
 import { AdminSettingsModule } from './admin-settings/admin-settings.module';
@@ -15,12 +13,7 @@ import { PaymentModule } from './payment/payment.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      isGlobal: true,
-      envFilePath: '../.env', // Points to root .env
-      validate,
-      load: [configuration],
-    }),
+    AppConfigModule,
     DatabaseModule,
     UserModule,
     AdminSettingsModule,

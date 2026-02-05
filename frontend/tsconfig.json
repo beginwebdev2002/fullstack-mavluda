@@ -19,15 +19,21 @@
     "moduleDetection": "force",
     "allowJs": true,
     "jsx": "react-jsx",
+    "baseUrl": "./",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@app/*": ["src/app/*"],
+      "@pages/*": ["src/pages/*"],
+      "@backend/*": ["src/backend/*"],
+      "@entities/*": ["src/entities/*"],
+      "@features/*": ["src/features/*"],
+      "@locale/*": ["src/locale/*"],
+      "@shared/*": ["src/shared/*"],
+      "@types/*": ["src/types/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@environments/*": ["src/environments/*"],
+      "@src/*": ["src/*"]
     }
   },
-  "files": [
-    "./index.tsx"
-  ],
   "angularCompilerOptions": {
     "disableTypeScriptVersionCheck": true
   }

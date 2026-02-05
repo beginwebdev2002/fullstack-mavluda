@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { Veil } from '../domain/veil.entity';
-import { VeilRepository } from '../infrastructure/repositories/veil.repository';
+import { Veil } from '@veil/domain/veil.entity';
+import { VeilRepository } from '@veil/infrastructure/repositories/veil.repository';
 
 @Injectable()
 export class VeilService {

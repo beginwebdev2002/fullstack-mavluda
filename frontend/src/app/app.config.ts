@@ -1,6 +1,6 @@
 import { ApplicationConfig, provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter, withHashLocation } from '@angular/router';
-import { routes } from '../app.routes';
+import { routes } from '@src/app.routes';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 
 

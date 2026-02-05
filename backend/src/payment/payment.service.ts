@@ -1,5 +1,5 @@
 import { Injectable, BadRequestException } from '@nestjs/common';
-import { PaymentStrategy, InitiatePaymentDto } from './strategies/payment.strategy';
+import { PaymentStrategy, InitiatePaymentDto, PaymentCallbackData } from './strategies/payment.strategy';
 import { AlifPayStrategy } from './strategies/alif-pay.strategy';
 import { MockCardStrategy } from './strategies/mock-card.strategy';
 
@@ -27,7 +27,7 @@ export class PaymentService {
     return strategy.initiatePayment(dto);
   }
 
-  async handleCallback(provider: string, data: any) {
+  async handleCallback(provider: string, data: PaymentCallbackData) {
     const strategy = this.strategies.get(provider);
     if (!strategy) {
       throw new BadRequestException(`Payment provider ${provider} not supported`);

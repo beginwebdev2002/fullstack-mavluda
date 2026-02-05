@@ -17,8 +17,8 @@ export class PaymentController {
   @Post('callback/:provider')
   async callback(
     @Param('provider') provider: string,
-    @Body() body: any,
-    @Query() query: any
+    @Body() body: Record<string, unknown>,
+    @Query() query: Record<string, unknown>
   ) {
     const data = { ...body, ...query };
     return this.paymentService.handleCallback(provider, data);

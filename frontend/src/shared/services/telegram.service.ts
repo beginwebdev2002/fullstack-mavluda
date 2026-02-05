@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { TelegramUser, TelegramWebApp } from '../../types/telegram';
+import { TelegramUser, TelegramWebApp } from '@src/types/telegram';
 
 @Injectable({
   providedIn: 'root',

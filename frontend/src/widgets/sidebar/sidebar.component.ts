@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
-import { SafeHtmlPipe } from '../../shared/pipes/safe-html.pipe';
+import { SafeHtmlPipe } from '@shared/pipes/safe-html.pipe';
 import { filter } from 'rxjs';
 import { inject } from '@angular/core';
 

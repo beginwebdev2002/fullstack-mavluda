@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Service } from '../../domain/service.entity';
-import { ServiceDocument, ServiceSchemaEntity } from '../schemas/service.schema';
+import { Service } from '@services/domain/service.entity';
+import { ServiceDocument, ServiceSchemaEntity } from '@services/infrastructure/schemas/service.schema';
 
 @Injectable()
 export class ServiceRepository {

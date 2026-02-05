@@ -2,7 +2,7 @@
 import { Component, ChangeDetectionStrategy, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { LanguageSwitcherComponent } from '../../features/language-selection/language-switcher.component';
+import { LanguageSwitcherComponent } from '@features/language-selection/language-switcher.component';
 
 @Component({
   selector: 'app-header',

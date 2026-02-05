@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Gallery } from '../../domain/gallery.entity';
-import { GalleryDocument, GallerySchemaEntity } from '../schemas/gallery.schema';
+import { Gallery } from '@gallery/domain/gallery.entity';
+import { GalleryDocument, GallerySchemaEntity } from '@gallery/infrastructure/schemas/gallery.schema';
 
 @Injectable()
 export class GalleryRepository {

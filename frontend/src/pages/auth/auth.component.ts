@@ -3,8 +3,8 @@ import { Component, ChangeDetectionStrategy, inject, signal } from '@angular/cor
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../shared/services/auth.service';
-import { LanguageSwitcherComponent } from '../../features/language-selection/language-switcher.component';
+import { AuthService } from '@shared/services/auth.service';
+import { LanguageSwitcherComponent } from '@features/language-selection/language-switcher.component';
 
 @Component({
   selector: 'app-auth',

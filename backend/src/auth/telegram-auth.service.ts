@@ -1,13 +1,13 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
 import * as crypto from 'crypto';
-import { UserService } from '../user/application/user.service';
-import { User } from '../user/domain/user.entity';
+import { AppConfigService } from '@common/config/app-config.service';
+import { UserService } from '@user/application/user.service';
+import { User } from '@user/domain/user.entity';
 
 @Injectable()
 export class TelegramAuthService {
   constructor(
-    private readonly configService: ConfigService,
+    private readonly configService: AppConfigService,
     private readonly userService: UserService,
   ) {}
 
@@ -29,7 +29,7 @@ export class TelegramAuthService {
       .map(([key, value]) => `${key}=${value}`)
       .join('\n');
 
-    const botToken = this.configService.get<string>('telegramBotToken');
+    const botToken = this.configService.telegramBotToken;
     if (!botToken) {
       throw new Error('TELEGRAM_BOT_TOKEN not configured');
     }

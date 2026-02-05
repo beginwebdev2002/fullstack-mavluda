@@ -20,6 +20,16 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@admin-settings/*": ["src/admin-settings/*"],
+      "@auth/*": ["src/auth/*"],
+      "@common/*": ["src/common/*"],
+      "@gallery/*": ["src/gallery/*"],
+      "@payment/*": ["src/payment/*"],
+      "@services/*": ["src/service/*"],
+      "@user/*": ["src/user/*"],
+      "@veil/*": ["src/veil/*"]
+    }
   }
 }

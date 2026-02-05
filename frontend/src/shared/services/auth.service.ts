@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable, firstValueFrom } from 'rxjs';
 import { TelegramService } from './telegram.service';
-import { environment } from '../../environments/environment';
-import { User } from '../models/user.model';
+import { environment } from '@environments/environment';
+import { User } from '@shared/models/user.model';
 
 export type UserRole = 'admin' | 'client';
 

@@ -1,8 +1,8 @@
 
 import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SidebarComponent } from '../sidebar/sidebar.component';
-import { HeaderComponent } from '../header/header.component';
+import { SidebarComponent } from '@widgets/sidebar/sidebar.component';
+import { HeaderComponent } from '@widgets/header/header.component';
 
 @Component({
   selector: 'app-admin-layout',

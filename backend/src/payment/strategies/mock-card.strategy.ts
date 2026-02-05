@@ -1,5 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { PaymentStrategy, InitiatePaymentDto, PaymentResult } from './payment.strategy';
+import { PaymentStrategy, InitiatePaymentDto, PaymentResult, PaymentCallbackData } from './payment.strategy';
 
 @Injectable()
 export class MockCardStrategy implements PaymentStrategy {
@@ -16,7 +16,7 @@ export class MockCardStrategy implements PaymentStrategy {
     };
   }
 
-  async validateCallback(data: any): Promise<PaymentResult> {
+  async validateCallback(data: PaymentCallbackData): Promise<PaymentResult> {
     return {
       success: true,
       message: 'Mock callback validated'
