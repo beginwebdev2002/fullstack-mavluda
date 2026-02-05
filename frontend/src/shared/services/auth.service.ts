@@ -1,7 +1,11 @@
 
 import { Injectable, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Observable, firstValueFrom } from 'rxjs';
 import { TelegramService } from './telegram.service';
+import { environment } from '../../environments/environment';
+import { User } from '../models/user.model';
 
 export type UserRole = 'admin' | 'client';
 
@@ -9,16 +13,18 @@ export type UserRole = 'admin' | 'client';
   providedIn: 'root'
 })
 export class AuthService {
-  // Fix: Add explicit type `Router` to injected router.
-  private router: Router = inject(Router);
+  private router = inject(Router);
+  private http = inject(HttpClient);
   private telegramService = inject(TelegramService);
+  private apiUrl = `${environment.apiUrl}/auth`;
 
-  currentUserRole = signal<UserRole>('client'); // Default to client for safety
-  isGlobalLoading = signal<boolean>(true); // Start loading to check for Telegram context
+  currentUserRole = signal<UserRole>('client');
+  isGlobalLoading = signal<boolean>(true);
   isAuthenticated = signal<boolean>(false);
+  currentUser = signal<User | null>(null);
 
   constructor() {
-    // Initial check is done in AppComponent to ensure view is ready
+    // Initial check is done in AppComponent
   }
 
   toggleRole() {
@@ -28,68 +34,62 @@ export class AuthService {
   async checkTelegramAuth() {
     this.isGlobalLoading.set(true);
 
-    if (this.telegramService.isTelegram && this.telegramService.initData) {
-      // TELEGRAM NATIVE FLOW
+    if (this.telegramService.initData) {
       console.log('Telegram Context Detected. Attempting Auto-Login...');
-      const success = await this.loginWithTelegram(this.telegramService.initData);
       
-      if (success) {
-        this.isAuthenticated.set(true);
-        // Redirect based on role
-        if (this.currentUserRole() === 'admin') {
-           this.router.navigate(['/admin/dashboard']);
+      try {
+        const success = await this.loginWithTelegram(this.telegramService.initData);
+        if (success) {
+           this.isAuthenticated.set(true);
+           // Role logic would come from backend User object. 
+           // For now, defaulting to client unless specific condition (or from response)
+           this.router.navigate(['/user/home']); 
         } else {
-           this.router.navigate(['/user/home']);
+           this.isAuthenticated.set(false);
+           this.router.navigate(['/auth']);
         }
-      } else {
-        // Fallback to normal login if TG auth fails
+      } catch (error) {
+        console.error('Telegram Login Error:', error);
         this.isAuthenticated.set(false);
         this.router.navigate(['/auth']);
       }
     } else {
-      // WEB BROWSER FLOW
       console.log('No Telegram Context. Showing Standard Login.');
       this.isAuthenticated.set(false);
-      // Wait a moment to show the luxury loading animation because it looks good
       setTimeout(() => {
-        // If we are at root, go to auth. If deep linking, we might want to preserve URL (not implemented for MVP)
          if (this.router.url === '/') {
            this.router.navigate(['/auth']);
          }
          this.isGlobalLoading.set(false);
       }, 1500);
-      return;
     }
     
     this.isGlobalLoading.set(false);
   }
 
   async loginWithTelegram(initData: string): Promise<boolean> {
-    // IN REAL APP: Send initData to NestJS Backend here
-    // return this.http.post('/api/auth/telegram', { initData }).toPromise();
-
-    // MOCK MVP IMPLEMENTATION:
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        // Simulate checking initData
-        const user = this.telegramService.user;
-        if (user) {
-          console.log('Authenticated Telegram User:', user);
-          
-          // MOCK ROLE ASSIGNMENT
-          // In real app, backend tells us the role.
-          // Here, we hardcode 'admin' for specific IDs or usernames for testing
-          if (user.username === 'mavluda_admin' || user.id === 12345678) {
-            this.currentUserRole.set('admin');
-          } else {
-            this.currentUserRole.set('client');
-          }
-          resolve(true);
+    try {
+      const response = await firstValueFrom(
+        this.http.post<{ success: boolean; user: User }>(`${this.apiUrl}/telegram`, { initData })
+      );
+      
+      if (response.success && response.user) {
+        this.currentUser.set(response.user);
+        
+        // Simple role check based on roles array from backend
+        if (response.user.roles.includes('admin')) {
+          this.currentUserRole.set('admin');
         } else {
-          resolve(false);
+          this.currentUserRole.set('client');
         }
-      }, 1000);
-    });
+        
+        return true;
+      }
+      return false;
+    } catch (error) {
+      console.error('Login request failed', error);
+      return false;
+    }
   }
 
   login() {

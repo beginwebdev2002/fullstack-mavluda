@@ -1,68 +1,31 @@
-
 import { Injectable, signal } from '@angular/core';
-
-// Declare types for window.Telegram to avoid TS errors without the npm package
-declare global {
-  interface Window {
-    Telegram: {
-      WebApp: {
-        ready: () => void;
-        expand: () => void;
-        initData: string;
-        initDataUnsafe: {
-          user?: {
-            id: number;
-            first_name: string;
-            last_name?: string;
-            username?: string;
-            language_code?: string;
-          };
-          auth_date?: number;
-          hash?: string;
-        };
-        setHeaderColor: (color: string) => void;
-        close: () => void;
-        platform: string;
-      };
-    };
-  }
-}
+import { TelegramUser, TelegramWebApp } from '../../types/telegram';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TelegramService {
-  private tg = window.Telegram?.WebApp;
+  private webApp: TelegramWebApp | null = null;
+  public user = signal<TelegramUser | null>(null);
 
   constructor() {
-    if (this.isTelegram) {
-      this.tg.ready();
-      try {
-        this.tg.expand();
-        this.tg.setHeaderColor('#0A0A0A'); // Match our Dark theme
-      } catch (e) {
-        console.warn('Telegram WebApp expansion failed', e);
+    if (typeof window !== 'undefined' && window.Telegram && window.Telegram.WebApp) {
+      this.webApp = window.Telegram.WebApp;
+      if (this.webApp.initDataUnsafe?.user) {
+        this.user.set(this.webApp.initDataUnsafe.user);
       }
     }
   }
 
-  get isTelegram(): boolean {
-    return !!this.tg;
-  }
-
   get initData(): string {
-    return this.tg?.initData || '';
+    return this.webApp?.initData || '';
   }
 
-  get user() {
-    return this.tg?.initDataUnsafe?.user;
+  ready(): void {
+    this.webApp?.ready();
   }
 
-  get platform(): string {
-    return this.tg?.platform || 'unknown';
-  }
-
-  close() {
-    this.tg?.close();
+  expand(): void {
+    this.webApp?.expand();
   }
 }

@@ -10,6 +10,8 @@ import { AdminSettingsModule } from './admin-settings/admin-settings.module';
 import { VeilModule } from './veil/veil.module';
 import { ServiceModule } from './service/service.module';
 import { GalleryModule } from './gallery/gallery.module';
+import { AuthModule } from './auth/auth.module';
+import { PaymentModule } from './payment/payment.module';
 
 @Module({
   imports: [
@@ -25,6 +27,8 @@ import { GalleryModule } from './gallery/gallery.module';
     VeilModule,
     ServiceModule,
     GalleryModule,
+    AuthModule,
+    PaymentModule,
   ],
   controllers: [AppController],
   providers: [AppService],

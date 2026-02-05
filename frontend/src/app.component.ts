@@ -2,6 +2,7 @@
 import { Component, ChangeDetectionStrategy, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AuthService } from './shared/services/auth.service';
+import { TelegramService } from './shared/services/telegram.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,9 +14,13 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent implements OnInit {
   public authService = inject(AuthService);
+  public telegramService = inject(TelegramService);
 
   ngOnInit() {
-    // Trigger authentication check on app launch
+    this.telegramService.ready();
+    this.telegramService.expand();
+    
+    // Delegate auth logic to the comprehensive AuthService
     this.authService.checkTelegramAuth();
   }
 }
