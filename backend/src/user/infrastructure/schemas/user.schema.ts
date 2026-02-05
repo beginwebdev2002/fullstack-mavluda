@@ -11,16 +11,16 @@ export class UserSchemaEntity {
   @Prop({ required: true })
   firstName: string;
 
-  @Prop()
+  @Prop({ required: true })
   lastName: string;
 
-  @Prop()
+  @Prop({ required: true })
   username: string;
 
-  @Prop()
+  @Prop({ required: false })
   photoUrl: string;
 
-  @Prop({ default: 'user', enum: ['user', 'admin'] })
+  @Prop({ required: true, default: 'user', enum: ['user', 'admin'] })
   role: string;
 }
 

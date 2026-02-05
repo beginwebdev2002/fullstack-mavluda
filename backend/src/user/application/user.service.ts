@@ -6,6 +6,10 @@ import { UserRepository } from '@user/infrastructure/repositories/user.repositor
 export class UserService {
   constructor(private readonly userRepository: UserRepository) {}
 
+  async findAll(): Promise<User[]> {
+    return await this.userRepository.findAll();
+  }
+
   async findOrCreate(
     telegramId: number,
     profile: {
@@ -26,5 +30,9 @@ export class UserService {
     }
 
     return user;
+  }
+
+  async create(user: User): Promise<User> {
+    return await this.userRepository.create(user);
   }
 }

@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ServiceService } from './application/service.service';
+import { ServiceController } from './presentation/service.controller';
 import { ServiceRepository } from './infrastructure/repositories/service.repository';
 import {
   ServiceSchema,
@@ -13,6 +14,7 @@ import {
       { name: ServiceSchemaEntity.name, schema: ServiceSchema },
     ]),
   ],
+  controllers: [ServiceController],
   providers: [ServiceService, ServiceRepository],
   exports: [ServiceService],
 })
