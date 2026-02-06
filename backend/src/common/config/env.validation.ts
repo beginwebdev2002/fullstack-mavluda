@@ -1,5 +1,12 @@
 import { plainToInstance } from 'class-transformer';
-import { IsNumber, IsString, IsUrl, IsEnum, IsOptional, validateSync } from 'class-validator';
+import {
+  IsNumber,
+  IsString,
+  IsUrl,
+  IsEnum,
+  IsOptional,
+  validateSync,
+} from 'class-validator';
 
 class EnvironmentVariables {
   @IsNumber()
@@ -56,13 +63,9 @@ class EnvironmentVariables {
 }
 
 export function validate(config: Record<string, unknown>) {
-  const validatedConfig = plainToInstance(
-    EnvironmentVariables,
-    config,
-    {
-      enableImplicitConversion: true,
-    },
-  );
+  const validatedConfig = plainToInstance(EnvironmentVariables, config, {
+    enableImplicitConversion: true,
+  });
   const errors = validateSync(validatedConfig, {
     skipMissingProperties: false,
   });

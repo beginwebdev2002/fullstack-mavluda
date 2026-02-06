@@ -9,7 +9,7 @@ export class PaymentController {
   @Post('initiate/:provider')
   async initiate(
     @Param('provider') provider: string,
-    @Body() dto: InitiatePaymentDto
+    @Body() dto: InitiatePaymentDto,
   ) {
     return this.paymentService.initiatePayment(provider, dto);
   }
@@ -18,7 +18,7 @@ export class PaymentController {
   async callback(
     @Param('provider') provider: string,
     @Body() body: Record<string, unknown>,
-    @Query() query: Record<string, unknown>
+    @Query() query: Record<string, unknown>,
   ) {
     const data = { ...body, ...query };
     return this.paymentService.handleCallback(provider, data);

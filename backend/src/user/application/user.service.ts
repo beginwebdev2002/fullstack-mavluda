@@ -32,7 +32,30 @@ export class UserService {
     return user;
   }
 
-  async create(user: User): Promise<User> {
+  async create(user: Omit<User, 'id' | 'createdAt'>): Promise<User> {
     return await this.userRepository.create(user);
+  }
+
+  async findOne(id: string): Promise<User> {
+    const user = await this.userRepository.findById(id);
+    if (!user) {
+      throw new Error(`User with ID ${id} not found`);
+    }
+    return user;
+  }
+
+  async update(id: string, updateUserDto: Partial<User>): Promise<User> {
+    const updatedUser = await this.userRepository.update(id, updateUserDto);
+    if (!updatedUser) {
+      throw new Error(`User with ID ${id} not found`);
+    }
+    return updatedUser;
+  }
+
+  async remove(id: string): Promise<void> {
+    const deleted = await this.userRepository.delete(id);
+    if (!deleted) {
+      throw new Error(`User with ID ${id} not found`);
+    }
   }
 }

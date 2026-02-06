@@ -10,15 +10,22 @@ export class AppConfigService {
   }
 
   get nodeEnv(): string {
-    return this.configService.get<string>('NODE_ENV', { infer: true }) ?? 'development';
+    return (
+      this.configService.get<string>('NODE_ENV', { infer: true }) ??
+      'development'
+    );
   }
 
   get apiPrefix(): string {
-    return this.configService.get<string>('API_PREFIX', { infer: true }) ?? 'api';
+    return (
+      this.configService.get<string>('API_PREFIX', { infer: true }) ?? 'api'
+    );
   }
 
   get frontendUrl(): string {
-    return this.configService.get<string>('FRONTEND_URL', { infer: true }) ?? '';
+    return (
+      this.configService.get<string>('FRONTEND_URL', { infer: true }) ?? ''
+    );
   }
 
   get mongoUri(): string {
@@ -26,7 +33,10 @@ export class AppConfigService {
   }
 
   get mongoDbName(): string {
-    return this.configService.get<string>('MONGO_DB_NAME', { infer: true }) ?? 'mavluda-beauty';
+    return (
+      this.configService.get<string>('MONGO_DB_NAME', { infer: true }) ??
+      'mavluda-beauty'
+    );
   }
 
   get jwtSecret(): string {
@@ -34,19 +44,29 @@ export class AppConfigService {
   }
 
   get jwtExpiration(): string {
-    return this.configService.get<string>('JWT_EXPIRATION', { infer: true }) ?? '1d';
+    return (
+      this.configService.get<string>('JWT_EXPIRATION', { infer: true }) ?? '1d'
+    );
   }
 
   get telegramBotToken(): string {
-    return this.configService.get<string>('TELEGRAM_BOT_TOKEN', { infer: true }) ?? '';
+    return (
+      this.configService.get<string>('TELEGRAM_BOT_TOKEN', { infer: true }) ??
+      ''
+    );
   }
 
   get telegramWebAppUrl(): string {
-    return this.configService.get<string>('TELEGRAM_WEBAPP_URL', { infer: true }) ?? '';
+    return (
+      this.configService.get<string>('TELEGRAM_WEBAPP_URL', { infer: true }) ??
+      ''
+    );
   }
 
   get alifMerchantId(): string {
-    return this.configService.get<string>('ALIF_MERCHANT_ID', { infer: true }) ?? '';
+    return (
+      this.configService.get<string>('ALIF_MERCHANT_ID', { infer: true }) ?? ''
+    );
   }
 
   get alifToken(): string {
@@ -54,10 +74,15 @@ export class AppConfigService {
   }
 
   get alifCallbackKey(): string {
-    return this.configService.get<string>('ALIF_CALLBACK_KEY', { infer: true }) ?? '';
+    return (
+      this.configService.get<string>('ALIF_CALLBACK_KEY', { infer: true }) ?? ''
+    );
   }
 
   get cardPaymentApiKey(): string {
-    return this.configService.get<string>('CARD_PAYMENT_API_KEY', { infer: true }) ?? '';
+    return (
+      this.configService.get<string>('CARD_PAYMENT_API_KEY', { infer: true }) ??
+      ''
+    );
   }
 }

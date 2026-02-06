@@ -1,5 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { PaymentStrategy, InitiatePaymentDto, PaymentResult, PaymentCallbackData } from './payment.strategy';
+import {
+  PaymentStrategy,
+  InitiatePaymentDto,
+  PaymentResult,
+  PaymentCallbackData,
+} from './payment.strategy';
 
 @Injectable()
 export class AlifPayStrategy implements PaymentStrategy {
@@ -8,12 +13,12 @@ export class AlifPayStrategy implements PaymentStrategy {
 
   async initiatePayment(dto: InitiatePaymentDto): Promise<PaymentResult> {
     this.logger.log(`Initiating Alif Pay for order ${dto.orderId}`);
-    
+
     return {
       success: true,
       transactionId: `alif_${Date.now()}`,
       redirectUrl: `https://alifpay.mock/checkout?order=${dto.orderId}`,
-      message: 'Payment initiated via Alif Pay'
+      message: 'Payment initiated via Alif Pay',
     };
   }
 
@@ -22,7 +27,7 @@ export class AlifPayStrategy implements PaymentStrategy {
     return {
       success: true,
       transactionId: data.transactionId as string,
-      message: 'Callback validated'
+      message: 'Callback validated',
     };
   }
 }

@@ -2,7 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Gallery } from '@gallery/domain/gallery.entity';
-import { GalleryDocument, GallerySchemaEntity } from '@gallery/infrastructure/schemas/gallery.schema';
+import {
+  GalleryDocument,
+  GallerySchemaEntity,
+} from '@gallery/infrastructure/schemas/gallery.schema';
 
 @Injectable()
 export class GalleryRepository {
@@ -22,14 +25,38 @@ export class GalleryRepository {
     return this.toDomain(doc);
   }
 
+  async findById(id: string): Promise<Gallery | null> {
+    if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
+      return null;
+    }
+    const doc = await this.galleryModel.findById(id).exec();
+    return doc ? this.toDomain(doc) : null;
+  }
+
+  async update(
+    id: string,
+    updateData: Partial<Gallery>,
+  ): Promise<Gallery | null> {
+    const doc = await this.galleryModel
+      .findByIdAndUpdate(id, { $set: updateData }, { new: true })
+      .exec();
+    return doc ? this.toDomain(doc) : null;
+  }
+
+  async delete(id: string): Promise<boolean> {
+    const result = await this.galleryModel.findByIdAndDelete(id).exec();
+    return !!result;
+  }
+
   private toDomain(doc: GalleryDocument): Gallery {
+    const d = doc as any;
     return new Gallery(
-      doc._id.toString(),
-      doc.title,
-      doc.imageUrl,
-      doc.category,
-      doc.tags,
-      (doc as any).createdAt,
+      d._id.toString(),
+      d.title,
+      d.imageUrl,
+      d.category,
+      d.tags,
+      d.createdAt,
     );
   }
 }

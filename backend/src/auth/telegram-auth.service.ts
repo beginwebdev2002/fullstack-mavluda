@@ -60,9 +60,9 @@ export class TelegramAuthService {
       username?: string;
       language_code?: string;
     }
-    
+
     const telegramUser = JSON.parse(userJson) as TelegramUser;
-    
+
     return this.userService.findOrCreate(telegramUser.id, {
       firstName: telegramUser.first_name,
       lastName: telegramUser.last_name,
