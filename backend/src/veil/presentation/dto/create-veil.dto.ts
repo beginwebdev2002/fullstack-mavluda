@@ -1,4 +1,11 @@
-import { IsString, IsNotEmpty, IsNumber, IsArray, IsOptional, IsBoolean } from 'class-validator';
+import {
+  IsString,
+  IsNotEmpty,
+  IsNumber,
+  IsArray,
+  IsOptional,
+  IsBoolean,
+} from 'class-validator';
 
 export class CreateVeilDto {
   @IsString()

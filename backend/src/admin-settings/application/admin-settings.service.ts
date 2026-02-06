@@ -17,4 +17,10 @@ export class AdminSettingsService {
   ): Promise<AdminSettings> {
     return this.adminSettingsRepository.updateSettings(settings);
   }
+
+  async createSettings(
+    settings: Omit<AdminSettings, 'id'>,
+  ): Promise<AdminSettings> {
+    return this.adminSettingsRepository.createSettings(settings);
+  }
 }

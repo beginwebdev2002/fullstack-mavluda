@@ -29,6 +29,12 @@ export class AdminSettingsRepository {
     );
     return this.toDomain(doc);
   }
+  async createSettings(
+    settings: Omit<AdminSettings, 'id'>,
+  ): Promise<AdminSettings> {
+    const doc = await this.settingsModel.create(settings);
+    return this.toDomain(doc);
+  }
 
   private toDomain(doc: AdminSettingsDocument): AdminSettings {
     return new AdminSettings(

@@ -6,6 +6,7 @@ import {
   AdminSettingsSchema,
   AdminSettingsSchemaEntity,
 } from './infrastructure/schemas/admin-settings.schema';
+import { AdminSettingsController } from './presentation/admin-settings.controller';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import {
       { name: AdminSettingsSchemaEntity.name, schema: AdminSettingsSchema },
     ]),
   ],
+  controllers: [AdminSettingsController],
   providers: [AdminSettingsService, AdminSettingsRepository],
   exports: [AdminSettingsService],
 })

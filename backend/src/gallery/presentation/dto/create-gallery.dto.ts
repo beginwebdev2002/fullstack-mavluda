@@ -1,4 +1,11 @@
-import { IsString, IsNotEmpty, IsUrl, IsEnum, IsOptional, IsArray } from 'class-validator';
+import {
+  IsString,
+  IsNotEmpty,
+  IsUrl,
+  IsEnum,
+  IsOptional,
+  IsArray,
+} from 'class-validator';
 
 export class CreateGalleryDto {
   @IsString()
