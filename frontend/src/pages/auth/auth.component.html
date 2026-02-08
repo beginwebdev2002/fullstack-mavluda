@@ -33,7 +33,7 @@
         </button>
       </div>
       <div class="p-8">
-        <form class="space-y-6" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <form class="space-y-6" (ngSubmit)="onSubmit()">
           
           @if (authMode() === 'signup') {
             <div class="grid grid-cols-2 gap-4 animate-slide-up">
@@ -45,7 +45,7 @@
                         id="firstName" 
                         placeholder="Jane" 
                         type="text"
-                        formControlName="firstName"/>
+                        [formField]="loginForm.firstName"/>
                     </div>
                 </div>
                 <div class="space-y-2">
@@ -56,7 +56,7 @@
                         id="lastName" 
                         placeholder="Doe" 
                         type="text"
-                        formControlName="lastName"/>
+                        [formField]="loginForm.lastName"/>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     id="phone" 
                     placeholder="+992 00 000 0000" 
                     type="tel"
-                    formControlName="phone"/>
+                    [formField]="loginForm.phone"/>
                 </div>
             </div>
           }
@@ -82,7 +82,7 @@
                 id="email" 
                 placeholder="admin@mavluda.beauty" 
                 type="email"
-                formControlName="email"/>
+                [formField]="loginForm.email"/>
             </div>
           </div>
 
@@ -93,7 +93,7 @@
               <input class="w-full pl-12 pr-12 py-3 bg-gray-50 dark:bg-[#1C1C1C] border border-gray-200 dark:border-[#333] rounded-lg text-gray-900 dark:text-white placeholder:text-gray-500 transition-all" 
                 id="password" 
                 [type]="showPassword() ? 'text' : 'password'"
-                formControlName="password"/>
+                [formField]="loginForm.password"/>
               <button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary transition-colors" type="button" (click)="togglePassword()">
                 <span class="material-symbols-outlined text-[20px]">{{ showPassword() ? 'visibility_off' : 'visibility' }}</span>
               </button>
@@ -102,7 +102,7 @@
 
           <div class="flex items-center justify-between text-sm">
             <label class="flex items-center space-x-2 cursor-pointer group">
-              <input class="w-4 h-4 rounded border-gray-300 dark:border-white/30 text-primary focus:ring-primary bg-transparent" type="checkbox" formControlName="rememberMe"/>
+              <input class="w-4 h-4 rounded border-gray-300 dark:border-white/30 text-primary focus:ring-primary bg-transparent" type="checkbox" [formField]="loginForm.rememberMe"/>
               <span class="text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors">Remember me</span>
             </label>
             @if (authMode() === 'signin') {

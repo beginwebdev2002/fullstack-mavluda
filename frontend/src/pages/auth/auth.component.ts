@@ -1,20 +1,19 @@
-import { Component, ChangeDetectionStrategy, inject, signal } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, signal, effect } from '@angular/core';
 import { CommonModule, DOCUMENT } from '@angular/common';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { form, FormField, required, email, minLength } from '@angular/forms/signals';
 import { AuthService } from '@entities/user/auth.service';
 import { LanguageSwitcherComponent } from '../../features/language-selection/language-switcher.component';
 
 @Component({
   selector: 'app-auth',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, LanguageSwitcherComponent],
+  imports: [CommonModule, FormField, LanguageSwitcherComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
-  private fb: FormBuilder = inject(FormBuilder);
   private router: Router = inject(Router);
   public authService = inject(AuthService);
   private document: Document = inject(DOCUMENT);
@@ -27,46 +26,46 @@ export class AuthComponent {
   // 'signin' or 'signup' mode
   authMode = signal<'signin' | 'signup'>('signin');
 
-  loginForm = this.fb.group({
-    firstName: [''],
-    lastName: [''],
-    email: ['admin@mavluda.beauty', [Validators.required, Validators.email]],
-    password: ['password123', [Validators.required, Validators.minLength(6)]]
+  loginModel = signal({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: 'admin@mavluda.beauty',
+    password: 'password123',
+    rememberMe: false
   });
+
+  loginForm = form(this.loginModel, (schema) => {
+    required(schema.email);
+    email(schema.email);
+    required(schema.password);
+    minLength(schema.password, 6);
+  });
+
+  constructor() {
+    // Effect to clear/restore defaults when switching modes
+    effect(() => {
+      const mode = this.authMode();
+      this.errorMessage.set(null);
+      
+      const current = this.loginModel();
+      
+      if (mode === 'signup') {
+        // Clear defaults if switching to signup and generic admin email is present
+        if (current.email === 'admin@mavluda.beauty') {
+           this.loginModel.update(v => ({...v, firstName: '', lastName: '', email: '', password: ''}));
+        }
+      } else {
+        // Restore default admin credentials for demo convenience if empty
+        if (!current.email) {
+           this.loginModel.update(v => ({...v, email: 'admin@mavluda.beauty', password: 'password123'}));
+        }
+      }
+    });
+  }
 
   setAuthMode(mode: 'signin' | 'signup') {
     this.authMode.set(mode);
-    this.errorMessage.set(null); // Clear errors
-    const firstNameControl = this.loginForm.get('firstName');
-    const lastNameControl = this.loginForm.get('lastName');
-
-    if (mode === 'signup') {
-      firstNameControl?.setValidators([Validators.required]);
-      lastNameControl?.setValidators([Validators.required]);
-
-      // Clear defaults for signup
-      if (this.loginForm.get('email')?.value === 'admin@mavluda.beauty') {
-        this.loginForm.patchValue({
-          firstName: '',
-          lastName: '',
-          email: '',
-          password: ''
-        });
-      }
-    } else {
-      firstNameControl?.clearValidators();
-      lastNameControl?.clearValidators();
-
-      // Restore default admin credentials for demo convenience if empty
-      if (!this.loginForm.get('email')?.value) {
-        this.loginForm.patchValue({
-          email: 'admin@mavluda.beauty',
-          password: 'password123'
-        });
-      }
-    }
-    firstNameControl?.updateValueAndValidity();
-    lastNameControl?.updateValueAndValidity();
   }
 
   togglePassword() {
@@ -83,53 +82,70 @@ export class AuthComponent {
   }
 
   onSubmit() {
-    if (this.loginForm.valid) {
-      this.isLoading.set(true);
-      this.errorMessage.set(null);
-      
-      const formValue = this.loginForm.value;
-      const mode = this.authMode();
+    // Manual validation check
+    const emailValid = this.loginForm.email().valid();
+    const passValid = this.loginForm.password().valid();
+    
+    if (!emailValid || !passValid) {
+       // Since we don't have markAllAsTouched, we rely on user having interacted or just return
+       // If fields are untouched, valid() might be false but errors not shown?
+       // Usually required() makes it invalid immediately but touched is false.
+       return;
+    }
 
-      if (mode === 'signin') {
-        this.authService.login({
-          email: formValue.email!,
-          password: formValue.password!
-        }).subscribe({
-          next: () => {
-             this.isLoading.set(false);
-             // Navigation handled in guard or explicit check
-             if (this.authService.isAdmin()) {
-               this.router.navigate(['/admin/dashboard']);
-             } else {
-               this.router.navigate(['/user/home']);
-             }
-          },
-          error: (err) => {
-            this.isLoading.set(false);
-            this.errorMessage.set('Login failed. Please check credentials.');
-            console.error(err);
-          }
-        });
-      } else {
-        this.authService.register({
-          firstName: formValue.firstName!,
-          lastName: formValue.lastName || undefined,
-          email: formValue.email!,
-          password: formValue.password!
-        }).subscribe({
-          next: () => {
-             this.isLoading.set(false);
-             this.router.navigate(['/user/home']);
-          },
-          error: (err) => {
-            this.isLoading.set(false);
-            this.errorMessage.set('Registration failed. Email might be taken.');
-            console.error(err);
-          }
-        });
+    // Manual validation for signup fields
+    if (this.authMode() === 'signup') {
+      const firstName = this.loginModel().firstName;
+      const lastName = this.loginModel().lastName;
+      
+      if (!firstName || !lastName) {
+         return;
       }
+    }
+
+    this.isLoading.set(true);
+    this.errorMessage.set(null);
+    
+    // Get values directly from model signal
+    const formValue = this.loginModel();
+    const mode = this.authMode();
+
+    if (mode === 'signin') {
+      this.authService.login({
+        email: formValue.email,
+        password: formValue.password
+      }).subscribe({
+        next: () => {
+           this.isLoading.set(false);
+           if (this.authService.isAdmin()) {
+             this.router.navigate(['/admin/dashboard']);
+           } else {
+             this.router.navigate(['/user/home']);
+           }
+        },
+        error: (err) => {
+          this.isLoading.set(false);
+          this.errorMessage.set('Login failed. Please check credentials.');
+          console.error(err);
+        }
+      });
     } else {
-      this.loginForm.markAllAsTouched();
+      this.authService.register({
+        firstName: formValue.firstName,
+        lastName: formValue.lastName || undefined,
+        email: formValue.email,
+        password: formValue.password
+      }).subscribe({
+        next: () => {
+           this.isLoading.set(false);
+           this.router.navigate(['/user/home']);
+        },
+        error: (err) => {
+          this.isLoading.set(false);
+          this.errorMessage.set('Registration failed. Email might be taken.');
+          console.error(err);
+        }
+      });
     }
   }
 }

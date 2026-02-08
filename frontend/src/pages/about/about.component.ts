@@ -1,30 +1,38 @@
-
-import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { form, FormField, required } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, FormField],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  // Fix: Explicitly type injected FormBuilder to resolve type inference issue.
-  private fb: FormBuilder = inject(FormBuilder);
+  
+  contactModel = signal({
+    fullName: '',
+    phoneNumber: '',
+    serviceOfInterest: '',
+    message: ''
+  });
 
-  contactForm = this.fb.group({
-    fullName: ['', Validators.required],
-    phoneNumber: ['', Validators.required],
-    serviceOfInterest: ['', Validators.required],
-    message: ['']
+  contactForm = form(this.contactModel, (schema) => {
+    required(schema.fullName);
+    required(schema.phoneNumber);
+    required(schema.serviceOfInterest);
   });
 
   onSubmit() {
-    if (this.contactForm.valid) {
-      console.log('Form Submitted', this.contactForm.value);
+    // Basic validation check
+    const isNameValid = this.contactForm.fullName().valid();
+    const isPhoneValid = this.contactForm.phoneNumber().valid();
+    const isServiceValid = this.contactForm.serviceOfInterest().valid();
+
+    if (isNameValid && isPhoneValid && isServiceValid) {
+      console.log('Form Submitted', this.contactModel());
       // Here you would typically send the data to a service
     } else {
       console.log('Form is invalid');

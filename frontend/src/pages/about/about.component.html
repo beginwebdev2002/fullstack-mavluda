@@ -95,20 +95,20 @@
             <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] pointer-events-none"></div>
             <h3 class="font-serif text-2xl text-white mb-2" i18n="@@aboutVIPInquiry">VIP Inquiry</h3>
             <p class="text-gray-400 text-sm mb-8" i18n="@@aboutVIPDesc">Request a private consultation. Our team will contact you within 24 hours.</p>
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-6 relative z-10">
+            <form (ngSubmit)="onSubmit()" class="space-y-6 relative z-10">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="space-y-2">
                   <label class="text-xs uppercase tracking-wider text-gray-500 font-bold" i18n="@@formFullName">Full Name</label>
-                  <input formControlName="fullName" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors placeholder:text-gray-600" placeholder="e.g. Malika Karimova" i18n-placeholder="@@formFullNamePlaceholder" type="text"/>
+                  <input [formField]="contactForm.fullName" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors placeholder:text-gray-600" placeholder="e.g. Malika Karimova" i18n-placeholder="@@formFullNamePlaceholder" type="text"/>
                 </div>
                 <div class="space-y-2">
                   <label class="text-xs uppercase tracking-wider text-gray-500 font-bold" i18n="@@formPhone">Phone Number</label>
-                  <input formControlName="phoneNumber" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors placeholder:text-gray-600" placeholder="+992 ..." i18n-placeholder="@@formPhonePlaceholder" type="tel"/>
+                  <input [formField]="contactForm.phoneNumber" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors placeholder:text-gray-600" placeholder="+992 ..." i18n-placeholder="@@formPhonePlaceholder" type="tel"/>
                 </div>
               </div>
               <div class="space-y-2">
                 <label class="text-xs uppercase tracking-wider text-gray-500 font-bold" i18n="@@formServiceInterest">Service of Interest</label>
-                <select formControlName="serviceOfInterest" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors">
+                <select [formField]="contactForm.serviceOfInterest" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors">
                   <option value="" disabled selected i18n="@@formSelectTreatment">Select a treatment...</option>
                   <option i18n="@@formMedicalFacial">Medical Facial</option>
                   <option i18n="@@formLaserTreatment">Laser Treatment</option>
@@ -118,7 +118,7 @@
               </div>
               <div class="space-y-2">
                 <label class="text-xs uppercase tracking-wider text-gray-500 font-bold" i18n="@@formMessage">Message</label>
-                <textarea formControlName="message" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors placeholder:text-gray-600 resize-none" placeholder="Tell us about your aesthetic goals..." i18n-placeholder="@@formMessagePlaceholder" rows="3"></textarea>
+                <textarea [formField]="contactForm.message" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors placeholder:text-gray-600 resize-none" placeholder="Tell us about your aesthetic goals..." i18n-placeholder="@@formMessagePlaceholder" rows="3"></textarea>
               </div>
               <div class="pt-4">
                 <button class="w-full h-14 bg-primary hover:bg-primary-hover text-background-dark font-bold uppercase tracking-wider rounded transition-all shadow-gold flex items-center justify-center gap-2 group btn-primary-shimmer active:scale-[0.98]" type="submit">
