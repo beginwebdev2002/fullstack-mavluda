@@ -13,7 +13,7 @@ export class AdminSettingsService {
   }
 
   async updateSettings(
-    settings: Omit<AdminSettings, 'id'>,
+    settings: Partial<AdminSettings>,
   ): Promise<AdminSettings> {
     return this.adminSettingsRepository.updateSettings(settings);
   }
@@ -22,5 +22,9 @@ export class AdminSettingsService {
     settings: Omit<AdminSettings, 'id'>,
   ): Promise<AdminSettings> {
     return this.adminSettingsRepository.createSettings(settings);
+  }
+
+  async deleteSettings(): Promise<boolean> {
+    return this.adminSettingsRepository.deleteSettings();
   }
 }

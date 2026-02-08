@@ -7,8 +7,12 @@ import {
   ValidateNested,
   IsObject,
 } from 'class-validator';
+import {
+  IAdminLocation,
+  IOwnerInfo,
+} from '../../domain/interfaces/admin-settings.interface';
 
-class LocationDto {
+class LocationDto implements IAdminLocation {
   @IsString()
   @IsNotEmpty()
   address: string;
@@ -20,7 +24,7 @@ class LocationDto {
   longitude: number;
 }
 
-class OwnerInfoDto {
+class OwnerInfoDto implements IOwnerInfo {
   @IsString()
   @IsNotEmpty()
   name: string;

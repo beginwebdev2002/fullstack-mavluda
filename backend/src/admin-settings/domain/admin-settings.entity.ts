@@ -1,16 +1,15 @@
-export class AdminSettings {
+import {
+  IAdminLocation,
+  IAdminSettings,
+  IOwnerInfo,
+} from './interfaces/admin-settings.interface';
+
+export class AdminSettings implements IAdminSettings {
   constructor(
     public readonly id: string,
-    public readonly location: {
-      address: string;
-      latitude: number;
-      longitude: number;
-    },
-    public readonly socialLinks: Map<string, string>,
-    public readonly workHours: Map<string, string>, // e.g., 'Mon': '09:00-18:00'
-    public readonly ownerInfo: {
-      name: string;
-      phoneNumber: string;
-    },
+    public readonly location: IAdminLocation,
+    public readonly socialLinks: Record<string, string>,
+    public readonly workHours: Record<string, string>,
+    public readonly ownerInfo: IOwnerInfo,
   ) {}
 }

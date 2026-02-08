@@ -85,4 +85,7 @@ export class AppConfigService {
       ''
     );
   }
+  get settingsId(): string {
+    return this.configService.get<string>('SETTINGS_ID', { infer: true }) ?? '';
+  }
 }

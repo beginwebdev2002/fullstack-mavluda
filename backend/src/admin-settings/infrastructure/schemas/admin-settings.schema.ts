@@ -5,6 +5,9 @@ export type AdminSettingsDocument = HydratedDocument<AdminSettingsSchemaEntity>;
 
 @Schema({ collection: 'admin_settings', timestamps: true })
 export class AdminSettingsSchemaEntity {
+  @Prop({ type: String, default: process.env.SETTINGS_ID })
+  _id: string;
+
   @Prop({ type: Object, required: true })
   location: {
     address: string;
