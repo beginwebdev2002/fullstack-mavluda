@@ -14,7 +14,15 @@ async function bootstrap() {
       transform: true,
     }),
   );
+  app.enableCors({
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    credentials: true,
+    allowedHeaders: '*',
+    maxAge: 3600,
+  });
   const PORT = configService.get<number>('port') || 3000;
+
   await app.listen(PORT);
 }
 bootstrap();

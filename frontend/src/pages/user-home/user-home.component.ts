@@ -1,7 +1,9 @@
 
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, OnInit } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { API_ENDPOINTS } from '@shared/api/api-endpoints';
 
 @Component({
   selector: 'app-user-home',
@@ -11,6 +13,12 @@ import { RouterLink } from '@angular/router';
   templateUrl: './user-home.component.html',
   styleUrls: ['./user-home.component.scss']
 })
-export class UserHomeComponent {
-  // Component logic can be added here if needed in the future.
+export class UserHomeComponent implements OnInit {
+  http = inject(HttpClient);
+
+  ngOnInit(): void {
+    this.http.get(API_ENDPOINTS.AdminSettings).subscribe((res) => {
+      console.log(res);
+    });
+  }
 }

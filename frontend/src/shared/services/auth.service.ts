@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable, firstValueFrom } from 'rxjs';
 import { TelegramService } from './telegram.service';
-import { environment } from '@environments/environment';
+import { API_ENDPOINTS } from '@shared/api/api-endpoints';
 import { User } from '@shared/models/user.model';
 
 export type UserRole = 'admin' | 'client';
@@ -16,7 +16,7 @@ export class AuthService {
   private router = inject(Router);
   private http = inject(HttpClient);
   private telegramService = inject(TelegramService);
-  private apiUrl = `${environment.apiUrl}/auth`;
+
 
   currentUserRole = signal<UserRole>('client');
   isGlobalLoading = signal<boolean>(true);
@@ -70,7 +70,7 @@ export class AuthService {
   async loginWithTelegram(initData: string): Promise<boolean> {
     try {
       const response = await firstValueFrom(
-        this.http.post<{ success: boolean; user: User }>(`${this.apiUrl}/telegram`, { initData })
+        this.http.post<{ success: boolean; user: User }>(`${API_ENDPOINTS.Auth}/telegram`, { initData })
       );
       
       if (response.success && response.user) {
