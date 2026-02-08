@@ -14,6 +14,7 @@ import { VeilPageComponent } from './pages/veil/veil.component';
 import { VeilsCatalogComponent } from './pages/veils-catalog/veils-catalog.component';
 import { AdminLayoutComponent } from './widgets/layouts/admin-layout.component';
 import { UserLayoutComponent } from './widgets/layouts/user-layout.component';
+import { adminGuard } from './app/core/guards/admin.guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'user/home', pathMatch: 'full' },
@@ -23,6 +24,7 @@ export const routes: Routes = [
   { 
     path: 'admin', 
     component: AdminLayoutComponent,
+    canActivate: [adminGuard],
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadComponent: () => import('./pages/dashboard/dashboard.component').then(m => m.DashboardComponent) },

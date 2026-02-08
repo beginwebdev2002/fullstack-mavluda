@@ -32,7 +32,7 @@ class EnvironmentVariables {
   JWT_SECRET: string;
 
   @IsString()
-  JWT_EXPIRATION: string;
+  JWT_EXPIRES_IN: string;
 
   @IsString()
   TELEGRAM_BOT_TOKEN: string;

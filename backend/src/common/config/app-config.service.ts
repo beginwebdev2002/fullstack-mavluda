@@ -43,9 +43,9 @@ export class AppConfigService {
     return this.configService.get<string>('JWT_SECRET', { infer: true }) ?? '';
   }
 
-  get jwtExpiration(): string {
+  get jwtExpiresIn(): string {
     return (
-      this.configService.get<string>('JWT_EXPIRATION', { infer: true }) ?? '1d'
+      this.configService.get<string>('JWT_EXPIRES_IN', { infer: true }) ?? '1d'
     );
   }
 

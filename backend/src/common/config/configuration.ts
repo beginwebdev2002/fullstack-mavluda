@@ -1,6 +1,7 @@
 export default () => ({
   mongoUri: process.env.MONGO_URI,
   jwtSecret: process.env.JWT_SECRET,
+  jwtExpiresIn: process.env.JWT_EXPIRES_IN,
   telegramBotToken: process.env.TELEGRAM_BOT_TOKEN,
   alifMerchantId: process.env.ALIF_MERCHANT_ID,
   alifToken: process.env.ALIF_TOKEN,

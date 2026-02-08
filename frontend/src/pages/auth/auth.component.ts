@@ -1,9 +1,8 @@
-
 import { Component, ChangeDetectionStrategy, inject, signal } from '@angular/core';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../shared/services/auth.service';
+import { AuthService } from '@entities/user/auth.service';
 import { LanguageSwitcherComponent } from '../../features/language-selection/language-switcher.component';
 
 @Component({
@@ -16,15 +15,14 @@ import { LanguageSwitcherComponent } from '../../features/language-selection/lan
 })
 export class AuthComponent {
   private fb: FormBuilder = inject(FormBuilder);
-  // Fix: Add explicit type `Router` to injected router.
   private router: Router = inject(Router);
   public authService = inject(AuthService);
-  // Fix: Add explicit type `Document` to injected document.
   private document: Document = inject(DOCUMENT);
   
   isLoading = signal(false);
   showPassword = signal(false);
   isDarkMode = signal(this.document.documentElement.classList.contains('dark'));
+  errorMessage = signal<string | null>(null);
   
   // 'signin' or 'signup' mode
   authMode = signal<'signin' | 'signup'>('signin');
@@ -32,29 +30,25 @@ export class AuthComponent {
   loginForm = this.fb.group({
     firstName: [''],
     lastName: [''],
-    phone: [''],
     email: ['admin@mavluda.beauty', [Validators.required, Validators.email]],
-    password: ['password123', [Validators.required, Validators.minLength(6)]],
-    rememberMe: [false]
+    password: ['password123', [Validators.required, Validators.minLength(6)]]
   });
 
   setAuthMode(mode: 'signin' | 'signup') {
     this.authMode.set(mode);
+    this.errorMessage.set(null); // Clear errors
     const firstNameControl = this.loginForm.get('firstName');
     const lastNameControl = this.loginForm.get('lastName');
-    const phoneControl = this.loginForm.get('phone');
 
     if (mode === 'signup') {
       firstNameControl?.setValidators([Validators.required]);
       lastNameControl?.setValidators([Validators.required]);
-      phoneControl?.setValidators([Validators.required]);
 
       // Clear defaults for signup
       if (this.loginForm.get('email')?.value === 'admin@mavluda.beauty') {
         this.loginForm.patchValue({
           firstName: '',
           lastName: '',
-          phone: '',
           email: '',
           password: ''
         });
@@ -62,7 +56,6 @@ export class AuthComponent {
     } else {
       firstNameControl?.clearValidators();
       lastNameControl?.clearValidators();
-      phoneControl?.clearValidators();
 
       // Restore default admin credentials for demo convenience if empty
       if (!this.loginForm.get('email')?.value) {
@@ -74,7 +67,6 @@ export class AuthComponent {
     }
     firstNameControl?.updateValueAndValidity();
     lastNameControl?.updateValueAndValidity();
-    phoneControl?.updateValueAndValidity();
   }
 
   togglePassword() {
@@ -88,32 +80,54 @@ export class AuthComponent {
 
   continueWithTelegram() {
     console.log("Triggering Telegram login flow...");
-    // This could potentially redirect to a Telegram auth URL if not in the app.
-    // For now, the main auto-login flow in AuthService handles the in-app case.
   }
 
   onSubmit() {
     if (this.loginForm.valid) {
       this.isLoading.set(true);
+      this.errorMessage.set(null);
       
-      // Auto-determine role based on email credential for MVP demo
-      const email = this.loginForm.get('email')?.value || '';
-      if (email.includes('admin')) {
-          this.authService.currentUserRole.set('admin');
-      } else {
-          this.authService.currentUserRole.set('client');
-      }
+      const formValue = this.loginForm.value;
+      const mode = this.authMode();
 
-      // Simulate API call
-      setTimeout(() => {
-        this.isLoading.set(false);
-        const role = this.authService.currentUserRole();
-        if (role === 'admin') {
-            this.router.navigate(['/admin/dashboard']);
-        } else {
-            this.router.navigate(['/user/home']);
-        }
-      }, 1500);
+      if (mode === 'signin') {
+        this.authService.login({
+          email: formValue.email!,
+          password: formValue.password!
+        }).subscribe({
+          next: () => {
+             this.isLoading.set(false);
+             // Navigation handled in guard or explicit check
+             if (this.authService.isAdmin()) {
+               this.router.navigate(['/admin/dashboard']);
+             } else {
+               this.router.navigate(['/user/home']);
+             }
+          },
+          error: (err) => {
+            this.isLoading.set(false);
+            this.errorMessage.set('Login failed. Please check credentials.');
+            console.error(err);
+          }
+        });
+      } else {
+        this.authService.register({
+          firstName: formValue.firstName!,
+          lastName: formValue.lastName || undefined,
+          email: formValue.email!,
+          password: formValue.password!
+        }).subscribe({
+          next: () => {
+             this.isLoading.set(false);
+             this.router.navigate(['/user/home']);
+          },
+          error: (err) => {
+            this.isLoading.set(false);
+            this.errorMessage.set('Registration failed. Email might be taken.');
+            console.error(err);
+          }
+        });
+      }
     } else {
       this.loginForm.markAllAsTouched();
     }

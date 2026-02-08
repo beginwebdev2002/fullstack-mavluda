@@ -10,6 +10,10 @@ export class UserService {
     return await this.userRepository.findAll();
   }
 
+  async findByEmail(email: string): Promise<User | null> {
+    return await this.userRepository.findByEmail(email);
+  }
+
   async findOrCreate(
     telegramId: number,
     profile: {

@@ -49,12 +49,19 @@ export class UserRepository {
     return !!result;
   }
 
+  async findByEmail(email: string): Promise<User | null> {
+    const doc = await this.userModel.findOne({ email }).exec();
+    return doc ? this.toDomain(doc) : null;
+  }
+
   private toDomain(doc: UserDocument): User {
     const d = doc as any;
     return new User(
       d._id.toString(),
-      d.telegramId,
       d.firstName,
+      d.telegramId,
+      d.email,
+      d.passwordHash,
       d.lastName,
       d.username,
       d.photoUrl,

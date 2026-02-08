@@ -5,8 +5,14 @@ export type UserDocument = HydratedDocument<UserSchemaEntity>;
 
 @Schema({ collection: 'users', timestamps: true })
 export class UserSchemaEntity {
-  @Prop({ required: true, unique: true, index: true })
+  @Prop({ required: false, unique: true, index: true, sparse: true })
   telegramId: number;
+
+  @Prop({ required: false, unique: true, index: true, sparse: true })
+  email: string;
+
+  @Prop({ required: false })
+  passwordHash: string;
 
   @Prop({ required: true })
   firstName: string;
