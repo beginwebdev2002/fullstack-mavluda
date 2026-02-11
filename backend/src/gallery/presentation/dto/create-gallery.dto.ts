@@ -2,7 +2,6 @@ import {
   IsString,
   IsNotEmpty,
   IsUrl,
-  IsEnum,
   IsOptional,
   IsArray,
 } from 'class-validator';
@@ -24,4 +23,16 @@ export class CreateGalleryDto {
   @IsString({ each: true })
   @IsOptional()
   tags?: string[];
+
+  @IsString()
+  @IsOptional()
+  status?: string;
+
+  @IsString()
+  @IsOptional()
+  alt?: string;
+
+  @IsString()
+  @IsOptional()
+  filename?: string;
 }

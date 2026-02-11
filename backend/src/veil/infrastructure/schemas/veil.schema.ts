@@ -25,6 +25,24 @@ export class VeilSchemaEntity {
 
   @Prop({ default: true })
   isAvailable: boolean;
+
+  @Prop()
+  sku: string;
+
+  @Prop()
+  silhouette: string;
+
+  @Prop()
+  neckline: string;
+
+  @Prop()
+  fabric: string;
+
+  @Prop()
+  trainLength: string;
+
+  @Prop()
+  stock: number;
 }
 
 export const VeilSchema = SchemaFactory.createForClass(VeilSchemaEntity);

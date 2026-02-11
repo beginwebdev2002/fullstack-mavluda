@@ -69,8 +69,8 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 animate-page-enter">
       @for(image of filteredImages(); track image.id; let i = $index) {
         <div class="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1 reveal-item" [style.animation-delay.ms]="i * 75">
-          <div (click)="openImageModal(image.url)" class="relative aspect-[4/5] overflow-hidden cursor-pointer">
-            <img [ngSrc]="image.url" [alt]="image.alt" fill class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+          <div (click)="openImageModal(image.imageUrl)" class="relative aspect-[4/5] overflow-hidden cursor-pointer">
+            <img [src]="image.imageUrl" [alt]="image.alt" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
             <div class="absolute top-4 left-4 bg-gray-900/80 backdrop-blur-sm px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-white shadow-sm">
               {{ image.category }}
             </div>
@@ -86,7 +86,7 @@
             <div class="mt-4 flex items-center justify-between border-t border-gray-100 pt-3">
               <div class="flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full" [class]="image.status === 'published' ? 'bg-green-500' : 'bg-yellow-500'" [title]="image.status"></span>
-                <span class="text-xs text-gray-500">{{ image.date }}</span>
+                <span class="text-xs text-gray-500">{{ image.createdAt | date:'mediumDate' }}</span>
               </div>
               <button (click)="openModal(image)" class="flex items-center gap-1.5 text-xs font-medium text-gray-500 hover:text-primary transition-all opacity-0 group-hover:opacity-100 duration-300" aria-label="Edit image details">
                 <span class="material-symbols-outlined !text-base">edit</span>
@@ -118,7 +118,7 @@
                   @for(image of filteredImages(); track image.id; let i = $index) {
                       <tr class="hover:bg-gray-50/50 transition-colors duration-200 reveal-item" [style.animation-delay.ms]="i * 50">
                           <td class="px-6 py-4 whitespace-nowrap">
-                              <img [ngSrc]="image.url" [alt]="image.alt" width="64" height="64" class="w-16 h-16 object-cover rounded-lg shadow-sm"/>
+                              <img [src]="image.imageUrl" [alt]="image.alt" width="64" height="64" class="w-16 h-16 object-cover rounded-lg shadow-sm"/>
                           </td>
                           <td class="px-6 py-4 whitespace-nowrap">
                               <div class="text-sm font-medium text-gray-900">{{ image.title }}</div>
@@ -130,7 +130,7 @@
                               </span>
                           </td>
                           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                              {{ image.date }}
+                              {{ image.createdAt | date:'mediumDate' }}
                           </td>
                           <td class="px-6 py-4 whitespace-nowrap">
                               <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
@@ -168,8 +168,8 @@
         <div class="space-y-2 mb-6 md:mb-0">
           <label class="block text-sm font-medium text-gray-700" i18n="@@galleryLabelPreview">Image Preview</label>
           <div (click)="fileInput.click()" class="aspect-[4/3] w-full rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center relative group cursor-pointer hover:border-primary transition-colors bg-gray-50">
-              @if (currentImage.url) {
-                  <img [src]="currentImage.url" alt="Image preview" class="w-full h-full object-cover rounded-lg absolute inset-0">
+              @if (currentImage.imageUrl) {
+                  <img [src]="currentImage.imageUrl" alt="Image preview" class="w-full h-full object-cover rounded-lg absolute inset-0">
                   <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                     <div class="text-center text-white">
                       <span class="material-symbols-outlined text-3xl">edit</span>
@@ -213,7 +213,7 @@
         <button 
           (click)="saveImage()" 
           class="px-4 py-2 bg-primary text-black hover:bg-primary-hover rounded-lg text-sm font-medium transition-colors shadow-md disabled:bg-gray-300 disabled:cursor-not-allowed"
-          [disabled]="currentImage.id === 0 && !currentImage.url"
+          [disabled]="!currentImage.id && !currentImage.imageUrl"
         >
           @if(currentImage.id === 0) { <span i18n="@@galleryBtnUploadImage">Upload Image</span> } @else { <span i18n="@@galleryBtnSaveChanges">Save Changes</span> }
         </button>

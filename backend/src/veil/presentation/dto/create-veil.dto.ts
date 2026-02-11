@@ -36,4 +36,28 @@ export class CreateVeilDto {
   @IsBoolean()
   @IsOptional()
   isAvailable?: boolean;
+
+  @IsString()
+  @IsOptional()
+  sku?: string;
+
+  @IsString()
+  @IsOptional()
+  silhouette?: string;
+
+  @IsString()
+  @IsOptional()
+  neckline?: string;
+
+  @IsString()
+  @IsOptional()
+  fabric?: string;
+
+  @IsString()
+  @IsOptional()
+  trainLength?: string;
+
+  @IsNumber()
+  @IsOptional()
+  stock?: number;
 }

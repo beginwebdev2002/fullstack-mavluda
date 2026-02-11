@@ -3,6 +3,7 @@ import {
   PaymentStrategy,
   InitiatePaymentDto,
   PaymentCallbackData,
+  PaymentResult,
 } from './strategies/payment.strategy';
 import { AlifPayStrategy } from './strategies/alif-pay.strategy';
 import { MockCardStrategy } from './strategies/mock-card.strategy';
@@ -23,7 +24,10 @@ export class PaymentService {
     this.strategies.set(strategy.name, strategy);
   }
 
-  async initiatePayment(provider: string, dto: InitiatePaymentDto) {
+  async initiatePayment(
+    provider: string,
+    dto: InitiatePaymentDto,
+  ): Promise<PaymentResult> {
     const strategy = this.strategies.get(provider);
     if (!strategy) {
       throw new BadRequestException(
@@ -33,7 +37,10 @@ export class PaymentService {
     return strategy.initiatePayment(dto);
   }
 
-  async handleCallback(provider: string, data: PaymentCallbackData) {
+  async handleCallback(
+    provider: string,
+    data: PaymentCallbackData,
+  ): Promise<PaymentResult> {
     const strategy = this.strategies.get(provider);
     if (!strategy) {
       throw new BadRequestException(

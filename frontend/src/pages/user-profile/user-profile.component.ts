@@ -1,6 +1,7 @@
 
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../entities/user/auth.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -11,12 +12,18 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent {
-  user = {
-    name: 'Sophia Anderson',
-    id: 'MA-8821',
-    status: $localize`:@@userStatusGold:Gold Member`,
-    avatarUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD08o6hF5_pbFiIJqYs4VYYrPPviAtlB2PjR4z2lZYzuT3rcSqK7UbUQNiOic7Y-5L8OgQjXfDI3pcgi0scXP-E6zXsJwv5g2J3sX89thdN8QagJQQCwGJWt96_rVAjbhNezpl35TsKsDKDFcyUdrK2qT0yPcFM3kP0hOXpqC8ZB7OFulzRzNGWHZR0Hw2QbGd77Id8wWieXLWUC7eU1JKb3MgO6TXvXzAJQth53BY6a91dqAL2kuvJKelagAgLC2sRUWQy1FQ6Ul7i'
-  };
+  private authService = inject(AuthService);
+  currentUser = this.authService.currentUser;
+  
+  user = computed(() => {
+    const u = this.currentUser();
+    return {
+        name: u ? `${u.firstName} ${u.lastName}` : 'Guest',
+        id: u ? `ID-${u.id ? u.id.substring(0, 6).toUpperCase() : '000'}` : 'N/A',
+        status: $localize`:@@userStatusGold:Gold Member`, // Mock for now
+        avatarUrl: u && u.photoUrl ? u.photoUrl : 'https://lh3.googleusercontent.com/aida-public/AB6AXuD08o6hF5_pbFiIJqYs4VYYrPPviAtlB2PjR4z2lZYzuT3rcSqK7UbUQNiOic7Y-5L8OgQjXfDI3pcgi0scXP-E6zXsJwv5g2J3sX89thdN8QagJQQCwGJWt96_rVAjbhNezpl35TsKsDKDFcyUdrK2qT0yPcFM3kP0hOXpqC8ZB7OFulzRzNGWHZR0Hw2QbGd77Id8wWieXLWUC7eU1JKb3MgO6TXvXzAJQth53BY6a91dqAL2kuvJKelagAgLC2sRUWQy1FQ6Ul7i'
+    };
+  });
 
   upcomingAppointment = {
     status: $localize`:@@apptStatusConfirmed:Confirmed`,
@@ -46,6 +53,11 @@ export class UserProfileComponent {
   };
   
   today = {
-    date: 'October 24, 2024'
+    date: new Date().toLocaleDateString()
   };
+  
+  logout() {
+    this.authService.logout();
+  }
 }
+

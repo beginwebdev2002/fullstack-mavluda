@@ -8,6 +8,12 @@ export class Veil {
     public readonly images: string[],
     public readonly category: string,
     public readonly isAvailable: boolean = true,
+    public readonly sku?: string,
+    public readonly silhouette?: string,
+    public readonly neckline?: string,
+    public readonly fabric?: string,
+    public readonly trainLength?: string,
+    public readonly stock?: number,
     public readonly createdAt: Date = new Date(),
   ) {}
 }

@@ -55,19 +55,20 @@ export class UserRepository {
   }
 
   private toDomain(doc: UserDocument): User {
-    const d = doc as any;
+    // Safety check for optional fields if needed, but schema defines them.
+    // Mongoose documents have _id, and timestamps adds createdAt
     return new User(
-      d._id.toString(),
-      d.firstName,
-      d.telegramId,
-      d.email,
-      d.passwordHash,
-      d.lastName,
-      d.username,
-      d.photoUrl,
-      d.role as 'user' | 'admin',
+      doc._id.toString(),
+      doc.firstName,
+      doc.telegramId,
+      doc.email,
+      doc.passwordHash,
+      doc.lastName,
+      doc.username,
+      doc.photoUrl,
+      doc.role as 'user' | 'admin',
       // doc.createdAt is available because of timestamps: true
-      d.createdAt,
+      (doc as any).createdAt, 
     );
   }
 }

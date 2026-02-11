@@ -6,11 +6,13 @@ import {
   Put,
   Param,
   Delete,
+  Req,
 } from '@nestjs/common';
 import { UserService } from '../application/user.service';
 import { User } from '@user/domain/user.entity';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+import type { AuthenticatedRequest } from '../../common/interfaces/authenticated-request.interface';
 
 @Controller('users')
 export class UserController {
@@ -50,7 +52,11 @@ export class UserController {
   }
 
   @Get('profile')
-  getProfile() {
-    return { message: 'Profile endpoint' };
+  async getProfile(@Req() req: AuthenticatedRequest): Promise<User> {
+    const userId = req.user?.sub || req.user?.id;
+    if (!userId) {
+      throw new Error('User not found in request');
+    }
+    return this.userService.findOne(userId);
   }
 }
