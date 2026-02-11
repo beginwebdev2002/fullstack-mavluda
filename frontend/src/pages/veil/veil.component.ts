@@ -1,20 +1,38 @@
 
 import { Component, ChangeDetectionStrategy, signal, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { VeilService } from '../../entities/veil/veil.service';
 import { Veil } from '../../entities/veil/veil.model';
 
 @Component({
   selector: 'app-veil-page',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './veil.component.html',
   styleUrls: ['./veil.component.scss']
 })
 export class VeilPageComponent implements OnInit {
   private veilService = inject(VeilService);
+  private fb = inject(FormBuilder);
+
+  formModel = signal<Veil>({
+    id: '',
+    name: '',
+    price: 0,
+    rentalPrice: 0,
+    stock: 0,
+    sku: '',
+    silhouette: '',
+    neckline: '',
+    fabric: '',
+    trainLength: '',
+    category: 'Bridal',
+    description: '',
+    isAvailable: true,
+    images: []
+  });
   
   veils = this.veilService.veils;
 
@@ -23,39 +41,76 @@ export class VeilPageComponent implements OnInit {
   // Edit Modal State
   isEditModalOpen = signal(false);
   isImageLoading = signal(false);
-  tempVeil: Veil = this.getEmptyVeil();
+  
+  veilForm!: FormGroup;
+  selectedFile = signal<File | null>(null);
+  previewImage = signal<string | null>(null);
+  currentVeilId = signal<string | null>(null);
+
+  constructor() {
+    this.initForm();
+  }
+
+  initForm() {
+    this.veilForm = this.fb.group({
+      name: ['', Validators.required],
+      price: [0, [Validators.required, Validators.min(0)]],
+      rentalPrice: [0, [Validators.required, Validators.min(0)]],
+      stock: [0, [Validators.required, Validators.min(0)]],
+      sku: [''],
+      silhouette: [''],
+      neckline: [''],
+      fabric: [''],
+      trainLength: [''],
+      category: ['Bridal'],
+      description: [''],
+      isAvailable: [true]
+    });
+  }
 
   ngOnInit() {
     this.veilService.getVeils().subscribe();
   }
 
-  getEmptyVeil(): Veil {
-    return {
-       id: '', // Backend uses string IDs
-       name: '',
-       sku: '',
-       silhouette: '',
-       neckline: '',
-       fabric: '',
-       trainLength: '',
-       price: 0,
-       stock: 0,
-       images: [],
-       category: 'Bridal', // Default
-       isAvailable: true,
-       description: ''
-    };
-  }
+
 
   // Edit Methods
   openAddModal() {
-     this.tempVeil = this.getEmptyVeil();
+     this.currentVeilId.set(null);
+     this.selectedFile.set(null);
+     this.previewImage.set(null);
+     this.veilForm.reset({
+       name: '',
+       price: 0,
+       rentalPrice: 0,
+       stock: 0,
+       category: 'Bridal',
+       isAvailable: true,
+       description: '' // Check if description exists in form
+     });
      this.isEditModalOpen.set(true);
   }
 
   openEditModal(veil: Veil) {
-     // Clone deep enough for images array
-     this.tempVeil = { ...veil, images: [...veil.images] };
+     this.currentVeilId.set(veil.id);
+     this.selectedFile.set(null);
+     // If veil has images, show the first one as preview
+     this.previewImage.set(veil.images && veil.images.length > 0 ? veil.images[0] : null);
+     
+     this.veilForm.patchValue({
+       name: veil.name,
+       price: veil.price,
+       rentalPrice: veil.rentalPrice || 0, // Ensure field exists in model
+       stock: veil.stock,
+       sku: veil.sku,
+       silhouette: veil.silhouette,
+       neckline: veil.neckline,
+       fabric: veil.fabric,
+       trainLength: veil.trainLength,
+       category: veil.category,
+       description: veil.description || '', 
+       isAvailable: veil.isAvailable
+     });
      this.isEditModalOpen.set(true);
   }
 
@@ -64,15 +119,57 @@ export class VeilPageComponent implements OnInit {
   }
 
   saveVeil() {
-     // Ensure at least one image if possible, or handle empty
-     if (!this.tempVeil.id) {
-        // Create - id is empty string
-        this.veilService.createVeil(this.tempVeil).subscribe(() => {
+     if (this.veilForm.invalid) return;
+
+     const formValue = this.veilForm.value;
+     
+     // Create FormData if file is selected or simpler object if not?
+     // Actually, backend now expects FormData for files, or JSON with numeric types.
+     // But we modified service to accept FormData.
+     // Let's use FormData always for simplicity when dealing with files,
+     // or just use FormData for everything to be consistent with the "upload" capability.
+     
+     const formData = new FormData();
+     Object.keys(formValue).forEach(key => {
+        const value = formValue[key];
+        if (value !== null && value !== undefined) {
+             formData.append(key, value.toString());
+        }
+     });
+
+     if (this.selectedFile()) {
+        formData.append('files', this.selectedFile()!);
+     }
+     
+     // IMPORTANT: For existing images, we might need to handle them.
+     // If we are editing and NOT uploading a new file, we should probably keep existing images.
+     // The backend logic: if new files, they are mapped. 
+     // We also send 'images' from form if we want to keep them.
+     // Current form logic doesn't explicitly track 'images' array in the form controls (except for display).
+     // Ideally, we should add existing images to FormData if we want to keep them.
+     // But `veilForm` doesn't have `images`.
+     
+     const currentId = this.currentVeilId();
+     if (currentId) {
+        // Validation for update: explicitly add existing images if no new file? 
+        // Or if we want to keep them.
+        // Let's assume for now we keep existing images by default on backend if not replaced.
+        // But backend append new files to exists.
+        
+        // If we want to strictly sync, we should pass existing images.
+        // Let's grab them from the original veil?
+        const originalVeil = this.veils().find(v => v.id === currentId);
+        if (originalVeil && originalVeil.images) {
+            originalVeil.images.forEach(img => {
+                formData.append('images', img);
+            });
+        }
+        
+        this.veilService.updateVeil(currentId, formData).subscribe(() => {
            this.closeEditModal();
         });
      } else {
-        // Update
-        this.veilService.updateVeil(this.tempVeil.id, this.tempVeil).subscribe(() => {
+        this.veilService.createVeil(formData).subscribe(() => {
            this.closeEditModal();
         });
      }
@@ -98,15 +195,11 @@ export class VeilPageComponent implements OnInit {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files[0]) {
         const file = input.files[0];
+        this.selectedFile.set(file);
+        
         const reader = new FileReader();
         reader.onload = (e: any) => {
-            // Update the tempVeil's image property to the base64 string for preview
-            // Replace the first image or add if empty
-            if (this.tempVeil.images.length > 0) {
-               this.tempVeil.images[0] = e.target.result;
-            } else {
-               this.tempVeil.images = [e.target.result];
-            }
+            this.previewImage.set(e.target.result);
         };
         reader.readAsDataURL(file);
     }

@@ -4,10 +4,11 @@ import { RouterOutlet } from '@angular/router';
 import { AuthService } from './shared/services/auth.service';
 import { TelegramService } from './shared/services/telegram.service';
 import { CommonModule } from '@angular/common';
+import { GlobalErrorComponent } from './shared/ui/global-error/global-error.component';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, GlobalErrorComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

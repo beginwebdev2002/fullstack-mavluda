@@ -6,6 +6,7 @@ import {
   IsOptional,
   IsBoolean,
 } from 'class-validator';
+import { Type } from 'class-transformer';
 
 export class CreateVeilDto {
   @IsString()
@@ -18,10 +19,12 @@ export class CreateVeilDto {
 
   @IsNumber()
   @IsNotEmpty()
+  @Type(() => Number)
   price: number;
 
   @IsNumber()
   @IsNotEmpty()
+  @Type(() => Number)
   rentalPrice: number;
 
   @IsArray()
@@ -59,5 +62,6 @@ export class CreateVeilDto {
 
   @IsNumber()
   @IsOptional()
+  @Type(() => Number)
   stock?: number;
 }

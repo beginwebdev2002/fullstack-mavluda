@@ -24,13 +24,13 @@ export class VeilService {
     return this.http.get<Veil>(`${this.apiUrl}/${id}`);
   }
 
-  createVeil(veil: Omit<Veil, 'id'>): Observable<Veil> {
+  createVeil(veil: Omit<Veil, 'id'> | FormData): Observable<Veil> {
     return this.http.post<Veil>(this.apiUrl, veil).pipe(
       tap(newVeil => this._veils.update(veils => [...veils, newVeil]))
     );
   }
 
-  updateVeil(id: string, veil: Partial<Veil>): Observable<Veil> {
+  updateVeil(id: string, veil: Partial<Veil> | FormData): Observable<Veil> {
     return this.http.put<Veil>(`${this.apiUrl}/${id}`, veil).pipe(
       tap(updatedVeil => this._veils.update(veils => 
         veils.map(v => v.id === id ? updatedVeil : v)
