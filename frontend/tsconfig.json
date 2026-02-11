@@ -20,6 +20,7 @@
     "allowJs": true,
     "jsx": "react-jsx",
     "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
     "paths": {
       "@app/*": ["src/app/*"],
       "@pages/*": ["src/pages/*"],
@@ -36,5 +37,16 @@
   },
   "angularCompilerOptions": {
     "disableTypeScriptVersionCheck": true
-  }
+  },
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+    "index.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "tmp",
+    "dist",
+    "**/*.spec.ts"
+  ]
 }
