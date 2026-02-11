@@ -1,6 +1,6 @@
 ---
 trigger: model_decision
-description: ./apps/admin-panel/src/**/
+description: ./frontend/src/**/
 globs: frontend/**/
 ---
 
