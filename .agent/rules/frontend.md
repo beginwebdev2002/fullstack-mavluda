@@ -1,6 +1,6 @@
 ---
 trigger: model_decision
-description: ./apps/admin-panel/src/**/
+description: ./frontend/src/**/
 globs: ./apps/admin-panel/src/**/
 ---
 
@@ -47,10 +47,10 @@ alwaysApply: true
 ### Компонент с signals:
 
 ```typescript
-import { Component, signal, computed, input } from '@angular/core';
+import { Component, signal, computed, input } from "@angular/core";
 
 @Component({
-  selector: 'app-example',
+  selector: "app-example",
   standalone: true,
   template: `
     <div>
@@ -62,7 +62,7 @@ import { Component, signal, computed, input } from '@angular/core';
   `,
 })
 export class ExampleComponent {
-  title = input('Default Title');
+  title = input("Default Title");
   count = signal(0);
 
   doubleCount = computed(() => this.count() * 2);
@@ -76,10 +76,10 @@ export class ExampleComponent {
 ### Сервис с signals:
 
 ```typescript
-import { Injectable, signal, computed } from '@angular/core';
+import { Injectable, signal, computed } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class DataService {
   private data = signal<any[]>([]);
@@ -108,7 +108,7 @@ export class DataService {
 ```typescript
 export class BadComponent {
   count = 0; // НЕ используйте обычные свойства
-  title = 'Hello'; // НЕ используйте обычные свойства
+  title = "Hello"; // НЕ используйте обычные свойства
 
   increment() {
     this.count++; // Это не будет работать в zoneless режиме

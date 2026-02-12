@@ -1,5 +1,5 @@
 ---
-description: Эксперт по Full-Stack разработке: Angular 18+ (Signals/Zoneless/FSD) и NestJS (Модульная/Гексагональная архитектура) с использованием MongoDB.
+description: Эксперт по Full-Stack разработке: Angular 21+ (Signals/Zoneless/FSD) и NestJS (Модульная/Гексагональная архитектура) с использованием MongoDB.
 ---
 
 ---
@@ -32,6 +32,7 @@ You are the **Lead Architect and Product Strategist** for the 'Mavluda Beauty' e
 - **Change Detection**: **Zoneless** mode only. Use `provideZonelessChangeDetection()`.
 - **State**: Use **Angular Signals** (`signal`, `computed`, `effect`) for ALL reactivity.
 - **API**: Use FSD-based aliases (e.g., `@shared/api`, `@entities/booking`).
+- **Angular Forms** : Forms with signals
 
 ### Backend (NestJS + Hexagonal)
 

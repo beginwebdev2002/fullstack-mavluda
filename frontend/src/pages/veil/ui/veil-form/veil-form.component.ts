@@ -1,7 +1,7 @@
-import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy, inject, signal, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, input, output, ChangeDetectionStrategy, inject, signal, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Veil } from '../../../entities/veil/veil.model';
+import { Veil } from '@pages/veil/veil.interface';
 
 @Component({
   selector: 'app-veil-form',
@@ -10,10 +10,10 @@ import { Veil } from '../../../entities/veil/veil.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './veil-form.component.html'
 })
-export class VeilFormComponent implements OnInit, OnChanges {
-  @Input() veil: Veil | null = null;
-  @Output() save = new EventEmitter<{ data: any, file: File | null }>();
-  @Output() cancel = new EventEmitter<void>();
+export class VeilFormComponent {
+  veil = input<Veil | null>(null);
+  save = output<{ data: any, file: File | null }>();
+  cancel = output<void>();
 
   private fb = inject(FormBuilder);
   veilForm!: FormGroup;
@@ -23,20 +23,16 @@ export class VeilFormComponent implements OnInit, OnChanges {
 
   constructor() {
     this.initForm();
-  }
-
-  ngOnInit() {
-    if (this.veil) {
-      this.populateForm(this.veil);
-    }
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes['veil'] && changes['veil'].currentValue) {
-       this.populateForm(changes['veil'].currentValue);
-    } else if (changes['veil'] && !changes['veil'].currentValue) {
-       this.resetForm();
-    }
+    
+    // Replace ngOnChanges logic with effect
+    effect(() => {
+      const currentVeil = this.veil();
+      if (currentVeil) {
+        this.populateForm(currentVeil);
+      } else {
+        this.resetForm();
+      }
+    });
   }
 
   initForm() {
@@ -80,15 +76,18 @@ export class VeilFormComponent implements OnInit, OnChanges {
     this.isEditMode.set(false);
     this.selectedFile.set(null);
     this.previewImage.set(null);
-    this.veilForm.reset({
-        name: '',
-        price: 0,
-        rentalPrice: 0,
-        stock: 0,
-        category: 'Bridal',
-        isAvailable: true,
-        description: ''
-    });
+    
+    if (this.veilForm) {
+      this.veilForm.reset({
+          name: '',
+          price: 0,
+          rentalPrice: 0,
+          stock: 0,
+          category: 'Bridal',
+          isAvailable: true,
+          description: ''
+      });
+    }
   }
 
   onFileSelected(event: Event) {

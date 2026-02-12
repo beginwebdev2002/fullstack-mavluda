@@ -1,6 +1,6 @@
 ---
 trigger: model_decision
-description: ./apps/api/src/**/
+description: ./backend/src/**/
 ---
 
 # 🏛️ Architectural Rules: Hexagonal Architecture (Medical Luxury API)

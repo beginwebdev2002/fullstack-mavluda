@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, signal, computed } from '@angular/core';
 import { TelegramUser, TelegramWebApp } from '@src/types/telegram';
 
 @Injectable({
@@ -17,9 +17,7 @@ export class TelegramService {
     }
   }
 
-  get initData(): string {
-    return this.webApp?.initData || '';
-  }
+  initData = computed(() => this.webApp?.initData || '');
 
   ready(): void {
     this.webApp?.ready();

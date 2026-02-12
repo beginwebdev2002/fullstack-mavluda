@@ -34,11 +34,11 @@ export class AuthService {
   async checkTelegramAuth() {
     this.isGlobalLoading.set(true);
 
-    if (this.telegramService.initData) {
+    if (this.telegramService.initData()) {
       console.log('Telegram Context Detected. Attempting Auto-Login...');
       
       try {
-        const success = await this.loginWithTelegram(this.telegramService.initData);
+        const success = await this.loginWithTelegram(this.telegramService.initData());
         if (success) {
            this.isAuthenticated.set(true);
            // Role logic would come from backend User object. 

@@ -10,9 +10,9 @@ mode: agent
 
 # Master Workflow: aaa-architecture.md
 
-Antigravity, you are now in "Full Reconstruction Mode". Your goal is to rewrite the entire project from scratch (apps/api and apps/admin-panel) to align with our new 2026 Luxury Standards.
+Antigravity, you are now in "Full Reconstruction Mode". Your goal is to rewrite the entire project from scratch (frontend and backend) to align with our new 2026 Luxury Standards.
 
-### 1. PHASE ONE: FRONTEND REVOLUTION (apps/admin-panel)
+### 1. PHASE ONE: FRONTEND REVOLUTION (frontend)
 
 - Implement Feature Sliced Design (FSD) structure: app, pages, features, widgets, entities, shared.
 - Transition ALL components to Standalone, Zoneless, and Signal-based architecture.
@@ -20,7 +20,7 @@ Antigravity, you are now in "Full Reconstruction Mode". Your goal is to rewrite 
 - Apply Flowbite + Tailwind CSS with the "Gold & Luxury" theme defined in frontend.md.
 - Ensure 100% type safety; eliminate 'any'.
 
-### 2. PHASE TWO: BACKEND TRANSFORMATION (apps/api)
+### 2. PHASE TWO: BACKEND TRANSFORMATION (backend)
 
 - Refactor the entire NestJS codebase into Hexagonal Architecture (Domain, Application, Infrastructure).
 - Ensure the Domain layer is pure and has zero external dependencies.

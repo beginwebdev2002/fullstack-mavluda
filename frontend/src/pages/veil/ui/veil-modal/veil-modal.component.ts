@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Input, Output, signal, effect, computed } from '@angular/core';
+import { Component, input, output, signal, effect, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Veil } from '../../veil.interface';
+import { Veil } from '@pages/veil/veil.interface';
 
 @Component({
   selector: 'app-veil-modal',
@@ -10,35 +10,39 @@ import { Veil } from '../../veil.interface';
   templateUrl: './veil-modal.component.html',
 })
 export class VeilModalComponent {
-  @Input() set veil(value: Veil | null) {
-    if (value) {
-      this.currentVeilId.set(value.id);
-      this.name.set(value.name);
-      this.price.set(value.price);
-      this.rentalPrice.set(value.rentalPrice || 0);
-      this.stock.set(value.stock);
-      this.sku.set(value.sku || '');
-      this.silhouette.set(value.silhouette || '');
-      this.neckline.set(value.neckline || '');
-      this.fabric.set(value.fabric || '');
-      this.trainLength.set(value.trainLength || '');
-      this.category.set(value.category || 'Bridal');
-      this.description.set(value.description || '');
-      this.isAvailable.set(value.isAvailable);
-      this.existingImages.set(value.images || []);
-      
-      if (value.images && value.images.length > 0) {
-        this.previewImage.set(value.images[0]);
-      } else {
-        this.previewImage.set(null);
-      }
-    } else {
-      this.resetForm();
-    }
-  }
+  veil = input<Veil | null>(null);
+  save = output<FormData>();
+  cancel = output<void>();
 
-  @Output() save = new EventEmitter<FormData>();
-  @Output() cancel = new EventEmitter<void>();
+  constructor() {
+    effect(() => {
+      const value = this.veil();
+      if (value) {
+        this.currentVeilId.set(value.id);
+        this.name.set(value.name);
+        this.price.set(value.price);
+        this.rentalPrice.set(value.rentalPrice || 0);
+        this.stock.set(value.stock);
+        this.sku.set(value.sku || '');
+        this.silhouette.set(value.silhouette || '');
+        this.neckline.set(value.neckline || '');
+        this.fabric.set(value.fabric || '');
+        this.trainLength.set(value.trainLength || '');
+        this.category.set(value.category || 'Bridal');
+        this.description.set(value.description || '');
+        this.isAvailable.set(value.isAvailable);
+        this.existingImages.set(value.images || []);
+        
+        if (value.images && value.images.length > 0) {
+          this.previewImage.set(value.images[0]);
+        } else {
+          this.previewImage.set(null);
+        }
+      } else {
+        this.resetForm();
+      }
+    });
+  }
 
   // Form Signals
   currentVeilId = signal<string | null>(null);

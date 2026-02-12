@@ -12,6 +12,9 @@ import { ServiceModule } from './service/service.module';
 import { GalleryModule } from './gallery/gallery.module';
 import { AuthModule } from './auth/auth.module';
 import { PaymentModule } from './payment/payment.module';
+import { BookingModule } from './booking/booking.module';
+import { InventoryModule } from './inventory/inventory.module';
+import { PartnershipModule } from './partnership/partnership.module';
 
 @Module({
   imports: [
@@ -24,6 +27,9 @@ import { PaymentModule } from './payment/payment.module';
     GalleryModule,
     AuthModule,
     PaymentModule,
+    BookingModule,
+    InventoryModule,
+    PartnershipModule,
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'uploads'),
       serveRoot: '/uploads',

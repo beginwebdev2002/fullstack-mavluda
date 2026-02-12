@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, input, output, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Veil } from '../../veil.interface';
+import { Veil } from '@pages/veil/veil.interface';
 
 @Component({
   selector: 'app-veil-item',
@@ -9,19 +9,23 @@ import { Veil } from '../../veil.interface';
   templateUrl: './veil-item.component.html',
 })
 export class VeilItemComponent {
-  @Input({ required: true }) veil!: Veil;
-  @Output() edit = new EventEmitter<Veil>();
-  @Output() viewImage = new EventEmitter<string>();
+  veil = input.required<Veil>();
+  edit = output<Veil>();
+  viewImage = output<string>();
+
+  safeImageUrl = computed(() => {
+     return this.veil().images && this.veil().images.length > 0 ? this.veil().images[0] : 'assets/placeholder-gown.png'; 
+  });
 
   onEdit(event: Event) {
     event.stopPropagation();
-    this.edit.emit(this.veil);
+    this.edit.emit(this.veil());
   }
 
   onViewImage(event: Event) {
     event.stopPropagation();
-    if (this.veil.images && this.veil.images.length > 0) {
-      this.viewImage.emit(this.veil.images[0]);
+    if (this.veil().images && this.veil().images.length > 0) {
+      this.viewImage.emit(this.veil().images[0]);
     }
   }
 }

@@ -1,4 +1,4 @@
-interface Veil {
+export interface Veil {
     id: string;
     name: string;
     price: number;
