@@ -1,7 +1,7 @@
-import { Component, ChangeDetectionStrategy, signal, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VeilService } from '../../entities/veil/veil.service';
+import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { Veil } from '../../entities/veil/veil.model';
+import { VeilService } from '../../entities/veil/veil.service';
 import { VeilCardComponent } from './ui/veil-card/veil-card.component';
 import { VeilFormComponent } from './ui/veil-form/veil-form.component';
 

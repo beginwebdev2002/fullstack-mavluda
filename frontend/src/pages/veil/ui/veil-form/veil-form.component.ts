@@ -1,7 +1,8 @@
 import { Component, input, output, ChangeDetectionStrategy, inject, signal, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Veil } from '@pages/veil/veil.interface';
+import { Veil } from '@entities/veil/veil.model';
+import { veilFormData } from '@pages/veil/ui/veil-form/veil-form.component.data';
 
 @Component({
   selector: 'app-veil-form',
@@ -14,6 +15,7 @@ export class VeilFormComponent {
   veil = input<Veil | null>(null);
   save = output<{ data: any, file: File | null }>();
   cancel = output<void>();
+  veilModel = signal<Veil>(veilFormData);
 
   private fb = inject(FormBuilder);
   veilForm!: FormGroup;
