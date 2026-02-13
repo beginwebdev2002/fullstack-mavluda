@@ -51,17 +51,42 @@ export class VeilRepository {
   }
 
   private toDomain(doc: VeilDocument): Veil {
-    const d = doc as any;
-    return new Veil(
-      d._id.toString(),
-      d.name,
-      d.description,
-      d.price,
-      d.rentalPrice,
-      d.images,
-      d.category,
-      d.isAvailable,
-      d.createdAt,
-    );
+    const {
+      _id,
+      name,
+      description,
+      price,
+      rentalPrice,
+      images,
+      category,
+      isAvailable,
+      sku,
+      silhouette,
+      neckline,
+      fabric,
+      trainLength,
+      stock,
+      createdAt,
+      updatedAt,
+    } = doc as VeilDocument;
+
+    return new Veil({
+      id: _id.toString(),
+      name,
+      description,
+      price,
+      rentalPrice,
+      images,
+      category,
+      isAvailable,
+      sku,
+      silhouette,
+      neckline,
+      fabric,
+      trainLength,
+      stock,
+      createdAt,
+      updatedAt,
+    });
   }
 }

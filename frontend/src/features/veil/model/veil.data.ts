@@ -3,8 +3,8 @@ export interface Veil {
   name: string;
   description?: string;
   price: number;
-  rentalPrice?: number;
-  images: string[];
+  rentalPrice: number;
+  images?: string[];
   category: string;
   isAvailable: boolean;
   sku: string;
@@ -16,12 +16,11 @@ export interface Veil {
 }
 
 export const veilFormData: Veil = {
-  id: "",
   name: "Just Name of Veil",
   sku: "lorem",
   price: 2500,
+  rentalPrice: 1000,
   stock: 10,
-  images: ["image_url"],
   silhouette: "lorem",
   neckline: "lorem",
   fabric: "lorem",
@@ -32,12 +31,11 @@ export const veilFormData: Veil = {
 };
 
 export const resetVeilData: Veil = {
-  id: "",
   name: "",
   sku: "",
   price: 0,
+  rentalPrice: 0,
   stock: 0,
-  images: [],
   silhouette: "",
   neckline: "",
   fabric: "",

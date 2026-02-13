@@ -31,10 +31,7 @@
         </button>
       </div>
 
-      <div
-        class="px-6 py-6 grid grid-cols-1 md:grid-cols-3 gap-x-8"
-        [formGroup]="veilForm"
-      >
+      <div class="px-6 py-6 grid grid-cols-1 md:grid-cols-3 gap-x-8">
         <!-- Image Uploader -->
         <div class="md:col-span-1 space-y-2 mb-6 md:mb-0">
           <label class="block text-sm font-medium text-gray-700"
@@ -79,7 +76,7 @@
             <label class="inline-flex items-center cursor-pointer">
               <input
                 type="checkbox"
-                formControlName="isAvailable"
+                [formField]="veilForm.isAvailable"
                 class="sr-only peer"
               />
               <div
@@ -101,7 +98,7 @@
               >
               <input
                 type="text"
-                formControlName="name"
+                [formField]="veilForm.name"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               />
             </div>
@@ -110,7 +107,7 @@
                 >Category</label
               >
               <select
-                formControlName="category"
+                [formField]="veilForm.category"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               >
                 <option value="Bridal">Bridal</option>
@@ -127,7 +124,7 @@
               >
               <input
                 type="number"
-                formControlName="price"
+                [formField]="veilForm.price"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               />
             </div>
@@ -137,7 +134,7 @@
               >
               <input
                 type="number"
-                formControlName="rentalPrice"
+                [formField]="veilForm.rentalPrice"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               />
             </div>
@@ -148,7 +145,7 @@
               <label class="block text-sm font-medium text-gray-700">SKU</label>
               <input
                 type="text"
-                formControlName="sku"
+                [formField]="veilForm.sku"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               />
             </div>
@@ -158,7 +155,7 @@
               >
               <input
                 type="number"
-                formControlName="stock"
+                [formField]="veilForm.stock"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               />
             </div>
@@ -171,7 +168,7 @@
               >
               <input
                 type="text"
-                formControlName="silhouette"
+                [formField]="veilForm.silhouette"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               />
             </div>
@@ -181,7 +178,7 @@
               >
               <input
                 type="text"
-                formControlName="neckline"
+                [formField]="veilForm.neckline"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               />
             </div>
@@ -194,7 +191,7 @@
               >
               <input
                 type="text"
-                formControlName="fabric"
+                [formField]="veilForm.fabric"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               />
             </div>
@@ -204,7 +201,7 @@
               >
               <input
                 type="text"
-                formControlName="trainLength"
+                [formField]="veilForm.trainLength"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               />
             </div>
@@ -215,7 +212,7 @@
               >Description</label
             >
             <textarea
-              formControlName="description"
+              [formField]="veilForm.description"
               rows="3"
               class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
             ></textarea>
@@ -229,7 +226,7 @@
         <button
           (click)="onSubmit()"
           type="button"
-          [disabled]="veilForm().invalid"
+          [disabled]="veilForm().invalid()"
           class="inline-flex justify-center rounded-lg bg-gold px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-gold/30 hover:bg-gold-dark hover:shadow-gold/50 transition-all transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           @if (!isEditMode()) {

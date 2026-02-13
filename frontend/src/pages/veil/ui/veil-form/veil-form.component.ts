@@ -1,22 +1,13 @@
+import { CommonModule } from "@angular/common";
 import {
+  ChangeDetectionStrategy,
   Component,
   input,
-  output,
-  ChangeDetectionStrategy,
-  inject,
-  signal,
-  effect,
-  computed,
   OnInit,
+  output,
+  signal,
 } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { form } from "@angular/forms/signals";
-import {
-  ReactiveFormsModule,
-  FormBuilder,
-  FormGroup,
-  Validators,
-} from "@angular/forms";
+import { form, FormField } from "@angular/forms/signals";
 import {
   resetVeilData,
   Veil,
@@ -26,7 +17,7 @@ import {
 @Component({
   selector: "app-veil-form",
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, FormField],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./veil-form.component.html",
 })
@@ -45,8 +36,10 @@ export class VeilFormComponent implements OnInit {
   }
 
   initForm() {
+    console.log("veil: ", this.veil());
+
     if (this.veil()) {
-      this.veilModel.set(veilFormData);
+      this.veilModel.set(this.veil());
     }
   }
 
@@ -72,9 +65,9 @@ export class VeilFormComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.veilForm().valid) {
+    if (this.veilForm().valid()) {
       this.save.emit({
-        data: this.veilForm().value,
+        data: this.veilForm().value(),
         file: this.selectedFile(),
       });
     }

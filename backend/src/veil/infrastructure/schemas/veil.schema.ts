@@ -43,6 +43,12 @@ export class VeilSchemaEntity {
 
   @Prop()
   stock: number;
+
+  @Prop({ default: Date.now })
+  createdAt: Date;
+
+  @Prop({ default: Date.now })
+  updatedAt: Date;
 }
 
 export const VeilSchema = SchemaFactory.createForClass(VeilSchemaEntity);

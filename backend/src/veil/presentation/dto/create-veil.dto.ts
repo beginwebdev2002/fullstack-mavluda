@@ -6,7 +6,7 @@ import {
   IsOptional,
   IsBoolean,
 } from 'class-validator';
-import { Type } from 'class-transformer';
+import { Transform, Type } from 'class-transformer';
 
 export class CreateVeilDto {
   @IsString()
@@ -28,8 +28,12 @@ export class CreateVeilDto {
   rentalPrice: number;
 
   @IsArray()
+  @IsOptional()
   @IsString({ each: true })
-  @IsNotEmpty()
+  @Transform(({ value }: { value: string | string[] }) => {
+    if (!!value && Array.isArray(value)) return value;
+    return typeof value === 'string' ? value.split(',') : [];
+  })
   images: string[];
 
   @IsString()
@@ -38,6 +42,7 @@ export class CreateVeilDto {
 
   @IsBoolean()
   @IsOptional()
+  @Transform(({ value }: { value: boolean | string }) => value === 'true')
   isAvailable?: boolean;
 
   @IsString()
@@ -53,15 +58,12 @@ export class CreateVeilDto {
   neckline?: string;
 
   @IsString()
-  @IsOptional()
   fabric?: string;
 
   @IsString()
-  @IsOptional()
   trainLength?: string;
 
   @IsNumber()
-  @IsOptional()
   @Type(() => Number)
   stock?: number;
 }
