@@ -18,6 +18,7 @@
 /backend/pnpm-debug.log*
 /backend/lerna-debug.log*
 /backend/.env
+/backend/uploads
 dist
 dist-ssr
 *.local

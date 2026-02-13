@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
-import { Veil } from '../../entities/veil/veil.model';
-import { VeilService } from '../../entities/veil/veil.service';
+import { Veil } from  '@features/veil/model/veil.data';
+import { veilFormData } from  '@features/veil/model/veil.data';
+import { VeilService } from '@entities/veil/veil.service';
 import { VeilCardComponent } from './ui/veil-card/veil-card.component';
 import { VeilFormComponent } from './ui/veil-form/veil-form.component';
 
@@ -21,6 +22,7 @@ export class VeilPageComponent implements OnInit {
   // Modal States
   isEditModalOpen = signal(false);
   editingVeil = signal<Veil | null>(null);
+
 
   // Image Preview State
   selectedImage = signal<string | null>(null);
@@ -43,11 +45,11 @@ export class VeilPageComponent implements OnInit {
 
   closeEditModal() {
      this.isEditModalOpen.set(false);
-     this.editingVeil.set(null);
+     this.editingVeil.set(veilFormData);
   }
 
   handleSave(event: { data: any, file: File | null }) {
-     const { data, file } = event;
+     const { data, file } = event; 
      const formData = new FormData();
      
      Object.keys(data).forEach(key => {
@@ -63,8 +65,6 @@ export class VeilPageComponent implements OnInit {
      
      const currentVeil = this.editingVeil();
      if (currentVeil) {
-        // If updating and no new file, we might want to preserve existing images
-        // Logic depends on backend. As per previous logic:
         if (currentVeil.images) {
             currentVeil.images.forEach(img => formData.append('images', img));
         }

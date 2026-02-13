@@ -1,7 +1,7 @@
 import { Component, input, output, signal, effect, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Veil } from '@entities/veil/veil.model';
+import { Veil } from '@features/veil/model/veil.data';
 
 @Component({
   selector: 'app-veil-modal',

@@ -1,6 +1,6 @@
 import { Component, input, output, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Veil } from '@entities/veil/veil.model';
+import { Veil } from '@features/veil/model/veil.data';
 
 @Component({
   selector: 'app-veil-item',

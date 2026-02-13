@@ -1,11 +1,11 @@
-import { Component, input, output, ChangeDetectionStrategy } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Veil } from '@entities/veil/veil.model';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { Veil } from '@features/veil/model/veil.data';
 
 @Component({
   selector: 'app-veil-card',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './veil-card.component.html',
   styleUrl: './veil-card.component.scss'

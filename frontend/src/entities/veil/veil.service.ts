@@ -1,7 +1,7 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
-import { Veil } from './veil.model';
+import { Veil } from '@features/veil/model/veil.data';
 
 @Injectable({
   providedIn: 'root'
