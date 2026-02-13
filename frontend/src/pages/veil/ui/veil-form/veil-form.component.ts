@@ -36,8 +36,6 @@ export class VeilFormComponent implements OnInit {
   }
 
   initForm() {
-    console.log("veil: ", this.veil());
-
     if (this.veil()) {
       this.veilModel.set(this.veil());
     }
