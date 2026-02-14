@@ -31,7 +31,10 @@ export class PartnershipController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updatePartnershipDto: UpdatePartnershipDto) {
+  update(
+    @Param('id') id: string,
+    @Body() updatePartnershipDto: UpdatePartnershipDto,
+  ) {
     return this.partnershipService.update(id, updatePartnershipDto);
   }
 

@@ -12,7 +12,9 @@ export class PartnershipService {
     return this.partnershipRepository.findAll();
   }
 
-  async create(createPartnershipDto: CreatePartnershipDto): Promise<Partnership> {
+  async create(
+    createPartnershipDto: CreatePartnershipDto,
+  ): Promise<Partnership> {
     return this.partnershipRepository.create({
       ...createPartnershipDto,
       status: 'active',
@@ -27,8 +29,14 @@ export class PartnershipService {
     return partnership;
   }
 
-  async update(id: string, updatePartnershipDto: UpdatePartnershipDto): Promise<Partnership> {
-    const updated = await this.partnershipRepository.update(id, updatePartnershipDto);
+  async update(
+    id: string,
+    updatePartnershipDto: UpdatePartnershipDto,
+  ): Promise<Partnership> {
+    const updated = await this.partnershipRepository.update(
+      id,
+      updatePartnershipDto,
+    );
     if (!updated) {
       throw new Error(`Partnership with ID ${id} not found`);
     }

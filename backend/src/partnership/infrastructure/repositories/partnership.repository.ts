@@ -2,7 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Partnership } from '../../domain/partnership.entity';
-import { PartnershipDocument, PartnershipSchemaEntity } from '../schemas/partnership.schema';
+import {
+  PartnershipDocument,
+  PartnershipSchemaEntity,
+} from '../schemas/partnership.schema';
 
 @Injectable()
 export class PartnershipRepository {
@@ -16,7 +19,9 @@ export class PartnershipRepository {
     return docs.map((doc) => this.toDomain(doc));
   }
 
-  async create(partnership: Omit<Partnership, 'id' | 'createdAt'>): Promise<Partnership> {
+  async create(
+    partnership: Omit<Partnership, 'id' | 'createdAt'>,
+  ): Promise<Partnership> {
     const created = new this.partnershipModel(partnership);
     const doc = await created.save();
     return this.toDomain(doc);
@@ -30,7 +35,10 @@ export class PartnershipRepository {
     return doc ? this.toDomain(doc) : null;
   }
 
-  async update(id: string, updateData: Partial<Partnership>): Promise<Partnership | null> {
+  async update(
+    id: string,
+    updateData: Partial<Partnership>,
+  ): Promise<Partnership | null> {
     const doc = await this.partnershipModel
       .findByIdAndUpdate(id, { $set: updateData }, { new: true })
       .exec();

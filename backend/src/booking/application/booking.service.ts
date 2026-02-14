@@ -27,7 +27,10 @@ export class BookingService {
     return booking;
   }
 
-  async update(id: string, updateBookingDto: UpdateBookingDto): Promise<Booking> {
+  async update(
+    id: string,
+    updateBookingDto: UpdateBookingDto,
+  ): Promise<Booking> {
     const updated = await this.bookingRepository.update(id, updateBookingDto);
     if (!updated) {
       throw new Error(`Booking with ID ${id} not found`);

@@ -68,7 +68,7 @@ export class VeilRepository {
       stock,
       createdAt,
       updatedAt,
-    } = doc as VeilDocument;
+    } = doc;
 
     return new Veil({
       id: _id.toString(),

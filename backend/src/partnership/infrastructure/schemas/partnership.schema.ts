@@ -18,4 +18,6 @@ export class PartnershipSchemaEntity {
   status: string;
 }
 
-export const PartnershipSchema = SchemaFactory.createForClass(PartnershipSchemaEntity);
+export const PartnershipSchema = SchemaFactory.createForClass(
+  PartnershipSchemaEntity,
+);

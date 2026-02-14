@@ -59,15 +59,8 @@ export class VeilController {
       : [];
     const veilData = {
       ...createVeilDto,
-      images: [
-        ...(createVeilDto.images || []),
-        ...imagePaths,
-      ],
+      images: [...(createVeilDto.images || []), ...imagePaths],
     };
-      
-    // The service expects Omit<Veil, 'id' | 'createdAt'>
-    // We cast to unknown first because DTO might have optional fields that are required in Entity or vice versa, 
-    // but effectively it matches.
     const veil = veilData as unknown as Omit<Veil, 'id' | 'createdAt'>;
     return this.veilService.create(veil);
   }
@@ -94,11 +87,6 @@ export class VeilController {
     const imagePaths = files
       ? files.map((file) => `/uploads/veils/${file.filename}`)
       : [];
-    
-    // Handle existing images. 
-    // If updateVeilDto.images is a string (single file from FormData), make it array.
-    // If it's already array, keep it.
-    // If undefined, start with empty array.
     let existingImages: string[] = [];
     if (updateVeilDto.images) {
       if (Array.isArray(updateVeilDto.images)) {
@@ -113,10 +101,7 @@ export class VeilController {
       images: [...existingImages, ...imagePaths],
     };
 
-    return this.veilService.update(
-      id,
-      veilData as unknown as Partial<Veil>,
-    );
+    return this.veilService.update(id, veilData as unknown as Partial<Veil>);
   }
 
   @Delete(':id')

@@ -2,7 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Booking } from '../../domain/booking.entity';
-import { BookingDocument, BookingSchemaEntity } from '../schemas/booking.schema';
+import {
+  BookingDocument,
+  BookingSchemaEntity,
+} from '../schemas/booking.schema';
 
 @Injectable()
 export class BookingRepository {
@@ -16,7 +19,9 @@ export class BookingRepository {
     return docs.map((doc) => this.toDomain(doc));
   }
 
-  async create(booking: Omit<Booking, 'id' | 'createdAt' | 'updatedAt'>): Promise<Booking> {
+  async create(
+    booking: Omit<Booking, 'id' | 'createdAt' | 'updatedAt'>,
+  ): Promise<Booking> {
     const created = new this.bookingModel(booking);
     const doc = await created.save();
     return this.toDomain(doc);
@@ -30,7 +35,10 @@ export class BookingRepository {
     return doc ? this.toDomain(doc) : null;
   }
 
-  async update(id: string, updateData: Partial<Booking>): Promise<Booking | null> {
+  async update(
+    id: string,
+    updateData: Partial<Booking>,
+  ): Promise<Booking | null> {
     const doc = await this.bookingModel
       .findByIdAndUpdate(id, { $set: updateData }, { new: true })
       .exec();
@@ -50,7 +58,7 @@ export class BookingRepository {
       d.date,
       d.status,
       d.createdAt,
-      d.updatedAt
+      d.updatedAt,
     );
   }
 }

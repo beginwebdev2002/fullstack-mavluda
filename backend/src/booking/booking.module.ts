@@ -3,7 +3,10 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { BookingService } from './application/booking.service';
 import { BookingController } from './presentation/booking.controller';
 import { BookingRepository } from './infrastructure/repositories/booking.repository';
-import { BookingSchema, BookingSchemaEntity } from './infrastructure/schemas/booking.schema';
+import {
+  BookingSchema,
+  BookingSchemaEntity,
+} from './infrastructure/schemas/booking.schema';
 
 @Module({
   imports: [

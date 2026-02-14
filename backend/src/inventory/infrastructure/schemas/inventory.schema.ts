@@ -15,4 +15,6 @@ export class InventorySchemaEntity {
   location: string;
 }
 
-export const InventorySchema = SchemaFactory.createForClass(InventorySchemaEntity);
+export const InventorySchema = SchemaFactory.createForClass(
+  InventorySchemaEntity,
+);

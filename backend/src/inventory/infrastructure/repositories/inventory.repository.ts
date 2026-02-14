@@ -2,7 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Inventory } from '../../domain/inventory.entity';
-import { InventoryDocument, InventorySchemaEntity } from '../schemas/inventory.schema';
+import {
+  InventoryDocument,
+  InventorySchemaEntity,
+} from '../schemas/inventory.schema';
 
 @Injectable()
 export class InventoryRepository {
@@ -16,7 +19,9 @@ export class InventoryRepository {
     return docs.map((doc) => this.toDomain(doc));
   }
 
-  async create(inventory: Omit<Inventory, 'id' | 'lastUpdated'>): Promise<Inventory> {
+  async create(
+    inventory: Omit<Inventory, 'id' | 'lastUpdated'>,
+  ): Promise<Inventory> {
     const created = new this.inventoryModel(inventory);
     const doc = await created.save();
     return this.toDomain(doc);
@@ -30,7 +35,10 @@ export class InventoryRepository {
     return doc ? this.toDomain(doc) : null;
   }
 
-  async update(id: string, updateData: Partial<Inventory>): Promise<Inventory | null> {
+  async update(
+    id: string,
+    updateData: Partial<Inventory>,
+  ): Promise<Inventory | null> {
     const doc = await this.inventoryModel
       .findByIdAndUpdate(id, { $set: updateData }, { new: true })
       .exec();

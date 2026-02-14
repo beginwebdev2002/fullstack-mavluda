@@ -68,7 +68,7 @@ export class UserRepository {
       doc.photoUrl,
       doc.role as 'user' | 'admin',
       // doc.createdAt is available because of timestamps: true
-      (doc as any).createdAt, 
+      (doc as any).createdAt,
     );
   }
 }

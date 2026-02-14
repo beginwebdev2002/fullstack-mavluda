@@ -24,8 +24,14 @@ export class InventoryService {
     return inventory;
   }
 
-  async update(id: string, updateInventoryDto: UpdateInventoryDto): Promise<Inventory> {
-    const updated = await this.inventoryRepository.update(id, updateInventoryDto);
+  async update(
+    id: string,
+    updateInventoryDto: UpdateInventoryDto,
+  ): Promise<Inventory> {
+    const updated = await this.inventoryRepository.update(
+      id,
+      updateInventoryDto,
+    );
     if (!updated) {
       throw new Error(`Inventory item with ID ${id} not found`);
     }
