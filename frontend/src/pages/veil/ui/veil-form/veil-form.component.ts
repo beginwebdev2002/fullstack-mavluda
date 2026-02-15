@@ -8,11 +8,7 @@ import {
   signal,
 } from "@angular/core";
 import { form, FormField } from "@angular/forms/signals";
-import {
-  resetVeilData,
-  Veil,
-  veilFormData,
-} from "@features/veil/model/veil.data";
+import { resetVeilData, Veil, veilFormData } from "@features/veil";
 
 @Component({
   selector: "app-veil-form",

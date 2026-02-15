@@ -32,7 +32,8 @@
       "@types/*": ["src/types/*"],
       "@widgets/*": ["src/widgets/*"],
       "@environments/*": ["src/environments/*"],
-      "@src/*": ["src/*"]
+      "@src/*": ["src/*"],
+      "@core/*": ["src/core/*"]
     }
   },
   "angularCompilerOptions": {

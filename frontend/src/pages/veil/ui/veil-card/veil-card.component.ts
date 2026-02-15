@@ -9,7 +9,7 @@ import {
   signal,
 } from "@angular/core";
 import { environment } from "@environments/environment";
-import { Veil } from "@features/veil/model/veil.data";
+import { Veil } from "@features/veil";
 
 @Component({
   selector: "app-veil-card",

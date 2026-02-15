@@ -16,18 +16,19 @@ export interface Veil {
 }
 
 export const veilFormData: Veil = {
-  name: "Just Name of Veil",
-  sku: "lorem",
+  name: "Royal Silk Majesty",
+  sku: "AWR-2026-RSM",
   price: 2500,
-  rentalPrice: 1000,
+  rentalPrice: 800,
   stock: 10,
-  silhouette: "lorem",
-  neckline: "lorem",
-  fabric: "lorem",
-  trainLength: "lorem",
+  silhouette: "Ball Gown",
+  neckline: "Off-the-shoulder",
+  fabric: "Silk",
+  trainLength: "Cathedral",
   category: "Bridal",
   isAvailable: true,
-  description: "lorem",
+  description:
+    "A regal ball gown veil crafted from the finest silk, cascading in majestic folds. The off-the-shoulder design drapes elegantly, framing the face with timeless sophistication. A cathedral-length train adds a touch of royal grandeur, making it the perfect statement piece for the modern bride seeking luxury and grace.",
 };
 
 export const resetVeilData: Veil = {

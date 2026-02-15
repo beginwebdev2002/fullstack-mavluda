@@ -1,17 +1,21 @@
-
-import { Component, ChangeDetectionStrategy, inject, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { AuthService } from './shared/services/auth.service';
-import { TelegramService } from './shared/services/telegram.service';
-import { CommonModule } from '@angular/common';
-import { GlobalErrorComponent } from './shared/ui/global-error/global-error.component';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  inject,
+  OnInit,
+} from "@angular/core";
+import { RouterOutlet } from "@angular/router";
+import { CommonModule } from "@angular/common";
+import { AuthService } from "@shared/services";
+import { TelegramService } from "@shared/services";
+import { GlobalErrorComponent } from "@shared/ui";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   imports: [CommonModule, RouterOutlet, GlobalErrorComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
   public authService = inject(AuthService);
@@ -20,7 +24,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.telegramService.ready();
     this.telegramService.expand();
-    
+
     // Delegate auth logic to the comprehensive AuthService
     this.authService.checkTelegramAuth();
   }

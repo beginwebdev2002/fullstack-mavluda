@@ -6,11 +6,9 @@ import {
   OnInit,
   signal,
 } from "@angular/core";
-import { Veil } from "@features/veil/model/veil.data";
-import { veilFormData } from "@features/veil/model/veil.data";
-import { VeilService } from "@entities/veil/veil.service";
-import { VeilCardComponent } from "./ui/veil-card/veil-card.component";
-import { VeilFormComponent } from "./ui/veil-form/veil-form.component";
+import { Veil, veilFormData } from "@features/veil";
+import { VeilService } from "@entities/veil";
+import { VeilCardComponent, VeilFormComponent } from "@pages/veil";
 
 @Component({
   selector: "app-veil-page",

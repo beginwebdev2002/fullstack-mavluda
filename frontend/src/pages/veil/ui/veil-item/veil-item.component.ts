@@ -1,12 +1,12 @@
-import { Component, input, output, computed } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Veil } from '@features/veil/model/veil.data';
+import { Component, input, output, computed } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { Veil } from "@features/veil";
 
 @Component({
-  selector: 'app-veil-item',
+  selector: "app-veil-item",
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './veil-item.component.html',
+  templateUrl: "./veil-item.component.html",
 })
 export class VeilItemComponent {
   veil = input.required<Veil>();
@@ -14,7 +14,9 @@ export class VeilItemComponent {
   viewImage = output<string>();
 
   safeImageUrl = computed(() => {
-     return this.veil().images && this.veil().images.length > 0 ? this.veil().images[0] : 'assets/placeholder-gown.png'; 
+    return this.veil().images && this.veil().images.length > 0
+      ? this.veil().images[0]
+      : "assets/placeholder-gown.png";
   });
 
   onEdit(event: Event) {
