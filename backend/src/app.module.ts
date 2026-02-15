@@ -5,16 +5,16 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AppConfigModule } from './common/config/app-config.module';
 import { DatabaseModule } from './common/database/database.module';
-import { UserModule } from './user/user.module';
-import { AdminSettingsModule } from './admin-settings/admin-settings.module';
-import { VeilModule } from './veil/veil.module';
-import { ServiceModule } from './service/service.module';
-import { GalleryModule } from './gallery/gallery.module';
-import { AuthModule } from './auth/auth.module';
-import { PaymentModule } from './payment/payment.module';
-import { BookingModule } from './booking/booking.module';
-import { InventoryModule } from './inventory/inventory.module';
-import { PartnershipModule } from './partnership/partnership.module';
+import { UserModule } from '@modules/user';
+import { AdminSettingsModule } from '@modules/admin-settings';
+import { VeilModule } from '@modules/veil';
+import { ServiceModule } from '@modules/service';
+import { GalleryModule } from '@modules/gallery';
+import { AuthModule } from '@modules/auth';
+import { PaymentModule } from '@modules/payment';
+import { BookingModule } from '@modules/booking';
+import { InventoryModule } from '@modules/inventory';
+import { PartnershipModule } from '@modules/partnership';
 
 @Module({
   imports: [

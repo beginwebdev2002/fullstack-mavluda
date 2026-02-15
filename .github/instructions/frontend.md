@@ -149,3 +149,17 @@ export class GoodComponent {
 - Используйте PascalCase для классов и компонентов
 - Используйте kebab-case для селекторов компонентов
 - Предпочитайте template syntax над inline templates для сложных компонентов
+
+### 🏛️ Why this works for your project
+
+1.  **Encapsulation**: This prevents your **Angular 21** components from becoming tightly coupled. If you change how a `signalFormGroup` is built inside a feature, the rest of the app won't break as long as the Public API remains the same.
+2.  **Refactoring Safety**: When you move a file, you only need to update the `index.ts` in that folder. You don't have to search and replace imports across 50 different files.
+3.  **Zoneless Performance**: By keeping dependencies clean, the Angular compiler can better optimize the **Zoneless** tree-shaking, making the "Mavluda Beauty" site load even faster.
+
+---
+
+### 🚀 Next Step for you
+
+Now that you have this rule, try asking Antigravity to create a new "Gallery" feature. You will see it automatically create the folder, the component, the data file, and the `index.ts` to tie it all together.
+
+**Would you like me to create a similar strict rule for the NestJS Backend to enforce Hexagonal Architecture boundaries?**

@@ -1,8 +1,8 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import * as crypto from 'crypto';
 import { AppConfigService } from '@common/config/app-config.service';
-import { UserService } from '@user/application/user.service';
-import { User } from '@user/domain/user.entity';
+import { UserService } from '@modules/user';
+import { User } from '@modules/user';
 
 @Injectable()
 export class TelegramAuthService {

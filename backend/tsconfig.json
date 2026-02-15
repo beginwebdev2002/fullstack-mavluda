@@ -29,7 +29,8 @@
       "@payment/*": ["src/payment/*"],
       "@services/*": ["src/service/*"],
       "@user/*": ["src/user/*"],
-      "@veil/*": ["src/veil/*"]
+      "@veil/*": ["src/veil/*"],
+      "@modules/*": ["src/*"]
     }
   }
 }

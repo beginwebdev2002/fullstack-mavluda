@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AuthController } from './auth.controller';
 import { TelegramAuthService } from './telegram-auth.service';
 import { AuthService } from './auth.service';
-import { UserModule } from '../user/user.module';
+import { UserModule } from '@modules/user';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { AppConfigModule } from '../common/config/app-config.module';
