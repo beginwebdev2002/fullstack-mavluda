@@ -4,7 +4,7 @@ export interface Veil {
   description?: string;
   price: number;
   rentalPrice: number;
-  images?: string[];
+  image?: string;
   category: string;
   isAvailable: boolean;
   sku: string;

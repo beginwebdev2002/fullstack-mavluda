@@ -2,6 +2,7 @@ import { Injectable, inject, signal } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, tap } from "rxjs";
 import { Veil } from "@features/veil";
+import { formDataExcludeProperty, objectExcludePropety } from "@shared/lib";
 
 @Injectable({
   providedIn: "root",
@@ -32,7 +33,12 @@ export class VeilService {
       );
   }
 
-  updateVeil(id: string, veil: Partial<Veil> | FormData): Observable<Veil> {
+  updateVeil(id: string, veil: FormData): Observable<Veil> {
+    const updatedVeil = formDataExcludeProperty(veil, [
+      "id",
+      "createdAt",
+      "updatedAt",
+    ]);
     return this.http
       .put<Veil>(`${this.apiUrl}/${id}`, veil)
       .pipe(

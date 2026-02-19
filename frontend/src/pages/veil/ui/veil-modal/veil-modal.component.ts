@@ -38,10 +38,10 @@ export class VeilModalComponent {
         this.category.set(value.category || "Bridal");
         this.description.set(value.description || "");
         this.isAvailable.set(value.isAvailable);
-        this.existingImages.set(value.images || []);
+        this.existingImages.set(value.image || "");
 
-        if (value.images && value.images.length > 0) {
-          this.previewImage.set(value.images[0]);
+        if (value.image) {
+          this.previewImage.set(value.image);
         } else {
           this.previewImage.set(null);
         }
@@ -69,7 +69,7 @@ export class VeilModalComponent {
   // File Upload Signals
   selectedFile = signal<File | null>(null);
   previewImage = signal<string | null>(null);
-  existingImages = signal<string[]>([]);
+  existingImages = signal<string | null>(null);
 
   isEditMode = computed(() => !!this.currentVeilId());
 
@@ -89,7 +89,7 @@ export class VeilModalComponent {
     this.isAvailable.set(true);
     this.selectedFile.set(null);
     this.previewImage.set(null);
-    this.existingImages.set([]);
+    this.existingImages.set(null);
   }
 
   onFileSelected(event: Event) {
@@ -137,8 +137,9 @@ export class VeilModalComponent {
     // For now, let's pass all existing images back.
     if (this.currentVeilId()) {
       const images = this.existingImages();
-      if (images.length > 0) {
-        images.forEach((img) => formData.append("images", img));
+      // If images is just a string (one image), we treat it as valid if not empty
+      if (images && images.length > 0) {
+        formData.append("image", images);
       }
     }
 

@@ -54,12 +54,12 @@ export class VeilController {
     @Body() createVeilDto: CreateVeilDto,
     @UploadedFiles() files: Array<Express.Multer.File>,
   ): Promise<Veil> {
-    const imagePaths = files
-      ? files.map((file) => `/uploads/veils/${file.filename}`)
-      : [];
+    const imagePath =
+      files && files.length > 0 ? `/uploads/veils/${files[0].filename}` : null;
+
     const veilData = {
       ...createVeilDto,
-      images: [...(createVeilDto.images || []), ...imagePaths],
+      image: imagePath || createVeilDto.image,
     };
     const veil = veilData as unknown as Omit<Veil, 'id' | 'createdAt'>;
     return this.veilService.create(veil);
@@ -84,22 +84,16 @@ export class VeilController {
     @Body() updateVeilDto: UpdateVeilDto,
     @UploadedFiles() files: Array<Express.Multer.File>,
   ): Promise<Veil> {
-    const imagePaths = files
-      ? files.map((file) => `/uploads/veils/${file.filename}`)
-      : [];
-    let existingImages: string[] = [];
-    if (updateVeilDto.images) {
-      if (Array.isArray(updateVeilDto.images)) {
-        existingImages = updateVeilDto.images;
-      } else {
-        existingImages = [updateVeilDto.images];
-      }
-    }
+    const imagePath =
+      files && files.length > 0 ? `/uploads/veils/${files[0].filename}` : null;
 
     const veilData = {
       ...updateVeilDto,
-      images: [...existingImages, ...imagePaths],
     };
+
+    if (imagePath) {
+      veilData.image = imagePath;
+    }
 
     return this.veilService.update(id, veilData as unknown as Partial<Veil>);
   }

@@ -6,9 +6,11 @@ import {
   OnInit,
   signal,
 } from "@angular/core";
-import { Veil, veilFormData } from "@features/veil";
 import { VeilService } from "@entities/veil";
-import { VeilCardComponent, VeilFormComponent } from "@pages/veil";
+import { Veil, veilFormData } from "@features/veil";
+import { formDataAppendObject } from "@shared/lib";
+import { VeilCardComponent } from "./ui/veil-card/veil-card.component";
+import { VeilFormComponent } from "./ui/veil-form/veil-form.component";
 
 @Component({
   selector: "app-veil-page",
@@ -20,11 +22,12 @@ import { VeilCardComponent, VeilFormComponent } from "@pages/veil";
 })
 export class VeilPageComponent implements OnInit {
   private veilService = inject(VeilService);
+  private formData = signal(new FormData());
 
   veils = this.veilService.veils;
 
   // Modal States
-  isEditModalOpen = signal(false);
+  isVeilFormOpen = signal(false);
   editingVeil = signal<Veil | null>(null);
 
   // Image Preview State
@@ -38,46 +41,28 @@ export class VeilPageComponent implements OnInit {
   // Edit Methods
   openAddModal() {
     this.editingVeil.set(null);
-    this.isEditModalOpen.set(true);
+    this.isVeilFormOpen.set(true);
   }
 
   openEditModal(veil: Veil) {
     this.editingVeil.set(veil);
-    this.isEditModalOpen.set(true);
+    this.isVeilFormOpen.set(true);
   }
 
   closeEditModal() {
-    this.isEditModalOpen.set(false);
+    this.isVeilFormOpen.set(false);
     this.editingVeil.set(veilFormData);
   }
 
-  handleSave(event: { data: any; file: File | null }) {
+  handleSave(event: { data: Veil; file: File | null }) {
     const { data, file } = event;
-
-    const formData = new FormData();
-
-    Object.keys(data).forEach((key) => {
-      const value = data[key];
-      if (value !== null && value !== undefined) {
-        formData.append(key, value.toString());
-      }
-    });
-
-    if (file) {
-      formData.append("files", file);
-    }
+    this.formDataSave(event);
 
     const currentVeil = this.editingVeil();
     if (currentVeil) {
-      if (currentVeil.images) {
-        currentVeil.images.forEach((img) => formData.append("images", img));
-      }
-
-      this.veilService.updateVeil(currentVeil.id, formData).subscribe(() => {
-        this.closeEditModal();
-      });
+      this.updateVeil(data, file);
     } else {
-      this.veilService.createVeil(formData).subscribe(() => {
+      this.veilService.createVeil(this.formData()).subscribe(() => {
         this.closeEditModal();
       });
     }
@@ -97,5 +82,22 @@ export class VeilPageComponent implements OnInit {
 
   onImageLoad() {
     this.isImageLoading.set(false);
+  }
+
+  private updateFormData(data: Veil, file: File | null) {
+    this.formData.set(formDataAppendObject(data, file));
+  }
+
+  private updateVeil(data: Veil, file: File | null) {
+    this.updateFormData(data, file);
+
+    this.veilService.updateVeil(data.id, this.formData()).subscribe(() => {
+      this.closeEditModal();
+    });
+  }
+
+  private formDataSave(event: { data: Veil; file: File | null }) {
+    const { data, file } = event;
+    this.formData.set(formDataAppendObject(data, file));
   }
 }

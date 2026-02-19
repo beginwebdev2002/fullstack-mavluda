@@ -14,8 +14,8 @@ export class VeilItemComponent {
   viewImage = output<string>();
 
   safeImageUrl = computed(() => {
-    return this.veil().images && this.veil().images.length > 0
-      ? this.veil().images[0]
+    return this.veil().image
+      ? this.veil().image
       : "assets/placeholder-gown.png";
   });
 
@@ -26,8 +26,8 @@ export class VeilItemComponent {
 
   onViewImage(event: Event) {
     event.stopPropagation();
-    if (this.veil().images && this.veil().images.length > 0) {
-      this.viewImage.emit(this.veil().images[0]);
+    if (this.veil().image) {
+      this.viewImage.emit(this.veil().image);
     }
   }
 }

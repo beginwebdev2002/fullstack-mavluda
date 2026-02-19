@@ -17,8 +17,8 @@ export class VeilSchemaEntity {
   @Prop({ required: true })
   rentalPrice: number;
 
-  @Prop([String])
-  images: string[];
+  @Prop({ required: true })
+  image: string;
 
   @Prop({ required: true })
   category: string;

@@ -29,15 +29,33 @@ export const routes: Routes = [
       {
         path: "dashboard",
         loadComponent: () =>
-          import("./pages/dashboard/dashboard.component").then(
-            (m) => m.DashboardComponent,
-          ),
+          import("@pages/dashboard").then((m) => m.DashboardComponent),
       },
-      { path: "veil", component: VeilPageComponent },
-      { path: "services", component: ServicesPageComponent },
-      { path: "clients", component: DashboardComponent },
-      { path: "gallery", component: GalleryComponent },
-      { path: "settings", component: SettingsComponent },
+      {
+        path: "veil",
+        loadComponent: () =>
+          import("@pages/veil").then((m) => m.VeilPageComponent),
+      },
+      {
+        path: "services",
+        loadComponent: () =>
+          import("@pages/services").then((m) => m.ServicesPageComponent),
+      },
+      {
+        path: "clients",
+        loadComponent: () =>
+          import("@pages/dashboard").then((m) => m.DashboardComponent),
+      },
+      {
+        path: "gallery",
+        loadComponent: () =>
+          import("@pages/gallery").then((m) => m.GalleryComponent),
+      },
+      {
+        path: "settings",
+        loadComponent: () =>
+          import("@pages/settings").then((m) => m.SettingsComponent),
+      },
     ],
   },
 

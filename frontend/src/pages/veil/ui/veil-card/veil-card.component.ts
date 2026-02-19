@@ -2,6 +2,7 @@ import { CommonModule } from "@angular/common";
 import {
   ChangeDetectionStrategy,
   Component,
+  computed,
   inject,
   input,
   OnInit,
@@ -17,7 +18,7 @@ import { Veil } from "@features/veil";
   imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./veil-card.component.html",
-  styleUrl: "./veil-card.component.scss",
+  styleUrls: ["./veil-card.component.scss"],
 })
 export class VeilCardComponent implements OnInit {
   veil = input.required<Veil>();
@@ -25,19 +26,16 @@ export class VeilCardComponent implements OnInit {
   edit = output<Veil>();
   viewImage = output<string>();
   env = signal(environment);
+  safeImageUrl = computed(() => {
+    return this.veil().image
+      ? this.env().apiUrl + this.veil().image
+      : "assets/placeholder-veil.png";
+  });
 
   ngOnInit(): void {}
-
-  safeImageUrl(): string {
-    return this.veil().images && this.veil().images.length > 0
-      ? this.env().apiUrl + this.veil().images[0]
-      : "assets/placeholder-gown.png";
-  }
-
   onEdit() {
     this.edit.emit(this.veil());
   }
-
   onViewImage() {
     this.viewImage.emit(this.safeImageUrl());
   }

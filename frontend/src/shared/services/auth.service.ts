@@ -73,7 +73,7 @@ export class AuthService {
     try {
       const response = await firstValueFrom(
         this.http.post<{ success: boolean; user: User }>(
-          `${API_ENDPOINTS.Auth}/telegram`,
+          `${API_ENDPOINTS.AUTH.LOGIN}/telegram`,
           { initData },
         ),
       );

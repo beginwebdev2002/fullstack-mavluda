@@ -2,7 +2,6 @@ import {
   IsString,
   IsNotEmpty,
   IsNumber,
-  IsArray,
   IsOptional,
   IsBoolean,
 } from 'class-validator';
@@ -27,14 +26,9 @@ export class CreateVeilDto {
   @Type(() => Number)
   rentalPrice: number;
 
-  @IsArray()
   @IsOptional()
-  @IsString({ each: true })
-  @Transform(({ value }: { value: string | string[] }) => {
-    if (!!value && Array.isArray(value)) return value;
-    return typeof value === 'string' ? value.split(',') : [];
-  })
-  images: string[];
+  @IsString()
+  image: string;
 
   @IsString()
   @IsNotEmpty()

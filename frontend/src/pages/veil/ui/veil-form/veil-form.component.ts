@@ -3,12 +3,14 @@ import {
   ChangeDetectionStrategy,
   Component,
   input,
+  linkedSignal,
   OnInit,
   output,
   signal,
 } from "@angular/core";
 import { form, FormField } from "@angular/forms/signals";
 import { resetVeilData, Veil, veilFormData } from "@features/veil";
+import { linkServerConvert } from "@shared/lib";
 
 @Component({
   selector: "app-veil-form",
@@ -24,7 +26,7 @@ export class VeilFormComponent implements OnInit {
   veilModel = signal<Veil>(veilFormData);
   veilForm = form<Veil>(this.veilModel);
   selectedFile = signal<File | null>(null);
-  previewImage = signal<string | null>(null);
+  previewImage = linkedSignal(() => this.veil()?.image || null);
   isEditMode = signal(false);
 
   ngOnInit(): void {
@@ -33,7 +35,16 @@ export class VeilFormComponent implements OnInit {
 
   initForm() {
     if (this.veil()) {
+      console.log(this.veil());
+      this.isEditMode.set(true);
+
+      this.previewImage.set(linkServerConvert(this.veil().image));
       this.veilModel.set(this.veil());
+    } else {
+      this.isEditMode.set(false);
+      console.log("veil", veilFormData);
+
+      this.veilModel.set(veilFormData);
     }
   }
 

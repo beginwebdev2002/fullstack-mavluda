@@ -39,7 +39,7 @@
 </div>
 
 <!-- Edit Modal -->
-@if (isEditModalOpen()) {
+@if (isVeilFormOpen()) {
   <app-veil-form
     [veil]="editingVeil()"
     (save)="handleSave($event)"

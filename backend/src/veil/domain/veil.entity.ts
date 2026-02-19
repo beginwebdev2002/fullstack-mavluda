@@ -4,7 +4,7 @@ export interface VeilProps {
   description: string;
   price: number;
   rentalPrice: number;
-  images: string[];
+  image: string;
   category: string;
   isAvailable?: boolean;
   sku?: string;
@@ -23,7 +23,7 @@ export class Veil {
   public readonly description: string;
   public readonly price: number;
   public readonly rentalPrice: number;
-  public readonly images: string[];
+  public readonly image: string;
   public readonly category: string;
   public readonly isAvailable: boolean;
   public readonly sku?: string;
@@ -41,7 +41,7 @@ export class Veil {
     this.description = props.description;
     this.price = props.price;
     this.rentalPrice = props.rentalPrice;
-    this.images = props.images;
+    this.image = props.image;
     this.category = props.category;
     this.isAvailable = props.isAvailable ?? true;
     this.sku = props.sku;
