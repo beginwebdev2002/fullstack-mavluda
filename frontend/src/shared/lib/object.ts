@@ -29,7 +29,7 @@ export function formDataAppendObject<T extends Object>(
     } else {
       Object.keys(item).forEach((key) => {
         const value = item[key];
-        if (!value) return;
+        if (value === undefined || value === null) return;
         formData.append(key, value.toString());
       });
     }

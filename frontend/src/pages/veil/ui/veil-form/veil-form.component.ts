@@ -9,7 +9,12 @@ import {
   signal,
 } from "@angular/core";
 import { form, FormField } from "@angular/forms/signals";
-import { resetVeilData, Veil, veilFormData } from "@features/veil";
+import {
+  resetVeilData,
+  Veil,
+  veilFormData,
+  veilValidationSchema,
+} from "@features/veil";
 import { linkServerConvert } from "@shared/lib";
 
 @Component({
@@ -24,13 +29,16 @@ export class VeilFormComponent implements OnInit {
   save = output<{ data: any; file: File | null }>();
   cancel = output<void>();
   veilModel = signal<Veil>(veilFormData);
-  veilForm = form<Veil>(this.veilModel);
+  veilForm = form<Veil>(this.veilModel, veilValidationSchema);
   selectedFile = signal<File | null>(null);
   previewImage = linkedSignal(() => this.veil()?.image || null);
   isEditMode = signal(false);
 
   ngOnInit(): void {
     this.initForm();
+    setTimeout(() => {
+      console.log(this.veilForm.price().errors());
+    }, 3000);
   }
 
   initForm() {
@@ -71,6 +79,7 @@ export class VeilFormComponent implements OnInit {
 
   onSubmit() {
     if (this.veilForm().valid()) {
+      console.log(this.veilForm().value());
       this.save.emit({
         data: this.veilForm().value(),
         file: this.selectedFile(),

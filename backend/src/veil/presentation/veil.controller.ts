@@ -100,6 +100,7 @@ export class VeilController {
 
   @Delete(':id')
   async remove(@Param('id') id: string): Promise<void> {
+    console.log('lorem', id);
     return this.veilService.remove(id);
   }
 }

@@ -31,7 +31,8 @@
         [veil]="veil"
         [index]="i"
         (edit)="openEditModal($event)"
-        (viewImage)="openImageModal($event)"
+        (onViewImage)="openImageModal($event)"
+        (onDeleteCard)="onDeleteCard(veil.id)"
       >
       </app-veil-card>
     }

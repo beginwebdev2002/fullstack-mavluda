@@ -1,8 +1,9 @@
 import { HttpInterceptorFn } from "@angular/common/http";
-import { environment } from "@environments/environment";
 import { linkServerConvert } from "@shared/lib";
 
 export const apiInterceptor: HttpInterceptorFn = (req, next) => {
+  console.log("req: ", req);
+
   if (req.url.startsWith("/")) {
     const token =
       typeof localStorage !== "undefined"

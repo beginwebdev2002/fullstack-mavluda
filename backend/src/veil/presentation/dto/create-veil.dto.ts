@@ -36,7 +36,7 @@ export class CreateVeilDto {
 
   @IsBoolean()
   @IsOptional()
-  @Transform(({ value }: { value: boolean | string }) => value === 'true')
+  @Transform(({ value }: { value: string | boolean }) => value === 'true')
   isAvailable?: boolean;
 
   @IsString()

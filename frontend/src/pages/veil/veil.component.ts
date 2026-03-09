@@ -11,6 +11,7 @@ import { Veil, veilFormData } from "@features/veil";
 import { formDataAppendObject } from "@shared/lib";
 import { VeilCardComponent } from "./ui/veil-card/veil-card.component";
 import { VeilFormComponent } from "./ui/veil-form/veil-form.component";
+import { tap } from "rxjs";
 
 @Component({
   selector: "app-veil-page",
@@ -19,6 +20,7 @@ import { VeilFormComponent } from "./ui/veil-form/veil-form.component";
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./veil.component.html",
   styleUrls: ["./veil.component.scss"],
+  providers: [VeilService],
 })
 export class VeilPageComponent implements OnInit {
   private veilService = inject(VeilService);
@@ -62,9 +64,7 @@ export class VeilPageComponent implements OnInit {
     if (currentVeil) {
       this.updateVeil(data, file);
     } else {
-      this.veilService.createVeil(this.formData()).subscribe(() => {
-        this.closeEditModal();
-      });
+      this.createVeil();
     }
   }
 
@@ -84,6 +84,10 @@ export class VeilPageComponent implements OnInit {
     this.isImageLoading.set(false);
   }
 
+  onDeleteCard(id: string) {
+    this.deleteCard(id);
+  }
+
   private updateFormData(data: Veil, file: File | null) {
     this.formData.set(formDataAppendObject(data, file));
   }
@@ -91,13 +95,25 @@ export class VeilPageComponent implements OnInit {
   private updateVeil(data: Veil, file: File | null) {
     this.updateFormData(data, file);
 
-    this.veilService.updateVeil(data.id, this.formData()).subscribe(() => {
-      this.closeEditModal();
-    });
+    this.veilService
+      .updateVeil(data.id, this.formData())
+      .pipe(tap(() => this.closeEditModal()))
+      .subscribe();
+  }
+
+  private createVeil() {
+    this.veilService
+      .createVeil(this.formData())
+      .pipe(tap(() => this.closeEditModal()))
+      .subscribe();
   }
 
   private formDataSave(event: { data: Veil; file: File | null }) {
     const { data, file } = event;
     this.formData.set(formDataAppendObject(data, file));
+  }
+
+  private deleteCard(id: string) {
+    this.veilService.deleteVeil(id).subscribe();
   }
 }

@@ -2,8 +2,8 @@
   class="fixed inset-0 z-[120] overflow-y-auto"
   role="dialog"
   aria-modal="true"
+  (keydown.enter)="onSubmit()"
 >
-  <!-- Backdrop -->
   <div
     class="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity animate-fade-in"
     (click)="onCancel()"
@@ -127,6 +127,11 @@
                 [formField]="veilForm.price"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               />
+              @if (veilForm.price().errors()) {
+                @for (error of veilForm.price().errors(); track error.kind) {
+                  <p class="text-red-500 text-sm">{{ error.message }}</p>
+                }
+              }
             </div>
             <div class="space-y-2">
               <label class="block text-sm font-medium text-gray-700"

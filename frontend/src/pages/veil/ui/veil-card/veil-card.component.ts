@@ -24,7 +24,8 @@ export class VeilCardComponent implements OnInit {
   veil = input.required<Veil>();
   index = input<number>(0);
   edit = output<Veil>();
-  viewImage = output<string>();
+  onChangeViewImage = output<string>();
+  onDeleteCard = output<string>();
   env = signal(environment);
   safeImageUrl = computed(() => {
     return this.veil().image
@@ -37,6 +38,10 @@ export class VeilCardComponent implements OnInit {
     this.edit.emit(this.veil());
   }
   onViewImage() {
-    this.viewImage.emit(this.safeImageUrl());
+    this.onChangeViewImage.emit(this.safeImageUrl());
+  }
+
+  deleteVeilCard() {
+    this.onDeleteCard.emit(this.veil().id);
   }
 }

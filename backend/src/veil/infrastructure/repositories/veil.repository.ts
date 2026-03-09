@@ -6,6 +6,7 @@ import {
   VeilDocument,
   VeilSchemaEntity,
 } from '@veil/infrastructure/schemas/veil.schema';
+import { fileDelete } from '@common/utils/file-system';
 
 @Injectable()
 export class VeilRepository {
@@ -39,9 +40,17 @@ export class VeilRepository {
   }
 
   async update(id: string, updateData: Partial<Veil>): Promise<Veil | null> {
+    const veil = await this.findById(id);
+    if (!veil) {
+      return null;
+    }
+    if (veil.image) {
+      const isDeleted = fileDelete(veil.image);    }
+
     const doc = await this.veilModel
       .findByIdAndUpdate(id, { $set: updateData }, { new: true })
       .exec();
+
     return doc ? this.toDomain(doc) : null;
   }
 

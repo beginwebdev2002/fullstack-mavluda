@@ -1,10 +1,10 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable, inject, signal } from "@angular/core";
 import { Router } from "@angular/router";
-import { HttpClient } from "@angular/common/http";
-import { Observable, firstValueFrom } from "rxjs";
-import { TelegramService } from "./telegram.service";
-import { API_ENDPOINTS } from "@shared/api";
+import { API_ENDPOINTS } from "@core/constants";
 import { User } from "@shared/models";
+import { firstValueFrom } from "rxjs";
+import { TelegramService } from "./telegram.service";
 
 export type UserRole = "admin" | "client";
 

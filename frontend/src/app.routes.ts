@@ -1,19 +1,6 @@
 import { Routes } from "@angular/router";
-import { AboutComponent } from "@pages/about";
 import { AuthComponent } from "@pages/auth";
-import { DashboardComponent } from "@pages/dashboard";
-import { GalleryComponent } from "@pages/gallery";
-import { PortfolioPageComponent } from "@pages/portfolio";
-import { ServicesCatalogComponent } from "@pages/services-catalog";
-import { ServicesPageComponent } from "@pages/services";
-import { SettingsComponent } from "@pages/settings";
-import { UserHomeComponent } from "@pages/user-home";
-import { UserProfileComponent } from "@pages/user-profile";
-import { VeilPageComponent } from "@pages/veil";
-import { VeilsCatalogComponent } from "@pages/veils-catalog";
-import { AdminLayoutComponent } from "@widgets/layouts";
-import { UserLayoutComponent } from "@widgets/layouts";
-import { adminGuard } from "@core/guards";
+import { AdminLayoutComponent, UserLayoutComponent } from "@widgets/layouts";
 
 export const routes: Routes = [
   { path: "", redirectTo: "user/home", pathMatch: "full" },
@@ -39,7 +26,7 @@ export const routes: Routes = [
       {
         path: "services",
         loadComponent: () =>
-          import("@pages/services").then((m) => m.ServicesPageComponent),
+          import("@pages/treatments").then((m) => m.ServicesPageComponent),
       },
       {
         path: "clients",

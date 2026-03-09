@@ -11,6 +11,6 @@ export function linkCombine(...links: string[]) {
   return linkItems.filter(Boolean).join("/");
 }
 
-export function linkServerConvert(image: string) {
-  return new URL(linkCombine(image), environment.apiUrl).href;
+export function linkServerConvert(...link: string[]) {
+  return new URL(linkCombine(...link), environment.apiUrl).href;
 }

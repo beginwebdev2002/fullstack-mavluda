@@ -7,7 +7,7 @@ import {
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { RouterLink } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
-import { API_ENDPOINTS } from "@shared/api";
+import { API_ENDPOINTS } from "@core/constants";
 
 @Component({
   selector: "app-user-home",
