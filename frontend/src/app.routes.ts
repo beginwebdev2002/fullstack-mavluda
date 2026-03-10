@@ -24,7 +24,7 @@ export const routes: Routes = [
           import("@pages/veil").then((m) => m.VeilPageComponent),
       },
       {
-        path: "services",
+        path: "treatments",
         loadComponent: () =>
           import("@pages/treatments").then((m) => m.ServicesPageComponent),
       },
@@ -63,7 +63,7 @@ export const routes: Routes = [
           import("@pages/veils-catalog").then((m) => m.VeilsCatalogComponent),
       },
       {
-        path: "services",
+        path: "treatments",
         loadComponent: () =>
           import("@pages/services-catalog").then(
             (m) => m.ServicesCatalogComponent,

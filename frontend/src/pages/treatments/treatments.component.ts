@@ -7,7 +7,7 @@ import {
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 
-interface ServiceItem {
+interface TreatmentItem {
   id: number;
   name: string;
   category: string;
@@ -17,7 +17,7 @@ interface ServiceItem {
 }
 
 @Component({
-  selector: "app-services-page",
+  selector: "app-treatments-page",
   standalone: true,
   imports: [CommonModule, FormsModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -25,48 +25,7 @@ interface ServiceItem {
   styleUrls: ["./treatments.component.scss"],
 })
 export class ServicesPageComponent {
-  services = signal<ServiceItem[]>([
-    {
-      id: 1,
-      name: $localize`:@@serviceBotox:Botox Treatment`,
-      category: $localize`:@@catInjectables:Injectables`,
-      price: 350,
-      duration: $localize`:@@duration30:30 min`,
-      active: true,
-    },
-    {
-      id: 2,
-      name: $localize`:@@serviceGoldFacial:Luxury Gold Facial`,
-      category: $localize`:@@catFacials:Facials`,
-      price: 180,
-      duration: $localize`:@@duration60:60 min`,
-      active: true,
-    },
-    {
-      id: 3,
-      name: $localize`:@@serviceLaserBody:Laser Hair Removal (Full Body)`,
-      category: $localize`:@@catLaser:Laser`,
-      price: 400,
-      duration: $localize`:@@duration90:90 min`,
-      active: true,
-    },
-    {
-      id: 4,
-      name: $localize`:@@serviceLipFillers:Lip Fillers (Juvederm)`,
-      category: $localize`:@@catInjectables:Injectables`,
-      price: 600,
-      duration: $localize`:@@duration45:45 min`,
-      active: true,
-    },
-    {
-      id: 5,
-      name: $localize`:@@serviceChemicalPeel:Chemical Peel`,
-      category: $localize`:@@catFacials:Facials`,
-      price: 120,
-      duration: $localize`:@@duration30:30 min`,
-      active: false,
-    },
-  ]);
+  treatments = signal<TreatmentItem[]>([]);
 
   filters = [
     $localize`:@@filterAll:All`,
@@ -79,13 +38,13 @@ export class ServicesPageComponent {
 
   filteredServices = computed(() => {
     const filter = this.activeFilter();
-    const all = this.services();
+    const all = this.treatments();
     if (filter === "All") return all;
     return all.filter((s) => s.category === filter);
   });
 
   isEditModalOpen = signal(false);
-  tempService: ServiceItem = {
+  tempService: TreatmentItem = {
     id: 0,
     name: "",
     category: "Injectables",
@@ -110,7 +69,7 @@ export class ServicesPageComponent {
     this.isEditModalOpen.set(true);
   }
 
-  openEditModal(service: ServiceItem) {
+  openEditModal(service: TreatmentItem) {
     this.tempService = { ...service };
     this.isEditModalOpen.set(true);
   }
@@ -122,23 +81,23 @@ export class ServicesPageComponent {
   deleteService(id: number) {
     if (
       confirm(
-        $localize`:@@servicesConfirmDelete:Are you sure you want to delete this service?`,
+        $localize`:@@treatmentsConfirmDelete:Are you sure you want to delete this service?`,
       )
     ) {
-      this.services.update((items) => items.filter((item) => item.id !== id));
+      this.treatments.update((items) => items.filter((item) => item.id !== id));
     }
   }
 
   saveEdit() {
     if (this.tempService.id === 0) {
       const newId =
-        this.services().length > 0
-          ? Math.max(...this.services().map((s) => s.id)) + 1
+        this.treatments().length > 0
+          ? Math.max(...this.treatments().map((s) => s.id)) + 1
           : 1;
       const newService = { ...this.tempService, id: newId };
-      this.services.update((items) => [...items, newService]);
+      this.treatments.update((items) => [...items, newService]);
     } else {
-      this.services.update((items) =>
+      this.treatments.update((items) =>
         items.map((item) =>
           item.id === this.tempService.id ? { ...this.tempService } : item,
         ),
