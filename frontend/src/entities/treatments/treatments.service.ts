@@ -1,33 +1,35 @@
 import { Injectable, inject, signal } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, tap } from "rxjs";
-import { Treatment } from "@features/treatments";
+import { TreatmentItem } from "@features/treatments";
 import { deleteArrayItemById, formDataExcludeProperty } from "@shared/lib";
 import { API_ENDPOINTS } from "@core/constants";
 
-@Injectable()
+@Injectable({
+  providedIn: "root",
+})
 export class TreatmentsService {
   private http = inject(HttpClient);
 
   // State
-  private _treatments = signal<Treatment[]>([]);
+  private _treatments = signal<TreatmentItem[]>([]);
   treatments = this._treatments.asReadonly();
 
-  getTreatments(): Observable<Treatment[]> {
+  getTreatments(): Observable<TreatmentItem[]> {
     return this.http
-      .get<Treatment[]>(API_ENDPOINTS.TREATMENTS.BASE)
+      .get<TreatmentItem[]>(API_ENDPOINTS.TREATMENTS.BASE)
       .pipe(tap((treatments) => this._treatments.set(treatments)));
   }
 
-  getTreatment(id: string): Observable<Treatment> {
-    return this.http.get<Treatment>(API_ENDPOINTS.TREATMENTS.URL_BY_ID(id));
+  getTreatment(id: string): Observable<TreatmentItem> {
+    return this.http.get<TreatmentItem>(API_ENDPOINTS.TREATMENTS.URL_BY_ID(id));
   }
 
   createTreatment(
-    treatment: Omit<Treatment, "id"> | FormData,
-  ): Observable<Treatment> {
+    treatment: Omit<TreatmentItem, "id"> | FormData,
+  ): Observable<TreatmentItem> {
     return this.http
-      .post<Treatment>(API_ENDPOINTS.TREATMENTS.BASE, treatment)
+      .post<TreatmentItem>(API_ENDPOINTS.TREATMENTS.BASE, treatment)
       .pipe(
         tap((newTreatment) =>
           this._treatments.update((treatments) => [
@@ -38,14 +40,14 @@ export class TreatmentsService {
       );
   }
 
-  updateTreatment(id: string, treatment: FormData): Observable<Treatment> {
+  updateTreatment(id: string, treatment: FormData): Observable<TreatmentItem> {
     const updatedTreatment = formDataExcludeProperty(treatment, [
       "id",
       "createdAt",
       "updatedAt",
     ]);
     return this.http
-      .put<Treatment>(API_ENDPOINTS.TREATMENTS.URL_BY_ID(id), treatment)
+      .put<TreatmentItem>(API_ENDPOINTS.TREATMENTS.URL_BY_ID(id), treatment)
       .pipe(
         tap((updatedTreatment) =>
           this._treatments.update((treatments) =>
@@ -69,6 +71,8 @@ export class TreatmentsService {
   }
 
   private deleteItemById(id: string) {
-    this._treatments.set(deleteArrayItemById<Treatment>(id, this.treatments()));
+    this._treatments.set(
+      deleteArrayItemById<TreatmentItem>(id, this.treatments()),
+    );
   }
 }

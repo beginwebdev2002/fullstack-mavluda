@@ -1,10 +1,5 @@
-import {
-  IsString,
-  IsNotEmpty,
-  IsNumber,
-  IsEnum,
-  IsOptional,
-} from 'class-validator';
+import { Type } from 'class-transformer';
+import { IsEnum, IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
 export class CreateServiceDto {
   @IsString()
@@ -17,11 +12,13 @@ export class CreateServiceDto {
 
   @IsNumber()
   @IsNotEmpty()
+  @Type(() => Number)
   price: number;
 
   @IsNumber()
   @IsNotEmpty()
-  durationMinutes: number;
+  @Type(() => Number)
+  duration: number;
 
   @IsEnum(['medical', 'beauty'])
   @IsNotEmpty()

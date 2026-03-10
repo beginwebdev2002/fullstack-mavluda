@@ -15,7 +15,7 @@ export class TreatmentsSchemaEntity {
   price: number;
 
   @Prop({ required: true })
-  durationMinutes: number;
+  duration: number;
 
   @Prop({ required: true, enum: ['medical', 'beauty'] })
   category: string;

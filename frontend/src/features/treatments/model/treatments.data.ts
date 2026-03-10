@@ -1,12 +1,13 @@
 import { required } from "@angular/forms/signals";
 
-export interface Treatment {
-  id: string;
+export interface TreatmentItem {
+  id: string | number;
   name: string;
+  category: string;
   description: string;
   price: number;
   duration: number;
-  image: string;
+  image?: string;
   createdAt: string;
   updatedAt: string;
   active: boolean;

@@ -3,29 +3,33 @@ import {
   ChangeDetectionStrategy,
   signal,
   computed,
+  inject,
+  OnInit,
 } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
-
-interface TreatmentItem {
-  id: number;
-  name: string;
-  category: string;
-  price: number;
-  duration: string;
-  active: boolean;
-}
+import { TreatmentFormComponent } from "./components/treatment-form/treatment-form.component";
+import { TreatmentCardComponent } from "./components/treatment-card/treatment-card.component";
+import { TreatmentItem } from "@features/treatments";
+import { TreatmentsService } from "@entities/treatments";
 
 @Component({
   selector: "app-treatments-page",
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    TreatmentFormComponent,
+    TreatmentCardComponent,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./treatments.component.html",
   styleUrls: ["./treatments.component.scss"],
 })
-export class TreatmentsPageComponent {
-  treatments = signal<TreatmentItem[]>([]);
+export class TreatmentsPageComponent implements OnInit {
+  private treatmentsService: TreatmentsService = inject(TreatmentsService);
+
+  treatments = this.treatmentsService.treatments;
 
   filters = [
     $localize`:@@filterAll:All`,
@@ -36,7 +40,7 @@ export class TreatmentsPageComponent {
   activeFilter = signal("All");
   viewMode = signal<"list" | "card">("list");
 
-  filteredServices = computed(() => {
+  filteredTreatments = computed(() => {
     const filter = this.activeFilter();
     const all = this.treatments();
     if (filter === "All") return all;
@@ -44,33 +48,44 @@ export class TreatmentsPageComponent {
   });
 
   isEditModalOpen = signal(false);
-  tempService: TreatmentItem = {
+  tempTreatment: TreatmentItem = {
     id: 0,
     name: "",
     category: "Injectables",
     price: 0,
-    duration: "",
+    duration: 0,
     active: true,
+    createdAt: "",
+    updatedAt: "",
+    description: "",
   };
+
+  ngOnInit() {
+    this.treatmentsService.getTreatments().subscribe();
+  }
 
   setFilter(filter: string) {
     this.activeFilter.set(filter);
   }
 
   openAddModal() {
-    this.tempService = {
-      id: 0,
+    this.tempTreatment = {
+      id: "",
       name: "",
       category: "Injectables",
       price: 0,
-      duration: "",
+      duration: 0,
       active: true,
+      createdAt: "",
+      updatedAt: "",
+      description: "",
+      // image: "",
     };
     this.isEditModalOpen.set(true);
   }
 
-  openEditModal(service: TreatmentItem) {
-    this.tempService = { ...service };
+  openEditModal(treatment: TreatmentItem) {
+    this.tempTreatment = { ...treatment };
     this.isEditModalOpen.set(true);
   }
 
@@ -78,35 +93,27 @@ export class TreatmentsPageComponent {
     this.isEditModalOpen.set(false);
   }
 
-  deleteService(id: number) {
+  deleteTreatment(id: string | number) {
     if (
       confirm(
         $localize`:@@treatmentsConfirmDelete:Are you sure you want to delete this service?`,
       )
     ) {
-      this.treatments.update((items) => items.filter((item) => item.id !== id));
+      this.treatmentsService.deleteTreatment(id as string).subscribe();
     }
   }
 
-  saveEdit() {
-    if (this.tempService.id === 0) {
-      const newId =
-        this.treatments().length > 0
-          ? Math.max(...this.treatments().map((s) => s.id)) + 1
-          : 1;
-      const newService = { ...this.tempService, id: newId };
-      this.treatments.update((items) => [...items, newService]);
+  onSaveTreatment(formData: FormData) {
+    const id = formData.get("id") as string | null;
+
+    if (!id || id === "0" || id === "") {
+      this.treatmentsService.createTreatment(formData).subscribe(() => {
+        this.closeEditModal();
+      });
     } else {
-      this.treatments.update((items) =>
-        items.map((item) =>
-          item.id === this.tempService.id ? { ...this.tempService } : item,
-        ),
-      );
+      this.treatmentsService.updateTreatment(id, formData).subscribe(() => {
+        this.closeEditModal();
+      });
     }
-    this.closeEditModal();
-  }
-
-  toggleTempActive() {
-    this.tempService.active = !this.tempService.active;
   }
 }

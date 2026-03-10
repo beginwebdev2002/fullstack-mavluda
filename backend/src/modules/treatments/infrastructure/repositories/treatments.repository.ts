@@ -56,7 +56,7 @@ export class TreatmentsRepository {
       doc.name,
       doc.description,
       doc.price,
-      doc.durationMinutes,
+      doc.duration,
       doc.category as 'medical' | 'beauty',
       doc.createdAt,
     );

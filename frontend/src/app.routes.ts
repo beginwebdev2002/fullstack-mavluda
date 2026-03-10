@@ -65,7 +65,7 @@ export const routes: Routes = [
       {
         path: "treatments",
         loadComponent: () =>
-          import("@pages/services-catalog").then(
+          import("@pages/treatments-catalog").then(
             (m) => m.ServicesCatalogComponent,
           ),
       },

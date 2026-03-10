@@ -6,13 +6,15 @@ import {
   Put,
   Param,
   Delete,
+  UploadedFiles,
 } from '@nestjs/common';
 import { TreatmentsService } from '@modules/treatments';
 import { Treatments } from '@modules/treatments';
-import { CreateServiceDto } from '@modules/treatments';
-import { UpdateServiceDto } from '@modules/treatments';
+import { CreateServiceDto as CreateTreatmentDto } from '@modules/treatments';
+import { UpdateServiceDto as UpdateTreatmentDto } from '@modules/treatments';
+import { title } from 'process';
 
-@Controller('services')
+@Controller('treatments')
 export class TreatmentsController {
   constructor(private readonly treatmentsService: TreatmentsService) {}
 
@@ -28,23 +30,28 @@ export class TreatmentsController {
 
   @Post()
   async create(
-    @Body() createServiceDto: CreateServiceDto,
-  ): Promise<Treatments> {
-    const service = createServiceDto as unknown as Omit<
+    @Body() createTreatmentDto: any,
+    @UploadedFiles() files: Array<Express.Multer.File>,
+  ): Promise<any> {
+    console.log('Create Treatments');
+    console.log(createTreatmentDto);
+
+    const treatment = createTreatmentDto as unknown as Omit<
       Treatments,
       'id' | 'createdAt'
     >;
-    return this.treatmentsService.create(service);
+    return { title: 'string' };
+    return this.treatmentsService.create(treatment);
   }
 
   @Put(':id')
   async update(
     @Param('id') id: string,
-    @Body() updateServiceDto: UpdateServiceDto,
+    @Body() updateTreatmentDto: UpdateTreatmentDto,
   ): Promise<Treatments> {
     return this.treatmentsService.update(
       id,
-      updateServiceDto as unknown as Partial<Treatments>,
+      updateTreatmentDto as unknown as Partial<Treatments>,
     );
   }
 
