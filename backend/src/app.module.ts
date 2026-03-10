@@ -8,7 +8,7 @@ import { DatabaseModule } from './common/database/database.module';
 import { UserModule } from '@modules/user';
 import { AdminSettingsModule } from '@modules/admin-settings';
 import { VeilModule } from '@modules/veil';
-import { ServiceModule } from '@modules/service';
+import { TreatmentsModule } from '@modules/treatments';
 import { GalleryModule } from '@modules/gallery';
 import { AuthModule } from '@modules/auth';
 import { PaymentModule } from '@modules/payment';
@@ -23,7 +23,7 @@ import { PartnershipModule } from '@modules/partnership';
     UserModule,
     AdminSettingsModule,
     VeilModule,
-    ServiceModule,
+    TreatmentsModule,
     GalleryModule,
     AuthModule,
     PaymentModule,

@@ -26,7 +26,7 @@ export const routes: Routes = [
       {
         path: "treatments",
         loadComponent: () =>
-          import("@pages/treatments").then((m) => m.ServicesPageComponent),
+          import("@pages/treatments").then((m) => m.TreatmentsPageComponent),
       },
       {
         path: "clients",

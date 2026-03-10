@@ -22,15 +22,15 @@
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@admin-settings/*": ["src/admin-settings/*"],
-      "@auth/*": ["src/auth/*"],
       "@common/*": ["src/common/*"],
-      "@gallery/*": ["src/gallery/*"],
-      "@payment/*": ["src/payment/*"],
-      "@services/*": ["src/service/*"],
-      "@user/*": ["src/user/*"],
-      "@veil/*": ["src/veil/*"],
-      "@modules/*": ["src/*"]
+      // "@admin-settings/*": ["src/modules/admin-settings/*"],
+      // "@auth/*": ["src/auth/*"],
+      // "@gallery/*": ["src/gallery/*"],
+      // "@payment/*": ["src/modules/payment/*"],
+      // "@treatments/*": ["src/treatments/*"],
+      // "@user/*": ["src/user/*"],
+      // "@veil/*": ["src/veil/*"],
+      "@modules/*": ["src/modules/*"]
     }
   }
 }

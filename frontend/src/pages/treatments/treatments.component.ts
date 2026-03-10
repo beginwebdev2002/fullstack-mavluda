@@ -24,7 +24,7 @@ interface TreatmentItem {
   templateUrl: "./treatments.component.html",
   styleUrls: ["./treatments.component.scss"],
 })
-export class ServicesPageComponent {
+export class TreatmentsPageComponent {
   treatments = signal<TreatmentItem[]>([]);
 
   filters = [
