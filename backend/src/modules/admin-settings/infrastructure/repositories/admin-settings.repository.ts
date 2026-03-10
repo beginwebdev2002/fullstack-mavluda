@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { AdminSettings } from '@modules/admin-settings';
+import { AdminSettings } from '../../domain/admin-settings.entity';
 import {
   AdminSettingsDocument,
   AdminSettingsSchemaEntity,
-} from '@modules/admin-settings';
+} from '../schemas/admin-settings.schema';
 
 @Injectable()
 export class AdminSettingsRepository {

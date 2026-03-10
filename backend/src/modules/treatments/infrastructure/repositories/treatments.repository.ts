@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Treatments } from '@modules/treatments';
+import { Treatments } from '../../domain/treatments.entity';
 import {
   TreatmentsDocument,
   TreatmentsSchemaEntity,
-} from '@modules/treatments';
+} from '../schemas/treatments.schema';
 
 @Injectable()
 export class TreatmentsRepository {

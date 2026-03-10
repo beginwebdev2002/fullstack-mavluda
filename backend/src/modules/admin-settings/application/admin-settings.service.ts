@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { AdminSettings } from '@modules/admin-settings';
-import { AdminSettingsRepository } from '@modules/admin-settings';
+import { AdminSettings } from '../domain/admin-settings.entity';
+import { AdminSettingsRepository } from '../infrastructure/repositories/admin-settings.repository';
 
 @Injectable()
 export class AdminSettingsService {

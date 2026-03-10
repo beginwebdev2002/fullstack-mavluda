@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Veil } from '@modules/veil';
-import { VeilDocument, VeilSchemaEntity } from '@modules/veil';
+import { Veil } from '../../domain/veil.entity';
+import { VeilDocument, VeilSchemaEntity } from '../schemas/veil.schema';
 import { fileDelete } from '@common/utils/file-system';
 
 @Injectable()
