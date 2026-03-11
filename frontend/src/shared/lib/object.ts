@@ -37,3 +37,27 @@ export function formDataAppendObject<T extends Object>(
 
   return formData;
 }
+
+export function deleteProperties<T>(object: T, properties: string[]): Omit<T, keyof T> {
+    const newObject = { ...object };
+    properties.forEach((property) => {
+        if (!newObject[property]) {
+            return;
+        }
+        delete newObject[property];
+    });
+    return newObject;
+}
+
+export function excludeFormDataProperties(
+  formData: FormData, 
+  properties: string[]
+): FormData {
+  formData.forEach((value, key) => {
+    if (properties.includes(key)) {
+      formData.delete(key);
+    }
+  });
+
+  return formData;
+}

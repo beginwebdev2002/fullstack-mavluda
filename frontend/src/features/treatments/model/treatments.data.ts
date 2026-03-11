@@ -7,10 +7,10 @@ export interface TreatmentItem {
   description: string;
   price: number;
   duration: number;
-  image?: string;
-  createdAt: string;
-  updatedAt: string;
   active: boolean;
+  imageUrl?: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export const resetTreatmentData = {
@@ -19,10 +19,8 @@ export const resetTreatmentData = {
   description: "",
   price: 0,
   duration: 0,
-  image: "",
-  createdAt: "",
-  updatedAt: "",
   active: true,
+  image: "",
 };
 
 export function treatmentsValidationSchema(schemaPath) {

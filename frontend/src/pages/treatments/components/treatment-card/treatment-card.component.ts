@@ -4,6 +4,7 @@ import {
   input,
   output,
   computed,
+  OnInit,
 } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { TreatmentItem } from "@features/treatments";
@@ -15,15 +16,20 @@ import { linkServerConvert } from "@shared/lib";
   imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./treatment-card.component.html",
+  styleUrl: "./treatment-card.component.scss",
 })
-export class TreatmentCardComponent {
+export class TreatmentCardComponent implements OnInit{
   treatment = input.required<TreatmentItem>();
   index = input<number>(0);
 
   edit = output<TreatmentItem>();
   delete = output<string | number>();
 
-  imageUrl = computed(() => linkServerConvert(this.treatment().image || ""));
+  imageUrl = computed(() => linkServerConvert(this.treatment().imageUrl || ""));
+  ngOnInit(): void {
+    console.log('image: ', this.treatment());
+    
+  }
 
   onEdit() {
     this.edit.emit(this.treatment());

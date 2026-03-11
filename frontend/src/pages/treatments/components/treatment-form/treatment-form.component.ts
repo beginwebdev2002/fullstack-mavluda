@@ -29,7 +29,7 @@ export class TreatmentFormComponent implements OnInit {
 
   selectedFile = signal<File | null>(null);
   previewImage = linkedSignal(() =>
-    linkServerConvert(this.treatment()?.image || ""),
+    linkServerConvert(this.treatment()?.imageUrl || ""),
   );
 
   ngOnInit() {

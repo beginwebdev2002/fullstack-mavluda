@@ -17,8 +17,14 @@ export class TreatmentsSchemaEntity {
   @Prop({ required: true })
   duration: number;
 
-  @Prop({ required: true, enum: ['medical', 'beauty'] })
+  @Prop({ required: true })
   category: string;
+
+  @Prop()
+  imageUrl: string;
+
+  @Prop({ default: true })
+  active: boolean;
 
   createdAt?: Date;
   updatedAt?: Date;

@@ -55,8 +55,6 @@ export class TreatmentsPageComponent implements OnInit {
     price: 0,
     duration: 0,
     active: true,
-    createdAt: "",
-    updatedAt: "",
     description: "",
   };
 
@@ -76,10 +74,7 @@ export class TreatmentsPageComponent implements OnInit {
       price: 0,
       duration: 0,
       active: true,
-      createdAt: "",
-      updatedAt: "",
       description: "",
-      // image: "",
     };
     this.isEditModalOpen.set(true);
   }

@@ -58,7 +58,10 @@ export class TreatmentsRepository {
       doc.price,
       doc.duration,
       doc.category as 'medical' | 'beauty',
+      doc.imageUrl,
+      doc.active,
       doc.createdAt,
+      doc.updatedAt,
     );
   }
 }

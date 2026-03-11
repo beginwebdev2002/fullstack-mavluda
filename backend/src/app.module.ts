@@ -40,7 +40,5 @@ import { PartnershipModule } from '@modules/partnership';
 })
 export class AppModule {
   constructor() {
-    console.log(join(process.cwd(), 'uploads'));
-    console.log(process.cwd());
   }
 }
