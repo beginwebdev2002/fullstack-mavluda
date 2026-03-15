@@ -24,21 +24,21 @@ export class PortfolioPageComponent implements OnInit {
   // Align filters with Gallery categories + 'All Works'
   filters: (ImageCategory | "All Works")[] = [
     "All Works",
-    "Visage",
-    "Medical Spa",
-    "Bridal Veils",
-    "Interior",
-    "Product",
+    "visage",
+    "medical_spa",
+    "bridal_veils",
+    "interior",
+    "product",
   ];
 
   // Let's reimplement filters to match Gallery
   categoryFilters: string[] = [
     "All Works",
-    "Visage",
-    "Medical Spa",
-    "Bridal Veils",
-    "Interior",
-    "Product",
+    "visage",
+    "medical_spa",
+    "bridal_veils",
+    "interior",
+    "product",
   ];
   activeFilter = signal("All Works");
 

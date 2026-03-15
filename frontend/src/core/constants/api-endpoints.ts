@@ -12,6 +12,11 @@ export const API_ENDPOINTS = {
     URL_BY_ID: (id: string) =>
       linkServerConvert(API_ENDPOINTS.TREATMENTS.URL, id),
   },
+  GALLERY: {
+    URL: "gallery",
+    BASE: linkServerConvert("gallery"),
+    URL_BY_ID: (id: string) => linkServerConvert(API_ENDPOINTS.GALLERY.URL, id),
+  },
   AUTH: {
     LOGIN: "/auth/login",
     REGISTER: "/auth/register",

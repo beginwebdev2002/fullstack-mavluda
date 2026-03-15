@@ -8,7 +8,7 @@ import {
 } from "@angular/core";
 import { VeilService } from "@entities/veil";
 import { Veil, veilFormData } from "@features/veil";
-import { formDataAppendObject } from "@shared/lib";
+import { convertFormData } from "@shared/lib";
 import { VeilCardComponent } from "./ui/veil-card/veil-card.component";
 import { VeilFormComponent } from "./ui/veil-form/veil-form.component";
 import { tap } from "rxjs";
@@ -89,7 +89,7 @@ export class VeilPageComponent implements OnInit {
   }
 
   private updateFormData(data: Veil, file: File | null) {
-    this.formData.set(formDataAppendObject(data, file));
+    this.formData.set(convertFormData(data, file));
   }
 
   private updateVeil(data: Veil, file: File | null) {
@@ -110,7 +110,7 @@ export class VeilPageComponent implements OnInit {
 
   private formDataSave(event: { data: Veil; file: File | null }) {
     const { data, file } = event;
-    this.formData.set(formDataAppendObject(data, file));
+    this.formData.set(convertFormData(data, file));
   }
 
   private deleteCard(id: string) {

@@ -110,9 +110,10 @@
                 [formField]="veilForm.category"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               >
-                <option value="Bridal">Bridal</option>
-                <option value="Evening">Evening</option>
-                <option value="Accessories">Accessories</option>
+                <option value="" disabled selected>Select category</option>
+                @for (category of categories; track category) {
+                  <option [value]="category">{{ category }}</option>
+                }
               </select>
             </div>
           </div>
@@ -171,21 +172,29 @@
               <label class="block text-sm font-medium text-gray-700"
                 >Silhouette</label
               >
-              <input
-                type="text"
+              <select
                 [formField]="veilForm.silhouette"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
-              />
+              >
+                <option value="" disabled selected>Select silhouette</option>
+                @for (silhouette of silhouettes; track silhouette) {
+                  <option [value]="silhouette">{{ silhouette }}</option>
+                }
+              </select>
             </div>
             <div class="space-y-2">
               <label class="block text-sm font-medium text-gray-700"
                 >Neckline</label
               >
-              <input
-                type="text"
+              <select
                 [formField]="veilForm.neckline"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
-              />
+              >
+                <option value="" disabled selected>Select neckline</option>
+                @for (neckline of necklines; track neckline) {
+                  <option [value]="neckline">{{ neckline }}</option>
+                }
+              </select>
             </div>
           </div>
 
@@ -194,21 +203,29 @@
               <label class="block text-sm font-medium text-gray-700"
                 >Fabric</label
               >
-              <input
-                type="text"
+              <select
                 [formField]="veilForm.fabric"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
-              />
+              >
+                <option value="" disabled selected>Select fabric</option>
+                @for (fabric of fabrics; track fabric) {
+                  <option [value]="fabric">{{ fabric }}</option>
+                }
+              </select>
             </div>
             <div class="space-y-2">
               <label class="block text-sm font-medium text-gray-700"
                 >Train Length</label
               >
-              <input
-                type="text"
+              <select
                 [formField]="veilForm.trainLength"
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
-              />
+              >
+                <option value="" disabled selected>Select train length</option>
+                @for (trainLength of trainLengths; track trainLength) {
+                  <option [value]="trainLength">{{ trainLength }}</option>
+                }
+              </select>
             </div>
           </div>
 

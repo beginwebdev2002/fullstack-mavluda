@@ -30,4 +30,4 @@ export async function deleteFileSafe(relativePath: string): Promise<boolean> {
   } catch (_) {
     return false;
   }
-};
+}

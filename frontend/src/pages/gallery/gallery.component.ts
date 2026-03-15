@@ -8,13 +8,16 @@ import {
 } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
-import { GalleryService } from "@entities/gallery";
+import { GalleryService, GALLERY_CATEGORIES, GalleryCategories } from "@entities/gallery";
 import { Gallery, ImageCategory } from "@shared/models";
+import { GalleryFormComponent } from "./ui/gallery-form/gallery-form.component";
+import { GalleryCardComponent } from "./ui/gallery-card/gallery-card.component";
+import { convertFormData } from "@shared/lib/object";
 
 @Component({
   selector: "app-gallery",
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, GalleryFormComponent, GalleryCardComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./gallery.component.html",
   styleUrls: ["./gallery.component.scss"],
@@ -30,19 +33,12 @@ export class GalleryComponent implements OnInit {
 
   images = this.galleryService.images;
 
-  filters: ImageCategory[] = [
-    "All",
-    "Visage",
-    "Medical Spa",
-    "Bridal Veils",
-    "Interior",
-    "Product",
-  ];
-  activeFilter = signal<ImageCategory>("All");
+  filters = signal<ImageCategory[]>(GALLERY_CATEGORIES);
+  activeFilter = signal<ImageCategory>(GalleryCategories.ALL);
 
   filteredImages = computed(() => {
     const filter = this.activeFilter();
-    if (filter === "All") {
+    if (filter === GalleryCategories.ALL) {
       return this.images();
     }
     return this.images().filter((img) => img.category === filter);
@@ -60,7 +56,7 @@ export class GalleryComponent implements OnInit {
       imageUrl: "",
       title: "",
       filename: "",
-      category: "Visage", // Default
+      category: GalleryCategories.VISAGE, // Default
       createdAt: "",
       status: "draft",
       alt: "",
@@ -82,17 +78,21 @@ export class GalleryComponent implements OnInit {
     this.isModalOpen.set(false);
   }
 
-  saveImage() {
-    if (!this.currentImage.id) {
+  saveImage(event: { image: Gallery; file: File | null }) {
+    const { image, file } = event;
+    const args: any[] = [{ ...image }];
+    if (file) args.push(file);
+    const formData = convertFormData(...args);
+
+    if (!image.id) {
       // New image
-      // Backend handles createdAt
-      this.galleryService.createImage(this.currentImage).subscribe(() => {
+      this.galleryService.createImage(formData).subscribe(() => {
         this.closeModal();
       });
     } else {
       // Update existing
       this.galleryService
-        .updateImage(this.currentImage.id, this.currentImage)
+        .updateImage(image.id, formData)
         .subscribe(() => {
           this.closeModal();
         });
@@ -117,21 +117,6 @@ export class GalleryComponent implements OnInit {
 
   onImageLoad() {
     this.isImageLoading.set(false);
-  }
-
-  onFileSelected(event: Event) {
-    const input = event.target as HTMLInputElement;
-    if (input.files && input.files[0]) {
-      const file = input.files[0];
-      if (!this.currentImage.id) {
-        this.currentImage.filename = file.name;
-      }
-      const reader = new FileReader();
-      reader.onload = (e: any) => {
-        this.currentImage.imageUrl = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    }
   }
 
   onDragOver(event: DragEvent) {

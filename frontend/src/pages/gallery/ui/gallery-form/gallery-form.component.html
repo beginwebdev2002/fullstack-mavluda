@@ -1,0 +1,67 @@
+<div class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-page-enter">
+  <div class="bg-white rounded-xl shadow-2xl w-full max-w-3xl overflow-hidden animate-slide-up">
+    <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+      <h3 class="font-display text-xl text-gray-900">
+        @if(!currentImage.id) { <span i18n="@@galleryModalTitleNew">Upload New Image</span> } @else { <span i18n="@@galleryModalTitleEdit">Edit Image Details</span> }
+      </h3>
+      <button (click)="closeModal()" class="text-gray-400 hover:text-gray-600">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-x-8">
+      <!-- Image Uploader -->
+      <div class="space-y-2 mb-6 md:mb-0">
+        <label class="block text-sm font-medium text-gray-700" i18n="@@galleryLabelPreview">Image Preview</label>
+        <div (click)="fileInput.click()" class="aspect-[4/3] w-full rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center relative group cursor-pointer hover:border-primary transition-colors bg-gray-50">
+            @if (currentImage.imageUrl) {
+                <img [src]="currentImage.imageUrl" alt="Image preview" class="w-full h-full object-cover rounded-lg absolute inset-0">
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                  <div class="text-center text-white">
+                    <span class="material-symbols-outlined text-3xl">edit</span>
+                    <p class="text-xs mt-1 font-semibold" i18n="@@galleryChangeImage">Change Image</p>
+                  </div>
+                </div>
+            } @else {
+                <div class="text-center text-gray-500">
+                    <span class="material-symbols-outlined text-4xl">add_photo_alternate</span>
+                    <p class="text-xs mt-2 font-semibold" i18n="@@galleryClickToUpload">Click to upload</p>
+                </div>
+            }
+        </div>
+        <input #fileInput type="file" class="hidden" (change)="onFileSelected($event)" accept="image/png, image/jpeg, image/webp">
+      </div>
+      
+      <!-- Form Fields -->
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1" i18n="@@galleryLabelTitle">Title</label>
+          <input [(ngModel)]="currentImage.title" class="w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm" type="text"/>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1" i18n="@@galleryLabelCategory">Category</label>
+          <select [(ngModel)]="currentImage.category" class="w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm">
+            @for(cat of filters(); track cat) {
+              @if(cat !== 'all') {
+                <option [value]="cat">{{ formatCategory(cat) }}</option>
+              }
+            }
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1" i18n="@@galleryLabelAlt">Alt Text</label>
+          <input [(ngModel)]="currentImage.alt" class="w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm" type="text"/>
+        </div>
+      </div>
+    </div>
+    <div class="px-6 py-4 bg-gray-50 flex justify-end space-x-3">
+      <button (click)="closeModal()" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg text-sm font-medium transition-colors" i18n="@@galleryBtnCancel">Cancel</button>
+      <button 
+        (click)="saveImage()" 
+        class="px-4 py-2 bg-primary text-black hover:bg-primary-hover rounded-lg text-sm font-medium transition-colors shadow-md disabled:bg-gray-300 disabled:cursor-not-allowed"
+        [disabled]="!currentImage.id && !currentImage.imageUrl"
+      >
+        @if(!currentImage.id) { <span i18n="@@galleryBtnUploadImage">Upload Image</span> } @else { <span i18n="@@galleryBtnSaveChanges">Save Changes</span> }
+      </button>
+    </div>
+  </div>
+</div>

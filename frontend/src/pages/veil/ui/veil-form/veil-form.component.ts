@@ -10,6 +10,13 @@ import {
 } from "@angular/core";
 import { form, FormField } from "@angular/forms/signals";
 import {
+  VEIL_CATEGORIES,
+  VEIL_FABRICS,
+  VEIL_NECKLINES,
+  VEIL_SILHOUETTES,
+  VEIL_TRAIN_LENGTHS,
+} from "@entities/veil";
+import {
   resetVeilData,
   Veil,
   veilFormData,
@@ -33,6 +40,12 @@ export class VeilFormComponent implements OnInit {
   selectedFile = signal<File | null>(null);
   previewImage = linkedSignal(() => this.veil()?.image || null);
   isEditMode = signal(false);
+
+  categories = VEIL_CATEGORIES;
+  silhouettes = VEIL_SILHOUETTES;
+  necklines = VEIL_NECKLINES;
+  fabrics = VEIL_FABRICS;
+  trainLengths = VEIL_TRAIN_LENGTHS;
 
   ngOnInit(): void {
     this.initForm();

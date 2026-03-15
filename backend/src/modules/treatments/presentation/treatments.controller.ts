@@ -1,4 +1,9 @@
-import { CreateServiceDto as CreateTreatmentDto, Treatments, TreatmentsService, UpdateServiceDto as UpdateTreatmentDto } from '@modules/treatments';
+import {
+  CreateServiceDto as CreateTreatmentDto,
+  Treatments,
+  TreatmentsService,
+  UpdateServiceDto as UpdateTreatmentDto,
+} from '@modules/treatments';
 import {
   Body,
   Controller,

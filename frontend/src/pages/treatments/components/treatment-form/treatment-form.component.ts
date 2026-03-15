@@ -28,9 +28,7 @@ export class TreatmentFormComponent implements OnInit {
   tempTreatment = signal<TreatmentItem>({} as TreatmentItem);
 
   selectedFile = signal<File | null>(null);
-  previewImage = linkedSignal(() =>
-    this.treatment()?.imageUrl ? linkServerConvert(this.treatment()?.imageUrl) : "public/images/treatments-add-img.png",
-  );
+  previewImage = linkedSignal(() => this.treatment()?.imageUrl ? linkServerConvert(this.treatment()?.imageUrl): null);
 
   ngOnInit() {
     this.tempTreatment.set({ ...this.treatment() });

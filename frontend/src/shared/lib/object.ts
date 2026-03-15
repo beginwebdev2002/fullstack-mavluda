@@ -17,7 +17,7 @@ export function formDataExcludeProperty<T extends FormData>(
   return rest;
 }
 
-export function formDataAppendObject<T extends Object>(
+export function convertFormData<T extends Object>(
   ...prop: T[] | File[]
 ): FormData {
   const formData = new FormData();

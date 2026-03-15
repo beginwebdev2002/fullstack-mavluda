@@ -39,6 +39,5 @@ import { PartnershipModule } from '@modules/partnership';
   providers: [AppService],
 })
 export class AppModule {
-  constructor() {
-  }
+  constructor() {}
 }

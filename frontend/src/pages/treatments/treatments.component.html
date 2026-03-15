@@ -11,27 +11,6 @@
         Manage your luxury treatment offerings.
       </p>
     </div>
-    <button
-      (click)="openAddModal()"
-      class="px-5 py-2.5 bg-primary text-black rounded-lg shadow-gold hover:shadow-gold-lg hover:bg-primary-hover transition-all duration-300 flex items-center justify-center space-x-2 group btn-primary-shimmer active:scale-[0.98]"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="group-hover:scale-110 transition-transform"
-      >
-        <line x1="12" x2="12" y1="5" y2="19" />
-        <line x1="5" x2="19" y1="12" y2="12" />
-      </svg>
-      <span class="font-medium" i18n="@@servicesAddButton">Add Service</span>
-    </button>
   </div>
 
   <!-- Controls -->
@@ -39,7 +18,7 @@
     class="flex flex-col sm:flex-row justify-between items-end sm:items-center pb-2 border-b border-gray-100 gap-4"
   >
     <!-- Filters -->
-    <div class="flex space-x-6 overflow-x-auto no-scrollbar w-full sm:w-auto">
+    <div class="flex space-x-6 overflow-x-auto no-scrollbar w-full sm:w-auto grow">
       @for (filter of filters; track filter) {
         <button
           (click)="setFilter(filter)"
@@ -123,6 +102,9 @@
         </svg>
       </button>
     </div>
+    <button (click)="openAddModal()" class="flex items-center px-5 py-2.5 ml-2 bg-primary hover:bg-primary-hover text-white rounded-lg shadow-gold hover:shadow-gold-lg transition-all font-medium">
+        <span class="material-symbols-outlined mr-2">add_photo_alternate</span>
+      </button>
   </div>
 
   <!-- Views -->

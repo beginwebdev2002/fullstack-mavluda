@@ -25,17 +25,17 @@ export class GalleryService {
   }
 
   // Use this for both create and update if sending full object, or create specific methods
-  createImage(image: Omit<Gallery, "id" | "createdAt">): Observable<Gallery> {
+  createImage(formData: FormData): Observable<Gallery> {
     return this.http
-      .post<Gallery>(this.apiUrl, image)
+      .post<Gallery>(this.apiUrl, formData)
       .pipe(
         tap((newImage) => this._images.update((imgs) => [newImage, ...imgs])),
       );
   }
 
-  updateImage(id: string, image: Partial<Gallery>): Observable<Gallery> {
+  updateImage(id: string, formData: FormData): Observable<Gallery> {
     return this.http
-      .put<Gallery>(`${this.apiUrl}/${id}`, image)
+      .put<Gallery>(`${this.apiUrl}/${id}`, formData)
       .pipe(
         tap((updatedImage) =>
           this._images.update((imgs) =>
