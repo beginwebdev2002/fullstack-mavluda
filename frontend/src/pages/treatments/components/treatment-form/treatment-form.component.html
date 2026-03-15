@@ -16,7 +16,7 @@
         class="bg-gray-50 px-6 py-4 border-b border-gray-100 flex justify-between items-center"
       >
         <h3 class="text-xl font-serif font-bold text-gray-900">
-          @if (tempTreatment.id === 0 || tempTreatment.id === "") {
+          @if (tempTreatment().id === 0 || tempTreatment().id === "") {
             <span i18n="@@servicesModalTitleNew">Add New Service</span>
           } @else {
             <span i18n="@@servicesModalTitleEdit">Edit Service</span>
@@ -81,13 +81,13 @@
               (click)="toggleTempActive()"
               type="button"
               [class]="
-                tempTreatment.active
+                tempTreatment().active
                   ? 'bg-green-50 text-green-700 border-green-200 ring-green-500/20'
                   : 'bg-red-50 text-red-700 border-red-200 ring-red-500/20'
               "
               class="w-full inline-flex justify-center items-center px-4 py-2.5 rounded-lg text-sm font-medium transition-all border hover:opacity-90"
             >
-              @if (tempTreatment.active) {
+              @if (tempTreatment().active) {
                 <ng-container i18n="@@statusActive">Active</ng-container>
               } @else {
                 <ng-container i18n="@@statusInactive">Inactive</ng-container>
@@ -105,7 +105,7 @@
             >
             <input
               type="text"
-              [(ngModel)]="tempTreatment.name"
+              [(ngModel)]="tempTreatment().name"
               class="block w-full rounded-lg bg-white border border-gray-300 text-gray-900 focus:ring-2 focus:ring-gold/50 focus:border-gold sm:text-sm p-2.5 transition-all shadow-sm"
             />
           </div>
@@ -118,7 +118,7 @@
                 >Category</label
               >
               <select
-                [(ngModel)]="tempTreatment.category"
+                [(ngModel)]="tempTreatment().category"
                 class="block w-full rounded-lg bg-white border border-gray-300 text-gray-900 focus:ring-2 focus:ring-gold/50 focus:border-gold sm:text-sm p-2.5 transition-all shadow-sm"
               >
                 <option value="Injectables">Injectables</option>
@@ -135,7 +135,7 @@
               >
               <input
                 type="number"
-                [(ngModel)]="tempTreatment.price"
+                [(ngModel)]="tempTreatment().price"
                 class="block w-full rounded-lg bg-white border border-gray-300 text-gray-900 focus:ring-2 focus:ring-gold/50 focus:border-gold sm:text-sm p-2.5 transition-all shadow-sm"
               />
             </div>
@@ -150,7 +150,7 @@
               >
               <input
                 type="number"
-                [(ngModel)]="tempTreatment.duration"
+                [(ngModel)]="tempTreatment().duration"
                 class="block w-full rounded-lg bg-white border border-gray-300 text-gray-900 focus:ring-2 focus:ring-gold/50 focus:border-gold sm:text-sm p-2.5 transition-all shadow-sm"
               />
             </div>
@@ -163,7 +163,7 @@
               >Description</label
             >
             <textarea
-              [(ngModel)]="tempTreatment.description"
+              [(ngModel)]="tempTreatment().description"
               rows="3"
               class="block w-full rounded-lg bg-white border border-gray-300 text-gray-900 focus:ring-2 focus:ring-gold/50 focus:border-gold sm:text-sm p-2.5 transition-all shadow-sm"
             ></textarea>
@@ -179,7 +179,7 @@
           type="button"
           class="inline-flex justify-center rounded-lg bg-gold px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-gold/30 hover:bg-gold-dark hover:shadow-gold/50 transition-all transform active:scale-95"
         >
-          @if (tempTreatment.id === 0) {
+          @if (tempTreatment().id === 0) {
             <span i18n="@@servicesBtnCreate">Create Service</span>
           } @else {
             <span i18n="@@servicesBtnSave">Save Changes</span>

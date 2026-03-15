@@ -5,9 +5,7 @@ import { TreatmentItem } from "@features/treatments";
 import { deleteArrayItemById, deleteProperties, excludeFormDataProperties, formDataExcludeProperty } from "@shared/lib";
 import { API_ENDPOINTS } from "@core/constants";
 
-@Injectable({
-  providedIn: "root",
-})
+@Injectable()
 export class TreatmentsService {
   private http = inject(HttpClient);
 
@@ -28,7 +26,6 @@ export class TreatmentsService {
   createTreatment(
     treatment: FormData,
   ): Observable<TreatmentItem> {
-    const exceptedTreatment = excludeFormDataProperties(treatment, ["id", "createdAt", "updatedAt"]);
     return this.http
       .post<TreatmentItem>(API_ENDPOINTS.TREATMENTS.BASE, treatment)
       .pipe(
@@ -46,9 +43,7 @@ export class TreatmentsService {
       "id",
       "createdAt",
       "updatedAt",
-    ]);
-    console.log('Image: ', updatedTreatment.get('image'));
-    
+    ]);    
     return this.http
       .put<TreatmentItem>(
         API_ENDPOINTS.TREATMENTS.URL_BY_ID(id),

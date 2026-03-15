@@ -50,9 +50,6 @@ export class CreateServiceDto {
   category: string;
 
   @IsOptional()
-  image: string;
-
-  @IsOptional()
   @IsString()
   imageUrl: string;
 }

@@ -25,15 +25,15 @@ export class TreatmentFormComponent implements OnInit {
   save = output<FormData>();
   cancel = output<void>();
 
-  tempTreatment!: TreatmentItem;
+  tempTreatment = signal<TreatmentItem>({} as TreatmentItem);
 
   selectedFile = signal<File | null>(null);
   previewImage = linkedSignal(() =>
-    linkServerConvert(this.treatment()?.imageUrl || ""),
+    this.treatment()?.imageUrl ? linkServerConvert(this.treatment()?.imageUrl) : "public/images/treatments-add-img.png",
   );
 
   ngOnInit() {
-    this.tempTreatment = { ...this.treatment() };
+    this.tempTreatment.set({ ...this.treatment() });
   }
 
   closeEditModal() {
@@ -56,8 +56,9 @@ export class TreatmentFormComponent implements OnInit {
 
   saveEdit() {
     const formData = new FormData();
-
-    Object.entries(this.tempTreatment).forEach(([key, value]) => {
+    console.log('treatments: ', this.tempTreatment());
+    
+    Object.entries(this.tempTreatment()).forEach(([key, value]) => {
       if (key === "id" && value === "") return;
       if (value !== undefined && value !== null) {
         formData.append(key, value.toString());
@@ -72,6 +73,6 @@ export class TreatmentFormComponent implements OnInit {
   }
 
   toggleTempActive() {
-    this.tempTreatment.active = !this.tempTreatment.active;
+    this.tempTreatment.update((t) => ({ ...t, active: !t.active }));
   }
 }

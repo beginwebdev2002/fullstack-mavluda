@@ -25,7 +25,7 @@ export class TreatmentCardComponent implements OnInit{
   edit = output<TreatmentItem>();
   delete = output<string | number>();
 
-  imageUrl = computed(() => linkServerConvert(this.treatment().imageUrl || ""));
+  imageUrl = computed(() => this.treatment().imageUrl ? linkServerConvert(this.treatment().imageUrl) : "public/images/treatments-no-img.png");
   ngOnInit(): void {
     console.log('image: ', this.treatment());
     

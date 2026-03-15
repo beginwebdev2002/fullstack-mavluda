@@ -1,6 +1,7 @@
 // infrastructure/utils/file-system.util.ts
 import * as fs from 'fs';
 import { join } from 'path';
+import { promisify } from 'util';
 
 export function fileDelete(relativeFilePath: string): boolean {
   try {
@@ -14,3 +15,19 @@ export function fileDelete(relativeFilePath: string): boolean {
     return false;
   }
 }
+
+export const unlinkAsync = promisify(fs.unlink);
+
+export async function deleteFileSafe(relativePath: string): Promise<boolean> {
+  if (!relativePath) return false;
+
+  try {
+    const absolutePath = join(process.cwd(), relativePath);
+
+    // await fs.access(absolutePath);
+    await unlinkAsync(absolutePath);
+    return true;
+  } catch (_) {
+    return false;
+  }
+};

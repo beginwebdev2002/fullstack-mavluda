@@ -45,9 +45,9 @@ export class TreatmentsRepository {
     return doc ? this.toDomain(doc) : null;
   }
 
-  async delete(id: string): Promise<boolean> {
+  async delete(id: string): Promise<Treatments | null> {
     const result = await this.treatmentsModel.findByIdAndDelete(id).exec();
-    return !!result;
+    return result ? this.toDomain(result) : null;
   }
 
   private toDomain(doc: TreatmentsDocument): Treatments {

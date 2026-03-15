@@ -27,6 +27,9 @@
             "tsConfig": "tsconfig.json",
             "polyfills": [
               "@angular/localize/init"
+            ],
+            "assets": [
+              "./public"
             ]
           },
           "configurations": {

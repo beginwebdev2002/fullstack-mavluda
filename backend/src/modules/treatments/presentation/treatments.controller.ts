@@ -1,23 +1,18 @@
+import { CreateServiceDto as CreateTreatmentDto, Treatments, TreatmentsService, UpdateServiceDto as UpdateTreatmentDto } from '@modules/treatments';
 import {
-  Controller,
-  Get,
-  Post,
   Body,
-  Put,
-  Param,
+  Controller,
   Delete,
+  Get,
+  Param,
+  Post,
+  Put,
   UploadedFiles,
   UseInterceptors,
 } from '@nestjs/common';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 import { extname } from 'path';
-import { TreatmentsService } from '@modules/treatments';
-import { Treatments } from '@modules/treatments';
-import { CreateServiceDto as CreateTreatmentDto } from '@modules/treatments';
-import { UpdateServiceDto as UpdateTreatmentDto } from '@modules/treatments';
-import { title } from 'process';
-import { deleteProperties } from '@common/utils';
 
 @Controller('treatments')
 export class TreatmentsController {
@@ -55,17 +50,17 @@ export class TreatmentsController {
       files && files.length > 0
         ? `/uploads/treatments/${files[0].filename}`
         : '';
-
-    const treatment = {
-      ...createTreatmentDto,
-      imageUrl: imagePath,
-    } as unknown as Omit<Treatments, 'id' | 'createdAt'>;
-    return this.treatmentsService.create(treatment);
+    if (imagePath) {
+      createTreatmentDto.imageUrl = imagePath;
+    }
+    return this.treatmentsService.create(
+      createTreatmentDto as unknown as Omit<Treatments, 'id' | 'createdAt'>,
+    );
   }
 
   @Put(':id')
   @UseInterceptors(
-    FilesInterceptor('files', 10, {
+    FilesInterceptor('image', 10, {
       storage: diskStorage({
         destination: './uploads/treatments',
         filename: (req, file, callback) => {
@@ -87,17 +82,13 @@ export class TreatmentsController {
         ? `/uploads/treatments/${files[0].filename}`
         : null;
 
-    const treatmentData = {
-      ...updateTreatmentDto,
-    };
-
     if (imagePath) {
-      (treatmentData as any).imageUrl = imagePath;
+      updateTreatmentDto.imageUrl = imagePath;
     }
 
     return this.treatmentsService.update(
       id,
-      treatmentData as unknown as Partial<Treatments>,
+      updateTreatmentDto as unknown as Partial<Treatments>,
     );
   }
 

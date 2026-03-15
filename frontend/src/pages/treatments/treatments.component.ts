@@ -22,12 +22,13 @@ import { TreatmentsService } from "@entities/treatments";
     TreatmentFormComponent,
     TreatmentCardComponent,
   ],
+  providers: [TreatmentsService],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./treatments.component.html",
   styleUrls: ["./treatments.component.scss"],
 })
 export class TreatmentsPageComponent implements OnInit {
-  private treatmentsService: TreatmentsService = inject(TreatmentsService);
+  private treatmentsService = inject(TreatmentsService);
 
   treatments = this.treatmentsService.treatments;
 
