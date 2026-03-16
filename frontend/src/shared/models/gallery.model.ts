@@ -8,13 +8,11 @@ export type ImageCategory =
   | "product";
 
 export interface Gallery {
-  id: string;
+  id?: string;
   title: string;
   imageUrl: string;
   category: string;
-  tags: string[];
   status: string;
   alt: string;
-  filename: string;
-  createdAt: string; // Date string from backend
+  createdAt?: string; // Date string from backend
 }

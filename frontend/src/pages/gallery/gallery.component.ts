@@ -55,12 +55,9 @@ export class GalleryComponent implements OnInit {
       id: "",
       imageUrl: "",
       title: "",
-      filename: "",
       category: GalleryCategories.VISAGE, // Default
-      createdAt: "",
       status: "draft",
       alt: "",
-      tags: [],
     };
   }
 
@@ -78,8 +75,8 @@ export class GalleryComponent implements OnInit {
     this.isModalOpen.set(false);
   }
 
-  saveImage(event: { image: Gallery; file: File | null }) {
-    const { image, file } = event;
+  saveImage(event: { data: any; file: File | null }) {
+    const { data: image, file } = event;
     const args: any[] = [{ ...image }];
     if (file) args.push(file);
     const formData = convertFormData(...args);

@@ -14,17 +14,12 @@ export class GallerySchemaEntity {
   @Prop({ required: true })
   category: string;
 
-  @Prop([String])
-  tags: string[];
-
   @Prop({ default: 'draft' })
   status: string;
 
   @Prop()
   alt: string;
 
-  @Prop()
-  filename: string;
 }
 
 export const GallerySchema = SchemaFactory.createForClass(GallerySchemaEntity);

@@ -27,6 +27,7 @@ export class VeilCardComponent implements OnInit {
   onChangeViewImage = output<string>();
   onDeleteCard = output<string>();
   env = signal(environment);
+  
   safeImageUrl = computed(() => {
     return this.veil().image
       ? this.env().apiUrl + this.veil().image

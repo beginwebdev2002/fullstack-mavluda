@@ -2,11 +2,13 @@ import { CommonModule } from "@angular/common";
 import {
   ChangeDetectionStrategy,
   Component,
+  computed,
   input,
   output,
   OnInit,
 } from "@angular/core";
 import { Gallery } from "@shared/models";
+import { linkServerConvert } from "@shared/lib";
 
 @Component({
   selector: "app-gallery-card",
@@ -22,6 +24,8 @@ export class GalleryCardComponent implements OnInit {
   edit = output<Gallery>();
   viewImage = output<string>();
   deleteCard = output<string>();
+
+  imageUrl = computed(() => this.image().imageUrl ? linkServerConvert(this.image().imageUrl) : "public/images/treatments-no-img.png");
 
   ngOnInit(): void {}
 

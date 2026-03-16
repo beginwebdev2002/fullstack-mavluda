@@ -88,17 +88,13 @@ export class GalleryController {
         ? `/uploads/gallery/${files[0].filename}`
         : null;
 
-    const galleryData = {
-      ...updateGalleryDto,
-    };
-
     if (imagePath) {
-      (galleryData as any).imageUrl = imagePath;
+      updateGalleryDto.imageUrl = imagePath;
     }
 
     return this.galleryService.update(
       id,
-      galleryData as unknown as Partial<Gallery>,
+      updateGalleryDto as unknown as Partial<Gallery>,
     );
   }
 

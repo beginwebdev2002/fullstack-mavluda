@@ -1,28 +1,16 @@
-import {
-  IsString,
-  IsNotEmpty,
-  IsUrl,
-  IsOptional,
-  IsArray,
-} from 'class-validator';
+import { IsString, IsNotEmpty, IsOptional } from 'class-validator';
 
 export class CreateGalleryDto {
   @IsString()
   @IsNotEmpty()
   title: string;
 
-  @IsUrl()
-  @IsNotEmpty()
+  @IsOptional()
   imageUrl: string;
 
   @IsString()
   @IsNotEmpty()
   category: string;
-
-  @IsArray()
-  @IsString({ each: true })
-  @IsOptional()
-  tags?: string[];
 
   @IsString()
   @IsOptional()
@@ -31,8 +19,4 @@ export class CreateGalleryDto {
   @IsString()
   @IsOptional()
   alt?: string;
-
-  @IsString()
-  @IsOptional()
-  filename?: string;
 }

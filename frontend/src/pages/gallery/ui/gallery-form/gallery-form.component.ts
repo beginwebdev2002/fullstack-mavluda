@@ -1,18 +1,22 @@
+import { CommonModule } from "@angular/common";
 import {
   ChangeDetectionStrategy,
   Component,
   input,
-  output,
+  linkedSignal,
   OnInit,
+  output,
+  signal,
 } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { FormsModule } from "@angular/forms";
+import { form, FormField } from "@angular/forms/signals";
 import { Gallery, ImageCategory } from "@shared/models";
+import { linkServerConvert } from "@shared/lib";
+import { galleryFormData, galleryValidationSchema, resetGalleryData } from "@features/gallery";
 
 @Component({
   selector: "app-gallery-form",
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormField],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./gallery-form.component.html",
 })
@@ -20,43 +24,69 @@ export class GalleryFormComponent implements OnInit {
   image = input.required<Gallery>();
   filters = input.required<ImageCategory[]>();
   
-  save = output<{ image: Gallery; file: File | null }>();
+  save = output<{ data: any; file: File | null }>();
   cancel = output<void>();
 
-  currentImage!: Gallery;
+  galleryModel = signal<Gallery>(galleryFormData);
+  galleryForm = form<Gallery>(this.galleryModel, galleryValidationSchema);
+  selectedFile = signal<File | null>(null);
+  previewImage = linkedSignal(() => {
+    const img = this.image()?.imageUrl;
+    return img ? linkServerConvert(img) : null;
+  });
+  isEditMode = signal(false);
 
-  ngOnInit() {
-    this.currentImage = { ...this.image() };
+  ngOnInit(): void {
+    this.initForm();
   }
 
-  selectedFile: File | null = null;
+  initForm() {
+    if (this.image() && this.image().id) {
+      this.isEditMode.set(true);
+      this.previewImage.set(linkServerConvert(this.image().imageUrl));
+      this.galleryModel.set(this.image());
+    } else {
+      this.isEditMode.set(false);
+      this.galleryModel.set(galleryFormData);
+    }
+  }
+
+  resetForm() {
+    this.isEditMode.set(false);
+    this.selectedFile.set(null);
+    this.previewImage.set(null);
+    this.galleryModel.set(resetGalleryData);
+  }
 
   onFileSelected(event: Event) {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files[0]) {
       const file = input.files[0];
-      this.selectedFile = file;
-      if (!this.currentImage.id) {
-        this.currentImage.filename = file.name;
-      }
+      this.selectedFile.set(file);
+
       const reader = new FileReader();
       reader.onload = (e: any) => {
-        this.currentImage.imageUrl = e.target.result;
+        this.previewImage.set(e.target.result);
       };
       reader.readAsDataURL(file);
     }
   }
 
-  saveImage() {
-    this.save.emit({ image: this.currentImage, file: this.selectedFile });
+  onSubmit() {
+    if (this.galleryForm().valid()) {
+      this.save.emit({
+        data: this.galleryForm().value(),
+        file: this.selectedFile(),
+      });
+    }
   }
 
-  closeModal() {
+  onCancel() {
     this.cancel.emit();
   }
 
   formatCategory(category: string): string {
-    if (!category) return "";
+    if (!category || category === 'all') return "";
     return category
       .split('_')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
