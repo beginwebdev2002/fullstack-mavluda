@@ -1,0 +1,16 @@
+/* List View Styles */
+.reveal-item {
+  animation: reveal 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

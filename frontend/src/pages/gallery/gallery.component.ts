@@ -12,12 +12,14 @@ import { GalleryService, GALLERY_CATEGORIES, GalleryCategories } from "@entities
 import { Gallery, ImageCategory } from "@shared/models";
 import { GalleryFormComponent } from "./ui/gallery-form/gallery-form.component";
 import { GalleryCardComponent } from "./ui/gallery-card/gallery-card.component";
-import { convertFormData } from "@shared/lib/object";
+import { ImagePopupComponent, ListViewComponent, ListViewColumn } from "@shared/ui";
+import { convertFormData, excludeFormDataProperties } from "@shared/lib/object";
+import { linkServerConvert } from "@shared/lib";
 
 @Component({
   selector: "app-gallery",
   standalone: true,
-  imports: [CommonModule, FormsModule, GalleryFormComponent, GalleryCardComponent],
+  imports: [CommonModule, FormsModule, GalleryFormComponent, GalleryCardComponent, ImagePopupComponent, ListViewComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./gallery.component.html",
   styleUrls: ["./gallery.component.scss"],
@@ -29,12 +31,19 @@ export class GalleryComponent implements OnInit {
   isModalOpen = signal(false);
   viewMode = signal<"grid" | "list">("grid");
   selectedImage = signal<string | null>(null);
-  isImageLoading = signal(false);
 
   images = this.galleryService.images;
 
   filters = signal<ImageCategory[]>(GALLERY_CATEGORIES);
   activeFilter = signal<ImageCategory>(GalleryCategories.ALL);
+
+  columns = signal<ListViewColumn[]>([
+    { key: 'title', label: 'File Info', type: 'text' },
+    { key: 'category', label: 'Category', type: 'badge' },
+    { key: 'createdAt', label: 'Date', type: 'date' },
+    { key: 'status', label: 'Status', type: 'status' },
+    { key: 'actions', label: 'Actions', type: 'actions' }
+  ]);
 
   filteredImages = computed(() => {
     const filter = this.activeFilter();
@@ -79,7 +88,7 @@ export class GalleryComponent implements OnInit {
     const { data: image, file } = event;
     const args: any[] = [{ ...image }];
     if (file) args.push(file);
-    const formData = convertFormData(...args);
+    const formData = excludeFormDataProperties(convertFormData(...args), ["id", "createdAt", "updatedAt"]);
 
     if (!image.id) {
       // New image
@@ -103,17 +112,11 @@ export class GalleryComponent implements OnInit {
   }
 
   openImageModal(imageUrl: string) {
-    this.selectedImage.set(imageUrl);
-    this.isImageLoading.set(true);
+    this.selectedImage.set(linkServerConvert(imageUrl));
   }
 
   closeImageModal() {
     this.selectedImage.set(null);
-    this.isImageLoading.set(false);
-  }
-
-  onImageLoad() {
-    this.isImageLoading.set(false);
   }
 
   onDragOver(event: DragEvent) {

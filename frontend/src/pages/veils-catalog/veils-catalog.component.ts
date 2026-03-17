@@ -1,6 +1,7 @@
 
 import { Component, ChangeDetectionStrategy, signal, computed } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { ImagePopupComponent } from "@shared/ui";
 
 interface Gown {
   id: number;
@@ -15,7 +16,7 @@ interface Gown {
 @Component({
   selector: 'app-veils-catalog',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule, NgOptimizedImage, ImagePopupComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './veils-catalog.component.html',
   styleUrls: ['./veils-catalog.component.scss']
@@ -81,7 +82,6 @@ export class VeilsCatalogComponent {
   
   // Full Screen Image Modal State
   selectedImage = signal<string | null>(null);
-  isImageLoading = signal(false);
 
   setFilter(filter: string) {
     this.activeFilter.set(filter);
@@ -89,15 +89,9 @@ export class VeilsCatalogComponent {
 
   openImageModal(imageUrl: string) {
     this.selectedImage.set(imageUrl);
-    this.isImageLoading.set(true);
   }
 
   closeImageModal() {
     this.selectedImage.set(null);
-    this.isImageLoading.set(false);
-  }
-
-  onImageLoad() {
-    this.isImageLoading.set(false);
   }
 }

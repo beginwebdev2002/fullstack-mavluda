@@ -12,6 +12,7 @@ import { TreatmentFormComponent } from "./components/treatment-form/treatment-fo
 import { TreatmentCardComponent } from "./components/treatment-card/treatment-card.component";
 import { TreatmentItem } from "@features/treatments";
 import { TreatmentsService } from "@entities/treatments";
+import { ListViewComponent, ListViewColumn } from "@shared/ui";
 
 @Component({
   selector: "app-treatments-page",
@@ -21,6 +22,7 @@ import { TreatmentsService } from "@entities/treatments";
     FormsModule,
     TreatmentFormComponent,
     TreatmentCardComponent,
+    ListViewComponent,
   ],
   providers: [TreatmentsService],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -40,6 +42,15 @@ export class TreatmentsPageComponent implements OnInit {
   ];
   activeFilter = signal("All");
   viewMode = signal<"list" | "card">("list");
+
+  columns = signal<ListViewColumn[]>([
+    { key: 'name', label: 'Service Name', type: 'text' },
+    { key: 'category', label: 'Category', type: 'badge' },
+    { key: 'duration', label: 'Duration', type: 'text' },
+    { key: 'price', label: 'Price', type: 'custom' },
+    { key: 'active', label: 'Status', type: 'status' },
+    { key: 'actions', label: 'Actions', type: 'actions' }
+  ]);
 
   filteredTreatments = computed(() => {
     const filter = this.activeFilter();

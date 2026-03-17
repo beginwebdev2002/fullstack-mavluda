@@ -109,179 +109,19 @@
 
   <!-- Views -->
   @if (viewMode() === "list") {
-    <div
-      class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden animate-page-enter"
-    >
-      <div class="overflow-x-auto">
-        <table class="min-w-full divide-y divide-gray-100">
-          <thead class="bg-gray-50">
-            <tr></tr>
-            <tr>
-              <th
-                scope="col"
-                class="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider"
-                i18n="@@colServiceName"
-              >
-                Service Name
-              </th>
-              <th
-                scope="col"
-                class="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider"
-                i18n="@@colCategory"
-              >
-                Category
-              </th>
-              <th
-                scope="col"
-                class="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider"
-                i18n="@@colDuration"
-              >
-                Duration
-              </th>
-              <th
-                scope="col"
-                class="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider"
-                i18n="@@colPrice"
-              >
-                Price
-              </th>
-              <th
-                scope="col"
-                class="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider"
-                i18n="@@colStatus"
-              >
-                Status
-              </th>
-              <th scope="col" class="relative px-6 py-4">
-                <span class="sr-only" i18n="@@colActions">Actions</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="bg-white divide-y divide-gray-100">
-            @for (
-              treatment of filteredTreatments();
-              track treatment.id;
-              let i = $index
-            ) {
-              <tr
-                class="hover:bg-gold-50/30 transition-colors duration-200 reveal-item"
-                [style.animation-delay.ms]="i * 50"
-              >
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <div class="text-sm font-medium text-gray-900">
-                    {{ treatment.name }}
-                  </div>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <span
-                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-700"
-                  >
-                    {{ treatment.category }}
-                  </span>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {{ treatment.duration }}
-                </td>
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-sm font-serif font-medium text-gray-900"
-                >
-                  {{ treatment.price }} TJS
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <span
-                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
-                    [class]="
-                      treatment.active
-                        ? 'bg-green-100 text-green-800'
-                        : 'bg-red-100 text-red-800'
-                    "
-                  >
-                    @if (treatment.active) {
-                      <ng-container i18n="@@statusActive">Active</ng-container>
-                    } @else {
-                      <ng-container i18n="@@statusInactive"
-                        >Inactive</ng-container
-                      >
-                    }
-                  </span>
-                </td>
-                <td
-                  class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                >
-                  <div class="flex items-center justify-end space-x-3">
-                    <button
-                      (click)="openEditModal(treatment)"
-                      class="text-gray-400 hover:text-gold transition-colors"
-                      title="Edit"
-                      i18n-title="@@servicesEditAction"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path
-                          d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
-                        ></path>
-                        <path
-                          d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
-                        ></path>
-                      </svg>
-                    </button>
-                    <button
-                      (click)="deleteTreatment(treatment.id)"
-                      class="text-gray-400 hover:text-red-500 transition-colors"
-                      title="Delete"
-                      i18n-title="@@servicesDeleteAction"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <polyline points="3 6 5 6 21 6"></polyline>
-                        <path
-                          d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2-2v2"
-                        ></path>
-                        <line x1="10" y1="11" x2="10" y2="17"></line>
-                        <line x1="14" y1="11" x2="14" y2="17"></line>
-                      </svg>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            }
-            @if (filteredTreatments().length === 0) {
-              <tr>
-                <td colspan="6" class="px-6 py-12 text-center text-gray-500">
-                  <p class="mb-2" i18n="@@servicesNoServices">
-                    No services found.
-                  </p>
-                  <button
-                    (click)="openAddModal()"
-                    class="text-gold hover:underline text-sm"
-                    i18n="@@servicesAddNew"
-                  >
-                    Add a new service
-                  </button>
-                </td>
-              </tr>
-            }
-          </tbody>
-        </table>
-      </div>
+    <div class="animate-page-enter">
+      <app-list-view
+        [items]="filteredTreatments()"
+        [columns]="columns()"
+        (edit)="openEditModal($event)"
+        (delete)="deleteTreatment($event)"
+      >
+        <ng-template #customCell let-item>
+          <div class="text-sm font-serif font-medium text-gray-900">
+            {{ item.price }} TJS
+          </div>
+        </ng-template>
+      </app-list-view>
     </div>
   } @else {
     <!-- Card View -->

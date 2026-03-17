@@ -15,28 +15,82 @@
         Exquisite wedding dresses and their characteristics.
       </p>
     </div>
-    <button
-      (click)="openAddModal()"
-      class="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-medium"
-    >
-      <span class="material-symbols-outlined text-xl">add</span>
-      <span i18n="@@veilAdminAddBtn">Add New Gown</span>
-    </button>
+    <div class="flex items-center gap-4">
+      <!-- View Switcher -->
+      <div class="flex bg-white rounded-lg p-1 border border-gray-200">
+        <button 
+          (click)="viewMode.set('grid')"
+          class="p-2 rounded transition-colors"
+          [class]="viewMode() === 'grid' 
+            ? 'bg-gray-100 text-primary' 
+            : 'hover:bg-gray-100 text-gray-400'"
+          title="Grid View"
+        >
+          <span class="material-symbols-outlined">grid_view</span>
+        </button>
+        <button 
+          (click)="viewMode.set('list')"
+          class="p-2 rounded transition-colors"
+          [class]="viewMode() === 'list' 
+            ? 'bg-gray-100 text-primary' 
+            : 'hover:bg-gray-100 text-gray-400'"
+          title="List View"
+        >
+          <span class="material-symbols-outlined">list</span>
+        </button>
+      </div>
+
+      <button
+        (click)="openAddModal()"
+        class="flex items-center px-5 py-2.5 bg-primary hover:bg-primary-hover text-white rounded-lg shadow-gold hover:shadow-gold-lg transition-all font-medium"
+        aria-label="Add New Gown"
+        i18n-aria-label="@@veilAdminAddBtn"
+      >
+        <span class="material-symbols-outlined">add</span>
+      </button>
+    </div>
   </div>
 
-  <!-- Veil Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    @for (veil of veils(); track veil.id; let i = $index) {
-      <app-veil-card
-        [veil]="veil"
-        [index]="i"
+  <!-- Veil Content -->
+  @if (viewMode() === 'grid') {
+    <!-- Grid View -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (veil of veils(); track veil.id; let i = $index) {
+        <app-veil-card
+          [veil]="veil"
+          [index]="i"
+          (edit)="openEditModal($event)"
+          (onViewImage)="openImageModal($event)"
+          (onDeleteCard)="onDeleteCard(veil.id)"
+        >
+        </app-veil-card>
+      }
+    </div>
+  } @else {
+    <!-- List View -->
+    <div class="animate-page-enter">
+      <app-list-view
+        [items]="veils()"
+        [columns]="columns()"
         (edit)="openEditModal($event)"
-        (onViewImage)="openImageModal($event)"
-        (onDeleteCard)="onDeleteCard(veil.id)"
+        (delete)="onDeleteCard($event.toString())"
+        (view)="openImageModal($event)"
       >
-      </app-veil-card>
-    }
-  </div>
+        <ng-template #customCell let-item let-column="column">
+          @if (column.key === 'image') {
+            <div 
+              class="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-sm cursor-pointer hover:scale-105 transition-transform"
+              (click)="openImageModal(item.image)"
+            >
+              <img [src]="getSafeImageUrl(item.image)" [alt]="item.name" class="w-full h-full object-cover">
+            </div>
+          } @else if (column.key === 'price') {
+            <span class="font-bold text-gray-900">{{ item.price }} TJS</span>
+          }
+        </ng-template>
+      </app-list-view>
+    </div>
+  }
 </div>
 
 <!-- Edit Modal -->
@@ -50,67 +104,9 @@
 }
 
 <!-- Fullscreen Image Modal -->
-@if (selectedImage()) {
-  <div
-    class="fixed inset-0 z-[150] flex items-center justify-center"
-    role="dialog"
-    aria-modal="true"
-  >
-    <!-- Backdrop -->
-    <div
-      class="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity animate-fade-in"
-      (click)="closeImageModal()"
-    ></div>
-
-    <!-- Close Button -->
-    <button
-      (click)="closeImageModal()"
-      class="fixed top-6 right-6 z-[160] text-white/50 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full cursor-pointer"
-    >
-      <span class="sr-only">Close</span>
-      <span class="material-symbols-outlined text-4xl">close</span>
-    </button>
-
-    <!-- Modal Content -->
-    <div
-      class="relative z-[155] w-full h-full p-4 md:p-12 flex flex-col items-center justify-center pointer-events-none"
-    >
-      <div
-        class="pointer-events-auto relative rounded-lg overflow-hidden shadow-2xl bg-transparent animate-slide-up flex items-center justify-center min-w-[300px] min-h-[300px]"
-      >
-        <!-- Loading State -->
-        @if (isImageLoading()) {
-          <div
-            class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm"
-          >
-            <div
-              class="w-12 h-12 border-4 border-white/20 border-t-gold rounded-full animate-spin mb-3"
-            ></div>
-            <p
-              class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-medium animate-pulse"
-            >
-              Loading Asset
-            </p>
-          </div>
-        }
-
-        <img
-          [src]="selectedImage()"
-          (load)="onImageLoad()"
-          alt="Full screen view"
-          class="max-w-full max-h-[85vh] object-contain shadow-2xl transition-all duration-700 ease-out"
-          [class.opacity-0]="isImageLoading()"
-          [class.scale-95]="isImageLoading()"
-          [class.opacity-100]="!isImageLoading()"
-          [class.scale-100]="!isImageLoading()"
-        />
-      </div>
-
-      <p
-        class="text-white/40 text-xs mt-6 font-medium tracking-[0.3em] uppercase animate-fade-in text-center"
-      >
-        Mavluda Beauty • Gown Collection
-      </p>
-    </div>
-  </div>
-}
+<app-image-popup
+  [imageUrl]="selectedImage()"
+  title="Mavluda Beauty • Wedding Collection"
+  loadingText="Loading Asset"
+  (close)="closeImageModal()"
+></app-image-popup>

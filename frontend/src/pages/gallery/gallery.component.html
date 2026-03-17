@@ -61,53 +61,14 @@
     </div>
   } @else {
     <!-- List View -->
-    <div class="bg-white rounded-xl shadow-card overflow-hidden border border-gray-100 animate-page-enter">
-      <div class="overflow-x-auto">
-          <table class="min-w-full divide-y divide-gray-100">
-              <thead class="bg-gray-50">
-                  <tr>
-                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" i18n="@@galleryTableImage">Image</th>
-                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" i18n="@@galleryTableInfo">File Info</th>
-                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" i18n="@@galleryTableCategory">Category</th>
-                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" i18n="@@galleryTableDate">Date</th>
-                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" i18n="@@galleryTableStatus">Status</th>
-                      <th scope="col" class="relative px-6 py-3">
-                          <span class="sr-only" i18n="@@galleryTableActions">Actions</span>
-                      </th>
-                  </tr>
-              </thead>
-              <tbody class="bg-white divide-y divide-gray-100">
-                  @for(image of filteredImages(); track image.id; let i = $index) {
-                      <tr class="hover:bg-gray-50/50 transition-colors duration-200 reveal-item" [style.animation-delay.ms]="i * 50">
-                          <td class="px-6 py-4 whitespace-nowrap">
-                              <img [src]="image.imageUrl" [alt]="image.alt" width="64" height="64" class="w-16 h-16 object-cover rounded-lg shadow-sm"/>
-                          </td>
-                          <td class="px-6 py-4 whitespace-nowrap">
-                              <div class="text-sm font-medium text-gray-900">{{ image.title }}</div>
-                          </td>
-                          <td class="px-6 py-4 whitespace-nowrap">
-                              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                                  {{ image.category }}
-                              </span>
-                          </td>
-                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                              {{ image.createdAt | date:'mediumDate' }}
-                          </td>
-                          <td class="px-6 py-4 whitespace-nowrap">
-                              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
-                                  [class]="image.status === 'published' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'">
-                                  {{ image.status }}
-                              </span>
-                          </td>
-                          <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium space-x-4">
-                              <button (click)="openModal(image)" class="text-primary hover:text-primary-hover transition-colors" i18n="@@galleryActionEdit">Edit</button>
-                              <button (click)="deleteImage(image.id)" class="text-red-500 hover:text-red-700 transition-colors" i18n="@@galleryActionDelete">Delete</button>
-                          </td>
-                      </tr>
-                  }
-              </tbody>
-          </table>
-      </div>
+    <div class="animate-page-enter">
+      <app-list-view 
+        [items]="filteredImages()" 
+        [columns]="columns()"
+        (edit)="openModal($event)"
+        (delete)="deleteImage($event.toString())"
+        (view)="openImageModal($event)"
+      ></app-list-view>
     </div>
   }
 </div>
@@ -123,41 +84,7 @@
 }
 
 <!-- Image Modal -->
-@if (selectedImage()) {
-  <div class="fixed inset-0 z-[100] flex items-center justify-center" role="dialog" aria-modal="true">
-      <!-- Backdrop -->
-      <div class="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity animate-fade-in" (click)="closeImageModal()"></div>
-      
-      <!-- Close Button -->
-      <button (click)="closeImageModal()" class="fixed top-6 right-6 z-[110] text-white/50 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full cursor-pointer">
-          <span class="sr-only">Close</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-
-      <!-- Modal Content -->
-      <div class="relative z-[105] w-full h-full p-4 md:p-12 flex flex-col items-center justify-center pointer-events-none">
-          <div class="pointer-events-auto relative rounded-lg overflow-hidden shadow-2xl bg-transparent animate-slide-up flex items-center justify-center min-w-[300px] min-h-[300px]">
-             
-             <!-- Loading State -->
-             @if (isImageLoading()) {
-                <div class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm">
-                    <div class="w-12 h-12 border-4 border-white/20 border-t-gold rounded-full animate-spin mb-3"></div>
-                    <p class="text-white/60 text-[10px] uppercase tracking-[0.2em] font-medium animate-pulse" i18n="@@galleryLoading">Loading Asset</p>
-                </div>
-             }
-
-             <img [src]="selectedImage()" 
-                  (load)="onImageLoad()"
-                  alt="Gallery image full screen view" 
-                  class="max-w-full max-h-[85vh] object-contain shadow-2xl transition-all duration-700 ease-out"
-                  [class.opacity-0]="isImageLoading()"
-                  [class.scale-95]="isImageLoading()"
-                  [class.opacity-100]="!isImageLoading()"
-                  [class.scale-100]="!isImageLoading()"
-             >
-          </div>
-          
-          <p class="text-white/40 text-xs mt-6 font-medium tracking-[0.3em] uppercase animate-fade-in text-center" i18n="@@galleryFooter">Mavluda Beauty • Portfolio</p>
-      </div>
-  </div>
-}
+<app-image-popup
+  [imageUrl]="selectedImage()"
+  (close)="closeImageModal()"
+></app-image-popup>

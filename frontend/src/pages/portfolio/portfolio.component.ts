@@ -25,8 +25,8 @@ export class PortfolioPageComponent implements OnInit {
   filters: (ImageCategory | "All Works")[] = [
     "All Works",
     "visage",
-    "medical_spa",
-    "bridal_veils",
+    "medical spa",
+    "bridal veils",
     "interior",
     "product",
   ];
@@ -35,8 +35,8 @@ export class PortfolioPageComponent implements OnInit {
   categoryFilters: string[] = [
     "All Works",
     "visage",
-    "medical_spa",
-    "bridal_veils",
+    "medical spa",
+    "bridal veils",
     "interior",
     "product",
   ];

@@ -6,17 +6,20 @@ import {
   OnInit,
   signal,
 } from "@angular/core";
+import { environment } from "@environments/environment";
 import { VeilService } from "@entities/veil";
 import { Veil, veilFormData } from "@features/veil";
 import { convertFormData } from "@shared/lib";
 import { VeilCardComponent } from "./ui/veil-card/veil-card.component";
 import { VeilFormComponent } from "./ui/veil-form/veil-form.component";
+import { ImagePopupComponent, ListViewComponent, ListViewColumn } from "@shared/ui";
 import { tap } from "rxjs";
+import { linkServerConvert } from "@shared/lib";
 
 @Component({
   selector: "app-veil-page",
   standalone: true,
-  imports: [CommonModule, VeilCardComponent, VeilFormComponent],
+  imports: [CommonModule, VeilCardComponent, VeilFormComponent, ImagePopupComponent, ListViewComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./veil.component.html",
   styleUrls: ["./veil.component.scss"],
@@ -25,6 +28,7 @@ import { tap } from "rxjs";
 export class VeilPageComponent implements OnInit {
   private veilService = inject(VeilService);
   private formData = signal(new FormData());
+  env = signal(environment);
 
   veils = this.veilService.veils;
 
@@ -32,9 +36,21 @@ export class VeilPageComponent implements OnInit {
   isVeilFormOpen = signal(false);
   editingVeil = signal<Veil | null>(null);
 
+  // View Mode
+  viewMode = signal<"grid" | "list">("grid");
+
+  columns = signal<ListViewColumn[]>([
+    { key: "image", label: "Gown", type: "custom" },
+    { key: "name", label: "Name", type: "text" },
+    { key: "sku", label: "SKU", type: "text" },
+    { key: "price", label: "Price", type: "custom" },
+    { key: "stock", label: "Stock", type: "badge" },
+    { key: "category", label: "Category", type: "badge" },
+    { key: "actions", label: "Actions", type: "actions" },
+  ]);
+
   // Image Preview State
   selectedImage = signal<string | null>(null);
-  isImageLoading = signal(false);
 
   ngOnInit() {
     this.veilService.getVeils().subscribe();
@@ -71,21 +87,25 @@ export class VeilPageComponent implements OnInit {
   // Image Modal Methods
   openImageModal(imageUrl: string) {
     if (!imageUrl) return;
-    this.selectedImage.set(imageUrl);
-    this.isImageLoading.set(true);
+    const isAbsolute = imageUrl.startsWith("http") || imageUrl.startsWith("blob") || imageUrl.includes(this.env().apiUrl);
+    this.selectedImage.set(isAbsolute ? imageUrl : linkServerConvert(imageUrl));
   }
 
   closeImageModal() {
     this.selectedImage.set(null);
-    this.isImageLoading.set(false);
-  }
-
-  onImageLoad() {
-    this.isImageLoading.set(false);
   }
 
   onDeleteCard(id: string) {
-    this.deleteCard(id);
+    if (confirm("Are you sure you want to delete this gown?")) {
+      this.deleteCard(id);
+    }
+  }
+
+  // Helper for image conversion in template
+  getSafeImageUrl(path: string | undefined) {
+    if (!path) return "assets/placeholder-veil.png";
+    const isAbsolute = path.startsWith("http") || path.startsWith("blob") || path.includes(this.env().apiUrl);
+    return isAbsolute ? path : linkServerConvert(path);
   }
 
   private updateFormData(data: Veil, file: File | null) {
