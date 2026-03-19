@@ -6,6 +6,7 @@ import {
   IsOptional,
   ValidateNested,
   IsObject,
+  IsArray,
 } from 'class-validator';
 import {
   IAdminLocation,
@@ -52,4 +53,34 @@ export class CreateAdminSettingsDto {
   @Type(() => OwnerInfoDto)
   @IsNotEmpty()
   ownerInfo: OwnerInfoDto;
+
+  @IsArray()
+  @IsString({ each: true })
+  @IsOptional()
+  galleryCategories: string[];
+
+  @IsArray()
+  @IsString({ each: true })
+  @IsOptional()
+  treatmentCategories: string[];
+
+  @IsArray()
+  @IsString({ each: true })
+  @IsOptional()
+  veilSilhouettes: string[];
+
+  @IsArray()
+  @IsString({ each: true })
+  @IsOptional()
+  veilFabrics: string[];
+
+  @IsArray()
+  @IsString({ each: true })
+  @IsOptional()
+  veilTrainLengths: string[];
+
+  @IsArray()
+  @IsString({ each: true })
+  @IsOptional()
+  veilNecklines: string[];
 }

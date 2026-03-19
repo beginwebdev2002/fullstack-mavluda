@@ -15,4 +15,10 @@ export interface AdminSettings {
   socialLinks: Record<string, string>;
   workHours: Record<string, string>;
   ownerInfo: OwnerInfo;
+  galleryCategories: string[];
+  treatmentCategories: string[];
+  veilSilhouettes: string[];
+  veilFabrics: string[];
+  veilTrainLengths: string[];
+  veilNecklines: string[];
 }

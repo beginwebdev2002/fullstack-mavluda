@@ -15,4 +15,10 @@ export interface IAdminSettings {
   socialLinks: Record<string, string>;
   workHours: Record<string, string>;
   ownerInfo: IOwnerInfo;
+  galleryCategories: string[];
+  treatmentCategories: string[];
+  veilSilhouettes: string[];
+  veilFabrics: string[];
+  veilTrainLengths: string[];
+  veilNecklines: string[];
 }

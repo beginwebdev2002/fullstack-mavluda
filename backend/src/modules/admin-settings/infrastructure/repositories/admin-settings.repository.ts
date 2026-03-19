@@ -54,6 +54,12 @@ export class AdminSettingsRepository {
       socialLinks,
       workHours,
       doc.ownerInfo,
+      doc.galleryCategories || [],
+      doc.treatmentCategories || [],
+      doc.veilSilhouettes || [],
+      doc.veilFabrics || [],
+      doc.veilTrainLengths || [],
+      doc.veilNecklines || [],
     );
   }
 }

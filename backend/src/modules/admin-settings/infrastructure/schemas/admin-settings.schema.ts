@@ -26,6 +26,24 @@ export class AdminSettingsSchemaEntity {
     name: string;
     phoneNumber: string;
   };
+
+  @Prop({ type: [String], default: [] })
+  galleryCategories: string[];
+
+  @Prop({ type: [String], default: [] })
+  treatmentCategories: string[];
+
+  @Prop({ type: [String], default: [] })
+  veilSilhouettes: string[];
+
+  @Prop({ type: [String], default: [] })
+  veilFabrics: string[];
+
+  @Prop({ type: [String], default: [] })
+  veilTrainLengths: string[];
+
+  @Prop({ type: [String], default: [] })
+  veilNecklines: string[];
 }
 
 export const AdminSettingsSchema = SchemaFactory.createForClass(

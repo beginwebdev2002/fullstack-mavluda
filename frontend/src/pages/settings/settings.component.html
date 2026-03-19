@@ -20,6 +20,7 @@
                 @case('Social Matrix') { <ng-container i18n="@@settingsTabSocial">Social Matrix</ng-container> }
                 @case('General Info') { <ng-container i18n="@@settingsTabGeneral">General Info</ng-container> }
                 @case('Additional Links') { <ng-container i18n="@@settingsTabLinks">Additional Links</ng-container> }
+                @case('SELECTS') { <ng-container i18n="@@settingsTabSelects">SELECTS</ng-container> }
                 @default { {{ tab }} }
             }
         </button>
@@ -211,6 +212,120 @@
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+    }
+
+    <!-- SELECTS Section -->
+    @if (activeTab() === 'SELECTS') {
+      <section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
+        <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+          <div class="flex items-center">
+            <span class="material-symbols-outlined text-primary mr-3">list_alt</span>
+            <h4 class="font-serif text-xl font-semibold text-gray-900" i18n="@@settingsSectionSelects">Selection Lists</h4>
+          </div>
+          <button (click)="saveSelectionLists()" class="flex items-center px-4 py-2 bg-primary hover:bg-primary-hover text-black rounded-lg text-sm font-medium transition-all shadow-md btn-primary-shimmer active:scale-[0.98]" i18n="@@settingsBtnSave">
+            Save Lists
+          </button>
+        </div>
+        <div class="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          
+          <!-- Gallery Categories -->
+          <div class="space-y-4">
+            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+              <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelGalleryCats">Gallery Categories</label>
+              <button (click)="addItem('gallery')" class="text-primary hover:text-primary-hover"><span class="material-symbols-outlined">add_circle</span></button>
+            </div>
+            <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+              @for(item of galleryCategories(); track $index) {
+                <div class="flex items-center space-x-2 group">
+                  <input #input (blur)="updateItem('gallery', $index, input.value)" [value]="item" class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:bg-white transition-all"/>
+                  <button (click)="removeItem('gallery', $index)" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
+                </div>
+              }
+            </div>
+          </div>
+
+          <!-- Treatment Categories -->
+          <div class="space-y-4">
+            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+              <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelTreatmentCats">Treatment Categories</label>
+              <button (click)="addItem('treatment')" class="text-primary hover:text-primary-hover"><span class="material-symbols-outlined">add_circle</span></button>
+            </div>
+            <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+              @for(item of treatmentCategories(); track $index) {
+                <div class="flex items-center space-x-2 group">
+                  <input #input (blur)="updateItem('treatment', $index, input.value)" [value]="item" class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:bg-white transition-all"/>
+                  <button (click)="removeItem('treatment', $index)" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
+                </div>
+              }
+            </div>
+          </div>
+
+          <!-- Veil Silhouettes -->
+          <div class="space-y-4">
+            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+              <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelSilhouettes">Silhouettes</label>
+              <button (click)="addItem('silhouette')" class="text-primary hover:text-primary-hover"><span class="material-symbols-outlined">add_circle</span></button>
+            </div>
+            <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+              @for(item of veilSilhouettes(); track $index) {
+                <div class="flex items-center space-x-2 group">
+                  <input #input (blur)="updateItem('silhouette', $index, input.value)" [value]="item" class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:bg-white transition-all"/>
+                  <button (click)="removeItem('silhouette', $index)" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
+                </div>
+              }
+            </div>
+          </div>
+
+          <!-- Veil Fabrics -->
+          <div class="space-y-4">
+            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+              <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelFabrics">Fabrics</label>
+              <button (click)="addItem('fabric')" class="text-primary hover:text-primary-hover"><span class="material-symbols-outlined">add_circle</span></button>
+            </div>
+            <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+              @for(item of veilFabrics(); track $index) {
+                <div class="flex items-center space-x-2 group">
+                  <input #input (blur)="updateItem('fabric', $index, input.value)" [value]="item" class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:bg-white transition-all"/>
+                  <button (click)="removeItem('fabric', $index)" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
+                </div>
+              }
+            </div>
+          </div>
+
+          <!-- Veil Train Lengths -->
+          <div class="space-y-4">
+            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+              <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelTrains">Train Lengths</label>
+              <button (click)="addItem('train')" class="text-primary hover:text-primary-hover"><span class="material-symbols-outlined">add_circle</span></button>
+            </div>
+            <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+              @for(item of veilTrainLengths(); track $index) {
+                <div class="flex items-center space-x-2 group">
+                  <input #input (blur)="updateItem('train', $index, input.value)" [value]="item" class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:bg-white transition-all"/>
+                  <button (click)="removeItem('train', $index)" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
+                </div>
+              }
+            </div>
+          </div>
+
+          <!-- Veil Necklines -->
+          <div class="space-y-4">
+            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+              <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelNecklines">Necklines</label>
+              <button (click)="addItem('neckline')" class="text-primary hover:text-primary-hover"><span class="material-symbols-outlined">add_circle</span></button>
+            </div>
+            <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+              @for(item of veilNecklines(); track $index) {
+                <div class="flex items-center space-x-2 group">
+                  <input #input (blur)="updateItem('neckline', $index, input.value)" [value]="item" class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:bg-white transition-all"/>
+                  <button (click)="removeItem('neckline', $index)" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
+                </div>
+              }
+            </div>
+          </div>
+
         </div>
       </section>
     }
