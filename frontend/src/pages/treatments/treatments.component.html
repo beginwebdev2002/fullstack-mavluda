@@ -115,6 +115,7 @@
         [columns]="columns()"
         (edit)="openEditModal($event)"
         (delete)="deleteTreatment($event)"
+        (view)="openImageModal($event)"
       >
         <ng-template #customCell let-item>
           <div class="text-sm font-serif font-medium text-gray-900">
@@ -133,12 +134,14 @@
         track treatment.id;
         let i = $index
       ) {
-        <app-treatment-card
-          [treatment]="treatment"
+        <app-card-view
+          [data]="treatment"
+          [config]="treatmentCardConfig"
           [index]="i"
           (edit)="openEditModal($event)"
-          (delete)="deleteTreatment($event)"
-        ></app-treatment-card>
+          (delete)="deleteTreatment($event.toString())"
+          (viewImage)="openImageModal($event)"
+        ></app-card-view>
       }
     </div>
   }
@@ -152,3 +155,10 @@
     (cancel)="closeEditModal()"
   ></app-treatment-form>
 }
+
+<!-- Fullscreen Image Modal -->
+<app-image-popup
+  [imageUrl]="selectedImage()"
+  title="Mavluda Beauty • Treatments"
+  (close)="closeImageModal()"
+></app-image-popup>

@@ -11,21 +11,22 @@ import { FormsModule } from "@angular/forms";
 import { GalleryService, GALLERY_CATEGORIES, GalleryCategories } from "@entities/gallery";
 import { Gallery, ImageCategory } from "@shared/models";
 import { GalleryFormComponent } from "./ui/gallery-form/gallery-form.component";
-import { GalleryCardComponent } from "./ui/gallery-card/gallery-card.component";
-import { ImagePopupComponent, ListViewComponent, ListViewColumn } from "@shared/ui";
+import { ImagePopupComponent, ListViewComponent, ListViewColumn, CardViewComponent, CardViewConfig } from "@shared/ui";
 import { convertFormData, excludeFormDataProperties } from "@shared/lib/object";
 import { linkServerConvert } from "@shared/lib";
+import { environment } from "@environments/environment";
 
 @Component({
   selector: "app-gallery",
   standalone: true,
-  imports: [CommonModule, FormsModule, GalleryFormComponent, GalleryCardComponent, ImagePopupComponent, ListViewComponent],
+  imports: [CommonModule, FormsModule, GalleryFormComponent, CardViewComponent, ImagePopupComponent, ListViewComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./gallery.component.html",
   styleUrls: ["./gallery.component.scss"],
 })
 export class GalleryComponent implements OnInit {
   private galleryService = inject(GalleryService);
+  env = signal(environment);
 
   isDragging = signal(false);
   isModalOpen = signal(false);
@@ -44,6 +45,18 @@ export class GalleryComponent implements OnInit {
     { key: 'status', label: 'Status', type: 'status' },
     { key: 'actions', label: 'Actions', type: 'actions' }
   ]);
+
+  galleryCardConfig: CardViewConfig = {
+    imageField: 'imageUrl',
+    titleField: 'title',
+    subtitleField: 'category',
+    topRightField: 'createdAt',
+    topRightType: 'date',
+    details: [
+      { label: 'Status', field: 'status', type: 'status' },
+      { label: 'Created At', field: 'createdAt', type: 'date' }
+    ]
+  };
 
   filteredImages = computed(() => {
     const filter = this.activeFilter();
@@ -112,7 +125,9 @@ export class GalleryComponent implements OnInit {
   }
 
   openImageModal(imageUrl: string) {
-    this.selectedImage.set(linkServerConvert(imageUrl));
+    if (!imageUrl) return;
+    const isAbsolute = imageUrl.startsWith("http") || imageUrl.startsWith("blob") || imageUrl.includes(this.env().apiUrl);
+    this.selectedImage.set(isAbsolute ? imageUrl : linkServerConvert(imageUrl));
   }
 
   closeImageModal() {

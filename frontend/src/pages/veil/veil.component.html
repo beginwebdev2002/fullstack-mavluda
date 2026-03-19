@@ -56,14 +56,15 @@
     <!-- Grid View -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       @for (veil of veils(); track veil.id; let i = $index) {
-        <app-veil-card
-          [veil]="veil"
+        <app-card-view
+          [data]="veil"
+          [config]="veilCardConfig"
           [index]="i"
           (edit)="openEditModal($event)"
-          (onViewImage)="openImageModal($event)"
-          (onDeleteCard)="onDeleteCard(veil.id)"
+          (viewImage)="openImageModal($event)"
+          (delete)="onDeleteCard($event.toString())"
         >
-        </app-veil-card>
+        </app-card-view>
       }
     </div>
   } @else {

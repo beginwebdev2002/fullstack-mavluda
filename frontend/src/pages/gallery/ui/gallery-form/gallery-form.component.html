@@ -20,11 +20,19 @@
         <div (click)="fileInput.click()" class="aspect-[4/3] w-full rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center relative group cursor-pointer hover:border-primary transition-colors bg-gray-50">
             @if (previewImage()) {
                 <img [src]="previewImage()" alt="Image preview" class="w-full h-full object-cover rounded-lg absolute inset-0">
-                <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg gap-4">
                   <div class="text-center text-white">
                     <span class="material-symbols-outlined text-3xl">edit</span>
                     <p class="text-xs mt-1 font-semibold" i18n="@@galleryChangeImage">Change Image</p>
                   </div>
+                  <button 
+                    type="button"
+                    (click)="$event.stopPropagation(); openImageModal(previewImage())"
+                    class="p-2 bg-white/20 hover:bg-white/40 rounded-full backdrop-blur-md transition-all text-white"
+                    title="Zoom In"
+                  >
+                    <span class="material-symbols-outlined text-2xl">zoom_in</span>
+                  </button>
                 </div>
             } @else {
                 <div class="text-center text-gray-500">
@@ -90,3 +98,10 @@
     </div>
   </div>
 </div>
+
+<!-- Fullscreen Image Modal -->
+<app-image-popup
+  [imageUrl]="selectedImage()"
+  title="Mavluda Beauty • Gallery Preview"
+  (close)="closeImageModal()"
+></app-image-popup>

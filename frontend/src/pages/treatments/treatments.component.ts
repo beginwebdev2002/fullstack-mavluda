@@ -9,10 +9,11 @@ import {
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { TreatmentFormComponent } from "./components/treatment-form/treatment-form.component";
-import { TreatmentCardComponent } from "./components/treatment-card/treatment-card.component";
 import { TreatmentItem } from "@features/treatments";
 import { TreatmentsService } from "@entities/treatments";
-import { ListViewComponent, ListViewColumn } from "@shared/ui";
+import { ListViewComponent, ListViewColumn, CardViewComponent, CardViewConfig, ImagePopupComponent } from "@shared/ui";
+import { environment } from "@environments/environment";
+import { linkServerConvert } from "@shared/lib";
 
 @Component({
   selector: "app-treatments-page",
@@ -21,8 +22,9 @@ import { ListViewComponent, ListViewColumn } from "@shared/ui";
     CommonModule,
     FormsModule,
     TreatmentFormComponent,
-    TreatmentCardComponent,
+    CardViewComponent,
     ListViewComponent,
+    ImagePopupComponent,
   ],
   providers: [TreatmentsService],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -31,6 +33,7 @@ import { ListViewComponent, ListViewColumn } from "@shared/ui";
 })
 export class TreatmentsPageComponent implements OnInit {
   private treatmentsService = inject(TreatmentsService);
+  env = signal(environment);
 
   treatments = this.treatmentsService.treatments;
 
@@ -52,6 +55,17 @@ export class TreatmentsPageComponent implements OnInit {
     { key: 'actions', label: 'Actions', type: 'actions' }
   ]);
 
+  treatmentCardConfig: CardViewConfig = {
+    imageField: 'imageUrl',
+    titleField: 'name',
+    subtitleField: 'category',
+    priceField: 'price',
+    details: [
+      { label: 'Duration', field: 'duration' },
+      { label: 'Status', field: 'active', type: 'status' }
+    ]
+  };
+
   filteredTreatments = computed(() => {
     const filter = this.activeFilter();
     const all = this.treatments();
@@ -69,6 +83,9 @@ export class TreatmentsPageComponent implements OnInit {
     active: true,
     description: "",
   };
+
+  // Image Preview State
+  selectedImage = signal<string | null>(null);
 
   ngOnInit() {
     this.treatmentsService.getTreatments().subscribe();
@@ -122,5 +139,16 @@ export class TreatmentsPageComponent implements OnInit {
         this.closeEditModal();
       });
     }
+  }
+
+  // Image Modal Methods
+  openImageModal(imageUrl: string) {
+    if (!imageUrl) return;
+    const isAbsolute = imageUrl.startsWith("http") || imageUrl.startsWith("blob") || imageUrl.includes(this.env().apiUrl);
+    this.selectedImage.set(isAbsolute ? imageUrl : linkServerConvert(imageUrl));
+  }
+
+  closeImageModal() {
+    this.selectedImage.set(null);
   }
 }

@@ -1,0 +1,135 @@
+<!-- Card Container -->
+<div
+  class="bg-white rounded-[2rem] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(212,175,53,0.12)] transition-all duration-300 group relative flex flex-col h-full border border-gray-100/50 hover:border-primary/20 reveal-item"
+  [style.animation-delay.ms]="index() * 75"
+>
+  <!-- Top Section: Image & Price -->
+  <div class="flex justify-between items-start mb-4 relative z-10">
+    <div
+      class="w-24 h-24 rounded-full overflow-hidden border-[3px] border-white shadow-lg cursor-pointer transform group-hover:scale-105 transition-transform duration-500"
+      (click)="onViewImageAction()"
+    >
+      <img
+        [src]="safeImageUrl()"
+        [alt]="data()[config().titleField]"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    @if ((config().priceField && data()[config().priceField!]) || (config().topRightField && data()[config().topRightField!])) {
+      <div class="flex flex-col items-end">
+        <span class="font-serif text-xl font-bold text-gray-900 tracking-tight">
+          @if (config().topRightField) {
+            @switch (config().topRightType) {
+              @case ('date') {
+                {{ data()[config().topRightField!] | date:'mediumDate' }}
+              }
+              @case ('price') {
+                {{ data()[config().topRightField!] }} {{ config().currency || 'TJS' }}
+              }
+              @default {
+                {{ data()[config().topRightField!] }}
+              }
+            }
+          } @else {
+            {{ data()[config().priceField!] }} {{ config().currency || 'TJS' }}
+          }
+        </span>
+        <!-- Background decorative glow -->
+        <div
+          class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -z-10 pointer-events-none group-hover:bg-primary/10 transition-colors duration-500"
+        ></div>
+      </div>
+    }
+  </div>
+
+  <!-- Title Section -->
+  <div class="mb-6 relative z-10">
+    <h3
+      class="text-2xl font-serif text-gray-900 mb-1 leading-tight group-hover:text-primary transition-colors duration-300"
+    >
+      {{ data()[config().titleField] }}
+    </h3>
+    @if (config().subtitleField && data()[config().subtitleField!]) {
+      <p class="text-[10px] tracking-[0.2em] text-gray-400 uppercase font-bold">
+        {{ data()[config().subtitleField!] }}
+      </p>
+    }
+  </div>
+
+  <!-- Details Block -->
+  <div
+    class="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-5 mb-6 space-y-3.5 flex-grow border border-gray-100 group-hover:border-primary/10 transition-colors"
+  >
+    @for (detail of config().details; track detail.field) {
+      <div class="flex justify-between items-center text-sm">
+        <span class="text-gray-400 font-medium text-xs uppercase tracking-wide">
+          {{ detail.label }}
+        </span>
+        <span class="font-semibold font-serif text-gray-900 text-[13px]">
+          @switch (detail.type) {
+            @case ('date') {
+              {{ data()[detail.field] | date:'mediumDate' }}
+            }
+            @case ('boolean') {
+              @if (data()[detail.field]) {
+                <span class="text-green-600 font-bold">{{ detail.trueLabel || 'Yes' }}</span>
+              } @else {
+                <span class="text-red-500 font-bold">{{ detail.falseLabel || 'No' }}</span>
+              }
+            }
+            @case ('status') {
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full" 
+                  [class.bg-green-500]="data()[detail.field] === 'published' || data()[detail.field] === true"
+                  [class.bg-yellow-500]="data()[detail.field] === 'draft'"
+                  [class.bg-red-500]="data()[detail.field] === 'archived' || data()[detail.field] === false"
+                ></span>
+                @if (data()[detail.field] === true) {
+                  {{ detail.trueLabel || 'Active' }}
+                } @else if (data()[detail.field] === false) {
+                  {{ detail.falseLabel || 'Inactive' }}
+                } @else {
+                  {{ data()[detail.field] }}
+                }
+              </div>
+            }
+            @default {
+              {{ data()[detail.field] }}
+            }
+          }
+        </span>
+      </div>
+    }
+  </div>
+
+  <!-- Footer: Actions -->
+  <div
+    class="flex items-center justify-end gap-3 pt-2 relative z-10 border-t border-gray-100 mt-auto"
+  >
+    <!-- Delete -->
+    <button
+      (click)="onDeleteCard()"
+      class="w-10 h-10 rounded-full bg-red-50 text-red-400 hover:text-red-600 hover:bg-red-100 flex items-center justify-center transition-all duration-300"
+      title="Delete"
+    >
+      <span class="material-symbols-outlined text-lg">delete</span>
+    </button>
+
+    <!-- Edit -->
+    <button
+      (click)="onEdit()"
+      class="w-10 h-10 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm"
+      title="Edit"
+    >
+      <span class="material-symbols-outlined text-lg">edit</span>
+    </button>
+
+    <!-- Menu / More -->
+    <button
+      class="w-10 h-10 rounded-full bg-gray-50 text-gray-400 hover:text-gray-600 hover:bg-gray-100 flex items-center justify-center transition-all duration-300"
+      title="More"
+    >
+      <span class="material-symbols-outlined text-lg">more_vert</span>
+    </button>
+  </div>
+</div>

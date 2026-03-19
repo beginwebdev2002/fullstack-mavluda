@@ -50,13 +50,14 @@
     <!-- Image Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 animate-page-enter">
       @for(image of filteredImages(); track image.id; let i = $index) {
-        <app-gallery-card
-          [image]="image"
+        <app-card-view
+          [data]="image"
+          [config]="galleryCardConfig"
           [index]="i"
           (edit)="openModal($event)"
           (viewImage)="openImageModal($event)"
-          (deleteCard)="deleteImage($event)"
-        ></app-gallery-card>
+          (delete)="deleteImage($event.toString())"
+        ></app-card-view>
       }
     </div>
   } @else {

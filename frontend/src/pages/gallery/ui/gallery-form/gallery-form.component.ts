@@ -12,17 +12,20 @@ import { form, FormField } from "@angular/forms/signals";
 import { Gallery, ImageCategory } from "@shared/models";
 import { linkServerConvert } from "@shared/lib";
 import { galleryFormData, galleryValidationSchema, resetGalleryData } from "@features/gallery";
+import { ImagePopupComponent } from "@shared/ui";
+import { environment } from "@environments/environment";
 
 @Component({
   selector: "app-gallery-form",
   standalone: true,
-  imports: [CommonModule, FormField],
+  imports: [CommonModule, FormField, ImagePopupComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./gallery-form.component.html",
 })
 export class GalleryFormComponent implements OnInit {
   image = input.required<Gallery>();
   filters = input.required<ImageCategory[]>();
+  env = signal(environment);
   
   save = output<{ data: any; file: File | null }>();
   cancel = output<void>();
@@ -35,6 +38,9 @@ export class GalleryFormComponent implements OnInit {
     return img ? linkServerConvert(img) : null;
   });
   isEditMode = signal(false);
+
+  // Image Preview State for Popup
+  selectedImage = signal<string | null>(null);
 
   ngOnInit(): void {
     this.initForm();
@@ -91,5 +97,16 @@ export class GalleryFormComponent implements OnInit {
       .split('_')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
+  }
+
+  // Image Modal Methods
+  openImageModal(imageUrl: string | null) {
+    if (!imageUrl) return;
+    const isAbsolute = imageUrl.startsWith("http") || imageUrl.startsWith("blob") || imageUrl.includes(this.env().apiUrl);
+    this.selectedImage.set(isAbsolute ? imageUrl : linkServerConvert(imageUrl));
+  }
+
+  closeImageModal() {
+    this.selectedImage.set(null);
   }
 }

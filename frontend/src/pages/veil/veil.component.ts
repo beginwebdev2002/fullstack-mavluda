@@ -10,16 +10,15 @@ import { environment } from "@environments/environment";
 import { VeilService } from "@entities/veil";
 import { Veil, veilFormData } from "@features/veil";
 import { convertFormData } from "@shared/lib";
-import { VeilCardComponent } from "./ui/veil-card/veil-card.component";
 import { VeilFormComponent } from "./ui/veil-form/veil-form.component";
-import { ImagePopupComponent, ListViewComponent, ListViewColumn } from "@shared/ui";
+import { ImagePopupComponent, ListViewComponent, ListViewColumn, CardViewComponent, CardViewConfig } from "@shared/ui";
 import { tap } from "rxjs";
 import { linkServerConvert } from "@shared/lib";
 
 @Component({
   selector: "app-veil-page",
   standalone: true,
-  imports: [CommonModule, VeilCardComponent, VeilFormComponent, ImagePopupComponent, ListViewComponent],
+  imports: [CommonModule, CardViewComponent, VeilFormComponent, ImagePopupComponent, ListViewComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./veil.component.html",
   styleUrls: ["./veil.component.scss"],
@@ -48,6 +47,20 @@ export class VeilPageComponent implements OnInit {
     { key: "category", label: "Category", type: "badge" },
     { key: "actions", label: "Actions", type: "actions" },
   ]);
+
+  veilCardConfig: CardViewConfig = {
+    imageField: 'image',
+    titleField: 'name',
+    subtitleField: 'sku',
+    priceField: 'price',
+    details: [
+      { label: 'Silhouette', field: 'silhouette' },
+      { label: 'Neckline', field: 'neckline' },
+      { label: 'Fabric', field: 'fabric' },
+      { label: 'Train Length', field: 'trainLength' },
+      { label: 'Availability', field: 'stock', type: 'boolean', trueLabel: 'In Stock', falseLabel: 'Out of Stock' }
+    ]
+  };
 
   // Image Preview State
   selectedImage = signal<string | null>(null);

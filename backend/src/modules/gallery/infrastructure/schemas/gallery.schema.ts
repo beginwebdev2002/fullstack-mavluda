@@ -20,6 +20,11 @@ export class GallerySchemaEntity {
   @Prop()
   alt: string;
 
+  @Prop()
+  createdAt: Date;
+
+  @Prop()
+  updatedAt: Date;
 }
 
 export const GallerySchema = SchemaFactory.createForClass(GallerySchemaEntity);

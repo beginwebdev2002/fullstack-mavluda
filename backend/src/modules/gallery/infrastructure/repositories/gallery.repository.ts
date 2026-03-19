@@ -16,7 +16,10 @@ export class GalleryRepository {
 
   async findAll(): Promise<Gallery[]> {
     const docs = await this.galleryModel.find().exec();
-    return docs.map((doc) => this.toDomain(doc));
+    const doc = docs.map((doc) => this.toDomain(doc));
+    console.log('DOCS: ', doc);
+    
+    return doc;
   }
 
   async create(gallery: Omit<Gallery, 'id' | 'createdAt'>): Promise<Gallery> {
@@ -49,14 +52,16 @@ export class GalleryRepository {
   }
 
   private toDomain(doc: GalleryDocument): Gallery {
-    const d = doc as any;
+    const { _id, title, imageUrl, category, tags, createdAt } = doc as any;
+    console.log('createdAT: ', createdAt);
+    
     return new Gallery(
-      d._id.toString(),
-      d.title,
-      d.imageUrl,
-      d.category,
-      d.tags,
-      d.createdAt,
+      _id.toString(),
+      title,
+      imageUrl,
+      category,
+      tags, 
+      createdAt,
     );
   }
 }
