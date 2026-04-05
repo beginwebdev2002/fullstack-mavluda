@@ -1,7 +1,8 @@
 import { Component, ChangeDetectionStrategy, signal, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AdminSettingsService, AdminLocation, OwnerInfo } from '@entities/admin-settings';
+import { AdminSettingsService } from '@entities/admin-settings';
+import { AdminLocation, OwnerInfo } from '@shared/models/admin-settings.model';
 import { BusinessProfileComponent } from './ui/business-profile.component';
 import { SocialMatrixComponent, SocialPlatform } from './ui/social-matrix.component';
 import { GeneralInfoComponent } from './ui/general-info.component';
@@ -71,6 +72,16 @@ export class SettingsComponent implements OnInit {
           this.veilFabrics.set(settings.veilFabrics || []);
           this.veilTrainLengths.set(settings.veilTrainLengths || []);
           this.veilNecklines.set(settings.veilNecklines || []);
+          if (settings.socialLinks && Object.keys(settings.socialLinks).length > 0) {
+            const platforms = Object.entries(settings.socialLinks).map(([name, url], i) => ({
+              id: Date.now() + i,
+              name,
+              url,
+              iconUrl: '', // Default icon logic can be added later
+              alt: name
+            }));
+            this.socialPlatforms.set(platforms);
+          }
         }
       });
     }
@@ -85,9 +96,13 @@ export class SettingsComponent implements OnInit {
     }
 
     saveSocialMatrix() {
-      // Logic to convert SocialPlatform[] back to Record if needed
-      // Currently just local state update or dummy save
-      console.log('Saving social matrix:', this.socialPlatforms());
+      const socialLinks: Record<string, string> = {};
+      this.socialPlatforms().forEach(p => {
+        if (p.name && p.url) {
+          socialLinks[p.name] = p.url;
+        }
+      });
+      this.adminSettingsService.updateSettings({ socialLinks }).subscribe();
     }
 
     saveGeneralInfo() {

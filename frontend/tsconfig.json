@@ -37,7 +37,8 @@
     }
   },
   "angularCompilerOptions": {
-    "disableTypeScriptVersionCheck": true
+    "disableTypeScriptVersionCheck": true,
+    "strictTemplates": true
   },
   "include": [
     "src/**/*.d.ts",

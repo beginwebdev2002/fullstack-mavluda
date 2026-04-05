@@ -1,14 +1,15 @@
 import { Injectable, inject, signal } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, tap } from "rxjs";
-import { AdminSettings } from "@entities/admin-settings";
+import { API_ENDPOINTS } from "@core/constants/api-endpoints";
+import { AdminSettings } from "@shared/models/admin-settings.model";
 
 @Injectable({
   providedIn: "root",
 })
 export class AdminSettingsService {
   private http = inject(HttpClient);
-  private apiUrl = "/admin-settings"; // Interceptor likely handles base URL
+  private apiUrl = API_ENDPOINTS.ADMIN.SETTINGS;
 
   // State
   private _settings = signal<AdminSettings | null>(null);

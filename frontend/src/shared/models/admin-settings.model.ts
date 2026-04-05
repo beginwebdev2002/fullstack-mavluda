@@ -1,14 +1,26 @@
+export interface AdminLocation {
+  address: string;
+  latitude: number;
+  longitude: number;
+}
+
+export interface OwnerInfo {
+  name: string;
+  phoneNumber: string;
+}
+
 export interface AdminSettings {
   id: string;
-  location: {
-    address: string;
-    latitude: number;
-    longitude: number;
-  };
-  socialLinks: Record<string, string>; // Using Record for Map compatibility
+  location: AdminLocation;
+  socialLinks: Record<string, string>;
   workHours: Record<string, string>;
-  ownerInfo: {
-    name: string;
-    phoneNumber: string;
-  };
+  ownerInfo: OwnerInfo;
+  biography: string;
+  philosophy: string;
+  galleryCategories: string[];
+  treatmentCategories: string[];
+  veilSilhouettes: string[];
+  veilFabrics: string[];
+  veilTrainLengths: string[];
+  veilNecklines: string[];
 }

@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, input, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AdminLocation, OwnerInfo } from '@entities/admin-settings';
+import { AdminLocation, OwnerInfo } from '@shared/models';
 
 @Component({
   selector: 'app-business-profile',

@@ -4,148 +4,49 @@ description: ./frontend/src/**/
 globs: ./apps/admin-panel/src/**/
 ---
 
----
+You are a Senior Front-End Developer and an Expert in ReactJS, NextJS, JavaScript, TypeScript, HTML, CSS and modern UI/UX frameworks (e.g., TailwindCSS, Shadcn, Radix). You are thoughtful, give nuanced answers, and are brilliant at reasoning. You carefully provide accurate, factual, thoughtful answers, and are a genius at reasoning.
 
-description: "Angular Zoneless Signal-Based Architecture Rules"
-alwaysApply: true
+- Follow the user’s requirements carefully & to the letter.
+- First think step-by-step - describe your plan for what to build in pseudocode, written out in great detail.
+- Confirm, then write code!
+- Always write correct, best practice, DRY principle (Dont Repeat Yourself), bug free, fully functional and working code also it should be aligned to listed rules down below at Code Implementation Guidelines .
+- Focus on easy and readability code, over being performant.
+- Fully implement all requested functionality.
+- Leave NO todo’s, placeholders or missing pieces.
+- Ensure code is complete! Verify thoroughly finalised.
+- Include all required imports, and ensure proper naming of key components.
+- Be concise Minimize any other prose.
+- If you think there might not be a correct answer, you say so.
+- If you do not know the answer, say so, instead of guessing.
 
----
+### Coding Environment
+The user asks questions about the following coding languages:
+- ReactJS
+- NextJS
+- JavaScript
+- TypeScript
+- TailwindCSS
+- HTML
+- CSS
 
-# Angular Zoneless Signal-Based Architecture Rules
+### Code Implementation Guidelines
+Follow these rules when you write code:
+- Use early returns whenever possible to make the code more readable.
+- Always use Tailwind classes for styling HTML elements; avoid using CSS or tags.
+- Use “class:” instead of the tertiary operator in class tags whenever possible.
+- Use descriptive variable and function/const names. Also, event functions should be named with a “handle” prefix, like “handleClick” for onClick and “handleKeyDown” for onKeyDown.
+- Implement accessibility features on elements. For example, a tag should have a tabindex=“0”, aria-label, on:click, and on:keydown, and similar attributes.
+- Use consts instead of functions, for example, “const toggle = () =>”. Also, define a type if possible.
+- Don't use semicolons.
 
-Этот проект использует Angular 20+ с zoneless change detection и signal-based архитектурой.
-
-## Основные принципы
-
-### 1. Zoneless Change Detection
-
-- Проект использует `provideZonelessChangeDetection()` в app.config.ts
-- НЕ используйте Zone.js для change detection
-- Все изменения состояния должны происходить через signals или явные вызовы change detection
-
-### 2. Signal-Based State Management
-
-- ВСЕГДА используйте signals для реактивного состояния
-- Предпочитайте `signal()` вместо обычных свойств класса
-- Используйте `computed()` для производных значений
-- Используйте `effect()` для побочных эффектов
-
-### 3. Standalone Components
-
-- ВСЕ компоненты должны быть standalone
-- Используйте `standalone: true` в декораторе @Component
-- Импортируйте зависимости через массив `imports`
-
-### 4. Modern Angular Patterns
-
-- Используйте новую control flow syntax (`@if`, `@for`, `@switch`)
-- Предпочитайте `input()` и `output()` вместо `@Input()` и `@Output()`
-- Используйте `inject()` вместо constructor injection
-
-## Примеры правильного кода
-
-### Компонент с signals:
-
-```typescript
-import { Component, signal, computed, input } from "@angular/core";
-
-@Component({
-  selector: "app-example",
-  standalone: true,
-  template: `
-    <div>
-      <h1>{{ title() }}</h1>
-      <p>Count: {{ count() }}</p>
-      <p>Double: {{ doubleCount() }}</p>
-      <button (click)="increment()">Increment</button>
-    </div>
-  `,
-})
-export class ExampleComponent {
-  title = input("Default Title");
-  count = signal(0);
-
-  doubleCount = computed(() => this.count() * 2);
-
-  increment() {
-    this.count.update((c) => c + 1);
-  }
-}
-```
-
-### Сервис с signals:
-
-```typescript
-import { Injectable, signal, computed } from "@angular/core";
-
-@Injectable({
-  providedIn: "root",
-})
-export class DataService {
-  private data = signal<any[]>([]);
-  private loading = signal(false);
-
-  readonly data$ = this.data.asReadonly();
-  readonly loading$ = this.loading.asReadonly();
-  readonly hasData = computed(() => this.data().length > 0);
-
-  async loadData() {
-    this.loading.set(true);
-    try {
-      const result = await this.fetchData();
-      this.data.set(result);
-    } finally {
-      this.loading.set(false);
-    }
-  }
-}
-```
-
-## Что НЕ делать
-
-### ❌ Неправильно - обычные свойства:
-
-```typescript
-export class BadComponent {
-  count = 0; // НЕ используйте обычные свойства
-  title = "Hello"; // НЕ используйте обычные свойства
-
-  increment() {
-    this.count++; // Это не будет работать в zoneless режиме
-  }
-}
-```
-
-### ❌ Неправильно - старые декораторы:
-
-```typescript
-export class BadComponent {
-  @Input() title: string; // Используйте input() вместо @Input()
-  @Output() clicked = new EventEmitter(); // Используйте output() вместо @Output()
-}
-```
-
-### ❌ Неправильно - constructor injection:
-
-```typescript
-export class BadComponent {
-  constructor(private service: DataService) {} // Используйте inject() вместо constructor injection
-}
-```
-
-## Правильно - современный подход:
-
-```typescript
-export class GoodComponent {
-  title = input<string>();
-  clicked = output<void>();
-  private service = inject(DataService);
-}
-```
-
-## Стиль кода
-
-- Используйте camelCase для переменных и методов
-- Используйте PascalCase для классов и компонентов
-- Используйте kebab-case для селекторов компонентов
-- Предпочитайте template syntax над inline templates для сложных компонентов
+### Generate Commit Guidelines
+- The commit contains the following structural elements, to communicate intent to the consumers of your library:
+	- fix: a commit of the type `fix` patches a bug in your codebase (this correlates with PATCH in semantic versioning).
+	- feat: a commit of the type `feat` introduces a new feature to the codebase (this correlates with MINOR in semantic versioning).
+	- Others: commit types other than `fix:` and `feat:` are allowed, for example `chore:`, `docs:`, `style:`, `refactor:`, `perf:`, `test:`, and others.
+	- A scope may be provided to a commit’s type, to provide additional contextual information and is contained within parenthesis, e.g., `feat(parser): add ability to parse arrays`.
+- Commit messages should be written in the following format:
+	- Do not end the subject line with a period.
+	- Use the imperative mood in the subject line.
+	- Use the body to explain what and why you have done something. In most cases, you can leave out details about how a change has been made.
+	- The commit message should be structured as follows: `<type>[optional scope]: <description>`
