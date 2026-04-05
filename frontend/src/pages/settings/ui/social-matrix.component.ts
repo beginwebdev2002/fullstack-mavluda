@@ -1,0 +1,81 @@
+import { Component, ChangeDetectionStrategy, input, output } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+export interface SocialPlatform {
+  id: number;
+  name: string;
+  url: string;
+  iconUrl: string;
+  alt: string;
+}
+
+@Component({
+  selector: 'app-social-matrix',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    <section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
+      <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+        <div class="flex items-center">
+          <span class="material-symbols-outlined text-primary mr-3">share</span>
+          <h4 class="font-serif text-xl font-semibold text-gray-900" i18n="@@settingsSectionSocial">Social Matrix</h4>
+        </div>
+        <div class="flex space-x-3">
+          <button (click)="addPlatform.emit()" class="flex items-center px-4 py-2 border border-primary text-primary hover:bg-primary/5 rounded-lg text-sm font-medium transition-all">
+            <span class="material-symbols-outlined text-sm mr-2">add</span> <span i18n="@@settingsBtnAddPlatform">Add Platform</span>
+          </button>
+          <button (click)="save.emit()" class="flex items-center px-4 py-2 bg-primary hover:bg-primary-hover text-black rounded-lg text-sm font-medium transition-all shadow-md btn-primary-shimmer active:scale-[0.98]" i18n="@@settingsBtnSave">
+            Save Changes
+          </button>
+        </div>
+      </div>
+      <div class="p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          @for(platform of platforms(); track platform.id; let i = $index){
+            <div class="p-5 border border-gray-100 rounded-2xl bg-gray-50 group hover:border-primary/30 transition-all reveal-item" [style.animation-delay.ms]="i * 100">
+              <div class="flex justify-between items-start mb-4">
+                <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm border border-gray-100">
+                  <img [alt]="platform.alt" class="w-6 h-6" [src]="platform.iconUrl"/>
+                </div>
+                <button (click)="removePlatform.emit(platform.id)" class="text-gray-400 hover:text-red-500 transition-colors">
+                  <span class="material-symbols-outlined text-lg">delete</span>
+                </button>
+              </div>
+              <div class="space-y-3">
+                <input 
+                  class="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg text-xs font-semibold uppercase tracking-wider text-gray-900" 
+                  type="text" 
+                  [ngModel]="platform.name"
+                  (ngModelChange)="onUpdate(platform.id, 'name', $event)"
+                />
+                <input 
+                  class="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm text-primary underline" 
+                  type="text" 
+                  [ngModel]="platform.url"
+                  (ngModelChange)="onUpdate(platform.id, 'url', $event)"
+                />
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+  `
+})
+export class SocialMatrixComponent {
+  platforms = input.required<SocialPlatform[]>();
+  
+  addPlatform = output<void>();
+  removePlatform = output<number>();
+  updatePlatform = output<SocialPlatform>();
+  save = output<void>();
+
+  onUpdate(id: number, field: keyof SocialPlatform, value: any) {
+    const platform = this.platforms().find(p => p.id === id);
+    if (platform) {
+      this.updatePlatform.emit({ ...platform, [field]: value });
+    }
+  }
+}

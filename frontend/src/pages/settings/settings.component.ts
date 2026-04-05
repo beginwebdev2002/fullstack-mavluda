@@ -1,30 +1,27 @@
 import { Component, ChangeDetectionStrategy, signal, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AdminSettingsService } from '@entities/admin-settings';
+import { AdminSettingsService, AdminLocation, OwnerInfo } from '@entities/admin-settings';
+import { BusinessProfileComponent } from './ui/business-profile.component';
+import { SocialMatrixComponent, SocialPlatform } from './ui/social-matrix.component';
+import { GeneralInfoComponent } from './ui/general-info.component';
+import { AdditionalLinksComponent, AdditionalLink } from './ui/additional-links.component';
+import { SelectsSettingsComponent, SelectListType } from './ui/selects-settings.component';
 
 type SettingsTab = 'Business Profile' | 'Social Matrix' | 'General Info' | 'Additional Links' | 'SELECTS';
-
-interface SocialPlatform {
-  id: number;
-  name: string;
-  url: string;
-  iconUrl: string;
-  alt: string;
-}
-
-interface AdditionalLink {
-  id: number;
-  label: string;
-  targetUrl: string;
-  category: string;
-  categoryColor: 'blue' | 'green';
-}
 
 @Component({
   selector: 'app-settings',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule, 
+    FormsModule, 
+    BusinessProfileComponent, 
+    SocialMatrixComponent, 
+    GeneralInfoComponent, 
+    AdditionalLinksComponent, 
+    SelectsSettingsComponent
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss']
@@ -35,6 +32,12 @@ export class SettingsComponent implements OnInit {
     tabs: SettingsTab[] = ['Business Profile', 'Social Matrix', 'General Info', 'Additional Links', 'SELECTS'];
     activeTab = signal<SettingsTab>('Business Profile');
 
+    // Admin Settings State (Signals)
+    location = signal<AdminLocation>({ address: '', latitude: 0, longitude: 0 });
+    ownerInfo = signal<OwnerInfo>({ name: '', phoneNumber: '' });
+    biography = signal<string>('');
+    philosophy = signal<string>('');
+
     // Selection Lists (Signals)
     galleryCategories = signal<string[]>([]);
     treatmentCategories = signal<string[]>([]);
@@ -43,6 +46,7 @@ export class SettingsComponent implements OnInit {
     veilTrainLengths = signal<string[]>([]);
     veilNecklines = signal<string[]>([]);
 
+    // UI-only for now or needs conversion
     socialPlatforms = signal<SocialPlatform[]>([
       { id: 1, name: 'Instagram', url: 'https://instagram.com/mavluda_azizova', iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png', alt: 'Instagram' },
       { id: 2, name: 'Telegram', url: 'https://t.me/mavluda_beauty', iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg', alt: 'Telegram' },
@@ -57,6 +61,10 @@ export class SettingsComponent implements OnInit {
     ngOnInit() {
       this.adminSettingsService.getSettings().subscribe(settings => {
         if (settings) {
+          this.location.set(settings.location || { address: '', latitude: 0, longitude: 0 });
+          this.ownerInfo.set(settings.ownerInfo || { name: '', phoneNumber: '' });
+          this.biography.set(settings.biography || '');
+          this.philosophy.set(settings.philosophy || '');
           this.galleryCategories.set(settings.galleryCategories || []);
           this.treatmentCategories.set(settings.treatmentCategories || []);
           this.veilSilhouettes.set(settings.veilSilhouettes || []);
@@ -67,11 +75,44 @@ export class SettingsComponent implements OnInit {
       });
     }
 
+    // --- Tab-specific Save methods ---
+    
+    saveBusinessProfile() {
+      this.adminSettingsService.updateSettings({
+        location: this.location(),
+        ownerInfo: this.ownerInfo()
+      }).subscribe();
+    }
+
+    saveSocialMatrix() {
+      // Logic to convert SocialPlatform[] back to Record if needed
+      // Currently just local state update or dummy save
+      console.log('Saving social matrix:', this.socialPlatforms());
+    }
+
+    saveGeneralInfo() {
+      this.adminSettingsService.updateSettings({
+        biography: this.biography(),
+        philosophy: this.philosophy()
+      }).subscribe();
+    }
+
+    saveSelectionLists() {
+      this.adminSettingsService.updateSettings({
+        galleryCategories: this.galleryCategories(),
+        treatmentCategories: this.treatmentCategories(),
+        veilSilhouettes: this.veilSilhouettes(),
+        veilFabrics: this.veilFabrics(),
+        veilTrainLengths: this.veilTrainLengths(),
+        veilNecklines: this.veilNecklines()
+      }).subscribe();
+    }
+
     // --- CRUD for Selection Lists ---
 
-    addItem(list: 'gallery' | 'treatment' | 'silhouette' | 'fabric' | 'train' | 'neckline') {
+    addItem(type: SelectListType) {
       const newItem = 'New Item';
-      switch(list) {
+      switch(type) {
         case 'gallery': this.galleryCategories.update(items => [...items, newItem]); break;
         case 'treatment': this.treatmentCategories.update(items => [...items, newItem]); break;
         case 'silhouette': this.veilSilhouettes.update(items => [...items, newItem]); break;
@@ -81,8 +122,8 @@ export class SettingsComponent implements OnInit {
       }
     }
 
-    updateItem(list: 'gallery' | 'treatment' | 'silhouette' | 'fabric' | 'train' | 'neckline', index: number, value: string) {
-      switch(list) {
+    updateItem(type: SelectListType, index: number, value: string) {
+      switch(type) {
         case 'gallery': this.galleryCategories.update(items => { items[index] = value; return [...items]; }); break;
         case 'treatment': this.treatmentCategories.update(items => { items[index] = value; return [...items]; }); break;
         case 'silhouette': this.veilSilhouettes.update(items => { items[index] = value; return [...items]; }); break;
@@ -92,8 +133,8 @@ export class SettingsComponent implements OnInit {
       }
     }
 
-    removeItem(list: 'gallery' | 'treatment' | 'silhouette' | 'fabric' | 'train' | 'neckline', index: number) {
-      switch(list) {
+    removeItem(type: SelectListType, index: number) {
+      switch(type) {
         case 'gallery': this.galleryCategories.update(items => items.filter((_, i) => i !== index)); break;
         case 'treatment': this.treatmentCategories.update(items => items.filter((_, i) => i !== index)); break;
         case 'silhouette': this.veilSilhouettes.update(items => items.filter((_, i) => i !== index)); break;
@@ -103,28 +144,14 @@ export class SettingsComponent implements OnInit {
       }
     }
 
-    saveSelectionLists() {
-      const settings = this.adminSettingsService.settings();
-      if (settings) {
-        this.adminSettingsService.updateSettings({
-          galleryCategories: this.galleryCategories(),
-          treatmentCategories: this.treatmentCategories(),
-          veilSilhouettes: this.veilSilhouettes(),
-          veilFabrics: this.veilFabrics(),
-          veilTrainLengths: this.veilTrainLengths(),
-          veilNecklines: this.veilNecklines()
-        }).subscribe();
-      }
-    }
-
-    // --- Existing Methods ---
+    // --- Social Platform methods ---
 
     addSocialPlatform() {
       const newPlatform: SocialPlatform = {
         id: Date.now(),
         name: 'New Platform',
         url: 'https://',
-        iconUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDAh_4_s1A2wU4k2pXsv2gAFpqfGSL2P9yA6_LC9Sl_3_k39n-u-f_WjI-QO2J_o73A1I5k8gGf6f_h_Y2P-N3g-T_w_o-g_k-Z_4_w_o-g_k-Z_4_w_o-g_k-Z_4_w_o-g_k-Z_4_w_o-g_k-Z_4_w_o-g_k-Z_4_w_o-g_k-Z_4', // Placeholder icon
+        iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png', // Default icon
         alt: 'New'
       };
       this.socialPlatforms.update(platforms => [...platforms, newPlatform]);
@@ -133,6 +160,12 @@ export class SettingsComponent implements OnInit {
     removeSocialPlatform(id: number) {
       this.socialPlatforms.update(platforms => platforms.filter(p => p.id !== id));
     }
+
+    updateSocialPlatform(platform: SocialPlatform) {
+      this.socialPlatforms.update(platforms => platforms.map(p => p.id === platform.id ? platform : p));
+    }
+
+    // --- Additional Links methods ---
 
     addLink() {
       const newLink: AdditionalLink = {
@@ -147,5 +180,9 @@ export class SettingsComponent implements OnInit {
 
     removeLink(id: number) {
       this.additionalLinks.update(links => links.filter(l => l.id !== id));
+    }
+
+    updateLink(link: AdditionalLink) {
+      this.additionalLinks.update(links => links.map(l => l.id === link.id ? link : l));
     }
 }

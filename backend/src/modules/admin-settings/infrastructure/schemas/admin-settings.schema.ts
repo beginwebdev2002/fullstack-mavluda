@@ -27,6 +27,12 @@ export class AdminSettingsSchemaEntity {
     phoneNumber: string;
   };
 
+  @Prop({ type: String, default: '' })
+  biography: string;
+
+  @Prop({ type: String, default: '' })
+  philosophy: string;
+
   @Prop({ type: [String], default: [] })
   galleryCategories: string[];
 

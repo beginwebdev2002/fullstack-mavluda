@@ -1,0 +1,108 @@
+import { Component, ChangeDetectionStrategy, input, output } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+export type SelectListType = 'gallery' | 'treatment' | 'silhouette' | 'fabric' | 'train' | 'neckline';
+
+@Component({
+  selector: 'app-selects-settings',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    <section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
+      <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+        <div class="flex items-center">
+          <span class="material-symbols-outlined text-primary mr-3">list_alt</span>
+          <h4 class="font-serif text-xl font-semibold text-gray-900" i18n="@@settingsSectionSelects">Selection Lists</h4>
+        </div>
+        <button (click)="save.emit()" class="flex items-center px-4 py-2 bg-primary hover:bg-primary-hover text-black rounded-lg text-sm font-medium transition-all shadow-md btn-primary-shimmer active:scale-[0.98]" i18n="@@settingsBtnSave">
+          Save Lists
+        </button>
+      </div>
+      <div class="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        
+        <!-- Reusable List Template -->
+        <ng-container *ngTemplateOutlet="listTemplate; context: { 
+          title: 'Gallery Categories', 
+          type: 'gallery', 
+          items: galleryCategories() 
+        }"></ng-container>
+
+        <ng-container *ngTemplateOutlet="listTemplate; context: { 
+          title: 'Treatment Categories', 
+          type: 'treatment', 
+          items: treatmentCategories() 
+        }"></ng-container>
+
+        <ng-container *ngTemplateOutlet="listTemplate; context: { 
+          title: 'Silhouettes', 
+          type: 'silhouette', 
+          items: veilSilhouettes() 
+        }"></ng-container>
+
+        <ng-container *ngTemplateOutlet="listTemplate; context: { 
+          title: 'Fabrics', 
+          type: 'fabric', 
+          items: veilFabrics() 
+        }"></ng-container>
+
+        <ng-container *ngTemplateOutlet="listTemplate; context: { 
+          title: 'Train Lengths', 
+          type: 'train', 
+          items: veilTrainLengths() 
+        }"></ng-container>
+
+        <ng-container *ngTemplateOutlet="listTemplate; context: { 
+          title: 'Necklines', 
+          type: 'neckline', 
+          items: veilNecklines() 
+        }"></ng-container>
+
+      </div>
+    </section>
+
+    <ng-template #listTemplate let-title="title" let-type="type" let-items="items">
+      <div class="space-y-4">
+        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+          <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider">{{ title }}</label>
+          <button (click)="addItem.emit(type)" class="text-primary hover:text-primary-hover">
+            <span class="material-symbols-outlined">add_circle</span>
+          </button>
+        </div>
+        <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+          @for(item of items; track $index) {
+            <div class="flex items-center space-x-2 group">
+              <input 
+                #input 
+                (blur)="onUpdate(type, $index, input.value)" 
+                [value]="item" 
+                class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm text-black focus:bg-white transition-all"
+              />
+              <button (click)="removeItem.emit({type, index: $index})" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all">
+                <span class="material-symbols-outlined text-lg">delete</span>
+              </button>
+            </div>
+          }
+        </div>
+      </div>
+    </ng-template>
+  `
+})
+export class SelectsSettingsComponent {
+  galleryCategories = input.required<string[]>();
+  treatmentCategories = input.required<string[]>();
+  veilSilhouettes = input.required<string[]>();
+  veilFabrics = input.required<string[]>();
+  veilTrainLengths = input.required<string[]>();
+  veilNecklines = input.required<string[]>();
+  
+  addItem = output<SelectListType>();
+  removeItem = output<{type: SelectListType, index: number}>();
+  updateItem = output<{type: SelectListType, index: number, value: string}>();
+  save = output<void>();
+
+  onUpdate(type: SelectListType, index: number, value: string) {
+    this.updateItem.emit({ type, index, value });
+  }
+}

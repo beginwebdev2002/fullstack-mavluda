@@ -1,0 +1,100 @@
+import { Component, ChangeDetectionStrategy, input, output } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { AdminLocation, OwnerInfo } from '@entities/admin-settings';
+
+@Component({
+  selector: 'app-business-profile',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    <section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
+      <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+        <div class="flex items-center">
+          <span class="material-symbols-outlined text-primary mr-3">business_center</span>
+          <h4 class="font-serif text-xl font-semibold text-gray-900" i18n="@@settingsSectionProfile">Business Profile</h4>
+        </div>
+        <button (click)="save.emit()" class="flex items-center px-4 py-2 bg-primary hover:bg-primary-hover text-black rounded-lg text-sm font-medium transition-all shadow-md btn-primary-shimmer active:scale-[0.98]" i18n="@@settingsBtnSave">
+          Save Changes
+        </button>
+      </div>
+      <div class="p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="space-y-6">
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wider" i18n="@@settingsLabelPhone">Phone Number</label>
+            <div class="relative">
+              <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xl">call</span>
+              <input 
+                class="w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm text-gray-900" 
+                type="text" 
+                [ngModel]="ownerInfo().phoneNumber"
+                (ngModelChange)="onOwnerInfoChange('phoneNumber', $event)"
+              />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wider" i18n="@@settingsLabelAddress">Official Address</label>
+            <div class="relative">
+              <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xl">location_on</span>
+              <input 
+                class="w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm text-gray-900" 
+                type="text" 
+                [ngModel]="location().address"
+                (ngModelChange)="onLocationChange('address', $event)"
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wider text-xs" i18n="@@settingsLabelLat">Latitude</label>
+              <input 
+                class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm font-mono text-gray-900" 
+                type="number" 
+                [ngModel]="location().latitude"
+                (ngModelChange)="onLocationChange('latitude', $event)"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wider text-xs" i18n="@@settingsLabelLong">Longitude</label>
+              <input 
+                class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm font-mono text-gray-900" 
+                type="number" 
+                [ngModel]="location().longitude"
+                (ngModelChange)="onLocationChange('longitude', $event)"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wider" i18n="@@settingsLabelMap">Map Preview</label>
+          <div class="h-[235px] w-full rounded-2xl bg-gray-100 border border-gray-200 overflow-hidden relative group">
+            <img alt="Map Preview" class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDonmZQfuLMnod8C7wis0atCzWNP6hXp4m4AoTUkoIuPmARE_RPVbF8IOpf0C5vL9JCeOUxLeEbrkKIbexjZNjWi7N0mOGT4vh5gfIwVQ6W6t_y1RrbJ8mQdVkZDKa3iIPYPOCAcNuCyqCDj1BJlO-SzpspJY1_K_8iJC8huctLGH8gw04zghpbK-aLIeK0eF2OdSo5Cyx8uG_rZsuVHV606R48a5A23KKY9m5fok_i6f00f_floYzSSA3W0cuUMIGxWr-KW4RYNyfh"/>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="bg-white/90 p-4 rounded-xl shadow-lg flex items-center space-x-3 backdrop-blur-sm border border-primary/20">
+                <span class="material-symbols-outlined text-primary text-3xl">map</span>
+                <span class="text-xs font-medium uppercase tracking-widest text-gray-600">Interactive Map Component</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  `
+})
+export class BusinessProfileComponent {
+  location = input.required<AdminLocation>();
+  ownerInfo = input.required<OwnerInfo>();
+  
+  updateLocation = output<AdminLocation>();
+  updateOwnerInfo = output<OwnerInfo>();
+  save = output<void>();
+
+  onLocationChange(field: keyof AdminLocation, value: any) {
+    this.updateLocation.emit({ ...this.location(), [field]: value });
+  }
+
+  onOwnerInfoChange(field: keyof OwnerInfo, value: any) {
+    this.updateOwnerInfo.emit({ ...this.ownerInfo(), [field]: value });
+  }
+}

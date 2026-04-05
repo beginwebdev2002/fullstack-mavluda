@@ -15,6 +15,8 @@ export interface AdminSettings {
   socialLinks: Record<string, string>;
   workHours: Record<string, string>;
   ownerInfo: OwnerInfo;
+  biography: string;
+  philosophy: string;
   galleryCategories: string[];
   treatmentCategories: string[];
   veilSilhouettes: string[];

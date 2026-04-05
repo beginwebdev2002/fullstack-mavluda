@@ -54,6 +54,8 @@ export class AdminSettingsRepository {
       socialLinks,
       workHours,
       doc.ownerInfo,
+      doc.biography || '',
+      doc.philosophy || '',
       doc.galleryCategories || [],
       doc.treatmentCategories || [],
       doc.veilSilhouettes || [],

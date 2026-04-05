@@ -30,304 +30,58 @@
   <!-- Content Sections -->
   <div class="space-y-10">
     
-    <!-- Business Profile Section -->
     @if (activeTab() === 'Business Profile') {
-      <section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
-          <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
-              <div class="flex items-center">
-                  <span class="material-symbols-outlined text-primary mr-3">business_center</span>
-                  <h4 class="font-serif text-xl font-semibold text-gray-900" i18n="@@settingsSectionProfile">Business Profile</h4>
-              </div>
-              <button class="flex items-center px-4 py-2 bg-primary hover:bg-primary-hover text-black rounded-lg text-sm font-medium transition-all shadow-md btn-primary-shimmer active:scale-[0.98]" i18n="@@settingsBtnSave">
-                  Save Changes
-              </button>
-          </div>
-          <div class="p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div class="space-y-6">
-                  <div>
-                  <label class="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wider" i18n="@@settingsLabelPhone">Phone Number</label>
-                      <div class="relative">
-                          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xl">call</span>
-                          <input class="w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm text-gray-900" type="text" value="+998 90 123 45 67"/>
-                      </div>
-                  </div>
-                  <div>
-                  <label class="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wider" i18n="@@settingsLabelAddress">Official Address</label>
-                      <div class="relative">
-                          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xl">location_on</span>
-                          <input class="w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm text-gray-900" type="text" value="123 Luxury Avenue, Tashkent, Uzbekistan"/>
-                      </div>
-                  </div>
-                  <div class="grid grid-cols-2 gap-4">
-                      <div>
-                          <label class="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wider text-xs" i18n="@@settingsLabelLat">Latitude</label>
-                          <input class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm font-mono text-gray-900" type="text" value="41.311081"/>
-                      </div>
-                      <div>
-                          <label class="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wider text-xs" i18n="@@settingsLabelLong">Longitude</label>
-                          <input class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm font-mono text-gray-900" type="text" value="69.240562"/>
-                      </div>
-                  </div>
-              </div>
-              <div>
-                  <label class="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wider" i18n="@@settingsLabelMap">Map Preview</label>
-                  <div class="h-[235px] w-full rounded-2xl bg-gray-100 border border-gray-200 overflow-hidden relative group">
-                      <img alt="Map Preview" class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDonmZQfuLMnod8C7wis0atCzWNP6hXp4m4AoTUkoIuPmARE_RPVbF8IOpf0C5vL9JCeOUxLeEbrkKIbexjZNjWi7N0mOGT4vh5gfIwVQ6W6t_y1RrbJ8mQdVkZDKa3iIPYPOCAcNuCyqCDj1BJlO-SzpspJY1_K_8iJC8huctLGH8gw04zghpbK-aLIeK0eF2OdSo5Cyx8uG_rZsuVHV606R48a5A23KKY9m5fok_i6f00f_floYzSSA3W0cuUMIGxWr-KW4RYNyfh"/>
-                      <div class="absolute inset-0 flex items-center justify-center">
-                          <div class="bg-white/90 p-4 rounded-xl shadow-lg flex items-center space-x-3 backdrop-blur-sm border border-primary/20">
-                              <span class="material-symbols-outlined text-primary text-3xl">map</span>
-                              <span class="text-xs font-medium uppercase tracking-widest text-gray-600">Interactive Map Component</span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
+      <app-business-profile 
+        [location]="location()"
+        [ownerInfo]="ownerInfo()"
+        (updateLocation)="location.set($event)"
+        (updateOwnerInfo)="ownerInfo.set($event)"
+        (save)="saveBusinessProfile()"
+      />
     }
 
-    <!-- Social Matrix Section -->
     @if (activeTab() === 'Social Matrix') {
-      <section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
-          <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
-              <div class="flex items-center">
-                  <span class="material-symbols-outlined text-primary mr-3">share</span>
-                  <h4 class="font-serif text-xl font-semibold text-gray-900" i18n="@@settingsSectionSocial">Social Matrix</h4>
-              </div>
-              <div class="flex space-x-3">
-                  <button (click)="addSocialPlatform()" class="flex items-center px-4 py-2 border border-primary text-primary hover:bg-primary/5 rounded-lg text-sm font-medium transition-all">
-                      <span class="material-symbols-outlined text-sm mr-2">add</span> <span i18n="@@settingsBtnAddPlatform">Add Platform</span>
-                  </button>
-                  <button class="flex items-center px-4 py-2 bg-primary hover:bg-primary-hover text-black rounded-lg text-sm font-medium transition-all shadow-md btn-primary-shimmer active:scale-[0.98]" i18n="@@settingsBtnSave">
-                      Save Changes
-                  </button>
-              </div>
-          </div>
-          <div class="p-8">
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  @for(platform of socialPlatforms(); track platform.id; let i = $index){
-                    <div class="p-5 border border-gray-100 rounded-2xl bg-gray-50 group hover:border-primary/30 transition-all reveal-item" [style.animation-delay.ms]="i * 100">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm border border-gray-100">
-                                <img [alt]="platform.alt" class="w-6 h-6" [src]="platform.iconUrl"/>
-                            </div>
-                            <button (click)="removeSocialPlatform(platform.id)" class="text-gray-400 hover:text-red-500 transition-colors">
-                                <span class="material-symbols-outlined text-lg">delete</span>
-                            </button>
-                        </div>
-                        <div class="space-y-3">
-                            <input class="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg text-xs font-semibold uppercase tracking-wider text-gray-900" type="text" [value]="platform.name"/>
-                            <input class="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm text-primary underline" type="text" [value]="platform.url"/>
-                        </div>
-                    </div>
-                  }
-              </div>
-          </div>
-      </section>
+      <app-social-matrix 
+        [platforms]="socialPlatforms()"
+        (addPlatform)="addSocialPlatform()"
+        (removePlatform)="removeSocialPlatform($event)"
+        (updatePlatform)="updateSocialPlatform($event)"
+        (save)="saveSocialMatrix()"
+      />
     }
 
-    <!-- General Info Section -->
     @if (activeTab() === 'General Info') {
-      <section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
-        <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
-          <div class="flex items-center">
-            <span class="material-symbols-outlined text-primary mr-3">auto_awesome</span>
-            <h4 class="font-serif text-xl font-semibold text-gray-900" i18n="@@settingsSectionGeneral">General Info & Philosophy</h4>
-          </div>
-          <button class="flex items-center px-4 py-2 bg-primary hover:bg-primary-hover text-black rounded-lg text-sm font-medium transition-all shadow-md btn-primary-shimmer active:scale-[0.98]" i18n="@@settingsBtnSave">
-            Save Changes
-          </button>
-        </div>
-        <div class="p-8 space-y-8">
-          <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-4 uppercase tracking-wider" i18n="@@settingsLabelBio">Center Biography (Multi-language)</label>
-            <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-inner">
-              <div class="bg-gray-50 p-2 flex border-b border-gray-200">
-                <button class="p-1.5 hover:bg-gray-100 rounded transition-colors text-gray-600"><span class="material-symbols-outlined text-sm">format_bold</span></button>
-                <button class="p-1.5 hover:bg-gray-100 rounded transition-colors text-gray-600"><span class="material-symbols-outlined text-sm">format_italic</span></button>
-                <button class="p-1.5 hover:bg-gray-100 rounded transition-colors text-gray-600"><span class="material-symbols-outlined text-sm">format_underlined</span></button>
-                <div class="w-px h-6 bg-gray-200 mx-2"></div>
-                <button class="p-1.5 hover:bg-gray-100 rounded transition-colors text-gray-600"><span class="material-symbols-outlined text-sm">format_list_bulleted</span></button>
-                <button class="p-1.5 hover:bg-gray-100 rounded transition-colors text-gray-600"><span class="material-symbols-outlined text-sm">link</span></button>
-              </div>
-              <textarea class="w-full p-6 bg-white border-none focus:ring-0 text-sm leading-relaxed text-gray-900" placeholder="Write the biography..." rows="6">Mavluda Azizova Beauty Ecosystem is a premier destination for holistic beauty and medical aesthetics. Founded on the principles of luxury, precision, and personalized care, our center offers a transformative experience. With over 15 years of excellence, we specialize in high-end visage artistry and advanced medical spa procedures.</textarea>
-            </div>
-          </div>
-          <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-4 uppercase tracking-wider" i18n="@@settingsLabelPhilosophy">Beauty Philosophy</label>
-            <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-inner">
-              <div class="bg-gray-50 p-2 flex border-b border-gray-200">
-                <button class="p-1.5 hover:bg-gray-100 rounded transition-colors text-gray-600"><span class="material-symbols-outlined text-sm">format_quote</span></button>
-              </div>
-              <textarea class="w-full p-6 bg-white border-none focus:ring-0 text-sm italic font-serif leading-relaxed text-gray-900" placeholder="Enter your philosophy..." rows="4">"True beauty is an ecosystem where health, confidence, and aesthetics exist in perfect harmony. We don't just enhance features; we cultivate the inner radiace of every individual who walks through our doors."</textarea>
-            </div>
-          </div>
-        </div>
-      </section>
+      <app-general-info 
+        [biography]="biography()"
+        [philosophy]="philosophy()"
+        (updateBiography)="biography.set($event)"
+        (updatePhilosophy)="philosophy.set($event)"
+        (save)="saveGeneralInfo()"
+      />
     }
 
-    <!-- Additional Links Section -->
     @if (activeTab() === 'Additional Links') {
-      <section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
-        <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
-          <div class="flex items-center">
-            <span class="material-symbols-outlined text-primary mr-3">link</span>
-            <h4 class="font-serif text-xl font-semibold text-gray-900" i18n="@@settingsSectionLinks">Additional Links</h4>
-          </div>
-          <button (click)="addLink()" class="flex items-center px-4 py-2 border border-primary text-primary hover:bg-primary/5 rounded-lg text-sm font-medium transition-all">
-            <span class="material-symbols-outlined text-sm mr-2">add</span> <span i18n="@@settingsBtnAddLink">Add New Link</span>
-          </button>
-        </div>
-        <div class="p-8">
-          <div class="overflow-x-auto">
-            <table class="w-full">
-              <thead>
-                <tr class="text-left text-xs font-semibold uppercase tracking-widest text-gray-400 border-b border-gray-100">
-              <th class="pb-4 px-4" i18n="@@settingsTableLabel">Label</th>
-                  <th class="pb-4 px-4" i18n="@@settingsTableTarget">Target URL</th>
-                  <th class="pb-4 px-4" i18n="@@settingsTableCategory">Category</th>
-                  <th class="pb-4 px-4 text-right" i18n="@@settingsTableAction">Action</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-50">
-                @for(link of additionalLinks(); track link.id; let i = $index){
-                  <tr class="group hover:bg-gray-50 transition-colors reveal-item" [style.animation-delay.ms]="i * 50">
-                    <td class="py-4 px-4">
-                      <input class="bg-transparent border-none focus:ring-0 text-sm font-medium p-0 text-gray-900" type="text" [value]="link.label"/>
-                    </td>
-                    <td class="py-4 px-4 text-sm text-primary underline truncate max-w-xs">
-                      {{link.targetUrl}}
-                    </td>
-                    <td class="py-4 px-4">
-                      <span class="px-2 py-1 text-[10px] font-bold uppercase rounded tracking-wider" [class]="link.categoryColor === 'blue' ? 'bg-blue-50 text-blue-600' : 'bg-green-50 text-green-600'">
-                        {{link.category}}
-                      </span>
-                    </td>
-                    <td class="py-4 px-4 text-right">
-                      <button (click)="removeLink(link.id)" class="text-gray-400 hover:text-red-500 transition-colors">
-                        <span class="material-symbols-outlined text-xl">delete</span>
-                      </button>
-                    </td>
-                  </tr>
-                }
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+      <app-additional-links 
+        [links]="additionalLinks()"
+        (addLink)="addLink()"
+        (removeLink)="removeLink($event)"
+        (updateLink)="updateLink($event)"
+      />
     }
 
-    <!-- SELECTS Section -->
     @if (activeTab() === 'SELECTS') {
-      <section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
-        <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
-          <div class="flex items-center">
-            <span class="material-symbols-outlined text-primary mr-3">list_alt</span>
-            <h4 class="font-serif text-xl font-semibold text-gray-900" i18n="@@settingsSectionSelects">Selection Lists</h4>
-          </div>
-          <button (click)="saveSelectionLists()" class="flex items-center px-4 py-2 bg-primary hover:bg-primary-hover text-black rounded-lg text-sm font-medium transition-all shadow-md btn-primary-shimmer active:scale-[0.98]" i18n="@@settingsBtnSave">
-            Save Lists
-          </button>
-        </div>
-        <div class="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          
-          <!-- Gallery Categories -->
-          <div class="space-y-4">
-            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
-              <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelGalleryCats">Gallery Categories</label>
-              <button (click)="addItem('gallery')" class="text-primary hover:text-primary-hover"><span class="material-symbols-outlined">add_circle</span></button>
-            </div>
-            <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
-              @for(item of galleryCategories(); track $index) {
-                <div class="flex items-center space-x-2 group">
-                  <input #input (blur)="updateItem('gallery', $index, input.value)" [value]="item" class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:bg-white transition-all"/>
-                  <button (click)="removeItem('gallery', $index)" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
-                </div>
-              }
-            </div>
-          </div>
-
-          <!-- Treatment Categories -->
-          <div class="space-y-4">
-            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
-              <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelTreatmentCats">Treatment Categories</label>
-              <button (click)="addItem('treatment')" class="text-primary hover:text-primary-hover"><span class="material-symbols-outlined">add_circle</span></button>
-            </div>
-            <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
-              @for(item of treatmentCategories(); track $index) {
-                <div class="flex items-center space-x-2 group">
-                  <input #input (blur)="updateItem('treatment', $index, input.value)" [value]="item" class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:bg-white transition-all"/>
-                  <button (click)="removeItem('treatment', $index)" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
-                </div>
-              }
-            </div>
-          </div>
-
-          <!-- Veil Silhouettes -->
-          <div class="space-y-4">
-            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
-              <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelSilhouettes">Silhouettes</label>
-              <button (click)="addItem('silhouette')" class="text-primary hover:text-primary-hover"><span class="material-symbols-outlined">add_circle</span></button>
-            </div>
-            <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
-              @for(item of veilSilhouettes(); track $index) {
-                <div class="flex items-center space-x-2 group">
-                  <input #input (blur)="updateItem('silhouette', $index, input.value)" [value]="item" class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:bg-white transition-all"/>
-                  <button (click)="removeItem('silhouette', $index)" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
-                </div>
-              }
-            </div>
-          </div>
-
-          <!-- Veil Fabrics -->
-          <div class="space-y-4">
-            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
-              <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelFabrics">Fabrics</label>
-              <button (click)="addItem('fabric')" class="text-primary hover:text-primary-hover"><span class="material-symbols-outlined">add_circle</span></button>
-            </div>
-            <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
-              @for(item of veilFabrics(); track $index) {
-                <div class="flex items-center space-x-2 group">
-                  <input #input (blur)="updateItem('fabric', $index, input.value)" [value]="item" class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:bg-white transition-all"/>
-                  <button (click)="removeItem('fabric', $index)" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
-                </div>
-              }
-            </div>
-          </div>
-
-          <!-- Veil Train Lengths -->
-          <div class="space-y-4">
-            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
-              <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelTrains">Train Lengths</label>
-              <button (click)="addItem('train')" class="text-primary hover:text-primary-hover"><span class="material-symbols-outlined">add_circle</span></button>
-            </div>
-            <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
-              @for(item of veilTrainLengths(); track $index) {
-                <div class="flex items-center space-x-2 group">
-                  <input #input (blur)="updateItem('train', $index, input.value)" [value]="item" class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:bg-white transition-all"/>
-                  <button (click)="removeItem('train', $index)" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
-                </div>
-              }
-            </div>
-          </div>
-
-          <!-- Veil Necklines -->
-          <div class="space-y-4">
-            <div class="flex justify-between items-center border-b border-gray-100 pb-2">
-              <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelNecklines">Necklines</label>
-              <button (click)="addItem('neckline')" class="text-primary hover:text-primary-hover"><span class="material-symbols-outlined">add_circle</span></button>
-            </div>
-            <div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
-              @for(item of veilNecklines(); track $index) {
-                <div class="flex items-center space-x-2 group">
-                  <input #input (blur)="updateItem('neckline', $index, input.value)" [value]="item" class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:bg-white transition-all"/>
-                  <button (click)="removeItem('neckline', $index)" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"><span class="material-symbols-outlined text-lg">delete</span></button>
-                </div>
-              }
-            </div>
-          </div>
-
-        </div>
-      </section>
+      <app-selects-settings 
+        [galleryCategories]="galleryCategories()"
+        [treatmentCategories]="treatmentCategories()"
+        [veilSilhouettes]="veilSilhouettes()"
+        [veilFabrics]="veilFabrics()"
+        [veilTrainLengths]="veilTrainLengths()"
+        [veilNecklines]="veilNecklines()"
+        (addItem)="addItem($event)"
+        (updateItem)="updateItem($event.type, $event.index, $event.value)"
+        (removeItem)="removeItem($event.type, $event.index)"
+        (save)="saveSelectionLists()"
+      />
     }
 
   </div>
@@ -336,7 +90,7 @@
       <p class="text-sm text-gray-500 font-medium"><ng-container i18n="@@settingsLastUpdated">Last updated:</ng-container> <span class="text-gray-900">Oct 26, 2024 - 14:32</span></p>
       <div class="flex space-x-4">
           <button class="px-6 py-2.5 text-gray-500 hover:text-gray-800 font-medium transition-colors" i18n="@@settingsBtnDiscard">Discard All</button>
-          <button class="px-8 py-2.5 bg-primary hover:bg-primary-hover text-black rounded-xl shadow-gold hover:shadow-lg transition-all font-semibold tracking-wide btn-primary-shimmer active:scale-[0.98]" i18n="@@settingsBtnPublish">Publish Changes</button>
+          <button (click)="saveSelectionLists()" class="px-8 py-2.5 bg-primary hover:bg-primary-hover text-black rounded-xl shadow-gold hover:shadow-lg transition-all font-semibold tracking-wide btn-primary-shimmer active:scale-[0.98]" i18n="@@settingsBtnPublish">Publish Changes</button>
       </div>
   </div>
 </div>

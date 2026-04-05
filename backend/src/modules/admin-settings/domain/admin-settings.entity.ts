@@ -11,6 +11,8 @@ export class AdminSettings implements IAdminSettings {
     public readonly socialLinks: Record<string, string>,
     public readonly workHours: Record<string, string>,
     public readonly ownerInfo: IOwnerInfo,
+    public readonly biography: string,
+    public readonly philosophy: string,
     public readonly galleryCategories: string[],
     public readonly treatmentCategories: string[],
     public readonly veilSilhouettes: string[],

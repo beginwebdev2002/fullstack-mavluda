@@ -15,6 +15,8 @@ export interface IAdminSettings {
   socialLinks: Record<string, string>;
   workHours: Record<string, string>;
   ownerInfo: IOwnerInfo;
+  biography: string;
+  philosophy: string;
   galleryCategories: string[];
   treatmentCategories: string[];
   veilSilhouettes: string[];

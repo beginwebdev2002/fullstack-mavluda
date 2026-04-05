@@ -54,6 +54,14 @@ export class CreateAdminSettingsDto {
   @IsNotEmpty()
   ownerInfo: OwnerInfoDto;
 
+  @IsString()
+  @IsOptional()
+  biography: string;
+
+  @IsString()
+  @IsOptional()
+  philosophy: string;
+
   @IsArray()
   @IsString({ each: true })
   @IsOptional()
