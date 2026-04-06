@@ -1,0 +1,171 @@
+<div class="p-4 sm:p-8 max-w-7xl mx-auto space-y-8 animate-page-enter">
+  <!-- Header -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <div>
+      <h1 class="font-display text-3xl font-medium text-gray-900" i18n="Clients title@@clientsTitle">Client Relationship Management</h1>
+      <p class="text-gray-500 mt-1 text-sm" i18n="Clients subtitle@@clientsSubtitle">Manage your prestigious clientele and their history.</p>
+    </div>
+    <div>
+      <button class="flex items-center gap-2 px-6 py-3 bg-[#DEB853] text-white text-sm font-medium rounded-lg hover:bg-yellow-600 transition-colors shadow-sm">
+        <span class="material-symbols-outlined text-[18px]">person_add</span>
+        <span i18n="Clients register@@clientsRegister">Register New Client</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Filters & Table Container -->
+  <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+    <!-- Filters -->
+    <div class="p-6 border-b border-gray-100 flex flex-col lg:flex-row items-end gap-6 justify-between">
+      <div class="flex flex-wrap lg:flex-nowrap gap-6 w-full hidden md:flex">
+        <!-- Membership Level -->
+        <div class="space-y-1.5 min-w-[200px]">
+          <label class="text-xs font-semibold text-gray-500 tracking-wider uppercase">Membership Level</label>
+          <div class="relative">
+            <select class="w-full appearance-none bg-gray-50 border border-gray-200 text-gray-700 text-sm rounded-lg px-4 py-2.5 pr-8 focus:outline-none focus:ring-2 focus:ring-[#DEB853]/50 focus:border-[#DEB853]">
+              <option>All Memberships</option>
+              <option>Platinum VIP</option>
+              <option>Gold Tier</option>
+              <option>Silver Tier</option>
+            </select>
+            <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none text-xl">expand_more</span>
+          </div>
+        </div>
+
+        <!-- Last Visit -->
+        <div class="space-y-1.5 min-w-[200px]">
+          <label class="text-xs font-semibold text-gray-500 tracking-wider uppercase">Last Visit</label>
+          <div class="relative">
+            <select class="w-full appearance-none bg-gray-50 border border-gray-200 text-gray-700 text-sm rounded-lg px-4 py-2.5 pr-8 focus:outline-none focus:ring-2 focus:ring-[#DEB853]/50 focus:border-[#DEB853]">
+              <option>Anytime</option>
+              <option>Last 7 Days</option>
+              <option>Last 30 Days</option>
+              <option>Last 3 Months</option>
+            </select>
+            <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none text-xl">expand_more</span>
+          </div>
+        </div>
+
+        <!-- Spend Range -->
+        <div class="space-y-1.5 min-w-[200px]">
+          <label class="text-xs font-semibold text-gray-500 tracking-wider uppercase">Spend Range</label>
+          <div class="relative">
+            <select class="w-full appearance-none bg-gray-50 border border-gray-200 text-gray-700 text-sm rounded-lg px-4 py-2.5 pr-8 focus:outline-none focus:ring-2 focus:ring-[#DEB853]/50 focus:border-[#DEB853]">
+              <option>All Amounts</option>
+              <option>$1,000 - $5,000</option>
+              <option>$5,000 - $10,000</option>
+              <option>$10,000+</option>
+            </select>
+            <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none text-xl">expand_more</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advanced Filters Button -->
+      <button class="flex items-center gap-2 px-5 py-2.5 bg-white border border-gray-200 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap">
+        <span class="material-symbols-outlined text-[18px]">filter_list</span>
+        Advanced Filters
+      </button>
+    </div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse min-w-[900px]">
+        <thead>
+          <tr class="bg-gray-50/50">
+            <th class="py-4 px-6 text-xs font-semibold text-gray-500 tracking-wider uppercase">Client Profile</th>
+            <th class="py-4 px-6 text-xs font-semibold text-gray-500 tracking-wider uppercase">Contact Details</th>
+            <th class="py-4 px-6 text-xs font-semibold text-gray-500 tracking-wider uppercase">Membership</th>
+            <th class="py-4 px-6 text-xs font-semibold text-gray-500 tracking-wider uppercase">Last Visit</th>
+            <th class="py-4 px-6 text-xs font-semibold text-gray-500 tracking-wider uppercase">Total Spend</th>
+            <th class="py-4 px-6 text-xs font-semibold text-gray-500 tracking-wider uppercase text-right">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 bg-white">
+          @for (client of clients(); track client.id; let i = $index) {
+            <tr class="hover:bg-gray-50/50 transition-colors group reveal-item" [style.animation-delay.ms]="i * 50">
+              <!-- Client Profile -->
+              <td class="py-4 px-6">
+                <div class="flex items-center gap-3">
+                  <!-- Avatar -->
+                  @if (client.avatarType === 'image') {
+                    <img [src]="client.avatarUrl" alt="" class="w-10 h-10 rounded-full object-cover shadow-sm ring-1 ring-gray-100">
+                  } @else if (client.avatarType === 'icon') {
+                    <div class="w-10 h-10 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center">
+                      <span class="material-symbols-outlined text-[20px]">person</span>
+                    </div>
+                  } @else {
+                    <div class="w-10 h-10 rounded-full bg-yellow-100 text-yellow-700 font-bold flex items-center justify-center text-sm shadow-sm">
+                      {{ client.initials }}
+                    </div>
+                  }
+                  
+                  <div>
+                    <div class="text-sm font-medium text-gray-900">{{ client.name }}</div>
+                    <div class="text-xs text-gray-500 mt-0.5">ID: {{ client.id }}</div>
+                  </div>
+                </div>
+              </td>
+
+              <!-- Contact Details -->
+              <td class="py-4 px-6">
+                <div class="text-sm text-gray-900">{{ client.phone }}</div>
+                <div class="text-xs text-gray-500 mt-0.5">{{ client.email }}</div>
+              </td>
+
+              <!-- Membership -->
+              <td class="py-4 px-6">
+                <span class="inline-flex items-center px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full border"
+                  [ngClass]="{
+                    'bg-yellow-50 text-yellow-700 border-yellow-200': client.membership === 'Platinum VIP',
+                    'bg-gray-100 text-gray-600 border-gray-200': client.membership === 'Gold Tier' || client.membership === 'Silver Tier'
+                  }">
+                  {{ client.membership }}
+                </span>
+              </td>
+
+              <!-- Last Visit -->
+              <td class="py-4 px-6 text-sm text-gray-700">
+                {{ client.lastVisit }}
+              </td>
+
+              <!-- Total Spend -->
+              <td class="py-4 px-6 text-sm font-medium text-gray-900">
+                {{ client.totalSpend | currency:'USD':'symbol':'1.2-2' }}
+              </td>
+
+              <!-- Actions -->
+              <td class="py-4 px-6 text-right">
+                <div class="flex items-center justify-end gap-3 text-gray-400">
+                  <button class="hover:text-gray-900 transition-colors"><span class="material-symbols-outlined text-[18px]">visibility</span></button>
+                  <button class="hover:text-blue-600 transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+                  <button class="hover:text-red-600 transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="p-4 px-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-sm text-gray-500">
+        Showing <span class="font-medium text-gray-900">1</span> to <span class="font-medium text-gray-900">4</span> of <span class="font-medium text-gray-900">{{ totalClients() }}</span> registered clients
+      </div>
+      <div class="flex items-center gap-1">
+        <button class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-700 hover:bg-gray-50 rounded transition-colors" disabled>
+          <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+        </button>
+        <button class="w-8 h-8 flex items-center justify-center bg-[#DEB853] text-white font-medium rounded hover:bg-yellow-600 transition-colors text-sm">1</button>
+        <button class="w-8 h-8 flex items-center justify-center text-gray-600 font-medium hover:bg-gray-50 rounded transition-colors text-sm">2</button>
+        <button class="w-8 h-8 flex items-center justify-center text-gray-600 font-medium hover:bg-gray-50 rounded transition-colors text-sm">3</button>
+        <span class="w-8 h-8 flex items-center justify-center text-gray-400 text-sm">...</span>
+        <button class="w-8 h-8 flex items-center justify-center text-gray-600 font-medium hover:bg-gray-50 rounded transition-colors text-sm">38</button>
+        <button class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded transition-colors">
+          <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

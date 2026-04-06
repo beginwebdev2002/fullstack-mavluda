@@ -31,7 +31,7 @@ export const routes: Routes = [
       {
         path: "clients",
         loadComponent: () =>
-          import("@pages/dashboard").then((m) => m.DashboardComponent),
+          import("@pages/clients").then((m) => m.ClientsPageComponent),
       },
       {
         path: "gallery",
