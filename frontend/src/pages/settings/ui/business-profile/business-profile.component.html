@@ -1,15 +1,4 @@
-import { Component, ChangeDetectionStrategy, input, output } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { AdminLocation, OwnerInfo } from '@shared/models';
-
-@Component({
-  selector: 'app-business-profile',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
-    <section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
+<section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
       <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
         <div class="flex items-center">
           <span class="material-symbols-outlined text-primary mr-3">business_center</span>
@@ -28,8 +17,7 @@ import { AdminLocation, OwnerInfo } from '@shared/models';
               <input 
                 class="w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm text-gray-900" 
                 type="text" 
-                [ngModel]="ownerInfo().phoneNumber"
-                (ngModelChange)="onOwnerInfoChange('phoneNumber', $event)"
+                [formField]="settingsForm().ownerInfo.phoneNumber"
               />
             </div>
           </div>
@@ -40,8 +28,7 @@ import { AdminLocation, OwnerInfo } from '@shared/models';
               <input 
                 class="w-full pl-11 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm text-gray-900" 
                 type="text" 
-                [ngModel]="location().address"
-                (ngModelChange)="onLocationChange('address', $event)"
+                [formField]="settingsForm().location.address"
               />
             </div>
           </div>
@@ -51,8 +38,7 @@ import { AdminLocation, OwnerInfo } from '@shared/models';
               <input 
                 class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm font-mono text-gray-900" 
                 type="number" 
-                [ngModel]="location().latitude"
-                (ngModelChange)="onLocationChange('latitude', $event)"
+                [formField]="settingsForm().location.latitude"
               />
             </div>
             <div>
@@ -60,8 +46,7 @@ import { AdminLocation, OwnerInfo } from '@shared/models';
               <input 
                 class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm font-mono text-gray-900" 
                 type="number" 
-                [ngModel]="location().longitude"
-                (ngModelChange)="onLocationChange('longitude', $event)"
+                [formField]="settingsForm().location.longitude"
               />
             </div>
           </div>
@@ -80,21 +65,3 @@ import { AdminLocation, OwnerInfo } from '@shared/models';
         </div>
       </div>
     </section>
-  `
-})
-export class BusinessProfileComponent {
-  location = input.required<AdminLocation>();
-  ownerInfo = input.required<OwnerInfo>();
-  
-  updateLocation = output<AdminLocation>();
-  updateOwnerInfo = output<OwnerInfo>();
-  save = output<void>();
-
-  onLocationChange(field: keyof AdminLocation, value: any) {
-    this.updateLocation.emit({ ...this.location(), [field]: value });
-  }
-
-  onOwnerInfoChange(field: keyof OwnerInfo, value: any) {
-    this.updateOwnerInfo.emit({ ...this.ownerInfo(), [field]: value });
-  }
-}

@@ -1,13 +1,14 @@
 import { Component, ChangeDetectionStrategy, signal, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { form } from '@angular/forms/signals';
 import { AdminSettingsService } from '@entities/admin-settings';
-import { AdminLocation, OwnerInfo } from '@shared/models/admin-settings.model';
-import { BusinessProfileComponent } from './ui/business-profile.component';
-import { SocialMatrixComponent, SocialPlatform } from './ui/social-matrix.component';
-import { GeneralInfoComponent } from './ui/general-info.component';
-import { AdditionalLinksComponent, AdditionalLink } from './ui/additional-links.component';
-import { SelectsSettingsComponent, SelectListType } from './ui/selects-settings.component';
+import { AdminSettings } from '@shared/models/admin-settings.model';
+import { BusinessProfileComponent } from './ui/business-profile/business-profile.component';
+import { SocialMatrixComponent, SocialPlatform } from './ui/social-matrix/social-matrix.component';
+import { GeneralInfoComponent } from './ui/general-info/general-info.component';
+import { AdditionalLinksComponent, AdditionalLink } from './ui/additional-links/additional-links.component';
+import { SelectsSettingsComponent, SelectListType } from './ui/selects-settings/selects-settings.component';
 
 type SettingsTab = 'Business Profile' | 'Social Matrix' | 'General Info' | 'Additional Links' | 'SELECTS';
 
@@ -34,18 +35,23 @@ export class SettingsComponent implements OnInit {
     activeTab = signal<SettingsTab>('Business Profile');
 
     // Admin Settings State (Signals)
-    location = signal<AdminLocation>({ address: '', latitude: 0, longitude: 0 });
-    ownerInfo = signal<OwnerInfo>({ name: '', phoneNumber: '' });
-    biography = signal<string>('');
-    philosophy = signal<string>('');
+    settingsModel = signal<AdminSettings>({
+      id: '',
+      location: { address: '', latitude: 0, longitude: 0 },
+      ownerInfo: { name: '', phoneNumber: '' },
+      biography: '',
+      philosophy: '',
+      galleryCategories: [],
+      treatmentCategories: [],
+      veilSilhouettes: [],
+      veilFabrics: [],
+      veilTrainLengths: [],
+      veilNecklines: [],
+      socialLinks: {},
+      workHours: {}
+    });
 
-    // Selection Lists (Signals)
-    galleryCategories = signal<string[]>([]);
-    treatmentCategories = signal<string[]>([]);
-    veilSilhouettes = signal<string[]>([]);
-    veilFabrics = signal<string[]>([]);
-    veilTrainLengths = signal<string[]>([]);
-    veilNecklines = signal<string[]>([]);
+    settingsForm = form(this.settingsModel);
 
     // UI-only for now or needs conversion
     socialPlatforms = signal<SocialPlatform[]>([
@@ -62,16 +68,11 @@ export class SettingsComponent implements OnInit {
     ngOnInit() {
       this.adminSettingsService.getSettings().subscribe(settings => {
         if (settings) {
-          this.location.set(settings.location || { address: '', latitude: 0, longitude: 0 });
-          this.ownerInfo.set(settings.ownerInfo || { name: '', phoneNumber: '' });
-          this.biography.set(settings.biography || '');
-          this.philosophy.set(settings.philosophy || '');
-          this.galleryCategories.set(settings.galleryCategories || []);
-          this.treatmentCategories.set(settings.treatmentCategories || []);
-          this.veilSilhouettes.set(settings.veilSilhouettes || []);
-          this.veilFabrics.set(settings.veilFabrics || []);
-          this.veilTrainLengths.set(settings.veilTrainLengths || []);
-          this.veilNecklines.set(settings.veilNecklines || []);
+          const current = this.settingsModel();
+          this.settingsModel.set({
+            ...current,
+            ...settings
+          });
           if (settings.socialLinks && Object.keys(settings.socialLinks).length > 0) {
             const platforms = Object.entries(settings.socialLinks).map(([name, url], i) => ({
               id: Date.now() + i,
@@ -90,8 +91,8 @@ export class SettingsComponent implements OnInit {
     
     saveBusinessProfile() {
       this.adminSettingsService.updateSettings({
-        location: this.location(),
-        ownerInfo: this.ownerInfo()
+        location: this.settingsModel().location,
+        ownerInfo: this.settingsModel().ownerInfo
       }).subscribe();
     }
 
@@ -107,56 +108,68 @@ export class SettingsComponent implements OnInit {
 
     saveGeneralInfo() {
       this.adminSettingsService.updateSettings({
-        biography: this.biography(),
-        philosophy: this.philosophy()
+        biography: this.settingsModel().biography,
+        philosophy: this.settingsModel().philosophy
       }).subscribe();
     }
 
     saveSelectionLists() {
       this.adminSettingsService.updateSettings({
-        galleryCategories: this.galleryCategories(),
-        treatmentCategories: this.treatmentCategories(),
-        veilSilhouettes: this.veilSilhouettes(),
-        veilFabrics: this.veilFabrics(),
-        veilTrainLengths: this.veilTrainLengths(),
-        veilNecklines: this.veilNecklines()
+        galleryCategories: this.settingsModel().galleryCategories,
+        treatmentCategories: this.settingsModel().treatmentCategories,
+        veilSilhouettes: this.settingsModel().veilSilhouettes,
+        veilFabrics: this.settingsModel().veilFabrics,
+        veilTrainLengths: this.settingsModel().veilTrainLengths,
+        veilNecklines: this.settingsModel().veilNecklines
       }).subscribe();
     }
 
     // --- CRUD for Selection Lists ---
-
+    // (Note: To simplify the implementation, dynamic arrays are updated directly via the signal model)
     addItem(type: SelectListType) {
       const newItem = 'New Item';
-      switch(type) {
-        case 'gallery': this.galleryCategories.update(items => [...items, newItem]); break;
-        case 'treatment': this.treatmentCategories.update(items => [...items, newItem]); break;
-        case 'silhouette': this.veilSilhouettes.update(items => [...items, newItem]); break;
-        case 'fabric': this.veilFabrics.update(items => [...items, newItem]); break;
-        case 'train': this.veilTrainLengths.update(items => [...items, newItem]); break;
-        case 'neckline': this.veilNecklines.update(items => [...items, newItem]); break;
-      }
+      this.settingsModel.update(m => {
+        const lists = {...m};
+        switch(type) {
+          case 'gallery': lists.galleryCategories = [...m.galleryCategories, newItem]; break;
+          case 'treatment': lists.treatmentCategories = [...m.treatmentCategories, newItem]; break;
+          case 'silhouette': lists.veilSilhouettes = [...m.veilSilhouettes, newItem]; break;
+          case 'fabric': lists.veilFabrics = [...m.veilFabrics, newItem]; break;
+          case 'train': lists.veilTrainLengths = [...m.veilTrainLengths, newItem]; break;
+          case 'neckline': lists.veilNecklines = [...m.veilNecklines, newItem]; break;
+        }
+        return lists;
+      });
     }
 
     updateItem(type: SelectListType, index: number, value: string) {
-      switch(type) {
-        case 'gallery': this.galleryCategories.update(items => { items[index] = value; return [...items]; }); break;
-        case 'treatment': this.treatmentCategories.update(items => { items[index] = value; return [...items]; }); break;
-        case 'silhouette': this.veilSilhouettes.update(items => { items[index] = value; return [...items]; }); break;
-        case 'fabric': this.veilFabrics.update(items => { items[index] = value; return [...items]; }); break;
-        case 'train': this.veilTrainLengths.update(items => { items[index] = value; return [...items]; }); break;
-        case 'neckline': this.veilNecklines.update(items => { items[index] = value; return [...items]; }); break;
-      }
+      this.settingsModel.update(m => {
+        const lists = {...m};
+        switch(type) {
+          case 'gallery': lists.galleryCategories = lists.galleryCategories.map((v, i) => i === index ? value : v); break;
+          case 'treatment': lists.treatmentCategories = lists.treatmentCategories.map((v, i) => i === index ? value : v); break;
+          case 'silhouette': lists.veilSilhouettes = lists.veilSilhouettes.map((v, i) => i === index ? value : v); break;
+          case 'fabric': lists.veilFabrics = lists.veilFabrics.map((v, i) => i === index ? value : v); break;
+          case 'train': lists.veilTrainLengths = lists.veilTrainLengths.map((v, i) => i === index ? value : v); break;
+          case 'neckline': lists.veilNecklines = lists.veilNecklines.map((v, i) => i === index ? value : v); break;
+        }
+        return lists;
+      });
     }
 
     removeItem(type: SelectListType, index: number) {
-      switch(type) {
-        case 'gallery': this.galleryCategories.update(items => items.filter((_, i) => i !== index)); break;
-        case 'treatment': this.treatmentCategories.update(items => items.filter((_, i) => i !== index)); break;
-        case 'silhouette': this.veilSilhouettes.update(items => items.filter((_, i) => i !== index)); break;
-        case 'fabric': this.veilFabrics.update(items => items.filter((_, i) => i !== index)); break;
-        case 'train': this.veilTrainLengths.update(items => items.filter((_, i) => i !== index)); break;
-        case 'neckline': this.veilNecklines.update(items => items.filter((_, i) => i !== index)); break;
-      }
+      this.settingsModel.update(m => {
+        const lists = {...m};
+        switch(type) {
+          case 'gallery': lists.galleryCategories = lists.galleryCategories.filter((_, i) => i !== index); break;
+          case 'treatment': lists.treatmentCategories = lists.treatmentCategories.filter((_, i) => i !== index); break;
+          case 'silhouette': lists.veilSilhouettes = lists.veilSilhouettes.filter((_, i) => i !== index); break;
+          case 'fabric': lists.veilFabrics = lists.veilFabrics.filter((_, i) => i !== index); break;
+          case 'train': lists.veilTrainLengths = lists.veilTrainLengths.filter((_, i) => i !== index); break;
+          case 'neckline': lists.veilNecklines = lists.veilNecklines.filter((_, i) => i !== index); break;
+        }
+        return lists;
+      });
     }
 
     // --- Social Platform methods ---

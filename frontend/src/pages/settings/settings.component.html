@@ -32,10 +32,7 @@
     
     @if (activeTab() === 'Business Profile') {
       <app-business-profile 
-        [location]="location()"
-        [ownerInfo]="ownerInfo()"
-        (updateLocation)="location.set($event)"
-        (updateOwnerInfo)="ownerInfo.set($event)"
+        [settingsForm]="settingsForm"
         (save)="saveBusinessProfile()"
       />
     }
@@ -52,10 +49,7 @@
 
     @if (activeTab() === 'General Info') {
       <app-general-info 
-        [biography]="biography()"
-        [philosophy]="philosophy()"
-        (updateBiography)="biography.set($event)"
-        (updatePhilosophy)="philosophy.set($event)"
+        [settingsForm]="settingsForm"
         (save)="saveGeneralInfo()"
       />
     }
@@ -71,12 +65,12 @@
 
     @if (activeTab() === 'SELECTS') {
       <app-selects-settings 
-        [galleryCategories]="galleryCategories()"
-        [treatmentCategories]="treatmentCategories()"
-        [veilSilhouettes]="veilSilhouettes()"
-        [veilFabrics]="veilFabrics()"
-        [veilTrainLengths]="veilTrainLengths()"
-        [veilNecklines]="veilNecklines()"
+        [galleryCategories]="settingsModel().galleryCategories"
+        [treatmentCategories]="settingsModel().treatmentCategories"
+        [veilSilhouettes]="settingsModel().veilSilhouettes"
+        [veilFabrics]="settingsModel().veilFabrics"
+        [veilTrainLengths]="settingsModel().veilTrainLengths"
+        [veilNecklines]="settingsModel().veilNecklines"
         (addItem)="addItem($event)"
         (updateItem)="updateItem($event.type, $event.index, $event.value)"
         (removeItem)="removeItem($event.type, $event.index)"

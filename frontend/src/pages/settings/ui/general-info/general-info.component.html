@@ -1,14 +1,4 @@
-import { Component, ChangeDetectionStrategy, input, output } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
-@Component({
-  selector: 'app-general-info',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
-    <section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
+<section class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden animate-page-enter">
       <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
         <div class="flex items-center">
           <span class="material-symbols-outlined text-primary mr-3">auto_awesome</span>
@@ -34,8 +24,7 @@ import { FormsModule } from '@angular/forms';
               class="w-full p-6 bg-white border-none focus:ring-0 text-sm leading-relaxed text-gray-900" 
               placeholder="Write the biography..." 
               rows="6"
-              [ngModel]="biography()"
-              (ngModelChange)="updateBiography.emit($event)"
+              [formField]="settingsForm().biography"
             ></textarea>
           </div>
         </div>
@@ -49,20 +38,9 @@ import { FormsModule } from '@angular/forms';
               class="w-full p-6 bg-white border-none focus:ring-0 text-sm italic font-serif leading-relaxed text-gray-900" 
               placeholder="Enter your philosophy..." 
               rows="4"
-              [ngModel]="philosophy()"
-              (ngModelChange)="updatePhilosophy.emit($event)"
+              [formField]="settingsForm().philosophy"
             ></textarea>
           </div>
         </div>
       </div>
     </section>
-  `
-})
-export class GeneralInfoComponent {
-  biography = input.required<string>();
-  philosophy = input.required<string>();
-  
-  updateBiography = output<string>();
-  updatePhilosophy = output<string>();
-  save = output<void>();
-}
