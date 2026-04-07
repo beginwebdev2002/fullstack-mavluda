@@ -1,0 +1,11 @@
+<div class="entity-list">
+  <app-entity-card
+      *ngFor="let entity of entities"
+      [entity]="entity"
+      [imageUrlPath]="imageUrlPath"
+      [titlePath]="titlePath"
+      [descriptionPath]="descriptionPath"
+      (edit)="onEdit($event)"
+      (delete)="onDelete($event)"
+  ></app-entity-card>
+</div>

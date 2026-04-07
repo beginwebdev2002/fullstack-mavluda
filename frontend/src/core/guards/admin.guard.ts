@@ -1,19 +1,12 @@
-import { inject } from "@angular/core";
-import { CanActivateFn, Router } from "@angular/router";
-import { AuthService } from "@entities/user";
+import { CanActivateFn, Router } from '@angular/router';
+import { inject } from '@angular/core';
 
 export const adminGuard: CanActivateFn = (route, state) => {
-  const authService = inject(AuthService);
   const router = inject(Router);
-
-  if (authService.isLoggedIn() && authService.isAdmin()) {
+  // Add actual role check here when auth service is connected
+  const role = localStorage.getItem('role');
+  if (role === 'admin') {
     return true;
   }
-
-  // If logged in but not admin, redirect to home or forbidden
-  if (authService.isLoggedIn()) {
-    return router.createUrlTree(["/"]);
-  }
-
-  return router.createUrlTree(["/auth/login"]);
+  return router.parseUrl('/admin/login');
 };
