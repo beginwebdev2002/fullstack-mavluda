@@ -49,21 +49,16 @@ export class VeilFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
-    setTimeout(() => {
-      console.log(this.veilForm.price().errors());
-    }, 3000);
   }
 
   initForm() {
     if (this.veil()) {
-      console.log(this.veil());
       this.isEditMode.set(true);
 
       this.previewImage.set(linkServerConvert(this.veil().image));
       this.veilModel.set(this.veil());
     } else {
       this.isEditMode.set(false);
-      console.log("veil", veilFormData);
 
       this.veilModel.set(veilFormData);
     }
@@ -92,7 +87,6 @@ export class VeilFormComponent implements OnInit {
 
   onSubmit() {
     if (this.veilForm().valid()) {
-      console.log(this.veilForm().value());
       this.save.emit({
         data: this.veilForm().value(),
         file: this.selectedFile(),
