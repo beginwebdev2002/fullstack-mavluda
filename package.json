@@ -1,0 +1,23 @@
+{
+  "name": "full-mavluda-beauty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run start:dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beginwebdev2002/fullstack-mavluda.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/beginwebdev2002/fullstack-mavluda/issues"
+  },
+  "homepage": "https://github.com/beginwebdev2002/fullstack-mavluda#readme"
+}
