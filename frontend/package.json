@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "ng serve --configuration=development",
     "build": "ng build",
-    "preview": "ng serve --configuration=production"
+    "preview": "ng serve --configuration=production",
+    "dev-jules": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run start:dev"
   },
   "dependencies": {
     "@angular/animations": "^21.1.3",
