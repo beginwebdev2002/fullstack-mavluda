@@ -8,7 +8,7 @@ import {
 } from "@angular/core";
 import { environment } from "@environments/environment";
 import { VeilService } from "@entities/veil";
-import { Veil, veilFormData } from "@features/veil";
+import { Veil, resetVeilData } from "@features/veil";
 import { convertFormData } from "@shared/lib";
 import { VeilFormComponent } from "./ui/veil-form/veil-form.component";
 import { ImagePopupComponent, ListViewComponent, ListViewColumn, CardViewComponent, CardViewConfig } from "@shared/ui";
@@ -82,7 +82,7 @@ export class VeilPageComponent implements OnInit {
 
   closeEditModal() {
     this.isVeilFormOpen.set(false);
-    this.editingVeil.set(veilFormData);
+    this.editingVeil.set(resetVeilData);
   }
 
   handleSave(event: { data: Veil; file: File | null }) {

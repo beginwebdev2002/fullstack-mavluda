@@ -1,14 +1,6 @@
 import { required } from "@angular/forms/signals";
 import { Gallery } from "@shared/models";
 
-export const galleryFormData: Gallery = {
-  imageUrl: "",
-  title: "",
-  category: "visage",
-  status: "draft",
-  alt: "",
-};
-
 export const resetGalleryData: Gallery = {
   imageUrl: "",
   title: "",
