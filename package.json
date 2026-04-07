@@ -1,0 +1,22 @@
+{
+  "name": "full-mavluda-beauty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beginwebdev2002/fullstack-mavluda.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/beginwebdev2002/fullstack-mavluda/issues"
+  },
+  "homepage": "https://github.com/beginwebdev2002/fullstack-mavluda#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
