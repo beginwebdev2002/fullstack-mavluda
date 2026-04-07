@@ -11,7 +11,7 @@ import {
 import { form, FormField } from "@angular/forms/signals";
 import { Gallery, ImageCategory } from "@shared/models";
 import { linkServerConvert } from "@shared/lib";
-import { galleryFormData, galleryValidationSchema, resetGalleryData } from "@features/gallery";
+import { galleryValidationSchema, resetGalleryData } from "@features/gallery";
 import { ImagePopupComponent } from "@shared/ui";
 import { environment } from "@environments/environment";
 
@@ -30,7 +30,7 @@ export class GalleryFormComponent implements OnInit {
   save = output<{ data: any; file: File | null }>();
   cancel = output<void>();
 
-  galleryModel = signal<Gallery>(galleryFormData);
+  galleryModel = signal<Gallery>(resetGalleryData);
   galleryForm = form<Gallery>(this.galleryModel, galleryValidationSchema);
   selectedFile = signal<File | null>(null);
   previewImage = linkedSignal(() => {
@@ -53,7 +53,7 @@ export class GalleryFormComponent implements OnInit {
       this.galleryModel.set(this.image());
     } else {
       this.isEditMode.set(false);
-      this.galleryModel.set(galleryFormData);
+      this.galleryModel.set(resetGalleryData);
     }
   }
 

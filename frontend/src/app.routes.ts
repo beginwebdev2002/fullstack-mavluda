@@ -5,6 +5,10 @@ import { AdminLayoutComponent, UserLayoutComponent } from "@widgets/layouts";
 export const routes: Routes = [
   { path: "", redirectTo: "user/home", pathMatch: "full" },
   { path: "auth", component: AuthComponent },
+  {
+    path: "admin/login",
+    loadComponent: () => import("./pages/admin-login").then((m) => m.AdminLoginComponent),
+  },
 
   // Admin Routes
   {

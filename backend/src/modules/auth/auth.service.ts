@@ -35,25 +35,15 @@ export class AuthService {
     return null;
   }
 
-  async login(loginDto: LoginDto): Promise<AuthResponse> {
+  async login(loginDto: LoginDto): Promise<AuthResponse & { refresh_token: string }> {
     const user = await this.validateUser(loginDto.email, loginDto.password);
     if (!user) {
       throw new UnauthorizedException('Invalid credentials');
     }
-    const payload = {
-      email: user.email,
-      sub: user.id,
-      role: user.role,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      photoUrl: user.photoUrl,
-    };
-    return {
-      access_token: this.jwtService.sign(payload),
-    };
+    return this.generateTokens(user);
   }
 
-  async register(registerDto: RegisterDto): Promise<AuthResponse> {
+  async register(registerDto: RegisterDto): Promise<AuthResponse & { refresh_token: string }> {
     const existing = await this.userService.findByEmail(registerDto.email);
     if (existing) {
       throw new ConflictException('User with this email already exists');
@@ -73,16 +63,22 @@ export class AuthService {
       username: registerDto.username,
     } as unknown as Omit<User, 'id' | 'createdAt'>);
 
+    return this.generateTokens(newUser);
+  }
+
+  private generateTokens(user: Partial<User>) {
     const payload = {
-      email: newUser.email,
-      sub: newUser.id,
-      role: newUser.role,
-      firstName: newUser.firstName,
-      lastName: newUser.lastName,
-      photoUrl: newUser.photoUrl,
+      email: user.email,
+      sub: user.id,
+      role: user.role,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      photoUrl: user.photoUrl,
     };
+
     return {
-      access_token: this.jwtService.sign(payload),
+      access_token: this.jwtService.sign(payload, { expiresIn: '15m' }),
+      refresh_token: this.jwtService.sign(payload, { expiresIn: '7d' }),
     };
   }
 }

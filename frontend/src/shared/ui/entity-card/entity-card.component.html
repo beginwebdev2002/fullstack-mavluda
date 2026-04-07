@@ -1,0 +1,13 @@
+<div class="entity-card">
+  <div class="image-container" *ngIf="imageUrl">
+      <img [ngSrc]="imageUrl" width="200" height="200" [alt]="title">
+  </div>
+  <div class="content">
+      <h3>{{ title }}</h3>
+      <p>{{ description }}</p>
+  </div>
+  <div class="actions">
+      <button (click)="onEdit()">Edit</button>
+      <button (click)="onDelete()">Delete</button>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "module": "ESNext",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "skipLibCheck": true,
+    "types": [
+      "node",
+      "@angular/localize"
+    ],
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@pages/*": ["src/pages/*"],
+      "@backend/*": ["src/backend/*"],
+      "@entities/*": ["src/entities/*"],
+      "@features/*": ["src/features/*"],
+      "@locale/*": ["src/locale/*"],
+      "@shared/*": ["src/shared/*"],
+      "@types/*": ["src/types/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@environments/*": ["src/environments/*"],
+      "@src/*": ["src/*"],
+      "@core/*": ["src/core/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "disableTypeScriptVersionCheck": true,
+    "strictTemplates": true
+  },
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+    "index.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "tmp",
+    "dist",
+    "**/*.spec.ts"
+  ]
+}

@@ -19,7 +19,6 @@ import {
 import {
   resetVeilData,
   Veil,
-  veilFormData,
   veilValidationSchema,
 } from "@features/veil";
 import { linkServerConvert } from "@shared/lib";
@@ -35,7 +34,7 @@ export class VeilFormComponent implements OnInit {
   veil = input.required<Veil>();
   save = output<{ data: any; file: File | null }>();
   cancel = output<void>();
-  veilModel = signal<Veil>(veilFormData);
+  veilModel = signal<Veil>(resetVeilData);
   veilForm = form<Veil>(this.veilModel, veilValidationSchema);
   selectedFile = signal<File | null>(null);
   previewImage = linkedSignal(() => this.veil()?.image || null);
@@ -59,8 +58,7 @@ export class VeilFormComponent implements OnInit {
       this.veilModel.set(this.veil());
     } else {
       this.isEditMode.set(false);
-
-      this.veilModel.set(veilFormData);
+      this.veilModel.set(resetVeilData);
     }
   }
 
