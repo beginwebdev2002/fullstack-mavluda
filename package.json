@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/beginwebdev2002/fullstack-mavluda/issues"
   },
-  "homepage": "https://github.com/beginwebdev2002/fullstack-mavluda#readme"
+  "homepage": "https://github.com/beginwebdev2002/fullstack-mavluda#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
 }
