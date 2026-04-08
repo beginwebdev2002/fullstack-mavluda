@@ -7,8 +7,8 @@ import { AppConfigService } from '@common/config/app-config.service';
 export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
   constructor(private configService: AppConfigService) {
     super({
-      clientID: configService.get('GOOGLE_CLIENT_ID') || 'client-id',
-      clientSecret: configService.get('GOOGLE_CLIENT_SECRET') || 'client-secret',
+      clientID: process.env.GOOGLE_CLIENT_ID || 'client-id',
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || 'client-secret',
       callbackURL: 'http://localhost:3000/auth/google/callback',
       scope: ['email', 'profile'],
     });

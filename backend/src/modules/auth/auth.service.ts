@@ -104,7 +104,7 @@ export class AuthService {
   async refreshToken(refreshToken: string): Promise<AuthResponse & { refresh_token: string }> {
     try {
       const payload = await this.jwtService.verifyAsync(refreshToken);
-      const user = await this.userService.findById(payload.sub);
+      const user = await this.userService.findByEmail(payload.email);
 
       if (!user) {
         throw new UnauthorizedException('User not found');

@@ -3,8 +3,8 @@ import { NestFactory } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
 import { AppModule } from './app.module';
 import helmet from 'helmet';
-import * as compression from 'compression';
-import * as cookieParser from 'cookie-parser';
+import compression from 'compression';
+import cookieParser from 'cookie-parser';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
@@ -24,9 +24,9 @@ async function bootstrap() {
     }),
   );
 
-  const { JwtAuthGuard } = await import('./common/guards/jwt-auth.guard');
-  const { RolesGuard } = await import('./common/guards/roles.guard');
   const reflector = app.get(require('@nestjs/core').Reflector);
+  const { JwtAuthGuard } = require('./common/guards/jwt-auth.guard');
+  const { RolesGuard } = require('./common/guards/roles.guard');
   app.useGlobalGuards(new JwtAuthGuard(reflector), new RolesGuard(reflector));
   app.enableCors({
     origin: '*',
