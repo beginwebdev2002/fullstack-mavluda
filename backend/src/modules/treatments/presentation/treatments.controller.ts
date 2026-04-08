@@ -1,3 +1,4 @@
+import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import {
   CreateServiceDto as CreateTreatmentDto,
   Treatments,
@@ -19,20 +20,24 @@ import { FilesInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 import { extname } from 'path';
 
+@ApiTags('Treatments')
 @Controller('treatments')
 export class TreatmentsController {
   constructor(private readonly treatmentsService: TreatmentsService) {}
 
+  @ApiOperation({ summary: 'Get all' }) @ApiResponse({ status: 200 })
   @Get()
   async findAll(): Promise<Treatments[]> {
     return this.treatmentsService.findAll();
   }
 
+  @ApiOperation({ summary: 'Get one' }) @ApiResponse({ status: 200 })
   @Get(':id')
   async findOne(@Param('id') id: string): Promise<Treatments> {
     return this.treatmentsService.findOne(id);
   }
 
+  @ApiOperation({ summary: 'Create' }) @ApiResponse({ status: 201 })
   @Post()
   @UseInterceptors(
     FilesInterceptor('image', 10, {
@@ -63,6 +68,7 @@ export class TreatmentsController {
     );
   }
 
+  @ApiOperation({ summary: 'Update' }) @ApiResponse({ status: 200 })
   @Put(':id')
   @UseInterceptors(
     FilesInterceptor('image', 10, {
@@ -97,6 +103,7 @@ export class TreatmentsController {
     );
   }
 
+  @ApiOperation({ summary: 'Delete' }) @ApiResponse({ status: 200 })
   @Delete(':id')
   async remove(@Param('id') id: string): Promise<void> {
     return this.treatmentsService.remove(id);

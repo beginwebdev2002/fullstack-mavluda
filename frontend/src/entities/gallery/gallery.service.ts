@@ -2,13 +2,14 @@ import { Injectable, inject, signal } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, tap } from "rxjs";
 import { Gallery } from "@shared/models";
+import { API_ENDPOINTS } from "@core/constants";
 
 @Injectable({
   providedIn: "root",
 })
 export class GalleryService {
   private http = inject(HttpClient);
-  private apiUrl = "/gallery";
+  private apiUrl = API_ENDPOINTS.GALLERY.BASE;
 
   // State
   private _images = signal<Gallery[]>([]);
@@ -21,7 +22,7 @@ export class GalleryService {
   }
 
   getImage(id: string): Observable<Gallery> {
-    return this.http.get<Gallery>(`${this.apiUrl}/${id}`);
+    return this.http.get<Gallery>(API_ENDPOINTS.GALLERY.URL_BY_ID(id));
   }
 
   // Use this for both create and update if sending full object, or create specific methods
@@ -35,7 +36,7 @@ export class GalleryService {
 
   updateImage(id: string, formData: FormData): Observable<Gallery> {
     return this.http
-      .put<Gallery>(`${this.apiUrl}/${id}`, formData)
+      .put<Gallery>(API_ENDPOINTS.GALLERY.URL_BY_ID(id), formData)
       .pipe(
         tap((updatedImage) =>
           this._images.update((imgs) =>
@@ -47,7 +48,7 @@ export class GalleryService {
 
   deleteImage(id: string): Observable<void> {
     return this.http
-      .delete<void>(`${this.apiUrl}/${id}`)
+      .delete<void>(API_ENDPOINTS.GALLERY.URL_BY_ID(id))
       .pipe(
         tap(() =>
           this._images.update((imgs) => imgs.filter((img) => img.id !== id)),

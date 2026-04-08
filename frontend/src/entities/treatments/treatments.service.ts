@@ -2,7 +2,7 @@ import { Injectable, inject, signal } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, tap } from "rxjs";
 import { TreatmentItem } from "@features/treatments";
-import { deleteArrayItemById, deleteProperties, excludeFormDataProperties, formDataExcludeProperty } from "@shared/lib";
+import { deleteArrayItemById, formDataExcludeProperty } from "@shared/lib";
 import { API_ENDPOINTS } from "@core/constants";
 
 @Injectable()

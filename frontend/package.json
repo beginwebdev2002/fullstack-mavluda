@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "node scripts/setenv.cjs",
     "dev": "ng serve --configuration=development",
+    "prebuild": "node scripts/setenv.cjs",
     "build": "ng build",
     "preview": "ng serve --configuration=production",
     "test": "vitest"
@@ -35,6 +37,7 @@
     "@analogjs/vite-plugin-angular": "^2.4.0",
     "@playwright/test": "^1.59.1",
     "@types/node": "^22.14.0",
+    "dotenv": "^17.4.1",
     "jsdom": "^29.0.2",
     "typescript": "~5.8.2",
     "vite": "^6.2.0",
