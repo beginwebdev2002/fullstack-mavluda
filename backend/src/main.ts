@@ -4,6 +4,7 @@ import { ConfigService } from '@nestjs/config';
 import { AppModule } from './app.module';
 import helmet from 'helmet';
 import * as compression from 'compression';
+import * as cookieParser from 'cookie-parser';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
@@ -11,6 +12,7 @@ async function bootstrap() {
 
   app.use(helmet());
   app.use(compression());
+  app.use(cookieParser());
   const configService = app.get(ConfigService);
 
   app.useGlobalPipes(
@@ -21,6 +23,11 @@ async function bootstrap() {
       transformOptions: { enableImplicitConversion: false },
     }),
   );
+
+  const { JwtAuthGuard } = await import('./common/guards/jwt-auth.guard');
+  const { RolesGuard } = await import('./common/guards/roles.guard');
+  const reflector = app.get(require('@nestjs/core').Reflector);
+  app.useGlobalGuards(new JwtAuthGuard(reflector), new RolesGuard(reflector));
   app.enableCors({
     origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
