@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from "@angular/common";
 import {
   Component,
   input,
@@ -13,7 +14,7 @@ import { Veil } from "@features/veil";
 @Component({
   selector: "app-veil-modal",
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, NgOptimizedImage],
   templateUrl: "./veil-modal.component.html",
 })
 export class VeilModalComponent {

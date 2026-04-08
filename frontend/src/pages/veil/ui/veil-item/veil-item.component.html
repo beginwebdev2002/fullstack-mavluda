@@ -3,7 +3,7 @@
     <!-- Top Section: Image & Price -->
     <div class="flex justify-between items-start mb-6 relative">
       <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-md cursor-pointer" (click)="onViewImage($event)">
-        <img [src]="safeImageUrl()" [alt]="veil().name" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <img [ngSrc]="safeImageUrl()" [alt]="veil().name" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" fill>
       </div>
       <span class="font-serif text-xl font-bold text-gray-900">{{ veil().price }} TJS</span>
       <!-- Decorative Blur Effect -->

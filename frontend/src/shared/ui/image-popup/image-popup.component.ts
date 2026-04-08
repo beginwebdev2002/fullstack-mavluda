@@ -1,10 +1,11 @@
+import { NgOptimizedImage } from "@angular/common";
 import { Component, input, output, signal, ChangeDetectionStrategy, effect } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 @Component({
   selector: "app-image-popup",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: "./image-popup.component.html",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

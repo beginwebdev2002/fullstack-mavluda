@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from "@angular/common";
 import { CommonModule } from "@angular/common";
 import {
   ChangeDetectionStrategy,
@@ -18,7 +19,7 @@ import { environment } from "@environments/environment";
 @Component({
   selector: "app-gallery-form",
   standalone: true,
-  imports: [CommonModule, FormField, ImagePopupComponent],
+  imports: [CommonModule, FormField, ImagePopupComponent, NgOptimizedImage],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./gallery-form.component.html",
 })
