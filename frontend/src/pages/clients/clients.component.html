@@ -89,7 +89,7 @@
                 <div class="flex items-center gap-3">
                   <!-- Avatar -->
                   @if (client.avatarType === 'image') {
-                    <img [src]="client.avatarUrl" alt="" class="w-10 h-10 rounded-full object-cover shadow-sm ring-1 ring-gray-100">
+                    <img [ngSrc]="client.avatarUrl" width="40" height="40" alt="" class="w-10 h-10 rounded-full object-cover shadow-sm ring-1 ring-gray-100">
                   } @else if (client.avatarType === 'icon') {
                     <div class="w-10 h-10 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center">
                       <span class="material-symbols-outlined text-[20px]">person</span>

@@ -83,7 +83,7 @@
               class="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-sm cursor-pointer hover:scale-105 transition-transform"
               (click)="openImageModal(item.image)"
             >
-              <img [src]="getSafeImageUrl(item.image)" [alt]="item.name" class="w-full h-full object-cover">
+              <img [ngSrc]="getSafeImageUrl(item.image)" [alt]="item.name" class="w-full h-full object-cover" fill>
             </div>
           } @else if (column.key === 'price') {
             <span class="font-bold text-gray-900">{{ item.price }} TJS</span>

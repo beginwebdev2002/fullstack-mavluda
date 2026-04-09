@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from "@angular/common";
 import { CommonModule } from "@angular/common";
 import {
   ChangeDetectionStrategy,
@@ -18,7 +19,7 @@ import { linkServerConvert } from "@shared/lib";
 @Component({
   selector: "app-veil-page",
   standalone: true,
-  imports: [CommonModule, CardViewComponent, VeilFormComponent, ImagePopupComponent, ListViewComponent],
+  imports: [CommonModule, CardViewComponent, VeilFormComponent, ImagePopupComponent, ListViewComponent, NgOptimizedImage],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./veil.component.html",
   styleUrls: ["./veil.component.scss"],

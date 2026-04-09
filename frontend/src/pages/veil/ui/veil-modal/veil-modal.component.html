@@ -20,7 +20,7 @@
                   <label class="block text-sm font-medium text-gray-700">Gown Image</label>
                   <div (click)="fileInput.click()" class="aspect-square w-full rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center relative group cursor-pointer hover:border-gold transition-colors bg-gray-50">
                       @if (previewImage()) {
-                          <img [src]="previewImage()" alt="Gown preview" class="w-full h-full object-cover rounded-lg absolute inset-0">
+                          <img [ngSrc]="previewImage()" fill alt="Gown preview" class="w-full h-full object-cover rounded-lg absolute inset-0">
                           <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                             <div class="text-center text-white">
                               <span class="material-symbols-outlined text-3xl">edit</span>

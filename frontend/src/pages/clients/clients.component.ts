@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from "@angular/common";
 import { Component, ChangeDetectionStrategy, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -17,7 +18,7 @@ export interface Client {
 @Component({
   selector: 'app-admin-clients',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './clients.component.html',
   styleUrls: ['./clients.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
