@@ -1,11 +1,12 @@
 import { CanActivateFn, Router } from '@angular/router';
 import { inject } from '@angular/core';
+import { AuthService } from '@entities/user';
 
 export const adminGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
-  // Add actual role check here when auth service is connected
-  const role = localStorage.getItem('role');
-  if (role === 'admin') {
+  const authService = inject(AuthService);
+
+  if (authService.isAdmin()) {
     return true;
   }
   return router.parseUrl('/admin/login');

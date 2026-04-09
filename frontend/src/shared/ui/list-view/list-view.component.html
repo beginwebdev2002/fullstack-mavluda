@@ -21,7 +21,7 @@
                     <div class="text-sm font-medium text-gray-900">{{ item[col.key] }}</div>
                   }
                   @case ('image') {
-                    <img [src]="item[col.key]" [alt]="item.alt || ''" width="64" height="64" class="w-16 h-16 object-cover rounded-lg shadow-sm cursor-pointer" (click)="view.emit(item[col.key])"/>
+                    <img [ngSrc]="item[col.key]" [alt]="item.alt || ''" width="64" height="64" class="w-16 h-16 object-cover rounded-lg shadow-sm cursor-pointer" (click)="view.emit(item[col.key])"/>
                   }
                   @case ('badge') {
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">

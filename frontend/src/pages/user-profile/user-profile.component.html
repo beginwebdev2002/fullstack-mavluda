@@ -13,7 +13,7 @@
       <div class="rounded-2xl bg-[#121212] border border-[#ffffff10] p-8 flex flex-col items-center text-center relative overflow-hidden group">
         <div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div class="relative w-28 h-28 mb-5">
-          <img [alt]="user().name" class="w-full h-full object-cover rounded-full border-2 border-primary/50 p-1 shadow-gold-glow" [src]="user().avatarUrl"/>
+          <img [alt]="user().name" class="w-full h-full object-cover rounded-full border-2 border-primary/50 p-1 shadow-gold-glow" [ngSrc]="user().avatarUrl" fill/>
           <div class="absolute bottom-1 right-1 w-8 h-8 bg-primary rounded-full flex items-center justify-center border-4 border-[#121212] z-10">
             <span class="material-symbols-outlined text-[#0A0A0A] text-[16px] font-bold">verified</span>
           </div>
