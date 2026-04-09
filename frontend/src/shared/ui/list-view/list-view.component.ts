@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from "@angular/common";
 import { Component, ChangeDetectionStrategy, input, output, TemplateRef, contentChild, computed } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { linkServerConvert } from "@shared/lib";
@@ -12,7 +13,7 @@ export interface ListViewColumn {
 @Component({
   selector: "app-list-view",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: "./list-view.component.html",
   styleUrls: ["./list-view.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,
