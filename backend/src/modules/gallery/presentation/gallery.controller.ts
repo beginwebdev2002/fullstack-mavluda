@@ -1,3 +1,4 @@
+import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import {
   Controller,
   Get,
@@ -17,20 +18,24 @@ import { Gallery } from '../domain/gallery.entity';
 import { CreateGalleryDto } from './dto/create-gallery.dto';
 import { UpdateGalleryDto } from './dto/update-gallery.dto';
 
+@ApiTags('Gallery')
 @Controller('gallery')
 export class GalleryController {
   constructor(private readonly galleryService: GalleryService) {}
 
+  @ApiOperation({ summary: 'Get all' }) @ApiResponse({ status: 200 })
   @Get()
   async findAll(): Promise<Gallery[]> {
     return this.galleryService.findAll();
   }
 
+  @ApiOperation({ summary: 'Get one' }) @ApiResponse({ status: 200 })
   @Get(':id')
   async findOne(@Param('id') id: string): Promise<Gallery> {
     return this.galleryService.findOne(id);
   }
 
+  @ApiOperation({ summary: 'Create' }) @ApiResponse({ status: 201 })
   @Post()
   @UseInterceptors(
     FilesInterceptor('files', 10, {
@@ -64,6 +69,7 @@ export class GalleryController {
     return this.galleryService.create(gallery);
   }
 
+  @ApiOperation({ summary: 'Update' }) @ApiResponse({ status: 200 })
   @Put(':id')
   @UseInterceptors(
     FilesInterceptor('files', 10, {
@@ -98,6 +104,7 @@ export class GalleryController {
     );
   }
 
+  @ApiOperation({ summary: 'Delete' }) @ApiResponse({ status: 200 })
   @Delete(':id')
   async remove(@Param('id') id: string): Promise<void> {
     return this.galleryService.remove(id);

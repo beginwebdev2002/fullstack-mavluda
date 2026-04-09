@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "node scripts/setenv.cjs",
     "dev": "ng serve --configuration=development",
+    "prebuild": "node scripts/setenv.cjs",
     "build": "ng build",
     "preview": "ng serve --configuration=production",
     "test": "vitest"

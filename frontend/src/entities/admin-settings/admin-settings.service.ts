@@ -1,7 +1,7 @@
 import { Injectable, inject, signal } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, tap } from "rxjs";
-import { API_ENDPOINTS } from "@core/constants/api-endpoints";
+import { API_ENDPOINTS } from "@core/constants";
 import { AdminSettings } from "@shared/models/admin-settings.model";
 
 @Injectable({

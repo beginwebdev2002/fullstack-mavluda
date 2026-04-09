@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
-  apiUrl: 'http://localhost:4100',
-  telegramBotName: 'MavludaBeautyBot'
+  production: false,
+  apiUrl: "http://localhost:4200",
+  telegramBotName: "test_bot",
 };
