@@ -43,6 +43,25 @@ export class AuthService {
     return this.generateTokens(user);
   }
 
+  async validateGoogleUser(googleUser: any) {
+    let user = await this.userService.findByEmail(googleUser.email);
+    if (!user) {
+      user = await this.userService.create({
+        email: googleUser.email,
+        firstName: googleUser.firstName,
+        lastName: googleUser.lastName,
+        photoUrl: googleUser.photoUrl,
+        role: 'user',
+        username: googleUser.email.split('@')[0],
+      } as any);
+    }
+    return user;
+  }
+
+  async googleLogin(user: any): Promise<AuthResponse & { refresh_token: string }> {
+    return this.generateTokens(user);
+  }
+
   async register(registerDto: RegisterDto): Promise<AuthResponse & { refresh_token: string }> {
     const existing = await this.userService.findByEmail(registerDto.email);
     if (existing) {
@@ -80,5 +99,20 @@ export class AuthService {
       access_token: this.jwtService.sign(payload, { expiresIn: '15m' }),
       refresh_token: this.jwtService.sign(payload, { expiresIn: '7d' }),
     };
+  }
+
+  async refreshToken(refreshToken: string): Promise<AuthResponse & { refresh_token: string }> {
+    try {
+      const payload = await this.jwtService.verifyAsync(refreshToken);
+      const user = await this.userService.findByEmail(payload.email);
+
+      if (!user) {
+        throw new UnauthorizedException('User not found');
+      }
+
+      return this.generateTokens(user);
+    } catch (e) {
+      throw new UnauthorizedException('Invalid refresh token');
+    }
   }
 }
