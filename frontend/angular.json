@@ -30,6 +30,9 @@
             ],
             "assets": [
               "./public"
+            ],
+            "styles": [
+              "src/styles.scss"
             ]
           },
           "configurations": {
@@ -48,13 +51,19 @@
               "sourceMap": true
             },
             "en": {
-              "localize": ["en-US"]
+              "localize": [
+                "en-US"
+              ]
             },
             "ru": {
-              "localize": ["ru"]
+              "localize": [
+                "ru"
+              ]
             },
             "tg": {
-              "localize": ["tg"]
+              "localize": [
+                "tg"
+              ]
             }
           },
           "defaultConfiguration": "production"
