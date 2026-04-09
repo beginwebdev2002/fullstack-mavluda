@@ -1,18 +1,22 @@
+import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { Controller, Get, Body, Put, Post, Delete } from '@nestjs/common';
 import { AdminSettingsService } from '../application/admin-settings.service';
 import { AdminSettings } from '../domain/admin-settings.entity';
 import { UpdateAdminSettingsDto } from './dto/update-admin-settings.dto';
 import { CreateAdminSettingsDto } from './dto/create-admin-settings.dto';
 
+@ApiTags('Admin Settings')
 @Controller('admin-settings')
 export class AdminSettingsController {
   constructor(private readonly adminSettingsService: AdminSettingsService) {}
 
+  @ApiOperation({ summary: 'Get all' }) @ApiResponse({ status: 200 })
   @Get()
   async getSettings(): Promise<AdminSettings | null> {
     return this.adminSettingsService.getSettings();
   }
 
+  @ApiOperation({ summary: 'Create' }) @ApiResponse({ status: 201 })
   @Post()
   async createSettings(
     @Body() createAdminSettingsDto: CreateAdminSettingsDto,
@@ -24,6 +28,7 @@ export class AdminSettingsController {
     );
   }
 
+  @ApiOperation({ summary: 'Update' }) @ApiResponse({ status: 200 })
   @Put()
   async updateSettings(
     @Body() updateAdminSettingsDto: UpdateAdminSettingsDto,
@@ -37,6 +42,7 @@ export class AdminSettingsController {
     return this.adminSettingsService.updateSettings(settings);
   }
 
+  @ApiOperation({ summary: 'Delete' }) @ApiResponse({ status: 200 })
   @Delete()
   async deleteSettings(): Promise<boolean> {
     return this.adminSettingsService.deleteSettings();

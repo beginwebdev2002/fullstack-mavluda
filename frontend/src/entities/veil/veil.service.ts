@@ -1,11 +1,13 @@
-import { HttpClient } from "@angular/common/http";
 import { Injectable, inject, signal } from "@angular/core";
-import { API_ENDPOINTS } from "@core/constants";
-import { Veil } from "@features/veil";
-import { deleteArrayItemById, formDataExcludeProperty } from "@shared/lib";
+import { HttpClient } from "@angular/common/http";
 import { Observable, tap } from "rxjs";
+import { Veil } from "@features/veil";
+import { deleteArrayItemById, objectExcludePropety } from "@shared/lib";
+import { API_ENDPOINTS } from "@core/constants";
 
-@Injectable()
+@Injectable({
+  providedIn: "root",
+})
 export class VeilService {
   private http = inject(HttpClient);
 
@@ -23,20 +25,17 @@ export class VeilService {
     return this.http.get<Veil>(API_ENDPOINTS.VEILS.URL_BY_ID(id));
   }
 
-  createVeil(veil: Omit<Veil, "id"> | FormData): Observable<Veil> {
+  createVeil(veil: FormData): Observable<Veil> {
     return this.http
       .post<Veil>(API_ENDPOINTS.VEILS.BASE, veil)
       .pipe(
-        tap((newVeil) => this._veils.update((veils) => [...veils, newVeil])),
+        tap((newVeil) =>
+          this._veils.update((veils) => [...veils, newVeil]),
+        ),
       );
   }
 
   updateVeil(id: string, veil: FormData): Observable<Veil> {
-    const updatedVeil = formDataExcludeProperty(veil, [
-      "id",
-      "createdAt",
-      "updatedAt",
-    ]);
     return this.http
       .put<Veil>(API_ENDPOINTS.VEILS.URL_BY_ID(id), veil)
       .pipe(

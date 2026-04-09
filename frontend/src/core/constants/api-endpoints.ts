@@ -18,16 +18,16 @@ export const API_ENDPOINTS = {
     URL_BY_ID: (id: string) => linkServerConvert(API_ENDPOINTS.GALLERY.URL, id),
   },
   AUTH: {
-    LOGIN: "/auth/login",
-    REGISTER: "/auth/register",
+    LOGIN: linkServerConvert("auth", "login"),
+    REGISTER: linkServerConvert("auth", "register"),
   },
 
   USER: {
-    PROFILE: "/user/profile",
-    UPDATE: "/user/update",
+    PROFILE: linkServerConvert("user", "profile"),
+    UPDATE: linkServerConvert("user", "update"),
   },
   ADMIN: {
-    SETTINGS: "/admin-settings",
-    ANALYTICS: "/admin/analytics",
+    SETTINGS: linkServerConvert("admin-settings"),
+    ANALYTICS: linkServerConvert("admin", "analytics"),
   },
 } as const;

@@ -1,11 +1,5 @@
-export const environment: Environment = {
+export const environment = {
   production: false,
-  apiUrl: "http://localhost:4100",
+  apiUrl: "http://localhost:4200",
   telegramBotName: "test_bot",
 };
-
-export interface Environment {
-  production: boolean;
-  apiUrl: string;
-  telegramBotName: string;
-}

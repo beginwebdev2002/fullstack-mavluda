@@ -1,19 +1,20 @@
-import { HttpInterceptorFn, HttpErrorResponse } from '@angular/common/http';
+import { HttpInterceptorFn, HttpErrorResponse, HttpClient } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { catchError, throwError, switchMap } from 'rxjs';
+import { BehaviorSubject, catchError, filter, switchMap, take, throwError } from 'rxjs';
 import { Router } from '@angular/router';
+import { AuthService } from '@entities/user';
 
-// This is a basic implementation of the auth interceptor.
-// It assumes that the token is stored in localStorage.
-// You will need a more robust refresh token implementation that doesn't cause infinite loops.
+let isRefreshing = false;
+let refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const router = inject(Router);
+  const http = inject(HttpClient);
+  const authService = inject(AuthService);
   let authReq = req;
 
-  // We should not attempt to access localStorage if it is not available (e.g. in SSR).
   if (typeof localStorage !== 'undefined') {
-      const token = localStorage.getItem('access_token');
+      const token = localStorage.getItem('token');
       if (token) {
         authReq = req.clone({
           setHeaders: {
@@ -25,15 +26,56 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
 
   return next(authReq).pipe(
     catchError((error: HttpErrorResponse) => {
-      // In a real application, you might want to call a refresh token endpoint here.
       if (error.status === 401) {
-        // If the token is invalid, log out the user and redirect to the login page.
-        if (typeof localStorage !== 'undefined') {
-            localStorage.removeItem('access_token');
-            localStorage.removeItem('refresh_token');
-            localStorage.removeItem('role');
+        if (req.url.includes('/auth/refresh') || req.url.includes('/auth/login')) {
+           authService.logout();
+           if (router.url.includes('/admin')) {
+             router.navigate(['/admin/login']);
+           } else {
+             router.navigate(['/auth']);
+           }
+           return throwError(() => error);
         }
-        router.navigate(['/admin/login']);
+
+        if (!isRefreshing) {
+          isRefreshing = true;
+          refreshTokenSubject.next(null);
+
+          return http.post<{access_token: string}>('/auth/refresh', {}, { withCredentials: true }).pipe(
+            switchMap((response: any) => {
+              isRefreshing = false;
+              localStorage.setItem('token', response.access_token);
+              refreshTokenSubject.next(response.access_token);
+              return next(req.clone({
+                setHeaders: {
+                  Authorization: `Bearer ${response.access_token}`
+                }
+              }));
+            }),
+            catchError((err) => {
+              isRefreshing = false;
+              authService.logout();
+              if (router.url.includes('/admin')) {
+                router.navigate(['/admin/login']);
+              } else {
+                router.navigate(['/auth']);
+              }
+              return throwError(() => err);
+            })
+          );
+        } else {
+          return refreshTokenSubject.pipe(
+            filter(token => token != null),
+            take(1),
+            switchMap(jwt => {
+              return next(req.clone({
+                setHeaders: {
+                  Authorization: `Bearer ${jwt}`
+                }
+              }));
+            })
+          );
+        }
       }
       return throwError(() => error);
     })

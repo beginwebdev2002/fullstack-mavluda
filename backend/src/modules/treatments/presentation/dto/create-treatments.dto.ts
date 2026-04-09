@@ -1,4 +1,5 @@
 import { Type } from 'class-transformer';
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import {
   IsBoolean,
   IsNotEmpty,
@@ -21,35 +22,35 @@ export enum TreatmentCategory {
 
 export class CreateServiceDto {
   @IsNotEmpty()
-  @IsString()
+  @IsString() @ApiProperty()
   name: string;
 
   @IsNotEmpty()
-  @IsString()
+  @IsString() @ApiProperty()
   description: string;
 
   @IsNotEmpty()
   @Type(() => Number)
-  @IsNumber()
+  @IsNumber() @ApiProperty()
   @Min(1)
   price: number;
 
   @IsOptional()
   @Type(() => Boolean)
-  @IsBoolean()
+  @IsBoolean() @ApiPropertyOptional()
   active: boolean;
 
   @IsNotEmpty()
   @Type(() => Number)
-  @IsNumber()
+  @IsNumber() @ApiProperty()
   @Min(1)
   duration: number;
 
   @IsNotEmpty()
-  @IsString()
+  @IsString() @ApiProperty()
   category: string;
 
   @IsOptional()
-  @IsString()
+  @IsString() @ApiProperty()
   imageUrl: string;
 }

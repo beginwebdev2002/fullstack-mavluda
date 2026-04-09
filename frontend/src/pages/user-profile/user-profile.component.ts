@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from "@angular/common";
 import {
   Component,
   ChangeDetectionStrategy,
@@ -10,7 +11,7 @@ import { AuthService } from "@entities/user";
 @Component({
   selector: "app-user-profile",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./user-profile.component.html",
   styleUrls: ["./user-profile.component.scss"],

@@ -1,4 +1,5 @@
 import { Type } from 'class-transformer';
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import {
   IsString,
   IsNotEmpty,
@@ -14,80 +15,80 @@ import {
 } from '../../domain/interfaces/admin-settings.interface';
 
 class LocationDto implements IAdminLocation {
-  @IsString()
+  @IsString() @ApiProperty()
   @IsNotEmpty()
   address: string;
 
-  @IsNumber()
+  @IsNumber() @ApiProperty()
   latitude: number;
 
-  @IsNumber()
+  @IsNumber() @ApiProperty()
   longitude: number;
 }
 
 class OwnerInfoDto implements IOwnerInfo {
-  @IsString()
+  @IsString() @ApiProperty()
   @IsNotEmpty()
   name: string;
 
-  @IsString()
+  @IsString() @ApiProperty()
   @IsNotEmpty()
   phoneNumber: string;
 }
 
 export class CreateAdminSettingsDto {
-  @ValidateNested()
+  @ValidateNested() @ApiProperty()
   @Type(() => LocationDto)
   @IsNotEmpty()
   location: LocationDto;
 
-  @IsObject()
+  @IsObject() @ApiPropertyOptional()
   @IsOptional()
   socialLinks: Record<string, string>;
 
-  @IsObject()
+  @IsObject() @ApiPropertyOptional()
   @IsOptional()
   workHours: Record<string, string>;
 
-  @ValidateNested()
+  @ValidateNested() @ApiProperty()
   @Type(() => OwnerInfoDto)
   @IsNotEmpty()
   ownerInfo: OwnerInfoDto;
 
-  @IsString()
+  @IsString() @ApiProperty()
   @IsOptional()
   biography: string;
 
-  @IsString()
+  @IsString() @ApiProperty()
   @IsOptional()
   philosophy: string;
 
-  @IsArray()
+  @IsArray() @ApiPropertyOptional()
   @IsString({ each: true })
   @IsOptional()
   galleryCategories: string[];
 
-  @IsArray()
+  @IsArray() @ApiPropertyOptional()
   @IsString({ each: true })
   @IsOptional()
   treatmentCategories: string[];
 
-  @IsArray()
+  @IsArray() @ApiPropertyOptional()
   @IsString({ each: true })
   @IsOptional()
   veilSilhouettes: string[];
 
-  @IsArray()
+  @IsArray() @ApiPropertyOptional()
   @IsString({ each: true })
   @IsOptional()
   veilFabrics: string[];
 
-  @IsArray()
+  @IsArray() @ApiPropertyOptional()
   @IsString({ each: true })
   @IsOptional()
   veilTrainLengths: string[];
 
-  @IsArray()
+  @IsArray() @ApiPropertyOptional()
   @IsString({ each: true })
   @IsOptional()
   veilNecklines: string[];

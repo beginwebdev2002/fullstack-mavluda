@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from "@angular/common";
 import { Component, input, output, computed } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Veil } from "@features/veil";
@@ -5,7 +6,7 @@ import { Veil } from "@features/veil";
 @Component({
   selector: "app-veil-item",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: "./veil-item.component.html",
 })
 export class VeilItemComponent {
