@@ -3,7 +3,8 @@ version: '3.8'
 services:
   frontend:
     build:
-      context: ./frontend
+      context: .
+      target: frontend-prod
     ports:
       - "80:80"
     depends_on:
@@ -11,7 +12,8 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: .
+      target: backend-prod
     ports:
       - "3000:3000"
     environment:

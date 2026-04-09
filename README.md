@@ -13,9 +13,11 @@ The system consists of three main components:
 
 ```mermaid
 graph TD
-    Client[Client Browser/Angular App] -->|HTTP/REST| API[NestJS Backend API]
-    API -->|Mongoose| MongoDB[(MongoDB Database)]
-    API -->|Redis Client| Redis[(Redis Cache)]
+    subgraph "Project Rebirth Architecture"
+        Client[Client Browser/Angular App] -->|HTTP/REST| API[App Server / NestJS Backend API]
+        API -->|Mongoose| MongoDB[(MongoDB Database)]
+        API -->|Redis Client| Redis[(Redis Cache)]
+    end
 ```
 
 ## Setup & Running

@@ -9,4 +9,20 @@ export default defineConfig(({ mode }) => ({
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   },
+  resolve: {
+    alias: {
+      '@app': '/src/app',
+      '@pages': '/src/pages',
+      '@backend': '/src/backend',
+      '@entities': '/src/entities',
+      '@features': '/src/features',
+      '@locale': '/src/locale',
+      '@shared': '/src/shared',
+      '@types': '/src/types',
+      '@widgets': '/src/widgets',
+      '@environments': '/src/environments',
+      '@src': '/src',
+      '@core': '/src/core'
+    },
+  },
 }));
