@@ -9,26 +9,35 @@ import {
 } from 'class-validator';
 
 export class CreateUserDto {
+  @IsOptional()
   @IsNumber()
-  @IsNotEmpty()
-  telegramId: number;
+  telegramId?: number;
+
+  @IsOptional()
+  @IsString()
+  email?: string;
 
   @IsString()
   @IsNotEmpty()
   firstName: string;
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
   lastName?: string;
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
   username?: string;
 
-  @IsUrl()
-  @IsNotEmpty()
+  @IsOptional()
+  @IsString()
   photoUrl?: string;
 
+  @IsOptional()
   @IsEnum(['user', 'admin'])
   role?: 'user' | 'admin';
+
+  @IsOptional()
+  @IsString()
+  password?: string;
 }

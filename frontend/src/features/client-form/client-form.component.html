@@ -1,0 +1,81 @@
+<div class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-page-enter">
+  <div class="bg-white rounded-xl shadow-2xl w-full max-w-3xl overflow-hidden animate-slide-up relative">
+    <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+      <h3 class="font-display text-xl text-gray-900">
+        {{ isEditing() ? 'Edit Client' : 'New Client' }}
+      </h3>
+      <button (click)="onCancel()" type="button" class="text-gray-400 hover:text-gray-600">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-x-8">
+      
+      <!-- Profile Picture -->
+      <div class="space-y-2 mb-6 md:mb-0">
+        <label class="block text-sm font-medium text-gray-700">Profile Picture</label>
+        <div (click)="fileInput.click()" class="aspect-[4/3] w-full rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center relative group cursor-pointer hover:border-primary transition-colors bg-gray-50">
+            @if (previewImage()) {
+                <img [src]="previewImage()" alt="Profile preview" class="w-full h-full object-cover rounded-lg absolute inset-0">
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg gap-4">
+                  <div class="text-center text-white">
+                    <span class="material-symbols-outlined text-3xl">edit</span>
+                    <p class="text-xs mt-1 font-semibold">Change Image</p>
+                  </div>
+                </div>
+            } @else {
+                <div class="text-center text-gray-500">
+                    <span class="material-symbols-outlined text-4xl">add_photo_alternate</span>
+                    <p class="text-xs mt-2 font-semibold">Click to upload</p>
+                </div>
+            }
+        </div>
+        <input #fileInput type="file" class="hidden" (change)="onFileSelected($event)" accept="image/png, image/jpeg, image/webp">
+
+        <div class="mt-4">
+          <label class="block text-sm font-medium text-gray-700 mb-1">Role</label>
+          <select [(ngModel)]="formData().role" class="w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm p-2.5 transition-all">
+            <option value="user">User / Client</option>
+            <option value="admin">Administrator</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Form Details -->
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+          <input type="text" [(ngModel)]="formData().firstName" class="w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm p-2.5 transition-all" placeholder="e.g. Mavluda" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+          <input type="text" [(ngModel)]="formData().lastName" class="w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm p-2.5 transition-all" placeholder="e.g. Azizova" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Username / Phone</label>
+          <input type="text" [(ngModel)]="formData().username" class="w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm p-2.5 transition-all" placeholder="@username" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" [(ngModel)]="formData().email" class="w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm p-2.5 transition-all" placeholder="client@example.com" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+          <input type="password" [(ngModel)]="formData().password" class="w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm p-2.5 transition-all" placeholder="Leave empty to keep unchanged" />
+        </div>
+      </div>
+    </div>
+    
+    <div class="px-6 py-4 bg-gray-50 flex justify-end space-x-3 border-t border-gray-100">
+      <button (click)="onCancel()" type="button" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg text-sm font-medium transition-colors ring-1 ring-inset ring-gray-300">Cancel</button>
+      <button 
+        (click)="onSave()" 
+        type="button"
+        class="px-4 py-2 bg-primary text-black hover:bg-primary-hover rounded-lg text-sm font-medium transition-colors shadow-md disabled:bg-gray-300 disabled:cursor-not-allowed"
+        [disabled]="loading() || !formData().firstName"
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>

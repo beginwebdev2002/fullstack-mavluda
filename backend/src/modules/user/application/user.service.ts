@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import * as bcrypt from 'bcrypt';
 import { User } from '../domain/user.entity';
 import { UserRepository } from '../infrastructure/repositories/user.repository';
 
@@ -36,8 +37,18 @@ export class UserService {
     return user;
   }
 
-  async create(user: Omit<User, 'id' | 'createdAt'>): Promise<User> {
-    return await this.userRepository.create(user);
+  async create(
+    user: Omit<User, 'id' | 'createdAt'> & { password?: string },
+  ): Promise<User> {
+    const payload = { ...user };
+    if (payload.password) {
+      const salt = await bcrypt.genSalt();
+      payload.passwordHash = await bcrypt.hash(payload.password, salt);
+      delete payload.password;
+    }
+    return await this.userRepository.create(
+      payload as Omit<User, 'id' | 'createdAt'>,
+    );
   }
 
   async findOne(id: string): Promise<User> {
@@ -48,8 +59,20 @@ export class UserService {
     return user;
   }
 
-  async update(id: string, updateUserDto: Partial<User>): Promise<User> {
-    const updatedUser = await this.userRepository.update(id, updateUserDto);
+  async update(
+    id: string,
+    updateUserDto: Partial<User> & { password?: string },
+  ): Promise<User> {
+    const payload = { ...updateUserDto };
+    if (payload.password) {
+      const salt = await bcrypt.genSalt();
+      payload.passwordHash = await bcrypt.hash(payload.password, salt);
+      delete payload.password;
+    }
+    const updatedUser = await this.userRepository.update(
+      id,
+      payload as Partial<User>,
+    );
     if (!updatedUser) {
       throw new Error(`User with ID ${id} not found`);
     }

@@ -18,7 +18,7 @@ export class GalleryRepository {
     const docs = await this.galleryModel.find().exec();
     const doc = docs.map((doc) => this.toDomain(doc));
     console.log('DOCS: ', doc);
-    
+
     return doc;
   }
 
@@ -54,13 +54,13 @@ export class GalleryRepository {
   private toDomain(doc: GalleryDocument): Gallery {
     const { _id, title, imageUrl, category, tags, createdAt } = doc as any;
     console.log('createdAT: ', createdAt);
-    
+
     return new Gallery(
       _id.toString(),
       title,
       imageUrl,
       category,
-      tags, 
+      tags,
       createdAt,
     );
   }

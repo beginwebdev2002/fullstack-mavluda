@@ -17,10 +17,10 @@ export class UserSchemaEntity {
   @Prop({ required: true })
   firstName: string;
 
-  @Prop({ required: true })
+  @Prop({ required: false })
   lastName: string;
 
-  @Prop({ required: true })
+  @Prop({ required: false })
   username: string;
 
   @Prop({ required: false })
