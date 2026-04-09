@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { tap } from 'rxjs/operators';
 import { User, AuthResponse } from './model/user.model';
 import { jwtDecode } from 'jwt-decode';
+import { API_ENDPOINTS } from '@core/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -25,13 +26,13 @@ export class AuthService {
   }
 
   login(credentials: any) {
-    return this.http.post<AuthResponse>('/auth/login', credentials).pipe(
+    return this.http.post<AuthResponse>(API_ENDPOINTS.AUTH.LOGIN, credentials).pipe(
       tap(response => this.setSession(response.access_token))
     );
   }
 
   register(data: any) {
-    return this.http.post<AuthResponse>('/auth/register', data).pipe(
+    return this.http.post<AuthResponse>(API_ENDPOINTS.AUTH.REGISTER, data).pipe(
       tap(response => this.setSession(response.access_token))
     );
   }

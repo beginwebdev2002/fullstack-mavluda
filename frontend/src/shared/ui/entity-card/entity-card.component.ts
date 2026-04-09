@@ -13,6 +13,7 @@ export class EntityCardComponent {
   @Input() imageUrlPath: string = 'image';
   @Input() titlePath: string = 'name';
   @Input() descriptionPath: string = 'description';
+  @Input() priority: boolean = false;
 
   @Output() edit = new EventEmitter<any>();
   @Output() delete = new EventEmitter<any>();

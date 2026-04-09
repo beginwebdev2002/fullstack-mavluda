@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EntityCardComponent } from '../entity-card/entity-card.component';
+import { EntityCardComponent } from '@shared/ui/entity-card/entity-card.component';
 
 @Component({
   selector: 'app-entity-list',
