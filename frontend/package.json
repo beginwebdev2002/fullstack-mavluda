@@ -24,10 +24,12 @@
     "crypto": "^1.0.1",
     "express": "^5.2.1",
     "jwt-decode": "^4.0.0",
+    "leaflet": "^1.9.4",
     "rxjs": "^7.8.1",
     "tailwindcss": "latest"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.21",
     "@types/node": "^22.14.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"

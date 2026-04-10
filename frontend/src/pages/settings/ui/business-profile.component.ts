@@ -1,7 +1,8 @@
-import { Component, ChangeDetectionStrategy, input, output } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input, output, effect, ElementRef, viewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AdminLocation, OwnerInfo } from '@shared/models';
+import * as L from 'leaflet';
 
 @Component({
   selector: 'app-business-profile',
@@ -66,16 +67,16 @@ import { AdminLocation, OwnerInfo } from '@shared/models';
             </div>
           </div>
         </div>
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wider" i18n="@@settingsLabelMap">Map Preview</label>
-          <div class="h-[235px] w-full rounded-2xl bg-gray-100 border border-gray-200 overflow-hidden relative group">
-            <img alt="Map Preview" class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDonmZQfuLMnod8C7wis0atCzWNP6hXp4m4AoTUkoIuPmARE_RPVbF8IOpf0C5vL9JCeOUxLeEbrkKIbexjZNjWi7N0mOGT4vh5gfIwVQ6W6t_y1RrbJ8mQdVkZDKa3iIPYPOCAcNuCyqCDj1BJlO-SzpspJY1_K_8iJC8huctLGH8gw04zghpbK-aLIeK0eF2OdSo5Cyx8uG_rZsuVHV606R48a5A23KKY9m5fok_i6f00f_floYzSSA3W0cuUMIGxWr-KW4RYNyfh"/>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="bg-white/90 p-4 rounded-xl shadow-lg flex items-center space-x-3 backdrop-blur-sm border border-primary/20">
-                <span class="material-symbols-outlined text-primary text-3xl">map</span>
-                <span class="text-xs font-medium uppercase tracking-widest text-gray-600">Interactive Map Component</span>
-              </div>
-            </div>
+        <div class="flex flex-col h-full">
+          <div class="flex justify-between items-end mb-2">
+            <label class="block text-sm font-semibold text-gray-700 uppercase tracking-wider" i18n="@@settingsLabelMap">Interactive Map</label>
+            <button (click)="getCurrentLocation()" class="text-xs text-primary hover:text-primary-hover font-medium flex items-center transition-colors active:scale-95">
+              <span class="material-symbols-outlined text-[16px] mr-1">my_location</span>
+              <span i18n="@@settingsBtnGetLocation">Get Current Location</span>
+            </button>
+          </div>
+          <div class="h-[235px] w-full rounded-2xl bg-gray-100 border border-gray-200 overflow-hidden relative group" #mapContainer>
+            <!-- Leaflet Map Container -->
           </div>
         </div>
       </div>
@@ -89,6 +90,83 @@ export class BusinessProfileComponent {
   updateLocation = output<AdminLocation>();
   updateOwnerInfo = output<OwnerInfo>();
   save = output<void>();
+
+  mapContainer = viewChild<ElementRef<HTMLDivElement>>('mapContainer');
+  map: L.Map | undefined;
+  marker: L.Marker | undefined;
+
+  constructor() {
+    effect(() => {
+      const container = this.mapContainer()?.nativeElement;
+      if (container && !this.map) {
+        this.initMap(container);
+      }
+    });
+
+    effect(() => {
+      const loc = this.location();
+      if (this.map && this.marker && loc && loc.latitude && loc.longitude) {
+        this.map.setView([loc.latitude, loc.longitude], this.map.getZoom() || 15);
+        this.marker.setLatLng([loc.latitude, loc.longitude]);
+      }
+    });
+  }
+
+  getCurrentLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          this.onLocationChange('latitude', position.coords.latitude);
+          this.onLocationChange('longitude', position.coords.longitude);
+        },
+        (error) => {
+          console.error("Error getting location: ", error);
+          alert("Could not get your location. Please check browser permissions.");
+        }
+      );
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+  private initMap(container: HTMLDivElement) {
+    const defaultLat = this.location()?.latitude || 38.53575;
+    const defaultLng = this.location()?.longitude || 68.77905;
+
+    // Fix leaflet default icon paths
+    const iconDefault = L.icon({
+      iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+      iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+      shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      tooltipAnchor: [16, -28],
+      shadowSize: [41, 41]
+    });
+    L.Marker.prototype.options.icon = iconDefault;
+
+    this.map = L.map(container).setView([defaultLat, defaultLng], 15);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(this.map);
+
+    this.marker = L.marker([defaultLat, defaultLng], { draggable: true }).addTo(this.map);
+
+    this.marker.on('dragend', (event) => {
+      const marker = event.target;
+      const position = marker.getLatLng();
+      this.onLocationChange('latitude', position.lat);
+      this.onLocationChange('longitude', position.lng);
+    });
+
+    this.map.on('click', (event: L.LeafletMouseEvent) => {
+      this.onLocationChange('latitude', event.latlng.lat);
+      this.onLocationChange('longitude', event.latlng.lng);
+    });
+  }
 
   onLocationChange(field: keyof AdminLocation, value: any) {
     this.updateLocation.emit({ ...this.location(), [field]: value });
