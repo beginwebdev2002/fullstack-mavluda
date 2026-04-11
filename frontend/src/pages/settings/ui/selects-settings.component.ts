@@ -76,8 +76,10 @@ export type SelectListType = 'gallery' | 'treatment' | 'silhouette' | 'fabric' |
               <input 
                 #input 
                 (blur)="onUpdate(type, $index, input.value)" 
+                (keyup.enter)="input.blur()"
                 [value]="item" 
-                class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm text-black focus:bg-white transition-all"
+                placeholder="Enter category name..."
+                class="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm text-black focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
               />
               <button (click)="removeItem.emit({type, index: $index})" class="text-gray-400 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all">
                 <span class="material-symbols-outlined text-lg">delete</span>
@@ -103,6 +105,11 @@ export class SelectsSettingsComponent {
   save = output<void>();
 
   onUpdate(type: SelectListType, index: number, value: string) {
-    this.updateItem.emit({ type, index, value });
+    const trimmed = value.trim();
+    if (!trimmed) {
+      this.removeItem.emit({ type, index });
+      return;
+    }
+    this.updateItem.emit({ type, index, value: trimmed });
   }
 }

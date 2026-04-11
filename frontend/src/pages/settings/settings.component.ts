@@ -126,7 +126,7 @@ export class SettingsComponent implements OnInit {
     // --- CRUD for Selection Lists ---
 
     addItem(type: SelectListType) {
-      const newItem = 'New Item';
+      const newItem = '';
       switch(type) {
         case 'gallery': this.galleryCategories.update(items => [...items, newItem]); break;
         case 'treatment': this.treatmentCategories.update(items => [...items, newItem]); break;

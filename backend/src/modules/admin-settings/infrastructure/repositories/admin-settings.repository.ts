@@ -22,9 +22,18 @@ export class AdminSettingsRepository {
   async updateSettings(
     settings: Partial<AdminSettings>,
   ): Promise<AdminSettings> {
-    const doc = await this.settingsModel
-      .findOneAndUpdate({}, { $set: settings }, { new: true, upsert: true })
-      .exec();
+    let doc = await this.settingsModel.findOne().exec();
+    if (!doc) {
+      doc = new this.settingsModel({
+        location: { address: '', latitude: 0, longitude: 0 },
+        ownerInfo: { name: '', phoneNumber: '' },
+        ...settings,
+      });
+      await doc.save();
+    } else {
+      doc.set(settings);
+      await doc.save();
+    }
     return this.toDomain(doc);
   }
 
