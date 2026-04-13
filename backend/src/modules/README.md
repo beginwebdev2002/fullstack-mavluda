@@ -1,9 +1,9 @@
-# 🧩 entities
+# 📦 modules
 
-*Breadcrumbs:* [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities)
+*Breadcrumbs:* [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules)
 
 ## 🎯 PURPOSE
-This directory `entities` is an integral part of the Mavluda Beauty ecosystem. (FSD Layer: Entities) It contains business entities and core UI models.
+This directory `modules` is an integral part of the Mavluda Beauty ecosystem. It supports the scalable NestJS backend architecture.
 This directory is meticulously maintained to uphold the 'Luxury Professional' standards of the Mavluda Beauty brand.
 
 ## 🏗️ ARCHITECTURE
@@ -14,6 +14,11 @@ graph TD
   Root --> D2[📁 treatments]
   Root --> D3[📁 admin-settings]
   Root --> D4[📁 veil]
+  Root --> D5[📁 payment]
+  Root --> D6[📁 booking]
+  Root --> D7[📁 inventory]
+  Root --> D8[📁 partnership]
+  Root --> D9[📁 auth]
 ```
 
 ## 📄 FILE REGISTRY
@@ -25,6 +30,6 @@ graph TD
 
 ## 🛠️ USAGE
 ```typescript
-// Example placeholder for interacting with the entities module
+// Example placeholder for interacting with the modules module
 import { example } from './example';
 ```
