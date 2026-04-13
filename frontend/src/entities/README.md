@@ -1,30 +1,8 @@
-# 🧩 entities
+# Entities Layer
 
-*Breadcrumbs:* [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities)
+This layer contains business entities (e.g., User, Product, Order).
+Each slice should contain:
 
-## 🎯 PURPOSE
-This directory `entities` is an integral part of the Mavluda Beauty ecosystem. (FSD Layer: Entities) It contains business entities and core UI models.
-This directory is meticulously maintained to uphold the 'Luxury Professional' standards of the Mavluda Beauty brand.
-
-## 🏗️ ARCHITECTURE
-```mermaid
-graph TD
-  Root --> D0[📁 gallery]
-  Root --> D1[📁 user]
-  Root --> D2[📁 treatments]
-  Root --> D3[📁 admin-settings]
-  Root --> D4[📁 veil]
-```
-
-## 📄 FILE REGISTRY
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-
-## 🔗 DEPENDENCIES
-- No significant internal/external dependencies found.
-
-## 🛠️ USAGE
-```typescript
-// Example placeholder for interacting with the entities module
-import { example } from './example';
-```
+- `model`: Interfaces/Types (re-exported from shared/models or specific to ui)
+- `ui`: Components
+- `api`: Services

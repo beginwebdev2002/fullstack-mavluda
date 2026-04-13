@@ -1,41 +1,20 @@
-# 🎨 frontend
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-*Breadcrumbs:* [frontend](/frontend)
+# Run and deploy your AI Studio app
 
-## 🎯 PURPOSE
-This directory `frontend` is an integral part of the Mavluda Beauty ecosystem. It contributes to the Angular zoneless, signal-based frontend.
-This directory is meticulously maintained to uphold the 'Luxury Professional' standards of the Mavluda Beauty brand.
+This contains everything you need to run your app locally.
 
-## 🏗️ ARCHITECTURE
-```mermaid
-graph TD
-  Root --> D0[📁 public]
-  Root --> D1[📁 src]
-  Root --> F0(📄 package-lock.json)
-  Root --> F1(📄 angular.json)
-  Root --> F2(📄 metadata.json)
-  Root --> F3(📄 index.tsx)
-  Root --> F4(📄 tsconfig.json)
-  Root --> F5(📄 index.html)
-  Root --> F6(📄 package.json)
-```
+View your app in AI Studio: https://ai.studio/apps/drive/1kmc9jHeqaKUBxlnUPMx3MZ54urT7DvlR
 
-## 📄 FILE REGISTRY
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `package-lock.json` | `json` | Core functionality | `None` |
-| `angular.json` | `json` | Core functionality | `None` |
-| `metadata.json` | `json` | Core functionality | `None` |
-| `index.tsx` | `tsx` | Core functionality | `@angular/platform-browser` |
-| `tsconfig.json` | `json` | Core functionality | `None` |
-| `index.html` | `html` | UI Template | `None` |
-| `package.json` | `json` | Core functionality | `None` |
+## Run Locally
 
-## 🔗 DEPENDENCIES
-- `@angular/platform-browser`
+**Prerequisites:**  Node.js
 
-## 🛠️ USAGE
-```typescript
-// Example placeholder for interacting with the frontend module
-import { example } from './package-lock.json';
-```
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
