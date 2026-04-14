@@ -2,21 +2,24 @@
 Mavluda Beauty - Luxury Professional Documentation
 Generated for 100% Architectural Transparency
 -->
-[Home](../../../README.md) > [frontend](../../README.md) > [src](../README.md) > [entities](./README.md)
+[Home](../../../README.md) > [backend](../../README.md) > [src](../README.md) > [modules](./README.md)
 
-# 🏗️ ENTITIES Directory
-
-> **FSD Layer:** Entities
+# 📁 MODULES Directory
 
 ## 🎯 PURPOSE
-Manages business entities, models, and core state related to specific domain objects.
+Manages the modules module, providing robust and secure backend services for the Mavluda Beauty application.
 
 ## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-    Root["📁 entities"]
+    Root["📁 modules"]
     Root --> Sub_admin_settings["📁 admin-settings"]
+    Root --> Sub_auth["📁 auth"]
+    Root --> Sub_booking["📁 booking"]
     Root --> Sub_gallery["📁 gallery"]
+    Root --> Sub_inventory["📁 inventory"]
+    Root --> Sub_partnership["📁 partnership"]
+    Root --> Sub_payment["📁 payment"]
     Root --> Sub_treatments["📁 treatments"]
     Root --> Sub_user["📁 user"]
     Root --> Sub_veil["📁 veil"]
@@ -33,6 +36,6 @@ graph TD
 
 ## 🛠️ USAGE
 ```typescript
-// Example placeholder for interacting with entities
+// Example placeholder for interacting with modules
 // Consult the individual files in the registry for specific APIs.
 ```

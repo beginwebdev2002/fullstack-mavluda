@@ -2,9 +2,9 @@
 Mavluda Beauty - Luxury Professional Documentation
 Generated for 100% Architectural Transparency
 -->
-[Home](../../../README.md) > [frontend](../../README.md) > [src](../README.md) > [entities](./README.md)
+[Home](../../../../../README.md) > [frontend](../../../../README.md) > [src](../../../README.md) > [entities](../../README.md) > [gallery](../README.md) > [constants](./README.md)
 
-# 🏗️ ENTITIES Directory
+# 📁 CONSTANTS Directory
 
 > **FSD Layer:** Entities
 
@@ -14,18 +14,14 @@ Manages business entities, models, and core state related to specific domain obj
 ## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-    Root["📁 entities"]
-    Root --> Sub_admin_settings["📁 admin-settings"]
-    Root --> Sub_gallery["📁 gallery"]
-    Root --> Sub_treatments["📁 treatments"]
-    Root --> Sub_user["📁 user"]
-    Root --> Sub_veil["📁 veil"]
+    Root["📁 constants"]
+    Root --> File_gallery_constants_ts["📄 gallery.constants.ts"]
 ```
 
 ## 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| (No files) | - | - | - |
+| `gallery.constants.ts` | TypeScript | Core logic implementation. | - |
 
 
 ## 🔗 DEPENDENCIES
@@ -33,6 +29,6 @@ graph TD
 
 ## 🛠️ USAGE
 ```typescript
-// Example placeholder for interacting with entities
+// Example placeholder for interacting with constants
 // Consult the individual files in the registry for specific APIs.
 ```
