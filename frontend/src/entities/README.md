@@ -1,38 +1,8 @@
-<!--
-Mavluda Beauty - Luxury Professional Documentation
-Generated for 100% Architectural Transparency
--->
-[Home](../../../README.md) > [frontend](../../README.md) > [src](../README.md) > [entities](./README.md)
+# Entities Layer
 
-# 🏗️ ENTITIES Directory
+This layer contains business entities (e.g., User, Product, Order).
+Each slice should contain:
 
-> **FSD Layer:** Entities
-
-## 🎯 PURPOSE
-Manages business entities, models, and core state related to specific domain objects.
-
-## 🏗️ ARCHITECTURE
-```mermaid
-graph TD
-    Root["📁 entities"]
-    Root --> Sub_admin_settings["📁 admin-settings"]
-    Root --> Sub_gallery["📁 gallery"]
-    Root --> Sub_treatments["📁 treatments"]
-    Root --> Sub_user["📁 user"]
-    Root --> Sub_veil["📁 veil"]
-```
-
-## 📄 FILE REGISTRY
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| (No files) | - | - | - |
-
-
-## 🔗 DEPENDENCIES
-- No external or internal imports detected in this directory.
-
-## 🛠️ USAGE
-```typescript
-// Example placeholder for interacting with entities
-// Consult the individual files in the registry for specific APIs.
-```
+- `model`: Interfaces/Types (re-exported from shared/models or specific to ui)
+- `ui`: Components
+- `api`: Services

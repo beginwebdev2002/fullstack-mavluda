@@ -29,6 +29,11 @@
               "@angular/localize/init"
             ],
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images",
+                "output": "/images"
+              },
               "./public"
             ]
           },
