@@ -1,20 +1,42 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# [frontend](/frontend)
 
-# Run and deploy your AI Studio app
+## 🏷️ 📁 Frontend
 
-This contains everything you need to run your app locally.
+### 🎯 PURPOSE
+The `frontend` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the frontend logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1kmc9jHeqaKUBxlnUPMx3MZ54urT7DvlR
+### 🏗️ ARCHITECTURE
+```mermaid
+graph TD
+  frontend[📁 frontend]
+  frontend --> public[📁 public]
+  frontend --> src[📁 src]
+  frontend --> angular_json(angular.json)
+  frontend --> index_html(index.html)
+  frontend --> index_tsx(index.tsx)
+  frontend --> metadata_json(metadata.json)
+  frontend --> package_lock_json(package-lock.json)
+  frontend --> package_json(package.json)
+  frontend --> tsconfig_json(tsconfig.json)
+```
 
-## Run Locally
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `angular.json` | `json` | Configuration and foundational asset. | None |
+| `index.html` | `html` | Encapsulates premium logic and definitions for `index.html`. | None |
+| `index.tsx` | `tsx` | Configuration and foundational asset. | None |
+| `metadata.json` | `json` | Configuration and foundational asset. | None |
+| `package-lock.json` | `json` | Configuration and foundational asset. | None |
+| `package.json` | `json` | Configuration and foundational asset. | None |
+| `tsconfig.json` | `json` | Configuration and foundational asset. | None |
 
-**Prerequisites:**  Node.js
 
+### 🔗 DEPENDENCIES
+- *Self-contained premium module.*
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 🛠️ USAGE
+```typescript
+// Seamlessly integrate frontend into your refined workflows:
+import { /* exported members */ } from '@path/to/frontend';
+```
