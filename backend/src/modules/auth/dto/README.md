@@ -1,27 +1,26 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [auth](/backend/src/modules/auth) / [dto](/backend/src/modules/auth/dto)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [auth](/backend/src/modules/auth) / [dto](/backend/src/modules/auth/dto)
 
-## 🏷️ 📨 Dto
+## 🏷️ 📁 Dto
 
 ### 🎯 PURPOSE
-The `dto` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the dto logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `dto` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the dto logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  dto[📨 dto]
-  dto --> login_dto_ts(login.dto.ts)
-  dto --> register_dto_ts(register.dto.ts)
+  dto[📁 dto]
+  dto --> dto_login_dto_ts(login.dto.ts)
+  dto --> dto_register_dto_ts(register.dto.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `login.dto.ts` | `ts` | Encapsulates premium logic and definitions for `login.dto.ts`. | None |
-| `register.dto.ts` | `ts` | Encapsulates premium logic and definitions for `register.dto.ts`. | None |
-
+| `login.dto.ts` | `ts` | Data transfer objects and models. | None |
+| `register.dto.ts` | `ts` | Data transfer objects and models. | None |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `class-validator`
 
 ### 🛠️ USAGE
 ```typescript

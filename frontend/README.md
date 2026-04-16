@@ -1,39 +1,42 @@
-# [frontend](/frontend)
+# [root](/) / [frontend](/frontend)
 
 ## 🏷️ 📁 Frontend
 
 ### 🎯 PURPOSE
-The `frontend` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the frontend logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards.
+The `frontend` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the frontend logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   frontend[📁 frontend]
-  frontend --> public[📁 public]
-  frontend --> src[📁 src]
-  frontend --> angular_json(angular.json)
-  frontend --> index_html(index.html)
-  frontend --> index_tsx(index.tsx)
-  frontend --> metadata_json(metadata.json)
-  frontend --> package_lock_json(package-lock.json)
-  frontend --> package_json(package.json)
-  frontend --> tsconfig_json(tsconfig.json)
+  frontend --> frontend_public[📁 public]
+  frontend --> frontend_src[📁 src]
+  frontend --> frontend_angular_json(angular.json)
+  frontend --> frontend_index_html(index.html)
+  frontend --> frontend_index_tsx(index.tsx)
+  frontend --> frontend_leaflet_css(leaflet.css)
+  frontend --> frontend_metadata_json(metadata.json)
+  frontend --> frontend_package_lock_json(package-lock.json)
+  frontend --> frontend_package_json(package.json)
+  frontend --> frontend_tsconfig_json(tsconfig.json)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `angular.json` | `json` | Configuration and foundational asset. | None |
-| `index.html` | `html` | Encapsulates premium logic and definitions for `index.html`. | None |
-| `index.tsx` | `tsx` | Configuration and foundational asset. | None |
+| `index.html` | `html` | UI template and styling. | None |
+| `index.tsx` | `tsx` | Configuration and foundational asset. | @angular |
+| `leaflet.css` | `css` | UI template and styling. | None |
 | `metadata.json` | `json` | Configuration and foundational asset. | None |
 | `package-lock.json` | `json` | Configuration and foundational asset. | None |
 | `package.json` | `json` | Configuration and foundational asset. | None |
 | `tsconfig.json` | `json` | Configuration and foundational asset. | None |
 
-
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `./src/app.component`
+- `./src/app/app.config`
+- `@angular/platform-browser`
 
 ### 🛠️ USAGE
 ```typescript

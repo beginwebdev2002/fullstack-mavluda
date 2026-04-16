@@ -1,32 +1,36 @@
-# [backend](/backend) / [src](/backend/src) / [common](/backend/src/common) / [config](/backend/src/common/config)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [common](/backend/src/common) / [config](/backend/src/common/config)
 
-## 🏷️ 🛠️ Config
+## 🏷️ 📁 Config
 
 ### 🎯 PURPOSE
-The `config` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the config logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `config` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the config logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  config[🛠️ config]
-  config --> app_config_module_ts(app-config.module.ts)
-  config --> app_config_service_ts(app-config.service.ts)
-  config --> configuration_ts(configuration.ts)
-  config --> env_validation_ts(env.validation.ts)
+  config[📁 config]
+  config --> config_app_config_module_ts(app-config.module.ts)
+  config --> config_app_config_service_ts(app-config.service.ts)
+  config --> config_configuration_ts(configuration.ts)
+  config --> config_env_validation_ts(env.validation.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app-config.module.ts` | `ts` | Encapsulates premium logic and definitions for `app-config.module.ts`. | @nestjs/config, @nestjs/common |
-| `app-config.service.ts` | `ts` | Encapsulates premium logic and definitions for `app-config.service.ts`. | @nestjs/config, @nestjs/common |
-| `configuration.ts` | `ts` | Encapsulates premium logic and definitions for `configuration.ts`. | None |
-| `env.validation.ts` | `ts` | Encapsulates premium logic and definitions for `env.validation.ts`. | None |
-
+| `app-config.module.ts` | `ts` | Module configuration and provider registration. | @nestjs |
+| `app-config.service.ts` | `ts` | Business logic and service layer. | @nestjs |
+| `configuration.ts` | `ts` | Core logic implementation. | None |
+| `env.validation.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
+- `./app-config.service`
+- `./configuration`
+- `./env.validation`
 - `@nestjs/common`
 - `@nestjs/config`
+- `class-transformer`
+- `class-validator`
 
 ### 🛠️ USAGE
 ```typescript

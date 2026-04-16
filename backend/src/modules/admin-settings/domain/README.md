@@ -1,26 +1,25 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [admin-settings](/backend/src/modules/admin-settings) / [domain](/backend/src/modules/admin-settings/domain)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [admin-settings](/backend/src/modules/admin-settings) / [domain](/backend/src/modules/admin-settings/domain)
 
-## 🏷️ 🏛️ Domain
+## 🏷️ 📁 Domain
 
 ### 🎯 PURPOSE
-The `domain` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the domain logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `domain` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the domain logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  domain[🏛️ domain]
-  domain --> interfaces[🔌 interfaces]
-  domain --> admin_settings_entity_ts(admin-settings.entity.ts)
+  domain[📁 domain]
+  domain --> domain_interfaces[📁 interfaces]
+  domain --> domain_admin_settings_entity_ts(admin-settings.entity.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.entity.ts` | `ts` | Encapsulates premium logic and definitions for `admin-settings.entity.ts`. | None |
-
+| `admin-settings.entity.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `./interfaces/admin-settings.interface`
 
 ### 🛠️ USAGE
 ```typescript

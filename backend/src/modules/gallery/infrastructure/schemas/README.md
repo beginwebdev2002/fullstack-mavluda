@@ -1,25 +1,25 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [gallery](/backend/src/modules/gallery) / [infrastructure](/backend/src/modules/gallery/infrastructure) / [schemas](/backend/src/modules/gallery/infrastructure/schemas)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [gallery](/backend/src/modules/gallery) / [infrastructure](/backend/src/modules/gallery/infrastructure) / [schemas](/backend/src/modules/gallery/infrastructure/schemas)
 
-## 🏷️ 📑 Schemas
+## 🏷️ 📁 Schemas
 
 ### 🎯 PURPOSE
-The `schemas` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the schemas logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `schemas` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the schemas logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  schemas[📑 schemas]
-  schemas --> gallery_schema_ts(gallery.schema.ts)
+  schemas[📁 schemas]
+  schemas --> schemas_gallery_schema_ts(gallery.schema.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.schema.ts` | `ts` | Encapsulates premium logic and definitions for `gallery.schema.ts`. | @nestjs/mongoose |
-
+| `gallery.schema.ts` | `ts` | Core logic implementation. | @nestjs |
 
 ### 🔗 DEPENDENCIES
 - `@nestjs/mongoose`
+- `mongoose`
 
 ### 🛠️ USAGE
 ```typescript

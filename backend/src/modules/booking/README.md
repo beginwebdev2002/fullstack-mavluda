@@ -1,30 +1,37 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [booking](/backend/src/modules/booking)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [booking](/backend/src/modules/booking)
 
 ## 🏷️ 📁 Booking
 
 ### 🎯 PURPOSE
-The `booking` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the booking logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `booking` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the booking logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   booking[📁 booking]
-  booking --> application[🚀 application]
-  booking --> domain[🏛️ domain]
-  booking --> infrastructure[🏗️ infrastructure]
-  booking --> presentation[🎨 presentation]
-  booking --> booking_module_ts(booking.module.ts)
-  booking --> index_ts(index.ts)
+  booking --> booking_application[📁 application]
+  booking --> booking_domain[📁 domain]
+  booking --> booking_infrastructure[📁 infrastructure]
+  booking --> booking_presentation[📁 presentation]
+  booking --> booking_booking_module_ts(booking.module.ts)
+  booking --> booking_index_ts(index.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.module.ts` | `ts` | Encapsulates premium logic and definitions for `booking.module.ts`. | @nestjs/common, @nestjs/mongoose |
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-
+| `booking.module.ts` | `ts` | Module configuration and provider registration. | @nestjs |
+| `index.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
+- `./application/booking.service`
+- `./booking.module`
+- `./domain/booking.entity`
+- `./infrastructure/repositories/booking.repository`
+- `./infrastructure/schemas/booking.schema`
+- `./presentation/booking.controller`
+- `./presentation/dto/create-booking.dto`
+- `./presentation/dto/update-booking.dto`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

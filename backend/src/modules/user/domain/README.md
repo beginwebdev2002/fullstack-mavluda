@@ -1,22 +1,21 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [user](/backend/src/modules/user) / [domain](/backend/src/modules/user/domain)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [user](/backend/src/modules/user) / [domain](/backend/src/modules/user/domain)
 
-## 🏷️ 🏛️ Domain
+## 🏷️ 📁 Domain
 
 ### 🎯 PURPOSE
-The `domain` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the domain logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `domain` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the domain logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  domain[🏛️ domain]
-  domain --> user_entity_ts(user.entity.ts)
+  domain[📁 domain]
+  domain --> domain_user_entity_ts(user.entity.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.entity.ts` | `ts` | Encapsulates premium logic and definitions for `user.entity.ts`. | None |
-
+| `user.entity.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
 - *Self-contained premium module.*

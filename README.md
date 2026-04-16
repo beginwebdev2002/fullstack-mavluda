@@ -9,14 +9,13 @@ The `root` directory forms a critical foundation within the Mavluda Beauty ecosy
 ```mermaid
 graph TD
   root[📁 root]
-  root --> backend[📁 backend]
-  root --> frontend[📁 frontend]
-  root --> _env(.env)
-  root --> _gitignore(.gitignore)
-  root --> GEMINI_md(GEMINI.md)
-  root --> generate_all_readmes_py(generate_all_readmes.py)
-  root --> generate_all_readmes_refined_py(generate_all_readmes_refined.py)
-  root --> generate_readme_py(generate_readme.py)
+  root --> root_backend[📁 backend]
+  root --> root_frontend[📁 frontend]
+  root --> root__env(.env)
+  root --> root__gitignore(.gitignore)
+  root --> root__gitignore_append(.gitignore_append)
+  root --> root_GEMINI_md(GEMINI.md)
+  root --> root_generate_readmes_py(generate_readmes.py)
 ```
 
 ### 📄 FILE REGISTRY
@@ -24,14 +23,13 @@ graph TD
 |---|---|---|---|
 | `.env` | `env` | Configuration and foundational asset. | None |
 | `.gitignore` | `gitignore` | Configuration and foundational asset. | None |
+| `.gitignore_append` | `gitignore_append` | Configuration and foundational asset. | None |
 | `GEMINI.md` | `md` | Configuration and foundational asset. | None |
-| `generate_all_readmes.py` | `py` | Configuration and foundational asset. | None |
-| `generate_all_readmes_refined.py` | `py` | Configuration and foundational asset. | None |
-| `generate_readme.py` | `py` | Configuration and foundational asset. | None |
-
+| `generate_readmes.py` | `py` | Configuration and foundational asset. | @path |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `...`
+- `@path/to/{dirname}`
 
 ### 🛠️ USAGE
 ```typescript

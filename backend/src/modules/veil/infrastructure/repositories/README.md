@@ -1,27 +1,29 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [veil](/backend/src/modules/veil) / [infrastructure](/backend/src/modules/veil/infrastructure) / [repositories](/backend/src/modules/veil/infrastructure/repositories)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [veil](/backend/src/modules/veil) / [infrastructure](/backend/src/modules/veil/infrastructure) / [repositories](/backend/src/modules/veil/infrastructure/repositories)
 
-## 🏷️ 🗄️ Repositories
+## 🏷️ 📁 Repositories
 
 ### 🎯 PURPOSE
-The `repositories` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the repositories logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `repositories` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the repositories logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  repositories[🗄️ repositories]
-  repositories --> veil_repository_ts(veil.repository.ts)
+  repositories[📁 repositories]
+  repositories --> repositories_veil_repository_ts(veil.repository.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.repository.ts` | `ts` | Encapsulates premium logic and definitions for `veil.repository.ts`. | @common/utils/file-system, @nestjs/common, @nestjs/mongoose |
-
+| `veil.repository.ts` | `ts` | Core logic implementation. | @nestjs, @common |
 
 ### 🔗 DEPENDENCIES
+- `../../domain/veil.entity`
+- `../schemas/veil.schema`
 - `@common/utils/file-system`
 - `@nestjs/common`
 - `@nestjs/mongoose`
+- `mongoose`
 
 ### 🛠️ USAGE
 ```typescript

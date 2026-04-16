@@ -1,30 +1,32 @@
-# [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [user-home](/frontend/src/pages/user-home)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [user-home](/frontend/src/pages/user-home)
 
 ## 🏷️ 📁 User-home
 
 ### 🎯 PURPOSE
-The `user-home` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the user-home logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards. This module is a distinguished component of the **Pages** layer under the Feature Sliced Design (FSD) methodology.
+The `user-home` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the user-home logic to ensure a seamless and premium experience.
+
+This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  user-home[📁 user-home]
-  user-home --> index_ts(index.ts)
-  user-home --> user_home_component_html(user-home.component.html)
-  user-home --> user_home_component_scss(user-home.component.scss)
-  user-home --> user_home_component_ts(user-home.component.ts)
+  user_home[📁 user-home]
+  user_home --> user_home_index_ts(index.ts)
+  user_home --> user_home_user_home_component_html(user-home.component.html)
+  user_home --> user_home_user_home_component_scss(user-home.component.scss)
+  user_home --> user_home_user_home_component_ts(user-home.component.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-| `user-home.component.html` | `html` | Encapsulates premium logic and definitions for `user-home.component.html`. | None |
-| `user-home.component.scss` | `scss` | Encapsulates premium logic and definitions for `user-home.component.scss`. | None |
-| `user-home.component.ts` | `ts` | Encapsulates premium logic and definitions for `user-home.component.ts`. | @angular/common, @angular/core, @core/constants, @angular/common/http, @angular/router |
-
+| `index.ts` | `ts` | Core logic implementation. | None |
+| `user-home.component.html` | `html` | UI template and styling. | None |
+| `user-home.component.scss` | `scss` | UI template and styling. | None |
+| `user-home.component.ts` | `ts` | UI component logic and rendering. | @angular, @core |
 
 ### 🔗 DEPENDENCIES
+- `./user-home.component`
 - `@angular/common`
 - `@angular/common/http`
 - `@angular/core`

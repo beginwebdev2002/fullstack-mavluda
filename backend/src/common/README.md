@@ -1,27 +1,26 @@
-# [backend](/backend) / [src](/backend/src) / [common](/backend/src/common)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [common](/backend/src/common)
 
 ## 🏷️ 📁 Common
 
 ### 🎯 PURPOSE
-The `common` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the common logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `common` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the common logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   common[📁 common]
-  common --> config[🛠️ config]
-  common --> database[💾 database]
-  common --> decorators[✨ decorators]
-  common --> guards[🛡️ guards]
-  common --> interfaces[🔌 interfaces]
-  common --> utils[🧰 utils]
+  common --> common_config[📁 config]
+  common --> common_database[📁 database]
+  common --> common_decorators[📁 decorators]
+  common --> common_guards[📁 guards]
+  common --> common_interfaces[📁 interfaces]
+  common --> common_utils[📁 utils]
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No exclusive files* | - | Architecturally reserved | - |
-
+| *No files* | `-` | *Directory is strictly structural.* | `-` |
 
 ### 🔗 DEPENDENCIES
 - *Self-contained premium module.*

@@ -1,32 +1,36 @@
-# [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [treatments](/frontend/src/entities/treatments)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [treatments](/frontend/src/entities/treatments)
 
 ## 🏷️ 📁 Treatments
 
 ### 🎯 PURPOSE
-The `treatments` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the treatments logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards. This module is a distinguished component of the **Entities** layer under the Feature Sliced Design (FSD) methodology.
+The `treatments` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the treatments logic to ensure a seamless and premium experience.
+
+This directory resides within the **Entities** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   treatments[📁 treatments]
-  treatments --> constants[📌 constants]
-  treatments --> index_ts(index.ts)
-  treatments --> treatments_service_ts(treatments.service.ts)
+  treatments --> treatments_constants[📁 constants]
+  treatments --> treatments_index_ts(index.ts)
+  treatments --> treatments_treatments_service_ts(treatments.service.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-| `treatments.service.ts` | `ts` | Encapsulates premium logic and definitions for `treatments.service.ts`. | @angular/core, @shared/lib, @core/constants, @angular/common/http, @features/treatments |
-
+| `index.ts` | `ts` | Core logic implementation. | None |
+| `treatments.service.ts` | `ts` | Business logic and service layer. | @angular, @features, @shared, @core |
 
 ### 🔗 DEPENDENCIES
+- `./constants/treatments.constants`
+- `./treatments.service`
 - `@angular/common/http`
 - `@angular/core`
 - `@core/constants`
 - `@features/treatments`
 - `@shared/lib`
+- `rxjs`
 
 ### 🛠️ USAGE
 ```typescript

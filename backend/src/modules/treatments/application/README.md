@@ -1,24 +1,25 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [treatments](/backend/src/modules/treatments) / [application](/backend/src/modules/treatments/application)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [treatments](/backend/src/modules/treatments) / [application](/backend/src/modules/treatments/application)
 
-## 🏷️ 🚀 Application
+## 🏷️ 📁 Application
 
 ### 🎯 PURPOSE
-The `application` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the application logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `application` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the application logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  application[🚀 application]
-  application --> treatments_service_ts(treatments.service.ts)
+  application[📁 application]
+  application --> application_treatments_service_ts(treatments.service.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.service.ts` | `ts` | Encapsulates premium logic and definitions for `treatments.service.ts`. | @nestjs/common, @common/utils |
-
+| `treatments.service.ts` | `ts` | Business logic and service layer. | @nestjs, @common |
 
 ### 🔗 DEPENDENCIES
+- `../domain/treatments.entity`
+- `../infrastructure/repositories/treatments.repository`
 - `@common/utils`
 - `@nestjs/common`
 

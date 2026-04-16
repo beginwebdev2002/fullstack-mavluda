@@ -1,30 +1,37 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [user](/backend/src/modules/user)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [user](/backend/src/modules/user)
 
 ## 🏷️ 📁 User
 
 ### 🎯 PURPOSE
-The `user` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the user logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `user` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the user logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   user[📁 user]
-  user --> application[🚀 application]
-  user --> domain[🏛️ domain]
-  user --> infrastructure[🏗️ infrastructure]
-  user --> presentation[🎨 presentation]
-  user --> index_ts(index.ts)
-  user --> user_module_ts(user.module.ts)
+  user --> user_application[📁 application]
+  user --> user_domain[📁 domain]
+  user --> user_infrastructure[📁 infrastructure]
+  user --> user_presentation[📁 presentation]
+  user --> user_index_ts(index.ts)
+  user --> user_user_module_ts(user.module.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-| `user.module.ts` | `ts` | Encapsulates premium logic and definitions for `user.module.ts`. | @nestjs/common, @nestjs/mongoose |
-
+| `index.ts` | `ts` | Core logic implementation. | None |
+| `user.module.ts` | `ts` | Module configuration and provider registration. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `./application/user.service`
+- `./domain/user.entity`
+- `./infrastructure/repositories/user.repository`
+- `./infrastructure/schemas/user.schema`
+- `./presentation/dto/create-user.dto`
+- `./presentation/dto/update-user.dto`
+- `./presentation/user.controller`
+- `./user.module`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

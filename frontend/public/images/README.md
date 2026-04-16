@@ -1,16 +1,16 @@
-# [frontend](/frontend) / [public](/frontend/public) / [images](/frontend/public/images)
+# [root](/) / [frontend](/frontend) / [public](/frontend/public) / [images](/frontend/public/images)
 
 ## 🏷️ 📁 Images
 
 ### 🎯 PURPOSE
-The `images` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the images logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards.
+The `images` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the images logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   images[📁 images]
-  images --> treatments_add_img_png(treatments-add-img.png)
-  images --> treatments_no_img_png(treatments-no-img.png)
+  images --> images_treatments_add_img_png(treatments-add-img.png)
+  images --> images_treatments_no_img_png(treatments-no-img.png)
 ```
 
 ### 📄 FILE REGISTRY
@@ -18,7 +18,6 @@ graph TD
 |---|---|---|---|
 | `treatments-add-img.png` | `png` | Configuration and foundational asset. | None |
 | `treatments-no-img.png` | `png` | Configuration and foundational asset. | None |
-
 
 ### 🔗 DEPENDENCIES
 - *Self-contained premium module.*

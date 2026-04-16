@@ -1,30 +1,37 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [gallery](/backend/src/modules/gallery)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [gallery](/backend/src/modules/gallery)
 
 ## 🏷️ 📁 Gallery
 
 ### 🎯 PURPOSE
-The `gallery` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the gallery logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `gallery` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the gallery logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   gallery[📁 gallery]
-  gallery --> application[🚀 application]
-  gallery --> domain[🏛️ domain]
-  gallery --> infrastructure[🏗️ infrastructure]
-  gallery --> presentation[🎨 presentation]
-  gallery --> gallery_module_ts(gallery.module.ts)
-  gallery --> index_ts(index.ts)
+  gallery --> gallery_application[📁 application]
+  gallery --> gallery_domain[📁 domain]
+  gallery --> gallery_infrastructure[📁 infrastructure]
+  gallery --> gallery_presentation[📁 presentation]
+  gallery --> gallery_gallery_module_ts(gallery.module.ts)
+  gallery --> gallery_index_ts(index.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.module.ts` | `ts` | Encapsulates premium logic and definitions for `gallery.module.ts`. | @nestjs/common, @nestjs/mongoose |
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-
+| `gallery.module.ts` | `ts` | Module configuration and provider registration. | @nestjs |
+| `index.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
+- `./application/gallery.service`
+- `./domain/gallery.entity`
+- `./gallery.module`
+- `./infrastructure/repositories/gallery.repository`
+- `./infrastructure/schemas/gallery.schema`
+- `./presentation/dto/create-gallery.dto`
+- `./presentation/dto/update-gallery.dto`
+- `./presentation/gallery.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

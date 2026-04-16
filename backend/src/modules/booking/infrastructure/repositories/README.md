@@ -1,26 +1,28 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [booking](/backend/src/modules/booking) / [infrastructure](/backend/src/modules/booking/infrastructure) / [repositories](/backend/src/modules/booking/infrastructure/repositories)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [booking](/backend/src/modules/booking) / [infrastructure](/backend/src/modules/booking/infrastructure) / [repositories](/backend/src/modules/booking/infrastructure/repositories)
 
-## 🏷️ 🗄️ Repositories
+## 🏷️ 📁 Repositories
 
 ### 🎯 PURPOSE
-The `repositories` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the repositories logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `repositories` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the repositories logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  repositories[🗄️ repositories]
-  repositories --> booking_repository_ts(booking.repository.ts)
+  repositories[📁 repositories]
+  repositories --> repositories_booking_repository_ts(booking.repository.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.repository.ts` | `ts` | Encapsulates premium logic and definitions for `booking.repository.ts`. | @nestjs/common, @nestjs/mongoose |
-
+| `booking.repository.ts` | `ts` | Core logic implementation. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `../../domain/booking.entity`
+- `../schemas/booking.schema`
 - `@nestjs/common`
 - `@nestjs/mongoose`
+- `mongoose`
 
 ### 🛠️ USAGE
 ```typescript

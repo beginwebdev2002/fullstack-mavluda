@@ -1,30 +1,32 @@
-# [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [dashboard](/frontend/src/pages/dashboard)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [dashboard](/frontend/src/pages/dashboard)
 
 ## 🏷️ 📁 Dashboard
 
 ### 🎯 PURPOSE
-The `dashboard` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the dashboard logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards. This module is a distinguished component of the **Pages** layer under the Feature Sliced Design (FSD) methodology.
+The `dashboard` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the dashboard logic to ensure a seamless and premium experience.
+
+This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   dashboard[📁 dashboard]
-  dashboard --> dashboard_component_html(dashboard.component.html)
-  dashboard --> dashboard_component_scss(dashboard.component.scss)
-  dashboard --> dashboard_component_ts(dashboard.component.ts)
-  dashboard --> index_ts(index.ts)
+  dashboard --> dashboard_dashboard_component_html(dashboard.component.html)
+  dashboard --> dashboard_dashboard_component_scss(dashboard.component.scss)
+  dashboard --> dashboard_dashboard_component_ts(dashboard.component.ts)
+  dashboard --> dashboard_index_ts(index.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `dashboard.component.html` | `html` | Encapsulates premium logic and definitions for `dashboard.component.html`. | None |
-| `dashboard.component.scss` | `scss` | Encapsulates premium logic and definitions for `dashboard.component.scss`. | None |
-| `dashboard.component.ts` | `ts` | Encapsulates premium logic and definitions for `dashboard.component.ts`. | @angular/core, @angular/common |
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-
+| `dashboard.component.html` | `html` | UI template and styling. | None |
+| `dashboard.component.scss` | `scss` | UI template and styling. | None |
+| `dashboard.component.ts` | `ts` | UI component logic and rendering. | @angular |
+| `index.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
+- `./dashboard.component`
 - `@angular/common`
 - `@angular/core`
 

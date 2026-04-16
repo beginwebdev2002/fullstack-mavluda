@@ -1,30 +1,37 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [veil](/backend/src/modules/veil)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [veil](/backend/src/modules/veil)
 
 ## 🏷️ 📁 Veil
 
 ### 🎯 PURPOSE
-The `veil` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `veil` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   veil[📁 veil]
-  veil --> application[🚀 application]
-  veil --> domain[🏛️ domain]
-  veil --> infrastructure[🏗️ infrastructure]
-  veil --> presentation[🎨 presentation]
-  veil --> index_ts(index.ts)
-  veil --> veil_module_ts(veil.module.ts)
+  veil --> veil_application[📁 application]
+  veil --> veil_domain[📁 domain]
+  veil --> veil_infrastructure[📁 infrastructure]
+  veil --> veil_presentation[📁 presentation]
+  veil --> veil_index_ts(index.ts)
+  veil --> veil_veil_module_ts(veil.module.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-| `veil.module.ts` | `ts` | Encapsulates premium logic and definitions for `veil.module.ts`. | @nestjs/common, @nestjs/mongoose |
-
+| `index.ts` | `ts` | Core logic implementation. | None |
+| `veil.module.ts` | `ts` | Module configuration and provider registration. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `./application/veil.service`
+- `./domain/veil.entity`
+- `./infrastructure/repositories/veil.repository`
+- `./infrastructure/schemas/veil.schema`
+- `./presentation/dto/create-veil.dto`
+- `./presentation/dto/update-veil.dto`
+- `./presentation/veil.controller`
+- `./veil.module`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

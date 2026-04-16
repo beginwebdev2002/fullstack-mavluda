@@ -1,31 +1,30 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules)
 
-## 🏷️ 📦 Modules
+## 🏷️ 📁 Modules
 
 ### 🎯 PURPOSE
-The `modules` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the modules logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `modules` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the modules logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  modules[📦 modules]
-  modules --> admin-settings[📁 admin-settings]
-  modules --> auth[📁 auth]
-  modules --> booking[📁 booking]
-  modules --> gallery[📁 gallery]
-  modules --> inventory[📁 inventory]
-  modules --> partnership[📁 partnership]
-  modules --> payment[📁 payment]
-  modules --> treatments[📁 treatments]
-  modules --> user[📁 user]
-  modules --> veil[📁 veil]
+  modules[📁 modules]
+  modules --> modules_admin_settings[📁 admin-settings]
+  modules --> modules_auth[📁 auth]
+  modules --> modules_booking[📁 booking]
+  modules --> modules_gallery[📁 gallery]
+  modules --> modules_inventory[📁 inventory]
+  modules --> modules_partnership[📁 partnership]
+  modules --> modules_payment[📁 payment]
+  modules --> modules_treatments[📁 treatments]
+  modules --> modules_user[📁 user]
+  modules --> modules_veil[📁 veil]
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No exclusive files* | - | Architecturally reserved | - |
-
+| *No files* | `-` | *Directory is strictly structural.* | `-` |
 
 ### 🔗 DEPENDENCIES
 - *Self-contained premium module.*
