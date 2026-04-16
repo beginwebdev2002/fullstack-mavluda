@@ -33,3 +33,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.md
+!README.md
+!GEMINI.md
+!AGENTS.md
