@@ -19,14 +19,14 @@
 #       - name: Setup Node.js
 #         uses: actions/setup-node@v4.1.0
 #         with:
-#           node-version: "20"
+#           node-version: "22"
 #           cache: "npm" # Теперь используем только кеш npm
 
 #       # 2. Устанавливаем зависимости
 #       # Используем npm ci для максимальной стабильности в CI/CD
 #       # Флаг --legacy-peer-deps нужен для корректной работы Nx и зависимостей Angular/NestJS
 #       - name: Install dependencies
-#         run: npm ci --legacy-peer-deps
+#         run: npm ci --legacy-peer-deps --legacy-peer-deps
 
 #       # 3. Сборка через Nx
 #       - name: Build NestJS
