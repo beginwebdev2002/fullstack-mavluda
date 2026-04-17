@@ -1,31 +1,36 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [user](/backend/src/modules/user) / [presentation](/backend/src/modules/user/presentation) / [dto](/backend/src/modules/user/presentation/dto)
+# 📁 dto
 
-## 🏷️ 📁 Dto
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [presentation](/backend/src/modules/user/presentation) > [dto](/backend/src/modules/user/presentation/dto)
 
-### 🎯 PURPOSE
-The `dto` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the dto logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  dto[📁 dto]
-  dto --> dto_create_user_dto_ts(create-user.dto.ts)
-  dto --> dto_update_user_dto_ts(update-user.dto.ts)
+  Root["📁 dto"]
+  Root --> createuserdtots["📄 create-user.dto.ts"]
+  Root --> updateuserdtots["📄 update-user.dto.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-user.dto.ts` | `ts` | Data transfer objects and models. | None |
-| `update-user.dto.ts` | `ts` | Data transfer objects and models. | @nestjs |
+| `create-user.dto.ts` | DTO | Data Transfer Object for validation. | N/A |
+| `update-user.dto.ts` | DTO | Data Transfer Object for validation. | @nestjs |
 
-### 🔗 DEPENDENCIES
-- `./create-user.dto`
-- `@nestjs/mapped-types`
+
+## 🔗 Dependencies
 - `class-validator`
+- `@nestjs/mapped-types`
+- `./create-user.dto`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate dto into your refined workflows:
-import { /* exported members */ } from '@path/to/dto';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './create-user.dto';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

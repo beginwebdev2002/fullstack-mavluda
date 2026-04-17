@@ -1,46 +1,45 @@
-# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [settings](/frontend/src/pages/settings)
+# 📁 settings
 
-## 🏷️ 📁 Settings
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [settings](/frontend/src/pages/settings)
 
-### 🎯 PURPOSE
-The `settings` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the settings logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **settings** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
 
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
-
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  settings[📁 settings]
-  settings --> settings_ui[📁 ui]
-  settings --> settings_index_ts(index.ts)
-  settings --> settings_settings_component_html(settings.component.html)
-  settings --> settings_settings_component_scss(settings.component.scss)
-  settings --> settings_settings_component_ts(settings.component.ts)
+  Root["📁 settings"]
+  Root --> ui["📁 ui"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Core logic implementation. | None |
-| `settings.component.html` | `html` | UI template and styling. | None |
-| `settings.component.scss` | `scss` | UI template and styling. | None |
-| `settings.component.ts` | `ts` | UI component logic and rendering. | @angular, @entities, @shared |
+| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+| `settings.component.html` | Template | Visual layout and structural HTML. | N/A |
+| `settings.component.scss` | Stylesheet | Luxury styling and layout logic. | N/A |
+| `settings.component.ts` | Component | UI rendering and component-level state. | @angular, @entities, @shared |
 
-### 🔗 DEPENDENCIES
+
+## 🔗 Dependencies
 - `./settings.component`
-- `./ui/additional-links.component`
-- `./ui/business-profile.component`
-- `./ui/general-info.component`
-- `./ui/selects-settings.component`
-- `./ui/social-matrix.component`
-- `@angular/common`
 - `@angular/core`
+- `@angular/common`
 - `@angular/forms`
 - `@entities/admin-settings`
-- *...and more.*
+- `@shared/models/admin-settings.model`
+- `./ui/business-profile.component`
+- `./ui/social-matrix.component`
+- `./ui/general-info.component`
+- `./ui/additional-links.component`
+- `./ui/selects-settings.component`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate settings into your refined workflows:
-import { /* exported members */ } from '@path/to/settings';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './index';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

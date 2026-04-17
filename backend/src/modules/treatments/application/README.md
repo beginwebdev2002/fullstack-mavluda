@@ -1,30 +1,35 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [treatments](/backend/src/modules/treatments) / [application](/backend/src/modules/treatments/application)
+# 📁 application
 
-## 🏷️ 📁 Application
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments) > [application](/backend/src/modules/treatments/application)
 
-### 🎯 PURPOSE
-The `application` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the application logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  application[📁 application]
-  application --> application_treatments_service_ts(treatments.service.ts)
+  Root["📁 application"]
+  Root --> treatmentsservicets["📄 treatments.service.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.service.ts` | `ts` | Business logic and service layer. | @nestjs, @common |
+| `treatments.service.ts` | Service | Business logic and state management. | @nestjs, @common |
 
-### 🔗 DEPENDENCIES
+
+## 🔗 Dependencies
+- `@nestjs/common`
 - `../domain/treatments.entity`
 - `../infrastructure/repositories/treatments.repository`
 - `@common/utils`
-- `@nestjs/common`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate application into your refined workflows:
-import { /* exported members */ } from '@path/to/application';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './treatments.service';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

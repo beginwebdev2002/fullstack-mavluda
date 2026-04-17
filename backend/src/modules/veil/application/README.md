@@ -1,29 +1,34 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [veil](/backend/src/modules/veil) / [application](/backend/src/modules/veil/application)
+# 📁 application
 
-## 🏷️ 📁 Application
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil) > [application](/backend/src/modules/veil/application)
 
-### 🎯 PURPOSE
-The `application` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the application logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  application[📁 application]
-  application --> application_veil_service_ts(veil.service.ts)
+  Root["📁 application"]
+  Root --> veilservicets["📄 veil.service.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.service.ts` | `ts` | Business logic and service layer. | @nestjs |
+| `veil.service.ts` | Service | Business logic and state management. | @nestjs |
 
-### 🔗 DEPENDENCIES
+
+## 🔗 Dependencies
+- `@nestjs/common`
 - `../domain/veil.entity`
 - `../infrastructure/repositories/veil.repository`
-- `@nestjs/common`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate application into your refined workflows:
-import { /* exported members */ } from '@path/to/application';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './veil.service';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

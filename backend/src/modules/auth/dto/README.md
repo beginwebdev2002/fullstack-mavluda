@@ -1,29 +1,34 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [auth](/backend/src/modules/auth) / [dto](/backend/src/modules/auth/dto)
+# 📁 dto
 
-## 🏷️ 📁 Dto
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [dto](/backend/src/modules/auth/dto)
 
-### 🎯 PURPOSE
-The `dto` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the dto logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  dto[📁 dto]
-  dto --> dto_login_dto_ts(login.dto.ts)
-  dto --> dto_register_dto_ts(register.dto.ts)
+  Root["📁 dto"]
+  Root --> logindtots["📄 login.dto.ts"]
+  Root --> registerdtots["📄 register.dto.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `login.dto.ts` | `ts` | Data transfer objects and models. | None |
-| `register.dto.ts` | `ts` | Data transfer objects and models. | None |
+| `login.dto.ts` | DTO | Data Transfer Object for validation. | N/A |
+| `register.dto.ts` | DTO | Data Transfer Object for validation. | N/A |
 
-### 🔗 DEPENDENCIES
+
+## 🔗 Dependencies
 - `class-validator`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate dto into your refined workflows:
-import { /* exported members */ } from '@path/to/dto';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './login.dto';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

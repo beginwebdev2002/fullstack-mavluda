@@ -1,32 +1,32 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [common](/backend/src/common)
+# 💎 common
 
-## 🏷️ 📁 Common
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common)
 
-### 🎯 PURPOSE
-The `common` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the common logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **common** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  common[📁 common]
-  common --> common_config[📁 config]
-  common --> common_database[📁 database]
-  common --> common_decorators[📁 decorators]
-  common --> common_guards[📁 guards]
-  common --> common_interfaces[📁 interfaces]
-  common --> common_utils[📁 utils]
+  Root["💎 common"]
+  Root --> config["📁 config"]
+  Root --> database["📁 database"]
+  Root --> decorators["📁 decorators"]
+  Root --> guards["📁 guards"]
+  Root --> interfaces["📁 interfaces"]
+  Root --> utils["📁 utils"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files* | `-` | *Directory is strictly structural.* | `-` |
+| _No matching files_ | - | - | - |
 
-### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
 
-### 🛠️ USAGE
-```typescript
-// Seamlessly integrate common into your refined workflows:
-import { /* exported members */ } from '@path/to/common';
+## 🔗 Dependencies
+- _No external or internal dependencies detected._
+
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or configuration hub.
 ```

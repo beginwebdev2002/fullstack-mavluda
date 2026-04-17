@@ -1,29 +1,29 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [treatments](/backend/src/modules/treatments)
+# 📁 treatments
 
-## 🏷️ 📁 Treatments
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments)
 
-### 🎯 PURPOSE
-The `treatments` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the treatments logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  treatments[📁 treatments]
-  treatments --> treatments_application[📁 application]
-  treatments --> treatments_domain[📁 domain]
-  treatments --> treatments_infrastructure[📁 infrastructure]
-  treatments --> treatments_presentation[📁 presentation]
-  treatments --> treatments_index_ts(index.ts)
-  treatments --> treatments_treatments_module_ts(treatments.module.ts)
+  Root["📁 treatments"]
+  Root --> application["📁 application"]
+  Root --> domain["📁 domain"]
+  Root --> infrastructure["📁 infrastructure"]
+  Root --> presentation["📁 presentation"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Core logic implementation. | None |
-| `treatments.module.ts` | `ts` | Module configuration and provider registration. | @modules, @nestjs |
+| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+| `treatments.module.ts` | Module | Core logic and utilities for this domain. | @nestjs, @modules |
 
-### 🔗 DEPENDENCIES
+
+## 🔗 Dependencies
 - `./application/treatments.service`
 - `./domain/treatments.entity`
 - `./infrastructure/repositories/treatments.repository`
@@ -32,12 +32,18 @@ graph TD
 - `./presentation/dto/update-treatments.dto`
 - `./presentation/treatments.controller`
 - `./treatments.module`
+- `@nestjs/common`
+- `@nestjs/mongoose`
 - `@modules/treatments/application/treatments.service`
+- `@modules/treatments/presentation/treatments.controller`
 - `@modules/treatments/infrastructure/repositories/treatments.repository`
-- *...and more.*
+- `@modules/treatments/infrastructure/schemas/treatments.schema`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate treatments into your refined workflows:
-import { /* exported members */ } from '@path/to/treatments';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './index';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

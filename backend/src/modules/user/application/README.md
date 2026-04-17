@@ -1,30 +1,35 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [user](/backend/src/modules/user) / [application](/backend/src/modules/user/application)
+# 📁 application
 
-## 🏷️ 📁 Application
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [application](/backend/src/modules/user/application)
 
-### 🎯 PURPOSE
-The `application` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the application logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  application[📁 application]
-  application --> application_user_service_ts(user.service.ts)
+  Root["📁 application"]
+  Root --> userservicets["📄 user.service.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.service.ts` | `ts` | Business logic and service layer. | @nestjs |
+| `user.service.ts` | Service | Business logic and state management. | @nestjs |
 
-### 🔗 DEPENDENCIES
-- `../domain/user.entity`
-- `../infrastructure/repositories/user.repository`
+
+## 🔗 Dependencies
 - `@nestjs/common`
 - `bcrypt`
+- `../domain/user.entity`
+- `../infrastructure/repositories/user.repository`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate application into your refined workflows:
-import { /* exported members */ } from '@path/to/application';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './user.service';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

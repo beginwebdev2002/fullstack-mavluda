@@ -1,31 +1,36 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [treatments](/backend/src/modules/treatments) / [infrastructure](/backend/src/modules/treatments/infrastructure) / [repositories](/backend/src/modules/treatments/infrastructure/repositories)
+# 📁 repositories
 
-## 🏷️ 📁 Repositories
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments) > [infrastructure](/backend/src/modules/treatments/infrastructure) > [repositories](/backend/src/modules/treatments/infrastructure/repositories)
 
-### 🎯 PURPOSE
-The `repositories` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the repositories logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **repositories** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  repositories[📁 repositories]
-  repositories --> repositories_treatments_repository_ts(treatments.repository.ts)
+  Root["📁 repositories"]
+  Root --> treatmentsrepositoryts["📄 treatments.repository.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.repository.ts` | `ts` | Core logic implementation. | @nestjs |
+| `treatments.repository.ts` | File | Core logic and utilities for this domain. | @nestjs |
 
-### 🔗 DEPENDENCIES
-- `../../domain/treatments.entity`
-- `../schemas/treatments.schema`
+
+## 🔗 Dependencies
 - `@nestjs/common`
 - `@nestjs/mongoose`
 - `mongoose`
+- `../../domain/treatments.entity`
+- `../schemas/treatments.schema`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate repositories into your refined workflows:
-import { /* exported members */ } from '@path/to/repositories';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './treatments.repository';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

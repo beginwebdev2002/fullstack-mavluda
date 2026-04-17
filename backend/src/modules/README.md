@@ -1,36 +1,37 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules)
+# 📦 modules
 
-## 🏷️ 📁 Modules
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules)
 
-### 🎯 PURPOSE
-The `modules` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the modules logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **modules** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  modules[📁 modules]
-  modules --> modules_admin_settings[📁 admin-settings]
-  modules --> modules_auth[📁 auth]
-  modules --> modules_booking[📁 booking]
-  modules --> modules_gallery[📁 gallery]
-  modules --> modules_inventory[📁 inventory]
-  modules --> modules_partnership[📁 partnership]
-  modules --> modules_payment[📁 payment]
-  modules --> modules_treatments[📁 treatments]
-  modules --> modules_user[📁 user]
-  modules --> modules_veil[📁 veil]
+  Root["📦 modules"]
+  Root --> adminsettings["📁 admin-settings"]
+  Root --> auth["📁 auth"]
+  Root --> booking["📁 booking"]
+  Root --> gallery["📁 gallery"]
+  Root --> inventory["📁 inventory"]
+  Root --> partnership["📁 partnership"]
+  Root --> payment["📁 payment"]
+  Root --> treatments["📁 treatments"]
+  Root --> user["📁 user"]
+  Root --> veil["📁 veil"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files* | `-` | *Directory is strictly structural.* | `-` |
+| _No matching files_ | - | - | - |
 
-### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
 
-### 🛠️ USAGE
-```typescript
-// Seamlessly integrate modules into your refined workflows:
-import { /* exported members */ } from '@path/to/modules';
+## 🔗 Dependencies
+- _No external or internal dependencies detected._
+
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or configuration hub.
 ```

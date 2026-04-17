@@ -1,48 +1,55 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [auth](/backend/src/modules/auth)
+# 📁 auth
 
-## 🏷️ 📁 Auth
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth)
 
-### 🎯 PURPOSE
-The `auth` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the auth logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  auth[📁 auth]
-  auth --> auth_dto[📁 dto]
-  auth --> auth_infrastructure[📁 infrastructure]
-  auth --> auth_interfaces[📁 interfaces]
-  auth --> auth_auth_controller_ts(auth.controller.ts)
-  auth --> auth_auth_module_ts(auth.module.ts)
-  auth --> auth_auth_service_ts(auth.service.ts)
-  auth --> auth_index_ts(index.ts)
-  auth --> auth_telegram_auth_service_ts(telegram-auth.service.ts)
+  Root["📁 auth"]
+  Root --> dto["📁 dto"]
+  Root --> infrastructure["📁 infrastructure"]
+  Root --> interfaces["📁 interfaces"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth.controller.ts` | `ts` | Handles incoming HTTP requests. | @nestjs, @common |
-| `auth.module.ts` | `ts` | Module configuration and provider registration. | @modules, @nestjs, @common |
-| `auth.service.ts` | `ts` | Business logic and service layer. | @modules, @nestjs |
-| `index.ts` | `ts` | Core logic implementation. | None |
-| `telegram-auth.service.ts` | `ts` | Business logic and service layer. | @modules, @nestjs, @common |
+| `auth.controller.ts` | Controller | Request handling and routing. | @nestjs, @common |
+| `auth.module.ts` | Module | Core logic and utilities for this domain. | @nestjs, @modules, @common |
+| `auth.service.ts` | Service | Business logic and state management. | @nestjs, @modules |
+| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+| `telegram-auth.service.ts` | Service | Business logic and state management. | @nestjs, @common, @modules |
 
-### 🔗 DEPENDENCIES
-- `./auth.controller`
-- `./auth.module`
+
+## 🔗 Dependencies
+- `@nestjs/common`
+- `./telegram-auth.service`
 - `./auth.service`
 - `./dto/login.dto`
 - `./dto/register.dto`
-- `./infrastructure/jwt.strategy`
+- `@common/decorators/public.decorator`
 - `./interfaces/auth-response.interface`
-- `./interfaces/jwt-payload.interface`
-- `./telegram-auth.service`
+- `./auth.controller`
+- `@modules/user`
+- `@nestjs/passport`
+- `@nestjs/jwt`
 - `@common/config/app-config.module`
-- *...and more.*
+- `@common/config/app-config.service`
+- `./infrastructure/jwt.strategy`
+- `bcrypt`
+- `./interfaces/jwt-payload.interface`
+- `./auth.module`
+- `crypto`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate auth into your refined workflows:
-import { /* exported members */ } from '@path/to/auth';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './auth.controller';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

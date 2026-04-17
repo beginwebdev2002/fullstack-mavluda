@@ -1,29 +1,34 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [admin-settings](/backend/src/modules/admin-settings) / [application](/backend/src/modules/admin-settings/application)
+# 📁 application
 
-## 🏷️ 📁 Application
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [application](/backend/src/modules/admin-settings/application)
 
-### 🎯 PURPOSE
-The `application` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the application logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  application[📁 application]
-  application --> application_admin_settings_service_ts(admin-settings.service.ts)
+  Root["📁 application"]
+  Root --> adminsettingsservicets["📄 admin-settings.service.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.service.ts` | `ts` | Business logic and service layer. | @nestjs |
+| `admin-settings.service.ts` | Service | Business logic and state management. | @nestjs |
 
-### 🔗 DEPENDENCIES
+
+## 🔗 Dependencies
+- `@nestjs/common`
 - `../domain/admin-settings.entity`
 - `../infrastructure/repositories/admin-settings.repository`
-- `@nestjs/common`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate application into your refined workflows:
-import { /* exported members */ } from '@path/to/application';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './admin-settings.service';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

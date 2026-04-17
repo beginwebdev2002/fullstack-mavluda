@@ -1,42 +1,41 @@
-# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages)
+# 📄 pages
 
-## 🏷️ 📁 Pages
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages)
 
-### 🎯 PURPOSE
-The `pages` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the pages logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **pages** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
 
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
-
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  pages[📁 pages]
-  pages --> pages_about[📁 about]
-  pages --> pages_auth[📁 auth]
-  pages --> pages_clients[📁 clients]
-  pages --> pages_dashboard[📁 dashboard]
-  pages --> pages_gallery[📁 gallery]
-  pages --> pages_inventory[📁 inventory]
-  pages --> pages_portfolio[📁 portfolio]
-  pages --> pages_settings[📁 settings]
-  pages --> pages_treatments[📁 treatments]
-  pages --> pages_treatments_catalog[📁 treatments-catalog]
-  pages --> pages_user_home[📁 user-home]
-  pages --> pages_user_profile[📁 user-profile]
-  pages --> pages_veil[📁 veil]
-  pages --> pages_veils_catalog[📁 veils-catalog]
+  Root["📄 pages"]
+  Root --> about["📁 about"]
+  Root --> auth["📁 auth"]
+  Root --> clients["📁 clients"]
+  Root --> dashboard["📁 dashboard"]
+  Root --> gallery["📁 gallery"]
+  Root --> inventory["📁 inventory"]
+  Root --> portfolio["📁 portfolio"]
+  Root --> settings["📁 settings"]
+  Root --> treatments["📁 treatments"]
+  Root --> treatmentscatalog["📁 treatments-catalog"]
+  Root --> userhome["📁 user-home"]
+  Root --> userprofile["📁 user-profile"]
+  Root --> veil["📁 veil"]
+  Root --> veilscatalog["📁 veils-catalog"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files* | `-` | *Directory is strictly structural.* | `-` |
+| _No matching files_ | - | - | - |
 
-### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
 
-### 🛠️ USAGE
-```typescript
-// Seamlessly integrate pages into your refined workflows:
-import { /* exported members */ } from '@path/to/pages';
+## 🔗 Dependencies
+- _No external or internal dependencies detected._
+
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or configuration hub.
 ```

@@ -1,31 +1,36 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [inventory](/backend/src/modules/inventory) / [application](/backend/src/modules/inventory/application)
+# 📁 application
 
-## 🏷️ 📁 Application
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [application](/backend/src/modules/inventory/application)
 
-### 🎯 PURPOSE
-The `application` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the application logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  application[📁 application]
-  application --> application_inventory_service_ts(inventory.service.ts)
+  Root["📁 application"]
+  Root --> inventoryservicets["📄 inventory.service.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.service.ts` | `ts` | Business logic and service layer. | @nestjs |
+| `inventory.service.ts` | Service | Business logic and state management. | @nestjs |
 
-### 🔗 DEPENDENCIES
+
+## 🔗 Dependencies
+- `@nestjs/common`
 - `../domain/inventory.entity`
 - `../infrastructure/repositories/inventory.repository`
 - `../presentation/dto/create-inventory.dto`
 - `../presentation/dto/update-inventory.dto`
-- `@nestjs/common`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate application into your refined workflows:
-import { /* exported members */ } from '@path/to/application';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './inventory.service';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

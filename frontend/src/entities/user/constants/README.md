@@ -1,29 +1,32 @@
-# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [user](/frontend/src/entities/user) / [constants](/frontend/src/entities/user/constants)
+# 📁 constants
 
-## 🏷️ 📁 Constants
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [user](/frontend/src/entities/user) > [constants](/frontend/src/entities/user/constants)
 
-### 🎯 PURPOSE
-The `constants` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the constants logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
 
-This directory resides within the **Entities** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
-
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  constants[📁 constants]
-  constants --> constants_user_constants_ts(user.constants.ts)
+  Root["📁 constants"]
+  Root --> userconstantsts["📄 user.constants.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.constants.ts` | `ts` | Core logic implementation. | None |
+| `user.constants.ts` | File | Core logic and utilities for this domain. | N/A |
 
-### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
 
-### 🛠️ USAGE
+## 🔗 Dependencies
+- _No external or internal dependencies detected._
+
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate constants into your refined workflows:
-import { /* exported members */ } from '@path/to/constants';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './user.constants';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

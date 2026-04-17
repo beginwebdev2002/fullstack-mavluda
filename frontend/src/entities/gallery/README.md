@@ -1,37 +1,38 @@
-# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [gallery](/frontend/src/entities/gallery)
+# 📁 gallery
 
-## 🏷️ 📁 Gallery
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [gallery](/frontend/src/entities/gallery)
 
-### 🎯 PURPOSE
-The `gallery` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the gallery logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
 
-This directory resides within the **Entities** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
-
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  gallery[📁 gallery]
-  gallery --> gallery_constants[📁 constants]
-  gallery --> gallery_gallery_service_ts(gallery.service.ts)
-  gallery --> gallery_index_ts(index.ts)
+  Root["📁 gallery"]
+  Root --> constants["📁 constants"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.service.ts` | `ts` | Business logic and service layer. | @angular, @shared |
-| `index.ts` | `ts` | Core logic implementation. | None |
+| `gallery.service.ts` | Service | Business logic and state management. | @angular, @shared |
+| `index.ts` | File | Core logic and utilities for this domain. | N/A |
 
-### 🔗 DEPENDENCIES
-- `./constants/gallery.constants`
-- `./gallery.service`
-- `@angular/common/http`
+
+## 🔗 Dependencies
 - `@angular/core`
-- `@shared/models`
+- `@angular/common/http`
 - `rxjs`
+- `@shared/models`
+- `./gallery.service`
+- `./constants/gallery.constants`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate gallery into your refined workflows:
-import { /* exported members */ } from '@path/to/gallery';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './gallery.service';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

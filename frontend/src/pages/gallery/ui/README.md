@@ -1,29 +1,28 @@
-# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [gallery](/frontend/src/pages/gallery) / [ui](/frontend/src/pages/gallery/ui)
+# 📁 ui
 
-## 🏷️ 📁 Ui
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [gallery](/frontend/src/pages/gallery) > [ui](/frontend/src/pages/gallery/ui)
 
-### 🎯 PURPOSE
-The `ui` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the ui logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **ui** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
 
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
-
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  ui[📁 ui]
-  ui --> ui_gallery_form[📁 gallery-form]
+  Root["📁 ui"]
+  Root --> galleryform["📁 gallery-form"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files* | `-` | *Directory is strictly structural.* | `-` |
+| _No matching files_ | - | - | - |
 
-### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
 
-### 🛠️ USAGE
-```typescript
-// Seamlessly integrate ui into your refined workflows:
-import { /* exported members */ } from '@path/to/ui';
+## 🔗 Dependencies
+- _No external or internal dependencies detected._
+
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or configuration hub.
 ```

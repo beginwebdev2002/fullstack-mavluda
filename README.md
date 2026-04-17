@@ -1,38 +1,36 @@
-# [root](/)
+# 👑 Mavluda Beauty Root
 
-## 🏷️ 📁 Root
+[Root](/.)
 
-### 🎯 PURPOSE
-The `root` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the root logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Mavluda Beauty Root** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  root[📁 root]
-  root --> root_backend[📁 backend]
-  root --> root_frontend[📁 frontend]
-  root --> root__env(.env)
-  root --> root__gitignore(.gitignore)
-  root --> root__gitignore_append(.gitignore_append)
-  root --> root_GEMINI_md(GEMINI.md)
-  root --> root_generate_readmes_py(generate_readmes.py)
+  Root["👑 Mavluda Beauty Root"]
+  Root --> agent["📁 .agent"]
+  Root --> gemini["📁 .gemini"]
+  Root --> github["📁 .github"]
+  Root --> jules["📁 .jules"]
+  Root --> backend["📁 backend"]
+  Root --> frontend["📁 frontend"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `.env` | `env` | Configuration and foundational asset. | None |
-| `.gitignore` | `gitignore` | Configuration and foundational asset. | None |
-| `.gitignore_append` | `gitignore_append` | Configuration and foundational asset. | None |
-| `GEMINI.md` | `md` | Configuration and foundational asset. | None |
-| `generate_readmes.py` | `py` | Configuration and foundational asset. | @path |
+| `.env` | Configuration | Project level settings and dependencies. | N/A |
+| `.gitignore` | Configuration | Project level settings and dependencies. | N/A |
+| `.gitignore_append` | File | Core logic and utilities for this domain. | N/A |
+| `GEMINI.md` | File | Core logic and utilities for this domain. | N/A |
+| `generate_readmes.js` | File | Core logic and utilities for this domain. | N/A |
 
-### 🔗 DEPENDENCIES
-- `...`
-- `@path/to/{dirname}`
 
-### 🛠️ USAGE
-```typescript
-// Seamlessly integrate root into your refined workflows:
-import { /* exported members */ } from '@path/to/root';
+## 🔗 Dependencies
+- `./${tsFile.name.replace(/\.ts$/, `
+
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or configuration hub.
 ```

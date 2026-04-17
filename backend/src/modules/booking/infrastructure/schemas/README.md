@@ -1,28 +1,33 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [booking](/backend/src/modules/booking) / [infrastructure](/backend/src/modules/booking/infrastructure) / [schemas](/backend/src/modules/booking/infrastructure/schemas)
+# 📁 schemas
 
-## 🏷️ 📁 Schemas
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [booking](/backend/src/modules/booking) > [infrastructure](/backend/src/modules/booking/infrastructure) > [schemas](/backend/src/modules/booking/infrastructure/schemas)
 
-### 🎯 PURPOSE
-The `schemas` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the schemas logic to ensure a seamless and premium experience.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **schemas** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  schemas[📁 schemas]
-  schemas --> schemas_booking_schema_ts(booking.schema.ts)
+  Root["📁 schemas"]
+  Root --> bookingschemats["📄 booking.schema.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.schema.ts` | `ts` | Core logic implementation. | @nestjs |
+| `booking.schema.ts` | Entity/Model | Data structure and schema definitions. | @nestjs |
 
-### 🔗 DEPENDENCIES
+
+## 🔗 Dependencies
 - `@nestjs/mongoose`
 - `mongoose`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate schemas into your refined workflows:
-import { /* exported members */ } from '@path/to/schemas';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './booking.schema';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```
