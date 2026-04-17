@@ -1,22 +1,23 @@
-# [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [user](/frontend/src/entities/user) / [constants](/frontend/src/entities/user/constants)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [user](/frontend/src/entities/user) / [constants](/frontend/src/entities/user/constants)
 
-## 🏷️ 📌 Constants
+## 🏷️ 📁 Constants
 
 ### 🎯 PURPOSE
-The `constants` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the constants logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards. This module is a distinguished component of the **Entities** layer under the Feature Sliced Design (FSD) methodology.
+The `constants` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the constants logic to ensure a seamless and premium experience.
+
+This directory resides within the **Entities** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  constants[📌 constants]
-  constants --> user_constants_ts(user.constants.ts)
+  constants[📁 constants]
+  constants --> constants_user_constants_ts(user.constants.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.constants.ts` | `ts` | Encapsulates premium logic and definitions for `user.constants.ts`. | None |
-
+| `user.constants.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
 - *Self-contained premium module.*

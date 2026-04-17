@@ -1,22 +1,21 @@
-# [backend](/backend) / [src](/backend/src) / [common](/backend/src/common) / [database](/backend/src/common/database)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [common](/backend/src/common) / [database](/backend/src/common/database)
 
-## 🏷️ 💾 Database
+## 🏷️ 📁 Database
 
 ### 🎯 PURPOSE
-The `database` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the database logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `database` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the database logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  database[💾 database]
-  database --> database_module_ts(database.module.ts)
+  database[📁 database]
+  database --> database_database_module_ts(database.module.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `database.module.ts` | `ts` | Encapsulates premium logic and definitions for `database.module.ts`. | @nestjs/config, @nestjs/common, @nestjs/mongoose |
-
+| `database.module.ts` | `ts` | Module configuration and provider registration. | @nestjs |
 
 ### 🔗 DEPENDENCIES
 - `@nestjs/common`

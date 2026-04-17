@@ -1,31 +1,34 @@
-# [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [treatments](/frontend/src/pages/treatments)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [treatments](/frontend/src/pages/treatments)
 
 ## 🏷️ 📁 Treatments
 
 ### 🎯 PURPOSE
-The `treatments` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the treatments logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards. This module is a distinguished component of the **Pages** layer under the Feature Sliced Design (FSD) methodology.
+The `treatments` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the treatments logic to ensure a seamless and premium experience.
+
+This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   treatments[📁 treatments]
-  treatments --> components[🧩 components]
-  treatments --> index_ts(index.ts)
-  treatments --> treatments_component_html(treatments.component.html)
-  treatments --> treatments_component_scss(treatments.component.scss)
-  treatments --> treatments_component_ts(treatments.component.ts)
+  treatments --> treatments_components[📁 components]
+  treatments --> treatments_index_ts(index.ts)
+  treatments --> treatments_treatments_component_html(treatments.component.html)
+  treatments --> treatments_treatments_component_scss(treatments.component.scss)
+  treatments --> treatments_treatments_component_ts(treatments.component.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-| `treatments.component.html` | `html` | Encapsulates premium logic and definitions for `treatments.component.html`. | None |
-| `treatments.component.scss` | `scss` | Encapsulates premium logic and definitions for `treatments.component.scss`. | None |
-| `treatments.component.ts` | `ts` | Encapsulates premium logic and definitions for `treatments.component.ts`. | @environments/environment, @shared/ui, @angular/common, @entities/treatments, @angular/core, @shared/lib, @angular/forms, @features/treatments |
-
+| `index.ts` | `ts` | Core logic implementation. | None |
+| `treatments.component.html` | `html` | UI template and styling. | None |
+| `treatments.component.scss` | `scss` | UI template and styling. | None |
+| `treatments.component.ts` | `ts` | UI component logic and rendering. | @features, @environments, @angular, @entities, @shared |
 
 ### 🔗 DEPENDENCIES
+- `./components/treatment-form/treatment-form.component`
+- `./treatments.component`
 - `@angular/common`
 - `@angular/core`
 - `@angular/forms`

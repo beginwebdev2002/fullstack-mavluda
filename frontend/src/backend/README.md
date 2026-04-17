@@ -1,27 +1,29 @@
-# [frontend](/frontend) / [src](/frontend/src) / [backend](/frontend/src/backend)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [backend](/frontend/src/backend)
 
 ## 🏷️ 📁 Backend
 
 ### 🎯 PURPOSE
-The `backend` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the backend logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `backend` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the backend logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   backend[📁 backend]
-  backend --> index_ts(index.ts)
-  backend --> telegram_auth_guard_ts(telegram-auth.guard.ts)
+  backend --> backend_index_ts(index.ts)
+  backend --> backend_telegram_auth_guard_ts(telegram-auth.guard.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-| `telegram-auth.guard.ts` | `ts` | Encapsulates premium logic and definitions for `telegram-auth.guard.ts`. | @nestjs/common |
-
+| `index.ts` | `ts` | Core logic implementation. | None |
+| `telegram-auth.guard.ts` | `ts` | Core logic implementation. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `./telegram-auth.guard`
 - `@nestjs/common`
+- `crypto`
+- `express`
 
 ### 🛠️ USAGE
 ```typescript

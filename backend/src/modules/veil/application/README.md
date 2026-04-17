@@ -1,24 +1,25 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [veil](/backend/src/modules/veil) / [application](/backend/src/modules/veil/application)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [veil](/backend/src/modules/veil) / [application](/backend/src/modules/veil/application)
 
-## 🏷️ 🚀 Application
+## 🏷️ 📁 Application
 
 ### 🎯 PURPOSE
-The `application` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the application logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `application` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the application logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  application[🚀 application]
-  application --> veil_service_ts(veil.service.ts)
+  application[📁 application]
+  application --> application_veil_service_ts(veil.service.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.service.ts` | `ts` | Encapsulates premium logic and definitions for `veil.service.ts`. | @nestjs/common |
-
+| `veil.service.ts` | `ts` | Business logic and service layer. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `../domain/veil.entity`
+- `../infrastructure/repositories/veil.repository`
 - `@nestjs/common`
 
 ### 🛠️ USAGE

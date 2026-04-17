@@ -1,26 +1,28 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [inventory](/backend/src/modules/inventory) / [infrastructure](/backend/src/modules/inventory/infrastructure) / [repositories](/backend/src/modules/inventory/infrastructure/repositories)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [inventory](/backend/src/modules/inventory) / [infrastructure](/backend/src/modules/inventory/infrastructure) / [repositories](/backend/src/modules/inventory/infrastructure/repositories)
 
-## 🏷️ 🗄️ Repositories
+## 🏷️ 📁 Repositories
 
 ### 🎯 PURPOSE
-The `repositories` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the repositories logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `repositories` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the repositories logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  repositories[🗄️ repositories]
-  repositories --> inventory_repository_ts(inventory.repository.ts)
+  repositories[📁 repositories]
+  repositories --> repositories_inventory_repository_ts(inventory.repository.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.repository.ts` | `ts` | Encapsulates premium logic and definitions for `inventory.repository.ts`. | @nestjs/common, @nestjs/mongoose |
-
+| `inventory.repository.ts` | `ts` | Core logic implementation. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `../../domain/inventory.entity`
+- `../schemas/inventory.schema`
 - `@nestjs/common`
 - `@nestjs/mongoose`
+- `mongoose`
 
 ### 🛠️ USAGE
 ```typescript

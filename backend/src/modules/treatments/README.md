@@ -1,36 +1,40 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [treatments](/backend/src/modules/treatments)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [treatments](/backend/src/modules/treatments)
 
 ## 🏷️ 📁 Treatments
 
 ### 🎯 PURPOSE
-The `treatments` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the treatments logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `treatments` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the treatments logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   treatments[📁 treatments]
-  treatments --> application[🚀 application]
-  treatments --> domain[🏛️ domain]
-  treatments --> infrastructure[🏗️ infrastructure]
-  treatments --> presentation[🎨 presentation]
-  treatments --> index_ts(index.ts)
-  treatments --> treatments_module_ts(treatments.module.ts)
+  treatments --> treatments_application[📁 application]
+  treatments --> treatments_domain[📁 domain]
+  treatments --> treatments_infrastructure[📁 infrastructure]
+  treatments --> treatments_presentation[📁 presentation]
+  treatments --> treatments_index_ts(index.ts)
+  treatments --> treatments_treatments_module_ts(treatments.module.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-| `treatments.module.ts` | `ts` | Encapsulates premium logic and definitions for `treatments.module.ts`. | @nestjs/common, @modules/treatments/infrastructure/schemas/treatments.schema, @modules/treatments/infrastructure/repositories/treatments.repository, @modules/treatments/presentation/treatments.controller, @modules/treatments/application/treatments.service, @nestjs/mongoose |
-
+| `index.ts` | `ts` | Core logic implementation. | None |
+| `treatments.module.ts` | `ts` | Module configuration and provider registration. | @modules, @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `./application/treatments.service`
+- `./domain/treatments.entity`
+- `./infrastructure/repositories/treatments.repository`
+- `./infrastructure/schemas/treatments.schema`
+- `./presentation/dto/create-treatments.dto`
+- `./presentation/dto/update-treatments.dto`
+- `./presentation/treatments.controller`
+- `./treatments.module`
 - `@modules/treatments/application/treatments.service`
 - `@modules/treatments/infrastructure/repositories/treatments.repository`
-- `@modules/treatments/infrastructure/schemas/treatments.schema`
-- `@modules/treatments/presentation/treatments.controller`
-- `@nestjs/common`
-- `@nestjs/mongoose`
+- *...and more.*
 
 ### 🛠️ USAGE
 ```typescript

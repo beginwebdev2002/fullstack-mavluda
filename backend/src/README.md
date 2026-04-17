@@ -1,49 +1,44 @@
-# [backend](/backend) / [src](/backend/src)
+# [root](/) / [backend](/backend) / [src](/backend/src)
 
 ## 🏷️ 📁 Src
 
 ### 🎯 PURPOSE
-The `src` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the src logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `src` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the src logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   src[📁 src]
-  src --> common[📁 common]
-  src --> modules[📦 modules]
-  src --> app_controller_spec_ts(app.controller.spec.ts)
-  src --> app_controller_ts(app.controller.ts)
-  src --> app_module_ts(app.module.ts)
-  src --> app_service_ts(app.service.ts)
-  src --> main_ts(main.ts)
+  src --> src_common[📁 common]
+  src --> src_modules[📁 modules]
+  src --> src_app_controller_spec_ts(app.controller.spec.ts)
+  src --> src_app_controller_ts(app.controller.ts)
+  src --> src_app_module_ts(app.module.ts)
+  src --> src_app_service_ts(app.service.ts)
+  src --> src_main_ts(main.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.controller.spec.ts` | `ts` | Encapsulates premium logic and definitions for `app.controller.spec.ts`. | @nestjs/testing |
-| `app.controller.ts` | `ts` | Encapsulates premium logic and definitions for `app.controller.ts`. | @nestjs/common |
-| `app.module.ts` | `ts` | Encapsulates premium logic and definitions for `app.module.ts`. | @modules/veil, @modules/booking, @modules/admin-settings, @nestjs/common, @modules/inventory, @modules/auth, @modules/treatments, @modules/user, @modules/gallery, @modules/partnership, @nestjs/serve-static, @modules/payment |
-| `app.service.ts` | `ts` | Encapsulates premium logic and definitions for `app.service.ts`. | @nestjs/common |
-| `main.ts` | `ts` | Encapsulates premium logic and definitions for `main.ts`. | @nestjs/config, @nestjs/common, @nestjs/core |
-
+| `app.controller.spec.ts` | `ts` | Handles incoming HTTP requests. | @nestjs |
+| `app.controller.ts` | `ts` | Handles incoming HTTP requests. | @nestjs |
+| `app.module.ts` | `ts` | Module configuration and provider registration. | @modules, @nestjs |
+| `app.service.ts` | `ts` | Business logic and service layer. | @nestjs |
+| `main.ts` | `ts` | Core logic implementation. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `./app.controller`
+- `./app.module`
+- `./app.service`
+- `./common/config/app-config.module`
+- `./common/database/database.module`
 - `@modules/admin-settings`
 - `@modules/auth`
 - `@modules/booking`
 - `@modules/gallery`
 - `@modules/inventory`
-- `@modules/partnership`
-- `@modules/payment`
-- `@modules/treatments`
-- `@modules/user`
-- `@modules/veil`
-- `@nestjs/common`
-- `@nestjs/config`
-- `@nestjs/core`
-- `@nestjs/serve-static`
-- `@nestjs/testing`
+- *...and more.*
 
 ### 🛠️ USAGE
 ```typescript

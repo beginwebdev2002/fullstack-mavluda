@@ -1,26 +1,26 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [inventory](/backend/src/modules/inventory) / [presentation](/backend/src/modules/inventory/presentation) / [dto](/backend/src/modules/inventory/presentation/dto)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [inventory](/backend/src/modules/inventory) / [presentation](/backend/src/modules/inventory/presentation) / [dto](/backend/src/modules/inventory/presentation/dto)
 
-## 🏷️ 📨 Dto
+## 🏷️ 📁 Dto
 
 ### 🎯 PURPOSE
-The `dto` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the dto logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `dto` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the dto logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  dto[📨 dto]
-  dto --> create_inventory_dto_ts(create-inventory.dto.ts)
-  dto --> update_inventory_dto_ts(update-inventory.dto.ts)
+  dto[📁 dto]
+  dto --> dto_create_inventory_dto_ts(create-inventory.dto.ts)
+  dto --> dto_update_inventory_dto_ts(update-inventory.dto.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-inventory.dto.ts` | `ts` | Encapsulates premium logic and definitions for `create-inventory.dto.ts`. | None |
-| `update-inventory.dto.ts` | `ts` | Encapsulates premium logic and definitions for `update-inventory.dto.ts`. | @nestjs/mapped-types |
-
+| `create-inventory.dto.ts` | `ts` | Data transfer objects and models. | None |
+| `update-inventory.dto.ts` | `ts` | Data transfer objects and models. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `./create-inventory.dto`
 - `@nestjs/mapped-types`
 
 ### 🛠️ USAGE

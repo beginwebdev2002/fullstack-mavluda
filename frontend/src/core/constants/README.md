@@ -1,26 +1,26 @@
-# [frontend](/frontend) / [src](/frontend/src) / [core](/frontend/src/core) / [constants](/frontend/src/core/constants)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [core](/frontend/src/core) / [constants](/frontend/src/core/constants)
 
-## 🏷️ 📌 Constants
+## 🏷️ 📁 Constants
 
 ### 🎯 PURPOSE
-The `constants` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the constants logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards.
+The `constants` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the constants logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  constants[📌 constants]
-  constants --> api_endpoints_ts(api-endpoints.ts)
-  constants --> index_ts(index.ts)
+  constants[📁 constants]
+  constants --> constants_api_endpoints_ts(api-endpoints.ts)
+  constants --> constants_index_ts(index.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `api-endpoints.ts` | `ts` | Encapsulates premium logic and definitions for `api-endpoints.ts`. | @shared/lib |
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-
+| `api-endpoints.ts` | `ts` | Core logic implementation. | @shared |
+| `index.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
+- `./api-endpoints`
 - `@shared/lib`
 
 ### 🛠️ USAGE

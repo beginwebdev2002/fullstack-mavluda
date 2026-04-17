@@ -1,26 +1,28 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [gallery](/backend/src/modules/gallery) / [infrastructure](/backend/src/modules/gallery/infrastructure) / [repositories](/backend/src/modules/gallery/infrastructure/repositories)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [gallery](/backend/src/modules/gallery) / [infrastructure](/backend/src/modules/gallery/infrastructure) / [repositories](/backend/src/modules/gallery/infrastructure/repositories)
 
-## 🏷️ 🗄️ Repositories
+## 🏷️ 📁 Repositories
 
 ### 🎯 PURPOSE
-The `repositories` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the repositories logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `repositories` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the repositories logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  repositories[🗄️ repositories]
-  repositories --> gallery_repository_ts(gallery.repository.ts)
+  repositories[📁 repositories]
+  repositories --> repositories_gallery_repository_ts(gallery.repository.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.repository.ts` | `ts` | Encapsulates premium logic and definitions for `gallery.repository.ts`. | @nestjs/common, @nestjs/mongoose |
-
+| `gallery.repository.ts` | `ts` | Core logic implementation. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `../../domain/gallery.entity`
+- `../schemas/gallery.schema`
 - `@nestjs/common`
 - `@nestjs/mongoose`
+- `mongoose`
 
 ### 🛠️ USAGE
 ```typescript

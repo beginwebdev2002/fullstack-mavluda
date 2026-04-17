@@ -1,27 +1,28 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [user](/backend/src/modules/user) / [presentation](/backend/src/modules/user/presentation) / [dto](/backend/src/modules/user/presentation/dto)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [user](/backend/src/modules/user) / [presentation](/backend/src/modules/user/presentation) / [dto](/backend/src/modules/user/presentation/dto)
 
-## 🏷️ 📨 Dto
+## 🏷️ 📁 Dto
 
 ### 🎯 PURPOSE
-The `dto` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the dto logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `dto` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the dto logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  dto[📨 dto]
-  dto --> create_user_dto_ts(create-user.dto.ts)
-  dto --> update_user_dto_ts(update-user.dto.ts)
+  dto[📁 dto]
+  dto --> dto_create_user_dto_ts(create-user.dto.ts)
+  dto --> dto_update_user_dto_ts(update-user.dto.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-user.dto.ts` | `ts` | Encapsulates premium logic and definitions for `create-user.dto.ts`. | None |
-| `update-user.dto.ts` | `ts` | Encapsulates premium logic and definitions for `update-user.dto.ts`. | @nestjs/mapped-types |
-
+| `create-user.dto.ts` | `ts` | Data transfer objects and models. | None |
+| `update-user.dto.ts` | `ts` | Data transfer objects and models. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `./create-user.dto`
 - `@nestjs/mapped-types`
+- `class-validator`
 
 ### 🛠️ USAGE
 ```typescript

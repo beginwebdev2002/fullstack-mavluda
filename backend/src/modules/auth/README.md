@@ -1,42 +1,45 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [auth](/backend/src/modules/auth)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [auth](/backend/src/modules/auth)
 
 ## 🏷️ 📁 Auth
 
 ### 🎯 PURPOSE
-The `auth` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the auth logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `auth` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the auth logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   auth[📁 auth]
-  auth --> dto[📨 dto]
-  auth --> infrastructure[🏗️ infrastructure]
-  auth --> interfaces[🔌 interfaces]
-  auth --> auth_controller_ts(auth.controller.ts)
-  auth --> auth_module_ts(auth.module.ts)
-  auth --> auth_service_ts(auth.service.ts)
-  auth --> index_ts(index.ts)
-  auth --> telegram_auth_service_ts(telegram-auth.service.ts)
+  auth --> auth_dto[📁 dto]
+  auth --> auth_infrastructure[📁 infrastructure]
+  auth --> auth_interfaces[📁 interfaces]
+  auth --> auth_auth_controller_ts(auth.controller.ts)
+  auth --> auth_auth_module_ts(auth.module.ts)
+  auth --> auth_auth_service_ts(auth.service.ts)
+  auth --> auth_index_ts(index.ts)
+  auth --> auth_telegram_auth_service_ts(telegram-auth.service.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth.controller.ts` | `ts` | Encapsulates premium logic and definitions for `auth.controller.ts`. | @common/decorators/public.decorator, @nestjs/common |
-| `auth.module.ts` | `ts` | Encapsulates premium logic and definitions for `auth.module.ts`. | @nestjs/jwt, @nestjs/passport, @common/config/app-config.service, @nestjs/common, @modules/user, @common/config/app-config.module |
-| `auth.service.ts` | `ts` | Encapsulates premium logic and definitions for `auth.service.ts`. | @nestjs/jwt, @modules/user, @nestjs/common |
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-| `telegram-auth.service.ts` | `ts` | Encapsulates premium logic and definitions for `telegram-auth.service.ts`. | @common/config/app-config.service, @modules/user, @nestjs/common |
-
+| `auth.controller.ts` | `ts` | Handles incoming HTTP requests. | @nestjs, @common |
+| `auth.module.ts` | `ts` | Module configuration and provider registration. | @modules, @nestjs, @common |
+| `auth.service.ts` | `ts` | Business logic and service layer. | @modules, @nestjs |
+| `index.ts` | `ts` | Core logic implementation. | None |
+| `telegram-auth.service.ts` | `ts` | Business logic and service layer. | @modules, @nestjs, @common |
 
 ### 🔗 DEPENDENCIES
+- `./auth.controller`
+- `./auth.module`
+- `./auth.service`
+- `./dto/login.dto`
+- `./dto/register.dto`
+- `./infrastructure/jwt.strategy`
+- `./interfaces/auth-response.interface`
+- `./interfaces/jwt-payload.interface`
+- `./telegram-auth.service`
 - `@common/config/app-config.module`
-- `@common/config/app-config.service`
-- `@common/decorators/public.decorator`
-- `@modules/user`
-- `@nestjs/common`
-- `@nestjs/jwt`
-- `@nestjs/passport`
+- *...and more.*
 
 ### 🛠️ USAGE
 ```typescript

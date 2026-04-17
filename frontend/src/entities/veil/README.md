@@ -1,32 +1,36 @@
-# [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [veil](/frontend/src/entities/veil)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [veil](/frontend/src/entities/veil)
 
 ## 🏷️ 📁 Veil
 
 ### 🎯 PURPOSE
-The `veil` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards. This module is a distinguished component of the **Entities** layer under the Feature Sliced Design (FSD) methodology.
+The `veil` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil logic to ensure a seamless and premium experience.
+
+This directory resides within the **Entities** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   veil[📁 veil]
-  veil --> constants[📌 constants]
-  veil --> index_ts(index.ts)
-  veil --> veil_service_ts(veil.service.ts)
+  veil --> veil_constants[📁 constants]
+  veil --> veil_index_ts(index.ts)
+  veil --> veil_veil_service_ts(veil.service.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-| `veil.service.ts` | `ts` | Encapsulates premium logic and definitions for `veil.service.ts`. | @angular/core, @shared/lib, @core/constants, @features/veil, @angular/common/http |
-
+| `index.ts` | `ts` | Core logic implementation. | None |
+| `veil.service.ts` | `ts` | Business logic and service layer. | @angular, @core, @features, @shared |
 
 ### 🔗 DEPENDENCIES
+- `./constants/veil.constants`
+- `./veil.service`
 - `@angular/common/http`
 - `@angular/core`
 - `@core/constants`
 - `@features/veil`
 - `@shared/lib`
+- `rxjs`
 
 ### 🛠️ USAGE
 ```typescript

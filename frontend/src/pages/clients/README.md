@@ -1,28 +1,30 @@
-# [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [clients](/frontend/src/pages/clients)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [clients](/frontend/src/pages/clients)
 
 ## 🏷️ 📁 Clients
 
 ### 🎯 PURPOSE
-The `clients` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the clients logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards. This module is a distinguished component of the **Pages** layer under the Feature Sliced Design (FSD) methodology.
+The `clients` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the clients logic to ensure a seamless and premium experience.
+
+This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   clients[📁 clients]
-  clients --> clients_component_html(clients.component.html)
-  clients --> clients_component_ts(clients.component.ts)
-  clients --> index_ts(index.ts)
+  clients --> clients_clients_component_html(clients.component.html)
+  clients --> clients_clients_component_ts(clients.component.ts)
+  clients --> clients_index_ts(index.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `clients.component.html` | `html` | Encapsulates premium logic and definitions for `clients.component.html`. | None |
-| `clients.component.ts` | `ts` | Encapsulates premium logic and definitions for `clients.component.ts`. | @shared/ui, @features/client-form, @angular/common, @angular/core, @angular/forms, @entities/user |
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-
+| `clients.component.html` | `html` | UI template and styling. | None |
+| `clients.component.ts` | `ts` | UI component logic and rendering. | @angular, @entities, @features, @shared |
+| `index.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
+- `./clients.component`
 - `@angular/common`
 - `@angular/core`
 - `@angular/forms`

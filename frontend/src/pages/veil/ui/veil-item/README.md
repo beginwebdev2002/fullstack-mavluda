@@ -1,24 +1,25 @@
-# [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [veil](/frontend/src/pages/veil) / [ui](/frontend/src/pages/veil/ui) / [veil-item](/frontend/src/pages/veil/ui/veil-item)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [veil](/frontend/src/pages/veil) / [ui](/frontend/src/pages/veil/ui) / [veil-item](/frontend/src/pages/veil/ui/veil-item)
 
 ## 🏷️ 📁 Veil-item
 
 ### 🎯 PURPOSE
-The `veil-item` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil-item logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards. This module is a distinguished component of the **Pages** layer under the Feature Sliced Design (FSD) methodology.
+The `veil-item` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil-item logic to ensure a seamless and premium experience.
+
+This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  veil-item[📁 veil-item]
-  veil-item --> veil_item_component_html(veil-item.component.html)
-  veil-item --> veil_item_component_ts(veil-item.component.ts)
+  veil_item[📁 veil-item]
+  veil_item --> veil_item_veil_item_component_html(veil-item.component.html)
+  veil_item --> veil_item_veil_item_component_ts(veil-item.component.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil-item.component.html` | `html` | Encapsulates premium logic and definitions for `veil-item.component.html`. | None |
-| `veil-item.component.ts` | `ts` | Encapsulates premium logic and definitions for `veil-item.component.ts`. | @angular/core, @features/veil, @angular/common |
-
+| `veil-item.component.html` | `html` | UI template and styling. | None |
+| `veil-item.component.ts` | `ts` | UI component logic and rendering. | @angular, @features |
 
 ### 🔗 DEPENDENCIES
 - `@angular/common`

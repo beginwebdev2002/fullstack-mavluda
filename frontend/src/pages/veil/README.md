@@ -1,31 +1,34 @@
-# [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [veil](/frontend/src/pages/veil)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [veil](/frontend/src/pages/veil)
 
 ## 🏷️ 📁 Veil
 
 ### 🎯 PURPOSE
-The `veil` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards. This module is a distinguished component of the **Pages** layer under the Feature Sliced Design (FSD) methodology.
+The `veil` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil logic to ensure a seamless and premium experience.
+
+This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   veil[📁 veil]
-  veil --> ui[🖥️ ui]
-  veil --> index_ts(index.ts)
-  veil --> veil_component_html(veil.component.html)
-  veil --> veil_component_scss(veil.component.scss)
-  veil --> veil_component_ts(veil.component.ts)
+  veil --> veil_ui[📁 ui]
+  veil --> veil_index_ts(index.ts)
+  veil --> veil_veil_component_html(veil.component.html)
+  veil --> veil_veil_component_scss(veil.component.scss)
+  veil --> veil_veil_component_ts(veil.component.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-| `veil.component.html` | `html` | Encapsulates premium logic and definitions for `veil.component.html`. | None |
-| `veil.component.scss` | `scss` | Encapsulates premium logic and definitions for `veil.component.scss`. | None |
-| `veil.component.ts` | `ts` | Encapsulates premium logic and definitions for `veil.component.ts`. | @environments/environment, @shared/ui, @angular/common, @angular/core, @shared/lib, @entities/veil, @features/veil |
-
+| `index.ts` | `ts` | Core logic implementation. | None |
+| `veil.component.html` | `html` | UI template and styling. | None |
+| `veil.component.scss` | `scss` | UI template and styling. | None |
+| `veil.component.ts` | `ts` | UI component logic and rendering. | @features, @environments, @angular, @entities, @shared |
 
 ### 🔗 DEPENDENCIES
+- `./ui/veil-form/veil-form.component`
+- `./veil.component`
 - `@angular/common`
 - `@angular/core`
 - `@entities/veil`
@@ -33,6 +36,7 @@ graph TD
 - `@features/veil`
 - `@shared/lib`
 - `@shared/ui`
+- `rxjs`
 
 ### 🛠️ USAGE
 ```typescript

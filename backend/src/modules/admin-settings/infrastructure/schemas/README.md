@@ -1,25 +1,25 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [admin-settings](/backend/src/modules/admin-settings) / [infrastructure](/backend/src/modules/admin-settings/infrastructure) / [schemas](/backend/src/modules/admin-settings/infrastructure/schemas)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [admin-settings](/backend/src/modules/admin-settings) / [infrastructure](/backend/src/modules/admin-settings/infrastructure) / [schemas](/backend/src/modules/admin-settings/infrastructure/schemas)
 
-## 🏷️ 📑 Schemas
+## 🏷️ 📁 Schemas
 
 ### 🎯 PURPOSE
-The `schemas` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the schemas logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `schemas` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the schemas logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  schemas[📑 schemas]
-  schemas --> admin_settings_schema_ts(admin-settings.schema.ts)
+  schemas[📁 schemas]
+  schemas --> schemas_admin_settings_schema_ts(admin-settings.schema.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.schema.ts` | `ts` | Encapsulates premium logic and definitions for `admin-settings.schema.ts`. | @nestjs/mongoose |
-
+| `admin-settings.schema.ts` | `ts` | Core logic implementation. | @nestjs |
 
 ### 🔗 DEPENDENCIES
 - `@nestjs/mongoose`
+- `mongoose`
 
 ### 🛠️ USAGE
 ```typescript

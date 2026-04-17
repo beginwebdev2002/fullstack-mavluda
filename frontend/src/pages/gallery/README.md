@@ -1,31 +1,34 @@
-# [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [gallery](/frontend/src/pages/gallery)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [gallery](/frontend/src/pages/gallery)
 
 ## 🏷️ 📁 Gallery
 
 ### 🎯 PURPOSE
-The `gallery` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the gallery logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards. This module is a distinguished component of the **Pages** layer under the Feature Sliced Design (FSD) methodology.
+The `gallery` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the gallery logic to ensure a seamless and premium experience.
+
+This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   gallery[📁 gallery]
-  gallery --> ui[🖥️ ui]
-  gallery --> gallery_component_html(gallery.component.html)
-  gallery --> gallery_component_scss(gallery.component.scss)
-  gallery --> gallery_component_ts(gallery.component.ts)
-  gallery --> index_ts(index.ts)
+  gallery --> gallery_ui[📁 ui]
+  gallery --> gallery_gallery_component_html(gallery.component.html)
+  gallery --> gallery_gallery_component_scss(gallery.component.scss)
+  gallery --> gallery_gallery_component_ts(gallery.component.ts)
+  gallery --> gallery_index_ts(index.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.component.html` | `html` | Encapsulates premium logic and definitions for `gallery.component.html`. | None |
-| `gallery.component.scss` | `scss` | Encapsulates premium logic and definitions for `gallery.component.scss`. | None |
-| `gallery.component.ts` | `ts` | Encapsulates premium logic and definitions for `gallery.component.ts`. | @environments/environment, @shared/ui, @shared/lib/object, @angular/common, @shared/models, @angular/core, @shared/lib, @entities/gallery, @angular/forms |
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-
+| `gallery.component.html` | `html` | UI template and styling. | None |
+| `gallery.component.scss` | `scss` | UI template and styling. | None |
+| `gallery.component.ts` | `ts` | UI component logic and rendering. | @environments, @angular, @entities, @shared |
+| `index.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
+- `./gallery.component`
+- `./ui/gallery-form/gallery-form.component`
 - `@angular/common`
 - `@angular/core`
 - `@angular/forms`
@@ -34,7 +37,7 @@ graph TD
 - `@shared/lib`
 - `@shared/lib/object`
 - `@shared/models`
-- `@shared/ui`
+- *...and more.*
 
 ### 🛠️ USAGE
 ```typescript

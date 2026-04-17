@@ -1,30 +1,37 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [inventory](/backend/src/modules/inventory)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [inventory](/backend/src/modules/inventory)
 
 ## 🏷️ 📁 Inventory
 
 ### 🎯 PURPOSE
-The `inventory` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the inventory logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `inventory` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the inventory logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   inventory[📁 inventory]
-  inventory --> application[🚀 application]
-  inventory --> domain[🏛️ domain]
-  inventory --> infrastructure[🏗️ infrastructure]
-  inventory --> presentation[🎨 presentation]
-  inventory --> index_ts(index.ts)
-  inventory --> inventory_module_ts(inventory.module.ts)
+  inventory --> inventory_application[📁 application]
+  inventory --> inventory_domain[📁 domain]
+  inventory --> inventory_infrastructure[📁 infrastructure]
+  inventory --> inventory_presentation[📁 presentation]
+  inventory --> inventory_index_ts(index.ts)
+  inventory --> inventory_inventory_module_ts(inventory.module.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-| `inventory.module.ts` | `ts` | Encapsulates premium logic and definitions for `inventory.module.ts`. | @nestjs/common, @nestjs/mongoose |
-
+| `index.ts` | `ts` | Core logic implementation. | None |
+| `inventory.module.ts` | `ts` | Module configuration and provider registration. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `./application/inventory.service`
+- `./domain/inventory.entity`
+- `./infrastructure/repositories/inventory.repository`
+- `./infrastructure/schemas/inventory.schema`
+- `./inventory.module`
+- `./presentation/dto/create-inventory.dto`
+- `./presentation/dto/update-inventory.dto`
+- `./presentation/inventory.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

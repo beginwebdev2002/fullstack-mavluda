@@ -1,27 +1,32 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [gallery](/backend/src/modules/gallery) / [presentation](/backend/src/modules/gallery/presentation)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [gallery](/backend/src/modules/gallery) / [presentation](/backend/src/modules/gallery/presentation)
 
-## 🏷️ 🎨 Presentation
+## 🏷️ 📁 Presentation
 
 ### 🎯 PURPOSE
-The `presentation` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the presentation logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `presentation` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the presentation logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  presentation[🎨 presentation]
-  presentation --> dto[📨 dto]
-  presentation --> gallery_controller_ts(gallery.controller.ts)
+  presentation[📁 presentation]
+  presentation --> presentation_dto[📁 dto]
+  presentation --> presentation_gallery_controller_ts(gallery.controller.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.controller.ts` | `ts` | Encapsulates premium logic and definitions for `gallery.controller.ts`. | @nestjs/common, @nestjs/platform-express |
-
+| `gallery.controller.ts` | `ts` | Handles incoming HTTP requests. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `../application/gallery.service`
+- `../domain/gallery.entity`
+- `./dto/create-gallery.dto`
+- `./dto/update-gallery.dto`
 - `@nestjs/common`
 - `@nestjs/platform-express`
+- `multer`
+- `path`
 
 ### 🛠️ USAGE
 ```typescript

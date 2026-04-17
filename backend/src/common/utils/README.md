@@ -1,29 +1,32 @@
-# [backend](/backend) / [src](/backend/src) / [common](/backend/src/common) / [utils](/backend/src/common/utils)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [common](/backend/src/common) / [utils](/backend/src/common/utils)
 
-## 🏷️ 🧰 Utils
+## 🏷️ 📁 Utils
 
 ### 🎯 PURPOSE
-The `utils` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the utils logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `utils` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the utils logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  utils[🧰 utils]
-  utils --> file_system_ts(file-system.ts)
-  utils --> index_ts(index.ts)
-  utils --> object_ts(object.ts)
+  utils[📁 utils]
+  utils --> utils_file_system_ts(file-system.ts)
+  utils --> utils_index_ts(index.ts)
+  utils --> utils_object_ts(object.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `file-system.ts` | `ts` | Encapsulates premium logic and definitions for `file-system.ts`. | None |
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-| `object.ts` | `ts` | Encapsulates premium logic and definitions for `object.ts`. | None |
-
+| `file-system.ts` | `ts` | Core logic implementation. | None |
+| `index.ts` | `ts` | Core logic implementation. | None |
+| `object.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `./file-system`
+- `./object`
+- `fs`
+- `path`
+- `util`
 
 ### 🛠️ USAGE
 ```typescript

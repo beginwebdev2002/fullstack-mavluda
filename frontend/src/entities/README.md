@@ -1,26 +1,27 @@
-# [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities)
 
-## 🏷️ 🗃️ Entities
+## 🏷️ 📁 Entities
 
 ### 🎯 PURPOSE
-The `entities` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the entities logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards. This module is a distinguished component of the **Entities** layer under the Feature Sliced Design (FSD) methodology.
+The `entities` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the entities logic to ensure a seamless and premium experience.
+
+This directory resides within the **Entities** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  entities[🗃️ entities]
-  entities --> admin-settings[📁 admin-settings]
-  entities --> gallery[📁 gallery]
-  entities --> treatments[📁 treatments]
-  entities --> user[📁 user]
-  entities --> veil[📁 veil]
+  entities[📁 entities]
+  entities --> entities_admin_settings[📁 admin-settings]
+  entities --> entities_gallery[📁 gallery]
+  entities --> entities_treatments[📁 treatments]
+  entities --> entities_user[📁 user]
+  entities --> entities_veil[📁 veil]
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No exclusive files* | - | Architecturally reserved | - |
-
+| *No files* | `-` | *Directory is strictly structural.* | `-` |
 
 ### 🔗 DEPENDENCIES
 - *Self-contained premium module.*

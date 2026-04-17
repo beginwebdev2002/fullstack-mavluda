@@ -1,22 +1,21 @@
-# [frontend](/frontend) / [src](/frontend/src) / [types](/frontend/src/types)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [types](/frontend/src/types)
 
 ## 🏷️ 📁 Types
 
 ### 🎯 PURPOSE
-The `types` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the types logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards.
+The `types` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the types logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   types[📁 types]
-  types --> telegram_ts(telegram.ts)
+  types --> types_telegram_ts(telegram.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `telegram.ts` | `ts` | Encapsulates premium logic and definitions for `telegram.ts`. | None |
-
+| `telegram.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
 - *Self-contained premium module.*

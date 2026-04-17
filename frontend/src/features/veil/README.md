@@ -1,26 +1,27 @@
-# [frontend](/frontend) / [src](/frontend/src) / [features](/frontend/src/features) / [veil](/frontend/src/features/veil)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [features](/frontend/src/features) / [veil](/frontend/src/features/veil)
 
 ## 🏷️ 📁 Veil
 
 ### 🎯 PURPOSE
-The `veil` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards. This module is a distinguished component of the **Features** layer under the Feature Sliced Design (FSD) methodology.
+The `veil` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil logic to ensure a seamless and premium experience.
+
+This directory resides within the **Features** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
   veil[📁 veil]
-  veil --> model[📁 model]
-  veil --> index_ts(index.ts)
+  veil --> veil_model[📁 model]
+  veil --> veil_index_ts(index.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Encapsulates premium logic and definitions for `index.ts`. | None |
-
+| `index.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `./model/veil.data`
 
 ### 🛠️ USAGE
 ```typescript

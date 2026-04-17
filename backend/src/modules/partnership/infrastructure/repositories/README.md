@@ -1,26 +1,28 @@
-# [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [partnership](/backend/src/modules/partnership) / [infrastructure](/backend/src/modules/partnership/infrastructure) / [repositories](/backend/src/modules/partnership/infrastructure/repositories)
+# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [partnership](/backend/src/modules/partnership) / [infrastructure](/backend/src/modules/partnership/infrastructure) / [repositories](/backend/src/modules/partnership/infrastructure/repositories)
 
-## 🏷️ 🗄️ Repositories
+## 🏷️ 📁 Repositories
 
 ### 🎯 PURPOSE
-The `repositories` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the repositories logic to ensure a seamless and premium experience. Rooted in the NestJS backend architecture, it delivers robust, high-performance operations tailored for high-end beauty and wedding services.
+The `repositories` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the repositories logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  repositories[🗄️ repositories]
-  repositories --> partnership_repository_ts(partnership.repository.ts)
+  repositories[📁 repositories]
+  repositories --> repositories_partnership_repository_ts(partnership.repository.ts)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.repository.ts` | `ts` | Encapsulates premium logic and definitions for `partnership.repository.ts`. | @nestjs/common, @nestjs/mongoose |
-
+| `partnership.repository.ts` | `ts` | Core logic implementation. | @nestjs |
 
 ### 🔗 DEPENDENCIES
+- `../../domain/partnership.entity`
+- `../schemas/partnership.schema`
 - `@nestjs/common`
 - `@nestjs/mongoose`
+- `mongoose`
 
 ### 🛠️ USAGE
 ```typescript

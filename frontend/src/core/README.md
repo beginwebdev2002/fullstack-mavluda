@@ -1,24 +1,23 @@
-# [frontend](/frontend) / [src](/frontend/src) / [core](/frontend/src/core)
+# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [core](/frontend/src/core)
 
-## 🏷️ 🧠 Core
+## 🏷️ 📁 Core
 
 ### 🎯 PURPOSE
-The `core` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the core logic to ensure a seamless and premium experience. Integrated within our cutting-edge Angular frontend architecture, it crafts an elegant, highly-responsive user interface reflecting our luxury brand standards.
+The `core` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the core logic to ensure a seamless and premium experience.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  core[🧠 core]
-  core --> constants[📌 constants]
-  core --> guards[🛡️ guards]
-  core --> interceptors[📁 interceptors]
+  core[📁 core]
+  core --> core_constants[📁 constants]
+  core --> core_guards[📁 guards]
+  core --> core_interceptors[📁 interceptors]
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No exclusive files* | - | Architecturally reserved | - |
-
+| *No files* | `-` | *Directory is strictly structural.* | `-` |
 
 ### 🔗 DEPENDENCIES
 - *Self-contained premium module.*
