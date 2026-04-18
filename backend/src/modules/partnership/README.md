@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Partnership
 
 ### 🎯 PURPOSE
-The `partnership` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the partnership logic to ensure a seamless and premium experience.
+The `partnership` backend module encapsulates the business logic, presentation, and data access for partnership.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

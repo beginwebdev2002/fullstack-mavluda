@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [veil](/frontend/src/pages/veil) / [ui](/frontend/src/pages/veil/ui) / [veil-modal](/frontend/src/pages/veil/ui/veil-modal)
 
-## 🏷️ 📁 Veil-modal
+## 🏷️ 📁 Veil-modal (Page Layer)
 
 ### 🎯 PURPOSE
-The `veil-modal` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil-modal logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `veil-modal` page component orchestrates the UI layer for the veil-modal feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

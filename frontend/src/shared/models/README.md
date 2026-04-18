@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [shared](/frontend/src/shared) / [models](/frontend/src/shared/models)
 
-## 🏷️ 📁 Models
+## 🏷️ 📁 Models (Shared Layer)
 
 ### 🎯 PURPOSE
-The `models` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the models logic to ensure a seamless and premium experience.
-
-This directory resides within the **Shared** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `models` shared module provides reusable UI components and utilities across the frontend.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

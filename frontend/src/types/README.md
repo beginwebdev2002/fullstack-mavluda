@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Types
 
 ### 🎯 PURPOSE
-The `types` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the types logic to ensure a seamless and premium experience.
+The `types` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -18,7 +18,7 @@ graph TD
 | `telegram.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

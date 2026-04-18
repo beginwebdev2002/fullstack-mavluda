@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Interfaces
 
 ### 🎯 PURPOSE
-The `interfaces` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the interfaces logic to ensure a seamless and premium experience.
+The `interfaces` directory provides core backend services and configuration.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages)
 
-## 🏷️ 📁 Pages
+## 🏷️ 📁 Pages (Page Layer)
 
 ### 🎯 PURPOSE
-The `pages` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the pages logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `pages` page component orchestrates the UI layer for the pages feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -30,10 +28,10 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files* | `-` | *Directory is strictly structural.* | `-` |
+| (No files) | - | - | - |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

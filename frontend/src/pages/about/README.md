@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [about](/frontend/src/pages/about)
 
-## 🏷️ 📁 About
+## 🏷️ 📁 About (Page Layer)
 
 ### 🎯 PURPOSE
-The `about` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the about logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `about` page component orchestrates the UI layer for the about feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

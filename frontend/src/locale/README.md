@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Locale
 
 ### 🎯 PURPOSE
-The `locale` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the locale logic to ensure a seamless and premium experience.
+The `locale` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -17,12 +17,12 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `messages.ru.xlf` | `xlf` | Configuration and foundational asset. | None |
-| `messages.tj.xlf` | `xlf` | Configuration and foundational asset. | None |
-| `messages.xlf` | `xlf` | Configuration and foundational asset. | None |
+| `messages.ru.xlf` | `xlf` | Core logic or foundational asset for this directory. | None |
+| `messages.tj.xlf` | `xlf` | Core logic or foundational asset for this directory. | None |
+| `messages.xlf` | `xlf` | Core logic or foundational asset for this directory. | None |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

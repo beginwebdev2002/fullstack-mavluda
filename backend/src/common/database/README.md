@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Database
 
 ### 🎯 PURPOSE
-The `database` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the database logic to ensure a seamless and premium experience.
+The `database` directory provides core backend services and configuration.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

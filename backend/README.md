@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Backend
 
 ### 🎯 PURPOSE
-The `backend` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the backend logic to ensure a seamless and premium experience.
+The `backend` directory provides core backend services and configuration.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -11,7 +11,6 @@ graph TD
   backend[📁 backend]
   backend --> backend_src[📁 src]
   backend --> backend_test[📁 test]
-  backend --> backend__prettierrc(.prettierrc)
   backend --> backend_eslint_config_mjs(eslint.config.mjs)
   backend --> backend_nest_cli_json(nest-cli.json)
   backend --> backend_package_lock_json(package-lock.json)
@@ -23,13 +22,12 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `.prettierrc` | `prettierrc` | Configuration and foundational asset. | None |
-| `eslint.config.mjs` | `mjs` | Configuration and foundational asset. | @eslint |
-| `nest-cli.json` | `json` | Configuration and foundational asset. | None |
-| `package-lock.json` | `json` | Configuration and foundational asset. | None |
-| `package.json` | `json` | Configuration and foundational asset. | None |
-| `tsconfig.build.json` | `json` | Configuration and foundational asset. | None |
-| `tsconfig.json` | `json` | Configuration and foundational asset. | None |
+| `eslint.config.mjs` | `mjs` | Configuration settings and environment setup. | @eslint |
+| `nest-cli.json` | `json` | Core logic or foundational asset for this directory. | None |
+| `package-lock.json` | `json` | Core logic or foundational asset for this directory. | None |
+| `package.json` | `json` | Core logic or foundational asset for this directory. | None |
+| `tsconfig.build.json` | `json` | Configuration settings and environment setup. | None |
+| `tsconfig.json` | `json` | Configuration settings and environment setup. | None |
 
 ### 🔗 DEPENDENCIES
 - `@eslint/js`

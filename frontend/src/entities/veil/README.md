@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [veil](/frontend/src/entities/veil)
 
-## 🏷️ 📁 Veil
+## 🏷️ 📁 Veil (Entity Layer)
 
 ### 🎯 PURPOSE
-The `veil` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil logic to ensure a seamless and premium experience.
-
-This directory resides within the **Entities** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `veil` entity defines the data models and core business logic for the veil domain within the frontend.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

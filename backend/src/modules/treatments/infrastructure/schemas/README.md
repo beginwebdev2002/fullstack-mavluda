@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Schemas
 
 ### 🎯 PURPOSE
-The `schemas` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the schemas logic to ensure a seamless and premium experience.
+The `schemas` backend module encapsulates the business logic, presentation, and data access for schemas.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Presentation
 
 ### 🎯 PURPOSE
-The `presentation` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the presentation logic to ensure a seamless and premium experience.
+The `presentation` backend module encapsulates the business logic, presentation, and data access for presentation.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

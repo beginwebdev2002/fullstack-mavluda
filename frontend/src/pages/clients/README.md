@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [clients](/frontend/src/pages/clients)
 
-## 🏷️ 📁 Clients
+## 🏷️ 📁 Clients (Page Layer)
 
 ### 🎯 PURPOSE
-The `clients` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the clients logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `clients` page component orchestrates the UI layer for the clients feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

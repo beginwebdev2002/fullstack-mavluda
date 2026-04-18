@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [portfolio](/frontend/src/pages/portfolio)
 
-## 🏷️ 📁 Portfolio
+## 🏷️ 📁 Portfolio (Page Layer)
 
 ### 🎯 PURPOSE
-The `portfolio` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the portfolio logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `portfolio` page component orchestrates the UI layer for the portfolio feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

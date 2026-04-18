@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [features](/frontend/src/features) / [language-selection](/frontend/src/features/language-selection)
 
-## 🏷️ 📁 Language-selection
+## 🏷️ 📁 Language-selection (Feature Layer)
 
 ### 🎯 PURPOSE
-The `language-selection` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the language-selection logic to ensure a seamless and premium experience.
-
-This directory resides within the **Features** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `language-selection` feature implements specific user interactions and workflows for language-selection.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

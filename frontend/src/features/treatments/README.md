@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [features](/frontend/src/features) / [treatments](/frontend/src/features/treatments)
 
-## 🏷️ 📁 Treatments
+## 🏷️ 📁 Treatments (Feature Layer)
 
 ### 🎯 PURPOSE
-The `treatments` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the treatments logic to ensure a seamless and premium experience.
-
-This directory resides within the **Features** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `treatments` feature implements specific user interactions and workflows for treatments.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

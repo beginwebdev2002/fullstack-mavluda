@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [features](/frontend/src/features) / [veil](/frontend/src/features/veil)
 
-## 🏷️ 📁 Veil
+## 🏷️ 📁 Veil (Feature Layer)
 
 ### 🎯 PURPOSE
-The `veil` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil logic to ensure a seamless and premium experience.
-
-This directory resides within the **Features** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `veil` feature implements specific user interactions and workflows for veil.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

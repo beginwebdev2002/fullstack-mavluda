@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Constants
 
 ### 🎯 PURPOSE
-The `constants` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the constants logic to ensure a seamless and premium experience.
+The `constants` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

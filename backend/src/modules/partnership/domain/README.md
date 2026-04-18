@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Domain
 
 ### 🎯 PURPOSE
-The `domain` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the domain logic to ensure a seamless and premium experience.
+The `domain` backend module encapsulates the business logic, presentation, and data access for domain.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -18,7 +18,7 @@ graph TD
 | `partnership.entity.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Infrastructure
 
 ### 🎯 PURPOSE
-The `infrastructure` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the infrastructure logic to ensure a seamless and premium experience.
+The `infrastructure` backend module encapsulates the business logic, presentation, and data access for infrastructure.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -16,10 +16,10 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files* | `-` | *Directory is strictly structural.* | `-` |
+| (No files) | - | - | - |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

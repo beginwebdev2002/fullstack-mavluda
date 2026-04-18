@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Test
 
 ### 🎯 PURPOSE
-The `test` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the test logic to ensure a seamless and premium experience.
+The `test` directory provides core backend services and configuration.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -17,7 +17,7 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `app.e2e-spec.ts` | `ts` | Core logic implementation. | @nestjs |
-| `jest-e2e.json` | `json` | Configuration and foundational asset. | None |
+| `jest-e2e.json` | `json` | Core logic or foundational asset for this directory. | None |
 
 ### 🔗 DEPENDENCIES
 - `./../src/app.module`

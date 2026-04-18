@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [app](/frontend/src/app)
 
-## 🏷️ 📁 App
+## 🏷️ 📁 App (App Layer)
 
 ### 🎯 PURPOSE
-The `app` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the app logic to ensure a seamless and premium experience.
-
-This directory resides within the **App** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `app` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -17,7 +15,7 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.config.ts` | `ts` | Core logic implementation. | @src, @angular, @core |
+| `app.config.ts` | `ts` | Core logic implementation. | @angular, @src, @core |
 
 ### 🔗 DEPENDENCIES
 - `@angular/common/http`

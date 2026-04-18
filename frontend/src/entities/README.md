@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities)
 
-## 🏷️ 📁 Entities
+## 🏷️ 📁 Entities (Entity Layer)
 
 ### 🎯 PURPOSE
-The `entities` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the entities logic to ensure a seamless and premium experience.
-
-This directory resides within the **Entities** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `entities` entity defines the data models and core business logic for the entities domain within the frontend.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -21,10 +19,10 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files* | `-` | *Directory is strictly structural.* | `-` |
+| (No files) | - | - | - |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

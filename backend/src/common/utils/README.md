@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Utils
 
 ### 🎯 PURPOSE
-The `utils` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the utils logic to ensure a seamless and premium experience.
+The `utils` directory provides core backend services and configuration.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

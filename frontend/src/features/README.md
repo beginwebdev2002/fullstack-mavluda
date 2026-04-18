@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [features](/frontend/src/features)
 
-## 🏷️ 📁 Features
+## 🏷️ 📁 Features (Feature Layer)
 
 ### 🎯 PURPOSE
-The `features` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the features logic to ensure a seamless and premium experience.
-
-This directory resides within the **Features** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `features` feature implements specific user interactions and workflows for features.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -21,10 +19,10 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files* | `-` | *Directory is strictly structural.* | `-` |
+| (No files) | - | - | - |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

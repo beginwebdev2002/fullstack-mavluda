@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Guards
 
 ### 🎯 PURPOSE
-The `guards` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the guards logic to ensure a seamless and premium experience.
+The `guards` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

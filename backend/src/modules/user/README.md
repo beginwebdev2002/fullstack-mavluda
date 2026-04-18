@@ -3,7 +3,7 @@
 ## 🏷️ 📁 User
 
 ### 🎯 PURPOSE
-The `user` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the user logic to ensure a seamless and premium experience.
+The `user` backend module encapsulates the business logic, presentation, and data access for user.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

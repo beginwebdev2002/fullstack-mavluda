@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [widgets](/frontend/src/widgets)
 
-## 🏷️ 📁 Widgets
+## 🏷️ 📁 Widgets (Widget Layer)
 
 ### 🎯 PURPOSE
-The `widgets` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the widgets logic to ensure a seamless and premium experience.
-
-This directory resides within the **Widgets** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `widgets` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -19,10 +17,10 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files* | `-` | *Directory is strictly structural.* | `-` |
+| (No files) | - | - | - |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

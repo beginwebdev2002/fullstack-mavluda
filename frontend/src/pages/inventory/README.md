@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [inventory](/frontend/src/pages/inventory)
 
-## 🏷️ 📁 Inventory
+## 🏷️ 📁 Inventory (Page Layer)
 
 ### 🎯 PURPOSE
-The `inventory` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the inventory logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `inventory` page component orchestrates the UI layer for the inventory feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

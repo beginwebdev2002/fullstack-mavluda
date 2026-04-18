@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Veil
 
 ### 🎯 PURPOSE
-The `veil` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil logic to ensure a seamless and premium experience.
+The `veil` backend module encapsulates the business logic, presentation, and data access for veil.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

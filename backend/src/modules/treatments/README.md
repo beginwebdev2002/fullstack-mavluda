@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Treatments
 
 ### 🎯 PURPOSE
-The `treatments` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the treatments logic to ensure a seamless and premium experience.
+The `treatments` backend module encapsulates the business logic, presentation, and data access for treatments.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -21,7 +21,7 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | `ts` | Core logic implementation. | None |
-| `treatments.module.ts` | `ts` | Module configuration and provider registration. | @modules, @nestjs |
+| `treatments.module.ts` | `ts` | Module configuration and provider registration. | @nestjs, @modules |
 
 ### 🔗 DEPENDENCIES
 - `./application/treatments.service`
@@ -32,9 +32,9 @@ graph TD
 - `./presentation/dto/update-treatments.dto`
 - `./presentation/treatments.controller`
 - `./treatments.module`
-- `@modules/treatments/application/treatments.service`
-- `@modules/treatments/infrastructure/repositories/treatments.repository`
-- *...and more.*
+- `@nestjs/common`
+- `@nestjs/mongoose`
+- `...`
 
 ### 🛠️ USAGE
 ```typescript

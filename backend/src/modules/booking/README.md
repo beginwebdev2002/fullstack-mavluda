@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Booking
 
 ### 🎯 PURPOSE
-The `booking` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the booking logic to ensure a seamless and premium experience.
+The `booking` backend module encapsulates the business logic, presentation, and data access for booking.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

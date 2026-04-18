@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [dashboard](/frontend/src/pages/dashboard)
 
-## 🏷️ 📁 Dashboard
+## 🏷️ 📁 Dashboard (Page Layer)
 
 ### 🎯 PURPOSE
-The `dashboard` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the dashboard logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `dashboard` page component orchestrates the UI layer for the dashboard feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

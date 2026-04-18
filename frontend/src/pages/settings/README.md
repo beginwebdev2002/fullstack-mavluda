@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [settings](/frontend/src/pages/settings)
 
-## 🏷️ 📁 Settings
+## 🏷️ 📁 Settings (Page Layer)
 
 ### 🎯 PURPOSE
-The `settings` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the settings logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `settings` page component orchestrates the UI layer for the settings feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -32,12 +30,12 @@ graph TD
 - `./ui/business-profile.component`
 - `./ui/general-info.component`
 - `./ui/selects-settings.component`
-- `./ui/social-matrix.component`
 - `@angular/common`
 - `@angular/core`
 - `@angular/forms`
 - `@entities/admin-settings`
-- *...and more.*
+- `@shared/models/admin-settings.model`
+- `...`
 
 ### 🛠️ USAGE
 ```typescript
