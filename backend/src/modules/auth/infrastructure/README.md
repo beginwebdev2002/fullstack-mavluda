@@ -1,31 +1,36 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [auth](/backend/src/modules/auth) / [infrastructure](/backend/src/modules/auth/infrastructure)
+# 📁 infrastructure
 
-## 🏷️ 📁 Infrastructure
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [infrastructure](/backend/src/modules/auth/infrastructure)
 
-### 🎯 PURPOSE
-The `infrastructure` backend module encapsulates the business logic, presentation, and data access for infrastructure.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **infrastructure** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  infrastructure[📁 infrastructure]
-  infrastructure --> infrastructure_jwt_strategy_ts(jwt.strategy.ts)
+  Root["📁 infrastructure"]
+  Root --> jwtstrategyts["📄 jwt.strategy.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `jwt.strategy.ts` | `ts` | Core logic implementation. | @nestjs, @common |
+| `jwt.strategy.ts` | File | Core logic and utilities for this domain. | @nestjs, @common |
 
-### 🔗 DEPENDENCIES
-- `../interfaces/jwt-payload.interface`
-- `@common/config/app-config.service`
-- `@nestjs/common`
-- `@nestjs/passport`
+
+## 🔗 Dependencies
 - `passport-jwt`
+- `@nestjs/passport`
+- `@nestjs/common`
+- `@common/config/app-config.service`
+- `../interfaces/jwt-payload.interface`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate infrastructure into your refined workflows:
-import { /* exported members */ } from '@path/to/infrastructure';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './jwt.strategy';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

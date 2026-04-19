@@ -1,31 +1,32 @@
-# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities)
+# 🧱 entities
 
-## 🏷️ 📁 Entities (Entity Layer)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities)
 
-### 🎯 PURPOSE
-The `entities` entity defines the data models and core business logic for the entities domain within the frontend.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **entities** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  entities[📁 entities]
-  entities --> entities_admin_settings[📁 admin-settings]
-  entities --> entities_gallery[📁 gallery]
-  entities --> entities_treatments[📁 treatments]
-  entities --> entities_user[📁 user]
-  entities --> entities_veil[📁 veil]
+  Root["🧱 entities"]
+  Root --> adminsettings["📁 admin-settings"]
+  Root --> gallery["📁 gallery"]
+  Root --> treatments["📁 treatments"]
+  Root --> user["📁 user"]
+  Root --> veil["📁 veil"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| (No files) | - | - | - |
+| _No matching files_ | - | - | - |
 
-### 🔗 DEPENDENCIES
-- `None`
 
-### 🛠️ USAGE
-```typescript
-// Seamlessly integrate entities into your refined workflows:
-import { /* exported members */ } from '@path/to/entities';
+## 🔗 Dependencies
+- _No external or internal dependencies detected._
+
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or configuration hub.
 ```

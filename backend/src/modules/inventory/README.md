@@ -1,42 +1,45 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [inventory](/backend/src/modules/inventory)
+# 📁 inventory
 
-## 🏷️ 📁 Inventory
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory)
 
-### 🎯 PURPOSE
-The `inventory` backend module encapsulates the business logic, presentation, and data access for inventory.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **inventory** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  inventory[📁 inventory]
-  inventory --> inventory_application[📁 application]
-  inventory --> inventory_domain[📁 domain]
-  inventory --> inventory_infrastructure[📁 infrastructure]
-  inventory --> inventory_presentation[📁 presentation]
-  inventory --> inventory_index_ts(index.ts)
-  inventory --> inventory_inventory_module_ts(inventory.module.ts)
+  Root["📁 inventory"]
+  Root --> application["📁 application"]
+  Root --> domain["📁 domain"]
+  Root --> infrastructure["📁 infrastructure"]
+  Root --> presentation["📁 presentation"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | `ts` | Core logic implementation. | None |
-| `inventory.module.ts` | `ts` | Module configuration and provider registration. | @nestjs |
+| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+| `inventory.module.ts` | Module | Core logic and utilities for this domain. | @nestjs |
 
-### 🔗 DEPENDENCIES
-- `./application/inventory.service`
-- `./domain/inventory.entity`
-- `./infrastructure/repositories/inventory.repository`
-- `./infrastructure/schemas/inventory.schema`
-- `./inventory.module`
+
+## 🔗 Dependencies
 - `./presentation/dto/create-inventory.dto`
 - `./presentation/dto/update-inventory.dto`
-- `./presentation/inventory.controller`
+- `./application/inventory.service`
+- `./domain/inventory.entity`
+- `./inventory.module`
 - `@nestjs/common`
 - `@nestjs/mongoose`
+- `./presentation/inventory.controller`
+- `./infrastructure/repositories/inventory.repository`
+- `./infrastructure/schemas/inventory.schema`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate inventory into your refined workflows:
-import { /* exported members */ } from '@path/to/inventory';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './index';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

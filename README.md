@@ -1,35 +1,36 @@
-# [root](/)
+# 👑 Mavluda Beauty Root
 
-## 🏷️ 📁 .
+[Root](/.)
 
-### 🎯 PURPOSE
-The `.` directory is a foundational part of the Mavluda Beauty ecosystem.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Mavluda Beauty Root** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  _[📁 .]
-  _ --> __backend[📁 backend]
-  _ --> __frontend[📁 frontend]
-  _ --> ___env(.env)
-  _ --> ___gitignore(.gitignore)
-  _ --> __GEMINI_md(GEMINI.md)
-  _ --> __generate_readmes_py(generate_readmes.py)
+  Root["👑 Mavluda Beauty Root"]
+  Root --> agent["📁 .agent"]
+  Root --> gemini["📁 .gemini"]
+  Root --> github["📁 .github"]
+  Root --> jules["📁 .jules"]
+  Root --> backend["📁 backend"]
+  Root --> frontend["📁 frontend"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `.env` | `env` | Core logic or foundational asset for this directory. | None |
-| `.gitignore` | `gitignore` | Core logic or foundational asset for this directory. | None |
-| `GEMINI.md` | `md` | Core logic or foundational asset for this directory. | None |
-| `generate_readmes.py` | `py` | Core logic or foundational asset for this directory. | @path |
+| `.env` | Configuration | Project level settings and dependencies. | N/A |
+| `.gitignore` | Configuration | Project level settings and dependencies. | N/A |
+| `.gitignore_append` | File | Core logic and utilities for this domain. | N/A |
+| `GEMINI.md` | File | Core logic and utilities for this domain. | N/A |
+| `generate_readmes.js` | File | Core logic and utilities for this domain. | N/A |
 
-### 🔗 DEPENDENCIES
-- `@path/to/{dirname}`
 
-### 🛠️ USAGE
-```typescript
-// Seamlessly integrate . into your refined workflows:
-import { /* exported members */ } from '@path/to/.';
+## 🔗 Dependencies
+- `./${tsFile.name.replace(/\.ts$/, `
+
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or configuration hub.
 ```

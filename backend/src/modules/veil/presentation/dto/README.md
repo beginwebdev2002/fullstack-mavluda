@@ -1,32 +1,37 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [veil](/backend/src/modules/veil) / [presentation](/backend/src/modules/veil/presentation) / [dto](/backend/src/modules/veil/presentation/dto)
+# 📁 dto
 
-## 🏷️ 📁 Dto
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil) > [presentation](/backend/src/modules/veil/presentation) > [dto](/backend/src/modules/veil/presentation/dto)
 
-### 🎯 PURPOSE
-The `dto` backend module encapsulates the business logic, presentation, and data access for dto.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  dto[📁 dto]
-  dto --> dto_create_veil_dto_ts(create-veil.dto.ts)
-  dto --> dto_update_veil_dto_ts(update-veil.dto.ts)
+  Root["📁 dto"]
+  Root --> createveildtots["📄 create-veil.dto.ts"]
+  Root --> updateveildtots["📄 update-veil.dto.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-veil.dto.ts` | `ts` | Data transfer objects and models. | None |
-| `update-veil.dto.ts` | `ts` | Data transfer objects and models. | @nestjs |
+| `create-veil.dto.ts` | DTO | Data Transfer Object for validation. | N/A |
+| `update-veil.dto.ts` | DTO | Data Transfer Object for validation. | @nestjs |
 
-### 🔗 DEPENDENCIES
-- `./create-veil.dto`
-- `@nestjs/mapped-types`
-- `class-transformer`
+
+## 🔗 Dependencies
 - `class-validator`
+- `class-transformer`
+- `@nestjs/mapped-types`
+- `./create-veil.dto`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate dto into your refined workflows:
-import { /* exported members */ } from '@path/to/dto';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './create-veil.dto';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

@@ -1,30 +1,35 @@
-# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [shared](/frontend/src/shared) / [ui](/frontend/src/shared/ui) / [image-popup](/frontend/src/shared/ui/image-popup)
+# 📁 image-popup
 
-## 🏷️ 📁 Image-popup (Shared Layer)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [image-popup](/frontend/src/shared/ui/image-popup)
 
-### 🎯 PURPOSE
-The `image-popup` shared module provides reusable UI components and utilities across the frontend.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **image-popup** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Shared - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  image_popup[📁 image-popup]
-  image_popup --> image_popup_image_popup_component_html(image-popup.component.html)
-  image_popup --> image_popup_image_popup_component_ts(image-popup.component.ts)
+  Root["📁 image-popup"]
+  Root --> imagepopupcomponenthtml["📄 image-popup.component.html"]
+  Root --> imagepopupcomponentts["📄 image-popup.component.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `image-popup.component.html` | `html` | UI template and styling. | None |
-| `image-popup.component.ts` | `ts` | UI component logic and rendering. | @angular |
+| `image-popup.component.html` | Template | Visual layout and structural HTML. | N/A |
+| `image-popup.component.ts` | Component | UI rendering and component-level state. | @angular |
 
-### 🔗 DEPENDENCIES
-- `@angular/common`
+
+## 🔗 Dependencies
 - `@angular/core`
+- `@angular/common`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate image-popup into your refined workflows:
-import { /* exported members */ } from '@path/to/image-popup';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './image-popup.component';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

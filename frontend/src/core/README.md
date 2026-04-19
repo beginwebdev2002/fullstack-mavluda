@@ -1,29 +1,29 @@
-# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [core](/frontend/src/core)
+# 🧠 core
 
-## 🏷️ 📁 Core
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core)
 
-### 🎯 PURPOSE
-The `core` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **core** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  core[📁 core]
-  core --> core_constants[📁 constants]
-  core --> core_guards[📁 guards]
-  core --> core_interceptors[📁 interceptors]
+  Root["🧠 core"]
+  Root --> constants["📁 constants"]
+  Root --> guards["📁 guards"]
+  Root --> interceptors["📁 interceptors"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| (No files) | - | - | - |
+| _No matching files_ | - | - | - |
 
-### 🔗 DEPENDENCIES
-- `None`
 
-### 🛠️ USAGE
-```typescript
-// Seamlessly integrate core into your refined workflows:
-import { /* exported members */ } from '@path/to/core';
+## 🔗 Dependencies
+- _No external or internal dependencies detected._
+
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or configuration hub.
 ```

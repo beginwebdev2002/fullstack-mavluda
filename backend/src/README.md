@@ -1,47 +1,56 @@
-# [root](/) / [backend](/backend) / [src](/backend/src)
+# 💻 src
 
-## 🏷️ 📁 Src
+[Root](/.) > [backend](/backend) > [src](/backend/src)
 
-### 🎯 PURPOSE
-The `src` directory provides core backend services and configuration.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **src** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  src[📁 src]
-  src --> src_common[📁 common]
-  src --> src_modules[📁 modules]
-  src --> src_app_controller_spec_ts(app.controller.spec.ts)
-  src --> src_app_controller_ts(app.controller.ts)
-  src --> src_app_module_ts(app.module.ts)
-  src --> src_app_service_ts(app.service.ts)
-  src --> src_main_ts(main.ts)
+  Root["💻 src"]
+  Root --> common["📁 common"]
+  Root --> modules["📁 modules"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.controller.spec.ts` | `ts` | Handles incoming HTTP requests. | @nestjs |
-| `app.controller.ts` | `ts` | Handles incoming HTTP requests. | @nestjs |
-| `app.module.ts` | `ts` | Module configuration and provider registration. | @nestjs, @modules |
-| `app.service.ts` | `ts` | Business logic and service layer. | @nestjs |
-| `main.ts` | `ts` | Core logic implementation. | @nestjs |
+| `app.controller.spec.ts` | Test | Ensures code quality and regression prevention. | @nestjs |
+| `app.controller.ts` | Controller | Request handling and routing. | @nestjs |
+| `app.module.ts` | Module | Core logic and utilities for this domain. | @nestjs, @modules |
+| `app.service.ts` | Service | Business logic and state management. | @nestjs |
+| `main.ts` | File | Core logic and utilities for this domain. | @nestjs |
 
-### 🔗 DEPENDENCIES
+
+## 🔗 Dependencies
+- `@nestjs/testing`
+- `./app.controller`
+- `./app.service`
+- `@nestjs/common`
+- `@nestjs/serve-static`
+- `path`
 - `./common/config/app-config.module`
 - `./common/database/database.module`
+- `@modules/user`
 - `@modules/admin-settings`
+- `@modules/veil`
+- `@modules/treatments`
+- `@modules/gallery`
 - `@modules/auth`
+- `@modules/payment`
 - `@modules/booking`
 - `@modules/inventory`
 - `@modules/partnership`
-- `@modules/veil`
+- `@nestjs/core`
 - `@nestjs/config`
-- `@nestjs/testing`
-- `...`
+- `./app.module`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate src into your refined workflows:
-import { /* exported members */ } from '@path/to/src';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './app.controller.spec';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```
