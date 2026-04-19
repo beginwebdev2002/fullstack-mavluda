@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [shared](/frontend/src/shared) / [ui](/frontend/src/shared/ui) / [list-view](/frontend/src/shared/ui/list-view)
 
-## 🏷️ 📁 List-view
+## 🏷️ 📁 List-view (Shared Layer)
 
 ### 🎯 PURPOSE
-The `list-view` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the list-view logic to ensure a seamless and premium experience.
-
-This directory resides within the **Shared** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `list-view` shared module provides reusable UI components and utilities across the frontend.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

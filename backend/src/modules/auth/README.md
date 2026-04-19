@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Auth
 
 ### 🎯 PURPOSE
-The `auth` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the auth logic to ensure a seamless and premium experience.
+The `auth` backend module encapsulates the business logic, presentation, and data access for auth.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -23,23 +23,23 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `auth.controller.ts` | `ts` | Handles incoming HTTP requests. | @nestjs, @common |
-| `auth.module.ts` | `ts` | Module configuration and provider registration. | @modules, @nestjs, @common |
-| `auth.service.ts` | `ts` | Business logic and service layer. | @modules, @nestjs |
+| `auth.module.ts` | `ts` | Module configuration and provider registration. | @nestjs, @modules, @common |
+| `auth.service.ts` | `ts` | Business logic and service layer. | @nestjs, @modules |
 | `index.ts` | `ts` | Core logic implementation. | None |
-| `telegram-auth.service.ts` | `ts` | Business logic and service layer. | @modules, @nestjs, @common |
+| `telegram-auth.service.ts` | `ts` | Business logic and service layer. | @nestjs, @common, @modules |
 
 ### 🔗 DEPENDENCIES
 - `./auth.controller`
 - `./auth.module`
-- `./auth.service`
-- `./dto/login.dto`
 - `./dto/register.dto`
-- `./infrastructure/jwt.strategy`
-- `./interfaces/auth-response.interface`
 - `./interfaces/jwt-payload.interface`
 - `./telegram-auth.service`
-- `@common/config/app-config.module`
-- *...and more.*
+- `@modules/user`
+- `@nestjs/common`
+- `@nestjs/jwt`
+- `bcrypt`
+- `crypto`
+- `...`
 
 ### 🛠️ USAGE
 ```typescript

@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [gallery](/frontend/src/pages/gallery)
 
-## 🏷️ 📁 Gallery
+## 🏷️ 📁 Gallery (Page Layer)
 
 ### 🎯 PURPOSE
-The `gallery` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the gallery logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `gallery` page component orchestrates the UI layer for the gallery feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -23,12 +21,11 @@ graph TD
 |---|---|---|---|
 | `gallery.component.html` | `html` | UI template and styling. | None |
 | `gallery.component.scss` | `scss` | UI template and styling. | None |
-| `gallery.component.ts` | `ts` | UI component logic and rendering. | @environments, @angular, @entities, @shared |
+| `gallery.component.ts` | `ts` | UI component logic and rendering. | @angular, @entities, @shared, @environments |
 | `index.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
 - `./gallery.component`
-- `./ui/gallery-form/gallery-form.component`
 - `@angular/common`
 - `@angular/core`
 - `@angular/forms`
@@ -37,7 +34,8 @@ graph TD
 - `@shared/lib`
 - `@shared/lib/object`
 - `@shared/models`
-- *...and more.*
+- `@shared/ui`
+- `...`
 
 ### 🛠️ USAGE
 ```typescript

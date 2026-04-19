@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [admin-settings](/frontend/src/entities/admin-settings)
 
-## 🏷️ 📁 Admin-settings
+## 🏷️ 📁 Admin-settings (Entity Layer)
 
 ### 🎯 PURPOSE
-The `admin-settings` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the admin-settings logic to ensure a seamless and premium experience.
-
-This directory resides within the **Entities** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `admin-settings` entity defines the data models and core business logic for the admin-settings domain within the frontend.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

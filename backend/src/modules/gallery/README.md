@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Gallery
 
 ### 🎯 PURPOSE
-The `gallery` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the gallery logic to ensure a seamless and premium experience.
+The `gallery` backend module encapsulates the business logic, presentation, and data access for gallery.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

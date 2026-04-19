@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [veils-catalog](/frontend/src/pages/veils-catalog)
 
-## 🏷️ 📁 Veils-catalog
+## 🏷️ 📁 Veils-catalog (Page Layer)
 
 ### 🎯 PURPOSE
-The `veils-catalog` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veils-catalog logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `veils-catalog` page component orchestrates the UI layer for the veils-catalog feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

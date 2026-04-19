@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [treatments](/frontend/src/pages/treatments) / [components](/frontend/src/pages/treatments/components)
 
-## 🏷️ 📁 Components
+## 🏷️ 📁 Components (Page Layer)
 
 ### 🎯 PURPOSE
-The `components` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the components logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `components` page component orchestrates the UI layer for the components feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -17,10 +15,10 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files* | `-` | *Directory is strictly structural.* | `-` |
+| (No files) | - | - | - |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

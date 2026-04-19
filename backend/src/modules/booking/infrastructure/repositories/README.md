@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Repositories
 
 ### 🎯 PURPOSE
-The `repositories` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the repositories logic to ensure a seamless and premium experience.
+The `repositories` backend module encapsulates the business logic, presentation, and data access for repositories.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

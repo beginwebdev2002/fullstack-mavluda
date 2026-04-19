@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Backend
 
 ### 🎯 PURPOSE
-The `backend` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the backend logic to ensure a seamless and premium experience.
+The root directory contains the full-stack Mavluda Beauty application, divided into frontend and backend.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [shared](/frontend/src/shared) / [services](/frontend/src/shared/services)
 
-## 🏷️ 📁 Services
+## 🏷️ 📁 Services (Shared Layer)
 
 ### 🎯 PURPOSE
-The `services` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the services logic to ensure a seamless and premium experience.
-
-This directory resides within the **Shared** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `services` shared module provides reusable UI components and utilities across the frontend.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -25,10 +23,9 @@ graph TD
 | `error.service.ts` | `ts` | Business logic and service layer. | @angular |
 | `image.service.ts` | `ts` | Business logic and service layer. | @angular |
 | `index.ts` | `ts` | Core logic implementation. | None |
-| `telegram.service.ts` | `ts` | Business logic and service layer. | @src, @angular |
+| `telegram.service.ts` | `ts` | Business logic and service layer. | @angular, @src |
 
 ### 🔗 DEPENDENCIES
-- `./auth.service`
 - `./error.service`
 - `./image.service`
 - `./telegram.service`
@@ -38,7 +35,8 @@ graph TD
 - `@core/constants`
 - `@shared/models`
 - `@src/types/telegram`
-- *...and more.*
+- `rxjs`
+- `...`
 
 ### 🛠️ USAGE
 ```typescript

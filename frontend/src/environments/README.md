@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Environments
 
 ### 🎯 PURPOSE
-The `environments` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the environments logic to ensure a seamless and premium experience.
+The `environments` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -20,7 +20,7 @@ graph TD
 | `environment.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [veil](/frontend/src/pages/veil)
 
-## 🏷️ 📁 Veil
+## 🏷️ 📁 Veil (Page Layer)
 
 ### 🎯 PURPOSE
-The `veil` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `veil` page component orchestrates the UI layer for the veil feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -24,7 +22,7 @@ graph TD
 | `index.ts` | `ts` | Core logic implementation. | None |
 | `veil.component.html` | `html` | UI template and styling. | None |
 | `veil.component.scss` | `scss` | UI template and styling. | None |
-| `veil.component.ts` | `ts` | UI component logic and rendering. | @features, @environments, @angular, @entities, @shared |
+| `veil.component.ts` | `ts` | UI component logic and rendering. | @angular, @environments, @entities, @features, @shared |
 
 ### 🔗 DEPENDENCIES
 - `./ui/veil-form/veil-form.component`

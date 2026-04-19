@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Frontend
 
 ### 🎯 PURPOSE
-The `frontend` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the frontend logic to ensure a seamless and premium experience.
+The `frontend` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -24,14 +24,14 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `angular.json` | `json` | Configuration and foundational asset. | None |
+| `angular.json` | `json` | Core logic or foundational asset for this directory. | None |
 | `index.html` | `html` | UI template and styling. | None |
-| `index.tsx` | `tsx` | Configuration and foundational asset. | @angular |
+| `index.tsx` | `tsx` | Core logic or foundational asset for this directory. | @angular |
 | `leaflet.css` | `css` | UI template and styling. | None |
-| `metadata.json` | `json` | Configuration and foundational asset. | None |
-| `package-lock.json` | `json` | Configuration and foundational asset. | None |
-| `package.json` | `json` | Configuration and foundational asset. | None |
-| `tsconfig.json` | `json` | Configuration and foundational asset. | None |
+| `metadata.json` | `json` | Core logic or foundational asset for this directory. | None |
+| `package-lock.json` | `json` | Core logic or foundational asset for this directory. | None |
+| `package.json` | `json` | Core logic or foundational asset for this directory. | None |
+| `tsconfig.json` | `json` | Configuration settings and environment setup. | None |
 
 ### 🔗 DEPENDENCIES
 - `./src/app.component`

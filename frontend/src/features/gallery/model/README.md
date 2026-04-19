@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [features](/frontend/src/features) / [gallery](/frontend/src/features/gallery) / [model](/frontend/src/features/gallery/model)
 
-## 🏷️ 📁 Model
+## 🏷️ 📁 Model (Feature Layer)
 
 ### 🎯 PURPOSE
-The `model` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the model logic to ensure a seamless and premium experience.
-
-This directory resides within the **Features** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `model` feature implements specific user interactions and workflows for model.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

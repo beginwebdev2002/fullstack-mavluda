@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [auth](/frontend/src/pages/auth)
 
-## 🏷️ 📁 Auth
+## 🏷️ 📁 Auth (Page Layer)
 
 ### 🎯 PURPOSE
-The `auth` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the auth logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `auth` page component orchestrates the UI layer for the auth feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

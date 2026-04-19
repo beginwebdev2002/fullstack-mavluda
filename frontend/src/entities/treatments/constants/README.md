@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [treatments](/frontend/src/entities/treatments) / [constants](/frontend/src/entities/treatments/constants)
 
-## 🏷️ 📁 Constants
+## 🏷️ 📁 Constants (Entity Layer)
 
 ### 🎯 PURPOSE
-The `constants` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the constants logic to ensure a seamless and premium experience.
-
-This directory resides within the **Entities** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `constants` entity defines the data models and core business logic for the constants domain within the frontend.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -20,7 +18,7 @@ graph TD
 | `treatments.constants.ts` | `ts` | Core logic implementation. | None |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

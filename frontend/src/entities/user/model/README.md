@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [user](/frontend/src/entities/user) / [model](/frontend/src/entities/user/model)
 
-## 🏷️ 📁 Model
+## 🏷️ 📁 Model (Entity Layer)
 
 ### 🎯 PURPOSE
-The `model` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the model logic to ensure a seamless and premium experience.
-
-This directory resides within the **Entities** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `model` entity defines the data models and core business logic for the model domain within the frontend.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -20,7 +18,7 @@ graph TD
 | `user.model.ts` | `ts` | Data transfer objects and models. | None |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

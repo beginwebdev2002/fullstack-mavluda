@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [user-home](/frontend/src/pages/user-home)
 
-## 🏷️ 📁 User-home
+## 🏷️ 📁 User-home (Page Layer)
 
 ### 🎯 PURPOSE
-The `user-home` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the user-home logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `user-home` page component orchestrates the UI layer for the user-home feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

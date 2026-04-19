@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Strategies
 
 ### 🎯 PURPOSE
-The `strategies` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the strategies logic to ensure a seamless and premium experience.
+The `strategies` backend module encapsulates the business logic, presentation, and data access for strategies.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

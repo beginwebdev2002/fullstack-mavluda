@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [veil](/frontend/src/pages/veil) / [ui](/frontend/src/pages/veil/ui) / [veil-form](/frontend/src/pages/veil/ui/veil-form)
 
-## 🏷️ 📁 Veil-form
+## 🏷️ 📁 Veil-form (Page Layer)
 
 ### 🎯 PURPOSE
-The `veil-form` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil-form logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `veil-form` page component orchestrates the UI layer for the veil-form feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [shared](/frontend/src/shared) / [ui](/frontend/src/shared/ui) / [global-error](/frontend/src/shared/ui/global-error)
 
-## 🏷️ 📁 Global-error
+## 🏷️ 📁 Global-error (Shared Layer)
 
 ### 🎯 PURPOSE
-The `global-error` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the global-error logic to ensure a seamless and premium experience.
-
-This directory resides within the **Shared** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `global-error` shared module provides reusable UI components and utilities across the frontend.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

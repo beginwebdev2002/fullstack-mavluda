@@ -1,38 +1,35 @@
 # [root](/)
 
-## 🏷️ 📁 Root
+## 🏷️ 📁 .
 
 ### 🎯 PURPOSE
-The `root` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the root logic to ensure a seamless and premium experience.
+The `.` directory is a foundational part of the Mavluda Beauty ecosystem.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  root[📁 root]
-  root --> root_backend[📁 backend]
-  root --> root_frontend[📁 frontend]
-  root --> root__env(.env)
-  root --> root__gitignore(.gitignore)
-  root --> root__gitignore_append(.gitignore_append)
-  root --> root_GEMINI_md(GEMINI.md)
-  root --> root_generate_readmes_py(generate_readmes.py)
+  _[📁 .]
+  _ --> __backend[📁 backend]
+  _ --> __frontend[📁 frontend]
+  _ --> ___env(.env)
+  _ --> ___gitignore(.gitignore)
+  _ --> __GEMINI_md(GEMINI.md)
+  _ --> __generate_readmes_py(generate_readmes.py)
 ```
 
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `.env` | `env` | Configuration and foundational asset. | None |
-| `.gitignore` | `gitignore` | Configuration and foundational asset. | None |
-| `.gitignore_append` | `gitignore_append` | Configuration and foundational asset. | None |
-| `GEMINI.md` | `md` | Configuration and foundational asset. | None |
-| `generate_readmes.py` | `py` | Configuration and foundational asset. | @path |
+| `.env` | `env` | Core logic or foundational asset for this directory. | None |
+| `.gitignore` | `gitignore` | Core logic or foundational asset for this directory. | None |
+| `GEMINI.md` | `md` | Core logic or foundational asset for this directory. | None |
+| `generate_readmes.py` | `py` | Core logic or foundational asset for this directory. | @path |
 
 ### 🔗 DEPENDENCIES
-- `...`
 - `@path/to/{dirname}`
 
 ### 🛠️ USAGE
 ```typescript
-// Seamlessly integrate root into your refined workflows:
-import { /* exported members */ } from '@path/to/root';
+// Seamlessly integrate . into your refined workflows:
+import { /* exported members */ } from '@path/to/.';
 ```

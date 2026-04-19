@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Src
 
 ### 🎯 PURPOSE
-The `src` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the src logic to ensure a seamless and premium experience.
+The `src` directory provides core backend services and configuration.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -23,22 +23,22 @@ graph TD
 |---|---|---|---|
 | `app.controller.spec.ts` | `ts` | Handles incoming HTTP requests. | @nestjs |
 | `app.controller.ts` | `ts` | Handles incoming HTTP requests. | @nestjs |
-| `app.module.ts` | `ts` | Module configuration and provider registration. | @modules, @nestjs |
+| `app.module.ts` | `ts` | Module configuration and provider registration. | @nestjs, @modules |
 | `app.service.ts` | `ts` | Business logic and service layer. | @nestjs |
 | `main.ts` | `ts` | Core logic implementation. | @nestjs |
 
 ### 🔗 DEPENDENCIES
-- `./app.controller`
-- `./app.module`
-- `./app.service`
 - `./common/config/app-config.module`
 - `./common/database/database.module`
 - `@modules/admin-settings`
 - `@modules/auth`
 - `@modules/booking`
-- `@modules/gallery`
 - `@modules/inventory`
-- *...and more.*
+- `@modules/partnership`
+- `@modules/veil`
+- `@nestjs/config`
+- `@nestjs/testing`
+- `...`
 
 ### 🛠️ USAGE
 ```typescript

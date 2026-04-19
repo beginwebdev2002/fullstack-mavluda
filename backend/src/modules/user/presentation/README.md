@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Presentation
 
 ### 🎯 PURPOSE
-The `presentation` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the presentation logic to ensure a seamless and premium experience.
+The `presentation` backend module encapsulates the business logic, presentation, and data access for presentation.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -16,7 +16,7 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.controller.ts` | `ts` | Handles incoming HTTP requests. | @modules, @nestjs, @common |
+| `user.controller.ts` | `ts` | Handles incoming HTTP requests. | @nestjs, @modules, @common |
 
 ### 🔗 DEPENDENCIES
 - `../application/user.service`

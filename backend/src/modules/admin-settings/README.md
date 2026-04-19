@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Admin-settings
 
 ### 🎯 PURPOSE
-The `admin-settings` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the admin-settings logic to ensure a seamless and premium experience.
+The `admin-settings` backend module encapsulates the business logic, presentation, and data access for admin-settings.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

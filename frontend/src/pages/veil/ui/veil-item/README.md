@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [veil](/frontend/src/pages/veil) / [ui](/frontend/src/pages/veil/ui) / [veil-item](/frontend/src/pages/veil/ui/veil-item)
 
-## 🏷️ 📁 Veil-item
+## 🏷️ 📁 Veil-item (Page Layer)
 
 ### 🎯 PURPOSE
-The `veil-item` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the veil-item logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `veil-item` page component orchestrates the UI layer for the veil-item feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

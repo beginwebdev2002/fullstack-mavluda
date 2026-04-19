@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [shared](/frontend/src/shared) / [ui](/frontend/src/shared/ui) / [image-popup](/frontend/src/shared/ui/image-popup)
 
-## 🏷️ 📁 Image-popup
+## 🏷️ 📁 Image-popup (Shared Layer)
 
 ### 🎯 PURPOSE
-The `image-popup` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the image-popup logic to ensure a seamless and premium experience.
-
-This directory resides within the **Shared** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `image-popup` shared module provides reusable UI components and utilities across the frontend.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [gallery](/frontend/src/pages/gallery) / [ui](/frontend/src/pages/gallery/ui) / [gallery-form](/frontend/src/pages/gallery/ui/gallery-form)
 
-## 🏷️ 📁 Gallery-form
+## 🏷️ 📁 Gallery-form (Page Layer)
 
 ### 🎯 PURPOSE
-The `gallery-form` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the gallery-form logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `gallery-form` page component orchestrates the UI layer for the gallery-form feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -19,7 +17,7 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `gallery-form.component.html` | `html` | UI template and styling. | None |
-| `gallery-form.component.ts` | `ts` | UI component logic and rendering. | @environments, @angular, @features, @shared |
+| `gallery-form.component.ts` | `ts` | UI component logic and rendering. | @angular, @shared, @features, @environments |
 
 ### 🔗 DEPENDENCIES
 - `@angular/common`

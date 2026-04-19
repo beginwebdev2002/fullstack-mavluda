@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Src
 
 ### 🎯 PURPOSE
-The `src` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the src logic to ensure a seamless and premium experience.
+The `src` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -32,16 +32,20 @@ graph TD
 | `app.component.html` | `html` | UI template and styling. | None |
 | `app.component.scss` | `scss` | UI template and styling. | None |
 | `app.component.ts` | `ts` | UI component logic and rendering. | @angular, @shared |
-| `app.routes.ts` | `ts` | Core logic implementation. | @pages, @angular, @widgets |
+| `app.routes.ts` | `ts` | Core logic implementation. | @angular, @pages, @widgets |
 
 ### 🔗 DEPENDENCIES
-- `@angular/common`
-- `@angular/core`
 - `@angular/router`
-- `@pages/auth`
+- `@pages/about`
+- `@pages/clients`
+- `@pages/portfolio`
+- `@pages/settings`
+- `@pages/treatments`
+- `@pages/treatments-catalog`
+- `@pages/veils-catalog`
 - `@shared/services`
-- `@shared/ui`
 - `@widgets/layouts`
+- `...`
 
 ### 🛠️ USAGE
 ```typescript

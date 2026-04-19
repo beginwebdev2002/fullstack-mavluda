@@ -1,11 +1,9 @@
 # [root](/) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [treatments](/frontend/src/pages/treatments)
 
-## 🏷️ 📁 Treatments
+## 🏷️ 📁 Treatments (Page Layer)
 
 ### 🎯 PURPOSE
-The `treatments` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the treatments logic to ensure a seamless and premium experience.
-
-This directory resides within the **Pages** layer of our Feature Sliced Design (FSD) architecture, strictly adhering to Mavluda Beauty's robust separation of concerns.
+The `treatments` page component orchestrates the UI layer for the treatments feature in the Mavluda Beauty frontend application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -24,7 +22,7 @@ graph TD
 | `index.ts` | `ts` | Core logic implementation. | None |
 | `treatments.component.html` | `html` | UI template and styling. | None |
 | `treatments.component.scss` | `scss` | UI template and styling. | None |
-| `treatments.component.ts` | `ts` | UI component logic and rendering. | @features, @environments, @angular, @entities, @shared |
+| `treatments.component.ts` | `ts` | UI component logic and rendering. | @angular, @features, @entities, @shared, @environments |
 
 ### 🔗 DEPENDENCIES
 - `./components/treatment-form/treatment-form.component`

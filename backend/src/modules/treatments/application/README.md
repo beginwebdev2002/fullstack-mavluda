@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Application
 
 ### 🎯 PURPOSE
-The `application` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the application logic to ensure a seamless and premium experience.
+The `application` backend module encapsulates the business logic, presentation, and data access for application.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

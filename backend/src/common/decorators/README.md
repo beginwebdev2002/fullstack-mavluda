@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Decorators
 
 ### 🎯 PURPOSE
-The `decorators` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the decorators logic to ensure a seamless and premium experience.
+The `decorators` directory provides core backend services and configuration.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid

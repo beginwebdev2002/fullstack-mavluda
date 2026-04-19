@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Interceptors
 
 ### 🎯 PURPOSE
-The `interceptors` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the interceptors logic to ensure a seamless and premium experience.
+The `interceptors` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
