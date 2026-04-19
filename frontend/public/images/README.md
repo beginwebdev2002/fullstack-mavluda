@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Images
 
 ### 🎯 PURPOSE
-The `images` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the images logic to ensure a seamless and premium experience.
+The `images` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -16,11 +16,11 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments-add-img.png` | `png` | Configuration and foundational asset. | None |
-| `treatments-no-img.png` | `png` | Configuration and foundational asset. | None |
+| `treatments-add-img.png` | `png` | Core logic or foundational asset for this directory. | None |
+| `treatments-no-img.png` | `png` | Core logic or foundational asset for this directory. | None |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript

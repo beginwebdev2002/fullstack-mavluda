@@ -3,7 +3,7 @@
 ## 🏷️ 📁 Public
 
 ### 🎯 PURPOSE
-The `public` directory forms a critical foundation within the Mavluda Beauty ecosystem, meticulously orchestrating the public logic to ensure a seamless and premium experience.
+The `public` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
 
 ### 🏗️ ARCHITECTURE
 ```mermaid
@@ -15,10 +15,10 @@ graph TD
 ### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files* | `-` | *Directory is strictly structural.* | `-` |
+| (No files) | - | - | - |
 
 ### 🔗 DEPENDENCIES
-- *Self-contained premium module.*
+- `None`
 
 ### 🛠️ USAGE
 ```typescript
