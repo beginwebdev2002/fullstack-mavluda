@@ -17,7 +17,7 @@
   <!-- Filter Bar -->
   <div class="sticky top-20 z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md py-6 mb-12 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
     <div class="flex flex-wrap justify-center gap-4 px-4">
-      @for (filter of filters; track filter) {
+      @for (filter of filters(); track filter) {
         <button 
           (click)="setFilter(filter)"
           class="px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all"
@@ -33,47 +33,57 @@
 
   <!-- Main Grid -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-      @for (gown of filteredGowns(); track gown.id; let i = $index) {
-        <div class="group cursor-pointer reveal-item" [style.animation-delay.ms]="i * 100">
-          <div class="relative overflow-hidden aspect-[3/4] mb-6 cursor-zoom-in" (click)="openImageModal(gown.image); $event.stopPropagation()">
-            @if (gown.isNew) {
-              <div class="absolute top-4 right-4 z-10 bg-primary text-black text-[10px] font-bold px-2 py-1 uppercase tracking-wider" i18n="@@catalogLabelNew">New Arrival</div>
-            }
-            @if (gown.isBestSeller) {
-              <div class="absolute top-4 right-4 z-10 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider" i18n="@@catalogLabelBestSeller">Best Seller</div>
-            }
+
+    <!-- Loading state -->
+    @if (veils().length === 0) {
+      <div class="flex flex-col items-center justify-center py-32 text-gray-400">
+        <span class="material-symbols-outlined text-6xl mb-4 animate-pulse">checkroom</span>
+        <p class="text-lg font-light tracking-wide" i18n="@@catalogNoGowns">No gowns available yet</p>
+      </div>
+    } @else {
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+        @for (veil of filteredGowns(); track veil.id; let i = $index) {
+          <div class="group cursor-pointer reveal-item" [style.animation-delay.ms]="i * 100">
+            <div class="relative overflow-hidden aspect-[3/4] mb-6 cursor-zoom-in" (click)="openImageModal(veil.image); $event.stopPropagation()">
+
+              <!-- Stock badge -->
+              @if (!veil.isAvailable || veil.stock === 0) {
+                <div class="absolute top-4 left-4 z-10 bg-gray-800/80 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider" i18n="@@catalogLabelOutOfStock">Out of Stock</div>
+              }
+
+              <!-- Silhouette badge -->
+              @if (veil.silhouette) {
+                <div class="absolute top-4 right-4 z-10 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider">{{ veil.silhouette }}</div>
+              }
+              
+              <img 
+                [src]="getImageUrl(veil.image)" 
+                [alt]="veil.name"
+                class="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0"
+                loading="lazy"
+              />
+              
+              <!-- Zoom Overlay -->
+              <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                 <span class="material-symbols-outlined text-white text-4xl drop-shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300 p-4 bg-white/10 rounded-full backdrop-blur-sm">zoom_in_map</span>
+              </div>
+            </div>
             
-            <img 
-              [ngSrc]="gown.image" 
-              [alt]="gown.name" 
-              fill
-              class="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0"
-            />
-            
-            <!-- Zoom Overlay -->
-            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-               <span class="material-symbols-outlined text-white text-4xl drop-shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300 p-4 bg-white/10 rounded-full backdrop-blur-sm">zoom_in_map</span>
+            <div class="flex flex-col items-center text-center">
+              <h3 class="font-serif text-2xl text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">{{ veil.name }}</h3>
+              <div class="w-12 h-px bg-primary/30 mb-3"></div>
+              @if (veil.rentalPrice) {
+                <p class="text-gray-400 dark:text-gray-500 font-light text-xs mb-1 tracking-wide">
+                  <ng-container i18n="@@catalogRental">Rental</ng-container>: {{ veil.rentalPrice | number }} TJS
+                </p>
+              }
+              <p class="text-gray-500 dark:text-gray-400 font-light mb-4 text-sm tracking-wide">{{ veil.price | number }} TJS</p>
+              <a class="text-xs font-bold uppercase tracking-widest border-b border-primary pb-1 hover:text-primary transition-colors" i18n="@@catalogViewDetails">View Details</a>
             </div>
           </div>
-          
-          <div class="flex flex-col items-center text-center">
-            <h3 class="font-serif text-2xl text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">{{ gown.name }}</h3>
-            <div class="w-12 h-px bg-primary/30 mb-3"></div>
-            <p class="text-gray-500 dark:text-gray-400 font-light mb-4 text-sm tracking-wide">{{ gown.price | number }} TJS</p>
-            <a class="text-xs font-bold uppercase tracking-widest border-b border-primary pb-1 hover:text-primary transition-colors" i18n="@@catalogViewDetails">View Details</a>
-          </div>
-        </div>
-      }
-    </div>
-
-    <!-- Load More -->
-    <div class="mt-24 text-center">
-      <button class="inline-flex items-center gap-2 text-sm font-bold tracking-widest uppercase border border-gray-300 dark:border-gray-700 px-8 py-4 hover:border-primary hover:text-primary transition-all rounded-full group text-gray-600 dark:text-gray-300">
-        <span i18n="@@catalogLoadMore">Load More Gowns</span>
-        <span class="material-symbols-outlined text-lg group-hover:translate-y-1 transition-transform">expand_more</span>
-      </button>
-    </div>
+        }
+      </div>
+    }
   </main>
 
   <!-- Fixed Booking Button -->
@@ -92,4 +102,5 @@
   title="Mavluda Beauty • Bridal Collection"
   loadingText="Loading Asset"
   (close)="closeImageModal()"
-></app-image-popup>
+>
+</app-image-popup>

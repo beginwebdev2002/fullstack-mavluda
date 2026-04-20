@@ -6,72 +6,72 @@ import {
   inject,
   OnInit,
 } from "@angular/core";
-import { CommonModule, NgOptimizedImage } from "@angular/common";
+import { CommonModule } from "@angular/common";
 import { GalleryService } from "@entities/gallery";
-import { ImageCategory } from "@shared/models";
+import { AdminSettingsService } from "@entities/admin-settings";
+import { linkServerConvert } from "@shared/lib";
+import { environment } from "@environments/environment";
 
 @Component({
   selector: "app-portfolio-page",
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./portfolio.component.html",
   styleUrls: ["./portfolio.component.scss"],
 })
 export class PortfolioPageComponent implements OnInit {
   private galleryService = inject(GalleryService);
-
-  // Align filters with Gallery categories + 'All Works'
-  filters: (ImageCategory | "All Works")[] = [
-    "All Works",
-    "visage",
-    "medical spa",
-    "bridal veils",
-    "interior",
-    "product",
-  ];
-
-  // Let's reimplement filters to match Gallery
-  categoryFilters: string[] = [
-    "All Works",
-    "visage",
-    "medical spa",
-    "bridal veils",
-    "interior",
-    "product",
-  ];
-  activeFilter = signal("All Works");
+  private adminSettingsService = inject(AdminSettingsService);
+  private env = signal(environment);
 
   galleryImages = this.galleryService.images;
 
-  // Computed portfolio items from gallery images
-  portfolioItems = computed(() => {
-    return this.galleryImages().map((img) => ({
+  // Dynamic filters from AdminSettings + "All Works"
+  filters = computed<string[]>(() => {
+    const cats = this.adminSettingsService.settings()?.galleryCategories;
+    return ["All Works", ...(cats && cats.length > 0 ? cats : [])];
+  });
+
+  activeFilter = signal("All Works");
+
+  portfolioItems = computed(() =>
+    this.galleryImages().map((img) => ({
       id: img.id,
-      imageUrl: img.imageUrl,
+      imageUrl: this.getImageUrl(img.imageUrl),
       category: img.category,
       title: img.title,
-      description: img.alt || img.title, // Use alt or title as description
+      description: img.alt || img.title,
       statusTag: img.status === "published" ? "Available" : undefined,
-      aspectClass: this.getRandomAspect(img.id), // Deterministic random for layout
-      effects: "",
-    }));
-  });
+      aspectClass: this.getAspectClass(img.id ?? ""),
+    }))
+  );
 
   filteredItems = computed(() => {
     const filter = this.activeFilter();
-    if (filter === "All Works") {
-      return this.portfolioItems();
-    }
-    return this.portfolioItems().filter((item) => item.category === filter);
+    const items = this.portfolioItems();
+    return filter === "All Works"
+      ? items
+      : items.filter((item) => item.category === filter);
   });
 
   ngOnInit() {
+    if (!this.adminSettingsService.settings()) {
+      this.adminSettingsService.getSettings().subscribe();
+    }
     this.galleryService.getImages().subscribe();
   }
 
-  // Helper to give consistent aspect ratio based on ID
-  private getRandomAspect(id: string): string {
+  getImageUrl(path: string | undefined): string {
+    if (!path) return "assets/placeholder-gallery.png";
+    const isAbsolute =
+      path.startsWith("http") ||
+      path.startsWith("blob") ||
+      path.includes(this.env().apiUrl);
+    return isAbsolute ? path : linkServerConvert(path);
+  }
+
+  private getAspectClass(id: string): string {
     const hash = id
       .split("")
       .reduce((acc, char) => acc + char.charCodeAt(0), 0);
