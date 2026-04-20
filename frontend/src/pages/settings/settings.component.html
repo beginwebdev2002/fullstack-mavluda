@@ -1,5 +1,30 @@
 
 <div class="p-4 sm:p-8 max-w-6xl mx-auto animate-page-enter pb-20">
+
+  <!-- Save Status Toasts -->
+  @if (isSaving()) {
+    <div class="fixed top-6 right-6 z-50 flex items-center space-x-3 bg-white border border-gray-200 rounded-xl shadow-lg px-5 py-3 animate-page-enter">
+      <svg class="animate-spin h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+      </svg>
+      <span class="text-sm font-medium text-gray-700">Saving...</span>
+    </div>
+  }
+  @if (saveSuccess()) {
+    <div class="fixed top-6 right-6 z-50 flex items-center space-x-3 bg-green-50 border border-green-200 rounded-xl shadow-lg px-5 py-3 animate-page-enter">
+      <span class="material-symbols-outlined text-green-600 text-xl">check_circle</span>
+      <span class="text-sm font-medium text-green-700">Saved successfully!</span>
+    </div>
+  }
+  @if (saveError()) {
+    <div class="fixed top-6 right-6 z-50 flex items-center space-x-3 bg-red-50 border border-red-200 rounded-xl shadow-lg px-5 py-3 animate-page-enter">
+      <span class="material-symbols-outlined text-red-500 text-xl">error</span>
+      <span class="text-sm font-medium text-red-700">{{ saveError() }}</span>
+    </div>
+  }
+
+
   <!-- Page Header -->
   <div class="mb-8">
       <h1 class="font-serif text-4xl text-gray-900 mb-2" i18n="@@settingsTitle">Management of 'About' & Core Info</h1>
@@ -77,11 +102,13 @@
         [veilFabrics]="veilFabrics()"
         [veilTrainLengths]="veilTrainLengths()"
         [veilNecklines]="veilNecklines()"
+        [isSaving]="isSaving()"
         (addItem)="addItem($event)"
         (updateItem)="updateItem($event.type, $event.index, $event.value)"
         (removeItem)="removeItem($event.type, $event.index)"
         (save)="saveSelectionLists()"
       />
+
     }
 
   </div>

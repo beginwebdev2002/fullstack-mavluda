@@ -19,7 +19,7 @@
   >
     <!-- Filters -->
     <div class="flex space-x-6 overflow-x-auto no-scrollbar w-full sm:w-auto grow">
-      @for (filter of filters; track filter) {
+      @for (filter of filters(); track filter) {
         <button
           (click)="setFilter(filter)"
           class="text-sm font-medium pb-3 transition-all duration-300 whitespace-nowrap relative"
@@ -151,6 +151,7 @@
 @if (isEditModalOpen()) {
   <app-treatment-form
     [treatment]="tempTreatment"
+    [categories]="treatmentCategories()"
     (save)="onSaveTreatment($event)"
     (cancel)="closeEditModal()"
   ></app-treatment-form>

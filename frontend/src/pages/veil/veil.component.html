@@ -1,14 +1,9 @@
 <!-- Main Page Content -->
 <div class="flex-1 overflow-y-auto p-8 custom-scrollbar animate-page-enter">
   <!-- Header Section -->
-  <div
-    class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4"
-  >
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
     <div>
-      <h1
-        class="text-4xl font-serif text-gray-900 mb-2"
-        i18n="@@veilAdminTitle"
-      >
+      <h1 class="text-4xl font-serif text-gray-900 mb-2" i18n="@@veilAdminTitle">
         Bridal Gown Collection
       </h1>
       <p class="text-gray-500 font-light text-lg" i18n="@@veilAdminSubtitle">
@@ -51,11 +46,28 @@
     </div>
   </div>
 
+  <!-- Filter Bar (dynamic from admin settings) -->
+  @if (filterList().length > 1) {
+    <div class="flex flex-wrap items-center gap-4 mb-8 border-b border-gray-200 pb-1">
+      @for (f of filterList(); track f) {
+        <button
+          (click)="activeFilter.set(f)"
+          class="pb-3 border-b-2 font-medium text-sm transition-colors"
+          [class]="activeFilter() === f
+            ? 'border-primary text-primary'
+            : 'border-transparent text-gray-500 hover:text-gray-700'"
+        >
+          {{ f }}
+        </button>
+      }
+    </div>
+  }
+
   <!-- Veil Content -->
   @if (viewMode() === 'grid') {
     <!-- Grid View -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      @for (veil of veils(); track veil.id; let i = $index) {
+      @for (veil of filteredVeils(); track veil.id; let i = $index) {
         <app-card-view
           [data]="veil"
           [config]="veilCardConfig"
@@ -71,7 +83,7 @@
     <!-- List View -->
     <div class="animate-page-enter">
       <app-list-view
-        [items]="veils()"
+        [items]="filteredVeils()"
         [columns]="columns()"
         (edit)="openEditModal($event)"
         (delete)="onDeleteCard($event.toString())"
@@ -98,6 +110,11 @@
 @if (isVeilFormOpen()) {
   <app-veil-form
     [veil]="editingVeil()"
+    [silhouettes]="veilSilhouettes()"
+    [necklines]="veilNecklines()"
+    [fabrics]="veilFabrics()"
+    [trainLengths]="veilTrainLengths()"
+    [categories]="veilCategories()"
     (save)="handleSave($event)"
     (cancel)="closeEditModal()"
   >
@@ -110,4 +127,5 @@
   title="Mavluda Beauty • Wedding Collection"
   loadingText="Loading Asset"
   (close)="closeImageModal()"
-></app-image-popup>
+>
+</app-image-popup>

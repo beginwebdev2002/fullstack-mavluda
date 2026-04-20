@@ -11,6 +11,7 @@ import { FormsModule } from "@angular/forms";
 import { TreatmentFormComponent } from "./components/treatment-form/treatment-form.component";
 import { TreatmentItem } from "@features/treatments";
 import { TreatmentsService } from "@entities/treatments";
+import { AdminSettingsService } from "@entities/admin-settings";
 import { ListViewComponent, ListViewColumn, CardViewComponent, CardViewConfig, ImagePopupComponent } from "@shared/ui";
 import { environment } from "@environments/environment";
 import { linkServerConvert } from "@shared/lib";
@@ -33,16 +34,20 @@ import { linkServerConvert } from "@shared/lib";
 })
 export class TreatmentsPageComponent implements OnInit {
   private treatmentsService = inject(TreatmentsService);
+  private adminSettingsService = inject(AdminSettingsService);
   env = signal(environment);
 
   treatments = this.treatmentsService.treatments;
 
-  filters = [
-    $localize`:@@filterAll:All`,
-    $localize`:@@filterInjectables:Injectables`,
-    $localize`:@@filterFacials:Facials`,
-    $localize`:@@filterLaser:Laser`,
-  ];
+  // Dynamic treatment categories from admin settings
+  treatmentCategories = computed<string[]>(() => {
+    const cats = this.adminSettingsService.settings()?.treatmentCategories;
+    return cats && cats.length > 0 ? cats : ['Injectables', 'Facials', 'Laser'];
+  });
+
+  // Filters = 'All' + dynamic categories
+  filters = computed<string[]>(() => ['All', ...this.treatmentCategories()]);
+
   activeFilter = signal("All");
   viewMode = signal<"list" | "card">("list");
 
@@ -88,6 +93,9 @@ export class TreatmentsPageComponent implements OnInit {
   selectedImage = signal<string | null>(null);
 
   ngOnInit() {
+    if (!this.adminSettingsService.settings()) {
+      this.adminSettingsService.getSettings().subscribe();
+    }
     this.treatmentsService.getTreatments().subscribe();
   }
 
@@ -96,10 +104,11 @@ export class TreatmentsPageComponent implements OnInit {
   }
 
   openAddModal() {
+    const defaultCat = this.treatmentCategories()[0] ?? 'Injectables';
     this.tempTreatment = {
       id: "",
       name: "",
-      category: "Injectables",
+      category: defaultCat,
       price: 0,
       duration: 0,
       active: true,

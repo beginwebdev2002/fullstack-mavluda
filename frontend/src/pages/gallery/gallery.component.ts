@@ -8,7 +8,8 @@ import {
 } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
-import { GalleryService, GALLERY_CATEGORIES, GalleryCategories } from "@entities/gallery";
+import { GalleryService, GalleryCategories } from "@entities/gallery";
+import { AdminSettingsService } from "@entities/admin-settings";
 import { Gallery, ImageCategory } from "@shared/models";
 import { GalleryFormComponent } from "./ui/gallery-form/gallery-form.component";
 import { ImagePopupComponent, ListViewComponent, ListViewColumn, CardViewComponent, CardViewConfig } from "@shared/ui";
@@ -26,6 +27,7 @@ import { environment } from "@environments/environment";
 })
 export class GalleryComponent implements OnInit {
   private galleryService = inject(GalleryService);
+  private adminSettingsService = inject(AdminSettingsService);
   env = signal(environment);
 
   isDragging = signal(false);
@@ -35,7 +37,14 @@ export class GalleryComponent implements OnInit {
 
   images = this.galleryService.images;
 
-  filters = signal<ImageCategory[]>(GALLERY_CATEGORIES);
+  // Dynamic categories from admin settings.
+  // Falls back to ['all'] if settings not loaded yet.
+  filters = computed<ImageCategory[]>(() => {
+    const settings = this.adminSettingsService.settings();
+    const cats = settings?.galleryCategories ?? [];
+    return ['all', ...cats] as ImageCategory[];
+  });
+
   activeFilter = signal<ImageCategory>(GalleryCategories.ALL);
 
   columns = signal<ListViewColumn[]>([
@@ -69,15 +78,20 @@ export class GalleryComponent implements OnInit {
   currentImage!: Gallery;
 
   ngOnInit() {
+    // Load settings if not yet cached
+    if (!this.adminSettingsService.settings()) {
+      this.adminSettingsService.getSettings().subscribe();
+    }
     this.galleryService.getImages().subscribe();
   }
 
   getEmptyImage(): Gallery {
+    const firstCat = this.filters().find(f => f !== 'all') ?? GalleryCategories.ALL;
     return {
       id: "",
       imageUrl: "",
       title: "",
-      category: GalleryCategories.VISAGE, // Default
+      category: firstCat,
       status: "draft",
       alt: "",
     };
@@ -89,7 +103,7 @@ export class GalleryComponent implements OnInit {
   }
 
   openModal(image: Gallery) {
-    this.currentImage = { ...image }; // Create a copy for editing
+    this.currentImage = { ...image };
     this.isModalOpen.set(true);
   }
 
@@ -104,12 +118,10 @@ export class GalleryComponent implements OnInit {
     const formData = excludeFormDataProperties(convertFormData(...args), ["id", "createdAt", "updatedAt"]);
 
     if (!image.id) {
-      // New image
       this.galleryService.createImage(formData).subscribe(() => {
         this.closeModal();
       });
     } else {
-      // Update existing
       this.galleryService
         .updateImage(image.id, formData)
         .subscribe(() => {
@@ -150,7 +162,6 @@ export class GalleryComponent implements OnInit {
     const files = event.dataTransfer?.files;
     if (files && files.length > 0) {
       console.log(`${files.length} files dropped`);
-      // Here you would handle the file upload logic
     }
   }
 }

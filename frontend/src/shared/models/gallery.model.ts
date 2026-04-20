@@ -1,11 +1,5 @@
 export type ImageStatus = "published" | "draft";
-export type ImageCategory =
-  | "all"
-  | "visage"
-  | "medical spa"
-  | "bridal veils"
-  | "interior"
-  | "product";
+export type ImageCategory = string;
 
 export interface Gallery {
   id?: string;

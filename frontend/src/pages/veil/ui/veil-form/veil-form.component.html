@@ -111,7 +111,7 @@
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               >
                 <option value="" disabled selected>Select category</option>
-                @for (category of categories; track category) {
+                @for (category of categories(); track category) {
                   <option [value]="category">{{ category }}</option>
                 }
               </select>
@@ -177,7 +177,7 @@
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               >
                 <option value="" disabled selected>Select silhouette</option>
-                @for (silhouette of silhouettes; track silhouette) {
+                @for (silhouette of silhouettes(); track silhouette) {
                   <option [value]="silhouette">{{ silhouette }}</option>
                 }
               </select>
@@ -191,7 +191,7 @@
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               >
                 <option value="" disabled selected>Select neckline</option>
-                @for (neckline of necklines; track neckline) {
+                @for (neckline of necklines(); track neckline) {
                   <option [value]="neckline">{{ neckline }}</option>
                 }
               </select>
@@ -208,7 +208,7 @@
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               >
                 <option value="" disabled selected>Select fabric</option>
-                @for (fabric of fabrics; track fabric) {
+                @for (fabric of fabrics(); track fabric) {
                   <option [value]="fabric">{{ fabric }}</option>
                 }
               </select>
@@ -222,7 +222,7 @@
                 class="block w-full rounded-lg border-gray-300 bg-gray-50 text-gray-900 focus:bg-white focus:border-gold focus:ring-gold sm:text-sm p-2.5 transition-all"
               >
                 <option value="" disabled selected>Select train length</option>
-                @for (trainLength of trainLengths; track trainLength) {
+                @for (trainLength of trainLengths(); track trainLength) {
                   <option [value]="trainLength">{{ trainLength }}</option>
                 }
               </select>

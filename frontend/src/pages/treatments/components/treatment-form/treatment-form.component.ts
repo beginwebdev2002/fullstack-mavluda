@@ -21,6 +21,8 @@ import { linkServerConvert } from "@shared/lib";
 })
 export class TreatmentFormComponent implements OnInit {
   treatment = input.required<TreatmentItem>();
+  // Dynamic category list from admin settings
+  categories = input<string[]>(['Injectables', 'Facials', 'Laser']);
 
   save = output<FormData>();
   cancel = output<void>();
@@ -54,8 +56,7 @@ export class TreatmentFormComponent implements OnInit {
 
   saveEdit() {
     const formData = new FormData();
-    console.log('treatments: ', this.tempTreatment());
-    
+
     Object.entries(this.tempTreatment()).forEach(([key, value]) => {
       if (key === "id" && value === "") return;
       if (value !== undefined && value !== null) {

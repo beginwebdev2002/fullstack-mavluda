@@ -16,8 +16,20 @@ export type SelectListType = 'gallery' | 'treatment' | 'silhouette' | 'fabric' |
           <span class="material-symbols-outlined text-primary mr-3">list_alt</span>
           <h4 class="font-serif text-xl font-semibold text-gray-900" i18n="@@settingsSectionSelects">Selection Lists</h4>
         </div>
-        <button (click)="save.emit()" class="flex items-center px-4 py-2 bg-primary hover:bg-primary-hover text-black rounded-lg text-sm font-medium transition-all shadow-md btn-primary-shimmer active:scale-[0.98]" i18n="@@settingsBtnSave">
-          Save Lists
+        <button 
+          (click)="save.emit()" 
+          [disabled]="isSaving()"
+          class="flex items-center space-x-2 px-4 py-2 bg-primary hover:bg-primary-hover text-black rounded-lg text-sm font-medium transition-all shadow-md btn-primary-shimmer active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed"
+        >
+          @if (isSaving()) {
+            <svg class="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+            </svg>
+            <span i18n="@@savingLabel">Saving...</span>
+          } @else {
+            <span i18n="@@settingsBtnSave">Save Lists</span>
+          }
         </button>
       </div>
       <div class="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -98,6 +110,7 @@ export class SelectsSettingsComponent {
   veilFabrics = input.required<string[]>();
   veilTrainLengths = input.required<string[]>();
   veilNecklines = input.required<string[]>();
+  isSaving = input<boolean>(false);
   
   addItem = output<SelectListType>();
   removeItem = output<{type: SelectListType, index: number}>();

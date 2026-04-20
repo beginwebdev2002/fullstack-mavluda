@@ -2,12 +2,14 @@ import { CommonModule } from "@angular/common";
 import {
   ChangeDetectionStrategy,
   Component,
+  computed,
   inject,
   OnInit,
   signal,
 } from "@angular/core";
 import { environment } from "@environments/environment";
 import { VeilService } from "@entities/veil";
+import { AdminSettingsService } from "@entities/admin-settings";
 import { Veil, veilFormData } from "@features/veil";
 import { convertFormData } from "@shared/lib";
 import { VeilFormComponent } from "./ui/veil-form/veil-form.component";
@@ -26,10 +28,29 @@ import { linkServerConvert } from "@shared/lib";
 })
 export class VeilPageComponent implements OnInit {
   private veilService = inject(VeilService);
+  private adminSettingsService = inject(AdminSettingsService);
   private formData = signal(new FormData());
   env = signal(environment);
 
   veils = this.veilService.veils;
+
+  // Dynamic select lists from admin settings
+  veilCategories = computed(() => this.adminSettingsService.settings()?.veilSilhouettes?.length
+    ? this.adminSettingsService.settings()!.veilSilhouettes
+    : ['Bridal', 'Evening', 'Accessories']
+  );
+  veilSilhouettes = computed(() => this.adminSettingsService.settings()?.veilSilhouettes ?? []);
+  veilNecklines = computed(() => this.adminSettingsService.settings()?.veilNecklines ?? []);
+  veilFabrics = computed(() => this.adminSettingsService.settings()?.veilFabrics ?? []);
+  veilTrainLengths = computed(() => this.adminSettingsService.settings()?.veilTrainLengths ?? []);
+
+  // Filter buttons use silhouette list + 'All' for now — business decision could be categories
+  filterList = computed(() => {
+    const settings = this.adminSettingsService.settings();
+    // For filtering we use a simple 'All' + silhouette categories
+    return ['All', ...(settings?.veilSilhouettes ?? [])];
+  });
+  activeFilter = signal('All');
 
   // Modal States
   isVeilFormOpen = signal(false);
@@ -62,10 +83,19 @@ export class VeilPageComponent implements OnInit {
     ]
   };
 
+  filteredVeils = computed(() => {
+    const filter = this.activeFilter();
+    if (filter === 'All') return this.veils();
+    return this.veils().filter(v => v.silhouette === filter || v.category === filter);
+  });
+
   // Image Preview State
   selectedImage = signal<string | null>(null);
 
   ngOnInit() {
+    if (!this.adminSettingsService.settings()) {
+      this.adminSettingsService.getSettings().subscribe();
+    }
     this.veilService.getVeils().subscribe();
   }
 
@@ -114,7 +144,6 @@ export class VeilPageComponent implements OnInit {
     }
   }
 
-  // Helper for image conversion in template
   getSafeImageUrl(path: string | undefined) {
     if (!path) return "assets/placeholder-veil.png";
     const isAbsolute = path.startsWith("http") || path.startsWith("blob") || path.includes(this.env().apiUrl);
@@ -127,7 +156,6 @@ export class VeilPageComponent implements OnInit {
 
   private updateVeil(data: Veil, file: File | null) {
     this.updateFormData(data, file);
-
     this.veilService
       .updateVeil(data.id, this.formData())
       .pipe(tap(() => this.closeEditModal()))

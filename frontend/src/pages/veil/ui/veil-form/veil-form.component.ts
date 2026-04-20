@@ -10,13 +10,6 @@ import {
 } from "@angular/core";
 import { form, FormField } from "@angular/forms/signals";
 import {
-  VEIL_CATEGORIES,
-  VEIL_FABRICS,
-  VEIL_NECKLINES,
-  VEIL_SILHOUETTES,
-  VEIL_TRAIN_LENGTHS,
-} from "@entities/veil";
-import {
   resetVeilData,
   Veil,
   veilFormData,
@@ -33,6 +26,14 @@ import { linkServerConvert } from "@shared/lib";
 })
 export class VeilFormComponent implements OnInit {
   veil = input.required<Veil>();
+
+  // Dynamic select lists from admin settings (passed from parent)
+  silhouettes = input<string[]>([]);
+  necklines = input<string[]>([]);
+  fabrics = input<string[]>([]);
+  trainLengths = input<string[]>([]);
+  categories = input<string[]>([]);
+
   save = output<{ data: any; file: File | null }>();
   cancel = output<void>();
   veilModel = signal<Veil>(veilFormData);
@@ -41,30 +42,17 @@ export class VeilFormComponent implements OnInit {
   previewImage = linkedSignal(() => this.veil()?.image || null);
   isEditMode = signal(false);
 
-  categories = VEIL_CATEGORIES;
-  silhouettes = VEIL_SILHOUETTES;
-  necklines = VEIL_NECKLINES;
-  fabrics = VEIL_FABRICS;
-  trainLengths = VEIL_TRAIN_LENGTHS;
-
   ngOnInit(): void {
     this.initForm();
-    setTimeout(() => {
-      console.log(this.veilForm.price().errors());
-    }, 3000);
   }
 
   initForm() {
     if (this.veil()) {
-      console.log(this.veil());
       this.isEditMode.set(true);
-
       this.previewImage.set(linkServerConvert(this.veil().image));
       this.veilModel.set(this.veil());
     } else {
       this.isEditMode.set(false);
-      console.log("veil", veilFormData);
-
       this.veilModel.set(veilFormData);
     }
   }
@@ -92,7 +80,6 @@ export class VeilFormComponent implements OnInit {
 
   onSubmit() {
     if (this.veilForm().valid()) {
-      console.log(this.veilForm().value());
       this.save.emit({
         data: this.veilForm().value(),
         file: this.selectedFile(),
