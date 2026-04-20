@@ -1,30 +1,35 @@
-# [root](/) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [inventory](/backend/src/modules/inventory) / [presentation](/backend/src/modules/inventory/presentation) / [dto](/backend/src/modules/inventory/presentation/dto)
+# 📁 dto
 
-## 🏷️ 📁 Dto
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [presentation](/backend/src/modules/inventory/presentation) > [dto](/backend/src/modules/inventory/presentation/dto)
 
-### 🎯 PURPOSE
-The `dto` backend module encapsulates the business logic, presentation, and data access for dto.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  dto[📁 dto]
-  dto --> dto_create_inventory_dto_ts(create-inventory.dto.ts)
-  dto --> dto_update_inventory_dto_ts(update-inventory.dto.ts)
+  Root["📁 dto"]
+  Root --> createinventorydtots["📄 create-inventory.dto.ts"]
+  Root --> updateinventorydtots["📄 update-inventory.dto.ts"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-inventory.dto.ts` | `ts` | Data transfer objects and models. | None |
-| `update-inventory.dto.ts` | `ts` | Data transfer objects and models. | @nestjs |
+| `create-inventory.dto.ts` | DTO | Data Transfer Object for validation. | N/A |
+| `update-inventory.dto.ts` | DTO | Data Transfer Object for validation. | @nestjs |
 
-### 🔗 DEPENDENCIES
-- `./create-inventory.dto`
+
+## 🔗 Dependencies
 - `@nestjs/mapped-types`
+- `./create-inventory.dto`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate dto into your refined workflows:
-import { /* exported members */ } from '@path/to/dto';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './create-inventory.dto';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

@@ -1,45 +1,37 @@
-# [root](/) / [frontend](/frontend)
+# 🎨 frontend
 
-## 🏷️ 📁 Frontend
+[Root](/.) > [frontend](/frontend)
 
-### 🎯 PURPOSE
-The `frontend` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **frontend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  frontend[📁 frontend]
-  frontend --> frontend_public[📁 public]
-  frontend --> frontend_src[📁 src]
-  frontend --> frontend_angular_json(angular.json)
-  frontend --> frontend_index_html(index.html)
-  frontend --> frontend_index_tsx(index.tsx)
-  frontend --> frontend_leaflet_css(leaflet.css)
-  frontend --> frontend_metadata_json(metadata.json)
-  frontend --> frontend_package_lock_json(package-lock.json)
-  frontend --> frontend_package_json(package.json)
-  frontend --> frontend_tsconfig_json(tsconfig.json)
+  Root["🎨 frontend"]
+  Root --> src["📁 src"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `angular.json` | `json` | Core logic or foundational asset for this directory. | None |
-| `index.html` | `html` | UI template and styling. | None |
-| `index.tsx` | `tsx` | Core logic or foundational asset for this directory. | @angular |
-| `leaflet.css` | `css` | UI template and styling. | None |
-| `metadata.json` | `json` | Core logic or foundational asset for this directory. | None |
-| `package-lock.json` | `json` | Core logic or foundational asset for this directory. | None |
-| `package.json` | `json` | Core logic or foundational asset for this directory. | None |
-| `tsconfig.json` | `json` | Configuration settings and environment setup. | None |
+| `angular.json` | File | Core logic and utilities for this domain. | N/A |
+| `index.html` | Template | Visual layout and structural HTML. | N/A |
+| `leaflet.css` | Stylesheet | Luxury styling and layout logic. | N/A |
+| `metadata.json` | File | Core logic and utilities for this domain. | N/A |
+| `package-lock.json` | File | Core logic and utilities for this domain. | N/A |
+| `package.json` | Manifest | Project level settings and dependencies. | N/A |
+| `tsconfig.json` | File | Core logic and utilities for this domain. | N/A |
 
-### 🔗 DEPENDENCIES
-- `./src/app.component`
-- `./src/app/app.config`
-- `@angular/platform-browser`
 
-### 🛠️ USAGE
-```typescript
-// Seamlessly integrate frontend into your refined workflows:
-import { /* exported members */ } from '@path/to/frontend';
+## 🔗 Dependencies
+- _No external or internal dependencies detected._
+
+## 🛠️ Usage
+```html
+<!-- Example integration within Mavluda Beauty layouts -->
+<!-- Rendered structural view -->
+<div class="luxury-container">
+  <!-- Content goes here -->
+</div>
 ```

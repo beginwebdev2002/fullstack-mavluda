@@ -1,41 +1,43 @@
-# [root](/) / [frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [user](/frontend/src/entities/user)
+# 📁 user
 
-## 🏷️ 📁 User (Entity Layer)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [user](/frontend/src/entities/user)
 
-### 🎯 PURPOSE
-The `user` entity defines the data models and core business logic for the user domain within the frontend.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **user** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  user[📁 user]
-  user --> user_constants[📁 constants]
-  user --> user_model[📁 model]
-  user --> user_auth_service_ts(auth.service.ts)
-  user --> user_index_ts(index.ts)
-  user --> user_user_service_ts(user.service.ts)
+  Root["📁 user"]
+  Root --> constants["📁 constants"]
+  Root --> model["📁 model"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth.service.ts` | `ts` | Business logic and service layer. | @angular |
-| `index.ts` | `ts` | Core logic implementation. | None |
-| `user.service.ts` | `ts` | Business logic and service layer. | @angular |
+| `auth.service.ts` | Service | Business logic and state management. | @angular |
+| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+| `user.service.ts` | Service | Business logic and state management. | @angular |
 
-### 🔗 DEPENDENCIES
-- `./auth.service`
-- `./model/user.model`
-- `./user.service`
-- `@angular/common/http`
+
+## 🔗 Dependencies
 - `@angular/core`
+- `@angular/common/http`
 - `@angular/router`
-- `jwt-decode`
-- `rxjs`
 - `rxjs/operators`
+- `./model/user.model`
+- `jwt-decode`
+- `./auth.service`
+- `./user.service`
+- `rxjs`
 
-### 🛠️ USAGE
+## 🛠️ Usage
 ```typescript
-// Seamlessly integrate user into your refined workflows:
-import { /* exported members */ } from '@path/to/user';
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './auth.service';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```
