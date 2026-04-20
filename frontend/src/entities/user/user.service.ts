@@ -10,6 +10,10 @@ export class UserService {
   private http = inject(HttpClient);
   private apiUrl = '/users';
 
+  getCount(): Observable<number> {
+    return this.http.get<number>(`${this.apiUrl}/count`);
+  }
+
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.apiUrl);
   }

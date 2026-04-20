@@ -10,6 +10,10 @@ export class UserRepository {
     @InjectModel(UserSchemaEntity.name) private userModel: Model<UserDocument>,
   ) {}
 
+  async count(): Promise<number> {
+    return this.userModel.countDocuments().exec();
+  }
+
   async findAll(): Promise<User[]> {
     const docs = await this.userModel.find().exec();
     return docs.map((doc) => this.toDomain(doc));

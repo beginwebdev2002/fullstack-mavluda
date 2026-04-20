@@ -6,6 +6,10 @@ import { GalleryRepository } from '../infrastructure/repositories/gallery.reposi
 export class GalleryService {
   constructor(private readonly galleryRepository: GalleryRepository) {}
 
+  async count(): Promise<number> {
+    return this.galleryRepository.count();
+  }
+
   async findAll(): Promise<Gallery[]> {
     return this.galleryRepository.findAll();
   }

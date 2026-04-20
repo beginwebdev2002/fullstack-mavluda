@@ -12,6 +12,10 @@ export class VeilRepository {
     private readonly veilModel: Model<VeilDocument>,
   ) {}
 
+  async count(): Promise<number> {
+    return this.veilModel.countDocuments().exec();
+  }
+
   async findAll(): Promise<Veil[]> {
     const docs = await this.veilModel.find().exec();
     return docs.map((doc) => this.toDomain(doc));

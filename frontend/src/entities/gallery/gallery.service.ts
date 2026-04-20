@@ -14,6 +14,10 @@ export class GalleryService {
   private _images = signal<Gallery[]>([]);
   images = this._images.asReadonly();
 
+  getCount(): Observable<number> {
+    return this.http.get<number>(`${this.apiUrl}/count`);
+  }
+
   getImages(): Observable<Gallery[]> {
     return this.http
       .get<Gallery[]>(this.apiUrl)

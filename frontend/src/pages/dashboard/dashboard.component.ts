@@ -1,6 +1,11 @@
 
-import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { UserService } from '@entities/user/user.service';
+import { VeilService } from '@entities/veil/veil.service';
+import { GalleryService } from '@entities/gallery/gallery.service';
+import { TreatmentsService } from '@entities/treatments/treatments.service';
+import { firstValueFrom } from 'rxjs';
 
 interface StatCard {
   title: string;
@@ -25,14 +30,20 @@ interface Activity {
   imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  providers: [VeilService, UserService, GalleryService, TreatmentsService]
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
+  private userService = inject(UserService);
+  private veilService = inject(VeilService);
+  private galleryService = inject(GalleryService);
+  private treatmentsService = inject(TreatmentsService);
+
   stats = signal<StatCard[]>([
-    { title: $localize`:@@dashboardStatAppts:Appointments Today`, value: '12', trend: '15%', trendUp: true, icon: 'calendar_today' },
-    { title: $localize`:@@dashboardStatRevenue:Total Revenue`, value: '$4,250', trend: '8.2%', trendUp: true, icon: 'attach_money' },
-    { title: $localize`:@@dashboardStatClients:New Clients`, value: '24', trend: '4%', trendUp: false, icon: 'group' },
-    { title: $localize`:@@dashboardStatRentals:Active Rentals`, value: '8', trend: '20%', trendUp: true, icon: 'straighten' }
+    { title: $localize`:@@dashboardStatUsers:Total Users`, value: '...', trend: '', trendUp: true, icon: 'group' },
+    { title: $localize`:@@dashboardStatVeils:Total Veils`, value: '...', trend: '', trendUp: true, icon: 'checkroom' },
+    { title: $localize`:@@dashboardStatGallery:Gallery Images`, value: '...', trend: '', trendUp: true, icon: 'collections' },
+    { title: $localize`:@@dashboardStatTreatments:Total Treatments`, value: '...', trend: '', trendUp: true, icon: 'spa' }
   ]);
 
   chartBars = signal<{ height: number; value: number; highlight?: boolean }[]>([
@@ -49,4 +60,24 @@ export class DashboardComponent {
     { id: 3, text: $localize`:@@dashboardActivityService:Service completed`, target: 'Hydrofacial', time: $localize`:@@time3hAgo:3h ago`, icon: 'check', color: 'bg-green-500' },
     { id: 4, text: $localize`:@@dashboardActivityStock:Veil stock updated`, target: 'VL-LACE-042', time: $localize`:@@time5hAgo:5h ago`, icon: 'edit', color: 'bg-blue-500' }
   ]);
+
+  async ngOnInit() {
+    try {
+      const [users, veils, gallery, treatments] = await Promise.all([
+        firstValueFrom(this.userService.getCount()),
+        firstValueFrom(this.veilService.getCount()),
+        firstValueFrom(this.galleryService.getCount()),
+        firstValueFrom(this.treatmentsService.getCount())
+      ]);
+
+      this.stats.set([
+        { title: $localize`:@@dashboardStatUsers:Total Users`, value: users.toString(), trend: '+5%', trendUp: true, icon: 'group' },
+        { title: $localize`:@@dashboardStatVeils:Total Veils`, value: veils.toString(), trend: '+12%', trendUp: true, icon: 'checkroom' },
+        { title: $localize`:@@dashboardStatGallery:Gallery Images`, value: gallery.toString(), trend: '+8%', trendUp: true, icon: 'collections' },
+        { title: $localize`:@@dashboardStatTreatments:Total Treatments`, value: treatments.toString(), trend: '+15%', trendUp: true, icon: 'spa' }
+      ]);
+    } catch (e) {
+      console.error('Failed to load dashboard stats', e);
+    }
+  }
 }

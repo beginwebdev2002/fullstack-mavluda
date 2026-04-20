@@ -7,6 +7,10 @@ import { deleteFileSafe } from '@common/utils';
 export class TreatmentsService {
   constructor(private readonly treatmentsRepository: TreatmentsRepository) {}
 
+  async count(): Promise<number> {
+    return this.treatmentsRepository.count();
+  }
+
   async findAll(): Promise<Treatments[]> {
     return this.treatmentsRepository.findAll();
   }

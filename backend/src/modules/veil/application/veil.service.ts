@@ -6,6 +6,10 @@ import { VeilRepository } from '../infrastructure/repositories/veil.repository';
 export class VeilService {
   constructor(private readonly veilRepository: VeilRepository) {}
 
+  async count(): Promise<number> {
+    return this.veilRepository.count();
+  }
+
   async findAll(): Promise<Veil[]> {
     return this.veilRepository.findAll();
   }

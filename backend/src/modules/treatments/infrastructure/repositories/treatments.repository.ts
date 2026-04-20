@@ -14,6 +14,10 @@ export class TreatmentsRepository {
     private readonly treatmentsModel: Model<TreatmentsDocument>,
   ) {}
 
+  async count(): Promise<number> {
+    return this.treatmentsModel.countDocuments().exec();
+  }
+
   async findAll(): Promise<Treatments[]> {
     const docs = await this.treatmentsModel.find().exec();
     return docs.map((doc) => this.toDomain(doc));

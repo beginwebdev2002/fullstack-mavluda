@@ -21,6 +21,11 @@ import { UpdateVeilDto } from './dto/update-veil.dto';
 export class VeilController {
   constructor(private readonly veilService: VeilService) {}
 
+  @Get('count')
+  async count(): Promise<number> {
+    return this.veilService.count();
+  }
+
   @Get()
   async findAll(): Promise<Veil[]> {
     return this.veilService.findAll();

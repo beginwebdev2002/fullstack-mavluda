@@ -13,6 +13,10 @@ export class VeilService {
   private _veils = signal<Veil[]>([]);
   veils = this._veils.asReadonly();
 
+  getCount(): Observable<number> {
+    return this.http.get<number>(`${API_ENDPOINTS.VEILS.BASE}/count`);
+  }
+
   getVeils(): Observable<Veil[]> {
     return this.http
       .get<Veil[]>(API_ENDPOINTS.VEILS.BASE)

@@ -14,6 +14,10 @@ export class GalleryRepository {
     private readonly galleryModel: Model<GalleryDocument>,
   ) {}
 
+  async count(): Promise<number> {
+    return this.galleryModel.countDocuments().exec();
+  }
+
   async findAll(): Promise<Gallery[]> {
     const docs = await this.galleryModel.find().exec();
     const doc = docs.map((doc) => this.toDomain(doc));

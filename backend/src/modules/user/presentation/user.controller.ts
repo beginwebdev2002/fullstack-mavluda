@@ -49,6 +49,11 @@ export class UserController {
     );
   }
 
+  @Get('count')
+  async count(): Promise<number> {
+    return this.userService.count();
+  }
+
   @Get()
   async findAll(): Promise<User[]> {
     return this.userService.findAll();

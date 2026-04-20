@@ -23,6 +23,11 @@ import { extname } from 'path';
 export class TreatmentsController {
   constructor(private readonly treatmentsService: TreatmentsService) {}
 
+  @Get('count')
+  async count(): Promise<number> {
+    return this.treatmentsService.count();
+  }
+
   @Get()
   async findAll(): Promise<Treatments[]> {
     return this.treatmentsService.findAll();

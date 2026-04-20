@@ -13,6 +13,10 @@ export class TreatmentsService {
   private _treatments = signal<TreatmentItem[]>([]);
   treatments = this._treatments.asReadonly();
 
+  getCount(): Observable<number> {
+    return this.http.get<number>(`${API_ENDPOINTS.TREATMENTS.BASE}/count`);
+  }
+
   getTreatments(): Observable<TreatmentItem[]> {
     return this.http
       .get<TreatmentItem[]>(API_ENDPOINTS.TREATMENTS.BASE)

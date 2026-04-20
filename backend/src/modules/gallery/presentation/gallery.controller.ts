@@ -21,6 +21,11 @@ import { UpdateGalleryDto } from './dto/update-gallery.dto';
 export class GalleryController {
   constructor(private readonly galleryService: GalleryService) {}
 
+  @Get('count')
+  async count(): Promise<number> {
+    return this.galleryService.count();
+  }
+
   @Get()
   async findAll(): Promise<Gallery[]> {
     return this.galleryService.findAll();

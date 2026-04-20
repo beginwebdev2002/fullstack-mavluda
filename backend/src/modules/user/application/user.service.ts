@@ -7,6 +7,10 @@ import { UserRepository } from '../infrastructure/repositories/user.repository';
 export class UserService {
   constructor(private readonly userRepository: UserRepository) {}
 
+  async count(): Promise<number> {
+    return await this.userRepository.count();
+  }
+
   async findAll(): Promise<User[]> {
     return await this.userRepository.findAll();
   }
