@@ -1,29 +1,37 @@
-# 🧠 core
+# 📂 CORE
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **core** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > core`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `General`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["🧠 core"]
-  Root --> constants["📁 constants"]
-  Root --> guards["📁 guards"]
-  Root --> interceptors["📁 interceptors"]
+    Root[core]
+    Root --> F0[📂 guards]
+    Root --> F1[📂 constants]
+    Root --> F2[📂 interceptors]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| _No matching files_ | - | - | - |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 guards` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 constants` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 interceptors` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 Dependencies
-- _No external or internal dependencies detected._
+## 🔗 DEPENDENCIES
+No external/internal aliases used directly in these files.
 
-## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+## 🛠️ USAGE
+```typescript
+// Example usage context
+// This directory groups child modules/layers. Navigate into subdirectories for specific logic.
 ```

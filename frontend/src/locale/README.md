@@ -1,27 +1,37 @@
-# 📁 locale
+# 📂 LOCALE
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [locale](/frontend/src/locale)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **locale** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > locale`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `General`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 locale"]
-  Root --> Empty["(Empty / No recognized files)"]
+    Root[locale]
+    Root --> F0[📄 messages.tj.xlf]
+    Root --> F1[📄 messages.xlf]
+    Root --> F2[📄 messages.ru.xlf]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| _No matching files_ | - | - | - |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 messages.tj.xlf` | `.xlf` | General functionality | `None` |
+| `📄 messages.xlf` | `.xlf` | General functionality | `None` |
+| `📄 messages.ru.xlf` | `.xlf` | General functionality | `None` |
 
-## 🔗 Dependencies
-- _No external or internal dependencies detected._
+## 🔗 DEPENDENCIES
+No external/internal aliases used directly in these files.
 
-## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+## 🛠️ USAGE
+```typescript
+// Example usage context
+// Refer to the specific files in this directory for exact export usage.
 ```

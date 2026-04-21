@@ -1,35 +1,35 @@
-# 📁 application
+# 📂 APPLICATION
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [application](/backend/src/modules/user/application)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > backend > src > modules > user > application`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `App` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `App`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> userservicets["📄 user.service.ts"]
+    Root[application]
+    Root --> F0[📄 user.service.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `user.service.ts` | Service | Business logic and state management. | @nestjs |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 user.service.ts` | `.ts` | Service logic | `@nestjs/common` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@nestjs/common`
-- `bcrypt`
-- `../domain/user.entity`
-- `../infrastructure/repositories/user.repository`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './user.service';
+// Example usage context
+import { ... } from './user.service';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate user.service logic into your feature.
 ```

@@ -1,56 +1,61 @@
-# 💻 src
+# 📂 SRC
 
-[Root](/.) > [backend](/backend) > [src](/backend/src)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **src** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 📍 Breadcrumb Navigation
+`. > backend > src`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Backend Core/Infrastructure` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Backend Core/Infrastructure`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["💻 src"]
-  Root --> common["📁 common"]
-  Root --> modules["📁 modules"]
+    Root[src]
+    Root --> F0[📄 app.controller.spec.ts]
+    Root --> F1[📄 main.ts]
+    Root --> F2[📄 app.module.ts]
+    Root --> F3[📂 common]
+    Root --> F4[📄 app.controller.ts]
+    Root --> F5[📂 modules]
+    Root --> F6[📄 app.service.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `app.controller.spec.ts` | Test | Ensures code quality and regression prevention. | @nestjs |
-| `app.controller.ts` | Controller | Request handling and routing. | @nestjs |
-| `app.module.ts` | Module | Core logic and utilities for this domain. | @nestjs, @modules |
-| `app.service.ts` | Service | Business logic and state management. | @nestjs |
-| `main.ts` | File | Core logic and utilities for this domain. | @nestjs |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 app.controller.spec.ts` | `.ts` | Controller logic | `@nestjs/testing` |
+| `📄 main.ts` | `.ts` | General functionality | `@nestjs/config, @nestjs/common, @nestjs/core` |
+| `📄 app.module.ts` | `.ts` | Module configuration | `@modules/auth, @modules/user, @nestjs/serve-static, @nestjs/common, @modules/partnership, @modules/gallery, @modules/inventory, @modules/payment, @modules/treatments, @modules/booking, @modules/veil, @modules/admin-settings` |
+| `📁 common` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 app.controller.ts` | `.ts` | Controller logic | `@nestjs/common` |
+| `📁 modules` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 app.service.ts` | `.ts` | Service logic | `@nestjs/common` |
 
-## 🔗 Dependencies
-- `@nestjs/testing`
-- `./app.controller`
-- `./app.service`
-- `@nestjs/common`
-- `@nestjs/serve-static`
-- `path`
-- `./common/config/app-config.module`
-- `./common/database/database.module`
-- `@modules/user`
-- `@modules/admin-settings`
-- `@modules/veil`
-- `@modules/treatments`
-- `@modules/gallery`
+## 🔗 DEPENDENCIES
 - `@modules/auth`
-- `@modules/payment`
-- `@modules/booking`
-- `@modules/inventory`
-- `@modules/partnership`
+- `@modules/user`
 - `@nestjs/core`
+- `@nestjs/serve-static`
+- `@nestjs/common`
 - `@nestjs/config`
-- `./app.module`
+- `@modules/gallery`
+- `@modules/inventory`
+- `@modules/payment`
+- `@modules/treatments`
+- `@nestjs/testing`
+- `@modules/admin-settings`
+- `@modules/booking`
+- `@modules/veil`
+- `@modules/partnership`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './app.controller.spec';
+// Example usage context
+import { ... } from './app.controller.spec';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate app.controller.spec logic into your feature.
 ```

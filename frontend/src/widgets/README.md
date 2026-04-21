@@ -1,30 +1,37 @@
-# 🖼️ widgets
+# 📂 WIDGETS
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **widgets** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Widgets - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > widgets`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Widgets` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Widgets`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["🖼️ widgets"]
-  Root --> header["📁 header"]
-  Root --> layouts["📁 layouts"]
-  Root --> sidebar["📁 sidebar"]
+    Root[widgets]
+    Root --> F0[📂 header]
+    Root --> F1[📂 sidebar]
+    Root --> F2[📂 layouts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| _No matching files_ | - | - | - |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 header` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 sidebar` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 layouts` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 Dependencies
-- _No external or internal dependencies detected._
+## 🔗 DEPENDENCIES
+No external/internal aliases used directly in these files.
 
-## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+## 🛠️ USAGE
+```typescript
+// Example usage context
+// This directory groups child modules/layers. Navigate into subdirectories for specific logic.
 ```

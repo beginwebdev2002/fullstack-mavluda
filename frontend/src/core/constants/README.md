@@ -1,34 +1,37 @@
-# 📁 constants
+# 📂 CONSTANTS
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [constants](/frontend/src/core/constants)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > core > constants`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `General`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> apiendpointsts["📄 api-endpoints.ts"]
-  Root --> indexts["📄 index.ts"]
+    Root[constants]
+    Root --> F0[📄 api-endpoints.ts]
+    Root --> F1[📄 index.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `api-endpoints.ts` | File | Core logic and utilities for this domain. | @shared |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 api-endpoints.ts` | `.ts` | General functionality | `@shared/lib` |
+| `📄 index.ts` | `.ts` | General functionality | `None` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@shared/lib`
-- `./api-endpoints`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './api-endpoints';
+// Example usage context
+import { ... } from './api-endpoints';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate api-endpoints logic into your feature.
 ```

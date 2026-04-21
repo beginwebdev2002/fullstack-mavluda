@@ -1,35 +1,37 @@
-# 📁 dto
+# 📂 DTO
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [presentation](/backend/src/modules/inventory/presentation) > [dto](/backend/src/modules/inventory/presentation/dto)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > backend > src > modules > inventory > presentation > dto`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Presentation` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Presentation`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> createinventorydtots["📄 create-inventory.dto.ts"]
-  Root --> updateinventorydtots["📄 update-inventory.dto.ts"]
+    Root[dto]
+    Root --> F0[📄 create-inventory.dto.ts]
+    Root --> F1[📄 update-inventory.dto.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `create-inventory.dto.ts` | DTO | Data Transfer Object for validation. | N/A |
-| `update-inventory.dto.ts` | DTO | Data Transfer Object for validation. | @nestjs |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 create-inventory.dto.ts` | `.ts` | DTO definitions | `None` |
+| `📄 update-inventory.dto.ts` | `.ts` | DTO definitions | `@nestjs/mapped-types` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@nestjs/mapped-types`
-- `./create-inventory.dto`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './create-inventory.dto';
+// Example usage context
+import { ... } from './create-inventory.dto';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate create-inventory.dto logic into your feature.
 ```

@@ -1,40 +1,43 @@
-# 📁 treatments
+# 📂 TREATMENTS
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [treatments](/frontend/src/entities/treatments)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > entities > treatments`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Entities` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Entities`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 treatments"]
-  Root --> constants["📁 constants"]
+    Root[treatments]
+    Root --> F0[📄 index.ts]
+    Root --> F1[📄 treatments.service.ts]
+    Root --> F2[📂 constants]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-| `treatments.service.ts` | Service | Business logic and state management. | @angular, @features, @shared, @core |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📄 treatments.service.ts` | `.ts` | Service logic | `@core/constants, @angular/core, @shared/lib, @features/treatments, @angular/common/http` |
+| `📁 constants` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 Dependencies
-- `./treatments.service`
-- `./constants/treatments.constants`
-- `@angular/core`
-- `@angular/common/http`
-- `rxjs`
-- `@features/treatments`
-- `@shared/lib`
+## 🔗 DEPENDENCIES
 - `@core/constants`
+- `@angular/core`
+- `@shared/lib`
+- `@features/treatments`
+- `@angular/common/http`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './index';
+// Example usage context
+import { ... } from './index';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate index logic into your feature.
 ```

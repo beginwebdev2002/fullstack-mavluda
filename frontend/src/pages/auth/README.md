@@ -1,44 +1,46 @@
-# 📁 auth
+# 📂 AUTH
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [auth](/frontend/src/pages/auth)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > pages > auth`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Pages` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Pages`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 auth"]
-  Root --> authcomponenthtml["📄 auth.component.html"]
-  Root --> authcomponentscss["📄 auth.component.scss"]
-  Root --> authcomponentts["📄 auth.component.ts"]
-  Root --> indexts["📄 index.ts"]
+    Root[auth]
+    Root --> F0[📄 index.ts]
+    Root --> F1[📄 auth.component.scss]
+    Root --> F2[📄 auth.component.ts]
+    Root --> F3[📄 auth.component.html]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `auth.component.html` | Template | Visual layout and structural HTML. | N/A |
-| `auth.component.scss` | Stylesheet | Luxury styling and layout logic. | N/A |
-| `auth.component.ts` | Component | UI rendering and component-level state. | @angular, @entities, @features |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📄 auth.component.scss` | `.scss` | Component logic | `None` |
+| `📄 auth.component.ts` | `.ts` | Component logic | `@angular/forms/signals, @features/language-selection, @angular/core, @angular/common, @angular/router, @entities/user` |
+| `📄 auth.component.html` | `.html` | Component logic | `None` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
+- `@angular/forms/signals`
+- `@features/language-selection`
 - `@angular/core`
 - `@angular/common`
 - `@angular/router`
-- `@angular/forms/signals`
 - `@entities/user`
-- `@features/language-selection`
-- `./auth.component`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './auth.component';
+// Example usage context
+import { ... } from './index';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate index logic into your feature.
 ```

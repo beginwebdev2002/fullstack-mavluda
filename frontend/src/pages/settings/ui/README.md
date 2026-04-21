@@ -1,44 +1,46 @@
-# 📁 ui
+# 📂 UI
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [settings](/frontend/src/pages/settings) > [ui](/frontend/src/pages/settings/ui)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **ui** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > pages > settings > ui`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Pages` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Pages`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 ui"]
-  Root --> additionallinkscomponentts["📄 additional-links.component.ts"]
-  Root --> businessprofilecomponentts["📄 business-profile.component.ts"]
-  Root --> generalinfocomponentts["📄 general-info.component.ts"]
-  Root --> selectssettingscomponentts["📄 selects-settings.component.ts"]
-  Root --> socialmatrixcomponentts["📄 social-matrix.component.ts"]
+    Root[ui]
+    Root --> F0[📄 additional-links.component.ts]
+    Root --> F1[📄 social-matrix.component.ts]
+    Root --> F2[📄 selects-settings.component.ts]
+    Root --> F3[📄 general-info.component.ts]
+    Root --> F4[📄 business-profile.component.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `additional-links.component.ts` | Component | UI rendering and component-level state. | @angular |
-| `business-profile.component.ts` | Component | UI rendering and component-level state. | @angular, @shared |
-| `general-info.component.ts` | Component | UI rendering and component-level state. | @angular |
-| `selects-settings.component.ts` | Component | UI rendering and component-level state. | @angular |
-| `social-matrix.component.ts` | Component | UI rendering and component-level state. | @angular |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 additional-links.component.ts` | `.ts` | Component logic | `@angular/core, @angular/forms, @angular/common` |
+| `📄 social-matrix.component.ts` | `.ts` | Component logic | `@angular/core, @angular/forms, @angular/common` |
+| `📄 selects-settings.component.ts` | `.ts` | Component logic | `@angular/core, @angular/forms, @angular/common` |
+| `📄 general-info.component.ts` | `.ts` | Component logic | `@angular/core, @angular/forms, @angular/common` |
+| `📄 business-profile.component.ts` | `.ts` | Component logic | `@angular/core, @shared/models, @angular/common, @angular/forms` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@angular/core`
-- `@angular/common`
 - `@angular/forms`
 - `@shared/models`
-- `leaflet`
+- `@angular/common`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './additional-links.component';
+// Example usage context
+import { ... } from './additional-links.component';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate additional-links.component logic into your feature.
 ```

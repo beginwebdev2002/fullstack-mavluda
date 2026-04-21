@@ -1,37 +1,39 @@
-# 📁 guards
+# 📂 GUARDS
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [guards](/backend/src/common/guards)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 📍 Breadcrumb Navigation
+`. > backend > src > common > guards`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Backend Core/Infrastructure` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Backend Core/Infrastructure`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> jwtauthguardts["📄 jwt-auth.guard.ts"]
-  Root --> rolesguardts["📄 roles.guard.ts"]
+    Root[guards]
+    Root --> F0[📄 roles.guard.ts]
+    Root --> F1[📄 jwt-auth.guard.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `jwt-auth.guard.ts` | File | Core logic and utilities for this domain. | @nestjs |
-| `roles.guard.ts` | File | Core logic and utilities for this domain. | @nestjs |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 roles.guard.ts` | `.ts` | General functionality | `@nestjs/common, @nestjs/core` |
+| `📄 jwt-auth.guard.ts` | `.ts` | General functionality | `@nestjs/common, @nestjs/passport, @nestjs/core` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@nestjs/common`
-- `@nestjs/core`
 - `@nestjs/passport`
-- `../decorators/public.decorator`
-- `../decorators/roles.decorator`
+- `@nestjs/core`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './jwt-auth.guard';
+// Example usage context
+import { ... } from './roles.guard';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate roles.guard logic into your feature.
 ```

@@ -1,49 +1,50 @@
-# 📁 treatments
+# 📂 TREATMENTS
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > backend > src > modules > treatments`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Module Root` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Module Root`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 treatments"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
+    Root[treatments]
+    Root --> F0[📂 infrastructure]
+    Root --> F1[📂 presentation]
+    Root --> F2[📄 index.ts]
+    Root --> F3[📂 domain]
+    Root --> F4[📄 treatments.module.ts]
+    Root --> F5[📂 application]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-| `treatments.module.ts` | Module | Core logic and utilities for this domain. | @nestjs, @modules |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 infrastructure` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 presentation` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📁 domain` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 treatments.module.ts` | `.ts` | Module configuration | `@modules/treatments/infrastructure/schemas/treatments.schema, @nestjs/common, @nestjs/mongoose, @modules/treatments/presentation/treatments.controller, @modules/treatments/application/treatments.service, @modules/treatments/infrastructure/repositories/treatments.repository` |
+| `📁 application` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 Dependencies
-- `./application/treatments.service`
-- `./domain/treatments.entity`
-- `./infrastructure/repositories/treatments.repository`
-- `./infrastructure/schemas/treatments.schema`
-- `./presentation/dto/create-treatments.dto`
-- `./presentation/dto/update-treatments.dto`
-- `./presentation/treatments.controller`
-- `./treatments.module`
+## 🔗 DEPENDENCIES
+- `@modules/treatments/infrastructure/schemas/treatments.schema`
 - `@nestjs/common`
 - `@nestjs/mongoose`
-- `@modules/treatments/application/treatments.service`
 - `@modules/treatments/presentation/treatments.controller`
+- `@modules/treatments/application/treatments.service`
 - `@modules/treatments/infrastructure/repositories/treatments.repository`
-- `@modules/treatments/infrastructure/schemas/treatments.schema`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './index';
+// Example usage context
+import { ... } from './index';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate index logic into your feature.
 ```

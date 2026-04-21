@@ -1,39 +1,41 @@
-# 📁 guards
+# 📂 GUARDS
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [guards](/frontend/src/core/guards)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > core > guards`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `General`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> adminguardts["📄 admin.guard.ts"]
-  Root --> authguardts["📄 auth.guard.ts"]
-  Root --> indexts["📄 index.ts"]
+    Root[guards]
+    Root --> F0[📄 index.ts]
+    Root --> F1[📄 admin.guard.ts]
+    Root --> F2[📄 auth.guard.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `admin.guard.ts` | File | Core logic and utilities for this domain. | @angular, @entities |
-| `auth.guard.ts` | File | Core logic and utilities for this domain. | @angular, @entities |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📄 admin.guard.ts` | `.ts` | General functionality | `@angular/core, @angular/router, @entities/user` |
+| `📄 auth.guard.ts` | `.ts` | General functionality | `@angular/core, @angular/router, @entities/user` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@angular/core`
 - `@angular/router`
 - `@entities/user`
-- `./admin.guard`
-- `./auth.guard`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './admin.guard';
+// Example usage context
+import { ... } from './index';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate index logic into your feature.
 ```

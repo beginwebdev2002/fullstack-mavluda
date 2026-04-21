@@ -1,33 +1,35 @@
-# 📁 schemas
+# 📂 SCHEMAS
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments) > [infrastructure](/backend/src/modules/treatments/infrastructure) > [schemas](/backend/src/modules/treatments/infrastructure/schemas)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **schemas** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > backend > src > modules > treatments > infrastructure > schemas`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Infrastructure` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Infrastructure`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 schemas"]
-  Root --> treatmentsschemats["📄 treatments.schema.ts"]
+    Root[schemas]
+    Root --> F0[📄 treatments.schema.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `treatments.schema.ts` | Entity/Model | Data structure and schema definitions. | @nestjs |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 treatments.schema.ts` | `.ts` | General functionality | `@nestjs/mongoose` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@nestjs/mongoose`
-- `mongoose`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './treatments.schema';
+// Example usage context
+import { ... } from './treatments.schema';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate treatments.schema logic into your feature.
 ```

@@ -1,43 +1,45 @@
-# 📁 user
+# 📂 USER
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [user](/frontend/src/entities/user)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **user** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > entities > user`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Entities` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Entities`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 user"]
-  Root --> constants["📁 constants"]
-  Root --> model["📁 model"]
+    Root[user]
+    Root --> F0[📄 auth.service.ts]
+    Root --> F1[📄 index.ts]
+    Root --> F2[📂 model]
+    Root --> F3[📄 user.service.ts]
+    Root --> F4[📂 constants]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `auth.service.ts` | Service | Business logic and state management. | @angular |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-| `user.service.ts` | Service | Business logic and state management. | @angular |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 auth.service.ts` | `.ts` | Service logic | `@angular/core, @angular/router, @angular/common/http` |
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📁 model` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 user.service.ts` | `.ts` | Service logic | `@angular/core, @angular/common/http` |
+| `📁 constants` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@angular/core`
-- `@angular/common/http`
 - `@angular/router`
-- `rxjs/operators`
-- `./model/user.model`
-- `jwt-decode`
-- `./auth.service`
-- `./user.service`
-- `rxjs`
+- `@angular/common/http`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './auth.service';
+// Example usage context
+import { ... } from './auth.service';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate auth.service logic into your feature.
 ```

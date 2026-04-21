@@ -1,35 +1,38 @@
-# 📁 image-popup
+# 📂 IMAGE-POPUP
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [image-popup](/frontend/src/shared/ui/image-popup)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **image-popup** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Shared - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > shared > ui > image-popup`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Shared` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Shared`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 image-popup"]
-  Root --> imagepopupcomponenthtml["📄 image-popup.component.html"]
-  Root --> imagepopupcomponentts["📄 image-popup.component.ts"]
+    Root[image-popup]
+    Root --> F0[📄 image-popup.component.ts]
+    Root --> F1[📄 image-popup.component.html]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `image-popup.component.html` | Template | Visual layout and structural HTML. | N/A |
-| `image-popup.component.ts` | Component | UI rendering and component-level state. | @angular |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 image-popup.component.ts` | `.ts` | Component logic | `@angular/core, @angular/common` |
+| `📄 image-popup.component.html` | `.html` | Component logic | `None` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@angular/core`
 - `@angular/common`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './image-popup.component';
+// Example usage context
+import { ... } from './image-popup.component';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate image-popup.component logic into your feature.
 ```

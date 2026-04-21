@@ -1,42 +1,44 @@
-# 📁 header
+# 📂 HEADER
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [header](/frontend/src/widgets/header)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **header** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Widgets - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > widgets > header`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Widgets` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Widgets`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 header"]
-  Root --> headercomponenthtml["📄 header.component.html"]
-  Root --> headercomponentscss["📄 header.component.scss"]
-  Root --> headercomponentts["📄 header.component.ts"]
-  Root --> indexts["📄 index.ts"]
+    Root[header]
+    Root --> F0[📄 header.component.scss]
+    Root --> F1[📄 header.component.html]
+    Root --> F2[📄 index.ts]
+    Root --> F3[📄 header.component.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `header.component.html` | Template | Visual layout and structural HTML. | N/A |
-| `header.component.scss` | Stylesheet | Luxury styling and layout logic. | N/A |
-| `header.component.ts` | Component | UI rendering and component-level state. | @angular, @features |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 header.component.scss` | `.scss` | Component logic | `None` |
+| `📄 header.component.html` | `.html` | Component logic | `None` |
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📄 header.component.ts` | `.ts` | Component logic | `@angular/core, @angular/router, @angular/common, @features/language-selection` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@angular/core`
-- `@angular/common`
 - `@angular/router`
+- `@angular/common`
 - `@features/language-selection`
-- `./header.component`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './header.component';
+// Example usage context
+import { ... } from './index';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate index logic into your feature.
 ```

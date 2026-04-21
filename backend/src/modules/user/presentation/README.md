@@ -1,40 +1,40 @@
-# 📁 presentation
+# 📂 PRESENTATION
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [presentation](/backend/src/modules/user/presentation)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **presentation** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > backend > src > modules > user > presentation`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Presentation` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Presentation`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
+    Root[presentation]
+    Root --> F0[📂 dto]
+    Root --> F1[📄 user.controller.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `user.controller.ts` | Controller | Request handling and routing. | @nestjs, @modules, @common |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 dto` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 user.controller.ts` | `.ts` | Controller logic | `@common/interfaces/authenticated-request.interface, @modules/user, @nestjs/common, @nestjs/platform-express` |
 
-## 🔗 Dependencies
-- `@nestjs/common`
-- `../application/user.service`
-- `@modules/user`
-- `./dto/create-user.dto`
-- `./dto/update-user.dto`
+## 🔗 DEPENDENCIES
 - `@common/interfaces/authenticated-request.interface`
 - `@nestjs/platform-express`
-- `multer`
-- `path`
+- `@nestjs/common`
+- `@modules/user`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './user.controller';
+// Example usage context
+import { ... } from './user.controller';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate user.controller logic into your feature.
 ```

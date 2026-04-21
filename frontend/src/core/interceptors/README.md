@@ -1,41 +1,42 @@
-# 📁 interceptors
+# 📂 INTERCEPTORS
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [interceptors](/frontend/src/core/interceptors)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **interceptors** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > core > interceptors`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `General`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 interceptors"]
-  Root --> apiinterceptorts["📄 api.interceptor.ts"]
-  Root --> errorinterceptorts["📄 error.interceptor.ts"]
-  Root --> indexts["📄 index.ts"]
+    Root[interceptors]
+    Root --> F0[📄 error.interceptor.ts]
+    Root --> F1[📄 index.ts]
+    Root --> F2[📄 api.interceptor.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `api.interceptor.ts` | File | Core logic and utilities for this domain. | @angular, @shared |
-| `error.interceptor.ts` | File | Core logic and utilities for this domain. | @angular, @shared |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 error.interceptor.ts` | `.ts` | General functionality | `@angular/core, @shared/services, @angular/common/http` |
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📄 api.interceptor.ts` | `.ts` | General functionality | `@shared/lib, @angular/common/http` |
 
-## 🔗 Dependencies
-- `@angular/common/http`
+## 🔗 DEPENDENCIES
 - `@shared/lib`
 - `@angular/core`
-- `rxjs`
+- `@angular/common/http`
 - `@shared/services`
-- `./api.interceptor`
-- `./error.interceptor`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './api.interceptor';
+// Example usage context
+import { ... } from './error.interceptor';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate error.interceptor logic into your feature.
 ```

@@ -1,27 +1,33 @@
-# [root](/) / [frontend](/frontend) / [public](/frontend/public)
+# 📂 PUBLIC
 
-## 🏷️ 📁 Public
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-### 🎯 PURPOSE
-The `public` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
+### 📍 Breadcrumb Navigation
+`. > frontend > public`
 
-### 🏗️ ARCHITECTURE
+## 🎯 PURPOSE
+This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `General`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  public[📁 public]
-  public --> public_images[📁 images]
+    Root[public]
+    Root --> F0[📂 images]
 ```
 
-### 📄 FILE REGISTRY
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| (No files) | - | - | - |
+## 📄 FILE REGISTRY
 
-### 🔗 DEPENDENCIES
-- `None`
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 images` | `Directory` | Subdirectory logic grouping | `None` |
 
-### 🛠️ USAGE
+## 🔗 DEPENDENCIES
+No external/internal aliases used directly in these files.
+
+## 🛠️ USAGE
 ```typescript
-// Seamlessly integrate public into your refined workflows:
-import { /* exported members */ } from '@path/to/public';
+// Example usage context
+// This directory groups child modules/layers. Navigate into subdirectories for specific logic.
 ```

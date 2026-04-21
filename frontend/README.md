@@ -1,37 +1,53 @@
-# 🎨 frontend
+# 📂 FRONTEND
 
-[Root](/.) > [frontend](/frontend)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **frontend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 📍 Breadcrumb Navigation
+`. > frontend`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `General`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["🎨 frontend"]
-  Root --> src["📁 src"]
+    Root[frontend]
+    Root --> F0[📂 public]
+    Root --> F1[📄 package-lock.json]
+    Root --> F2[📂 src]
+    Root --> F3[📄 angular.json]
+    Root --> F4[📄 metadata.json]
+    Root --> F5[📄 index.tsx]
+    Root --> F6[📄 leaflet.css]
+    Root --> F7[📄 tsconfig.json]
+    Root --> F8[📄 index.html]
+    Root --> F9[📄 package.json]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `angular.json` | File | Core logic and utilities for this domain. | N/A |
-| `index.html` | Template | Visual layout and structural HTML. | N/A |
-| `leaflet.css` | Stylesheet | Luxury styling and layout logic. | N/A |
-| `metadata.json` | File | Core logic and utilities for this domain. | N/A |
-| `package-lock.json` | File | Core logic and utilities for this domain. | N/A |
-| `package.json` | Manifest | Project level settings and dependencies. | N/A |
-| `tsconfig.json` | File | Core logic and utilities for this domain. | N/A |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 public` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 package-lock.json` | `.json` | General functionality | `None` |
+| `📁 src` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 angular.json` | `.json` | General functionality | `None` |
+| `📄 metadata.json` | `.json` | General functionality | `None` |
+| `📄 index.tsx` | `.tsx` | General functionality | `@angular/platform-browser` |
+| `📄 leaflet.css` | `.css` | General functionality | `None` |
+| `📄 tsconfig.json` | `.json` | General functionality | `None` |
+| `📄 index.html` | `.html` | General functionality | `None` |
+| `📄 package.json` | `.json` | General functionality | `None` |
 
-## 🔗 Dependencies
-- _No external or internal dependencies detected._
+## 🔗 DEPENDENCIES
+- `@angular/platform-browser`
 
-## 🛠️ Usage
-```html
-<!-- Example integration within Mavluda Beauty layouts -->
-<!-- Rendered structural view -->
-<div class="luxury-container">
-  <!-- Content goes here -->
-</div>
+## 🛠️ USAGE
+```typescript
+// Example usage context
+import { ... } from './indexx';
+
+// Integrate indexx logic into your feature.
 ```

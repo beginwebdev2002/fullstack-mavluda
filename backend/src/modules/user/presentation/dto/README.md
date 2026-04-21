@@ -1,36 +1,37 @@
-# 📁 dto
+# 📂 DTO
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [presentation](/backend/src/modules/user/presentation) > [dto](/backend/src/modules/user/presentation/dto)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > backend > src > modules > user > presentation > dto`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Presentation` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Presentation`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> createuserdtots["📄 create-user.dto.ts"]
-  Root --> updateuserdtots["📄 update-user.dto.ts"]
+    Root[dto]
+    Root --> F0[📄 update-user.dto.ts]
+    Root --> F1[📄 create-user.dto.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `create-user.dto.ts` | DTO | Data Transfer Object for validation. | N/A |
-| `update-user.dto.ts` | DTO | Data Transfer Object for validation. | @nestjs |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 update-user.dto.ts` | `.ts` | DTO definitions | `@nestjs/mapped-types` |
+| `📄 create-user.dto.ts` | `.ts` | DTO definitions | `None` |
 
-## 🔗 Dependencies
-- `class-validator`
+## 🔗 DEPENDENCIES
 - `@nestjs/mapped-types`
-- `./create-user.dto`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './create-user.dto';
+// Example usage context
+import { ... } from './update-user.dto';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate update-user.dto logic into your feature.
 ```

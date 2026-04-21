@@ -1,35 +1,37 @@
-# 📁 dto
+# 📂 DTO
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [booking](/backend/src/modules/booking) > [presentation](/backend/src/modules/booking/presentation) > [dto](/backend/src/modules/booking/presentation/dto)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > backend > src > modules > booking > presentation > dto`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Presentation` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Presentation`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> createbookingdtots["📄 create-booking.dto.ts"]
-  Root --> updatebookingdtots["📄 update-booking.dto.ts"]
+    Root[dto]
+    Root --> F0[📄 create-booking.dto.ts]
+    Root --> F1[📄 update-booking.dto.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `create-booking.dto.ts` | DTO | Data Transfer Object for validation. | N/A |
-| `update-booking.dto.ts` | DTO | Data Transfer Object for validation. | @nestjs |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 create-booking.dto.ts` | `.ts` | DTO definitions | `None` |
+| `📄 update-booking.dto.ts` | `.ts` | DTO definitions | `@nestjs/mapped-types` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@nestjs/mapped-types`
-- `./create-booking.dto`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './create-booking.dto';
+// Example usage context
+import { ... } from './create-booking.dto';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate create-booking.dto logic into your feature.
 ```

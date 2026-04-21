@@ -1,45 +1,46 @@
-# 📁 inventory
+# 📂 INVENTORY
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **inventory** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > backend > src > modules > inventory`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Module Root` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Module Root`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 inventory"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
+    Root[inventory]
+    Root --> F0[📂 infrastructure]
+    Root --> F1[📂 presentation]
+    Root --> F2[📄 index.ts]
+    Root --> F3[📂 domain]
+    Root --> F4[📄 inventory.module.ts]
+    Root --> F5[📂 application]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-| `inventory.module.ts` | Module | Core logic and utilities for this domain. | @nestjs |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 infrastructure` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 presentation` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📁 domain` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 inventory.module.ts` | `.ts` | Module configuration | `@nestjs/common, @nestjs/mongoose` |
+| `📁 application` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 Dependencies
-- `./presentation/dto/create-inventory.dto`
-- `./presentation/dto/update-inventory.dto`
-- `./application/inventory.service`
-- `./domain/inventory.entity`
-- `./inventory.module`
+## 🔗 DEPENDENCIES
 - `@nestjs/common`
 - `@nestjs/mongoose`
-- `./presentation/inventory.controller`
-- `./infrastructure/repositories/inventory.repository`
-- `./infrastructure/schemas/inventory.schema`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './index';
+// Example usage context
+import { ... } from './index';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate index logic into your feature.
 ```

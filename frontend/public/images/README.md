@@ -1,29 +1,35 @@
-# [root](/) / [frontend](/frontend) / [public](/frontend/public) / [images](/frontend/public/images)
+# 📂 IMAGES
 
-## 🏷️ 📁 Images
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-### 🎯 PURPOSE
-The `images` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
+### 📍 Breadcrumb Navigation
+`. > frontend > public > images`
 
-### 🏗️ ARCHITECTURE
+## 🎯 PURPOSE
+This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `General`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  images[📁 images]
-  images --> images_treatments_add_img_png(treatments-add-img.png)
-  images --> images_treatments_no_img_png(treatments-no-img.png)
+    Root[images]
+    Root --> F0[📄 treatments-no-img.png]
+    Root --> F1[📄 treatments-add-img.png]
 ```
 
-### 📄 FILE REGISTRY
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `treatments-add-img.png` | `png` | Core logic or foundational asset for this directory. | None |
-| `treatments-no-img.png` | `png` | Core logic or foundational asset for this directory. | None |
+## 📄 FILE REGISTRY
 
-### 🔗 DEPENDENCIES
-- `None`
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 treatments-no-img.png` | `.png` | General functionality | `None` |
+| `📄 treatments-add-img.png` | `.png` | General functionality | `None` |
 
-### 🛠️ USAGE
+## 🔗 DEPENDENCIES
+No external/internal aliases used directly in these files.
+
+## 🛠️ USAGE
 ```typescript
-// Seamlessly integrate images into your refined workflows:
-import { /* exported members */ } from '@path/to/images';
+// Example usage context
+// Refer to the specific files in this directory for exact export usage.
 ```

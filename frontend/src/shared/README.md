@@ -1,33 +1,43 @@
-# 🤝 shared
+# 📂 SHARED
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **shared** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Shared - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > shared`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Shared` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Shared`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["🤝 shared"]
-  Root --> lib["📁 lib"]
-  Root --> models["📁 models"]
-  Root --> pipes["📁 pipes"]
-  Root --> services["📁 services"]
-  Root --> store["📁 store"]
-  Root --> ui["📁 ui"]
+    Root[shared]
+    Root --> F0[📂 services]
+    Root --> F1[📂 models]
+    Root --> F2[📂 store]
+    Root --> F3[📂 ui]
+    Root --> F4[📂 pipes]
+    Root --> F5[📂 lib]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| _No matching files_ | - | - | - |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 services` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 models` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 store` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 ui` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 pipes` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 lib` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 Dependencies
-- _No external or internal dependencies detected._
+## 🔗 DEPENDENCIES
+No external/internal aliases used directly in these files.
 
-## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+## 🛠️ USAGE
+```typescript
+// Example usage context
+// This directory groups child modules/layers. Navigate into subdirectories for specific logic.
 ```

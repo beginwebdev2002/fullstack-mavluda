@@ -1,36 +1,37 @@
-# 📁 infrastructure
+# 📂 INFRASTRUCTURE
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [infrastructure](/backend/src/modules/auth/infrastructure)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **infrastructure** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > backend > src > modules > auth > infrastructure`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Infrastructure` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Infrastructure`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 infrastructure"]
-  Root --> jwtstrategyts["📄 jwt.strategy.ts"]
+    Root[infrastructure]
+    Root --> F0[📄 jwt.strategy.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `jwt.strategy.ts` | File | Core logic and utilities for this domain. | @nestjs, @common |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 jwt.strategy.ts` | `.ts` | General functionality | `@common/config/app-config.service, @nestjs/common, @nestjs/passport` |
 
-## 🔗 Dependencies
-- `passport-jwt`
-- `@nestjs/passport`
-- `@nestjs/common`
+## 🔗 DEPENDENCIES
 - `@common/config/app-config.service`
-- `../interfaces/jwt-payload.interface`
+- `@nestjs/common`
+- `@nestjs/passport`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './jwt.strategy';
+// Example usage context
+import { ... } from './jwt.strategy';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate jwt.strategy logic into your feature.
 ```

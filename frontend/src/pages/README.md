@@ -1,41 +1,59 @@
-# 📄 pages
+# 📂 PAGES
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **pages** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > pages`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Pages` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Pages`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📄 pages"]
-  Root --> about["📁 about"]
-  Root --> auth["📁 auth"]
-  Root --> clients["📁 clients"]
-  Root --> dashboard["📁 dashboard"]
-  Root --> gallery["📁 gallery"]
-  Root --> inventory["📁 inventory"]
-  Root --> portfolio["📁 portfolio"]
-  Root --> settings["📁 settings"]
-  Root --> treatments["📁 treatments"]
-  Root --> treatmentscatalog["📁 treatments-catalog"]
-  Root --> userhome["📁 user-home"]
-  Root --> userprofile["📁 user-profile"]
-  Root --> veil["📁 veil"]
-  Root --> veilscatalog["📁 veils-catalog"]
+    Root[pages]
+    Root --> F0[📂 portfolio]
+    Root --> F1[📂 settings]
+    Root --> F2[📂 dashboard]
+    Root --> F3[📂 gallery]
+    Root --> F4[📂 user-profile]
+    Root --> F5[📂 treatments]
+    Root --> F6[📂 about]
+    Root --> F7[📂 veil]
+    Root --> F8[📂 veils-catalog]
+    Root --> F9[📂 inventory]
+    Root --> F10[📂 clients]
+    Root --> F11[📂 treatments-catalog]
+    Root --> F12[📂 auth]
+    Root --> F13[📂 user-home]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| _No matching files_ | - | - | - |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 portfolio` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 settings` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 dashboard` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 gallery` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 user-profile` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 treatments` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 about` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 veil` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 veils-catalog` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 inventory` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 clients` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 treatments-catalog` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 auth` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 user-home` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 Dependencies
-- _No external or internal dependencies detected._
+## 🔗 DEPENDENCIES
+No external/internal aliases used directly in these files.
 
-## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+## 🛠️ USAGE
+```typescript
+// Example usage context
+// This directory groups child modules/layers. Navigate into subdirectories for specific logic.
 ```

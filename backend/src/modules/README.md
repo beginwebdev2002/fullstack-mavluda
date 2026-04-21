@@ -1,37 +1,51 @@
-# 📦 modules
+# 📂 MODULES
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **modules** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > backend > src > modules`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Backend Core/Infrastructure` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Backend Core/Infrastructure`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📦 modules"]
-  Root --> adminsettings["📁 admin-settings"]
-  Root --> auth["📁 auth"]
-  Root --> booking["📁 booking"]
-  Root --> gallery["📁 gallery"]
-  Root --> inventory["📁 inventory"]
-  Root --> partnership["📁 partnership"]
-  Root --> payment["📁 payment"]
-  Root --> treatments["📁 treatments"]
-  Root --> user["📁 user"]
-  Root --> veil["📁 veil"]
+    Root[modules]
+    Root --> F0[📂 gallery]
+    Root --> F1[📂 user]
+    Root --> F2[📂 treatments]
+    Root --> F3[📂 admin-settings]
+    Root --> F4[📂 veil]
+    Root --> F5[📂 payment]
+    Root --> F6[📂 booking]
+    Root --> F7[📂 inventory]
+    Root --> F8[📂 partnership]
+    Root --> F9[📂 auth]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| _No matching files_ | - | - | - |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 gallery` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 user` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 treatments` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 admin-settings` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 veil` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 payment` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 booking` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 inventory` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 partnership` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 auth` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 Dependencies
-- _No external or internal dependencies detected._
+## 🔗 DEPENDENCIES
+No external/internal aliases used directly in these files.
 
-## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+## 🛠️ USAGE
+```typescript
+// Example usage context
+// This directory groups child modules/layers. Navigate into subdirectories for specific logic.
 ```

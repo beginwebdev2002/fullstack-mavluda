@@ -1,38 +1,41 @@
-# 📁 gallery
+# 📂 GALLERY
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [gallery](/frontend/src/entities/gallery)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > entities > gallery`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Entities` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Entities`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 gallery"]
-  Root --> constants["📁 constants"]
+    Root[gallery]
+    Root --> F0[📄 gallery.service.ts]
+    Root --> F1[📄 index.ts]
+    Root --> F2[📂 constants]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `gallery.service.ts` | Service | Business logic and state management. | @angular, @shared |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 gallery.service.ts` | `.ts` | Service logic | `@angular/core, @shared/models, @angular/common/http` |
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📁 constants` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@angular/core`
-- `@angular/common/http`
-- `rxjs`
 - `@shared/models`
-- `./gallery.service`
-- `./constants/gallery.constants`
+- `@angular/common/http`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './gallery.service';
+// Example usage context
+import { ... } from './gallery.service';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate gallery.service logic into your feature.
 ```

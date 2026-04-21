@@ -1,32 +1,35 @@
-# 📁 constants
+# 📂 CONSTANTS
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [treatments](/frontend/src/entities/treatments) > [constants](/frontend/src/entities/treatments/constants)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > entities > treatments > constants`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Entities` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Entities`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> treatmentsconstantsts["📄 treatments.constants.ts"]
+    Root[constants]
+    Root --> F0[📄 treatments.constants.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `treatments.constants.ts` | File | Core logic and utilities for this domain. | N/A |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 treatments.constants.ts` | `.ts` | General functionality | `None` |
 
-## 🔗 Dependencies
-- _No external or internal dependencies detected._
+## 🔗 DEPENDENCIES
+No external/internal aliases used directly in these files.
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './treatments.constants';
+// Example usage context
+import { ... } from './treatments.constants';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate treatments.constants logic into your feature.
 ```

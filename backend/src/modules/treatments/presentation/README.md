@@ -1,36 +1,39 @@
-# 📁 presentation
+# 📂 PRESENTATION
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments) > [presentation](/backend/src/modules/treatments/presentation)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **presentation** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > backend > src > modules > treatments > presentation`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Presentation` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Presentation`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
+    Root[presentation]
+    Root --> F0[📂 dto]
+    Root --> F1[📄 treatments.controller.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `treatments.controller.ts` | Controller | Request handling and routing. | @modules, @nestjs |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 dto` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 treatments.controller.ts` | `.ts` | Controller logic | `@nestjs/common, @nestjs/platform-express, @modules/treatments` |
 
-## 🔗 Dependencies
-- `@modules/treatments`
-- `@nestjs/common`
+## 🔗 DEPENDENCIES
 - `@nestjs/platform-express`
-- `multer`
-- `path`
+- `@nestjs/common`
+- `@modules/treatments`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './treatments.controller';
+// Example usage context
+import { ... } from './treatments.controller';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate treatments.controller logic into your feature.
 ```

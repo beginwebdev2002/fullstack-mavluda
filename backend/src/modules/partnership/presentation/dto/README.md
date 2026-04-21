@@ -1,35 +1,37 @@
-# 📁 dto
+# 📂 DTO
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [partnership](/backend/src/modules/partnership) > [presentation](/backend/src/modules/partnership/presentation) > [dto](/backend/src/modules/partnership/presentation/dto)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > backend > src > modules > partnership > presentation > dto`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Presentation` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Presentation`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> createpartnershipdtots["📄 create-partnership.dto.ts"]
-  Root --> updatepartnershipdtots["📄 update-partnership.dto.ts"]
+    Root[dto]
+    Root --> F0[📄 create-partnership.dto.ts]
+    Root --> F1[📄 update-partnership.dto.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `create-partnership.dto.ts` | DTO | Data Transfer Object for validation. | N/A |
-| `update-partnership.dto.ts` | DTO | Data Transfer Object for validation. | @nestjs |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 create-partnership.dto.ts` | `.ts` | DTO definitions | `None` |
+| `📄 update-partnership.dto.ts` | `.ts` | DTO definitions | `@nestjs/mapped-types` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@nestjs/mapped-types`
-- `./create-partnership.dto`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './create-partnership.dto';
+// Example usage context
+import { ... } from './create-partnership.dto';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate create-partnership.dto logic into your feature.
 ```

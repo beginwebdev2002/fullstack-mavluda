@@ -1,38 +1,43 @@
-# 📁 ui
+# 📂 UI
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **ui** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Shared - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > shared > ui`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Shared` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Shared`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 ui"]
-  Root --> cardview["📁 card-view"]
-  Root --> globalerror["📁 global-error"]
-  Root --> imagepopup["📁 image-popup"]
-  Root --> listview["📁 list-view"]
+    Root[ui]
+    Root --> F0[📂 list-view]
+    Root --> F1[📄 index.ts]
+    Root --> F2[📂 global-error]
+    Root --> F3[📂 card-view]
+    Root --> F4[📂 image-popup]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 list-view` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📁 global-error` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 card-view` | `Directory` | Subdirectory logic grouping | `None` |
+| `📁 image-popup` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 Dependencies
-- `./global-error/global-error.component`
-- `./image-popup/image-popup.component`
-- `./list-view/list-view.component`
-- `./card-view`
+## 🔗 DEPENDENCIES
+No external/internal aliases used directly in these files.
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './index';
+// Example usage context
+import { ... } from './index';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate index logic into your feature.
 ```

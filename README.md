@@ -1,36 +1,39 @@
-# 👑 Mavluda Beauty Root
+# 📂 .
 
-[Root](/.)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Mavluda Beauty Root** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 📍 Breadcrumb Navigation
+`Root`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `General`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["👑 Mavluda Beauty Root"]
-  Root --> agent["📁 .agent"]
-  Root --> gemini["📁 .gemini"]
-  Root --> github["📁 .github"]
-  Root --> jules["📁 .jules"]
-  Root --> backend["📁 backend"]
-  Root --> frontend["📁 frontend"]
+    Root[.]
+    Root --> F0[📂 backend]
+    Root --> F1[📄 GEMINI.md]
+    Root --> F2[📄 generate_readmes.py]
+    Root --> F3[📂 frontend]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `.env` | Configuration | Project level settings and dependencies. | N/A |
-| `.gitignore` | Configuration | Project level settings and dependencies. | N/A |
-| `.gitignore_append` | File | Core logic and utilities for this domain. | N/A |
-| `GEMINI.md` | File | Core logic and utilities for this domain. | N/A |
-| `generate_readmes.js` | File | Core logic and utilities for this domain. | N/A |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📁 backend` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 GEMINI.md` | `.md` | General functionality | `None` |
+| `📄 generate_readmes.py` | `.py` | General functionality | `None` |
+| `📁 frontend` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 Dependencies
-- `./${tsFile.name.replace(/\.ts$/, `
+## 🔗 DEPENDENCIES
+No external/internal aliases used directly in these files.
 
-## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+## 🛠️ USAGE
+```typescript
+// Example usage context
+// Refer to the specific files in this directory for exact export usage.
 ```

@@ -1,40 +1,46 @@
-# 📁 dashboard
+# 📂 DASHBOARD
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [dashboard](/frontend/src/pages/dashboard)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dashboard** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > pages > dashboard`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Pages` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Pages`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dashboard"]
-  Root --> dashboardcomponenthtml["📄 dashboard.component.html"]
-  Root --> dashboardcomponentscss["📄 dashboard.component.scss"]
-  Root --> dashboardcomponentts["📄 dashboard.component.ts"]
-  Root --> indexts["📄 index.ts"]
+    Root[dashboard]
+    Root --> F0[📄 index.ts]
+    Root --> F1[📄 dashboard.component.scss]
+    Root --> F2[📄 dashboard.component.html]
+    Root --> F3[📄 dashboard.component.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `dashboard.component.html` | Template | Visual layout and structural HTML. | N/A |
-| `dashboard.component.scss` | Stylesheet | Luxury styling and layout logic. | N/A |
-| `dashboard.component.ts` | Component | UI rendering and component-level state. | @angular |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📄 dashboard.component.scss` | `.scss` | Component logic | `None` |
+| `📄 dashboard.component.html` | `.html` | Component logic | `None` |
+| `📄 dashboard.component.ts` | `.ts` | Component logic | `@angular/core, @entities/treatments/treatments.service, @entities/user/user.service, @angular/common, @entities/veil/veil.service, @entities/gallery/gallery.service` |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@angular/core`
+- `@entities/treatments/treatments.service`
+- `@entities/user/user.service`
 - `@angular/common`
-- `./dashboard.component`
+- `@entities/veil/veil.service`
+- `@entities/gallery/gallery.service`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dashboard.component';
+// Example usage context
+import { ... } from './index';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate index logic into your feature.
 ```

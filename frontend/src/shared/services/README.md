@@ -1,50 +1,48 @@
-# 🛠️ services
+# 📂 SERVICES
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [services](/frontend/src/shared/services)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **services** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Shared - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > shared > services`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Shared` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Shared`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["🛠️ services"]
-  Root --> authservicets["📄 auth.service.ts"]
-  Root --> errorservicets["📄 error.service.ts"]
-  Root --> imageservicets["📄 image.service.ts"]
-  Root --> indexts["📄 index.ts"]
-  Root --> telegramservicets["📄 telegram.service.ts"]
+    Root[services]
+    Root --> F0[📄 auth.service.ts]
+    Root --> F1[📄 telegram.service.ts]
+    Root --> F2[📄 index.ts]
+    Root --> F3[📄 error.service.ts]
+    Root --> F4[📄 image.service.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `auth.service.ts` | Service | Business logic and state management. | @angular, @core, @shared |
-| `error.service.ts` | Service | Business logic and state management. | @angular |
-| `image.service.ts` | Service | Business logic and state management. | @angular |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-| `telegram.service.ts` | Service | Business logic and state management. | @angular, @src |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 auth.service.ts` | `.ts` | Service logic | `@core/constants, @angular/core, @shared/models, @angular/router, @angular/common/http` |
+| `📄 telegram.service.ts` | `.ts` | Service logic | `@angular/core, @src/types/telegram` |
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📄 error.service.ts` | `.ts` | Service logic | `@angular/core` |
+| `📄 image.service.ts` | `.ts` | Service logic | `@angular/core` |
 
-## 🔗 Dependencies
-- `@angular/common/http`
-- `@angular/core`
-- `@angular/router`
+## 🔗 DEPENDENCIES
 - `@core/constants`
+- `@angular/core`
 - `@shared/models`
-- `rxjs`
-- `./telegram.service`
-- `./auth.service`
-- `./error.service`
-- `./image.service`
+- `@angular/router`
 - `@src/types/telegram`
+- `@angular/common/http`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './auth.service';
+// Example usage context
+import { ... } from './auth.service';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate auth.service logic into your feature.
 ```

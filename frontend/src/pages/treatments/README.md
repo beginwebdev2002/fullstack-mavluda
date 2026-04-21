@@ -1,44 +1,51 @@
-# 📁 treatments
+# 📂 TREATMENTS
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [treatments](/frontend/src/pages/treatments)
+> 💎 **Mavluda Beauty - Luxury Professional Architecture**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
+### 📍 Breadcrumb Navigation
+`. > frontend > src > pages > treatments`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+This directory encapsulates `Pages` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+
+**FSD / Architecture Layer:** `Pages`
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 treatments"]
-  Root --> components["📁 components"]
+    Root[treatments]
+    Root --> F0[📄 treatments.component.scss]
+    Root --> F1[📂 components]
+    Root --> F2[📄 treatments.component.html]
+    Root --> F3[📄 index.ts]
+    Root --> F4[📄 treatments.component.ts]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-| `treatments.component.html` | Template | Visual layout and structural HTML. | N/A |
-| `treatments.component.scss` | Stylesheet | Luxury styling and layout logic. | N/A |
-| `treatments.component.ts` | Component | UI rendering and component-level state. | @angular, @features, @entities, @shared, @environments |
+## 📄 FILE REGISTRY
 
+| Item Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `📄 treatments.component.scss` | `.scss` | Component logic | `None` |
+| `📁 components` | `Directory` | Subdirectory logic grouping | `None` |
+| `📄 treatments.component.html` | `.html` | Component logic | `None` |
+| `📄 index.ts` | `.ts` | General functionality | `None` |
+| `📄 treatments.component.ts` | `.ts` | Component logic | `@environments/environment, @angular/core, @angular/common, @angular/forms, @entities/admin-settings, @shared/lib, @entities/treatments, @features/treatments, @shared/ui` |
 
-## 🔗 Dependencies
-- `./treatments.component`
+## 🔗 DEPENDENCIES
+- `@environments/environment`
 - `@angular/core`
+- `@entities/admin-settings`
 - `@angular/common`
 - `@angular/forms`
-- `./components/treatment-form/treatment-form.component`
-- `@features/treatments`
-- `@entities/treatments`
-- `@shared/ui`
-- `@environments/environment`
 - `@shared/lib`
+- `@features/treatments`
+- `@shared/ui`
+- `@entities/treatments`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './index';
+// Example usage context
+import { ... } from './index';
 
-// Integrate into the application architecture
-relevantMember.execute();
+// Integrate index logic into your feature.
 ```
