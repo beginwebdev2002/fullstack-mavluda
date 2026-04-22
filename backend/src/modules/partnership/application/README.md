@@ -4,32 +4,30 @@
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 application"]
-  Root --> partnershipservicets["📄 partnership.service.ts"]
+  Root --> partnership_service_ts["📄 partnership.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.service.ts` | Service | Business logic and state management. | @nestjs |
-
+| `partnership.service.ts` | TypeScript | Encapsulates business logic and data access for partnership.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `@nestjs/common`
 - `../domain/partnership.entity`
 - `../infrastructure/repositories/partnership.repository`
 - `../presentation/dto/create-partnership.dto`
 - `../presentation/dto/update-partnership.dto`
+- `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './partnership.service';
+import { relevantMember } from './application';
 
 // Integrate into the application architecture
 relevantMember.execute();

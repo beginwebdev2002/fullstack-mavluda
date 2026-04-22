@@ -4,32 +4,29 @@
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **repositories** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 repositories"]
-  Root --> treatmentsrepositoryts["📄 treatments.repository.ts"]
+  Root --> treatments_repository_ts["📄 treatments.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.repository.ts` | File | Core logic and utilities for this domain. | @nestjs |
-
+| `treatments.repository.ts` | TypeScript | Provides core logic and orchestration for treatments.repository.ts. | @nestjs |
 
 ## 🔗 Dependencies
+- `../../domain/treatments.entity`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 - `mongoose`
-- `../../domain/treatments.entity`
-- `../schemas/treatments.schema`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './treatments.repository';
+import { relevantMember } from './repositories';
 
 // Integrate into the application architecture
 relevantMember.execute();

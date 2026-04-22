@@ -9,16 +9,15 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 decorators"]
-  Root --> publicdecoratorts["📄 public.decorator.ts"]
-  Root --> rolesdecoratorts["📄 roles.decorator.ts"]
+  Root --> public_decorator_ts["📄 public.decorator.ts"]
+  Root --> roles_decorator_ts["📄 roles.decorator.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `public.decorator.ts` | File | Core logic and utilities for this domain. | @nestjs |
-| `roles.decorator.ts` | File | Core logic and utilities for this domain. | @nestjs |
-
+| `public.decorator.ts` | TypeScript | Provides core logic and orchestration for public.decorator.ts. | @nestjs |
+| `roles.decorator.ts` | TypeScript | Provides core logic and orchestration for roles.decorator.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `@nestjs/common`
@@ -26,7 +25,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './public.decorator';
+import { relevantMember } from './decorators';
 
 // Integrate into the application architecture
 relevantMember.execute();

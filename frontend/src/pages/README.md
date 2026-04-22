@@ -1,15 +1,16 @@
-# 📄 pages
+# 📁 pages
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages)
 
+**FSD Layer:** Page
+
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **pages** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📄 pages"]
+  Root["📁 pages"]
   Root --> about["📁 about"]
   Root --> auth["📁 auth"]
   Root --> clients["📁 clients"]
@@ -19,23 +20,25 @@ graph TD
   Root --> portfolio["📁 portfolio"]
   Root --> settings["📁 settings"]
   Root --> treatments["📁 treatments"]
-  Root --> treatmentscatalog["📁 treatments-catalog"]
-  Root --> userhome["📁 user-home"]
-  Root --> userprofile["📁 user-profile"]
+  Root --> treatments-catalog["📁 treatments-catalog"]
+  Root --> user-home["📁 user-home"]
+  Root --> user-profile["📁 user-profile"]
   Root --> veil["📁 veil"]
-  Root --> veilscatalog["📁 veils-catalog"]
+  Root --> veils-catalog["📁 veils-catalog"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
-
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+- No external dependencies.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './pages';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

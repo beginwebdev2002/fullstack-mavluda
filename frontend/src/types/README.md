@@ -9,22 +9,21 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 types"]
-  Root --> telegramts["📄 telegram.ts"]
+  Root --> telegram_ts["📄 telegram.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `telegram.ts` | File | Core logic and utilities for this domain. | N/A |
-
+| `telegram.ts` | TypeScript | Provides core logic and orchestration for telegram.ts. | N/A |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+- No external dependencies.
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './telegram';
+import { relevantMember } from './types';
 
 // Integrate into the application architecture
 relevantMember.execute();

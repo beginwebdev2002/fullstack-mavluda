@@ -40,3 +40,12 @@ dist-ssr
 # Stop gitignore errors
 !README.md
 !**/README.md
+
+# Ignore all markdown files by default
+*.md
+
+# Except essential files
+!README.md
+!**/README.md
+!GEMINI.md
+!AGENTS.md

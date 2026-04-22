@@ -2,39 +2,38 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [gallery](/frontend/src/pages/gallery) > [ui](/frontend/src/pages/gallery/ui) > [gallery-form](/frontend/src/pages/gallery/ui/gallery-form)
 
+**FSD Layer:** Page
+
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **gallery-form** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 gallery-form"]
-  Root --> galleryformcomponenthtml["📄 gallery-form.component.html"]
-  Root --> galleryformcomponentts["📄 gallery-form.component.ts"]
+  Root --> gallery_form_component_html["📄 gallery-form.component.html"]
+  Root --> gallery_form_component_ts["📄 gallery-form.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery-form.component.html` | Template | Visual layout and structural HTML. | N/A |
-| `gallery-form.component.ts` | Component | UI rendering and component-level state. | @angular, @shared, @features, @environments |
-
+| `gallery-form.component.html` | Template | Structural template and layout for gallery-form.component.html. | N/A |
+| `gallery-form.component.ts` | TypeScript | UI component logic and state management for gallery-form.component.ts. | @angular, @environments, @features, @shared |
 
 ## 🔗 Dependencies
 - `@angular/common`
-- `@angular/core`
 - `@angular/forms/signals`
-- `@shared/models`
-- `@shared/lib`
-- `@features/gallery`
-- `@shared/ui`
 - `@environments/environment`
+- `@features/gallery`
+- `@shared/lib`
+- `@shared/models`
+- `@shared/ui`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './gallery-form.component';
+import { relevantMember } from './gallery-form';
 
 // Integrate into the application architecture
 relevantMember.execute();

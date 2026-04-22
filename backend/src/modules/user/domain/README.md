@@ -4,28 +4,26 @@
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **domain** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 domain"]
-  Root --> userentityts["📄 user.entity.ts"]
+  Root --> user_entity_ts["📄 user.entity.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.entity.ts` | Entity/Model | Data structure and schema definitions. | N/A |
-
+| `user.entity.ts` | TypeScript | Provides core logic and orchestration for user.entity.ts. | N/A |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+- No external dependencies.
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './user.entity';
+import { relevantMember } from './domain';
 
 // Integrate into the application architecture
 relevantMember.execute();

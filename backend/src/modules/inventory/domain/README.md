@@ -4,28 +4,26 @@
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **domain** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 domain"]
-  Root --> inventoryentityts["📄 inventory.entity.ts"]
+  Root --> inventory_entity_ts["📄 inventory.entity.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.entity.ts` | Entity/Model | Data structure and schema definitions. | N/A |
-
+| `inventory.entity.ts` | TypeScript | Provides core logic and orchestration for inventory.entity.ts. | N/A |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+- No external dependencies.
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './inventory.entity';
+import { relevantMember } from './domain';
 
 // Integrate into the application architecture
 relevantMember.execute();

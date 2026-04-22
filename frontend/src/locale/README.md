@@ -9,19 +9,26 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 locale"]
-  Root --> Empty["(Empty / No recognized files)"]
+  Root --> messages_ru_xlf["📄 messages.ru.xlf"]
+  Root --> messages_tj_xlf["📄 messages.tj.xlf"]
+  Root --> messages_xlf["📄 messages.xlf"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
-
+| `messages.ru.xlf` | File | Provides core logic and orchestration for messages.ru.xlf. | N/A |
+| `messages.tj.xlf` | File | Provides core logic and orchestration for messages.tj.xlf. | N/A |
+| `messages.xlf` | File | Provides core logic and orchestration for messages.xlf. | N/A |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+- No external dependencies.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './locale';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

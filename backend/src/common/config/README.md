@@ -1,4 +1,4 @@
-# 🔧 config
+# 📁 config
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [config](/backend/src/common/config)
 
@@ -8,35 +8,33 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["🔧 config"]
-  Root --> appconfigmodulets["📄 app-config.module.ts"]
-  Root --> appconfigservicets["📄 app-config.service.ts"]
-  Root --> configurationts["📄 configuration.ts"]
-  Root --> envvalidationts["📄 env.validation.ts"]
+  Root["📁 config"]
+  Root --> app_config_module_ts["📄 app-config.module.ts"]
+  Root --> app_config_service_ts["📄 app-config.service.ts"]
+  Root --> configuration_ts["📄 configuration.ts"]
+  Root --> env_validation_ts["📄 env.validation.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app-config.module.ts` | Module | Core logic and utilities for this domain. | @nestjs |
-| `app-config.service.ts` | Service | Business logic and state management. | @nestjs |
-| `configuration.ts` | File | Core logic and utilities for this domain. | N/A |
-| `env.validation.ts` | File | Core logic and utilities for this domain. | N/A |
-
+| `app-config.module.ts` | TypeScript | Defines the architectural module boundaries for app-config.module.ts. | @nestjs |
+| `app-config.service.ts` | TypeScript | Encapsulates business logic and data access for app-config.service.ts. | @nestjs |
+| `configuration.ts` | TypeScript | Provides core logic and orchestration for configuration.ts. | N/A |
+| `env.validation.ts` | TypeScript | Provides core logic and orchestration for env.validation.ts. | N/A |
 
 ## 🔗 Dependencies
+- `./app-config.service`
+- `./configuration`
+- `./env.validation`
 - `@nestjs/common`
 - `@nestjs/config`
-- `./app-config.service`
-- `./env.validation`
-- `./configuration`
 - `class-transformer`
-- `class-validator`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './app-config.module';
+import { relevantMember } from './config';
 
 // Integrate into the application architecture
 relevantMember.execute();

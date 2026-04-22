@@ -9,14 +9,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 database"]
-  Root --> databasemodulets["📄 database.module.ts"]
+  Root --> database_module_ts["📄 database.module.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `database.module.ts` | Module | Core logic and utilities for this domain. | @nestjs |
-
+| `database.module.ts` | TypeScript | Defines the architectural module boundaries for database.module.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `@nestjs/common`
@@ -26,7 +25,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './database.module';
+import { relevantMember } from './database';
 
 // Integrate into the application architecture
 relevantMember.execute();

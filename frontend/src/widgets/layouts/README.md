@@ -2,48 +2,46 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [layouts](/frontend/src/widgets/layouts)
 
+**FSD Layer:** Widget
+
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **layouts** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Widgets - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 layouts"]
-  Root --> adminlayoutcomponenthtml["📄 admin-layout.component.html"]
-  Root --> adminlayoutcomponentscss["📄 admin-layout.component.scss"]
-  Root --> adminlayoutcomponentts["📄 admin-layout.component.ts"]
-  Root --> indexts["📄 index.ts"]
-  Root --> userlayoutcomponenthtml["📄 user-layout.component.html"]
-  Root --> userlayoutcomponentscss["📄 user-layout.component.scss"]
-  Root --> userlayoutcomponentts["📄 user-layout.component.ts"]
+  Root --> admin_layout_component_html["📄 admin-layout.component.html"]
+  Root --> admin_layout_component_scss["📄 admin-layout.component.scss"]
+  Root --> admin_layout_component_ts["📄 admin-layout.component.ts"]
+  Root --> index_ts["📄 index.ts"]
+  Root --> user_layout_component_html["📄 user-layout.component.html"]
+  Root --> user_layout_component_scss["📄 user-layout.component.scss"]
+  Root --> user_layout_component_ts["📄 user-layout.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-layout.component.html` | Template | Visual layout and structural HTML. | N/A |
-| `admin-layout.component.scss` | Stylesheet | Luxury styling and layout logic. | N/A |
-| `admin-layout.component.ts` | Component | UI rendering and component-level state. | @angular, @widgets |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-| `user-layout.component.html` | Template | Visual layout and structural HTML. | N/A |
-| `user-layout.component.scss` | Stylesheet | Luxury styling and layout logic. | N/A |
-| `user-layout.component.ts` | Component | UI rendering and component-level state. | @angular |
-
+| `admin-layout.component.html` | Template | Structural template and layout for admin-layout.component.html. | N/A |
+| `admin-layout.component.scss` | Stylesheet | Luxury styling and visual presentation for admin-layout.component.scss. | N/A |
+| `admin-layout.component.ts` | TypeScript | UI component logic and state management for admin-layout.component.ts. | @angular, @widgets |
+| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `user-layout.component.html` | Template | Structural template and layout for user-layout.component.html. | N/A |
+| `user-layout.component.scss` | Stylesheet | Luxury styling and visual presentation for user-layout.component.scss. | N/A |
+| `user-layout.component.ts` | TypeScript | UI component logic and state management for user-layout.component.ts. | @angular |
 
 ## 🔗 Dependencies
+- `@angular/common`
 - `@angular/core`
 - `@angular/router`
-- `@widgets/sidebar`
 - `@widgets/header`
-- `./admin-layout.component`
-- `./user-layout.component`
-- `@angular/common`
+- `@widgets/sidebar`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './admin-layout.component';
+import { relevantMember } from './layouts';
 
 // Integrate into the application architecture
 relevantMember.execute();

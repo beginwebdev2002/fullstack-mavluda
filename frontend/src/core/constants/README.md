@@ -9,25 +9,23 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 constants"]
-  Root --> apiendpointsts["📄 api-endpoints.ts"]
-  Root --> indexts["📄 index.ts"]
+  Root --> api_endpoints_ts["📄 api-endpoints.ts"]
+  Root --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `api-endpoints.ts` | File | Core logic and utilities for this domain. | @shared |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-
+| `api-endpoints.ts` | TypeScript | Provides core logic and orchestration for api-endpoints.ts. | @shared |
+| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
 - `@shared/lib`
-- `./api-endpoints`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './api-endpoints';
+import { relevantMember } from './constants';
 
 // Integrate into the application architecture
 relevantMember.execute();

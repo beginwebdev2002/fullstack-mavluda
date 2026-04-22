@@ -4,20 +4,18 @@
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **schemas** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 schemas"]
-  Root --> partnershipschemats["📄 partnership.schema.ts"]
+  Root --> partnership_schema_ts["📄 partnership.schema.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.schema.ts` | Entity/Model | Data structure and schema definitions. | @nestjs |
-
+| `partnership.schema.ts` | TypeScript | Provides core logic and orchestration for partnership.schema.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `@nestjs/mongoose`
@@ -26,7 +24,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './partnership.schema';
+import { relevantMember } from './schemas';
 
 // Integrate into the application architecture
 relevantMember.execute();

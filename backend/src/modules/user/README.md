@@ -4,7 +4,6 @@
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **user** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
@@ -14,31 +13,27 @@ graph TD
   Root --> domain["📁 domain"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
+  Root --> index_ts["📄 index.ts"]
+  Root --> user_module_ts["📄 user.module.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-| `user.module.ts` | Module | Core logic and utilities for this domain. | @nestjs |
-
+| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `user.module.ts` | TypeScript | Defines the architectural module boundaries for user.module.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `./application/user.service`
-- `./domain/user.entity`
 - `./infrastructure/repositories/user.repository`
-- `./infrastructure/schemas/user.schema`
-- `./presentation/dto/create-user.dto`
-- `./presentation/dto/update-user.dto`
-- `./user.module`
+- `./presentation/user.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
-- `./presentation/user.controller`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './index';
+import { relevantMember } from './user';
 
 // Integrate into the application architecture
 relevantMember.execute();

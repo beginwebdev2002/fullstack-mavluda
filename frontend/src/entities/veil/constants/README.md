@@ -2,30 +2,30 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [veil](/frontend/src/entities/veil) > [constants](/frontend/src/entities/veil/constants)
 
+**FSD Layer:** Entity
+
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 constants"]
-  Root --> veilconstantsts["📄 veil.constants.ts"]
+  Root --> veil_constants_ts["📄 veil.constants.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.constants.ts` | File | Core logic and utilities for this domain. | N/A |
-
+| `veil.constants.ts` | TypeScript | Provides core logic and orchestration for veil.constants.ts. | N/A |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+- No external dependencies.
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './veil.constants';
+import { relevantMember } from './constants';
 
 // Integrate into the application architecture
 relevantMember.execute();

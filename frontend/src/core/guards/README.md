@@ -9,30 +9,27 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 guards"]
-  Root --> adminguardts["📄 admin.guard.ts"]
-  Root --> authguardts["📄 auth.guard.ts"]
-  Root --> indexts["📄 index.ts"]
+  Root --> admin_guard_ts["📄 admin.guard.ts"]
+  Root --> auth_guard_ts["📄 auth.guard.ts"]
+  Root --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin.guard.ts` | File | Core logic and utilities for this domain. | @angular, @entities |
-| `auth.guard.ts` | File | Core logic and utilities for this domain. | @angular, @entities |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-
+| `admin.guard.ts` | TypeScript | Provides core logic and orchestration for admin.guard.ts. | @angular, @entities |
+| `auth.guard.ts` | TypeScript | Provides core logic and orchestration for auth.guard.ts. | @angular, @entities |
+| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
 - `@angular/core`
 - `@angular/router`
 - `@entities/user`
-- `./admin.guard`
-- `./auth.guard`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './admin.guard';
+import { relevantMember } from './guards';
 
 // Integrate into the application architecture
 relevantMember.execute();

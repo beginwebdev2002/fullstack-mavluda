@@ -1,4 +1,4 @@
-# 💎 common
+# 📁 common
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common)
 
@@ -8,7 +8,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["💎 common"]
+  Root["📁 common"]
   Root --> config["📁 config"]
   Root --> database["📁 database"]
   Root --> decorators["📁 decorators"]
@@ -20,13 +20,15 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
-
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+- No external dependencies.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './common';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

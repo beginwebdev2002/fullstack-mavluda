@@ -4,23 +4,21 @@
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **presentation** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 presentation"]
   Root --> dto["📁 dto"]
+  Root --> partnership_controller_ts["📄 partnership.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.controller.ts` | Controller | Request handling and routing. | @nestjs |
-
+| `partnership.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for partnership.controller.ts. | N/A |
 
 ## 🔗 Dependencies
-- `@nestjs/common`
 - `../application/partnership.service`
 - `./dto/create-partnership.dto`
 - `./dto/update-partnership.dto`
@@ -28,7 +26,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './partnership.controller';
+import { relevantMember } from './presentation';
 
 // Integrate into the application architecture
 relevantMember.execute();

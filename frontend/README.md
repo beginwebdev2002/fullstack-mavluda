@@ -1,4 +1,4 @@
-# 🎨 frontend
+# 📁 frontend
 
 [Root](/.) > [frontend](/frontend)
 
@@ -8,30 +8,42 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["🎨 frontend"]
+  Root["📁 frontend"]
+  Root --> public["📁 public"]
   Root --> src["📁 src"]
+  Root --> angular_json["📄 angular.json"]
+  Root --> index_html["📄 index.html"]
+  Root --> index_tsx["📄 index.tsx"]
+  Root --> leaflet_css["📄 leaflet.css"]
+  Root --> metadata_json["📄 metadata.json"]
+  Root --> package_lock_json["📄 package-lock.json"]
+  Root --> package_json["📄 package.json"]
+  Root --> tsconfig_json["📄 tsconfig.json"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `angular.json` | File | Core logic and utilities for this domain. | N/A |
-| `index.html` | Template | Visual layout and structural HTML. | N/A |
-| `leaflet.css` | Stylesheet | Luxury styling and layout logic. | N/A |
-| `metadata.json` | File | Core logic and utilities for this domain. | N/A |
-| `package-lock.json` | File | Core logic and utilities for this domain. | N/A |
-| `package.json` | Manifest | Project level settings and dependencies. | N/A |
-| `tsconfig.json` | File | Core logic and utilities for this domain. | N/A |
-
+| `angular.json` | JSON Configuration | Provides core logic and orchestration for angular.json. | N/A |
+| `index.html` | Template | Provides core logic and orchestration for index.html. | N/A |
+| `index.tsx` | File | Provides core logic and orchestration for index.tsx. | @angular |
+| `leaflet.css` | Stylesheet | Provides core logic and orchestration for leaflet.css. | N/A |
+| `metadata.json` | JSON Configuration | Provides core logic and orchestration for metadata.json. | N/A |
+| `package-lock.json` | JSON Configuration | Provides core logic and orchestration for package-lock.json. | N/A |
+| `package.json` | JSON Configuration | Provides core logic and orchestration for package.json. | N/A |
+| `tsconfig.json` | JSON Configuration | Provides core logic and orchestration for tsconfig.json. | N/A |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+- `./src/app.component`
+- `./src/app/app.config`
+- `@angular/platform-browser`
+- `leaflet/dist/leaflet.css`
 
 ## 🛠️ Usage
-```html
-<!-- Example integration within Mavluda Beauty layouts -->
-<!-- Rendered structural view -->
-<div class="luxury-container">
-  <!-- Content goes here -->
-</div>
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './frontend';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

@@ -4,32 +4,29 @@
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **repositories** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 repositories"]
-  Root --> inventoryrepositoryts["📄 inventory.repository.ts"]
+  Root --> inventory_repository_ts["📄 inventory.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.repository.ts` | File | Core logic and utilities for this domain. | @nestjs |
-
+| `inventory.repository.ts` | TypeScript | Provides core logic and orchestration for inventory.repository.ts. | @nestjs |
 
 ## 🔗 Dependencies
+- `../../domain/inventory.entity`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 - `mongoose`
-- `../../domain/inventory.entity`
-- `../schemas/inventory.schema`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './inventory.repository';
+import { relevantMember } from './repositories';
 
 // Integrate into the application architecture
 relevantMember.execute();

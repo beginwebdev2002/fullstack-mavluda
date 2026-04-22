@@ -2,30 +2,30 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [gallery](/frontend/src/entities/gallery) > [constants](/frontend/src/entities/gallery/constants)
 
+**FSD Layer:** Entity
+
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 constants"]
-  Root --> galleryconstantsts["📄 gallery.constants.ts"]
+  Root --> gallery_constants_ts["📄 gallery.constants.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.constants.ts` | File | Core logic and utilities for this domain. | N/A |
-
+| `gallery.constants.ts` | TypeScript | Provides core logic and orchestration for gallery.constants.ts. | N/A |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+- No external dependencies.
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './gallery.constants';
+import { relevantMember } from './constants';
 
 // Integrate into the application architecture
 relevantMember.execute();

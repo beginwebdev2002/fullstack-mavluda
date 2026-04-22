@@ -1,4 +1,4 @@
-# 🧠 core
+# 📁 core
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core)
 
@@ -8,7 +8,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["🧠 core"]
+  Root["📁 core"]
   Root --> constants["📁 constants"]
   Root --> guards["📁 guards"]
   Root --> interceptors["📁 interceptors"]
@@ -17,13 +17,15 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
-
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+- No external dependencies.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './core';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

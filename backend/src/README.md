@@ -1,4 +1,4 @@
-# 💻 src
+# 📁 src
 
 [Root](/.) > [backend](/backend) > [src](/backend/src)
 
@@ -8,48 +8,52 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["💻 src"]
+  Root["📁 src"]
   Root --> common["📁 common"]
   Root --> modules["📁 modules"]
+  Root --> app_controller_spec_ts["📄 app.controller.spec.ts"]
+  Root --> app_controller_ts["📄 app.controller.ts"]
+  Root --> app_module_ts["📄 app.module.ts"]
+  Root --> app_service_ts["📄 app.service.ts"]
+  Root --> main_ts["📄 main.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.controller.spec.ts` | Test | Ensures code quality and regression prevention. | @nestjs |
-| `app.controller.ts` | Controller | Request handling and routing. | @nestjs |
-| `app.module.ts` | Module | Core logic and utilities for this domain. | @nestjs, @modules |
-| `app.service.ts` | Service | Business logic and state management. | @nestjs |
-| `main.ts` | File | Core logic and utilities for this domain. | @nestjs |
-
+| `app.controller.spec.ts` | TypeScript | Unit testing and quality assurance for app.controller.spec.ts. | @nestjs |
+| `app.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for app.controller.ts. | @nestjs |
+| `app.module.ts` | TypeScript | Defines the architectural module boundaries for app.module.ts. | @modules, @nestjs |
+| `app.service.ts` | TypeScript | Encapsulates business logic and data access for app.service.ts. | @nestjs |
+| `main.ts` | TypeScript | Provides core logic and orchestration for main.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `@nestjs/testing`
 - `./app.controller`
+- `./app.module`
 - `./app.service`
-- `@nestjs/common`
-- `@nestjs/serve-static`
-- `path`
 - `./common/config/app-config.module`
 - `./common/database/database.module`
-- `@modules/user`
 - `@modules/admin-settings`
-- `@modules/veil`
-- `@modules/treatments`
-- `@modules/gallery`
 - `@modules/auth`
-- `@modules/payment`
 - `@modules/booking`
+- `@modules/gallery`
 - `@modules/inventory`
 - `@modules/partnership`
-- `@nestjs/core`
+- `@modules/payment`
+- `@modules/treatments`
+- `@modules/user`
+- `@modules/veil`
+- `@nestjs/common`
 - `@nestjs/config`
-- `./app.module`
+- `@nestjs/core`
+- `@nestjs/serve-static`
+- `@nestjs/testing`
+- `path`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './app.controller.spec';
+import { relevantMember } from './src';
 
 // Integrate into the application architecture
 relevantMember.execute();

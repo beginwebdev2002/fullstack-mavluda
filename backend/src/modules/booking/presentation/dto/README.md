@@ -4,31 +4,29 @@
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 dto"]
-  Root --> createbookingdtots["📄 create-booking.dto.ts"]
-  Root --> updatebookingdtots["📄 update-booking.dto.ts"]
+  Root --> create_booking_dto_ts["📄 create-booking.dto.ts"]
+  Root --> update_booking_dto_ts["📄 update-booking.dto.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-booking.dto.ts` | DTO | Data Transfer Object for validation. | N/A |
-| `update-booking.dto.ts` | DTO | Data Transfer Object for validation. | @nestjs |
-
+| `create-booking.dto.ts` | TypeScript | Provides core logic and orchestration for create-booking.dto.ts. | N/A |
+| `update-booking.dto.ts` | TypeScript | Provides core logic and orchestration for update-booking.dto.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `@nestjs/mapped-types`
 - `./create-booking.dto`
+- `@nestjs/mapped-types`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './create-booking.dto';
+import { relevantMember } from './dto';
 
 // Integrate into the application architecture
 relevantMember.execute();

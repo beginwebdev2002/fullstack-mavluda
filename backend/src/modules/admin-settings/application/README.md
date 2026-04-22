@@ -4,30 +4,28 @@
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 application"]
-  Root --> adminsettingsservicets["📄 admin-settings.service.ts"]
+  Root --> admin_settings_service_ts["📄 admin-settings.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.service.ts` | Service | Business logic and state management. | @nestjs |
-
+| `admin-settings.service.ts` | TypeScript | Encapsulates business logic and data access for admin-settings.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `@nestjs/common`
 - `../domain/admin-settings.entity`
 - `../infrastructure/repositories/admin-settings.repository`
+- `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './admin-settings.service';
+import { relevantMember } from './application';
 
 // Integrate into the application architecture
 relevantMember.execute();

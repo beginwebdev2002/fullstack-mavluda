@@ -1,36 +1,42 @@
-# 👑 Mavluda Beauty Root
+# 📁 Mavluda Beauty Repository
 
 [Root](/.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Mavluda Beauty Root** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **Mavluda Beauty Repository** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["👑 Mavluda Beauty Root"]
-  Root --> agent["📁 .agent"]
-  Root --> gemini["📁 .gemini"]
-  Root --> github["📁 .github"]
-  Root --> jules["📁 .jules"]
+  Root["📁 Mavluda Beauty Repository"]
   Root --> backend["📁 backend"]
   Root --> frontend["📁 frontend"]
+  Root --> _env["📄 .env"]
+  Root --> _gitignore["📄 .gitignore"]
+  Root --> _gitignore_append["📄 .gitignore_append"]
+  Root --> GEMINI_md["📄 GEMINI.md"]
+  Root --> generate_readmes_py["📄 generate_readmes.py"]
+  Root --> generate_readmes_test_py["📄 generate_readmes_test.py"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `.env` | Configuration | Project level settings and dependencies. | N/A |
-| `.gitignore` | Configuration | Project level settings and dependencies. | N/A |
-| `.gitignore_append` | File | Core logic and utilities for this domain. | N/A |
-| `GEMINI.md` | File | Core logic and utilities for this domain. | N/A |
-| `generate_readmes.js` | File | Core logic and utilities for this domain. | N/A |
-
+| `.env` | File | Provides core logic and orchestration for .env. | N/A |
+| `.gitignore` | File | Provides core logic and orchestration for .gitignore. | N/A |
+| `.gitignore_append` | File | Provides core logic and orchestration for .gitignore_append. | N/A |
+| `GEMINI.md` | File | Provides core logic and orchestration for GEMINI.md. | N/A |
+| `generate_readmes.py` | File | Provides core logic and orchestration for generate_readmes.py. | N/A |
+| `generate_readmes_test.py` | File | Provides core logic and orchestration for generate_readmes_test.py. | N/A |
 
 ## 🔗 Dependencies
-- `./${tsFile.name.replace(/\.ts$/, `
+- No external dependencies.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './core';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```
