@@ -1,4 +1,13 @@
-import { Controller, Get, Body, Put, Post, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Body,
+  Put,
+  Post,
+  Delete,
+  NotFoundException,
+  InternalServerErrorException,
+} from '@nestjs/common';
 import { AdminSettingsService } from '../application/admin-settings.service';
 import { AdminSettings } from '../domain/admin-settings.entity';
 import { UpdateAdminSettingsDto } from './dto/update-admin-settings.dto';
@@ -10,35 +19,66 @@ export class AdminSettingsController {
 
   @Get()
   async getSettings(): Promise<AdminSettings | null> {
-    return this.adminSettingsService.getSettings();
+    try {
+      return await this.adminSettingsService.getSettings();
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Post()
   async createSettings(
     @Body() createAdminSettingsDto: CreateAdminSettingsDto,
   ): Promise<AdminSettings> {
-    // Cast to unknown then Omit to satisfy the compiler because DTO technically doesn't have 'id'
-    // but the service expects Omit<AdminSettings, 'id'> which matches the structure of the DTO
-    return this.adminSettingsService.createSettings(
-      createAdminSettingsDto as unknown as Omit<AdminSettings, 'id'>,
-    );
+    try {
+      return await this.adminSettingsService.createSettings(
+        createAdminSettingsDto as unknown as Omit<AdminSettings, 'id'>,
+      );
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Put()
   async updateSettings(
     @Body() updateAdminSettingsDto: UpdateAdminSettingsDto,
   ): Promise<AdminSettings> {
-    // Clean up undefined values
-    const settings = { ...updateAdminSettingsDto };
-    Object.keys(settings).forEach(
-      (key) => settings[key] === undefined && delete settings[key],
-    );
+    try {
+      const settings = { ...updateAdminSettingsDto };
+      Object.keys(settings).forEach(
+        (key) => settings[key] === undefined && delete settings[key],
+      );
 
-    return this.adminSettingsService.updateSettings(settings);
+      return await this.adminSettingsService.updateSettings(settings);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Delete()
   async deleteSettings(): Promise<boolean> {
-    return this.adminSettingsService.deleteSettings();
+    try {
+      return await this.adminSettingsService.deleteSettings();
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 }

@@ -14,6 +14,8 @@ import {
   Put,
   UploadedFiles,
   UseInterceptors,
+  NotFoundException,
+  InternalServerErrorException,
 } from '@nestjs/common';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
@@ -25,17 +27,35 @@ export class TreatmentsController {
 
   @Get('count')
   async count(): Promise<number> {
-    return this.treatmentsService.count();
+    try {
+      return await this.treatmentsService.count();
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Get()
   async findAll(): Promise<Treatments[]> {
-    return this.treatmentsService.findAll();
+    try {
+      return await this.treatmentsService.findAll();
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Get(':id')
   async findOne(@Param('id') id: string): Promise<Treatments> {
-    return this.treatmentsService.findOne(id);
+    try {
+      return await this.treatmentsService.findOne(id);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Post()
@@ -56,16 +76,20 @@ export class TreatmentsController {
     @Body() createTreatmentDto: CreateTreatmentDto,
     @UploadedFiles() files: Array<Express.Multer.File>,
   ): Promise<any> {
-    const imagePath =
-      files && files.length > 0
-        ? `/uploads/treatments/${files[0].filename}`
-        : '';
-    if (imagePath) {
-      createTreatmentDto.imageUrl = imagePath;
+    try {
+      const imagePath =
+        files && files.length > 0
+          ? `/uploads/treatments/${files[0].filename}`
+          : '';
+      if (imagePath) {
+        createTreatmentDto.imageUrl = imagePath;
+      }
+      return await this.treatmentsService.create(
+        createTreatmentDto as unknown as Omit<Treatments, 'id' | 'createdAt'>,
+      );
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
     }
-    return this.treatmentsService.create(
-      createTreatmentDto as unknown as Omit<Treatments, 'id' | 'createdAt'>,
-    );
   }
 
   @Put(':id')
@@ -87,23 +111,43 @@ export class TreatmentsController {
     @Body() updateTreatmentDto: UpdateTreatmentDto,
     @UploadedFiles() files: Array<Express.Multer.File>,
   ): Promise<Treatments> {
-    const imagePath =
-      files && files.length > 0
-        ? `/uploads/treatments/${files[0].filename}`
-        : null;
+    try {
+      const imagePath =
+        files && files.length > 0
+          ? `/uploads/treatments/${files[0].filename}`
+          : null;
 
-    if (imagePath) {
-      updateTreatmentDto.imageUrl = imagePath;
+      if (imagePath) {
+        updateTreatmentDto.imageUrl = imagePath;
+      }
+
+      return await this.treatmentsService.update(
+        id,
+        updateTreatmentDto as unknown as Partial<Treatments>,
+      );
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
     }
-
-    return this.treatmentsService.update(
-      id,
-      updateTreatmentDto as unknown as Partial<Treatments>,
-    );
   }
 
   @Delete(':id')
   async remove(@Param('id') id: string): Promise<void> {
-    return this.treatmentsService.remove(id);
+    try {
+      return await this.treatmentsService.remove(id);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 }

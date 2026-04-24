@@ -6,6 +6,8 @@ import {
   Patch,
   Param,
   Delete,
+  NotFoundException,
+  InternalServerErrorException,
 } from '@nestjs/common';
 import { BookingService } from '../application/booking.service';
 import { CreateBookingDto } from './dto/create-booking.dto';
@@ -16,27 +18,68 @@ export class BookingController {
   constructor(private readonly bookingService: BookingService) {}
 
   @Post()
-  create(@Body() createBookingDto: CreateBookingDto) {
-    return this.bookingService.create(createBookingDto);
+  async create(@Body() createBookingDto: CreateBookingDto) {
+    try {
+      return await this.bookingService.create(createBookingDto);
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Get()
-  findAll() {
-    return this.bookingService.findAll();
+  async findAll() {
+    try {
+      return await this.bookingService.findAll();
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.bookingService.findOne(id);
+  async findOne(@Param('id') id: string) {
+    try {
+      return await this.bookingService.findOne(id);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateBookingDto: UpdateBookingDto) {
-    return this.bookingService.update(id, updateBookingDto);
+  async update(
+    @Param('id') id: string,
+    @Body() updateBookingDto: UpdateBookingDto,
+  ) {
+    try {
+      return await this.bookingService.update(id, updateBookingDto);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.bookingService.remove(id);
+  async remove(@Param('id') id: string) {
+    try {
+      return await this.bookingService.remove(id);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 }
