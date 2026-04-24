@@ -1,41 +1,38 @@
-# 📁 payment
+# 📁 Mavluda Beauty payment
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [payment](/backend/src/modules/payment)
+[backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [payment](/backend/src/modules/payment)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **payment** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 payment"]
-  Root --> strategies["📁 strategies"]
+  payment["📁 payment"]
+  payment --> strategies["📁 strategies"]
+  payment --> index_ts["📄 index.ts"]
+  payment --> payment_controller_ts["📄 payment.controller.ts"]
+  payment --> payment_module_ts["📄 payment.module.ts"]
+  payment --> payment_service_ts["📄 payment.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-| `payment.controller.ts` | Controller | Request handling and routing. | @nestjs |
-| `payment.module.ts` | Module | Core logic and utilities for this domain. | @nestjs |
-| `payment.service.ts` | Service | Business logic and state management. | @nestjs |
+| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
+| `payment.controller.ts` | Controller | Handles HTTP requests and orchestrates responses. | `@nestjs/common` |
+| `payment.module.ts` | Module | Groups related capabilities and defines dependencies. | `@nestjs/common` |
+| `payment.service.ts` | Service | Encapsulates business logic and API calls. | `@nestjs/common` |
 
 
 ## 🔗 Dependencies
-- `./strategies/payment.strategy`
-- `./payment.service`
-- `./payment.module`
+**Path Aliases:**
 - `@nestjs/common`
-- `./payment.controller`
-- `./strategies/alif-pay.strategy`
-- `./strategies/mock-card.strategy`
+
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './index';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration for payment
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

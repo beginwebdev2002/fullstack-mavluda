@@ -1,45 +1,49 @@
-# 📁 gallery
+# 📁 Mavluda Beauty gallery
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [gallery](/frontend/src/pages/gallery)
+[frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [gallery](/frontend/src/pages/gallery)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
+
+> **FSD Layer**: `Pages` - Adhering to Feature Sliced Design principles.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 gallery"]
-  Root --> ui["📁 ui"]
+  gallery["📁 gallery"]
+  gallery --> ui["📁 ui"]
+  gallery --> gallery_component_html["📄 gallery.component.html"]
+  gallery --> gallery_component_scss["📄 gallery.component.scss"]
+  gallery --> gallery_component_ts["📄 gallery.component.ts"]
+  gallery --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.component.html` | Template | Visual layout and structural HTML. | N/A |
-| `gallery.component.scss` | Stylesheet | Luxury styling and layout logic. | N/A |
-| `gallery.component.ts` | Component | UI rendering and component-level state. | @angular, @entities, @shared, @environments |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+| `gallery.component.html` | Component | Renders UI and handles user interaction. | N/A |
+| `gallery.component.scss` | Component | Renders UI and handles user interaction. | N/A |
+| `gallery.component.ts` | Component | Renders UI and handles user interaction. | `@angular/core, @angular/common, @angular/forms, @entities/gallery, @entities/admin-settings, @shared/models, @shared/ui, @shared/lib/object, @shared/lib, @environments/environment` |
+| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
 
 
 ## 🔗 Dependencies
+**Path Aliases:**
 - `@angular/core`
 - `@angular/common`
 - `@angular/forms`
 - `@entities/gallery`
+- `@entities/admin-settings`
 - `@shared/models`
-- `./ui/gallery-form/gallery-form.component`
 - `@shared/ui`
 - `@shared/lib/object`
 - `@shared/lib`
 - `@environments/environment`
-- `./gallery.component`
+
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './gallery.component';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration for gallery
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

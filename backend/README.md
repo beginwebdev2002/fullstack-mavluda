@@ -1,6 +1,6 @@
-# ⚙️ backend
+# ⚙️ Mavluda Beauty backend
 
-[Root](/.) > [backend](/backend)
+[backend](/backend)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **backend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,29 +8,36 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["⚙️ backend"]
-  Root --> src["📁 src"]
-  Root --> test["📁 test"]
+  backend["⚙️ backend"]
+  backend --> src["📁 src"]
+  backend --> test["📁 test"]
+  backend --> _prettierrc["📄 .prettierrc"]
+  backend --> eslint_config_mjs["📄 eslint.config.mjs"]
+  backend --> nest_cli_json["📄 nest-cli.json"]
+  backend --> package_lock_json["📄 package-lock.json"]
+  backend --> package_json["📄 package.json"]
+  backend --> tsconfig_build_json["📄 tsconfig.build.json"]
+  backend --> tsconfig_json["📄 tsconfig.json"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `eslint.config.mjs` | File | Core logic and utilities for this domain. | @eslint |
-| `nest-cli.json` | File | Core logic and utilities for this domain. | N/A |
-| `package-lock.json` | File | Core logic and utilities for this domain. | N/A |
-| `package.json` | Manifest | Project level settings and dependencies. | N/A |
-| `tsconfig.build.json` | File | Core logic and utilities for this domain. | N/A |
-| `tsconfig.json` | File | Core logic and utilities for this domain. | N/A |
+| `.prettierrc` | File | Core logic and utilities for this domain. | N/A |
+| `eslint.config.mjs` | File | Core logic and utilities for this domain. | N/A |
+| `nest-cli.json` | Configuration | Project level settings and dependencies. | N/A |
+| `package-lock.json` | Configuration | Project level settings and dependencies. | N/A |
+| `package.json` | Configuration | Project level settings and dependencies. | N/A |
+| `tsconfig.build.json` | Configuration | Project level settings and dependencies. | N/A |
+| `tsconfig.json` | Configuration | Project level settings and dependencies. | N/A |
 
 
 ## 🔗 Dependencies
-- `@eslint/js`
-- `eslint-plugin-prettier/recommended`
-- `globals`
-- `typescript-eslint`
+No external or alias dependencies detected.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+```typescript
+// Example integration for backend
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

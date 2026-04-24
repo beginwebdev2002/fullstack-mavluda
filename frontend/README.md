@@ -1,6 +1,6 @@
-# 🎨 frontend
+# 🎨 Mavluda Beauty frontend
 
-[Root](/.) > [frontend](/frontend)
+[frontend](/frontend)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **frontend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,30 +8,38 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["🎨 frontend"]
-  Root --> src["📁 src"]
+  frontend["🎨 frontend"]
+  frontend --> public["📁 public"]
+  frontend --> src["📁 src"]
+  frontend --> angular_json["📄 angular.json"]
+  frontend --> index_html["📄 index.html"]
+  frontend --> index_tsx["📄 index.tsx"]
+  frontend --> leaflet_css["📄 leaflet.css"]
+  frontend --> metadata_json["📄 metadata.json"]
+  frontend --> package_lock_json["📄 package-lock.json"]
+  frontend --> package_json["📄 package.json"]
+  frontend --> tsconfig_json["📄 tsconfig.json"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `angular.json` | File | Core logic and utilities for this domain. | N/A |
-| `index.html` | Template | Visual layout and structural HTML. | N/A |
-| `leaflet.css` | Stylesheet | Luxury styling and layout logic. | N/A |
-| `metadata.json` | File | Core logic and utilities for this domain. | N/A |
-| `package-lock.json` | File | Core logic and utilities for this domain. | N/A |
-| `package.json` | Manifest | Project level settings and dependencies. | N/A |
-| `tsconfig.json` | File | Core logic and utilities for this domain. | N/A |
+| `angular.json` | Configuration | Project level settings and dependencies. | N/A |
+| `index.html` | Template | Core logic and utilities for this domain. | N/A |
+| `index.tsx` | File | Core logic and utilities for this domain. | N/A |
+| `leaflet.css` | Styles | Core logic and utilities for this domain. | N/A |
+| `metadata.json` | Configuration | Project level settings and dependencies. | N/A |
+| `package-lock.json` | Configuration | Project level settings and dependencies. | N/A |
+| `package.json` | Configuration | Project level settings and dependencies. | N/A |
+| `tsconfig.json` | Configuration | Project level settings and dependencies. | N/A |
 
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+No external or alias dependencies detected.
 
 ## 🛠️ Usage
-```html
-<!-- Example integration within Mavluda Beauty layouts -->
-<!-- Rendered structural view -->
-<div class="luxury-container">
-  <!-- Content goes here -->
-</div>
+```typescript
+// Example integration for frontend
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

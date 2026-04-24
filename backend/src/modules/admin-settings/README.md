@@ -1,45 +1,38 @@
-# 📁 admin-settings
+# 📁 Mavluda Beauty admin-settings
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings)
+[backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [admin-settings](/backend/src/modules/admin-settings)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **admin-settings** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 admin-settings"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
+  admin_settings["📁 admin-settings"]
+  admin_settings --> application["📁 application"]
+  admin_settings --> domain["📁 domain"]
+  admin_settings --> infrastructure["📁 infrastructure"]
+  admin_settings --> presentation["📁 presentation"]
+  admin_settings --> admin_settings_module_ts["📄 admin-settings.module.ts"]
+  admin_settings --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.module.ts` | Module | Core logic and utilities for this domain. | @nestjs |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+| `admin-settings.module.ts` | Module | Groups related capabilities and defines dependencies. | `@nestjs/common, @nestjs/mongoose` |
+| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
 
 
 ## 🔗 Dependencies
+**Path Aliases:**
 - `@nestjs/common`
 - `@nestjs/mongoose`
-- `./application/admin-settings.service`
-- `./infrastructure/repositories/admin-settings.repository`
-- `./infrastructure/schemas/admin-settings.schema`
-- `./presentation/admin-settings.controller`
-- `./domain/admin-settings.entity`
-- `./presentation/dto/create-admin-settings.dto`
-- `./presentation/dto/update-admin-settings.dto`
-- `./admin-settings.module`
+
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './admin-settings.module';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration for admin-settings
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

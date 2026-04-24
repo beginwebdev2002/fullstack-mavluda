@@ -1,32 +1,29 @@
-# 📁 domain
+# 🧠 Mavluda Beauty domain
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments) > [domain](/backend/src/modules/treatments/domain)
+[backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [treatments](/backend/src/modules/treatments) / [domain](/backend/src/modules/treatments/domain)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **domain** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> treatmentsentityts["📄 treatments.entity.ts"]
+  domain["🧠 domain"]
+  domain --> treatments_entity_ts["📄 treatments.entity.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.entity.ts` | Entity/Model | Data structure and schema definitions. | N/A |
+| `treatments.entity.ts` | Model/Schema | Defines persistence layer structure. | N/A |
 
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+No external or alias dependencies detected.
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './treatments.entity';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration for domain
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

@@ -1,41 +1,44 @@
-# 📄 pages
+# 📄 Mavluda Beauty pages
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages)
+[frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **pages** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
+
+> **FSD Layer**: `Pages` - Adhering to Feature Sliced Design principles.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📄 pages"]
-  Root --> about["📁 about"]
-  Root --> auth["📁 auth"]
-  Root --> clients["📁 clients"]
-  Root --> dashboard["📁 dashboard"]
-  Root --> gallery["📁 gallery"]
-  Root --> inventory["📁 inventory"]
-  Root --> portfolio["📁 portfolio"]
-  Root --> settings["📁 settings"]
-  Root --> treatments["📁 treatments"]
-  Root --> treatmentscatalog["📁 treatments-catalog"]
-  Root --> userhome["📁 user-home"]
-  Root --> userprofile["📁 user-profile"]
-  Root --> veil["📁 veil"]
-  Root --> veilscatalog["📁 veils-catalog"]
+  pages["📄 pages"]
+  pages --> about["📁 about"]
+  pages --> auth["📁 auth"]
+  pages --> clients["📁 clients"]
+  pages --> dashboard["📁 dashboard"]
+  pages --> gallery["📁 gallery"]
+  pages --> inventory["📁 inventory"]
+  pages --> portfolio["📁 portfolio"]
+  pages --> settings["📁 settings"]
+  pages --> treatments["📁 treatments"]
+  pages --> treatments_catalog["📁 treatments-catalog"]
+  pages --> user_home["📁 user-home"]
+  pages --> user_profile["📁 user-profile"]
+  pages --> veil["📁 veil"]
+  pages --> veils_catalog["📁 veils-catalog"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
+| *No files in this directory* | - | - | - |
 
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+No external or alias dependencies detected.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+```typescript
+// Example integration for pages
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

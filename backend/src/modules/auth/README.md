@@ -1,55 +1,52 @@
-# 📁 auth
+# 📁 Mavluda Beauty auth
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth)
+[backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [auth](/backend/src/modules/auth)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 auth"]
-  Root --> dto["📁 dto"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> interfaces["📁 interfaces"]
+  auth["📁 auth"]
+  auth --> dto["📁 dto"]
+  auth --> infrastructure["📁 infrastructure"]
+  auth --> interfaces["📁 interfaces"]
+  auth --> auth_controller_ts["📄 auth.controller.ts"]
+  auth --> auth_module_ts["📄 auth.module.ts"]
+  auth --> auth_service_ts["📄 auth.service.ts"]
+  auth --> index_ts["📄 index.ts"]
+  auth --> telegram_auth_service_ts["📄 telegram-auth.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth.controller.ts` | Controller | Request handling and routing. | @nestjs, @common |
-| `auth.module.ts` | Module | Core logic and utilities for this domain. | @nestjs, @modules, @common |
-| `auth.service.ts` | Service | Business logic and state management. | @nestjs, @modules |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-| `telegram-auth.service.ts` | Service | Business logic and state management. | @nestjs, @common, @modules |
+| `auth.controller.ts` | Controller | Handles HTTP requests and orchestrates responses. | `@nestjs/common, @common/decorators/public.decorator` |
+| `auth.module.ts` | Module | Groups related capabilities and defines dependencies. | `@nestjs/common, @modules/user, @nestjs/passport, @nestjs/jwt, @common/config/app-config.module, @common/config/app-config.service` |
+| `auth.service.ts` | Service | Encapsulates business logic and API calls. | `@nestjs/common, @modules/user, @nestjs/jwt` |
+| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
+| `telegram-auth.service.ts` | Service | Encapsulates business logic and API calls. | `@nestjs/common, @common/config/app-config.service, @modules/user` |
 
 
 ## 🔗 Dependencies
+**Path Aliases:**
 - `@nestjs/common`
-- `./telegram-auth.service`
-- `./auth.service`
-- `./dto/login.dto`
-- `./dto/register.dto`
 - `@common/decorators/public.decorator`
-- `./interfaces/auth-response.interface`
-- `./auth.controller`
 - `@modules/user`
 - `@nestjs/passport`
 - `@nestjs/jwt`
 - `@common/config/app-config.module`
 - `@common/config/app-config.service`
-- `./infrastructure/jwt.strategy`
+
+**External Packages:**
 - `bcrypt`
-- `./interfaces/jwt-payload.interface`
-- `./auth.module`
 - `crypto`
+
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './auth.controller';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration for auth
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

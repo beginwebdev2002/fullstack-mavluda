@@ -1,29 +1,30 @@
-# 📁 infrastructure
+# 🏗️ Mavluda Beauty infrastructure
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [infrastructure](/backend/src/modules/admin-settings/infrastructure)
+[backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [admin-settings](/backend/src/modules/admin-settings) / [infrastructure](/backend/src/modules/admin-settings/infrastructure)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **infrastructure** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 infrastructure"]
-  Root --> repositories["📁 repositories"]
-  Root --> schemas["📁 schemas"]
+  infrastructure["🏗️ infrastructure"]
+  infrastructure --> repositories["📁 repositories"]
+  infrastructure --> schemas["📁 schemas"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
+| *No files in this directory* | - | - | - |
 
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+No external or alias dependencies detected.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+```typescript
+// Example integration for infrastructure
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

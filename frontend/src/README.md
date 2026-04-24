@@ -1,6 +1,6 @@
-# 💻 src
+# 💻 Mavluda Beauty src
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src)
+[frontend](/frontend) / [src](/frontend/src)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **src** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,30 +8,37 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["💻 src"]
-  Root --> app["📁 app"]
-  Root --> backend["📁 backend"]
-  Root --> core["📁 core"]
-  Root --> entities["📁 entities"]
-  Root --> environments["📁 environments"]
-  Root --> features["📁 features"]
-  Root --> locale["📁 locale"]
-  Root --> pages["📁 pages"]
-  Root --> shared["📁 shared"]
-  Root --> types["📁 types"]
-  Root --> widgets["📁 widgets"]
+  src["💻 src"]
+  src --> app["📁 app"]
+  src --> backend["📁 backend"]
+  src --> core["📁 core"]
+  src --> entities["📁 entities"]
+  src --> environments["📁 environments"]
+  src --> features["📁 features"]
+  src --> locale["📁 locale"]
+  src --> pages["📁 pages"]
+  src --> shared["📁 shared"]
+  src --> types["📁 types"]
+  src --> widgets["📁 widgets"]
+  src --> app_component_html["📄 app.component.html"]
+  src --> app_component_scss["📄 app.component.scss"]
+  src --> app_component_ts["📄 app.component.ts"]
+  src --> app_routes_ts["📄 app.routes.ts"]
+  src --> main_ts["📄 main.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.component.html` | Template | Visual layout and structural HTML. | N/A |
-| `app.component.scss` | Stylesheet | Luxury styling and layout logic. | N/A |
-| `app.component.ts` | Component | UI rendering and component-level state. | @angular, @shared |
-| `app.routes.ts` | File | Core logic and utilities for this domain. | @angular, @pages, @widgets |
+| `app.component.html` | Component | Renders UI and handles user interaction. | N/A |
+| `app.component.scss` | Component | Renders UI and handles user interaction. | N/A |
+| `app.component.ts` | Component | Renders UI and handles user interaction. | `@angular/core, @angular/router, @angular/common, @shared/services, @shared/ui` |
+| `app.routes.ts` | TypeScript Logic | Core logic and utilities for this domain. | `@angular/router, @pages/auth, @widgets/layouts` |
+| `main.ts` | TypeScript Logic | Core logic and utilities for this domain. | `@angular/platform-browser` |
 
 
 ## 🔗 Dependencies
+**Path Aliases:**
 - `@angular/core`
 - `@angular/router`
 - `@angular/common`
@@ -39,12 +46,12 @@ graph TD
 - `@shared/ui`
 - `@pages/auth`
 - `@widgets/layouts`
+- `@angular/platform-browser`
+
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './app.component';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration for src
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

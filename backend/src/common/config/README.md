@@ -1,6 +1,6 @@
-# 🔧 config
+# 📁 Mavluda Beauty config
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [config](/backend/src/common/config)
+[backend](/backend) / [src](/backend/src) / [common](/backend/src/common) / [config](/backend/src/common/config)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **config** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,36 +8,35 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["🔧 config"]
-  Root --> appconfigmodulets["📄 app-config.module.ts"]
-  Root --> appconfigservicets["📄 app-config.service.ts"]
-  Root --> configurationts["📄 configuration.ts"]
-  Root --> envvalidationts["📄 env.validation.ts"]
+  config["📁 config"]
+  config --> app_config_module_ts["📄 app-config.module.ts"]
+  config --> app_config_service_ts["📄 app-config.service.ts"]
+  config --> configuration_ts["📄 configuration.ts"]
+  config --> env_validation_ts["📄 env.validation.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app-config.module.ts` | Module | Core logic and utilities for this domain. | @nestjs |
-| `app-config.service.ts` | Service | Business logic and state management. | @nestjs |
-| `configuration.ts` | File | Core logic and utilities for this domain. | N/A |
-| `env.validation.ts` | File | Core logic and utilities for this domain. | N/A |
+| `app-config.module.ts` | Module | Groups related capabilities and defines dependencies. | `@nestjs/common, @nestjs/config` |
+| `app-config.service.ts` | Service | Encapsulates business logic and API calls. | `@nestjs/common, @nestjs/config` |
+| `configuration.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
+| `env.validation.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
 
 
 ## 🔗 Dependencies
+**Path Aliases:**
 - `@nestjs/common`
 - `@nestjs/config`
-- `./app-config.service`
-- `./env.validation`
-- `./configuration`
+
+**External Packages:**
 - `class-transformer`
 - `class-validator`
 
+
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './app-config.module';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration for config
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

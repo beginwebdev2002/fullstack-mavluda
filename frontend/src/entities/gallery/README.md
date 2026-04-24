@@ -1,38 +1,41 @@
-# 📁 gallery
+# 📁 Mavluda Beauty gallery
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [gallery](/frontend/src/entities/gallery)
+[frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [gallery](/frontend/src/entities/gallery)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
+
+> **FSD Layer**: `Entities` - Adhering to Feature Sliced Design principles.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 gallery"]
-  Root --> constants["📁 constants"]
+  gallery["📁 gallery"]
+  gallery --> constants["📁 constants"]
+  gallery --> gallery_service_ts["📄 gallery.service.ts"]
+  gallery --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.service.ts` | Service | Business logic and state management. | @angular, @shared |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+| `gallery.service.ts` | Service | Encapsulates business logic and API calls. | `@angular/core, @angular/common/http, @shared/models` |
+| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
 
 
 ## 🔗 Dependencies
+**Path Aliases:**
 - `@angular/core`
 - `@angular/common/http`
-- `rxjs`
 - `@shared/models`
-- `./gallery.service`
-- `./constants/gallery.constants`
+
+**External Packages:**
+- `rxjs`
+
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './gallery.service';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration for gallery
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

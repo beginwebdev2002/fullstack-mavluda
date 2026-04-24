@@ -1,45 +1,38 @@
-# 📁 gallery
+# 📁 Mavluda Beauty gallery
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [gallery](/backend/src/modules/gallery)
+[backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [gallery](/backend/src/modules/gallery)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 gallery"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
+  gallery["📁 gallery"]
+  gallery --> application["📁 application"]
+  gallery --> domain["📁 domain"]
+  gallery --> infrastructure["📁 infrastructure"]
+  gallery --> presentation["📁 presentation"]
+  gallery --> gallery_module_ts["📄 gallery.module.ts"]
+  gallery --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.module.ts` | Module | Core logic and utilities for this domain. | @nestjs |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
+| `gallery.module.ts` | Module | Groups related capabilities and defines dependencies. | `@nestjs/common, @nestjs/mongoose` |
+| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
 
 
 ## 🔗 Dependencies
+**Path Aliases:**
 - `@nestjs/common`
 - `@nestjs/mongoose`
-- `./application/gallery.service`
-- `./presentation/gallery.controller`
-- `./infrastructure/repositories/gallery.repository`
-- `./infrastructure/schemas/gallery.schema`
-- `./presentation/dto/create-gallery.dto`
-- `./presentation/dto/update-gallery.dto`
-- `./domain/gallery.entity`
-- `./gallery.module`
+
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './gallery.module';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration for gallery
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.
