@@ -1,29 +1,27 @@
-# [root](/) / [frontend](/frontend) / [public](/frontend/public) / [images](/frontend/public/images)
+# 📁 images
 
-## 🏷️ 📁 Images
+[Root](/.) / [frontend](../..) / [public](..) / [images](.)
 
-### 🎯 PURPOSE
-The `images` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **images** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  images[📁 images]
-  images --> images_treatments_add_img_png(treatments-add-img.png)
-  images --> images_treatments_no_img_png(treatments-no-img.png)
+  images["📁 images"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments-add-img.png` | `png` | Core logic or foundational asset for this directory. | None |
-| `treatments-no-img.png` | `png` | Core logic or foundational asset for this directory. | None |
+| `treatments-add-img.png` | File | Core logic and utilities for this domain. | N/A |
+| `treatments-no-img.png` | File | Core logic and utilities for this domain. | N/A |
 
-### 🔗 DEPENDENCIES
-- `None`
+## 🔗 Dependencies
+*No internal path aliases detected in this directory.*
 
-### 🛠️ USAGE
-```typescript
-// Seamlessly integrate images into your refined workflows:
-import { /* exported members */ } from '@path/to/images';
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

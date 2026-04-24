@@ -1,32 +1,34 @@
-# 💎 common
+# 📁 common
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common)
+[Root](/.) / [backend](../..) / [src](..) / [common](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **common** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **common** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["💎 common"]
-  Root --> config["📁 config"]
-  Root --> database["📁 database"]
-  Root --> decorators["📁 decorators"]
-  Root --> guards["📁 guards"]
-  Root --> interfaces["📁 interfaces"]
-  Root --> utils["📁 utils"]
+  common["📁 common"]
+  common --> config["📁 config"]
+  common --> constants["📁 constants"]
+  common --> database["📁 database"]
+  common --> decorators["📁 decorators"]
+  common --> filters["📁 filters"]
+  common --> guards["📁 guards"]
+  common --> interfaces["📁 interfaces"]
+  common --> utils["📁 utils"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
-
+| *No files* | - | - | - |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
-> This directory acts primarily as a structural container or configuration hub.
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

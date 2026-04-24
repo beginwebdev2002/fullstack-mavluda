@@ -1,36 +1,27 @@
 # 📁 dto
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [gallery](/backend/src/modules/gallery) > [presentation](/backend/src/modules/gallery/presentation) > [dto](/backend/src/modules/gallery/presentation/dto)
+[Root](/.) / [backend](../../../../..) / [src](../../../..) / [modules](../../..) / [gallery](../..) / [presentation](..) / [dto](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> creategallerydtots["📄 create-gallery.dto.ts"]
-  Root --> updategallerydtots["📄 update-gallery.dto.ts"]
+  dto["📁 dto"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-gallery.dto.ts` | DTO | Data Transfer Object for validation. | N/A |
-| `update-gallery.dto.ts` | DTO | Data Transfer Object for validation. | @nestjs |
-
+| `create-gallery.dto.ts` | TypeScript | Data Transfer Object definition and validation. | N/A |
+| `update-gallery.dto.ts` | TypeScript | Data Transfer Object definition and validation. | @nestjs |
 
 ## 🔗 Dependencies
-- `class-validator`
-- `@nestjs/mapped-types`
-- `./create-gallery.dto`
+- `@nestjs`
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './create-gallery.dto';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

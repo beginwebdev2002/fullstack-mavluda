@@ -40,3 +40,7 @@ dist-ssr
 # Stop gitignore errors
 !README.md
 !**/README.md
+*.md
+!README.md
+!GEMINI.md
+!AGENTS.md

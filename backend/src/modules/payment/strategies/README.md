@@ -1,37 +1,28 @@
 # 📁 strategies
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [payment](/backend/src/modules/payment) > [strategies](/backend/src/modules/payment/strategies)
+[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [payment](..) / [strategies](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **strategies** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+Delivering luxury-tier architectural components and high-performance logic for the **strategies** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 strategies"]
-  Root --> alifpaystrategyts["📄 alif-pay.strategy.ts"]
-  Root --> mockcardstrategyts["📄 mock-card.strategy.ts"]
-  Root --> paymentstrategyts["📄 payment.strategy.ts"]
+  strategies["📁 strategies"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `alif-pay.strategy.ts` | File | Core logic and utilities for this domain. | @nestjs |
-| `mock-card.strategy.ts` | File | Core logic and utilities for this domain. | @nestjs |
-| `payment.strategy.ts` | File | Core logic and utilities for this domain. | N/A |
-
+| `alif-pay.strategy.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs |
+| `mock-card.strategy.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs |
+| `payment.strategy.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
 ## 🔗 Dependencies
-- `@nestjs/common`
-- `./payment.strategy`
+- `@nestjs`
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './alif-pay.strategy';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

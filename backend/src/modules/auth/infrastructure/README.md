@@ -1,36 +1,27 @@
-# 📁 infrastructure
+# 🏗️ infrastructure
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [infrastructure](/backend/src/modules/auth/infrastructure)
+[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [auth](..) / [infrastructure](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **infrastructure** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+Delivering luxury-tier architectural components and high-performance logic for the **infrastructure** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 infrastructure"]
-  Root --> jwtstrategyts["📄 jwt.strategy.ts"]
+  infrastructure["🏗️ infrastructure"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `jwt.strategy.ts` | File | Core logic and utilities for this domain. | @nestjs, @common |
-
+| `jwt.strategy.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs, @common |
 
 ## 🔗 Dependencies
-- `passport-jwt`
-- `@nestjs/passport`
-- `@nestjs/common`
-- `@common/config/app-config.service`
-- `../interfaces/jwt-payload.interface`
+- `@nestjs`
+- `@common`
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './jwt.strategy';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

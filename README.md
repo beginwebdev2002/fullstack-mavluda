@@ -8,29 +8,25 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["👑 Mavluda Beauty Root"]
-  Root --> agent["📁 .agent"]
-  Root --> gemini["📁 .gemini"]
-  Root --> github["📁 .github"]
-  Root --> jules["📁 .jules"]
-  Root --> backend["📁 backend"]
-  Root --> frontend["📁 frontend"]
+  Mavluda_Beauty_Root["👑 Mavluda Beauty Root"]
+  Mavluda_Beauty_Root --> backend["📁 backend"]
+  Mavluda_Beauty_Root --> frontend["📁 frontend"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `.env` | Configuration | Project level settings and dependencies. | N/A |
-| `.gitignore` | Configuration | Project level settings and dependencies. | N/A |
+| `.env` | File | Core logic and utilities for this domain. | N/A |
+| `.gitignore` | File | Core logic and utilities for this domain. | N/A |
 | `.gitignore_append` | File | Core logic and utilities for this domain. | N/A |
-| `GEMINI.md` | File | Core logic and utilities for this domain. | N/A |
-| `generate_readmes.js` | File | Core logic and utilities for this domain. | N/A |
-
+| `GEMINI.md` | Documentation | Core logic and utilities for this domain. | N/A |
+| `generate_readmes.js` | JavaScript | Core logic and utilities for this domain. | N/A |
 
 ## 🔗 Dependencies
-- `./${tsFile.name.replace(/\.ts$/, `
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
-> This directory acts primarily as a structural container or configuration hub.
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

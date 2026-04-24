@@ -1,36 +1,26 @@
-# 📁 application
+# 🚀 application
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [booking](/backend/src/modules/booking) > [application](/backend/src/modules/booking/application)
+[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [booking](..) / [application](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> bookingservicets["📄 booking.service.ts"]
+  application["🚀 application"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.service.ts` | Service | Business logic and state management. | @nestjs |
-
+| `booking.service.ts` | TypeScript | Business logic execution and state management. | @nestjs |
 
 ## 🔗 Dependencies
-- `@nestjs/common`
-- `../domain/booking.entity`
-- `../infrastructure/repositories/booking.repository`
-- `../presentation/dto/create-booking.dto`
-- `../presentation/dto/update-booking.dto`
+- `@nestjs`
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './booking.service';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

@@ -1,43 +1,32 @@
 # 📁 user
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [user](/frontend/src/entities/user)
+[Root](/.) / [frontend](../../..) / [src](../..) / [entities](..) / [user](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **user** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
+Delivering luxury-tier architectural components and high-performance logic for the **user** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+
+*This directory operates strictly within the **Entities** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 user"]
-  Root --> constants["📁 constants"]
-  Root --> model["📁 model"]
+  user["📁 user"]
+  user --> constants["📁 constants"]
+  user --> model["📁 model"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth.service.ts` | Service | Business logic and state management. | @angular |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-| `user.service.ts` | Service | Business logic and state management. | @angular |
-
+| `auth.service.ts` | TypeScript | Business logic execution and state management. | @angular |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `user.service.ts` | TypeScript | Business logic execution and state management. | @angular |
 
 ## 🔗 Dependencies
-- `@angular/core`
-- `@angular/common/http`
-- `@angular/router`
-- `rxjs/operators`
-- `./model/user.model`
-- `jwt-decode`
-- `./auth.service`
-- `./user.service`
-- `rxjs`
+- `@angular`
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './auth.service';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

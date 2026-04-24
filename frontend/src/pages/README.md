@@ -1,41 +1,42 @@
-# 📄 pages
+# 🍰 pages
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages)
+[Root](/.) / [frontend](../..) / [src](..) / [pages](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **pages** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
+Delivering luxury-tier architectural components and high-performance logic for the **pages** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+
+*This directory operates strictly within the **Pages** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📄 pages"]
-  Root --> about["📁 about"]
-  Root --> auth["📁 auth"]
-  Root --> clients["📁 clients"]
-  Root --> dashboard["📁 dashboard"]
-  Root --> gallery["📁 gallery"]
-  Root --> inventory["📁 inventory"]
-  Root --> portfolio["📁 portfolio"]
-  Root --> settings["📁 settings"]
-  Root --> treatments["📁 treatments"]
-  Root --> treatmentscatalog["📁 treatments-catalog"]
-  Root --> userhome["📁 user-home"]
-  Root --> userprofile["📁 user-profile"]
-  Root --> veil["📁 veil"]
-  Root --> veilscatalog["📁 veils-catalog"]
+  pages["🍰 pages"]
+  pages --> about["📁 about"]
+  pages --> auth["📁 auth"]
+  pages --> clients["📁 clients"]
+  pages --> dashboard["📁 dashboard"]
+  pages --> gallery["📁 gallery"]
+  pages --> inventory["📁 inventory"]
+  pages --> portfolio["📁 portfolio"]
+  pages --> settings["📁 settings"]
+  pages --> treatments["📁 treatments"]
+  pages --> treatments_catalog["📁 treatments-catalog"]
+  pages --> user_home["📁 user-home"]
+  pages --> user_profile["📁 user-profile"]
+  pages --> veil["📁 veil"]
+  pages --> veils_catalog["📁 veils-catalog"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
-
+| *No files* | - | - | - |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
-> This directory acts primarily as a structural container or configuration hub.
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

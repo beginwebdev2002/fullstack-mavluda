@@ -1,56 +1,33 @@
-# 💻 src
+# 📁 src
 
-[Root](/.) > [backend](/backend) > [src](/backend/src)
+[Root](/.) / [backend](..) / [src](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **src** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **src** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["💻 src"]
-  Root --> common["📁 common"]
-  Root --> modules["📁 modules"]
+  src["📁 src"]
+  src --> common["📁 common"]
+  src --> modules["📁 modules"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.controller.spec.ts` | Test | Ensures code quality and regression prevention. | @nestjs |
-| `app.controller.ts` | Controller | Request handling and routing. | @nestjs |
-| `app.module.ts` | Module | Core logic and utilities for this domain. | @nestjs, @modules |
-| `app.service.ts` | Service | Business logic and state management. | @nestjs |
-| `main.ts` | File | Core logic and utilities for this domain. | @nestjs |
-
+| `app.controller.spec.ts` | TypeScript | Testing and quality assurance validation. | @nestjs |
+| `app.controller.ts` | TypeScript | API routing and request handling. | @nestjs |
+| `app.module.ts` | TypeScript | Dependency injection and module orchestration. | @nestjs, @modules |
+| `app.service.ts` | TypeScript | Business logic execution and state management. | @nestjs |
+| `main.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs |
 
 ## 🔗 Dependencies
-- `@nestjs/testing`
-- `./app.controller`
-- `./app.service`
-- `@nestjs/common`
-- `@nestjs/serve-static`
-- `path`
-- `./common/config/app-config.module`
-- `./common/database/database.module`
-- `@modules/user`
-- `@modules/admin-settings`
-- `@modules/veil`
-- `@modules/treatments`
-- `@modules/gallery`
-- `@modules/auth`
-- `@modules/payment`
-- `@modules/booking`
-- `@modules/inventory`
-- `@modules/partnership`
-- `@nestjs/core`
-- `@nestjs/config`
-- `./app.module`
+- `@nestjs`
+- `@modules`
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './app.controller.spec';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
