@@ -3,14 +3,29 @@ import {
   ChangeDetectionStrategy,
   inject,
   computed,
+  signal,
 } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 import { AuthService } from "@entities/user";
+
+interface SocialHandles {
+  telegram: string;
+  instagram: string;
+  whatsapp: string;
+}
+
+interface HistoryItem {
+  date: string;
+  action: string;
+  amount?: number;
+  type: "deposit" | "spend" | "booking" | "other";
+}
 
 @Component({
   selector: "app-user-profile",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./user-profile.component.html",
   styleUrls: ["./user-profile.component.scss"],
@@ -19,70 +34,86 @@ export class UserProfileComponent {
   private authService = inject(AuthService);
   currentUser = this.authService.currentUser;
 
+  // Edit mode toggle
+  isEditing = signal(false);
+
+  // Computed display data from auth
   user = computed(() => {
     const u = this.currentUser();
     return {
-      name: u ? `${u.firstName} ${u.lastName}` : "Guest",
-      id: u ? `ID-${u.id ? u.id.substring(0, 6).toUpperCase() : "000"}` : "N/A",
-      status: $localize`:@@userStatusGold:Gold Member`, // Mock for now
-      avatarUrl:
-        u && u.photoUrl
-          ? u.photoUrl
-          : "https://lh3.googleusercontent.com/aida-public/AB6AXuD08o6hF5_pbFiIJqYs4VYYrPPviAtlB2PjR4z2lZYzuT3rcSqK7UbUQNiOic7Y-5L8OgQjXfDI3pcgi0scXP-E6zXsJwv5g2J3sX89thdN8QagJQQCwGJWt96_rVAjbhNezpl35TsKsDKDFcyUdrK2qT0yPcFM3kP0hOXpqC8ZB7OFulzRzNGWHZR0Hw2QbGd77Id8wWieXLWUC7eU1JKb3MgO6TXvXzAJQth53BY6a91dqAL2kuvJKelagAgLC2sRUWQy1FQ6Ul7i",
+      firstName: u?.firstName ?? "",
+      lastName: u?.lastName ?? "",
+      dob: (u as any)?.dob ?? "",
+      photoUrl:
+        u?.photoUrl ??
+        "https://ui-avatars.com/api/?name=" +
+          encodeURIComponent(`${u?.firstName ?? "U"} ${u?.lastName ?? ""}`) +
+          "&background=D4AF35&color=0a0a0a&size=200",
+      id: u?.id ? `ID-${u.id.substring(0, 6).toUpperCase()}` : "N/A",
     };
   });
 
-  upcomingAppointment = {
-    status: $localize`:@@apptStatusConfirmed:Confirmed`,
-    date: $localize`:@@apptDate:October 28, 2024`,
-    time: "10:00 AM - 11:30 AM",
-    service: $localize`:@@apptService:Full Face Rejuvenation`,
-  };
+  // Edit form state (local copy while editing)
+  editForm = signal({
+    firstName: "",
+    lastName: "",
+    dob: "",
+    telegram: "",
+    instagram: "",
+    whatsapp: "",
+  });
 
-  loyalty = {
-    tier: $localize`:@@loyaltyTierGold:Gold Tier`,
-    points: 1250,
-    pointsToNext: 750,
-    progress: 65,
-    nextReward: $localize`:@@loyaltyReward:Comp. Skin Analysis`,
-  };
+  // Social handles (separate signal, would come from user profile API)
+  socialHandles = signal<SocialHandles>({
+    telegram: (this.currentUser() as any)?.telegram ?? "",
+    instagram: (this.currentUser() as any)?.instagram ?? "",
+    whatsapp: (this.currentUser() as any)?.whatsapp ?? "",
+  });
 
-  recentProcedures = [
-    {
-      date: "Sep 15, 2024",
-      service: $localize`:@@procHydra:HydraFacial Elite`,
-      category: $localize`:@@catSkin:Skin Therapy`,
-      specialist: "Dr. Azizova",
-      status: $localize`:@@statusView:View Results`,
-      link: "#",
-    },
-    {
-      date: "Aug 02, 2024",
-      service: $localize`:@@procBotox:Botulinum Therapy`,
-      category: $localize`:@@catMedical:Medical Aesthetics`,
-      specialist: "Dr. Azizova",
-      status: $localize`:@@statusView:View Results`,
-      link: "#",
-    },
-    {
-      date: "Jun 18, 2024",
-      service: $localize`:@@procGlamour:Evening Glamour`,
-      category: $localize`:@@catVisage:Professional Visage`,
-      specialist: "Elena V.",
-      status: $localize`:@@statusArchived:Archived`,
-      link: "#",
-    },
-  ];
+  // Mock balance (would come from backend)
+  balance = signal<number>(2500);
 
-  latestNote = {
-    summary: $localize`:@@noteSummary:Skin sensitivity slightly elevated during last session. Recommended reducing retinol usage frequency to 2x/week for the next 14 days. Hydration levels have improved significantly since August.`,
-    recorder: "Dr. Mavluda Azizova",
-    date: "Sep 15, 2024",
-  };
+  // Mock history (would come from booking/payment API)
+  history = signal<HistoryItem[]>([
+    { date: "2024-10-15", action: "Balance top-up", amount: 500, type: "deposit" },
+    { date: "2024-10-10", action: "HydraFacial Elite", amount: -850, type: "spend" },
+    { date: "2024-09-28", action: "Booking: Evening Glamour", type: "booking" },
+    { date: "2024-09-15", action: "Balance top-up", amount: 1000, type: "deposit" },
+    { date: "2024-09-02", action: "Botulinum Therapy", amount: -1500, type: "spend" },
+  ]);
 
-  today = {
-    date: new Date().toLocaleDateString(),
-  };
+  startEdit() {
+    const u = this.user();
+    const s = this.socialHandles();
+    this.editForm.set({
+      firstName: u.firstName,
+      lastName: u.lastName,
+      dob: u.dob,
+      telegram: s.telegram,
+      instagram: s.instagram,
+      whatsapp: s.whatsapp,
+    });
+    this.isEditing.set(true);
+  }
+
+  cancelEdit() {
+    this.isEditing.set(false);
+  }
+
+  saveEdit() {
+    const f = this.editForm();
+    this.socialHandles.set({
+      telegram: f.telegram,
+      instagram: f.instagram,
+      whatsapp: f.whatsapp,
+    });
+    // Here you'd call a user update API
+    this.isEditing.set(false);
+  }
+
+  updateField(field: string, value: string) {
+    this.editForm.update((f) => ({ ...f, [field]: value }));
+  }
 
   logout() {
     this.authService.logout();

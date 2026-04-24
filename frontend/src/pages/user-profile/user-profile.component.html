@@ -1,192 +1,221 @@
 
 <main class="flex-grow py-12 animate-page-enter relative">
-  <!-- Background Decoration: Ambient Gold Glows -->
+  <!-- Ambient background glows -->
   <div class="fixed top-0 left-0 w-full h-screen pointer-events-none z-[-1]">
-    <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]"></div>
-    <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]"></div>
-    <div class="absolute top-[40%] left-[20%] w-[300px] h-[300px] bg-primary/5 rounded-full blur-[80px]"></div>
+    <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px]"></div>
   </div>
 
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-  <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-    <aside class="w-full lg:w-80 flex-shrink-0 space-y-6">
-      <div class="rounded-2xl bg-[#121212] border border-[#ffffff10] p-8 flex flex-col items-center text-center relative overflow-hidden group">
-        <div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative w-28 h-28 mb-5">
-          <img [alt]="user().name" class="w-full h-full object-cover rounded-full border-2 border-primary/50 p-1 shadow-gold-glow" [src]="user().avatarUrl"/>
-          <div class="absolute bottom-1 right-1 w-8 h-8 bg-primary rounded-full flex items-center justify-center border-4 border-[#121212] z-10">
-            <span class="material-symbols-outlined text-[#0A0A0A] text-[16px] font-bold">verified</span>
-          </div>
-        </div>
-        <h3 class="text-white font-serif text-2xl mb-1">{{ user().name }}</h3>
-        <p class="text-gray-500 text-xs mb-4" i18n="@@profileClientID">Client ID: #{{ user().id }}</p>
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 mb-6">
-          <span class="material-symbols-outlined text-primary text-sm">diamond</span>
-          <span class="text-primary text-xs font-bold uppercase tracking-widest">{{ user().status }}</span>
-        </div>
-        <button class="w-full py-2.5 rounded-lg border border-[#ffffff20] hover:border-primary/50 hover:bg-primary/5 text-gray-400 hover:text-primary transition-all text-xs font-bold uppercase tracking-wider" i18n="@@profileBtnEdit">
-            Edit Profile
-        </button>
-      </div>
-      <nav class="rounded-2xl bg-[#121212] border border-[#ffffff10] overflow-hidden p-2">
-        <ul class="space-y-1">
-          <li>
-            <a class="flex items-center gap-4 px-4 py-3 rounded-lg bg-primary text-background-dark font-bold transition-all shadow-gold" href="#">
-              <span class="material-symbols-outlined">dashboard</span>
-              <span class="text-sm uppercase tracking-wide" i18n="@@profileNavOverview">Overview</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-4 px-4 py-3 rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all group" href="#">
-              <span class="material-symbols-outlined group-hover:text-primary transition-colors">calendar_month</span>
-              <span class="text-sm uppercase tracking-wide" i18n="@@profileNavAppointments">Appointments</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-4 px-4 py-3 rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all group" href="#">
-              <span class="material-symbols-outlined group-hover:text-primary transition-colors">clinical_notes</span>
-              <span class="text-sm uppercase tracking-wide" i18n="@@profileNavMedicalRecords">Medical Records</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center gap-4 px-4 py-3 rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all group" href="#">
-              <span class="material-symbols-outlined group-hover:text-primary transition-colors">settings</span>
-              <span class="text-sm uppercase tracking-wide" i18n="@@profileNavSettings">Settings</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="rounded-2xl bg-gradient-to-br from-[#121212] to-[#1a1a1a] border border-[#ffffff10] p-6 text-center">
-        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 text-primary">
-          <span class="material-symbols-outlined">support_agent</span>
-        </div>
-        <h4 class="text-white font-bold text-sm mb-2" i18n="@@profileConciergeTitle">Concierge Support</h4>
-        <p class="text-gray-500 text-xs leading-relaxed mb-4" i18n="@@profileConciergeDesc">Direct line to your personal aesthetic coordinator.</p>
-        <a class="text-primary text-xs font-bold uppercase tracking-wider hover:text-white transition-colors" href="#" i18n="@@profileConciergeBtn">Contact Now</a>
-      </div>
-    </aside>
+  <div class="mx-auto max-w-3xl px-6 lg:px-8 space-y-6">
 
-    <div class="flex-grow space-y-8">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-4 border-b border-[#ffffff10]">
-        <div>
-          <p class="text-primary text-xs font-bold uppercase tracking-widest mb-2" i18n="@@profileDashboardTitle">Private Dashboard</p>
-          <h1 class="text-3xl md:text-5xl font-serif text-white" i18n="@@profileWelcome">Welcome back, {{ user().name.split(' ')[0] }}</h1>
-        </div>
-        <div class="text-right hidden sm:block">
-          <p class="text-gray-400 text-sm" i18n="@@profileDateLabel">Today is</p>
-          <p class="text-white font-medium">{{ today.date }}</p>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="glass-gold rounded-2xl p-8 relative overflow-hidden group">
-          <div class="relative z-10">
-            <div class="flex justify-between items-start mb-6">
-              <div>
-                <span class="inline-block px-2 py-1 rounded bg-black/20 text-primary-hover text-[10px] font-bold uppercase tracking-widest border border-primary/20 mb-2">{{ upcomingAppointment.status }}</span>
-                <h3 class="text-white font-serif text-2xl" i18n="@@profileUpcomingTitle">Upcoming Appointment</h3>
-              </div>
-              <div class="h-12 w-12 rounded-full bg-black/20 flex items-center justify-center border border-primary/30 text-primary">
-                <span class="material-symbols-outlined">event</span>
-              </div>
-            </div>
-            <div class="space-y-4 mb-8">
-              <div class="flex items-center gap-3 text-white/90">
-                <span class="material-symbols-outlined text-primary">calendar_today</span>
-                <span class="font-medium">{{ upcomingAppointment.date }}</span>
-              </div>
-              <div class="flex items-center gap-3 text-white/90">
-                <span class="material-symbols-outlined text-primary">schedule</span>
-                <span class="font-medium">{{ upcomingAppointment.time }}</span>
-              </div>
-              <div class="flex items-center gap-3 text-white/90">
-                <span class="material-symbols-outlined text-primary">spa</span>
-                <span class="font-medium">{{ upcomingAppointment.service }}</span>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <button class="flex-1 bg-primary text-background-dark font-bold text-xs uppercase tracking-wider py-3 rounded-lg hover:bg-white transition-colors" i18n="@@profileBtnReschedule">Reschedule</button>
-              <button class="flex-1 bg-black/20 text-white font-bold text-xs uppercase tracking-wider py-3 rounded-lg border border-primary/30 hover:bg-black/40 transition-colors" i18n="@@profileBtnDetails">Details</button>
-            </div>
-          </div>
-        </div>
-        <div class="rounded-2xl bg-[#121212] border border-[#ffffff10] p-8 flex flex-col justify-between relative overflow-hidden">
-          <div class="absolute top-1/2 right-6 -translate-y-1/2">
-            <span class="material-symbols-outlined text-[140px] text-primary/5 opacity-80 -rotate-12">workspace_premium</span>
-          </div>
-          <div class="relative z-10">
-            <div class="flex justify-between items-center mb-6">
-              <h3 class="text-white font-bold uppercase tracking-wider" i18n="@@profileLoyaltyTitle">Loyalty & Rewards</h3>
-              <span class="text-primary text-2xl font-serif italic">{{ loyalty.tier }}</span>
-            </div>
-            <div class="flex items-baseline gap-2 mb-2">
-              <span class="text-4xl font-bold text-white">{{ loyalty.points | number }}</span>
-              <span class="text-sm text-gray-400 uppercase tracking-wide" i18n="@@profilePointsEarned">Points Earned</span>
-            </div>
-            <p class="text-gray-500 text-xs mb-6" i18n="@@profilePointsToNext">{{ loyalty.pointsToNext }} points until Platinum Status</p>
-            <div class="w-full h-2 bg-[#222] rounded-full overflow-hidden mb-6">
-              <div class="h-full bg-gradient-to-r from-primary to-[#edd685] rounded-full shadow-[0_0_10px_rgba(212,175,53,0.5)]" [style.width.%]="loyalty.progress"></div>
-            </div>
-          </div>
-          <div class="relative z-10 mt-auto pt-6 border-t border-[#ffffff10] flex justify-between items-center">
-            <div class="text-xs text-gray-400"><ng-container i18n="@@profileNextReward">Next Reward:</ng-container> <span class="text-white">{{ loyalty.nextReward }}</span></div>
-            <a class="text-primary hover:text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1 transition-colors" href="#">
-              <span i18n="@@profileRedeem">Redeem</span> <span class="material-symbols-outlined text-base">arrow_forward</span>
-            </a>
-          </div>
+    <!-- ── HEADER: Avatar + Name + Edit ── -->
+    <div class="rounded-2xl bg-[#121212] border border-[#ffffff10] p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+
+      <!-- Avatar -->
+      <div class="relative flex-shrink-0">
+        <img [src]="user().photoUrl" [alt]="user().firstName"
+          class="w-24 h-24 rounded-full object-cover border-2 border-primary/50 p-0.5 shadow-gold-glow"/>
+        <div class="absolute bottom-0 right-0 w-7 h-7 bg-primary rounded-full flex items-center justify-center border-2 border-[#121212]">
+          <span class="material-symbols-outlined text-[#0A0A0A] text-sm font-bold">verified</span>
         </div>
       </div>
-      <div class="rounded-2xl bg-[#121212] border border-[#ffffff10] overflow-hidden">
-        <div class="p-6 border-b border-[#ffffff10] flex justify-between items-center bg-[#161616]">
-          <h3 class="text-white font-serif text-lg" i18n="@@profileProceduresTitle">Recent Procedures</h3>
-          <a class="text-xs text-gray-400 hover:text-primary transition-colors uppercase tracking-wider font-bold" href="#" i18n="@@profileViewAll">View All History</a>
-        </div>
-        <div class="overflow-x-auto">
-          <table class="w-full text-left">
-            <thead class="bg-[#1a1a1a] text-xs uppercase text-gray-500 font-medium tracking-wider">
-              <tr>
-                <th class="px-6 py-4" i18n="@@profileTableDate">Date</th>
-                <th class="px-6 py-4" i18n="@@profileTableService">Service</th>
-                <th class="px-6 py-4" i18n="@@profileTableSpecialist">Specialist</th>
-                <th class="px-6 py-4 text-right" i18n="@@profileTableAction">Action</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-[#ffffff08] text-sm">
-              @for(procedure of recentProcedures; track procedure.date) {
-                <tr class="hover:bg-white/5 transition-colors">
-                  <td class="px-6 py-4 text-gray-300">{{ procedure.date }}</td>
-                  <td class="px-6 py-4">
-                    <div class="font-bold text-white">{{ procedure.service }}</div>
-                    <div class="text-xs text-gray-500">{{ procedure.category }}</div>
-                  </td>
-                  <td class="px-6 py-4 text-gray-300">{{ procedure.specialist }}</td>
-                  <td class="px-6 py-4 text-right">
-                    <a [href]="procedure.link" class="text-xs font-bold uppercase tracking-wide transition-colors" [class]="procedure.status === 'Archived' ? 'text-gray-500 hover:text-white' : 'text-primary hover:text-white'">
-                      {{ procedure.status }}
-                    </a>
-                  </td>
-                </tr>
-              }
-            </tbody>
-          </table>
-        </div>
+
+      <!-- Name + ID -->
+      <div class="flex-grow text-center sm:text-left relative z-10">
+        <p class="text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-1">{{ user().id }}</p>
+        <h1 class="font-serif text-3xl text-white mb-1">{{ user().firstName }} {{ user().lastName }}</h1>
+        @if (user().dob) {
+          <p class="text-gray-500 text-sm">{{ user().dob }}</p>
+        }
       </div>
-      <div class="rounded-2xl bg-[#121212] border border-[#ffffff10] p-6 flex flex-col md:flex-row gap-6 items-start">
-        <div class="flex-shrink-0 h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-          <span class="material-symbols-outlined">medical_information</span>
-        </div>
-        <div class="flex-grow">
-          <h3 class="text-white font-bold mb-2 uppercase tracking-wide text-sm" i18n="@@profileNoteTitle">Latest Medical Note Summary</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-3">{{ latestNote.summary }}</p>
-          <div class="flex gap-4 text-xs text-gray-500">
-            <span><ng-container i18n="@@profileNoteRecorder">Recorded by:</ng-container> <span class="text-gray-300">{{ latestNote.recorder }}</span></span>
-            <span><ng-container i18n="@@profileNoteDate">Date:</ng-container> <span class="text-gray-300">{{ latestNote.date }}</span></span>
-          </div>
-        </div>
-        <button class="flex-shrink-0 px-4 py-2 border border-[#333] hover:border-primary text-gray-400 hover:text-primary rounded-lg uppercase tracking-wide text-xs font-bold transition-all" i18n="@@profileNoteHistory">
-          Full History
+
+      <!-- Edit / Logout buttons -->
+      <div class="flex gap-3 flex-shrink-0 relative z-10">
+        @if (!isEditing()) {
+          <button (click)="startEdit()"
+            class="flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/30 text-primary hover:bg-primary/10 transition-all text-xs font-bold uppercase tracking-wider">
+            <span class="material-symbols-outlined text-base">edit</span>
+            <span i18n="@@profileEdit">Edit</span>
+          </button>
+        }
+        <button (click)="logout()"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#ffffff15] text-gray-400 hover:text-white hover:border-white/30 transition-all text-xs font-bold uppercase tracking-wider">
+          <span class="material-symbols-outlined text-base">logout</span>
         </button>
       </div>
     </div>
-  </div>
+
+    <!-- ── EDIT FORM ── -->
+    @if (isEditing()) {
+      <div class="rounded-2xl bg-[#121212] border border-primary/20 p-8 space-y-6">
+        <h2 class="text-white font-bold uppercase tracking-wider text-sm border-l-2 border-primary pl-3" i18n="@@profileEditTitle">Edit Profile</h2>
+
+        <!-- Name + DOB -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="space-y-1.5">
+            <label class="text-xs text-gray-500 uppercase tracking-wider font-bold" i18n="@@profileFirstName">First Name</label>
+            <input [value]="editForm().firstName" (input)="updateField('firstName', $any($event.target).value)"
+              class="w-full bg-[#1a1a1a] border-b border-[#333] focus:border-primary text-white px-0 py-2.5 text-sm outline-none transition-colors"
+              placeholder="First name" />
+          </div>
+          <div class="space-y-1.5">
+            <label class="text-xs text-gray-500 uppercase tracking-wider font-bold" i18n="@@profileLastName">Last Name</label>
+            <input [value]="editForm().lastName" (input)="updateField('lastName', $any($event.target).value)"
+              class="w-full bg-[#1a1a1a] border-b border-[#333] focus:border-primary text-white px-0 py-2.5 text-sm outline-none transition-colors"
+              placeholder="Last name" />
+          </div>
+          <div class="space-y-1.5 sm:col-span-2">
+            <label class="text-xs text-gray-500 uppercase tracking-wider font-bold" i18n="@@profileDob">Date of Birth</label>
+            <input type="date" [value]="editForm().dob" (input)="updateField('dob', $any($event.target).value)"
+              class="w-full bg-[#1a1a1a] border-b border-[#333] focus:border-primary text-white px-0 py-2.5 text-sm outline-none transition-colors" />
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="space-y-1.5 pt-2 border-t border-[#ffffff08]">
+          <p class="text-xs text-gray-500 uppercase tracking-wider font-bold mb-3" i18n="@@profileSocials">Social Handles</p>
+          <div class="flex items-center gap-3 py-2 border-b border-[#1f1f1f]">
+            <svg class="w-4 h-4 text-sky-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.62 12.15c-.73-.23-.74-.74.13-1.02l16.24-6.27c.66-.25 1.22.17 1.02.94L19.46 16.7c-.24.93-.85 1.12-1.51.72l-4.52-3.35-2.13 2.05c-.24.24-.44.44-.8.44l.01.01z"/>
+            </svg>
+            <span class="text-gray-500 text-sm w-24 flex-shrink-0">Telegram</span>
+            <input [value]="editForm().telegram" (input)="updateField('telegram', $any($event.target).value)"
+              class="flex-grow bg-transparent text-white text-sm outline-none placeholder:text-gray-700"
+              placeholder="@username" />
+          </div>
+          <div class="flex items-center gap-3 py-2 border-b border-[#1f1f1f]">
+            <svg class="w-4 h-4 text-pink-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+            </svg>
+            <span class="text-gray-500 text-sm w-24 flex-shrink-0">Instagram</span>
+            <input [value]="editForm().instagram" (input)="updateField('instagram', $any($event.target).value)"
+              class="flex-grow bg-transparent text-white text-sm outline-none placeholder:text-gray-700"
+              placeholder="@username" />
+          </div>
+          <div class="flex items-center gap-3 py-2">
+            <svg class="w-4 h-4 text-green-400 flex-shrink-0" viewBox="0 0 32 32" fill="currentColor">
+              <path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732.737 5.291 2.022 7.491l-2.147 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809 8.209 0 14.862-6.656 14.862-14.865 0-4.103-1.662-7.817-4.342-10.581zm-10.511 22.86c-2.319 0-4.489-.64-6.342-1.753l-.451-.267-4.675 1.227 1.247-4.559-.294-.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353zm6.776-9.023c-.371-.186-2.197-1.083-2.537-1.208-.341-.124-.589-.185-.837.187-.246.371-.958 1.207-1.175 1.455-.216.249-.434.279-.805.094-1.15-.466-2.138-1.087-2.997-1.852-.799-.74-1.484-1.587-2.037-2.521-.216-.371-.023-.572.162-.757.167-.166.372-.434.557-.65.146-.179.271-.384.366-.604.043-.087.068-.188.068-.296 0-.131-.037-.253-.101-.357-.094-.186-.836-2.014-1.145-2.758-.302-.724-.609-.625-.836-.637-.216-.01-.464-.012-.712-.012-.395.01-.746.188-.988.463-.802.761-1.3 1.834-1.3 3.023.131 1.467.681 2.784 1.527 3.857 1.604 2.379 3.742 4.282 6.251 5.564.548.248 1.25.513 1.968.74.442.14.951.221 1.479.221.303 0 .601-.027.889-.078 1.069-.223 1.956-.868 2.497-1.749.165-.366.261-.793.261-1.242 0-.185-.016-.366-.047-.542-.092-.155-.34-.247-.712-.434z"/>
+            </svg>
+            <span class="text-gray-500 text-sm w-24 flex-shrink-0">WhatsApp</span>
+            <input [value]="editForm().whatsapp" (input)="updateField('whatsapp', $any($event.target).value)"
+              class="flex-grow bg-transparent text-white text-sm outline-none placeholder:text-gray-700"
+              placeholder="+992..." />
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex gap-3 pt-2">
+          <button (click)="saveEdit()"
+            class="flex-1 h-11 bg-primary text-[#0A0A0A] font-bold uppercase tracking-wider text-xs rounded-lg hover:bg-primary-hover transition-all shadow-gold">
+            <span i18n="@@profileSave">Save Changes</span>
+          </button>
+          <button (click)="cancelEdit()"
+            class="px-6 h-11 border border-[#333] text-gray-400 hover:border-white/30 hover:text-white rounded-lg text-xs uppercase tracking-wider font-bold transition-all">
+            <span i18n="@@profileCancel">Cancel</span>
+          </button>
+        </div>
+      </div>
+    }
+
+    <!-- ── 1. BALANCE ── -->
+    <div class="rounded-2xl glass-gold p-8 flex items-center justify-between relative overflow-hidden">
+      <span class="material-symbols-outlined absolute right-6 top-1/2 -translate-y-1/2 text-[100px] text-primary/5">account_balance_wallet</span>
+      <div class="relative z-10">
+        <p class="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-2" i18n="@@profileBalanceLabel">Your Balance</p>
+        <p class="text-5xl font-bold text-white">{{ balance() | number }}<span class="text-2xl ml-2 text-primary font-serif">TJS</span></p>
+      </div>
+      <button class="relative z-10 flex items-center gap-2 px-5 py-3 rounded-xl border border-primary/30 bg-black/20 text-primary hover:bg-primary hover:text-black transition-all text-xs font-bold uppercase tracking-wider">
+        <span class="material-symbols-outlined text-base">add_card</span>
+        <span i18n="@@profileTopUp">Top Up</span>
+      </button>
+    </div>
+
+    <!-- ── 2. PERSONAL INFO ── -->
+    @if (!isEditing()) {
+      <div class="rounded-2xl bg-[#121212] border border-[#ffffff10] p-8 space-y-5">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-white font-bold uppercase tracking-wider text-sm border-l-2 border-primary pl-3" i18n="@@profilePersonalInfo">Personal Info</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <p class="text-gray-500 text-xs uppercase tracking-wider mb-1" i18n="@@profileFirstName">First Name</p>
+            <p class="text-white font-medium">{{ user().firstName || '—' }}</p>
+          </div>
+          <div>
+            <p class="text-gray-500 text-xs uppercase tracking-wider mb-1" i18n="@@profileLastName">Last Name</p>
+            <p class="text-white font-medium">{{ user().lastName || '—' }}</p>
+          </div>
+          <div>
+            <p class="text-gray-500 text-xs uppercase tracking-wider mb-1" i18n="@@profileDob">Date of Birth</p>
+            <p class="text-white font-medium">{{ user().dob || '—' }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 3. SOCIAL HANDLES ── -->
+      <div class="rounded-2xl bg-[#121212] border border-[#ffffff10] p-8">
+        <h2 class="text-white font-bold uppercase tracking-wider text-sm border-l-2 border-primary pl-3 mb-6" i18n="@@profileSocials">Social Handles</h2>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4">
+            <svg class="w-5 h-5 text-sky-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.62 12.15c-.73-.23-.74-.74.13-1.02l16.24-6.27c.66-.25 1.22.17 1.02.94L19.46 16.7c-.24.93-.85 1.12-1.51.72l-4.52-3.35-2.13 2.05c-.24.24-.44.44-.8.44l.01.01z"/>
+            </svg>
+            <span class="text-gray-500 text-sm w-24">Telegram</span>
+            <span class="text-white text-sm">{{ socialHandles().telegram || '—' }}</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <svg class="w-5 h-5 text-pink-400 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+            </svg>
+            <span class="text-gray-500 text-sm w-24">Instagram</span>
+            <span class="text-white text-sm">{{ socialHandles().instagram || '—' }}</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <svg class="w-5 h-5 text-green-400 flex-shrink-0" viewBox="0 0 32 32" fill="currentColor">
+              <path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732.737 5.291 2.022 7.491l-2.147 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809 8.209 0 14.862-6.656 14.862-14.865 0-4.103-1.662-7.817-4.342-10.581zm-10.511 22.86c-2.319 0-4.489-.64-6.342-1.753l-.451-.267-4.675 1.227 1.247-4.559-.294-.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353zm6.776-9.023c-.371-.186-2.197-1.083-2.537-1.208-.341-.124-.589-.185-.837.187-.246.371-.958 1.207-1.175 1.455-.216.249-.434.279-.805.094-1.15-.466-2.138-1.087-2.997-1.852-.799-.74-1.484-1.587-2.037-2.521-.216-.371-.023-.572.162-.757.167-.166.372-.434.557-.65.146-.179.271-.384.366-.604.043-.087.068-.188.068-.296 0-.131-.037-.253-.101-.357-.094-.186-.836-2.014-1.145-2.758-.302-.724-.609-.625-.836-.637-.216-.01-.464-.012-.712-.012-.395.01-.746.188-.988.463-.802.761-1.3 1.834-1.3 3.023.131 1.467.681 2.784 1.527 3.857 1.604 2.379 3.742 4.282 6.251 5.564.548.248 1.25.513 1.968.74.442.14.951.221 1.479.221.303 0 .601-.027.889-.078 1.069-.223 1.956-.868 2.497-1.749.165-.366.261-.793.261-1.242 0-.185-.016-.366-.047-.542-.092-.155-.34-.247-.712-.434z"/>
+            </svg>
+            <span class="text-gray-500 text-sm w-24">WhatsApp</span>
+            <span class="text-white text-sm">{{ socialHandles().whatsapp || '—' }}</span>
+          </div>
+        </div>
+      </div>
+    }
+
+    <!-- ── 4. HISTORY ── -->
+    <div class="rounded-2xl bg-[#121212] border border-[#ffffff10] overflow-hidden">
+      <div class="px-8 py-5 border-b border-[#ffffff10] flex items-center justify-between bg-[#161616]">
+        <h2 class="text-white font-bold uppercase tracking-wider text-sm border-l-2 border-primary pl-3" i18n="@@profileHistory">History</h2>
+        <span class="text-gray-500 text-xs">{{ history().length }} <ng-container i18n="@@profileHistoryItems">items</ng-container></span>
+      </div>
+      <ul class="divide-y divide-[#ffffff08]">
+        @for (item of history(); track item.date + item.action; let i = $index) {
+          <li class="flex items-center gap-4 px-8 py-4 hover:bg-white/[0.02] transition-colors">
+            <!-- Icon -->
+            <div class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
+              [class]="item.type === 'deposit' ? 'bg-green-500/10 text-green-400' :
+                       item.type === 'spend' ? 'bg-red-500/10 text-red-400' :
+                       'bg-primary/10 text-primary'">
+              <span class="material-symbols-outlined text-base">
+                {{ item.type === 'deposit' ? 'add_circle' : item.type === 'spend' ? 'remove_circle' : 'event_note' }}
+              </span>
+            </div>
+            <!-- Action + Date -->
+            <div class="flex-grow">
+              <p class="text-white text-sm font-medium">{{ item.action }}</p>
+              <p class="text-gray-500 text-xs">{{ item.date }}</p>
+            </div>
+            <!-- Amount -->
+            @if (item.amount !== undefined) {
+              <span class="text-sm font-bold"
+                [class]="item.amount > 0 ? 'text-green-400' : 'text-red-400'">
+                {{ item.amount > 0 ? '+' : '' }}{{ item.amount | number }} TJS
+              </span>
+            }
+          </li>
+        }
+      </ul>
+    </div>
+
   </div>
 </main>
