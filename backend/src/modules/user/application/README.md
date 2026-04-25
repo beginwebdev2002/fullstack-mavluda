@@ -1,36 +1,26 @@
-# ⚙️ Mavluda Beauty application
+# 🚀 application
 
-[backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [user](/backend/src/modules/user) / [application](/backend/src/modules/user/application)
+[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [user](..) / [application](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-> **FSD Layer**: `App` - Adhering to Feature Sliced Design principles.
+Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  application["⚙️ application"]
-  application --> user_service_ts["📄 user.service.ts"]
+  application["🚀 application"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.service.ts` | Service | Encapsulates business logic and API calls. | `@nestjs/common` |
-
+| `user.service.ts` | TypeScript | Business logic execution and state management. | @nestjs |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@nestjs/common`
-
-**External Packages:**
-- `bcrypt`
-
+- `@nestjs`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for application
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

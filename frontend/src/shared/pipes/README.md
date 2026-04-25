@@ -1,36 +1,29 @@
-# 📁 Mavluda Beauty pipes
+# 📁 pipes
 
-[frontend](/frontend) / [src](/frontend/src) / [shared](/frontend/src/shared) / [pipes](/frontend/src/shared/pipes)
+[Root](/.) / [frontend](../../..) / [src](../..) / [shared](..) / [pipes](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **pipes** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **pipes** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
-> **FSD Layer**: `Shared` - Adhering to Feature Sliced Design principles.
+*This directory operates strictly within the **Shared** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   pipes["📁 pipes"]
-  pipes --> index_ts["📄 index.ts"]
-  pipes --> safe_html_pipe_ts["📄 safe-html.pipe.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-| `safe-html.pipe.ts` | TypeScript Logic | Core logic and utilities for this domain. | `@angular/core, @angular/platform-browser` |
-
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `safe-html.pipe.ts` | TypeScript | Core logic and utilities for this domain. | @angular |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@angular/core`
-- `@angular/platform-browser`
-
+- `@angular`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for pipes
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

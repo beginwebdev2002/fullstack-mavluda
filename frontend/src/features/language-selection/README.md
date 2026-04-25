@@ -1,40 +1,31 @@
-# 📁 Mavluda Beauty language-selection
+# 📁 language-selection
 
-[frontend](/frontend) / [src](/frontend/src) / [features](/frontend/src/features) / [language-selection](/frontend/src/features/language-selection)
+[Root](/.) / [frontend](../../..) / [src](../..) / [features](..) / [language-selection](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **language-selection** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **language-selection** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
-> **FSD Layer**: `Features` - Adhering to Feature Sliced Design principles.
+*This directory operates strictly within the **Features** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   language_selection["📁 language-selection"]
-  language_selection --> index_ts["📄 index.ts"]
-  language_selection --> language_switcher_component_html["📄 language-switcher.component.html"]
-  language_selection --> language_switcher_component_scss["📄 language-switcher.component.scss"]
-  language_selection --> language_switcher_component_ts["📄 language-switcher.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-| `language-switcher.component.html` | Component | Renders UI and handles user interaction. | N/A |
-| `language-switcher.component.scss` | Component | Renders UI and handles user interaction. | N/A |
-| `language-switcher.component.ts` | Component | Renders UI and handles user interaction. | `@angular/core, @angular/common` |
-
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `language-switcher.component.html` | Template | Component template structural layout. | N/A |
+| `language-switcher.component.scss` | Styles | Luxury styling and brand aesthetics. | N/A |
+| `language-switcher.component.ts` | TypeScript | UI rendering and user interaction. | @angular |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@angular/core`
-- `@angular/common`
-
+- `@angular`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for language-selection
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

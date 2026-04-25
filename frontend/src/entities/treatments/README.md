@@ -1,43 +1,33 @@
-# 📁 Mavluda Beauty treatments
+# 📁 treatments
 
-[frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [treatments](/frontend/src/entities/treatments)
+[Root](/.) / [frontend](../../..) / [src](../..) / [entities](..) / [treatments](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
-> **FSD Layer**: `Entities` - Adhering to Feature Sliced Design principles.
+*This directory operates strictly within the **Entities** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   treatments["📁 treatments"]
   treatments --> constants["📁 constants"]
-  treatments --> index_ts["📄 index.ts"]
-  treatments --> treatments_service_ts["📄 treatments.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-| `treatments.service.ts` | Service | Encapsulates business logic and API calls. | `@angular/core, @angular/common/http, @features/treatments, @shared/lib, @core/constants` |
-
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `treatments.service.ts` | TypeScript | Business logic execution and state management. | @angular, @features, @shared, @core |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@angular/core`
-- `@angular/common/http`
-- `@features/treatments`
-- `@shared/lib`
-- `@core/constants`
-
-**External Packages:**
-- `rxjs`
-
+- `@angular`
+- `@features`
+- `@shared`
+- `@core`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for treatments
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

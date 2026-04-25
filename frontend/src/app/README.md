@@ -1,38 +1,30 @@
-# 🚀 Mavluda Beauty app
+# 🍰 app
 
-[frontend](/frontend) / [src](/frontend/src) / [app](/frontend/src/app)
+[Root](/.) / [frontend](../..) / [src](..) / [app](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **app** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **app** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
-> **FSD Layer**: `App` - Adhering to Feature Sliced Design principles.
+*This directory operates strictly within the **App** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  app["🚀 app"]
-  app --> app_config_ts["📄 app.config.ts"]
+  app["🍰 app"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.config.ts` | TypeScript Logic | Core logic and utilities for this domain. | `@angular/core, @angular/platform-browser/animations, @angular/router, @src/app.routes, @angular/common/http, @core/interceptors` |
-
+| `app.config.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @src, @core |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@angular/core`
-- `@angular/platform-browser/animations`
-- `@angular/router`
-- `@src/app.routes`
-- `@angular/common/http`
-- `@core/interceptors`
-
+- `@angular`
+- `@src`
+- `@core`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for app
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

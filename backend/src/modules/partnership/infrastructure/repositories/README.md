@@ -1,35 +1,26 @@
-# 📁 Mavluda Beauty repositories
+# 📁 repositories
 
-[backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [partnership](/backend/src/modules/partnership) / [infrastructure](/backend/src/modules/partnership/infrastructure) / [repositories](/backend/src/modules/partnership/infrastructure/repositories)
+[Root](/.) / [backend](../../../../..) / [src](../../../..) / [modules](../../..) / [partnership](../..) / [infrastructure](..) / [repositories](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **repositories** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **repositories** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   repositories["📁 repositories"]
-  repositories --> partnership_repository_ts["📄 partnership.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.repository.ts` | TypeScript Logic | Core logic and utilities for this domain. | `@nestjs/common, @nestjs/mongoose` |
-
+| `partnership.repository.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@nestjs/common`
-- `@nestjs/mongoose`
-
-**External Packages:**
-- `mongoose`
-
+- `@nestjs`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for repositories
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

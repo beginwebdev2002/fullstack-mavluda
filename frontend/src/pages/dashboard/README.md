@@ -1,47 +1,32 @@
-# 📁 Mavluda Beauty dashboard
+# 📁 dashboard
 
-[frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [dashboard](/frontend/src/pages/dashboard)
+[Root](/.) / [frontend](../../..) / [src](../..) / [pages](..) / [dashboard](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dashboard** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **dashboard** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
-> **FSD Layer**: `Pages` - Adhering to Feature Sliced Design principles.
+*This directory operates strictly within the **Pages** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   dashboard["📁 dashboard"]
-  dashboard --> dashboard_component_html["📄 dashboard.component.html"]
-  dashboard --> dashboard_component_scss["📄 dashboard.component.scss"]
-  dashboard --> dashboard_component_ts["📄 dashboard.component.ts"]
-  dashboard --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `dashboard.component.html` | Component | Renders UI and handles user interaction. | N/A |
-| `dashboard.component.scss` | Component | Renders UI and handles user interaction. | N/A |
-| `dashboard.component.ts` | Component | Renders UI and handles user interaction. | `@angular/core, @angular/common, @entities/user/user.service, @entities/veil/veil.service, @entities/gallery/gallery.service, @entities/treatments/treatments.service` |
-| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-
+| `dashboard.component.html` | Template | Component template structural layout. | N/A |
+| `dashboard.component.scss` | Styles | Luxury styling and brand aesthetics. | N/A |
+| `dashboard.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @entities |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@angular/core`
-- `@angular/common`
-- `@entities/user/user.service`
-- `@entities/veil/veil.service`
-- `@entities/gallery/gallery.service`
-- `@entities/treatments/treatments.service`
-
-**External Packages:**
-- `rxjs`
-
+- `@angular`
+- `@entities`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for dashboard
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

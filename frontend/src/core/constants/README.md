@@ -1,33 +1,27 @@
-# 📁 Mavluda Beauty constants
+# 📁 constants
 
-[frontend](/frontend) / [src](/frontend/src) / [core](/frontend/src/core) / [constants](/frontend/src/core/constants)
+[Root](/.) / [frontend](../../..) / [src](../..) / [core](..) / [constants](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   constants["📁 constants"]
-  constants --> api_endpoints_ts["📄 api-endpoints.ts"]
-  constants --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `api-endpoints.ts` | TypeScript Logic | Core logic and utilities for this domain. | `@shared/lib` |
-| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-
+| `api-endpoints.ts` | TypeScript | Core logic and utilities for this domain. | @shared |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@shared/lib`
-
+- `@shared`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for constants
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

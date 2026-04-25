@@ -1,11 +1,11 @@
-# 📁 Mavluda Beauty user
+# 📁 user
 
-[frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities) / [user](/frontend/src/entities/user)
+[Root](/.) / [frontend](../../..) / [src](../..) / [entities](..) / [user](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **user** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **user** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
-> **FSD Layer**: `Entities` - Adhering to Feature Sliced Design principles.
+*This directory operates strictly within the **Entities** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
@@ -13,34 +13,20 @@ graph TD
   user["📁 user"]
   user --> constants["📁 constants"]
   user --> model["📁 model"]
-  user --> auth_service_ts["📄 auth.service.ts"]
-  user --> index_ts["📄 index.ts"]
-  user --> user_service_ts["📄 user.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth.service.ts` | Service | Encapsulates business logic and API calls. | `@angular/core, @angular/common/http, @angular/router` |
-| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-| `user.service.ts` | Service | Encapsulates business logic and API calls. | `@angular/core, @angular/common/http` |
-
+| `auth.service.ts` | TypeScript | Business logic execution and state management. | @angular |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `user.service.ts` | TypeScript | Business logic execution and state management. | @angular |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@angular/core`
-- `@angular/common/http`
-- `@angular/router`
-
-**External Packages:**
-- `rxjs/operators`
-- `jwt-decode`
-- `rxjs`
-
+- `@angular`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for user
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

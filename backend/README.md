@@ -1,9 +1,9 @@
-# ⚙️ Mavluda Beauty backend
+# ⚙️ backend
 
-[backend](/backend)
+[Root](/.) / [backend](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **backend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **backend** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
@@ -11,33 +11,24 @@ graph TD
   backend["⚙️ backend"]
   backend --> src["📁 src"]
   backend --> test["📁 test"]
-  backend --> _prettierrc["📄 .prettierrc"]
-  backend --> eslint_config_mjs["📄 eslint.config.mjs"]
-  backend --> nest_cli_json["📄 nest-cli.json"]
-  backend --> package_lock_json["📄 package-lock.json"]
-  backend --> package_json["📄 package.json"]
-  backend --> tsconfig_build_json["📄 tsconfig.build.json"]
-  backend --> tsconfig_json["📄 tsconfig.json"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `.prettierrc` | File | Core logic and utilities for this domain. | N/A |
-| `eslint.config.mjs` | File | Core logic and utilities for this domain. | N/A |
-| `nest-cli.json` | Configuration | Project level settings and dependencies. | N/A |
-| `package-lock.json` | Configuration | Project level settings and dependencies. | N/A |
-| `package.json` | Configuration | Project level settings and dependencies. | N/A |
-| `tsconfig.build.json` | Configuration | Project level settings and dependencies. | N/A |
-| `tsconfig.json` | Configuration | Project level settings and dependencies. | N/A |
-
+| `eslint.config.mjs` | JavaScript | Core logic and utilities for this domain. | N/A |
+| `nest-cli.json` | Configuration | Configuration and environment settings. | N/A |
+| `package-lock.json` | Configuration | Configuration and environment settings. | N/A |
+| `package.json` | Configuration | Configuration and environment settings. | N/A |
+| `tsconfig.build.json` | Configuration | Configuration and environment settings. | N/A |
+| `tsconfig.json` | Configuration | Configuration and environment settings. | N/A |
 
 ## 🔗 Dependencies
-No external or alias dependencies detected.
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// Example integration for backend
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

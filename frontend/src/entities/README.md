@@ -1,16 +1,16 @@
-# 🧱 Mavluda Beauty entities
+# 🍰 entities
 
-[frontend](/frontend) / [src](/frontend/src) / [entities](/frontend/src/entities)
+[Root](/.) / [frontend](../..) / [src](..) / [entities](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **entities** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **entities** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
-> **FSD Layer**: `Entities` - Adhering to Feature Sliced Design principles.
+*This directory operates strictly within the **Entities** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  entities["🧱 entities"]
+  entities["🍰 entities"]
   entities --> admin_settings["📁 admin-settings"]
   entities --> gallery["📁 gallery"]
   entities --> treatments["📁 treatments"]
@@ -21,15 +21,13 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files in this directory* | - | - | - |
-
+| *No files* | - | - | - |
 
 ## 🔗 Dependencies
-No external or alias dependencies detected.
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// Example integration for entities
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

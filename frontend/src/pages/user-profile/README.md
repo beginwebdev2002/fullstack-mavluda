@@ -1,41 +1,32 @@
-# 📁 Mavluda Beauty user-profile
+# 📁 user-profile
 
-[frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [user-profile](/frontend/src/pages/user-profile)
+[Root](/.) / [frontend](../../..) / [src](../..) / [pages](..) / [user-profile](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **user-profile** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **user-profile** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
-> **FSD Layer**: `Pages` - Adhering to Feature Sliced Design principles.
+*This directory operates strictly within the **Pages** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   user_profile["📁 user-profile"]
-  user_profile --> index_ts["📄 index.ts"]
-  user_profile --> user_profile_component_html["📄 user-profile.component.html"]
-  user_profile --> user_profile_component_scss["📄 user-profile.component.scss"]
-  user_profile --> user_profile_component_ts["📄 user-profile.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-| `user-profile.component.html` | Component | Renders UI and handles user interaction. | N/A |
-| `user-profile.component.scss` | Component | Renders UI and handles user interaction. | N/A |
-| `user-profile.component.ts` | Component | Renders UI and handles user interaction. | `@angular/core, @angular/common, @entities/user` |
-
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `user-profile.component.html` | Template | Component template structural layout. | N/A |
+| `user-profile.component.scss` | Styles | Luxury styling and brand aesthetics. | N/A |
+| `user-profile.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @entities |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@angular/core`
-- `@angular/common`
-- `@entities/user`
-
+- `@angular`
+- `@entities`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for user-profile
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

@@ -1,33 +1,27 @@
-# 📦 Mavluda Beauty dto
+# 📁 dto
 
-[backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [auth](/backend/src/modules/auth) / [dto](/backend/src/modules/auth/dto)
+[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [auth](..) / [dto](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  dto["📦 dto"]
-  dto --> login_dto_ts["📄 login.dto.ts"]
-  dto --> register_dto_ts["📄 register.dto.ts"]
+  dto["📁 dto"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `login.dto.ts` | DTO | Defines expected data shapes for validation. | N/A |
-| `register.dto.ts` | DTO | Defines expected data shapes for validation. | N/A |
-
+| `login.dto.ts` | TypeScript | Data Transfer Object definition and validation. | N/A |
+| `register.dto.ts` | TypeScript | Data Transfer Object definition and validation. | N/A |
 
 ## 🔗 Dependencies
-**External Packages:**
-- `class-validator`
-
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// Example integration for dto
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

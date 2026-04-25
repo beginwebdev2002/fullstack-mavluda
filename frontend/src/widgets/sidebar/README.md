@@ -1,43 +1,31 @@
-# 📁 Mavluda Beauty sidebar
+# 📁 sidebar
 
-[frontend](/frontend) / [src](/frontend/src) / [widgets](/frontend/src/widgets) / [sidebar](/frontend/src/widgets/sidebar)
+[Root](/.) / [frontend](../../..) / [src](../..) / [widgets](..) / [sidebar](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **sidebar** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **sidebar** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
-> **FSD Layer**: `Widgets` - Adhering to Feature Sliced Design principles.
+*This directory operates strictly within the **Widgets** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   sidebar["📁 sidebar"]
-  sidebar --> index_ts["📄 index.ts"]
-  sidebar --> sidebar_component_html["📄 sidebar.component.html"]
-  sidebar --> sidebar_component_ts["📄 sidebar.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-| `sidebar.component.html` | Component | Renders UI and handles user interaction. | N/A |
-| `sidebar.component.ts` | Component | Renders UI and handles user interaction. | `@angular/core, @angular/common, @angular/router, @shared/pipes` |
-
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `sidebar.component.html` | Template | Component template structural layout. | N/A |
+| `sidebar.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @shared |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@angular/core`
-- `@angular/common`
-- `@angular/router`
-- `@shared/pipes`
-
-**External Packages:**
-- `rxjs`
-
+- `@angular`
+- `@shared`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for sidebar
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

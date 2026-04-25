@@ -1,9 +1,9 @@
-# 🎨 Mavluda Beauty frontend
+# 🎨 frontend
 
-[frontend](/frontend)
+[Root](/.) / [frontend](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **frontend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **frontend** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
@@ -11,35 +11,25 @@ graph TD
   frontend["🎨 frontend"]
   frontend --> public["📁 public"]
   frontend --> src["📁 src"]
-  frontend --> angular_json["📄 angular.json"]
-  frontend --> index_html["📄 index.html"]
-  frontend --> index_tsx["📄 index.tsx"]
-  frontend --> leaflet_css["📄 leaflet.css"]
-  frontend --> metadata_json["📄 metadata.json"]
-  frontend --> package_lock_json["📄 package-lock.json"]
-  frontend --> package_json["📄 package.json"]
-  frontend --> tsconfig_json["📄 tsconfig.json"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `angular.json` | Configuration | Project level settings and dependencies. | N/A |
-| `index.html` | Template | Core logic and utilities for this domain. | N/A |
+| `angular.json` | Configuration | Configuration and environment settings. | N/A |
+| `index.html` | Template | Component template structural layout. | N/A |
 | `index.tsx` | File | Core logic and utilities for this domain. | N/A |
-| `leaflet.css` | Styles | Core logic and utilities for this domain. | N/A |
-| `metadata.json` | Configuration | Project level settings and dependencies. | N/A |
-| `package-lock.json` | Configuration | Project level settings and dependencies. | N/A |
-| `package.json` | Configuration | Project level settings and dependencies. | N/A |
-| `tsconfig.json` | Configuration | Project level settings and dependencies. | N/A |
-
+| `leaflet.css` | Styles | Luxury styling and brand aesthetics. | N/A |
+| `metadata.json` | Configuration | Configuration and environment settings. | N/A |
+| `package-lock.json` | Configuration | Configuration and environment settings. | N/A |
+| `package.json` | Configuration | Configuration and environment settings. | N/A |
+| `tsconfig.json` | Configuration | Configuration and environment settings. | N/A |
 
 ## 🔗 Dependencies
-No external or alias dependencies detected.
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// Example integration for frontend
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

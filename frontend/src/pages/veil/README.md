@@ -1,50 +1,36 @@
-# 📁 Mavluda Beauty veil
+# 📁 veil
 
-[frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [veil](/frontend/src/pages/veil)
+[Root](/.) / [frontend](../../..) / [src](../..) / [pages](..) / [veil](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **veil** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **veil** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
-> **FSD Layer**: `Pages` - Adhering to Feature Sliced Design principles.
+*This directory operates strictly within the **Pages** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   veil["📁 veil"]
   veil --> ui["📁 ui"]
-  veil --> index_ts["📄 index.ts"]
-  veil --> veil_component_html["📄 veil.component.html"]
-  veil --> veil_component_scss["📄 veil.component.scss"]
-  veil --> veil_component_ts["📄 veil.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-| `veil.component.html` | Component | Renders UI and handles user interaction. | N/A |
-| `veil.component.scss` | Component | Renders UI and handles user interaction. | N/A |
-| `veil.component.ts` | Component | Renders UI and handles user interaction. | `@angular/common, @angular/core, @environments/environment, @entities/veil, @entities/admin-settings, @features/veil, @shared/lib, @shared/ui` |
-
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `veil.component.html` | Template | Component template structural layout. | N/A |
+| `veil.component.scss` | Styles | Luxury styling and brand aesthetics. | N/A |
+| `veil.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @environments, @entities, @features, @shared |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@angular/common`
-- `@angular/core`
-- `@environments/environment`
-- `@entities/veil`
-- `@entities/admin-settings`
-- `@features/veil`
-- `@shared/lib`
-- `@shared/ui`
-
-**External Packages:**
-- `rxjs`
-
+- `@angular`
+- `@environments`
+- `@entities`
+- `@features`
+- `@shared`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for veil
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

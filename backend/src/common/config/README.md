@@ -1,42 +1,29 @@
-# 📁 Mavluda Beauty config
+# 📁 config
 
-[backend](/backend) / [src](/backend/src) / [common](/backend/src/common) / [config](/backend/src/common/config)
+[Root](/.) / [backend](../../..) / [src](../..) / [common](..) / [config](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **config** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **config** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   config["📁 config"]
-  config --> app_config_module_ts["📄 app-config.module.ts"]
-  config --> app_config_service_ts["📄 app-config.service.ts"]
-  config --> configuration_ts["📄 configuration.ts"]
-  config --> env_validation_ts["📄 env.validation.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app-config.module.ts` | Module | Groups related capabilities and defines dependencies. | `@nestjs/common, @nestjs/config` |
-| `app-config.service.ts` | Service | Encapsulates business logic and API calls. | `@nestjs/common, @nestjs/config` |
-| `configuration.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-| `env.validation.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-
+| `app-config.module.ts` | TypeScript | Dependency injection and module orchestration. | @nestjs |
+| `app-config.service.ts` | TypeScript | Business logic execution and state management. | @nestjs |
+| `configuration.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `env.validation.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@nestjs/common`
-- `@nestjs/config`
-
-**External Packages:**
-- `class-transformer`
-- `class-validator`
-
+- `@nestjs`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for config
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

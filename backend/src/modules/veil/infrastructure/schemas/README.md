@@ -1,34 +1,26 @@
-# 📁 Mavluda Beauty schemas
+# 📁 schemas
 
-[backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [veil](/backend/src/modules/veil) / [infrastructure](/backend/src/modules/veil/infrastructure) / [schemas](/backend/src/modules/veil/infrastructure/schemas)
+[Root](/.) / [backend](../../../../..) / [src](../../../..) / [modules](../../..) / [veil](../..) / [infrastructure](..) / [schemas](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **schemas** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **schemas** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   schemas["📁 schemas"]
-  schemas --> veil_schema_ts["📄 veil.schema.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.schema.ts` | Model/Schema | Defines persistence layer structure. | `@nestjs/mongoose` |
-
+| `veil.schema.ts` | TypeScript | Data modeling and database schemas. | @nestjs |
 
 ## 🔗 Dependencies
-**Path Aliases:**
-- `@nestjs/mongoose`
-
-**External Packages:**
-- `mongoose`
-
+- `@nestjs`
 
 ## 🛠️ Usage
-```typescript
-// Example integration for schemas
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.

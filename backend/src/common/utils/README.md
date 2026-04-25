@@ -1,37 +1,28 @@
-# 🛠️ Mavluda Beauty utils
+# 📁 utils
 
-[backend](/backend) / [src](/backend/src) / [common](/backend/src/common) / [utils](/backend/src/common/utils)
+[Root](/.) / [backend](../../..) / [src](../..) / [common](..) / [utils](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **utils** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **utils** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  utils["🛠️ utils"]
-  utils --> file_system_ts["📄 file-system.ts"]
-  utils --> index_ts["📄 index.ts"]
-  utils --> object_ts["📄 object.ts"]
+  utils["📁 utils"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `file-system.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-| `index.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-| `object.ts` | TypeScript Logic | Core logic and utilities for this domain. | N/A |
-
+| `file-system.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `object.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
 ## 🔗 Dependencies
-**External Packages:**
-- `fs`
-- `path`
-- `util`
-
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// Example integration for utils
-// Import capabilities from this directory to enrich your modules.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.
