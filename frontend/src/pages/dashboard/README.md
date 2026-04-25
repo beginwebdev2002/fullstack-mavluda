@@ -1,40 +1,32 @@
 # 📁 dashboard
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [dashboard](/frontend/src/pages/dashboard)
+[Root](/.) / [frontend](../../..) / [src](../..) / [pages](..) / [dashboard](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dashboard** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Pages - Adhering to strict Feature Sliced Design architectural constraints.
+Delivering luxury-tier architectural components and high-performance logic for the **dashboard** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+
+*This directory operates strictly within the **Pages** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dashboard"]
-  Root --> dashboardcomponenthtml["📄 dashboard.component.html"]
-  Root --> dashboardcomponentscss["📄 dashboard.component.scss"]
-  Root --> dashboardcomponentts["📄 dashboard.component.ts"]
-  Root --> indexts["📄 index.ts"]
+  dashboard["📁 dashboard"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `dashboard.component.html` | Template | Visual layout and structural HTML. | N/A |
-| `dashboard.component.scss` | Stylesheet | Luxury styling and layout logic. | N/A |
-| `dashboard.component.ts` | Component | UI rendering and component-level state. | @angular |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-
+| `dashboard.component.html` | Template | Component template structural layout. | N/A |
+| `dashboard.component.scss` | Styles | Luxury styling and brand aesthetics. | N/A |
+| `dashboard.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @entities |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
 ## 🔗 Dependencies
-- `@angular/core`
-- `@angular/common`
-- `./dashboard.component`
+- `@angular`
+- `@entities`
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dashboard.component';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

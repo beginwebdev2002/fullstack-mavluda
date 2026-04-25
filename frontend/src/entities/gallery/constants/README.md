@@ -1,32 +1,28 @@
 # 📁 constants
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [gallery](/frontend/src/entities/gallery) > [constants](/frontend/src/entities/gallery/constants)
+[Root](/.) / [frontend](../../../..) / [src](../../..) / [entities](../..) / [gallery](..) / [constants](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
+Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+
+*This directory operates strictly within the **Entities** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> galleryconstantsts["📄 gallery.constants.ts"]
+  constants["📁 constants"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.constants.ts` | File | Core logic and utilities for this domain. | N/A |
-
+| `gallery.constants.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './gallery.constants';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

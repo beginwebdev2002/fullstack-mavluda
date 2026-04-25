@@ -1,35 +1,29 @@
 # 📁 image-popup
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [image-popup](/frontend/src/shared/ui/image-popup)
+[Root](/.) / [frontend](../../../..) / [src](../../..) / [shared](../..) / [ui](..) / [image-popup](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **image-popup** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Shared - Adhering to strict Feature Sliced Design architectural constraints.
+Delivering luxury-tier architectural components and high-performance logic for the **image-popup** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+
+*This directory operates strictly within the **Shared** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 image-popup"]
-  Root --> imagepopupcomponenthtml["📄 image-popup.component.html"]
-  Root --> imagepopupcomponentts["📄 image-popup.component.ts"]
+  image_popup["📁 image-popup"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `image-popup.component.html` | Template | Visual layout and structural HTML. | N/A |
-| `image-popup.component.ts` | Component | UI rendering and component-level state. | @angular |
-
+| `image-popup.component.html` | Template | Component template structural layout. | N/A |
+| `image-popup.component.ts` | TypeScript | UI rendering and user interaction. | @angular |
 
 ## 🔗 Dependencies
-- `@angular/core`
-- `@angular/common`
+- `@angular`
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './image-popup.component';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

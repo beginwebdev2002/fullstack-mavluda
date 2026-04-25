@@ -1,27 +1,27 @@
-# [root](/) / [frontend](/frontend) / [public](/frontend/public)
+# 📁 public
 
-## 🏷️ 📁 Public
+[Root](/.) / [frontend](..) / [public](.)
 
-### 🎯 PURPOSE
-The `public` directory handles frontend architecture and configuration for the Mavluda Beauty platform.
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **public** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
-### 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-  public[📁 public]
-  public --> public_images[📁 images]
+  public["📁 public"]
+  public --> images["📁 images"]
 ```
 
-### 📄 FILE REGISTRY
+## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| (No files) | - | - | - |
+| *No files* | - | - | - |
 
-### 🔗 DEPENDENCIES
-- `None`
+## 🔗 Dependencies
+*No internal path aliases detected in this directory.*
 
-### 🛠️ USAGE
-```typescript
-// Seamlessly integrate public into your refined workflows:
-import { /* exported members */ } from '@path/to/public';
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

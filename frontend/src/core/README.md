@@ -1,29 +1,29 @@
-# 🧠 core
+# 📁 core
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core)
+[Root](/.) / [frontend](../..) / [src](..) / [core](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **core** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **core** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["🧠 core"]
-  Root --> constants["📁 constants"]
-  Root --> guards["📁 guards"]
-  Root --> interceptors["📁 interceptors"]
+  core["📁 core"]
+  core --> constants["📁 constants"]
+  core --> guards["📁 guards"]
+  core --> interceptors["📁 interceptors"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
-
+| *No files* | - | - | - |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
-> This directory acts primarily as a structural container or configuration hub.
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

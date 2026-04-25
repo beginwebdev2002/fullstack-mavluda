@@ -1,38 +1,31 @@
 # 📁 gallery
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [gallery](/frontend/src/entities/gallery)
+[Root](/.) / [frontend](../../..) / [src](../..) / [entities](..) / [gallery](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Entities - Adhering to strict Feature Sliced Design architectural constraints.
+Delivering luxury-tier architectural components and high-performance logic for the **gallery** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+
+*This directory operates strictly within the **Entities** layer of our Feature Sliced Design (FSD) architecture.*
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 gallery"]
-  Root --> constants["📁 constants"]
+  gallery["📁 gallery"]
+  gallery --> constants["📁 constants"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.service.ts` | Service | Business logic and state management. | @angular, @shared |
-| `index.ts` | File | Core logic and utilities for this domain. | N/A |
-
+| `gallery.service.ts` | TypeScript | Business logic execution and state management. | @angular, @shared |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
 ## 🔗 Dependencies
-- `@angular/core`
-- `@angular/common/http`
-- `rxjs`
-- `@shared/models`
-- `./gallery.service`
-- `./constants/gallery.constants`
+- `@angular`
+- `@shared`
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './gallery.service';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

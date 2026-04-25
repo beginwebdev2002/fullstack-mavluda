@@ -1,27 +1,28 @@
 # 📁 locale
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [locale](/frontend/src/locale)
+[Root](/.) / [frontend](../..) / [src](..) / [locale](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **locale** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **locale** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 locale"]
-  Root --> Empty["(Empty / No recognized files)"]
+  locale["📁 locale"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
-
+| `messages.ru.xlf` | File | Core logic and utilities for this domain. | N/A |
+| `messages.tj.xlf` | File | Core logic and utilities for this domain. | N/A |
+| `messages.xlf` | File | Core logic and utilities for this domain. | N/A |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
-> This directory acts primarily as a structural container or configuration hub.
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

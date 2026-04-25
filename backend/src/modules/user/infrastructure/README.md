@@ -1,29 +1,28 @@
-# 📁 infrastructure
+# 🏗️ infrastructure
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [infrastructure](/backend/src/modules/user/infrastructure)
+[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [user](..) / [infrastructure](.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **infrastructure** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-> **FSD Layer:** Modules (Backend FSD) - Adhering to strict Feature Sliced Design architectural constraints.
+Delivering luxury-tier architectural components and high-performance logic for the **infrastructure** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 infrastructure"]
-  Root --> repositories["📁 repositories"]
-  Root --> schemas["📁 schemas"]
+  infrastructure["🏗️ infrastructure"]
+  infrastructure --> repositories["📁 repositories"]
+  infrastructure --> schemas["📁 schemas"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
-
+| *No files* | - | - | - |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
-> This directory acts primarily as a structural container or configuration hub.
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
