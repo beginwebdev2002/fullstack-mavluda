@@ -1,26 +1,33 @@
-# 📁 schemas
+# 🏷️ Schemas Directory
 
-[Root](/.) / [backend](../../../../..) / [src](../../../..) / [modules](../../..) / [booking](../..) / [infrastructure](..) / [schemas](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [booking](/backend/src/modules/booking) ➔ [infrastructure](/backend/src/modules/booking/infrastructure) ➔ [schemas](/backend/src/modules/booking/infrastructure/schemas)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **schemas** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Schemas** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  schemas["📁 schemas"]
+  schemas --> Files
+  Files --> booking_schema_ts[booking.schema.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.schema.ts` | TypeScript | Data modeling and database schemas. | @nestjs |
+| `booking.schema.ts` | TypeScript | Exports: BookingDocument, BookingSchemaEntity, BookingSchema | None |
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/mongoose`
+- `mongoose`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { BookingDocument } from './path/to/bookingdocument';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

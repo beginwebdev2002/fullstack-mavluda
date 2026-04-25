@@ -1,30 +1,34 @@
-# 🍰 pages
+# 🏷️ Pages Directory
 
-[Root](/.) / [frontend](../..) / [src](..) / [pages](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [pages](/frontend/src/pages)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **pages** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Pages** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
-*This directory operates strictly within the **Pages** layer of our Feature Sliced Design (FSD) architecture.*
+**Feature Sliced Design (FSD) Layer:** `Pages`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  pages["🍰 pages"]
-  pages --> about["📁 about"]
-  pages --> auth["📁 auth"]
-  pages --> clients["📁 clients"]
-  pages --> dashboard["📁 dashboard"]
-  pages --> gallery["📁 gallery"]
-  pages --> inventory["📁 inventory"]
-  pages --> portfolio["📁 portfolio"]
-  pages --> settings["📁 settings"]
-  pages --> treatments["📁 treatments"]
-  pages --> treatments_catalog["📁 treatments-catalog"]
-  pages --> user_home["📁 user-home"]
-  pages --> user_profile["📁 user-profile"]
-  pages --> veil["📁 veil"]
-  pages --> veils_catalog["📁 veils-catalog"]
+  pages --> Files
+  pages --> Subdirectories
+  Subdirectories --> portfolio[portfolio/]
+  Subdirectories --> settings[settings/]
+  Subdirectories --> dashboard[dashboard/]
+  Subdirectories --> gallery[gallery/]
+  Subdirectories --> user_profile[user-profile/]
+  Subdirectories --> treatments[treatments/]
+  Subdirectories --> about[about/]
+  Subdirectories --> veil[veil/]
+  Subdirectories --> veils_catalog[veils-catalog/]
+  Subdirectories --> inventory[inventory/]
+  Subdirectories --> clients[clients/]
+  Subdirectories --> treatments_catalog[treatments-catalog/]
+  Subdirectories --> auth[auth/]
+  Subdirectories --> user_home[user-home/]
 ```
 
 ## 📄 File Registry
@@ -33,10 +37,10 @@ graph TD
 | *No files* | - | - | - |
 
 ## 🔗 Dependencies
-*No internal path aliases detected in this directory.*
+No external or cross-module dependencies detected.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// This directory primarily serves organizational or static purposes.
+// Reference its contents dynamically based on your feature requirements.
 ```

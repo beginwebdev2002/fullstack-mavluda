@@ -1,27 +1,34 @@
-# 🎭 presentation
+# 🏷️ Presentation Directory
 
-[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [inventory](..) / [presentation](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [inventory](/backend/src/modules/inventory) ➔ [presentation](/backend/src/modules/inventory/presentation)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **presentation** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Presentation** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  presentation["🎭 presentation"]
-  presentation --> dto["📁 dto"]
+  presentation --> Files
+  Files --> inventory_controller_ts[inventory.controller.ts]
+  presentation --> Subdirectories
+  Subdirectories --> dto[dto/]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.controller.ts` | TypeScript | API routing and request handling. | @nestjs |
+| `inventory.controller.ts` | TypeScript | Exports: InventoryController | None |
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/common`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { InventoryController } from './path/to/inventorycontroller';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

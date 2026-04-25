@@ -1,29 +1,39 @@
-# 🎭 presentation
+# 🏷️ Presentation Directory
 
-[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [user](..) / [presentation](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [user](/backend/src/modules/user) ➔ [presentation](/backend/src/modules/user/presentation)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **presentation** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Presentation** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  presentation["🎭 presentation"]
-  presentation --> dto["📁 dto"]
+  presentation --> Files
+  Files --> user_controller_ts[user.controller.ts]
+  presentation --> Subdirectories
+  Subdirectories --> dto[dto/]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.controller.ts` | TypeScript | API routing and request handling. | @nestjs, @modules, @common |
+| `user.controller.ts` | TypeScript | Exports: UserController | @common, @modules |
 
 ## 🔗 Dependencies
-- `@nestjs`
-- `@modules`
-- `@common`
+- `@common/interfaces/authenticated-request.interface`
+- `@modules/user`
+- `@nestjs/common`
+- `@nestjs/platform-express`
+- `multer`
+- `path`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { UserController } from './path/to/usercontroller';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

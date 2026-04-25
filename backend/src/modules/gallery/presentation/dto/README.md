@@ -1,27 +1,35 @@
-# 📁 dto
+# 🏷️ Dto Directory
 
-[Root](/.) / [backend](../../../../..) / [src](../../../..) / [modules](../../..) / [gallery](../..) / [presentation](..) / [dto](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [gallery](/backend/src/modules/gallery) ➔ [presentation](/backend/src/modules/gallery/presentation) ➔ [dto](/backend/src/modules/gallery/presentation/dto)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Dto** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  dto["📁 dto"]
+  dto --> Files
+  Files --> update_gallery_dto_ts[update-gallery.dto.ts]
+  Files --> create_gallery_dto_ts[create-gallery.dto.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-gallery.dto.ts` | TypeScript | Data Transfer Object definition and validation. | N/A |
-| `update-gallery.dto.ts` | TypeScript | Data Transfer Object definition and validation. | @nestjs |
+| `update-gallery.dto.ts` | TypeScript | Exports: UpdateGalleryDto | None |
+| `create-gallery.dto.ts` | TypeScript | Exports: CreateGalleryDto | None |
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/mapped-types`
+- `class-validator`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { UpdateGalleryDto } from './path/to/updategallerydto';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

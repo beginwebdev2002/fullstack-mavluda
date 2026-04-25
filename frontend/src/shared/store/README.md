@@ -1,29 +1,36 @@
-# 📁 store
+# 🏷️ Store Directory
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [shared](..) / [store](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [shared](/frontend/src/shared) ➔ [store](/frontend/src/shared/store)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **store** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Store** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
-*This directory operates strictly within the **Shared** layer of our Feature Sliced Design (FSD) architecture.*
+**Feature Sliced Design (FSD) Layer:** `Shared`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  store["📁 store"]
+  store --> Files
+  Files --> signal_store_base_ts[signal-store.base.ts]
+  Files --> index_ts[index.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `signal-store.base.ts` | TypeScript | Core logic and utilities for this domain. | @angular |
+| `signal-store.base.ts` | TypeScript | Exports: SignalStore | None |
+| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
 
 ## 🔗 Dependencies
-- `@angular`
+- `@angular/core`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { SignalStore } from './path/to/signalstore';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

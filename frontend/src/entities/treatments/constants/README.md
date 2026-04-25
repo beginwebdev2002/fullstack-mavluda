@@ -1,28 +1,32 @@
-# 📁 constants
+# 🏷️ Constants Directory
 
-[Root](/.) / [frontend](../../../..) / [src](../../..) / [entities](../..) / [treatments](..) / [constants](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [entities](/frontend/src/entities) ➔ [treatments](/frontend/src/entities/treatments) ➔ [constants](/frontend/src/entities/treatments/constants)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Constants** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
-*This directory operates strictly within the **Entities** layer of our Feature Sliced Design (FSD) architecture.*
+**Feature Sliced Design (FSD) Layer:** `Entity`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  constants["📁 constants"]
+  constants --> Files
+  Files --> treatments_constants_ts[treatments.constants.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.constants.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `treatments.constants.ts` | TypeScript | Defines logic and structure for treatments.constants.ts. | None |
 
 ## 🔗 Dependencies
-*No internal path aliases detected in this directory.*
+No external or cross-module dependencies detected.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// This directory primarily serves organizational or static purposes.
+// Reference its contents dynamically based on your feature requirements.
 ```

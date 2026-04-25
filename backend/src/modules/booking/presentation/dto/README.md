@@ -1,27 +1,34 @@
-# 📁 dto
+# 🏷️ Dto Directory
 
-[Root](/.) / [backend](../../../../..) / [src](../../../..) / [modules](../../..) / [booking](../..) / [presentation](..) / [dto](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [booking](/backend/src/modules/booking) ➔ [presentation](/backend/src/modules/booking/presentation) ➔ [dto](/backend/src/modules/booking/presentation/dto)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Dto** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  dto["📁 dto"]
+  dto --> Files
+  Files --> create_booking_dto_ts[create-booking.dto.ts]
+  Files --> update_booking_dto_ts[update-booking.dto.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-booking.dto.ts` | TypeScript | Data Transfer Object definition and validation. | N/A |
-| `update-booking.dto.ts` | TypeScript | Data Transfer Object definition and validation. | @nestjs |
+| `create-booking.dto.ts` | TypeScript | Exports: CreateBookingDto | None |
+| `update-booking.dto.ts` | TypeScript | Exports: UpdateBookingDto | None |
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/mapped-types`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { CreateBookingDto } from './path/to/createbookingdto';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

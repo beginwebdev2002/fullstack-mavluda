@@ -1,32 +1,37 @@
-# 💅 ui
+# 🏷️ Ui Directory
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [shared](..) / [ui](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [shared](/frontend/src/shared) ➔ [ui](/frontend/src/shared/ui)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **ui** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Ui** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
-*This directory operates strictly within the **Shared** layer of our Feature Sliced Design (FSD) architecture.*
+**Feature Sliced Design (FSD) Layer:** `Shared`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  ui["💅 ui"]
-  ui --> card_view["📁 card-view"]
-  ui --> global_error["📁 global-error"]
-  ui --> image_popup["📁 image-popup"]
-  ui --> list_view["📁 list-view"]
+  ui --> Files
+  Files --> index_ts[index.ts]
+  ui --> Subdirectories
+  Subdirectories --> list_view[list-view/]
+  Subdirectories --> global_error[global-error/]
+  Subdirectories --> card_view[card-view/]
+  Subdirectories --> image_popup[image-popup/]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
 
 ## 🔗 Dependencies
-*No internal path aliases detected in this directory.*
+No external or cross-module dependencies detected.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// This directory primarily serves organizational or static purposes.
+// Reference its contents dynamically based on your feature requirements.
 ```

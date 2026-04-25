@@ -1,32 +1,43 @@
-# 📁 header
+# 🏷️ Header Directory
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [widgets](..) / [header](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [widgets](/frontend/src/widgets) ➔ [header](/frontend/src/widgets/header)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **header** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Header** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
-*This directory operates strictly within the **Widgets** layer of our Feature Sliced Design (FSD) architecture.*
+**Feature Sliced Design (FSD) Layer:** `Widget`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  header["📁 header"]
+  header --> Files
+  Files --> header_component_scss[header.component.scss]
+  Files --> header_component_html[header.component.html]
+  Files --> index_ts[index.ts]
+  Files --> header_component_ts[header.component.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `header.component.html` | Template | Component template structural layout. | N/A |
-| `header.component.scss` | Styles | Luxury styling and brand aesthetics. | N/A |
-| `header.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @features |
-| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `header.component.scss` | Stylesheet | Defines logic and structure for header.component.scss. | None |
+| `header.component.html` | HTML Template | Defines logic and structure for header.component.html. | None |
+| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
+| `header.component.ts` | TypeScript | Exports: HeaderComponent | @features |
 
 ## 🔗 Dependencies
-- `@angular`
-- `@features`
+- `@angular/common`
+- `@angular/core`
+- `@angular/router`
+- `@features/language-selection`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { HeaderComponent } from './path/to/headercomponent';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

@@ -1,28 +1,34 @@
-# 📁 constants
+# 🏷️ Constants Directory
 
-[Root](/.) / [frontend](../../../..) / [src](../../..) / [entities](../..) / [veil](..) / [constants](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [entities](/frontend/src/entities) ➔ [veil](/frontend/src/entities/veil) ➔ [constants](/frontend/src/entities/veil/constants)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Constants** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
-*This directory operates strictly within the **Entities** layer of our Feature Sliced Design (FSD) architecture.*
+**Feature Sliced Design (FSD) Layer:** `Entity`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  constants["📁 constants"]
+  constants --> Files
+  Files --> veil_constants_ts[veil.constants.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.constants.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `veil.constants.ts` | TypeScript | Exports: VEIL_CATEGORIES, VEIL_SILHOUETTES, VEIL_NECKLINES... | None |
 
 ## 🔗 Dependencies
-*No internal path aliases detected in this directory.*
+No external or cross-module dependencies detected.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { VEIL_CATEGORIES } from './path/to/veil_categories';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

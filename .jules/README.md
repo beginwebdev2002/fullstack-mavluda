@@ -1,27 +1,37 @@
-# 📁 .jules
+# 🏷️ .Jules Directory
 
-[Root](/.) > [.jules](/.jules)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[.jules](/.jules)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **.jules** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+This directory encapsulates the essential architecture and logic for the **.Jules** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 .jules"]
-  Root --> Empty["(Empty / No recognized files)"]
+  _jules --> Files
+  Files --> sentinel_md[sentinel.md]
+  Files --> agents_md[agents.md]
+  Files --> bolt_md[bolt.md]
+  Files --> palette_md[palette.md]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
-
+| `sentinel.md` | File | Defines logic and structure for sentinel.md. | None |
+| `agents.md` | File | Defines logic and structure for agents.md. | @modules, @features, @app, @entities, @shared |
+| `bolt.md` | File | Defines logic and structure for bolt.md. | None |
+| `palette.md` | File | Defines logic and structure for palette.md. | None |
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+- `@entities/veil`
+- `@entities/veil/api/veil.service`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+```typescript
+// This directory primarily serves organizational or static purposes.
+// Reference its contents dynamically based on your feature requirements.
 ```

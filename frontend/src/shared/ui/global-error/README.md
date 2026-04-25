@@ -1,29 +1,37 @@
-# 📁 global-error
+# 🏷️ Global Error Directory
 
-[Root](/.) / [frontend](../../../..) / [src](../../..) / [shared](../..) / [ui](..) / [global-error](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [shared](/frontend/src/shared) ➔ [ui](/frontend/src/shared/ui) ➔ [global-error](/frontend/src/shared/ui/global-error)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **global-error** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Global Error** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
-*This directory operates strictly within the **Shared** layer of our Feature Sliced Design (FSD) architecture.*
+**Feature Sliced Design (FSD) Layer:** `Shared`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  global_error["📁 global-error"]
+  global_error --> Files
+  Files --> global_error_component_ts[global-error.component.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `global-error.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @shared |
+| `global-error.component.ts` | TypeScript | Exports: GlobalErrorComponent | @shared |
 
 ## 🔗 Dependencies
-- `@angular`
-- `@shared`
+- `@angular/animations`
+- `@angular/common`
+- `@angular/core`
+- `@shared/services`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { GlobalErrorComponent } from './path/to/globalerrorcomponent';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

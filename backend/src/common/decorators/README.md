@@ -1,27 +1,34 @@
-# 📁 decorators
+# 🏷️ Decorators Directory
 
-[Root](/.) / [backend](../../..) / [src](../..) / [common](..) / [decorators](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [common](/backend/src/common) ➔ [decorators](/backend/src/common/decorators)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **decorators** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Decorators** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  decorators["📁 decorators"]
+  decorators --> Files
+  Files --> public_decorator_ts[public.decorator.ts]
+  Files --> roles_decorator_ts[roles.decorator.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `public.decorator.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs |
-| `roles.decorator.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs |
+| `public.decorator.ts` | TypeScript | Exports: IS_PUBLIC_KEY, Public | None |
+| `roles.decorator.ts` | TypeScript | Exports: ROLES_KEY, Roles | None |
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/common`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { IS_PUBLIC_KEY } from './path/to/is_public_key';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

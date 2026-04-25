@@ -1,27 +1,34 @@
-# 🎭 presentation
+# 🏷️ Presentation Directory
 
-[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [booking](..) / [presentation](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [booking](/backend/src/modules/booking) ➔ [presentation](/backend/src/modules/booking/presentation)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **presentation** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Presentation** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  presentation["🎭 presentation"]
-  presentation --> dto["📁 dto"]
+  presentation --> Files
+  Files --> booking_controller_ts[booking.controller.ts]
+  presentation --> Subdirectories
+  Subdirectories --> dto[dto/]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.controller.ts` | TypeScript | API routing and request handling. | @nestjs |
+| `booking.controller.ts` | TypeScript | Exports: BookingController | None |
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/common`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { BookingController } from './path/to/bookingcontroller';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

@@ -1,27 +1,34 @@
-# 📁 interfaces
+# 🏷️ Interfaces Directory
 
-[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [auth](..) / [interfaces](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [auth](/backend/src/modules/auth) ➔ [interfaces](/backend/src/modules/auth/interfaces)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **interfaces** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Interfaces** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  interfaces["📁 interfaces"]
+  interfaces --> Files
+  Files --> auth_response_interface_ts[auth-response.interface.ts]
+  Files --> jwt_payload_interface_ts[jwt-payload.interface.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth-response.interface.ts` | TypeScript | Core logic and utilities for this domain. | @modules |
-| `jwt-payload.interface.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `auth-response.interface.ts` | TypeScript | Exports: AuthResponse, TelegramAuthResponse | @modules |
+| `jwt-payload.interface.ts` | TypeScript | Exports: JwtPayload | None |
 
 ## 🔗 Dependencies
-- `@modules`
+- `@modules/user`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { AuthResponse } from './path/to/authresponse';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

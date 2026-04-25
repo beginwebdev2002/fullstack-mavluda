@@ -1,26 +1,33 @@
-# 📁 schemas
+# 🏷️ Schemas Directory
 
-[Root](/.) / [backend](../../../../..) / [src](../../../..) / [modules](../../..) / [inventory](../..) / [infrastructure](..) / [schemas](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [inventory](/backend/src/modules/inventory) ➔ [infrastructure](/backend/src/modules/inventory/infrastructure) ➔ [schemas](/backend/src/modules/inventory/infrastructure/schemas)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **schemas** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Schemas** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  schemas["📁 schemas"]
+  schemas --> Files
+  Files --> inventory_schema_ts[inventory.schema.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.schema.ts` | TypeScript | Data modeling and database schemas. | @nestjs |
+| `inventory.schema.ts` | TypeScript | Exports: InventoryDocument, InventorySchemaEntity, InventorySchema | None |
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/mongoose`
+- `mongoose`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { InventoryDocument } from './path/to/inventorydocument';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

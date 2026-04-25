@@ -1,27 +1,35 @@
-# 🏗️ infrastructure
+# 🏷️ Infrastructure Directory
 
-[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [auth](..) / [infrastructure](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [auth](/backend/src/modules/auth) ➔ [infrastructure](/backend/src/modules/auth/infrastructure)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **infrastructure** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Infrastructure** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  infrastructure["🏗️ infrastructure"]
+  infrastructure --> Files
+  Files --> jwt_strategy_ts[jwt.strategy.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `jwt.strategy.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs, @common |
+| `jwt.strategy.ts` | TypeScript | Exports: JwtStrategy | @common |
 
 ## 🔗 Dependencies
-- `@nestjs`
-- `@common`
+- `@common/config/app-config.service`
+- `@nestjs/common`
+- `@nestjs/passport`
+- `passport-jwt`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { JwtStrategy } from './path/to/jwtstrategy';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

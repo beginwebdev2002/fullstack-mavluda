@@ -1,29 +1,38 @@
-# 📁 guards
+# 🏷️ Guards Directory
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [core](..) / [guards](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [core](/frontend/src/core) ➔ [guards](/frontend/src/core/guards)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **guards** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Guards** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  guards["📁 guards"]
+  guards --> Files
+  Files --> index_ts[index.ts]
+  Files --> admin_guard_ts[admin.guard.ts]
+  Files --> auth_guard_ts[auth.guard.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin.guard.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @entities |
-| `auth.guard.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @entities |
-| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
+| `admin.guard.ts` | TypeScript | Exports: adminGuard | @entities |
+| `auth.guard.ts` | TypeScript | Exports: authGuard | @entities |
 
 ## 🔗 Dependencies
-- `@angular`
-- `@entities`
+- `@angular/core`
+- `@angular/router`
+- `@entities/user`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { adminGuard } from './path/to/adminguard';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

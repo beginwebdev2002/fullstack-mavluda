@@ -1,21 +1,25 @@
-# 🍰 entities
+# 🏷️ Entities Directory
 
-[Root](/.) / [frontend](../..) / [src](..) / [entities](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [entities](/frontend/src/entities)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **entities** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Entities** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
-*This directory operates strictly within the **Entities** layer of our Feature Sliced Design (FSD) architecture.*
+**Feature Sliced Design (FSD) Layer:** `Entity`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  entities["🍰 entities"]
-  entities --> admin_settings["📁 admin-settings"]
-  entities --> gallery["📁 gallery"]
-  entities --> treatments["📁 treatments"]
-  entities --> user["📁 user"]
-  entities --> veil["📁 veil"]
+  entities --> Files
+  entities --> Subdirectories
+  Subdirectories --> gallery[gallery/]
+  Subdirectories --> user[user/]
+  Subdirectories --> treatments[treatments/]
+  Subdirectories --> admin_settings[admin-settings/]
+  Subdirectories --> veil[veil/]
 ```
 
 ## 📄 File Registry
@@ -24,10 +28,10 @@ graph TD
 | *No files* | - | - | - |
 
 ## 🔗 Dependencies
-*No internal path aliases detected in this directory.*
+No external or cross-module dependencies detected.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// This directory primarily serves organizational or static purposes.
+// Reference its contents dynamically based on your feature requirements.
 ```

@@ -1,27 +1,36 @@
-# 📁 dto
+# 🏷️ Dto Directory
 
-[Root](/.) / [backend](../../../../..) / [src](../../../..) / [modules](../../..) / [treatments](../..) / [presentation](..) / [dto](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [treatments](/backend/src/modules/treatments) ➔ [presentation](/backend/src/modules/treatments/presentation) ➔ [dto](/backend/src/modules/treatments/presentation/dto)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Dto** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  dto["📁 dto"]
+  dto --> Files
+  Files --> create_treatments_dto_ts[create-treatments.dto.ts]
+  Files --> update_treatments_dto_ts[update-treatments.dto.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-treatments.dto.ts` | TypeScript | Data Transfer Object definition and validation. | N/A |
-| `update-treatments.dto.ts` | TypeScript | Data Transfer Object definition and validation. | @nestjs |
+| `create-treatments.dto.ts` | TypeScript | Exports: CreateServiceDto | None |
+| `update-treatments.dto.ts` | TypeScript | Exports: UpdateServiceDto | None |
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/mapped-types`
+- `class-transformer`
+- `class-validator`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { CreateServiceDto } from './path/to/createservicedto';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

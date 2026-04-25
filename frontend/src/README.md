@@ -1,44 +1,59 @@
-# 📁 src
+# 🏷️ Src Directory
 
-[Root](/.) / [frontend](..) / [src](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **src** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Src** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  src["📁 src"]
-  src --> app["📁 app"]
-  src --> backend["📁 backend"]
-  src --> core["📁 core"]
-  src --> entities["📁 entities"]
-  src --> environments["📁 environments"]
-  src --> features["📁 features"]
-  src --> locale["📁 locale"]
-  src --> pages["📁 pages"]
-  src --> shared["📁 shared"]
-  src --> types["📁 types"]
-  src --> widgets["📁 widgets"]
+  src --> Files
+  Files --> app_component_html[app.component.html]
+  Files --> main_ts[main.ts]
+  Files --> app_routes_ts[app.routes.ts]
+  Files --> app_component_scss[app.component.scss]
+  Files --> app_component_ts[app.component.ts]
+  src --> Subdirectories
+  Subdirectories --> backend[backend/]
+  Subdirectories --> entities[entities/]
+  Subdirectories --> environments[environments/]
+  Subdirectories --> app[app/]
+  Subdirectories --> locale[locale/]
+  Subdirectories --> core[core/]
+  Subdirectories --> shared[shared/]
+  Subdirectories --> widgets[widgets/]
+  Subdirectories --> pages[pages/]
+  Subdirectories --> features[features/]
+  Subdirectories --> types[types/]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.component.html` | Template | Component template structural layout. | N/A |
-| `app.component.scss` | Styles | Luxury styling and brand aesthetics. | N/A |
-| `app.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @shared |
-| `app.routes.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @pages, @widgets |
-| `main.ts` | TypeScript | Core logic and utilities for this domain. | @angular |
+| `app.component.html` | HTML Template | Defines logic and structure for app.component.html. | @app |
+| `main.ts` | TypeScript | Defines logic and structure for main.ts. | None |
+| `app.routes.ts` | TypeScript | Exports: routes | @widgets, @pages |
+| `app.component.scss` | Stylesheet | Defines logic and structure for app.component.scss. | None |
+| `app.component.ts` | TypeScript | Exports: AppComponent | @shared |
 
 ## 🔗 Dependencies
-- `@angular`
-- `@shared`
-- `@pages`
-- `@widgets`
+- `@angular/common`
+- `@angular/core`
+- `@angular/platform-browser`
+- `@angular/router`
+- `@pages/auth`
+- `@shared/services`
+- `@shared/ui`
+- `@widgets/layouts`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { routes } from './path/to/routes';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

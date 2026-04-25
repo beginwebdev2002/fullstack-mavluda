@@ -1,29 +1,40 @@
-# 📁 interceptors
+# 🏷️ Interceptors Directory
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [core](..) / [interceptors](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [core](/frontend/src/core) ➔ [interceptors](/frontend/src/core/interceptors)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **interceptors** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Interceptors** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  interceptors["📁 interceptors"]
+  interceptors --> Files
+  Files --> error_interceptor_ts[error.interceptor.ts]
+  Files --> index_ts[index.ts]
+  Files --> api_interceptor_ts[api.interceptor.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `api.interceptor.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @shared |
-| `error.interceptor.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @shared |
-| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `error.interceptor.ts` | TypeScript | Exports: errorInterceptor | @shared |
+| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
+| `api.interceptor.ts` | TypeScript | Exports: apiInterceptor | @shared |
 
 ## 🔗 Dependencies
-- `@angular`
-- `@shared`
+- `@angular/common/http`
+- `@angular/core`
+- `@shared/lib`
+- `@shared/services`
+- `rxjs`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { errorInterceptor } from './path/to/errorinterceptor';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

@@ -1,32 +1,44 @@
-# 📁 treatments
+# 🏷️ Treatments Directory
 
-[Root](/.) / [backend](../../..) / [src](../..) / [modules](..) / [treatments](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [treatments](/backend/src/modules/treatments)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Treatments** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  treatments["📁 treatments"]
-  treatments --> application["📁 application"]
-  treatments --> domain["📁 domain"]
-  treatments --> infrastructure["📁 infrastructure"]
-  treatments --> presentation["📁 presentation"]
+  treatments --> Files
+  Files --> index_ts[index.ts]
+  Files --> treatments_module_ts[treatments.module.ts]
+  treatments --> Subdirectories
+  Subdirectories --> infrastructure[infrastructure/]
+  Subdirectories --> presentation[presentation/]
+  Subdirectories --> domain[domain/]
+  Subdirectories --> application[application/]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `treatments.module.ts` | TypeScript | Dependency injection and module orchestration. | @nestjs, @modules |
+| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
+| `treatments.module.ts` | TypeScript | Exports: TreatmentsModule | @modules |
 
 ## 🔗 Dependencies
-- `@nestjs`
-- `@modules`
+- `@modules/treatments/application/treatments.service`
+- `@modules/treatments/infrastructure/repositories/treatments.repository`
+- `@modules/treatments/infrastructure/schemas/treatments.schema`
+- `@modules/treatments/presentation/treatments.controller`
+- `@nestjs/common`
+- `@nestjs/mongoose`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { TreatmentsModule } from './path/to/treatmentsmodule';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

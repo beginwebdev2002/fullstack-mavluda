@@ -1,29 +1,37 @@
-# 📁 image-popup
+# 🏷️ Image Popup Directory
 
-[Root](/.) / [frontend](../../../..) / [src](../../..) / [shared](../..) / [ui](..) / [image-popup](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [shared](/frontend/src/shared) ➔ [ui](/frontend/src/shared/ui) ➔ [image-popup](/frontend/src/shared/ui/image-popup)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **image-popup** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Image Popup** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
-*This directory operates strictly within the **Shared** layer of our Feature Sliced Design (FSD) architecture.*
+**Feature Sliced Design (FSD) Layer:** `Shared`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  image_popup["📁 image-popup"]
+  image_popup --> Files
+  Files --> image_popup_component_ts[image-popup.component.ts]
+  Files --> image_popup_component_html[image-popup.component.html]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `image-popup.component.html` | Template | Component template structural layout. | N/A |
-| `image-popup.component.ts` | TypeScript | UI rendering and user interaction. | @angular |
+| `image-popup.component.ts` | TypeScript | Exports: ImagePopupComponent | None |
+| `image-popup.component.html` | HTML Template | Defines logic and structure for image-popup.component.html. | None |
 
 ## 🔗 Dependencies
-- `@angular`
+- `@angular/common`
+- `@angular/core`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { ImagePopupComponent } from './path/to/imagepopupcomponent';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

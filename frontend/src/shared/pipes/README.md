@@ -1,29 +1,37 @@
-# 📁 pipes
+# 🏷️ Pipes Directory
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [shared](..) / [pipes](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [shared](/frontend/src/shared) ➔ [pipes](/frontend/src/shared/pipes)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **pipes** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Pipes** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
-*This directory operates strictly within the **Shared** layer of our Feature Sliced Design (FSD) architecture.*
+**Feature Sliced Design (FSD) Layer:** `Shared`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  pipes["📁 pipes"]
+  pipes --> Files
+  Files --> index_ts[index.ts]
+  Files --> safe_html_pipe_ts[safe-html.pipe.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `safe-html.pipe.ts` | TypeScript | Core logic and utilities for this domain. | @angular |
+| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
+| `safe-html.pipe.ts` | TypeScript | Exports: SafeHtmlPipe | None |
 
 ## 🔗 Dependencies
-- `@angular`
+- `@angular/core`
+- `@angular/platform-browser`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { SafeHtmlPipe } from './path/to/safehtmlpipe';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

@@ -1,31 +1,40 @@
-# 📁 list-view
+# 🏷️ List View Directory
 
-[Root](/.) / [frontend](../../../..) / [src](../../..) / [shared](../..) / [ui](..) / [list-view](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [shared](/frontend/src/shared) ➔ [ui](/frontend/src/shared/ui) ➔ [list-view](/frontend/src/shared/ui/list-view)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **list-view** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **List View** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
-*This directory operates strictly within the **Shared** layer of our Feature Sliced Design (FSD) architecture.*
+**Feature Sliced Design (FSD) Layer:** `Shared`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  list_view["📁 list-view"]
+  list_view --> Files
+  Files --> list_view_component_scss[list-view.component.scss]
+  Files --> list_view_component_html[list-view.component.html]
+  Files --> list_view_component_ts[list-view.component.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `list-view.component.html` | Template | Component template structural layout. | N/A |
-| `list-view.component.scss` | Styles | Luxury styling and brand aesthetics. | N/A |
-| `list-view.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @shared |
+| `list-view.component.scss` | Stylesheet | Defines logic and structure for list-view.component.scss. | None |
+| `list-view.component.html` | HTML Template | Defines logic and structure for list-view.component.html. | None |
+| `list-view.component.ts` | TypeScript | Exports: ListViewColumn, ListViewComponent | @shared |
 
 ## 🔗 Dependencies
-- `@angular`
-- `@shared`
+- `@angular/common`
+- `@angular/core`
+- `@shared/lib`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { ListViewColumn } from './path/to/listviewcolumn';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

@@ -1,26 +1,33 @@
-# 📁 filters
+# 🏷️ Filters Directory
 
-[Root](/.) / [backend](../../..) / [src](../..) / [common](..) / [filters](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [common](/backend/src/common) ➔ [filters](/backend/src/common/filters)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **filters** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Filters** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  filters["📁 filters"]
+  filters --> Files
+  Files --> i18n_exception_filter_ts[i18n-exception.filter.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `i18n-exception.filter.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs |
+| `i18n-exception.filter.ts` | TypeScript | Exports: I18nExceptionFilter | None |
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/common`
+- `express`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { I18nExceptionFilter } from './path/to/i18nexceptionfilter';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

@@ -1,28 +1,34 @@
-# 📁 locale
+# 🏷️ Locale Directory
 
-[Root](/.) / [frontend](../..) / [src](..) / [locale](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[frontend](/frontend) ➔ [src](/frontend/src) ➔ [locale](/frontend/src/locale)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **locale** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Locale** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  locale["📁 locale"]
+  locale --> Files
+  Files --> messages_tj_xlf[messages.tj.xlf]
+  Files --> messages_xlf[messages.xlf]
+  Files --> messages_ru_xlf[messages.ru.xlf]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `messages.ru.xlf` | File | Core logic and utilities for this domain. | N/A |
-| `messages.tj.xlf` | File | Core logic and utilities for this domain. | N/A |
-| `messages.xlf` | File | Core logic and utilities for this domain. | N/A |
+| `messages.tj.xlf` | File | Defines logic and structure for messages.tj.xlf. | None |
+| `messages.xlf` | File | Defines logic and structure for messages.xlf. | None |
+| `messages.ru.xlf` | File | Defines logic and structure for messages.ru.xlf. | None |
 
 ## 🔗 Dependencies
-*No internal path aliases detected in this directory.*
+No external or cross-module dependencies detected.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// This directory primarily serves organizational or static purposes.
+// Reference its contents dynamically based on your feature requirements.
 ```

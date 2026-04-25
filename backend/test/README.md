@@ -1,27 +1,35 @@
-# 📁 test
+# 🏷️ Test Directory
 
-[Root](/.) / [backend](..) / [test](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [test](/backend/test)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **test** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Test** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  test["📁 test"]
+  test --> Files
+  Files --> jest_e2e_json[jest-e2e.json]
+  Files --> app_e2e_spec_ts[app.e2e-spec.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.e2e-spec.ts` | TypeScript | Testing and quality assurance validation. | @nestjs |
-| `jest-e2e.json` | Configuration | Configuration and environment settings. | N/A |
+| `jest-e2e.json` | Configuration | Defines logic and structure for jest-e2e.json. | None |
+| `app.e2e-spec.ts` | TypeScript | Defines logic and structure for app.e2e-spec.ts. | None |
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/common`
+- `@nestjs/testing`
+- `supertest`
+- `supertest/types`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// This directory primarily serves organizational or static purposes.
+// Reference its contents dynamically based on your feature requirements.
 ```

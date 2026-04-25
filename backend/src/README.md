@@ -1,33 +1,57 @@
-# 📁 src
+# 🏷️ Src Directory
 
-[Root](/.) / [backend](..) / [src](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **src** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Src** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  src["📁 src"]
-  src --> common["📁 common"]
-  src --> modules["📁 modules"]
+  src --> Files
+  Files --> app_controller_spec_ts[app.controller.spec.ts]
+  Files --> main_ts[main.ts]
+  Files --> app_module_ts[app.module.ts]
+  Files --> app_controller_ts[app.controller.ts]
+  Files --> app_service_ts[app.service.ts]
+  src --> Subdirectories
+  Subdirectories --> common[common/]
+  Subdirectories --> modules[modules/]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.controller.spec.ts` | TypeScript | Testing and quality assurance validation. | @nestjs |
-| `app.controller.ts` | TypeScript | API routing and request handling. | @nestjs |
-| `app.module.ts` | TypeScript | Dependency injection and module orchestration. | @nestjs, @modules |
-| `app.service.ts` | TypeScript | Business logic execution and state management. | @nestjs |
-| `main.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs |
+| `app.controller.spec.ts` | TypeScript | Defines logic and structure for app.controller.spec.ts. | None |
+| `main.ts` | TypeScript | Defines logic and structure for main.ts. | None |
+| `app.module.ts` | TypeScript | Exports: AppModule | @modules |
+| `app.controller.ts` | TypeScript | Exports: AppController | None |
+| `app.service.ts` | TypeScript | Exports: AppService | None |
 
 ## 🔗 Dependencies
-- `@nestjs`
-- `@modules`
+- `@modules/admin-settings`
+- `@modules/auth`
+- `@modules/booking`
+- `@modules/gallery`
+- `@modules/inventory`
+- `@modules/partnership`
+- `@modules/payment`
+- `@modules/treatments`
+- `@modules/user`
+- `@modules/veil`
+- `@nestjs/common`
+- `@nestjs/config`
+- `@nestjs/core`
+- `@nestjs/serve-static`
+- `@nestjs/testing`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { AppModule } from './path/to/appmodule';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```

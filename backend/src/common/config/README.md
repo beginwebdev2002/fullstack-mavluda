@@ -1,29 +1,41 @@
-# 📁 config
+# 🏷️ Config Directory
 
-[Root](/.) / [backend](../../..) / [src](../..) / [common](..) / [config](.)
+> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
+
+## 🧭 Breadcrumb Navigation
+[backend](/backend) ➔ [src](/backend/src) ➔ [common](/backend/src/common) ➔ [config](/backend/src/common/config)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **config** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+This directory encapsulates the essential architecture and logic for the **Config** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  config["📁 config"]
+  config --> Files
+  Files --> app_config_service_ts[app-config.service.ts]
+  Files --> env_validation_ts[env.validation.ts]
+  Files --> configuration_ts[configuration.ts]
+  Files --> app_config_module_ts[app-config.module.ts]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app-config.module.ts` | TypeScript | Dependency injection and module orchestration. | @nestjs |
-| `app-config.service.ts` | TypeScript | Business logic execution and state management. | @nestjs |
-| `configuration.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `env.validation.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `app-config.service.ts` | TypeScript | Exports: AppConfigService | None |
+| `env.validation.ts` | TypeScript | Exports: validate | None |
+| `configuration.ts` | TypeScript | Defines logic and structure for configuration.ts. | None |
+| `app-config.module.ts` | TypeScript | Exports: AppConfigModule | None |
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/common`
+- `@nestjs/config`
+- `class-transformer`
+- `class-validator`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// To utilize the luxurious capabilities of this module:
+import { AppConfigService } from './path/to/appconfigservice';
+
+// Ensure properly typed interactions per Mavluda Beauty standards
 ```
