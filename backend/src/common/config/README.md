@@ -1,26 +1,34 @@
-# 📁 config
+# 🔧 Config
 
-[Root](/.) / [backend](../../..) / [src](../..) / [common](..) / [config](.)
+[Root](../../../../) > [backend](../../../) > [src](../../) > [common](../) > [config](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **config** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Config** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  config["📁 config"]
+  config["🔧 config"]
+  config --> config_app_config_module_ts["📄 app-config.module.ts"]
+  config --> config_app_config_service_ts["📄 app-config.service.ts"]
+  config --> config_configuration_ts["📄 configuration.ts"]
+  config --> config_env_validation_ts["📄 env.validation.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app-config.module.ts` | TypeScript | Dependency injection and module orchestration. | @nestjs |
-| `app-config.service.ts` | TypeScript | Business logic execution and state management. | @nestjs |
+| `app-config.module.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/config, @nestjs/common |
+| `app-config.service.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/config, @nestjs/common |
 | `configuration.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 | `env.validation.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
+
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/common`
+- `@nestjs/config`
 
 ## 🛠️ Usage
 ```markdown

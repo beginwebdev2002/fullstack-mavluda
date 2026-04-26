@@ -1,23 +1,27 @@
-# 🚀 application
+# 🛠️ Application
 
-[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [gallery](..) / [application](.)
+[Root](../../../../../) > [backend](../../../../) > [src](../../../) > [modules](../../) > [gallery](../) > [application](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  application["🚀 application"]
+  application["🛠️ application"]
+  application --> application_gallery_service_ts["📄 gallery.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.service.ts` | TypeScript | Business logic execution and state management. | @nestjs |
+| `gallery.service.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
+
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/common`
 
 ## 🛠️ Usage
 ```markdown

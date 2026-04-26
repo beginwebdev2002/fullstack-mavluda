@@ -1,26 +1,30 @@
-# 📁 pipes
+# 📁 Pipes
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [shared](..) / [pipes](.)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [pipes](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **pipes** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Pipes** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-*This directory operates strictly within the **Shared** layer of our Feature Sliced Design (FSD) architecture.*
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   pipes["📁 pipes"]
+  pipes --> pipes_index_ts["📄 index.ts"]
+  pipes --> pipes_safe_html_pipe_ts["📄 safe-html.pipe.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `safe-html.pipe.ts` | TypeScript | Core logic and utilities for this domain. | @angular |
+| `safe-html.pipe.ts` | TypeScript | Core logic and utilities for this domain. | @angular/platform-browser, @angular/core |
+
 
 ## 🔗 Dependencies
-- `@angular`
+- `@angular/core`
+- `@angular/platform-browser`
 
 ## 🛠️ Usage
 ```markdown

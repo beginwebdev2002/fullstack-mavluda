@@ -1,30 +1,38 @@
-# 📁 auth
+# 📁 Auth
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [pages](..) / [auth](.)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [auth](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **auth** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-*This directory operates strictly within the **Pages** layer of our Feature Sliced Design (FSD) architecture.*
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   auth["📁 auth"]
+  auth --> auth_auth_component_html["📄 auth.component.html"]
+  auth --> auth_auth_component_scss["📄 auth.component.scss"]
+  auth --> auth_auth_component_ts["📄 auth.component.ts"]
+  auth --> auth_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth.component.html` | Template | Component template structural layout. | N/A |
-| `auth.component.scss` | Styles | Luxury styling and brand aesthetics. | N/A |
-| `auth.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @entities, @features |
+| `auth.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `auth.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `auth.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/forms/signals, @angular/router, @angular/core, @features/language-selection, @angular/common, @entities/user |
 | `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
+
 ## 🔗 Dependencies
-- `@angular`
-- `@entities`
-- `@features`
+- `@angular/common`
+- `@angular/core`
+- `@angular/forms/signals`
+- `@angular/router`
+- `@entities/user`
+- `@features/language-selection`
 
 ## 🛠️ Usage
 ```markdown

@@ -1,16 +1,20 @@
-# 📁 lib
+# 📁 Lib
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [shared](..) / [lib](.)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [lib](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **lib** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Lib** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-*This directory operates strictly within the **Shared** layer of our Feature Sliced Design (FSD) architecture.*
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   lib["📁 lib"]
+  lib --> lib_array_ts["📄 array.ts"]
+  lib --> lib_index_ts["📄 index.ts"]
+  lib --> lib_link_ts["📄 link.ts"]
+  lib --> lib_object_ts["📄 object.ts"]
 ```
 
 ## 📄 File Registry
@@ -18,11 +22,12 @@ graph TD
 |---|---|---|---|
 | `array.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 | `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `link.ts` | TypeScript | Core logic and utilities for this domain. | @environments |
+| `link.ts` | TypeScript | Core logic and utilities for this domain. | @environments/environment |
 | `object.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
+
 ## 🔗 Dependencies
-- `@environments`
+- `@environments/environment`
 
 ## 🛠️ Usage
 ```markdown

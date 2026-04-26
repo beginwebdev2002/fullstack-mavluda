@@ -1,14 +1,17 @@
-# 📁 locale
+# 📁 Locale
 
-[Root](/.) / [frontend](../..) / [src](..) / [locale](.)
+[Root](../../../) > [frontend](../../) > [src](../) > [locale](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **locale** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Locale** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   locale["📁 locale"]
+  locale --> locale_messages_ru_xlf["📄 messages.ru.xlf"]
+  locale --> locale_messages_tj_xlf["📄 messages.tj.xlf"]
+  locale --> locale_messages_xlf["📄 messages.xlf"]
 ```
 
 ## 📄 File Registry
@@ -17,6 +20,7 @@ graph TD
 | `messages.ru.xlf` | File | Core logic and utilities for this domain. | N/A |
 | `messages.tj.xlf` | File | Core logic and utilities for this domain. | N/A |
 | `messages.xlf` | File | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*

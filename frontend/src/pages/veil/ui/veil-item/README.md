@@ -1,27 +1,31 @@
-# 📁 veil-item
+# 📁 Veil Item
 
-[Root](/.) / [frontend](../../../../..) / [src](../../../..) / [pages](../../..) / [veil](../..) / [ui](..) / [veil-item](.)
+[Root](../../../../../../) > [frontend](../../../../../) > [src](../../../../) > [pages](../../../) > [veil](../../) > [ui](../) > [veil-item](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **veil-item** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Veil Item** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-*This directory operates strictly within the **Pages** layer of our Feature Sliced Design (FSD) architecture.*
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   veil_item["📁 veil-item"]
+  veil_item --> veil_item_veil_item_component_html["📄 veil-item.component.html"]
+  veil_item --> veil_item_veil_item_component_ts["📄 veil-item.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil-item.component.html` | Template | Component template structural layout. | N/A |
-| `veil-item.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @features |
+| `veil-item.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `veil-item.component.ts` | TypeScript | Core logic and utilities for this domain. | @features/veil, @angular/core, @angular/common |
+
 
 ## 🔗 Dependencies
-- `@angular`
-- `@features`
+- `@angular/common`
+- `@angular/core`
+- `@features/veil`
 
 ## 🛠️ Usage
 ```markdown

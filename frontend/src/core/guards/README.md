@@ -1,26 +1,33 @@
-# 📁 guards
+# 📁 Guards
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [core](..) / [guards](.)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [core](../) > [guards](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **guards** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Core Logic (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   guards["📁 guards"]
+  guards --> guards_admin_guard_ts["📄 admin.guard.ts"]
+  guards --> guards_auth_guard_ts["📄 auth.guard.ts"]
+  guards --> guards_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin.guard.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @entities |
-| `auth.guard.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @entities |
+| `admin.guard.ts` | TypeScript | Core logic and utilities for this domain. | @entities/user, @angular/core, @angular/router |
+| `auth.guard.ts` | TypeScript | Core logic and utilities for this domain. | @entities/user, @angular/core, @angular/router |
 | `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
+
 ## 🔗 Dependencies
-- `@angular`
-- `@entities`
+- `@angular/core`
+- `@angular/router`
+- `@entities/user`
 
 ## 🛠️ Usage
 ```markdown

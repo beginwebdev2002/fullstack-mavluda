@@ -1,24 +1,29 @@
-# 🎭 presentation
+# 🎭 Presentation
 
-[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [veil](..) / [presentation](.)
+[Root](../../../../../) > [backend](../../../../) > [src](../../../) > [modules](../../) > [veil](../) > [presentation](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **presentation** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Presentation** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   presentation["🎭 presentation"]
-  presentation --> dto["📁 dto"]
+  presentation --> presentation_dto["📁 dto"]
+  presentation --> presentation_veil_controller_ts["📄 veil.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.controller.ts` | TypeScript | API routing and request handling. | @nestjs |
+| `veil.controller.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common, @nestjs/platform-express |
+
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/common`
+- `@nestjs/platform-express`
 
 ## 🛠️ Usage
 ```markdown

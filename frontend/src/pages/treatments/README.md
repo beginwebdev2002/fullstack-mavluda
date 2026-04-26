@@ -1,33 +1,42 @@
-# 📁 treatments
+# 📁 Treatments
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [pages](..) / [treatments](.)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [treatments](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-*This directory operates strictly within the **Pages** layer of our Feature Sliced Design (FSD) architecture.*
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   treatments["📁 treatments"]
-  treatments --> components["📁 components"]
+  treatments --> treatments_components["📁 components"]
+  treatments --> treatments_index_ts["📄 index.ts"]
+  treatments --> treatments_treatments_component_html["📄 treatments.component.html"]
+  treatments --> treatments_treatments_component_scss["📄 treatments.component.scss"]
+  treatments --> treatments_treatments_component_ts["📄 treatments.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `treatments.component.html` | Template | Component template structural layout. | N/A |
-| `treatments.component.scss` | Styles | Luxury styling and brand aesthetics. | N/A |
-| `treatments.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @features, @entities, @shared, @environments |
+| `treatments.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `treatments.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `treatments.component.ts` | TypeScript | Core logic and utilities for this domain. | @features/treatments, @environments/environment, @angular/core, @shared/ui, @entities/admin-settings, @entities/treatments, @shared/lib, @angular/common, @angular/forms |
+
 
 ## 🔗 Dependencies
-- `@angular`
-- `@features`
-- `@entities`
-- `@shared`
-- `@environments`
+- `@angular/common`
+- `@angular/core`
+- `@angular/forms`
+- `@entities/admin-settings`
+- `@entities/treatments`
+- `@environments/environment`
+- `@features/treatments`
+- `@shared/lib`
+- `@shared/ui`
 
 ## 🛠️ Usage
 ```markdown

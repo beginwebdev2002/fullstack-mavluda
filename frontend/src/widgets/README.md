@@ -1,25 +1,24 @@
-# 🍰 widgets
+# 📁 Widgets
 
-[Root](/.) / [frontend](../..) / [src](..) / [widgets](.)
+[Root](../../../) > [frontend](../../) > [src](../) > [widgets](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **widgets** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Widgets** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-*This directory operates strictly within the **Widgets** layer of our Feature Sliced Design (FSD) architecture.*
+**Architecture Layer:** Widgets (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  widgets["🍰 widgets"]
-  widgets --> header["📁 header"]
-  widgets --> layouts["📁 layouts"]
-  widgets --> sidebar["📁 sidebar"]
+  widgets["📁 widgets"]
+  widgets --> widgets_header["📁 header"]
+  widgets --> widgets_layouts["📁 layouts"]
+  widgets --> widgets_sidebar["📁 sidebar"]
 ```
 
 ## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| *No files* | - | - | - |
+*No files directly in this directory.*
+
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*

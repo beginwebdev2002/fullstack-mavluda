@@ -1,30 +1,34 @@
-# 📁 veil
+# 📁 Veil
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [entities](..) / [veil](.)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [entities](../) > [veil](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **veil** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Veil** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-*This directory operates strictly within the **Entities** layer of our Feature Sliced Design (FSD) architecture.*
+**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   veil["📁 veil"]
-  veil --> constants["📁 constants"]
+  veil --> veil_constants["📁 constants"]
+  veil --> veil_index_ts["📄 index.ts"]
+  veil --> veil_veil_service_ts["📄 veil.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `veil.service.ts` | TypeScript | Business logic execution and state management. | @angular, @core, @features, @shared |
+| `veil.service.ts` | TypeScript | Core logic and utilities for this domain. | @core/constants, @angular/core, @features/veil, @shared/lib, @angular/common/http |
+
 
 ## 🔗 Dependencies
-- `@angular`
-- `@core`
-- `@features`
-- `@shared`
+- `@angular/common/http`
+- `@angular/core`
+- `@core/constants`
+- `@features/veil`
+- `@shared/lib`
 
 ## 🛠️ Usage
 ```markdown

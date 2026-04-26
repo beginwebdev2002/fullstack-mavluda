@@ -1,14 +1,16 @@
-# 📁 environments
+# 📁 Environments
 
-[Root](/.) / [frontend](../..) / [src](..) / [environments](.)
+[Root](../../../) > [frontend](../../) > [src](../) > [environments](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **environments** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Environments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   environments["📁 environments"]
+  environments --> environments_environment_prod_ts["📄 environment.prod.ts"]
+  environments --> environments_environment_ts["📄 environment.ts"]
 ```
 
 ## 📄 File Registry
@@ -16,6 +18,7 @@ graph TD
 |---|---|---|---|
 | `environment.prod.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 | `environment.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*

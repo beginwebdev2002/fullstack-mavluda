@@ -1,14 +1,16 @@
-# 📁 images
+# 📁 Images
 
-[Root](/.) / [frontend](../..) / [public](..) / [images](.)
+[Root](../../../) > [frontend](../../) > [public](../) > [images](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **images** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Images** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   images["📁 images"]
+  images --> images_treatments_add_img_png["📄 treatments-add-img.png"]
+  images --> images_treatments_no_img_png["📄 treatments-no-img.png"]
 ```
 
 ## 📄 File Registry
@@ -16,6 +18,7 @@ graph TD
 |---|---|---|---|
 | `treatments-add-img.png` | File | Core logic and utilities for this domain. | N/A |
 | `treatments-no-img.png` | File | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*

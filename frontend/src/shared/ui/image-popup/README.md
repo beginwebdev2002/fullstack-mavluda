@@ -1,26 +1,30 @@
-# 📁 image-popup
+# 📁 Image Popup
 
-[Root](/.) / [frontend](../../../..) / [src](../../..) / [shared](../..) / [ui](..) / [image-popup](.)
+[Root](../../../../../) > [frontend](../../../../) > [src](../../../) > [shared](../../) > [ui](../) > [image-popup](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **image-popup** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Image Popup** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-*This directory operates strictly within the **Shared** layer of our Feature Sliced Design (FSD) architecture.*
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   image_popup["📁 image-popup"]
+  image_popup --> image_popup_image_popup_component_html["📄 image-popup.component.html"]
+  image_popup --> image_popup_image_popup_component_ts["📄 image-popup.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `image-popup.component.html` | Template | Component template structural layout. | N/A |
-| `image-popup.component.ts` | TypeScript | UI rendering and user interaction. | @angular |
+| `image-popup.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `image-popup.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common |
+
 
 ## 🔗 Dependencies
-- `@angular`
+- `@angular/common`
+- `@angular/core`
 
 ## 🛠️ Usage
 ```markdown

@@ -1,24 +1,29 @@
-# 📁 dto
+# 📁 Dto
 
-[Root](/.) / [backend](../../../../..) / [src](../../../..) / [modules](../../..) / [veil](../..) / [presentation](..) / [dto](.)
+[Root](../../../../../../) > [backend](../../../../../) > [src](../../../../) > [modules](../../../) > [veil](../../) > [presentation](../) > [dto](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   dto["📁 dto"]
+  dto --> dto_create_veil_dto_ts["📄 create-veil.dto.ts"]
+  dto --> dto_update_veil_dto_ts["📄 update-veil.dto.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-veil.dto.ts` | TypeScript | Data Transfer Object definition and validation. | N/A |
-| `update-veil.dto.ts` | TypeScript | Data Transfer Object definition and validation. | @nestjs |
+| `create-veil.dto.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `update-veil.dto.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/mapped-types |
+
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/mapped-types`
 
 ## 🛠️ Usage
 ```markdown

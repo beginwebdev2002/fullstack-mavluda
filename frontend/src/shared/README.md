@@ -1,28 +1,27 @@
-# 🍰 shared
+# 🤝 Shared
 
-[Root](/.) / [frontend](../..) / [src](..) / [shared](.)
+[Root](../../../) > [frontend](../../) > [src](../) > [shared](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **shared** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Shared** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-*This directory operates strictly within the **Shared** layer of our Feature Sliced Design (FSD) architecture.*
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  shared["🍰 shared"]
-  shared --> lib["📁 lib"]
-  shared --> models["📁 models"]
-  shared --> pipes["📁 pipes"]
-  shared --> services["📁 services"]
-  shared --> store["📁 store"]
-  shared --> ui["📁 ui"]
+  shared["🤝 shared"]
+  shared --> shared_lib["📁 lib"]
+  shared --> shared_models["📁 models"]
+  shared --> shared_pipes["📁 pipes"]
+  shared --> shared_services["📁 services"]
+  shared --> shared_store["📁 store"]
+  shared --> shared_ui["📁 ui"]
 ```
 
 ## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| *No files* | - | - | - |
+*No files directly in this directory.*
+
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*
