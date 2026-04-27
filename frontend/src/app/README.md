@@ -1,26 +1,24 @@
-# 🏷️ App Directory
+# 📁 App
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [app](/frontend/src/app)
+[Root](../../../) > [frontend](../../) > [src](../) > [app](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **App** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **App** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `App`
+**Architecture Layer:** App (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  app --> Files
-  Files --> app_config_ts[app.config.ts]
+  app["📁 app"]
+  app --> app_app_config_ts["📄 app.config.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.config.ts` | TypeScript | Exports: appConfig | None |
+| `app.config.ts` | TypeScript | Core logic and utilities for this domain. | @core/interceptors, @angular/core, @angular/common/http, @angular/router, @angular/platform-browser/animations |
+
 
 ## 🔗 Dependencies
 - `@angular/common/http`
@@ -28,12 +26,9 @@ graph TD
 - `@angular/platform-browser/animations`
 - `@angular/router`
 - `@core/interceptors`
-- `@src/app.routes`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { appConfig } from './path/to/appconfig';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

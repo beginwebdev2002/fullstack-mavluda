@@ -1,37 +1,33 @@
-# 🏷️ Pipes Directory
+# 📁 Pipes
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [shared](/frontend/src/shared) ➔ [pipes](/frontend/src/shared/pipes)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [pipes](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Pipes** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Pipes** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Shared`
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  pipes --> Files
-  Files --> index_ts[index.ts]
-  Files --> safe_html_pipe_ts[safe-html.pipe.ts]
+  pipes["📁 pipes"]
+  pipes --> pipes_index_ts["📄 index.ts"]
+  pipes --> pipes_safe_html_pipe_ts["📄 safe-html.pipe.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
-| `safe-html.pipe.ts` | TypeScript | Exports: SafeHtmlPipe | None |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `safe-html.pipe.ts` | TypeScript | Core logic and utilities for this domain. | @angular/platform-browser, @angular/core |
+
 
 ## 🔗 Dependencies
 - `@angular/core`
 - `@angular/platform-browser`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { SafeHtmlPipe } from './path/to/safehtmlpipe';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

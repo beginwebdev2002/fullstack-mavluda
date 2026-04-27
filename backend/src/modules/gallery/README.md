@@ -1,40 +1,37 @@
-# 🏷️ Gallery Directory
+# 📁 Gallery
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [gallery](/backend/src/modules/gallery)
+[Root](../../../../) > [backend](../../../) > [src](../../) > [modules](../) > [gallery](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Gallery** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  gallery --> Files
-  Files --> index_ts[index.ts]
-  Files --> gallery_module_ts[gallery.module.ts]
-  gallery --> Subdirectories
-  Subdirectories --> infrastructure[infrastructure/]
-  Subdirectories --> presentation[presentation/]
-  Subdirectories --> domain[domain/]
-  Subdirectories --> application[application/]
+  gallery["📁 gallery"]
+  gallery --> gallery_application["📁 application"]
+  gallery --> gallery_domain["📁 domain"]
+  gallery --> gallery_infrastructure["📁 infrastructure"]
+  gallery --> gallery_presentation["📁 presentation"]
+  gallery --> gallery_gallery_module_ts["📄 gallery.module.ts"]
+  gallery --> gallery_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
-| `gallery.module.ts` | TypeScript | Exports: GalleryModule | None |
+| `gallery.module.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common, @nestjs/mongoose |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 - `@nestjs/common`
 - `@nestjs/mongoose`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { GalleryModule } from './path/to/gallerymodule';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

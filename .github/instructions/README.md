@@ -1,42 +1,37 @@
-# 🏷️ Instructions Directory
+# 📁 Mavluda Beauty instructions
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[.github](/.github) ➔ [instructions](/.github/instructions)
+[.github](/.github) / [instructions](/.github/instructions)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Instructions** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **instructions** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  instructions --> Files
-  Files --> backend_architecture_md[backend-architecture.md]
-  Files --> agents_md[agents.md]
-  Files --> angular_signals_md[angular-signals.md]
-  Files --> typescript_md[typescript.md]
-  Files --> frontend_md[frontend.md]
+  instructions["📁 instructions"]
+  instructions --> agents_md["📄 agents.md"]
+  instructions --> angular_signals_md["📄 angular-signals.md"]
+  instructions --> backend_architecture_md["📄 backend-architecture.md"]
+  instructions --> frontend_md["📄 frontend.md"]
+  instructions --> typescript_md["📄 typescript.md"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `backend-architecture.md` | File | Defines logic and structure for backend-architecture.md. | None |
-| `agents.md` | File | Defines logic and structure for agents.md. | @modules, @features, @app, @entities, @shared |
-| `angular-signals.md` | File | Defines logic and structure for angular-signals.md. | None |
-| `typescript.md` | File | Defines logic and structure for typescript.md. | @features, @entities, @shared |
-| `frontend.md` | File | Exports: ExampleComponent, DataService, BadComponent... | None |
+| `agents.md` | File | Core logic and utilities for this domain. | N/A |
+| `angular-signals.md` | File | Core logic and utilities for this domain. | N/A |
+| `backend-architecture.md` | File | Core logic and utilities for this domain. | N/A |
+| `frontend.md` | File | Core logic and utilities for this domain. | N/A |
+| `typescript.md` | File | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
-- `@angular/core`
-- `@entities/veil`
-- `@entities/veil/api/veil.service`
+No external or alias dependencies detected.
 
 ## 🛠️ Usage
 ```typescript
-// To utilize the luxurious capabilities of this module:
-import { ExampleComponent } from './path/to/examplecomponent';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+// Example integration for instructions
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

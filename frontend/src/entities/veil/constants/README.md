@@ -1,34 +1,30 @@
-# 🏷️ Constants Directory
+# 📁 Constants
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [entities](/frontend/src/entities) ➔ [veil](/frontend/src/entities/veil) ➔ [constants](/frontend/src/entities/veil/constants)
+[Root](../../../../../) > [frontend](../../../../) > [src](../../../) > [entities](../../) > [veil](../) > [constants](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Constants** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Entity`
+**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  constants --> Files
-  Files --> veil_constants_ts[veil.constants.ts]
+  constants["📁 constants"]
+  constants --> constants_veil_constants_ts["📄 veil.constants.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.constants.ts` | TypeScript | Exports: VEIL_CATEGORIES, VEIL_SILHOUETTES, VEIL_NECKLINES... | None |
+| `veil.constants.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
-No external or cross-module dependencies detected.
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { VEIL_CATEGORIES } from './path/to/veil_categories';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

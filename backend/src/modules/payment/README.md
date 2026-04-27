@@ -1,40 +1,37 @@
-# 🏷️ Payment Directory
+# 📁 Payment
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [payment](/backend/src/modules/payment)
+[Root](../../../../) > [backend](../../../) > [src](../../) > [modules](../) > [payment](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Payment** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Payment** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  payment --> Files
-  Files --> payment_module_ts[payment.module.ts]
-  Files --> index_ts[index.ts]
-  Files --> payment_service_ts[payment.service.ts]
-  Files --> payment_controller_ts[payment.controller.ts]
-  payment --> Subdirectories
-  Subdirectories --> strategies[strategies/]
+  payment["📁 payment"]
+  payment --> payment_strategies["📁 strategies"]
+  payment --> payment_index_ts["📄 index.ts"]
+  payment --> payment_payment_controller_ts["📄 payment.controller.ts"]
+  payment --> payment_payment_module_ts["📄 payment.module.ts"]
+  payment --> payment_payment_service_ts["📄 payment.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `payment.module.ts` | TypeScript | Exports: PaymentModule | None |
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
-| `payment.service.ts` | TypeScript | Exports: PaymentService | None |
-| `payment.controller.ts` | TypeScript | Exports: PaymentController | None |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `payment.controller.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
+| `payment.module.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
+| `payment.service.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
+
 
 ## 🔗 Dependencies
 - `@nestjs/common`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { PaymentModule } from './path/to/paymentmodule';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

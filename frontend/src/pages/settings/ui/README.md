@@ -1,46 +1,41 @@
-# 🏷️ Ui Directory
+# 🎨 Ui
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [pages](/frontend/src/pages) ➔ [settings](/frontend/src/pages/settings) ➔ [ui](/frontend/src/pages/settings/ui)
+[Root](../../../../../) > [frontend](../../../../) > [src](../../../) > [pages](../../) > [settings](../) > [ui](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Ui** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Ui** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Pages`
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  ui --> Files
-  Files --> additional_links_component_ts[additional-links.component.ts]
-  Files --> social_matrix_component_ts[social-matrix.component.ts]
-  Files --> selects_settings_component_ts[selects-settings.component.ts]
-  Files --> general_info_component_ts[general-info.component.ts]
-  Files --> business_profile_component_ts[business-profile.component.ts]
+  ui["🎨 ui"]
+  ui --> ui_additional_links_component_ts["📄 additional-links.component.ts"]
+  ui --> ui_business_profile_component_ts["📄 business-profile.component.ts"]
+  ui --> ui_general_info_component_ts["📄 general-info.component.ts"]
+  ui --> ui_selects_settings_component_ts["📄 selects-settings.component.ts"]
+  ui --> ui_social_matrix_component_ts["📄 social-matrix.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `additional-links.component.ts` | TypeScript | Exports: AdditionalLink, AdditionalLinksComponent | None |
-| `social-matrix.component.ts` | TypeScript | Exports: SocialPlatform, SocialMatrixComponent | None |
-| `selects-settings.component.ts` | TypeScript | Exports: SelectListType, SelectsSettingsComponent | None |
-| `general-info.component.ts` | TypeScript | Exports: GeneralInfoComponent | None |
-| `business-profile.component.ts` | TypeScript | Exports: BusinessProfileComponent | @shared |
+| `additional-links.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common, @angular/forms |
+| `business-profile.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common, @angular/forms, @shared/models |
+| `general-info.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common, @angular/forms |
+| `selects-settings.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common, @angular/forms |
+| `social-matrix.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common, @angular/forms |
+
 
 ## 🔗 Dependencies
 - `@angular/common`
 - `@angular/core`
 - `@angular/forms`
 - `@shared/models`
-- `leaflet`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { AdditionalLink } from './path/to/additionallink';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

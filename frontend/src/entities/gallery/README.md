@@ -1,41 +1,35 @@
-# 🏷️ Gallery Directory
+# 📁 Gallery
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [entities](/frontend/src/entities) ➔ [gallery](/frontend/src/entities/gallery)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [entities](../) > [gallery](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Gallery** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Entity`
+**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  gallery --> Files
-  Files --> gallery_service_ts[gallery.service.ts]
-  Files --> index_ts[index.ts]
-  gallery --> Subdirectories
-  Subdirectories --> constants[constants/]
+  gallery["📁 gallery"]
+  gallery --> gallery_constants["📁 constants"]
+  gallery --> gallery_gallery_service_ts["📄 gallery.service.ts"]
+  gallery --> gallery_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.service.ts` | TypeScript | Exports: GalleryService | @shared |
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
+| `gallery.service.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common/http, @shared/models |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 - `@angular/common/http`
 - `@angular/core`
 - `@shared/models`
-- `rxjs`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { GalleryService } from './path/to/galleryservice';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

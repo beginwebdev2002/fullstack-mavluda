@@ -1,32 +1,28 @@
-# 🏷️ Types Directory
+# 📁 Types
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [types](/frontend/src/types)
+[Root](../../../) > [frontend](../../) > [src](../) > [types](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Types** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Types** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  types --> Files
-  Files --> telegram_ts[telegram.ts]
+  types["📁 types"]
+  types --> types_telegram_ts["📄 telegram.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `telegram.ts` | TypeScript | Exports: TelegramWebApp, TelegramUser | None |
+| `telegram.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
-No external or cross-module dependencies detected.
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { TelegramWebApp } from './path/to/telegramwebapp';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

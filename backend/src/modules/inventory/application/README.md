@@ -1,32 +1,30 @@
-# 🏷️ Application Directory
+# 🛠️ Application
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [inventory](/backend/src/modules/inventory) ➔ [application](/backend/src/modules/inventory/application)
+[Root](../../../../../) > [backend](../../../../) > [src](../../../) > [modules](../../) > [inventory](../) > [application](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Application** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  application --> Files
-  Files --> inventory_service_ts[inventory.service.ts]
+  application["🛠️ application"]
+  application --> application_inventory_service_ts["📄 inventory.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.service.ts` | TypeScript | Exports: InventoryService | None |
+| `inventory.service.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
+
 
 ## 🔗 Dependencies
 - `@nestjs/common`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { InventoryService } from './path/to/inventoryservice';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

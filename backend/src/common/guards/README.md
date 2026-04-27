@@ -1,26 +1,26 @@
-# 🏷️ Guards Directory
+# 📁 Guards
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[backend](/backend) ➔ [src](/backend/src) ➔ [common](/backend/src/common) ➔ [guards](/backend/src/common/guards)
+[Root](../../../../) > [backend](../../../) > [src](../../) > [common](../) > [guards](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Guards** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  guards --> Files
-  Files --> roles_guard_ts[roles.guard.ts]
-  Files --> jwt_auth_guard_ts[jwt-auth.guard.ts]
+  guards["📁 guards"]
+  guards --> guards_jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
+  guards --> guards_roles_guard_ts["📄 roles.guard.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `roles.guard.ts` | TypeScript | Exports: RolesGuard | None |
-| `jwt-auth.guard.ts` | TypeScript | Exports: JwtAuthGuard | None |
+| `jwt-auth.guard.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/passport, @nestjs/core, @nestjs/common |
+| `roles.guard.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/core, @nestjs/common |
+
 
 ## 🔗 Dependencies
 - `@nestjs/common`
@@ -28,9 +28,7 @@ graph TD
 - `@nestjs/passport`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { RolesGuard } from './path/to/rolesguard';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

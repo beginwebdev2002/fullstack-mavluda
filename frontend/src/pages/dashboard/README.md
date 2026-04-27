@@ -1,46 +1,37 @@
-# 🏷️ Dashboard Directory
+# 📁 Dashboard
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [pages](/frontend/src/pages) ➔ [dashboard](/frontend/src/pages/dashboard)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [dashboard](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Dashboard** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Dashboard** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Pages`
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  dashboard --> Files
-  Files --> index_ts[index.ts]
-  Files --> dashboard_component_scss[dashboard.component.scss]
-  Files --> dashboard_component_html[dashboard.component.html]
-  Files --> dashboard_component_ts[dashboard.component.ts]
+  dashboard["📁 dashboard"]
+  dashboard --> dashboard_dashboard_component_html["📄 dashboard.component.html"]
+  dashboard --> dashboard_dashboard_component_scss["📄 dashboard.component.scss"]
+  dashboard --> dashboard_dashboard_component_ts["📄 dashboard.component.ts"]
+  dashboard --> dashboard_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
-| `dashboard.component.scss` | Stylesheet | Defines logic and structure for dashboard.component.scss. | None |
-| `dashboard.component.html` | HTML Template | Defines logic and structure for dashboard.component.html. | None |
-| `dashboard.component.ts` | TypeScript | Exports: DashboardComponent | @entities |
+| `dashboard.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `dashboard.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `dashboard.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 - `@angular/common`
 - `@angular/core`
-- `@entities/gallery/gallery.service`
-- `@entities/treatments/treatments.service`
-- `@entities/user/user.service`
-- `@entities/veil/veil.service`
-- `rxjs`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { DashboardComponent } from './path/to/dashboardcomponent';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

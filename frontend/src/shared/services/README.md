@@ -1,34 +1,32 @@
-# 🏷️ Services Directory
+# 🛠️ Services
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [shared](/frontend/src/shared) ➔ [services](/frontend/src/shared/services)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [services](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Services** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Services** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Shared`
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  services --> Files
-  Files --> auth_service_ts[auth.service.ts]
-  Files --> telegram_service_ts[telegram.service.ts]
-  Files --> index_ts[index.ts]
-  Files --> error_service_ts[error.service.ts]
-  Files --> image_service_ts[image.service.ts]
+  services["🛠️ services"]
+  services --> services_auth_service_ts["📄 auth.service.ts"]
+  services --> services_error_service_ts["📄 error.service.ts"]
+  services --> services_image_service_ts["📄 image.service.ts"]
+  services --> services_index_ts["📄 index.ts"]
+  services --> services_telegram_service_ts["📄 telegram.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth.service.ts` | TypeScript | Exports: UserRole, AuthService | @shared |
-| `telegram.service.ts` | TypeScript | Exports: TelegramService | None |
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
-| `error.service.ts` | TypeScript | Exports: AppError, ErrorService | None |
-| `image.service.ts` | TypeScript | Exports: WeddingImage, ImageService | None |
+| `auth.service.ts` | TypeScript | Core logic and utilities for this domain. | @core/constants, @angular/core, @angular/common/http, @angular/router, @shared/models |
+| `error.service.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core |
+| `image.service.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `telegram.service.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @src/types/telegram |
+
 
 ## 🔗 Dependencies
 - `@angular/common/http`
@@ -37,12 +35,9 @@ graph TD
 - `@core/constants`
 - `@shared/models`
 - `@src/types/telegram`
-- `rxjs`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { UserRole } from './path/to/userrole';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

@@ -1,41 +1,37 @@
-# 🏷️ Inventory Directory
+# 📁 Inventory
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [pages](/frontend/src/pages) ➔ [inventory](/frontend/src/pages/inventory)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [inventory](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Inventory** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Inventory** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Pages`
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  inventory --> Files
-  Files --> index_ts[index.ts]
-  Files --> inventory_component_ts[inventory.component.ts]
-  Files --> inventory_component_scss[inventory.component.scss]
-  Files --> inventory_component_html[inventory.component.html]
+  inventory["📁 inventory"]
+  inventory --> inventory_index_ts["📄 index.ts"]
+  inventory --> inventory_inventory_component_html["📄 inventory.component.html"]
+  inventory --> inventory_inventory_component_scss["📄 inventory.component.scss"]
+  inventory --> inventory_inventory_component_ts["📄 inventory.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
-| `inventory.component.ts` | TypeScript | Exports: InventoryPageComponent | None |
-| `inventory.component.scss` | Stylesheet | Defines logic and structure for inventory.component.scss. | None |
-| `inventory.component.html` | HTML Template | Defines logic and structure for inventory.component.html. | None |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `inventory.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `inventory.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `inventory.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common |
+
 
 ## 🔗 Dependencies
 - `@angular/common`
 - `@angular/core`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { InventoryPageComponent } from './path/to/inventorypagecomponent';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

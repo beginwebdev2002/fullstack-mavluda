@@ -1,40 +1,36 @@
-# 🏷️ Lib Directory
+# 📁 Lib
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [shared](/frontend/src/shared) ➔ [lib](/frontend/src/shared/lib)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [lib](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Lib** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Lib** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Shared`
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  lib --> Files
-  Files --> object_ts[object.ts]
-  Files --> index_ts[index.ts]
-  Files --> array_ts[array.ts]
-  Files --> link_ts[link.ts]
+  lib["📁 lib"]
+  lib --> lib_array_ts["📄 array.ts"]
+  lib --> lib_index_ts["📄 index.ts"]
+  lib --> lib_link_ts["📄 link.ts"]
+  lib --> lib_object_ts["📄 object.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `object.ts` | TypeScript | Exports: objectExcludePropety, formDataExcludeProperty, convertFormData... | None |
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
-| `array.ts` | TypeScript | Exports: deleteArrayItemById | None |
-| `link.ts` | TypeScript | Exports: linkCombine, linkServerConvert | @env |
+| `array.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `link.ts` | TypeScript | Core logic and utilities for this domain. | @environments/environment |
+| `object.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 - `@environments/environment`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { objectExcludePropety } from './path/to/objectexcludepropety';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

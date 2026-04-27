@@ -1,41 +1,37 @@
-# 🏷️ Config Directory
+# 🔧 Config
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[backend](/backend) ➔ [src](/backend/src) ➔ [common](/backend/src/common) ➔ [config](/backend/src/common/config)
+[Root](../../../../) > [backend](../../../) > [src](../../) > [common](../) > [config](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Config** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Config** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  config --> Files
-  Files --> app_config_service_ts[app-config.service.ts]
-  Files --> env_validation_ts[env.validation.ts]
-  Files --> configuration_ts[configuration.ts]
-  Files --> app_config_module_ts[app-config.module.ts]
+  config["🔧 config"]
+  config --> config_app_config_module_ts["📄 app-config.module.ts"]
+  config --> config_app_config_service_ts["📄 app-config.service.ts"]
+  config --> config_configuration_ts["📄 configuration.ts"]
+  config --> config_env_validation_ts["📄 env.validation.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app-config.service.ts` | TypeScript | Exports: AppConfigService | None |
-| `env.validation.ts` | TypeScript | Exports: validate | None |
-| `configuration.ts` | TypeScript | Defines logic and structure for configuration.ts. | None |
-| `app-config.module.ts` | TypeScript | Exports: AppConfigModule | None |
+| `app-config.module.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/config, @nestjs/common |
+| `app-config.service.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/config, @nestjs/common |
+| `configuration.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `env.validation.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 - `@nestjs/common`
 - `@nestjs/config`
-- `class-transformer`
-- `class-validator`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { AppConfigService } from './path/to/appconfigservice';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

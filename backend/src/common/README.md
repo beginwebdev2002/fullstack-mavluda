@@ -1,38 +1,35 @@
-# 🏷️ Common Directory
+# 📁 Common
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[backend](/backend) ➔ [src](/backend/src) ➔ [common](/backend/src/common)
+[Root](../../../) > [backend](../../) > [src](../) > [common](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Common** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Common** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  common --> Files
-  common --> Subdirectories
-  Subdirectories --> database[database/]
-  Subdirectories --> config[config/]
-  Subdirectories --> utils[utils/]
-  Subdirectories --> filters[filters/]
-  Subdirectories --> interfaces[interfaces/]
-  Subdirectories --> guards[guards/]
-  Subdirectories --> decorators[decorators/]
-  Subdirectories --> constants[constants/]
+  common["📁 common"]
+  common --> common_config["📁 config"]
+  common --> common_constants["📁 constants"]
+  common --> common_database["📁 database"]
+  common --> common_decorators["📁 decorators"]
+  common --> common_filters["📁 filters"]
+  common --> common_guards["📁 guards"]
+  common --> common_interfaces["📁 interfaces"]
+  common --> common_utils["📁 utils"]
 ```
 
 ## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| *No files* | - | - | - |
+*No files directly in this directory.*
+
 
 ## 🔗 Dependencies
-No external or cross-module dependencies detected.
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// This directory primarily serves organizational or static purposes.
-// Reference its contents dynamically based on your feature requirements.
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

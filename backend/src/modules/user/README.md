@@ -1,40 +1,37 @@
-# 🏷️ User Directory
+# 📁 User
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [user](/backend/src/modules/user)
+[Root](../../../../) > [backend](../../../) > [src](../../) > [modules](../) > [user](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **User** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **User** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  user --> Files
-  Files --> user_module_ts[user.module.ts]
-  Files --> index_ts[index.ts]
-  user --> Subdirectories
-  Subdirectories --> infrastructure[infrastructure/]
-  Subdirectories --> presentation[presentation/]
-  Subdirectories --> domain[domain/]
-  Subdirectories --> application[application/]
+  user["📁 user"]
+  user --> user_application["📁 application"]
+  user --> user_domain["📁 domain"]
+  user --> user_infrastructure["📁 infrastructure"]
+  user --> user_presentation["📁 presentation"]
+  user --> user_index_ts["📄 index.ts"]
+  user --> user_user_module_ts["📄 user.module.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.module.ts` | TypeScript | Exports: UserModule | None |
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `user.module.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common, @nestjs/mongoose |
+
 
 ## 🔗 Dependencies
 - `@nestjs/common`
 - `@nestjs/mongoose`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { UserModule } from './path/to/usermodule';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

@@ -1,32 +1,30 @@
-# 🏷️ About Directory
+# 📁 About
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [pages](/frontend/src/pages) ➔ [about](/frontend/src/pages/about)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [about](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **About** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **About** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Pages`
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  about --> Files
-  Files --> index_ts[index.ts]
-  Files --> about_component_scss[about.component.scss]
-  Files --> about_component_html[about.component.html]
-  Files --> about_component_ts[about.component.ts]
+  about["📁 about"]
+  about --> about_about_component_html["📄 about.component.html"]
+  about --> about_about_component_scss["📄 about.component.scss"]
+  about --> about_about_component_ts["📄 about.component.ts"]
+  about --> about_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
-| `about.component.scss` | Stylesheet | Defines logic and structure for about.component.scss. | None |
-| `about.component.html` | HTML Template | Defines logic and structure for about.component.html. | None |
-| `about.component.ts` | TypeScript | Exports: AboutComponent | @entities |
+| `about.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `about.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `about.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/platform-browser, @angular/forms/signals, @angular/core, @entities/admin-settings, @angular/common |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 - `@angular/common`
@@ -36,9 +34,7 @@ graph TD
 - `@entities/admin-settings`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { AboutComponent } from './path/to/aboutcomponent';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

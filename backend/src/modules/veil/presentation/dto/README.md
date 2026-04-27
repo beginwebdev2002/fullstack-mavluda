@@ -1,36 +1,32 @@
-# 🏷️ Dto Directory
+# 📁 Dto
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [veil](/backend/src/modules/veil) ➔ [presentation](/backend/src/modules/veil/presentation) ➔ [dto](/backend/src/modules/veil/presentation/dto)
+[Root](../../../../../../) > [backend](../../../../../) > [src](../../../../) > [modules](../../../) > [veil](../../) > [presentation](../) > [dto](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Dto** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  dto --> Files
-  Files --> update_veil_dto_ts[update-veil.dto.ts]
-  Files --> create_veil_dto_ts[create-veil.dto.ts]
+  dto["📁 dto"]
+  dto --> dto_create_veil_dto_ts["📄 create-veil.dto.ts"]
+  dto --> dto_update_veil_dto_ts["📄 update-veil.dto.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `update-veil.dto.ts` | TypeScript | Exports: UpdateVeilDto | None |
-| `create-veil.dto.ts` | TypeScript | Exports: CreateVeilDto | None |
+| `create-veil.dto.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `update-veil.dto.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/mapped-types |
+
 
 ## 🔗 Dependencies
 - `@nestjs/mapped-types`
-- `class-transformer`
-- `class-validator`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { UpdateVeilDto } from './path/to/updateveildto';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

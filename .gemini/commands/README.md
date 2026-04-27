@@ -1,31 +1,29 @@
-# 🏷️ Commands Directory
+# 📁 Mavluda Beauty commands
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[.gemini](/.gemini) ➔ [commands](/.gemini/commands)
+[.gemini](/.gemini) / [commands](/.gemini/commands)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Commands** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **commands** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  commands --> Files
-  commands --> Subdirectories
-  Subdirectories --> test[test/]
+  commands["📁 commands"]
+  commands --> test["📁 test"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| *No files* | - | - | - |
+| *No files in this directory* | - | - | - |
+
 
 ## 🔗 Dependencies
-No external or cross-module dependencies detected.
+No external or alias dependencies detected.
 
 ## 🛠️ Usage
 ```typescript
-// This directory primarily serves organizational or static purposes.
-// Reference its contents dynamically based on your feature requirements.
+// Example integration for commands
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

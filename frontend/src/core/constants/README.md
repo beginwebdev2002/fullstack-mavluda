@@ -1,34 +1,32 @@
-# 🏷️ Constants Directory
+# 📁 Constants
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [core](/frontend/src/core) ➔ [constants](/frontend/src/core/constants)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [core](../) > [constants](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Constants** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Core Logic (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  constants --> Files
-  Files --> api_endpoints_ts[api-endpoints.ts]
-  Files --> index_ts[index.ts]
+  constants["📁 constants"]
+  constants --> constants_api_endpoints_ts["📄 api-endpoints.ts"]
+  constants --> constants_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `api-endpoints.ts` | TypeScript | Exports: API_ENDPOINTS | @shared |
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
+| `api-endpoints.ts` | TypeScript | Core logic and utilities for this domain. | @shared/lib |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 - `@shared/lib`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { API_ENDPOINTS } from './path/to/api_endpoints';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

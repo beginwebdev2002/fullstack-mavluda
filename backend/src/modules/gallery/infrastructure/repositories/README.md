@@ -1,34 +1,31 @@
-# 🏷️ Repositories Directory
+# 📁 Repositories
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [gallery](/backend/src/modules/gallery) ➔ [infrastructure](/backend/src/modules/gallery/infrastructure) ➔ [repositories](/backend/src/modules/gallery/infrastructure/repositories)
+[Root](../../../../../../) > [backend](../../../../../) > [src](../../../../) > [modules](../../../) > [gallery](../../) > [infrastructure](../) > [repositories](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Repositories** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Repositories** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  repositories --> Files
-  Files --> gallery_repository_ts[gallery.repository.ts]
+  repositories["📁 repositories"]
+  repositories --> repositories_gallery_repository_ts["📄 gallery.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.repository.ts` | TypeScript | Exports: GalleryRepository | None |
+| `gallery.repository.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common, @nestjs/mongoose |
+
 
 ## 🔗 Dependencies
 - `@nestjs/common`
 - `@nestjs/mongoose`
-- `mongoose`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { GalleryRepository } from './path/to/galleryrepository';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

@@ -1,37 +1,35 @@
-# 🏷️ .Jules Directory
+# 📁 Mavluda Beauty .jules
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
 [.jules](/.jules)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **.Jules** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **.jules** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  _jules --> Files
-  Files --> sentinel_md[sentinel.md]
-  Files --> agents_md[agents.md]
-  Files --> bolt_md[bolt.md]
-  Files --> palette_md[palette.md]
+  _jules["📁 .jules"]
+  _jules --> agents_md["📄 agents.md"]
+  _jules --> bolt_md["📄 bolt.md"]
+  _jules --> palette_md["📄 palette.md"]
+  _jules --> sentinel_md["📄 sentinel.md"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `sentinel.md` | File | Defines logic and structure for sentinel.md. | None |
-| `agents.md` | File | Defines logic and structure for agents.md. | @modules, @features, @app, @entities, @shared |
-| `bolt.md` | File | Defines logic and structure for bolt.md. | None |
-| `palette.md` | File | Defines logic and structure for palette.md. | None |
+| `agents.md` | File | Core logic and utilities for this domain. | N/A |
+| `bolt.md` | File | Core logic and utilities for this domain. | N/A |
+| `palette.md` | File | Core logic and utilities for this domain. | N/A |
+| `sentinel.md` | File | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
-- `@entities/veil`
-- `@entities/veil/api/veil.service`
+No external or alias dependencies detected.
 
 ## 🛠️ Usage
 ```typescript
-// This directory primarily serves organizational or static purposes.
-// Reference its contents dynamically based on your feature requirements.
+// Example integration for .jules
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

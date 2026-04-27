@@ -1,32 +1,30 @@
-# 🏷️ Treatments Catalog Directory
+# 📁 Treatments Catalog
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [pages](/frontend/src/pages) ➔ [treatments-catalog](/frontend/src/pages/treatments-catalog)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [treatments-catalog](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Treatments Catalog** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Treatments Catalog** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Pages`
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  treatments_catalog --> Files
-  Files --> treatments_catalog_component_scss[treatments-catalog.component.scss]
-  Files --> index_ts[index.ts]
-  Files --> treatments_catalog_component_html[treatments-catalog.component.html]
-  Files --> treatments_catalog_component_ts[treatments-catalog.component.ts]
+  treatments_catalog["📁 treatments-catalog"]
+  treatments_catalog --> treatments_catalog_index_ts["📄 index.ts"]
+  treatments_catalog --> treatments_catalog_treatments_catalog_component_html["📄 treatments-catalog.component.html"]
+  treatments_catalog --> treatments_catalog_treatments_catalog_component_scss["📄 treatments-catalog.component.scss"]
+  treatments_catalog --> treatments_catalog_treatments_catalog_component_ts["📄 treatments-catalog.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments-catalog.component.scss` | Stylesheet | Defines logic and structure for treatments-catalog.component.scss. | None |
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
-| `treatments-catalog.component.html` | HTML Template | Defines logic and structure for treatments-catalog.component.html. | None |
-| `treatments-catalog.component.ts` | TypeScript | Exports: ServicesCatalogComponent | @env, @entities, @shared |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `treatments-catalog.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `treatments-catalog.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `treatments-catalog.component.ts` | TypeScript | Core logic and utilities for this domain. | @environments/environment, @angular/core, @entities/admin-settings, @entities/treatments, @shared/lib, @angular/common |
+
 
 ## 🔗 Dependencies
 - `@angular/common`
@@ -37,9 +35,7 @@ graph TD
 - `@shared/lib`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { ServicesCatalogComponent } from './path/to/servicescatalogcomponent';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

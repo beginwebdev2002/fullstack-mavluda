@@ -1,34 +1,31 @@
-# 🏷️ Gallery Directory
+# 📁 Gallery
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [pages](/frontend/src/pages) ➔ [gallery](/frontend/src/pages/gallery)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [gallery](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Gallery** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Pages`
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  gallery --> Files
-  Files --> index_ts[index.ts]
-  Files --> gallery_component_scss[gallery.component.scss]
-  Files --> gallery_component_ts[gallery.component.ts]
-  Files --> gallery_component_html[gallery.component.html]
-  gallery --> Subdirectories
-  Subdirectories --> ui[ui/]
+  gallery["📁 gallery"]
+  gallery --> gallery_ui["📁 ui"]
+  gallery --> gallery_gallery_component_html["📄 gallery.component.html"]
+  gallery --> gallery_gallery_component_scss["📄 gallery.component.scss"]
+  gallery --> gallery_gallery_component_ts["📄 gallery.component.ts"]
+  gallery --> gallery_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
-| `gallery.component.scss` | Stylesheet | Defines logic and structure for gallery.component.scss. | None |
-| `gallery.component.ts` | TypeScript | Exports: GalleryComponent | @env, @entities, @shared |
-| `gallery.component.html` | HTML Template | Defines logic and structure for gallery.component.html. | None |
+| `gallery.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `gallery.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `gallery.component.ts` | TypeScript | Core logic and utilities for this domain. | @environments/environment, @angular/core, @shared/ui, @entities/admin-settings, @shared/lib, @angular/common, @angular/forms, @entities/gallery, @shared/lib/object, @shared/models |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 - `@angular/common`
@@ -43,9 +40,7 @@ graph TD
 - `@shared/ui`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { GalleryComponent } from './path/to/gallerycomponent';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

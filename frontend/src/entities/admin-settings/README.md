@@ -1,40 +1,34 @@
-# 🏷️ Admin Settings Directory
+# 📁 Admin Settings
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [entities](/frontend/src/entities) ➔ [admin-settings](/frontend/src/entities/admin-settings)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [entities](../) > [admin-settings](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Admin Settings** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Admin Settings** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Entity`
+**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  admin_settings --> Files
-  Files --> admin_settings_service_ts[admin-settings.service.ts]
-  Files --> index_ts[index.ts]
+  admin_settings["📁 admin-settings"]
+  admin_settings --> admin_settings_admin_settings_service_ts["📄 admin-settings.service.ts"]
+  admin_settings --> admin_settings_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.service.ts` | TypeScript | Exports: AdminSettingsService | @shared |
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
+| `admin-settings.service.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @core/constants/api-endpoints, @angular/common/http |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 - `@angular/common/http`
 - `@angular/core`
 - `@core/constants/api-endpoints`
-- `@shared/models/admin-settings.model`
-- `rxjs`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { AdminSettingsService } from './path/to/adminsettingsservice';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

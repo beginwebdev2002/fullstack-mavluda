@@ -1,44 +1,37 @@
-# 🏷️ Treatments Directory
+# 📁 Treatments
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[backend](/backend) ➔ [src](/backend/src) ➔ [modules](/backend/src/modules) ➔ [treatments](/backend/src/modules/treatments)
+[Root](../../../../) > [backend](../../../) > [src](../../) > [modules](../) > [treatments](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Treatments** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  treatments --> Files
-  Files --> index_ts[index.ts]
-  Files --> treatments_module_ts[treatments.module.ts]
-  treatments --> Subdirectories
-  Subdirectories --> infrastructure[infrastructure/]
-  Subdirectories --> presentation[presentation/]
-  Subdirectories --> domain[domain/]
-  Subdirectories --> application[application/]
+  treatments["📁 treatments"]
+  treatments --> treatments_application["📁 application"]
+  treatments --> treatments_domain["📁 domain"]
+  treatments --> treatments_infrastructure["📁 infrastructure"]
+  treatments --> treatments_presentation["📁 presentation"]
+  treatments --> treatments_index_ts["📄 index.ts"]
+  treatments --> treatments_treatments_module_ts["📄 treatments.module.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
-| `treatments.module.ts` | TypeScript | Exports: TreatmentsModule | @modules |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `treatments.module.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common, @nestjs/mongoose |
+
 
 ## 🔗 Dependencies
-- `@modules/treatments/application/treatments.service`
-- `@modules/treatments/infrastructure/repositories/treatments.repository`
-- `@modules/treatments/infrastructure/schemas/treatments.schema`
-- `@modules/treatments/presentation/treatments.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { TreatmentsModule } from './path/to/treatmentsmodule';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

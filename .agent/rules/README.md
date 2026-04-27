@@ -1,41 +1,39 @@
-# 🏷️ Rules Directory
+# 📁 Mavluda Beauty rules
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[.agent](/.agent) ➔ [rules](/.agent/rules)
+[.agent](/.agent) / [rules](/.agent/rules)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Rules** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **rules** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  rules --> Files
-  Files --> nestjs_md[nestjs.md]
-  Files --> backend_architecture_md[backend-architecture.md]
-  Files --> agents_md[agents.md]
-  Files --> angular_md[angular.md]
-  Files --> angular_signals_md[angular-signals.md]
-  Files --> frontend_md[frontend.md]
+  rules["📁 rules"]
+  rules --> agents_md["📄 agents.md"]
+  rules --> angular_signals_md["📄 angular-signals.md"]
+  rules --> angular_md["📄 angular.md"]
+  rules --> backend_architecture_md["📄 backend-architecture.md"]
+  rules --> frontend_md["📄 frontend.md"]
+  rules --> nestjs_md["📄 nestjs.md"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `nestjs.md` | File | Defines logic and structure for nestjs.md. | @app |
-| `backend-architecture.md` | File | Defines logic and structure for backend-architecture.md. | None |
-| `agents.md` | File | Defines logic and structure for agents.md. | @modules, @features, @app, @entities, @shared |
-| `angular.md` | File | Defines logic and structure for angular.md. | None |
-| `angular-signals.md` | File | Defines logic and structure for angular-signals.md. | None |
-| `frontend.md` | File | Defines logic and structure for frontend.md. | None |
+| `agents.md` | File | Core logic and utilities for this domain. | N/A |
+| `angular-signals.md` | File | Core logic and utilities for this domain. | N/A |
+| `angular.md` | File | Core logic and utilities for this domain. | N/A |
+| `backend-architecture.md` | File | Core logic and utilities for this domain. | N/A |
+| `frontend.md` | File | Core logic and utilities for this domain. | N/A |
+| `nestjs.md` | File | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
-- `@entities/veil`
-- `@entities/veil/api/veil.service`
+No external or alias dependencies detected.
 
 ## 🛠️ Usage
 ```typescript
-// This directory primarily serves organizational or static purposes.
-// Reference its contents dynamically based on your feature requirements.
+// Example integration for rules
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

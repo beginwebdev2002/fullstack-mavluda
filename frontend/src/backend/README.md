@@ -1,36 +1,32 @@
-# 🏷️ Backend Directory
+# ⚙️ Backend
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [backend](/frontend/src/backend)
+[Root](../../../) > [frontend](../../) > [src](../) > [backend](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Backend** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Backend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  backend --> Files
-  Files --> index_ts[index.ts]
-  Files --> telegram_auth_guard_ts[telegram-auth.guard.ts]
+  backend["⚙️ backend"]
+  backend --> backend_index_ts["📄 index.ts"]
+  backend --> backend_telegram_auth_guard_ts["📄 telegram-auth.guard.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
-| `telegram-auth.guard.ts` | TypeScript | Exports: TelegramAuthGuard | None |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `telegram-auth.guard.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
+
 
 ## 🔗 Dependencies
 - `@nestjs/common`
-- `crypto`
-- `express`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { TelegramAuthGuard } from './path/to/telegramauthguard';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

@@ -1,36 +1,32 @@
-# 🏷️ Store Directory
+# 📁 Store
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [shared](/frontend/src/shared) ➔ [store](/frontend/src/shared/store)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [store](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Store** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Store** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Shared`
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  store --> Files
-  Files --> signal_store_base_ts[signal-store.base.ts]
-  Files --> index_ts[index.ts]
+  store["📁 store"]
+  store --> store_index_ts["📄 index.ts"]
+  store --> store_signal_store_base_ts["📄 signal-store.base.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `signal-store.base.ts` | TypeScript | Exports: SignalStore | None |
-| `index.ts` | TypeScript | Defines logic and structure for index.ts. | None |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `signal-store.base.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core |
+
 
 ## 🔗 Dependencies
 - `@angular/core`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { SignalStore } from './path/to/signalstore';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

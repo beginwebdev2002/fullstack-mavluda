@@ -1,26 +1,24 @@
-# 🏷️ Global Error Directory
+# 📁 Global Error
 
-> *Elegance, Precision, and Luxury Professionalism — The Mavluda Beauty Standard.*
-
-## 🧭 Breadcrumb Navigation
-[frontend](/frontend) ➔ [src](/frontend/src) ➔ [shared](/frontend/src/shared) ➔ [ui](/frontend/src/shared/ui) ➔ [global-error](/frontend/src/shared/ui/global-error)
+[Root](../../../../../) > [frontend](../../../../) > [src](../../../) > [shared](../../) > [ui](../) > [global-error](./)
 
 ## 🎯 Purpose
-This directory encapsulates the essential architecture and logic for the **Global Error** domain within the Mavluda Beauty ecosystem. It serves as a foundational component ensuring robust, scalable, and elegant operations.
+Delivering luxury-tier architectural components and high-performance logic for the **Global Error** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-**Feature Sliced Design (FSD) Layer:** `Shared`
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  global_error --> Files
-  Files --> global_error_component_ts[global-error.component.ts]
+  global_error["📁 global-error"]
+  global_error --> global_error_global_error_component_ts["📄 global-error.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `global-error.component.ts` | TypeScript | Exports: GlobalErrorComponent | @shared |
+| `global-error.component.ts` | TypeScript | Core logic and utilities for this domain. | @shared/services, @angular/core, @angular/common, @angular/animations |
+
 
 ## 🔗 Dependencies
 - `@angular/animations`
@@ -29,9 +27,7 @@ graph TD
 - `@shared/services`
 
 ## 🛠️ Usage
-```typescript
-// To utilize the luxurious capabilities of this module:
-import { GlobalErrorComponent } from './path/to/globalerrorcomponent';
-
-// Ensure properly typed interactions per Mavluda Beauty standards
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
