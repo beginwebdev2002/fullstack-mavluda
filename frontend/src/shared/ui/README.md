@@ -1,43 +1,34 @@
-# 📂 UI
+# 🎨 Ui
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [ui](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > shared > ui`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Ui** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Shared` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Shared`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[ui]
-    Root --> F0[📂 list-view]
-    Root --> F1[📄 index.ts]
-    Root --> F2[📂 global-error]
-    Root --> F3[📂 card-view]
-    Root --> F4[📂 image-popup]
+  ui["🎨 ui"]
+  ui --> ui_card_view["📁 card-view"]
+  ui --> ui_global_error["📁 global-error"]
+  ui --> ui_image_popup["📁 image-popup"]
+  ui --> ui_list_view["📁 list-view"]
+  ui --> ui_index_ts["📄 index.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📁 list-view` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📁 global-error` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 card-view` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 image-popup` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
-No external/internal aliases used directly in these files.
+## 🔗 Dependencies
+*No internal path aliases detected in this directory.*
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './index';
-
-// Integrate index logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

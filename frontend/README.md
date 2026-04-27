@@ -1,53 +1,42 @@
-# 📂 FRONTEND
+# 🎨 Frontend
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../) > [frontend](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Frontend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
-
-**FSD / Architecture Layer:** `General`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[frontend]
-    Root --> F0[📂 public]
-    Root --> F1[📄 package-lock.json]
-    Root --> F2[📂 src]
-    Root --> F3[📄 angular.json]
-    Root --> F4[📄 metadata.json]
-    Root --> F5[📄 index.tsx]
-    Root --> F6[📄 leaflet.css]
-    Root --> F7[📄 tsconfig.json]
-    Root --> F8[📄 index.html]
-    Root --> F9[📄 package.json]
+  frontend["🎨 frontend"]
+  frontend --> frontend_public["📁 public"]
+  frontend --> frontend_src["📁 src"]
+  frontend --> frontend_angular_json["📄 angular.json"]
+  frontend --> frontend_index_html["📄 index.html"]
+  frontend --> frontend_index_tsx["📄 index.tsx"]
+  frontend --> frontend_leaflet_css["📄 leaflet.css"]
+  frontend --> frontend_metadata_json["📄 metadata.json"]
+  frontend --> frontend_more_files["...and 3 more files"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `angular.json` | JSON Config | Core logic and utilities for this domain. | N/A |
+| `index.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `index.tsx` | File | Core logic and utilities for this domain. | @angular/platform-browser |
+| `leaflet.css` | CSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `metadata.json` | JSON Config | Core logic and utilities for this domain. | N/A |
+| `package-lock.json` | JSON Config | Core logic and utilities for this domain. | N/A |
+| `package.json` | JSON Config | Core logic and utilities for this domain. | N/A |
+| `tsconfig.json` | JSON Config | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📁 public` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 package-lock.json` | `.json` | General functionality | `None` |
-| `📁 src` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 angular.json` | `.json` | General functionality | `None` |
-| `📄 metadata.json` | `.json` | General functionality | `None` |
-| `📄 index.tsx` | `.tsx` | General functionality | `@angular/platform-browser` |
-| `📄 leaflet.css` | `.css` | General functionality | `None` |
-| `📄 tsconfig.json` | `.json` | General functionality | `None` |
-| `📄 index.html` | `.html` | General functionality | `None` |
-| `📄 package.json` | `.json` | General functionality | `None` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
 - `@angular/platform-browser`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './indexx';
-
-// Integrate indexx logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

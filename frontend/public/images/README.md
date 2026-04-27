@@ -1,35 +1,30 @@
-# 📂 IMAGES
+# 📁 Images
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../) > [frontend](../../) > [public](../) > [images](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > public > images`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Images** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
-
-**FSD / Architecture Layer:** `General`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[images]
-    Root --> F0[📄 treatments-no-img.png]
-    Root --> F1[📄 treatments-add-img.png]
+  images["📁 images"]
+  images --> images_treatments_add_img_png["📄 treatments-add-img.png"]
+  images --> images_treatments_no_img_png["📄 treatments-no-img.png"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `treatments-add-img.png` | File | Core logic and utilities for this domain. | N/A |
+| `treatments-no-img.png` | File | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 treatments-no-img.png` | `.png` | General functionality | `None` |
-| `📄 treatments-add-img.png` | `.png` | General functionality | `None` |
 
-## 🔗 DEPENDENCIES
-No external/internal aliases used directly in these files.
+## 🔗 Dependencies
+*No internal path aliases detected in this directory.*
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-// Refer to the specific files in this directory for exact export usage.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

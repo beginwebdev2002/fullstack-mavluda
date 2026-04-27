@@ -1,35 +1,30 @@
-# 📂 SCHEMAS
+# 📁 Schemas
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../../../) > [backend](../../../../../) > [src](../../../../) > [modules](../../../) > [user](../../) > [infrastructure](../) > [schemas](./)
 
-### 📍 Breadcrumb Navigation
-`. > backend > src > modules > user > infrastructure > schemas`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Schemas** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Infrastructure` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Infrastructure`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[schemas]
-    Root --> F0[📄 user.schema.ts]
+  schemas["📁 schemas"]
+  schemas --> schemas_user_schema_ts["📄 user.schema.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `user.schema.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/mongoose |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 user.schema.ts` | `.ts` | General functionality | `@nestjs/mongoose` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
 - `@nestjs/mongoose`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './user.schema';
-
-// Integrate user.schema logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

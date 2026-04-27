@@ -1,42 +1,37 @@
-# 📂 INTERCEPTORS
+# 📁 Interceptors
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [core](../) > [interceptors](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > core > interceptors`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Interceptors** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Core Logic (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `General`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[interceptors]
-    Root --> F0[📄 error.interceptor.ts]
-    Root --> F1[📄 index.ts]
-    Root --> F2[📄 api.interceptor.ts]
+  interceptors["📁 interceptors"]
+  interceptors --> interceptors_api_interceptor_ts["📄 api.interceptor.ts"]
+  interceptors --> interceptors_error_interceptor_ts["📄 error.interceptor.ts"]
+  interceptors --> interceptors_index_ts["📄 index.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `api.interceptor.ts` | TypeScript | Core logic and utilities for this domain. | @shared/lib, @angular/common/http |
+| `error.interceptor.ts` | TypeScript | Core logic and utilities for this domain. | @shared/services, @angular/common/http, @angular/core |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 error.interceptor.ts` | `.ts` | General functionality | `@angular/core, @shared/services, @angular/common/http` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📄 api.interceptor.ts` | `.ts` | General functionality | `@shared/lib, @angular/common/http` |
 
-## 🔗 DEPENDENCIES
-- `@shared/lib`
-- `@angular/core`
+## 🔗 Dependencies
 - `@angular/common/http`
+- `@angular/core`
+- `@shared/lib`
 - `@shared/services`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './error.interceptor';
-
-// Integrate error.interceptor logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

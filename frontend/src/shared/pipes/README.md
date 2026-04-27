@@ -1,38 +1,33 @@
-# 📂 PIPES
+# 📁 Pipes
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [pipes](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > shared > pipes`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Pipes** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Shared` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Shared`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[pipes]
-    Root --> F0[📄 index.ts]
-    Root --> F1[📄 safe-html.pipe.ts]
+  pipes["📁 pipes"]
+  pipes --> pipes_index_ts["📄 index.ts"]
+  pipes --> pipes_safe_html_pipe_ts["📄 safe-html.pipe.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `safe-html.pipe.ts` | TypeScript | Core logic and utilities for this domain. | @angular/platform-browser, @angular/core |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📄 safe-html.pipe.ts` | `.ts` | General functionality | `@angular/core, @angular/platform-browser` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
 - `@angular/core`
 - `@angular/platform-browser`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './index';
-
-// Integrate index logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

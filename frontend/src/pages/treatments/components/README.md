@@ -1,33 +1,28 @@
-# 📂 COMPONENTS
+# 🧩 Components
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../../) > [frontend](../../../../) > [src](../../../) > [pages](../../) > [treatments](../) > [components](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > pages > treatments > components`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Components** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Pages` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Pages`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[components]
-    Root --> F0[📂 treatment-form]
+  components["🧩 components"]
+  components --> components_treatment_form["📁 treatment-form"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+*No files directly in this directory.*
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📁 treatment-form` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
-No external/internal aliases used directly in these files.
+## 🔗 Dependencies
+*No internal path aliases detected in this directory.*
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-// This directory groups child modules/layers. Navigate into subdirectories for specific logic.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

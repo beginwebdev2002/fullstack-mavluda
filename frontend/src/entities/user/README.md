@@ -1,45 +1,38 @@
-# 📂 USER
+# 📁 User
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [entities](../) > [user](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > entities > user`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **User** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Entities` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Entities`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[user]
-    Root --> F0[📄 auth.service.ts]
-    Root --> F1[📄 index.ts]
-    Root --> F2[📂 model]
-    Root --> F3[📄 user.service.ts]
-    Root --> F4[📂 constants]
+  user["📁 user"]
+  user --> user_constants["📁 constants"]
+  user --> user_model["📁 model"]
+  user --> user_auth_service_ts["📄 auth.service.ts"]
+  user --> user_index_ts["📄 index.ts"]
+  user --> user_user_service_ts["📄 user.service.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `auth.service.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/router, @angular/common/http |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `user.service.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common/http |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 auth.service.ts` | `.ts` | Service logic | `@angular/core, @angular/router, @angular/common/http` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📁 model` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 user.service.ts` | `.ts` | Service logic | `@angular/core, @angular/common/http` |
-| `📁 constants` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
+- `@angular/common/http`
 - `@angular/core`
 - `@angular/router`
-- `@angular/common/http`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './auth.service';
-
-// Integrate auth.service logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

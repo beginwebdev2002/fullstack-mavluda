@@ -1,37 +1,32 @@
-# 📂 DECORATORS
+# 📁 Decorators
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [backend](../../../) > [src](../../) > [common](../) > [decorators](./)
 
-### 📍 Breadcrumb Navigation
-`. > backend > src > common > decorators`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Decorators** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Backend Core/Infrastructure` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Backend Core/Infrastructure`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[decorators]
-    Root --> F0[📄 public.decorator.ts]
-    Root --> F1[📄 roles.decorator.ts]
+  decorators["📁 decorators"]
+  decorators --> decorators_public_decorator_ts["📄 public.decorator.ts"]
+  decorators --> decorators_roles_decorator_ts["📄 roles.decorator.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `public.decorator.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
+| `roles.decorator.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 public.decorator.ts` | `.ts` | General functionality | `@nestjs/common` |
-| `📄 roles.decorator.ts` | `.ts` | General functionality | `@nestjs/common` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
 - `@nestjs/common`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './public.decorator';
-
-// Integrate public.decorator logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

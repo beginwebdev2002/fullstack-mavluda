@@ -1,43 +1,33 @@
-# 📂 SHARED
+# 🤝 Shared
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../) > [frontend](../../) > [src](../) > [shared](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > shared`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Shared** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Shared` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Shared`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[shared]
-    Root --> F0[📂 services]
-    Root --> F1[📂 models]
-    Root --> F2[📂 store]
-    Root --> F3[📂 ui]
-    Root --> F4[📂 pipes]
-    Root --> F5[📂 lib]
+  shared["🤝 shared"]
+  shared --> shared_lib["📁 lib"]
+  shared --> shared_models["📁 models"]
+  shared --> shared_pipes["📁 pipes"]
+  shared --> shared_services["📁 services"]
+  shared --> shared_store["📁 store"]
+  shared --> shared_ui["📁 ui"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+*No files directly in this directory.*
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📁 services` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 models` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 store` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 ui` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 pipes` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 lib` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
-No external/internal aliases used directly in these files.
+## 🔗 Dependencies
+*No internal path aliases detected in this directory.*
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-// This directory groups child modules/layers. Navigate into subdirectories for specific logic.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

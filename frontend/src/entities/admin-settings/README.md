@@ -1,40 +1,34 @@
-# 📂 ADMIN-SETTINGS
+# 📁 Admin Settings
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [entities](../) > [admin-settings](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > entities > admin-settings`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Admin Settings** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Entities` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Entities`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[admin-settings]
-    Root --> F0[📄 admin-settings.service.ts]
-    Root --> F1[📄 index.ts]
+  admin_settings["📁 admin-settings"]
+  admin_settings --> admin_settings_admin_settings_service_ts["📄 admin-settings.service.ts"]
+  admin_settings --> admin_settings_index_ts["📄 index.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `admin-settings.service.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @core/constants/api-endpoints, @angular/common/http |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 admin-settings.service.ts` | `.ts` | Service logic | `@core/constants/api-endpoints, @angular/core, @shared/models/admin-settings.model, @angular/common/http` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
 
-## 🔗 DEPENDENCIES
-- `@core/constants/api-endpoints`
-- `@angular/core`
-- `@shared/models/admin-settings.model`
+## 🔗 Dependencies
 - `@angular/common/http`
+- `@angular/core`
+- `@core/constants/api-endpoints`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './admin-settings.service';
-
-// Integrate admin-settings.service logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

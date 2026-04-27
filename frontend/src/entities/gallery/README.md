@@ -1,41 +1,35 @@
-# 📂 GALLERY
+# 📁 Gallery
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [entities](../) > [gallery](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > entities > gallery`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Entities` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Entities`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[gallery]
-    Root --> F0[📄 gallery.service.ts]
-    Root --> F1[📄 index.ts]
-    Root --> F2[📂 constants]
+  gallery["📁 gallery"]
+  gallery --> gallery_constants["📁 constants"]
+  gallery --> gallery_gallery_service_ts["📄 gallery.service.ts"]
+  gallery --> gallery_index_ts["📄 index.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `gallery.service.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common/http, @shared/models |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 gallery.service.ts` | `.ts` | Service logic | `@angular/core, @shared/models, @angular/common/http` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📁 constants` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
+- `@angular/common/http`
 - `@angular/core`
 - `@shared/models`
-- `@angular/common/http`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './gallery.service';
-
-// Integrate gallery.service logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

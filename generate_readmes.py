@@ -1,158 +1,146 @@
 import os
 import re
 
-def get_layer(path):
-    if '/app/' in path or '/app' in path: return 'App'
-    if '/pages/' in path or '/pages' in path: return 'Pages'
-    if '/widgets/' in path or '/widgets' in path: return 'Widgets'
-    if '/features/' in path or '/features' in path: return 'Features'
-    if '/entities/' in path or '/entities' in path: return 'Entities'
-    if '/shared/' in path or '/shared' in path: return 'Shared'
-    if '/backend/src/modules/' in path:
-        parts = path.split('/')
-        if 'application' in parts: return 'Application'
-        if 'domain' in parts: return 'Domain'
-        if 'infrastructure' in parts: return 'Infrastructure'
-        if 'presentation' in parts: return 'Presentation'
-        return 'Module Root'
-    if '/backend/' in path: return 'Backend Core/Infrastructure'
-    return 'General'
+IGNORED_DIRS = {'.git', 'node_modules', '.jules', '.agent', '.github', '.gemini', 'dist', 'build', '.angular', '.ignored'}
 
-def parse_imports(filepath):
-    imports = set()
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            content = f.read()
-            matches = re.findall(r"from\s+['\"]([^'\"]+)['\"]", content)
-            for m in matches:
-                imports.add(m)
-    except Exception:
-        pass
-    return list(imports)
+def get_breadcrumbs(rel_path):
+    if rel_path == '.':
+        return "[Root](/.)"
 
-def get_dir_contents(directory):
-    items = []
-    try:
-        for f in os.listdir(directory):
-            if f.startswith('.') or f == 'README.md': continue
-            full_path = os.path.join(directory, f)
-            if os.path.isfile(full_path):
-                ext = os.path.splitext(f)[1]
-                aliases = parse_imports(full_path)
-                key_aliases = [a for a in aliases if a.startswith('@')]
-                items.append({
-                    'name': f,
-                    'is_dir': False,
-                    'type': ext if ext else 'file',
-                    'responsibility': 'Component logic' if 'component' in f else 'Service logic' if 'service' in f else 'Module configuration' if 'module' in f else 'Controller logic' if 'controller' in f else 'DTO definitions' if 'dto' in f else 'General functionality',
-                    'aliases': ', '.join(key_aliases) if key_aliases else 'None'
-                })
-            elif os.path.isdir(full_path):
-                if f in ['node_modules', 'dist', 'build', 'coverage']: continue
-                items.append({
-                    'name': f,
-                    'is_dir': True,
-                    'type': 'Directory',
-                    'responsibility': 'Subdirectory logic grouping',
-                    'aliases': 'None'
-                })
-    except Exception:
-        pass
-    return items
+    parts = rel_path.split(os.sep)
+    breadcrumbs = ["[Root](/.)"]
+    current_path = ""
+    for part in parts:
+        if part == '.':
+            continue
+        current_path += "/" + part if current_path else part
+        breadcrumbs.append(f"[{part}](/{current_path})")
 
-def generate_mermaid(items, directory):
-    diagram = "```mermaid\ngraph TD\n"
-    if not items:
-        diagram += "    A[Empty Directory] --> B(No contents to display)\n"
-    else:
-        diagram += f"    Root[{os.path.basename(directory)}] \n"
-        for i, info in enumerate(items):
-            icon = "📂 " if info['is_dir'] else "📄 "
-            diagram += f"    Root --> F{i}[{icon}{info['name']}]\n"
-    diagram += "```"
-    return diagram
+    return " > ".join(breadcrumbs)
 
-def get_breadcrumb(path):
-    parts = path.split(os.sep)
-    if not parts or parts == ['.']: return "Root"
-    return " > ".join(parts)
+def generate_mermaid(dir_name, subdirs, files):
+    lines = ["```mermaid", "graph TD", f'  Root["📁 {dir_name}"]']
+    for subdir in sorted(subdirs):
+        lines.append(f'  Root --> {subdir}["📁 {subdir}"]')
+    for file in sorted(files):
+        if file == 'README.md': continue
+        safe_name = re.sub(r'[^a-zA-Z0-9]', '_', file)
+        lines.append(f'  Root --> {safe_name}["📄 {file}"]')
+    lines.append("```")
+    return "\n".join(lines)
 
-def get_usage(directory, items):
-    usage_snippet = "```typescript\n// Example usage context\n"
-    has_files = any(not item['is_dir'] for item in items)
-    if has_files:
-        ts_files = [item['name'] for item in items if not item['is_dir'] and item['type'] in ['.ts', '.tsx']]
-        if ts_files:
-            example_file = ts_files[0].replace('.ts', '').replace('.tsx', '')
-            usage_snippet += f"import {{ ... }} from './{example_file}';\n\n// Integrate {example_file} logic into your feature.\n"
-        else:
-            usage_snippet += "// Refer to the specific files in this directory for exact export usage.\n"
-    else:
-        usage_snippet += "// This directory groups child modules/layers. Navigate into subdirectories for specific logic.\n"
-    usage_snippet += "```"
-    return usage_snippet
+def get_fsd_layer(rel_path):
+    parts = rel_path.split(os.sep)
+    if 'shared' in parts: return "Shared"
+    if 'entities' in parts: return "Entity"
+    if 'features' in parts: return "Feature"
+    if 'widgets' in parts: return "Widget"
+    if 'pages' in parts: return "Page"
+    if 'app' in parts: return "App"
+    return None
 
-def generate_readme(directory):
-    items = get_dir_contents(directory)
-    layer = get_layer(directory)
-    breadcrumb = get_breadcrumb(directory)
-    dirname = os.path.basename(directory) or 'Root'
+def extract_dependencies(files_paths):
+    deps = set()
+    aliases = set()
+    for fp in files_paths:
+        if not fp.endswith(('.ts', '.js', '.tsx', '.jsx', '.scss', '.css', '.html')): continue
+        try:
+            with open(fp, 'r', encoding='utf-8') as f:
+                content = f.read()
+                # Find typescript imports
+                import_matches = re.findall(r'import\s+.*?\s+from\s+[\'"](.*?)[\'"]', content)
+                for match in import_matches:
+                    deps.add(match)
+                    if match.startswith('@'):
+                        aliases.add(match.split('/')[0])
+                # Find scss/css imports
+                import_matches_scss = re.findall(r'@import\s+[\'"](.*?)[\'"]', content)
+                for match in import_matches_scss:
+                    deps.add(match)
+        except Exception:
+            pass
+    return sorted(list(deps)), sorted(list(aliases))
 
-    mermaid = generate_mermaid(items, directory)
-    usage = get_usage(directory, items)
+def generate_readme_for_dir(root, dirs, files):
+    rel_path = os.path.relpath(root, '.')
+    dir_name = os.path.basename(root) if root != '.' else 'Root'
+    if dir_name == 'Root': dir_name = 'Mavluda Beauty Repository'
 
-    readme_content = f"""# 📂 {dirname.upper()}
+    breadcrumbs = get_breadcrumbs(rel_path)
+    mermaid = generate_mermaid(dir_name, dirs, files)
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+    fsd_layer = get_fsd_layer(rel_path)
 
-### 📍 Breadcrumb Navigation
-`{breadcrumb}`
+    file_paths = [os.path.join(root, f) for f in files]
+    deps, aliases = extract_dependencies(file_paths)
 
-## 🎯 PURPOSE
-This directory encapsulates `{layer}` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+    # File registry
+    file_registry = ["| File Name | Type | Responsibility | Key Aliases Used |", "|---|---|---|---|"]
+    for file in sorted(files):
+        if file == 'README.md': continue
+        file_type = "File"
+        if file.endswith('.ts'): file_type = "TypeScript"
+        if file.endswith('.html'): file_type = "Template"
+        if file.endswith('.scss') or file.endswith('.css'): file_type = "Stylesheet"
+        if file.endswith('.json'): file_type = "JSON Configuration"
+        if file.endswith('.js') or file.endswith('.mjs') or file.endswith('.cjs'): file_type = "JavaScript"
 
-**FSD / Architecture Layer:** `{layer}`
+        file_aliases = "N/A"
+        if file.endswith(('.ts', '.js', '.tsx', '.jsx', '.scss', '.css')):
+            _, f_aliases = extract_dependencies([os.path.join(root, file)])
+            if f_aliases:
+                file_aliases = ", ".join(f_aliases)
 
-## 🏗️ ARCHITECTURE
+        # Basic responsibility description based on file type/name
+        responsibility = f"Provides core logic and orchestration for {file}."
+        if 'module' in file: responsibility = f"Defines the architectural module boundaries for {file}."
+        if 'controller' in file: responsibility = f"Handles incoming HTTP requests and routing for {file}."
+        if 'service' in file: responsibility = f"Encapsulates business logic and data access for {file}."
+        if 'component.ts' in file: responsibility = f"UI component logic and state management for {file}."
+        if 'component.html' in file: responsibility = f"Structural template and layout for {file}."
+        if 'component.scss' in file: responsibility = f"Luxury styling and visual presentation for {file}."
+        if 'spec.ts' in file: responsibility = f"Unit testing and quality assurance for {file}."
+
+        file_registry.append(f"| `{file}` | {file_type} | {responsibility} | {file_aliases} |")
+
+    fsd_note = f"\n**FSD Layer:** {fsd_layer}\n" if fsd_layer else ""
+
+    deps_md = "\n".join([f"- `{d}`" for d in deps]) if deps else "- No external dependencies."
+
+    readme_content = f"""# 📁 {dir_name}
+
+{breadcrumbs}
+{fsd_note}
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **{dir_name}** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+## 🏗️ Architecture
 {mermaid}
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+{chr(10).join(file_registry)}
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
+## 🔗 Dependencies
+{deps_md}
+
+## 🛠️ Usage
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import {{ relevantMember }} from './{dir_name if dir_name != 'Mavluda Beauty Repository' else 'core'}';
+
+// Integrate into the application architecture
+relevantMember.execute();
+```
 """
-    for info in items:
-        icon = "📁 " if info['is_dir'] else "📄 "
-        readme_content += f"| `{icon}{info['name']}` | `{info['type']}` | {info['responsibility']} | `{info['aliases']}` |\n"
-
-    all_aliases = set()
-    for info in items:
-        if info['aliases'] != 'None':
-            for a in info['aliases'].split(', '):
-                all_aliases.add(a)
-
-    readme_content += "\n## 🔗 DEPENDENCIES\n"
-    if all_aliases:
-        for a in all_aliases:
-            readme_content += f"- `{a}`\n"
-    else:
-        readme_content += "No external/internal aliases used directly in these files.\n"
-
-    readme_content += f"\n## 🛠️ USAGE\n{usage}\n"
-    return readme_content
+    readme_path = os.path.join(root, 'README.md')
+    with open(readme_path, 'w', encoding='utf-8') as f:
+        f.write(readme_content)
 
 def main():
-    skip_dirs = {'.git', '.github', 'node_modules', 'dist', 'build', '.agent', '.gemini', '.jules', 'coverage'}
     for root, dirs, files in os.walk('.'):
-        dirs[:] = [d for d in dirs if d not in skip_dirs and not d.startswith('.')]
-
-        if 'node_modules' in root or 'dist' in root or 'coverage' in root:
-            continue
-
-        readme_path = os.path.join(root, 'README.md')
-        content = generate_readme(root)
-        with open(readme_path, 'w', encoding='utf-8') as f:
-            f.write(content)
+        # Exclude hidden directories that aren't specifically part of the code we want
+        dirs[:] = [d for d in dirs if d not in IGNORED_DIRS]
+        generate_readme_for_dir(root, dirs, files)
 
 if __name__ == '__main__':
     main()

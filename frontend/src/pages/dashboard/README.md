@@ -1,46 +1,37 @@
-# 📂 DASHBOARD
+# 📁 Dashboard
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [dashboard](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > pages > dashboard`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Dashboard** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Pages` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Pages`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[dashboard]
-    Root --> F0[📄 index.ts]
-    Root --> F1[📄 dashboard.component.scss]
-    Root --> F2[📄 dashboard.component.html]
-    Root --> F3[📄 dashboard.component.ts]
+  dashboard["📁 dashboard"]
+  dashboard --> dashboard_dashboard_component_html["📄 dashboard.component.html"]
+  dashboard --> dashboard_dashboard_component_scss["📄 dashboard.component.scss"]
+  dashboard --> dashboard_dashboard_component_ts["📄 dashboard.component.ts"]
+  dashboard --> dashboard_index_ts["📄 index.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `dashboard.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `dashboard.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `dashboard.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📄 dashboard.component.scss` | `.scss` | Component logic | `None` |
-| `📄 dashboard.component.html` | `.html` | Component logic | `None` |
-| `📄 dashboard.component.ts` | `.ts` | Component logic | `@angular/core, @entities/treatments/treatments.service, @entities/user/user.service, @angular/common, @entities/veil/veil.service, @entities/gallery/gallery.service` |
 
-## 🔗 DEPENDENCIES
-- `@angular/core`
-- `@entities/treatments/treatments.service`
-- `@entities/user/user.service`
+## 🔗 Dependencies
 - `@angular/common`
-- `@entities/veil/veil.service`
-- `@entities/gallery/gallery.service`
+- `@angular/core`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './index';
-
-// Integrate index logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

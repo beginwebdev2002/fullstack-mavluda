@@ -1,37 +1,32 @@
-# 📂 STORE
+# 📁 Store
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [store](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > shared > store`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Store** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Shared` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Shared`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[store]
-    Root --> F0[📄 signal-store.base.ts]
-    Root --> F1[📄 index.ts]
+  store["📁 store"]
+  store --> store_index_ts["📄 index.ts"]
+  store --> store_signal_store_base_ts["📄 signal-store.base.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `signal-store.base.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 signal-store.base.ts` | `.ts` | General functionality | `@angular/core` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
 - `@angular/core`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './signal-store.base';
-
-// Integrate signal-store.base logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

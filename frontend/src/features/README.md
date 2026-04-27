@@ -1,41 +1,32 @@
-# 📂 FEATURES
+# 📦 Features
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../) > [frontend](../../) > [src](../) > [features](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > features`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Features** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Features` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Features (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Features`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[features]
-    Root --> F0[📂 gallery]
-    Root --> F1[📂 language-selection]
-    Root --> F2[📂 treatments]
-    Root --> F3[📂 veil]
-    Root --> F4[📂 client-form]
+  features["📦 features"]
+  features --> features_client_form["📁 client-form"]
+  features --> features_gallery["📁 gallery"]
+  features --> features_language_selection["📁 language-selection"]
+  features --> features_treatments["📁 treatments"]
+  features --> features_veil["📁 veil"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+*No files directly in this directory.*
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📁 gallery` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 language-selection` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 treatments` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 veil` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 client-form` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
-No external/internal aliases used directly in these files.
+## 🔗 Dependencies
+*No internal path aliases detected in this directory.*
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-// This directory groups child modules/layers. Navigate into subdirectories for specific logic.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

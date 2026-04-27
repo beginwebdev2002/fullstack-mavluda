@@ -1,59 +1,41 @@
-# 📂 PAGES
+# 📄 Pages
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../) > [frontend](../../) > [src](../) > [pages](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > pages`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Pages** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Pages` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Pages`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[pages]
-    Root --> F0[📂 portfolio]
-    Root --> F1[📂 settings]
-    Root --> F2[📂 dashboard]
-    Root --> F3[📂 gallery]
-    Root --> F4[📂 user-profile]
-    Root --> F5[📂 treatments]
-    Root --> F6[📂 about]
-    Root --> F7[📂 veil]
-    Root --> F8[📂 veils-catalog]
-    Root --> F9[📂 inventory]
-    Root --> F10[📂 clients]
-    Root --> F11[📂 treatments-catalog]
-    Root --> F12[📂 auth]
-    Root --> F13[📂 user-home]
+  pages["📄 pages"]
+  pages --> pages_about["📁 about"]
+  pages --> pages_auth["📁 auth"]
+  pages --> pages_clients["📁 clients"]
+  pages --> pages_dashboard["📁 dashboard"]
+  pages --> pages_gallery["📁 gallery"]
+  pages --> pages_inventory["📁 inventory"]
+  pages --> pages_portfolio["📁 portfolio"]
+  pages --> pages_settings["📁 settings"]
+  pages --> pages_treatments["📁 treatments"]
+  pages --> pages_treatments_catalog["📁 treatments-catalog"]
+  pages --> pages_user_home["📁 user-home"]
+  pages --> pages_user_profile["📁 user-profile"]
+  pages --> pages_veil["📁 veil"]
+  pages --> pages_veils_catalog["📁 veils-catalog"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+*No files directly in this directory.*
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📁 portfolio` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 settings` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 dashboard` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 gallery` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 user-profile` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 treatments` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 about` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 veil` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 veils-catalog` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 inventory` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 clients` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 treatments-catalog` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 auth` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 user-home` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
-No external/internal aliases used directly in these files.
+## 🔗 Dependencies
+*No internal path aliases detected in this directory.*
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-// This directory groups child modules/layers. Navigate into subdirectories for specific logic.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

@@ -1,48 +1,43 @@
-# 📂 SERVICES
+# 🛠️ Services
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [services](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > shared > services`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Services** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Shared` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Shared`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[services]
-    Root --> F0[📄 auth.service.ts]
-    Root --> F1[📄 telegram.service.ts]
-    Root --> F2[📄 index.ts]
-    Root --> F3[📄 error.service.ts]
-    Root --> F4[📄 image.service.ts]
+  services["🛠️ services"]
+  services --> services_auth_service_ts["📄 auth.service.ts"]
+  services --> services_error_service_ts["📄 error.service.ts"]
+  services --> services_image_service_ts["📄 image.service.ts"]
+  services --> services_index_ts["📄 index.ts"]
+  services --> services_telegram_service_ts["📄 telegram.service.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `auth.service.ts` | TypeScript | Core logic and utilities for this domain. | @core/constants, @angular/core, @angular/common/http, @angular/router, @shared/models |
+| `error.service.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core |
+| `image.service.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `telegram.service.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @src/types/telegram |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 auth.service.ts` | `.ts` | Service logic | `@core/constants, @angular/core, @shared/models, @angular/router, @angular/common/http` |
-| `📄 telegram.service.ts` | `.ts` | Service logic | `@angular/core, @src/types/telegram` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📄 error.service.ts` | `.ts` | Service logic | `@angular/core` |
-| `📄 image.service.ts` | `.ts` | Service logic | `@angular/core` |
 
-## 🔗 DEPENDENCIES
-- `@core/constants`
-- `@angular/core`
-- `@shared/models`
-- `@angular/router`
-- `@src/types/telegram`
+## 🔗 Dependencies
 - `@angular/common/http`
+- `@angular/core`
+- `@angular/router`
+- `@core/constants`
+- `@shared/models`
+- `@src/types/telegram`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './auth.service';
-
-// Integrate auth.service logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

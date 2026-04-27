@@ -1,47 +1,43 @@
-# 📂 BACKEND
+# ⚙️ Backend
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../) > [backend](./)
 
-### 📍 Breadcrumb Navigation
-`. > backend`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Backend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `General`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[backend]
-    Root --> F0[📂 test]
-    Root --> F1[📄 package-lock.json]
-    Root --> F2[📂 src]
-    Root --> F3[📄 nest-cli.json]
-    Root --> F4[📄 eslint.config.mjs]
-    Root --> F5[📄 tsconfig.json]
-    Root --> F6[📄 package.json]
-    Root --> F7[📄 tsconfig.build.json]
+  backend["⚙️ backend"]
+  backend --> backend_src["📁 src"]
+  backend --> backend_test["📁 test"]
+  backend --> backend__prettierrc["📄 .prettierrc"]
+  backend --> backend_eslint_config_mjs["📄 eslint.config.mjs"]
+  backend --> backend_nest_cli_json["📄 nest-cli.json"]
+  backend --> backend_package_lock_json["📄 package-lock.json"]
+  backend --> backend_package_json["📄 package.json"]
+  backend --> backend_more_files["...and 2 more files"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `.prettierrc` | File | Core logic and utilities for this domain. | N/A |
+| `eslint.config.mjs` | File | Core logic and utilities for this domain. | @eslint/js |
+| `nest-cli.json` | JSON Config | Core logic and utilities for this domain. | N/A |
+| `package-lock.json` | JSON Config | Core logic and utilities for this domain. | N/A |
+| `package.json` | JSON Config | Core logic and utilities for this domain. | N/A |
+| `tsconfig.build.json` | JSON Config | Core logic and utilities for this domain. | N/A |
+| `tsconfig.json` | JSON Config | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📁 test` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 package-lock.json` | `.json` | General functionality | `None` |
-| `📁 src` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 nest-cli.json` | `.json` | General functionality | `None` |
-| `📄 eslint.config.mjs` | `.mjs` | General functionality | `@eslint/js` |
-| `📄 tsconfig.json` | `.json` | General functionality | `None` |
-| `📄 package.json` | `.json` | General functionality | `None` |
-| `📄 tsconfig.build.json` | `.json` | General functionality | `None` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
 - `@eslint/js`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-// Refer to the specific files in this directory for exact export usage.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

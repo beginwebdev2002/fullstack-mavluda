@@ -1,46 +1,41 @@
-# 📂 AUTH
+# 📁 Auth
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [auth](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > pages > auth`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Pages` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Pages`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[auth]
-    Root --> F0[📄 index.ts]
-    Root --> F1[📄 auth.component.scss]
-    Root --> F2[📄 auth.component.ts]
-    Root --> F3[📄 auth.component.html]
+  auth["📁 auth"]
+  auth --> auth_auth_component_html["📄 auth.component.html"]
+  auth --> auth_auth_component_scss["📄 auth.component.scss"]
+  auth --> auth_auth_component_ts["📄 auth.component.ts"]
+  auth --> auth_index_ts["📄 index.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `auth.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `auth.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `auth.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/forms/signals, @angular/router, @angular/core, @features/language-selection, @angular/common, @entities/user |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📄 auth.component.scss` | `.scss` | Component logic | `None` |
-| `📄 auth.component.ts` | `.ts` | Component logic | `@angular/forms/signals, @features/language-selection, @angular/core, @angular/common, @angular/router, @entities/user` |
-| `📄 auth.component.html` | `.html` | Component logic | `None` |
 
-## 🔗 DEPENDENCIES
-- `@angular/forms/signals`
-- `@features/language-selection`
-- `@angular/core`
+## 🔗 Dependencies
 - `@angular/common`
+- `@angular/core`
+- `@angular/forms/signals`
 - `@angular/router`
 - `@entities/user`
+- `@features/language-selection`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './index';
-
-// Integrate index logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

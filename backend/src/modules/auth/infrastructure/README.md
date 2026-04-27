@@ -1,37 +1,31 @@
-# 📂 INFRASTRUCTURE
+# 🏗️ Infrastructure
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../../) > [backend](../../../../) > [src](../../../) > [modules](../../) > [auth](../) > [infrastructure](./)
 
-### 📍 Breadcrumb Navigation
-`. > backend > src > modules > auth > infrastructure`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Infrastructure** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Infrastructure` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Infrastructure`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[infrastructure]
-    Root --> F0[📄 jwt.strategy.ts]
+  infrastructure["🏗️ infrastructure"]
+  infrastructure --> infrastructure_jwt_strategy_ts["📄 jwt.strategy.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `jwt.strategy.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/passport, @nestjs/common |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 jwt.strategy.ts` | `.ts` | General functionality | `@common/config/app-config.service, @nestjs/common, @nestjs/passport` |
 
-## 🔗 DEPENDENCIES
-- `@common/config/app-config.service`
+## 🔗 Dependencies
 - `@nestjs/common`
 - `@nestjs/passport`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './jwt.strategy';
-
-// Integrate jwt.strategy logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

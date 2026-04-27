@@ -1,43 +1,37 @@
-# 📂 VEIL
+# 📁 Veil
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [entities](../) > [veil](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > entities > veil`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Veil** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Entities` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Entities`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[veil]
-    Root --> F0[📄 veil.service.ts]
-    Root --> F1[📄 index.ts]
-    Root --> F2[📂 constants]
+  veil["📁 veil"]
+  veil --> veil_constants["📁 constants"]
+  veil --> veil_index_ts["📄 index.ts"]
+  veil --> veil_veil_service_ts["📄 veil.service.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `veil.service.ts` | TypeScript | Core logic and utilities for this domain. | @core/constants, @angular/core, @features/veil, @shared/lib, @angular/common/http |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 veil.service.ts` | `.ts` | Service logic | `@core/constants, @angular/core, @shared/lib, @features/veil, @angular/common/http` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📁 constants` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
-- `@core/constants`
-- `@angular/core`
-- `@shared/lib`
-- `@features/veil`
+## 🔗 Dependencies
 - `@angular/common/http`
+- `@angular/core`
+- `@core/constants`
+- `@features/veil`
+- `@shared/lib`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './veil.service';
-
-// Integrate veil.service logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

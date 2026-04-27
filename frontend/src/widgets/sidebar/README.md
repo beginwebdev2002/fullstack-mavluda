@@ -1,42 +1,37 @@
-# 📂 SIDEBAR
+# 📁 Sidebar
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [widgets](../) > [sidebar](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > widgets > sidebar`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Sidebar** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Widgets` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Widgets (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Widgets`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[sidebar]
-    Root --> F0[📄 index.ts]
-    Root --> F1[📄 sidebar.component.html]
-    Root --> F2[📄 sidebar.component.ts]
+  sidebar["📁 sidebar"]
+  sidebar --> sidebar_index_ts["📄 index.ts"]
+  sidebar --> sidebar_sidebar_component_html["📄 sidebar.component.html"]
+  sidebar --> sidebar_sidebar_component_ts["📄 sidebar.component.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `sidebar.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `sidebar.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/router, @angular/common, @shared/pipes |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📄 sidebar.component.html` | `.html` | Component logic | `None` |
-| `📄 sidebar.component.ts` | `.ts` | Component logic | `@angular/core, @angular/common, @angular/router, @shared/pipes` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
+- `@angular/common`
 - `@angular/core`
 - `@angular/router`
-- `@angular/common`
 - `@shared/pipes`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './index';
-
-// Integrate index logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

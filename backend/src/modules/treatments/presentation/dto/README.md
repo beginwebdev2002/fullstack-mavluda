@@ -1,37 +1,32 @@
-# 📂 DTO
+# 📁 Dto
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../../../) > [backend](../../../../../) > [src](../../../../) > [modules](../../../) > [treatments](../../) > [presentation](../) > [dto](./)
 
-### 📍 Breadcrumb Navigation
-`. > backend > src > modules > treatments > presentation > dto`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Presentation` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Presentation`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[dto]
-    Root --> F0[📄 create-treatments.dto.ts]
-    Root --> F1[📄 update-treatments.dto.ts]
+  dto["📁 dto"]
+  dto --> dto_create_treatments_dto_ts["📄 create-treatments.dto.ts"]
+  dto --> dto_update_treatments_dto_ts["📄 update-treatments.dto.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `create-treatments.dto.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `update-treatments.dto.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/mapped-types |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 create-treatments.dto.ts` | `.ts` | DTO definitions | `None` |
-| `📄 update-treatments.dto.ts` | `.ts` | DTO definitions | `@nestjs/mapped-types` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
 - `@nestjs/mapped-types`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './create-treatments.dto';
-
-// Integrate create-treatments.dto logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

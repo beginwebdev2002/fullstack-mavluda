@@ -1,4 +1,12 @@
-import { Body, Controller, Post, UnauthorizedException } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Post,
+  UnauthorizedException,
+  InternalServerErrorException,
+  NotFoundException,
+  BadRequestException,
+} from '@nestjs/common';
 import { TelegramAuthService } from './telegram-auth.service';
 import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
@@ -20,27 +28,56 @@ export class AuthController {
   @Public()
   @Post('login')
   async login(@Body() loginDto: LoginDto): Promise<AuthResponse> {
-    return this.authService.login(loginDto);
+    try {
+      return await this.authService.login(loginDto);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('USER_NOT_FOUND');
+      }
+      // If login throws custom Unauthorized stuff, we bubble it up
+      if (error instanceof UnauthorizedException) {
+        throw error;
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Public()
   @Post('register')
   async register(@Body() registerDto: RegisterDto): Promise<AuthResponse> {
-    return this.authService.register(registerDto);
+    try {
+      return await this.authService.register(registerDto);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('already exists')
+      ) {
+        throw new BadRequestException('USER_ALREADY_EXISTS');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Post('telegram')
   async telegramAuth(
     @Body() body: { initData: string },
   ): Promise<TelegramAuthResponse> {
-    if (!body.initData) {
-      throw new UnauthorizedException('No initData provided');
+    try {
+      if (!body.initData) {
+        throw new UnauthorizedException('No initData provided');
+      }
+      const user = await this.telegramAuthService.validateInitData(
+        body.initData,
+      );
+      return { success: true, user };
+    } catch (error) {
+      if (error instanceof UnauthorizedException) {
+        throw error;
+      }
+      throw new UnauthorizedException('INVALID_TOKEN');
     }
-    const user = await this.telegramAuthService.validateInitData(body.initData);
-    // Use AuthService logic to return JWT
-    // const payload = { sub: user.id, role: user.role };
-    // Assuming we want to return token here too
-    // return this.authService.login(user); (need user object with email/id)
-    return { success: true, user };
   }
 }

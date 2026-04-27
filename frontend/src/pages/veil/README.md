@@ -1,50 +1,44 @@
-# 📂 VEIL
+# 📁 Veil
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [veil](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > pages > veil`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Veil** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Pages` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Pages`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[veil]
-    Root --> F0[📄 veil.component.ts]
-    Root --> F1[📄 veil.component.html]
-    Root --> F2[📄 index.ts]
-    Root --> F3[📂 ui]
-    Root --> F4[📄 veil.component.scss]
+  veil["📁 veil"]
+  veil --> veil_ui["📁 ui"]
+  veil --> veil_index_ts["📄 index.ts"]
+  veil --> veil_veil_component_html["📄 veil.component.html"]
+  veil --> veil_veil_component_scss["📄 veil.component.scss"]
+  veil --> veil_veil_component_ts["📄 veil.component.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `veil.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `veil.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `veil.component.ts` | TypeScript | Core logic and utilities for this domain. | @environments/environment, @angular/core, @shared/ui, @entities/admin-settings, @features/veil, @shared/lib, @angular/common, @entities/veil |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 veil.component.ts` | `.ts` | Component logic | `@environments/environment, @angular/core, @entities/veil, @entities/admin-settings, @angular/common, @shared/lib, @features/veil, @shared/ui` |
-| `📄 veil.component.html` | `.html` | Component logic | `None` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📁 ui` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 veil.component.scss` | `.scss` | Component logic | `None` |
 
-## 🔗 DEPENDENCIES
-- `@environments/environment`
-- `@angular/core`
-- `@entities/veil`
-- `@entities/admin-settings`
+## 🔗 Dependencies
 - `@angular/common`
-- `@shared/lib`
+- `@angular/core`
+- `@entities/admin-settings`
+- `@entities/veil`
+- `@environments/environment`
 - `@features/veil`
+- `@shared/lib`
 - `@shared/ui`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './veil.component';
-
-// Integrate veil.component logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

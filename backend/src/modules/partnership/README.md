@@ -1,46 +1,37 @@
-# 📂 PARTNERSHIP
+# 📁 Partnership
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [backend](../../../) > [src](../../) > [modules](../) > [partnership](./)
 
-### 📍 Breadcrumb Navigation
-`. > backend > src > modules > partnership`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Partnership** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Module Root` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Module Root`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[partnership]
-    Root --> F0[📂 infrastructure]
-    Root --> F1[📄 partnership.module.ts]
-    Root --> F2[📂 presentation]
-    Root --> F3[📄 index.ts]
-    Root --> F4[📂 domain]
-    Root --> F5[📂 application]
+  partnership["📁 partnership"]
+  partnership --> partnership_application["📁 application"]
+  partnership --> partnership_domain["📁 domain"]
+  partnership --> partnership_infrastructure["📁 infrastructure"]
+  partnership --> partnership_presentation["📁 presentation"]
+  partnership --> partnership_index_ts["📄 index.ts"]
+  partnership --> partnership_partnership_module_ts["📄 partnership.module.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `partnership.module.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common, @nestjs/mongoose |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📁 infrastructure` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 partnership.module.ts` | `.ts` | Module configuration | `@nestjs/common, @nestjs/mongoose` |
-| `📁 presentation` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📁 domain` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 application` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
 - `@nestjs/common`
 - `@nestjs/mongoose`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './partnership.module';
-
-// Integrate partnership.module logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

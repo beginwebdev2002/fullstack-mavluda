@@ -1,37 +1,32 @@
-# 📂 CONSTANTS
+# 📁 Constants
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [core](../) > [constants](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > core > constants`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Core Logic (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `General`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[constants]
-    Root --> F0[📄 api-endpoints.ts]
-    Root --> F1[📄 index.ts]
+  constants["📁 constants"]
+  constants --> constants_api_endpoints_ts["📄 api-endpoints.ts"]
+  constants --> constants_index_ts["📄 index.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `api-endpoints.ts` | TypeScript | Core logic and utilities for this domain. | @shared/lib |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 api-endpoints.ts` | `.ts` | General functionality | `@shared/lib` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
 - `@shared/lib`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './api-endpoints';
-
-// Integrate api-endpoints logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

@@ -1,39 +1,34 @@
-# 📂 GUARDS
+# 📁 Guards
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [backend](../../../) > [src](../../) > [common](../) > [guards](./)
 
-### 📍 Breadcrumb Navigation
-`. > backend > src > common > guards`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Backend Core/Infrastructure` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Backend Core/Infrastructure`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[guards]
-    Root --> F0[📄 roles.guard.ts]
-    Root --> F1[📄 jwt-auth.guard.ts]
+  guards["📁 guards"]
+  guards --> guards_jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
+  guards --> guards_roles_guard_ts["📄 roles.guard.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `jwt-auth.guard.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/passport, @nestjs/core, @nestjs/common |
+| `roles.guard.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/core, @nestjs/common |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 roles.guard.ts` | `.ts` | General functionality | `@nestjs/common, @nestjs/core` |
-| `📄 jwt-auth.guard.ts` | `.ts` | General functionality | `@nestjs/common, @nestjs/passport, @nestjs/core` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
 - `@nestjs/common`
-- `@nestjs/passport`
 - `@nestjs/core`
+- `@nestjs/passport`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './roles.guard';
-
-// Integrate roles.guard logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

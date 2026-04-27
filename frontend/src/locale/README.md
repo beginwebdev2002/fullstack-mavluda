@@ -1,37 +1,32 @@
-# 📂 LOCALE
+# 📁 Locale
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../) > [frontend](../../) > [src](../) > [locale](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > locale`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Locale** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
-
-**FSD / Architecture Layer:** `General`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[locale]
-    Root --> F0[📄 messages.tj.xlf]
-    Root --> F1[📄 messages.xlf]
-    Root --> F2[📄 messages.ru.xlf]
+  locale["📁 locale"]
+  locale --> locale_messages_ru_xlf["📄 messages.ru.xlf"]
+  locale --> locale_messages_tj_xlf["📄 messages.tj.xlf"]
+  locale --> locale_messages_xlf["📄 messages.xlf"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `messages.ru.xlf` | File | Core logic and utilities for this domain. | N/A |
+| `messages.tj.xlf` | File | Core logic and utilities for this domain. | N/A |
+| `messages.xlf` | File | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 messages.tj.xlf` | `.xlf` | General functionality | `None` |
-| `📄 messages.xlf` | `.xlf` | General functionality | `None` |
-| `📄 messages.ru.xlf` | `.xlf` | General functionality | `None` |
 
-## 🔗 DEPENDENCIES
-No external/internal aliases used directly in these files.
+## 🔗 Dependencies
+*No internal path aliases detected in this directory.*
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-// Refer to the specific files in this directory for exact export usage.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

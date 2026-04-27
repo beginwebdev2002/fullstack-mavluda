@@ -1,61 +1,54 @@
-# 📂 SRC
+# 💻 Src
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../) > [backend](../) > [src](./)
 
-### 📍 Breadcrumb Navigation
-`. > backend > src`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Src** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Backend Core/Infrastructure` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Backend Core/Infrastructure`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[src]
-    Root --> F0[📄 app.controller.spec.ts]
-    Root --> F1[📄 main.ts]
-    Root --> F2[📄 app.module.ts]
-    Root --> F3[📂 common]
-    Root --> F4[📄 app.controller.ts]
-    Root --> F5[📂 modules]
-    Root --> F6[📄 app.service.ts]
+  src["💻 src"]
+  src --> src_common["📁 common"]
+  src --> src_modules["📁 modules"]
+  src --> src_app_controller_spec_ts["📄 app.controller.spec.ts"]
+  src --> src_app_controller_ts["📄 app.controller.ts"]
+  src --> src_app_module_ts["📄 app.module.ts"]
+  src --> src_app_service_ts["📄 app.service.ts"]
+  src --> src_main_ts["📄 main.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `app.controller.spec.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/testing |
+| `app.controller.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
+| `app.module.ts` | TypeScript | Core logic and utilities for this domain. | @modules/auth, @modules/payment, @modules/booking, @modules/admin-settings, @modules/veil, @nestjs/common, @modules/inventory, @modules/user, @nestjs/serve-static, @modules/partnership, @modules/treatments, @modules/gallery |
+| `app.service.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
+| `main.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/config, @nestjs/core, @nestjs/common |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 app.controller.spec.ts` | `.ts` | Controller logic | `@nestjs/testing` |
-| `📄 main.ts` | `.ts` | General functionality | `@nestjs/config, @nestjs/common, @nestjs/core` |
-| `📄 app.module.ts` | `.ts` | Module configuration | `@modules/auth, @modules/user, @nestjs/serve-static, @nestjs/common, @modules/partnership, @modules/gallery, @modules/inventory, @modules/payment, @modules/treatments, @modules/booking, @modules/veil, @modules/admin-settings` |
-| `📁 common` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 app.controller.ts` | `.ts` | Controller logic | `@nestjs/common` |
-| `📁 modules` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 app.service.ts` | `.ts` | Service logic | `@nestjs/common` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
+- `@modules/admin-settings`
 - `@modules/auth`
-- `@modules/user`
-- `@nestjs/core`
-- `@nestjs/serve-static`
-- `@nestjs/common`
-- `@nestjs/config`
+- `@modules/booking`
 - `@modules/gallery`
 - `@modules/inventory`
+- `@modules/partnership`
 - `@modules/payment`
 - `@modules/treatments`
-- `@nestjs/testing`
-- `@modules/admin-settings`
-- `@modules/booking`
+- `@modules/user`
 - `@modules/veil`
-- `@modules/partnership`
+- `@nestjs/common`
+- `@nestjs/config`
+- `@nestjs/core`
+- `@nestjs/serve-static`
+- `@nestjs/testing`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './app.controller.spec';
-
-// Integrate app.controller.spec logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

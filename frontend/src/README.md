@@ -1,72 +1,54 @@
-# 📂 SRC
+# 💻 Src
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../) > [frontend](../) > [src](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Src** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `General` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
-
-**FSD / Architecture Layer:** `General`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[src]
-    Root --> F0[📂 backend]
-    Root --> F1[📂 entities]
-    Root --> F2[📂 environments]
-    Root --> F3[📄 app.component.html]
-    Root --> F4[📄 main.ts]
-    Root --> F5[📂 app]
-    Root --> F6[📂 locale]
-    Root --> F7[📂 core]
-    Root --> F8[📄 app.routes.ts]
-    Root --> F9[📂 shared]
-    Root --> F10[📂 widgets]
-    Root --> F11[📄 app.component.scss]
-    Root --> F12[📂 pages]
-    Root --> F13[📄 app.component.ts]
-    Root --> F14[📂 features]
-    Root --> F15[📂 types]
+  src["💻 src"]
+  src --> src_app["📁 app"]
+  src --> src_backend["📁 backend"]
+  src --> src_core["📁 core"]
+  src --> src_entities["📁 entities"]
+  src --> src_environments["📁 environments"]
+  src --> src_features["📁 features"]
+  src --> src_locale["📁 locale"]
+  src --> src_pages["📁 pages"]
+  src --> src_shared["📁 shared"]
+  src --> src_types["📁 types"]
+  src --> src_widgets["📁 widgets"]
+  src --> src_app_component_html["📄 app.component.html"]
+  src --> src_app_component_scss["📄 app.component.scss"]
+  src --> src_app_component_ts["📄 app.component.ts"]
+  src --> src_app_routes_ts["📄 app.routes.ts"]
+  src --> src_main_ts["📄 main.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `app.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `app.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `app.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @shared/ui, @shared/services, @angular/common, @angular/router |
+| `app.routes.ts` | TypeScript | Core logic and utilities for this domain. | @pages/auth, @angular/router, @widgets/layouts |
+| `main.ts` | TypeScript | Core logic and utilities for this domain. | @angular/platform-browser |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📁 backend` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 entities` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 environments` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 app.component.html` | `.html` | Component logic | `None` |
-| `📄 main.ts` | `.ts` | General functionality | `@angular/platform-browser` |
-| `📁 app` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 locale` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 core` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 app.routes.ts` | `.ts` | General functionality | `@pages/auth, @angular/router, @widgets/layouts` |
-| `📁 shared` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 widgets` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 app.component.scss` | `.scss` | Component logic | `None` |
-| `📁 pages` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 app.component.ts` | `.ts` | Component logic | `@angular/core, @angular/common, @angular/router, @shared/ui, @shared/services` |
-| `📁 features` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 types` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
-- `@angular/platform-browser`
-- `@widgets/layouts`
-- `@angular/core`
+## 🔗 Dependencies
 - `@angular/common`
+- `@angular/core`
+- `@angular/platform-browser`
 - `@angular/router`
 - `@pages/auth`
-- `@shared/ui`
 - `@shared/services`
+- `@shared/ui`
+- `@widgets/layouts`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './main';
-
-// Integrate main logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

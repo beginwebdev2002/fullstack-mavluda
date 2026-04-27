@@ -1,41 +1,32 @@
-# 📂 ENTITIES
+# 🧬 Entities
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../) > [frontend](../../) > [src](../) > [entities](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > entities`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Entities** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Entities` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Entities`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[entities]
-    Root --> F0[📂 gallery]
-    Root --> F1[📂 user]
-    Root --> F2[📂 treatments]
-    Root --> F3[📂 admin-settings]
-    Root --> F4[📂 veil]
+  entities["🧬 entities"]
+  entities --> entities_admin_settings["📁 admin-settings"]
+  entities --> entities_gallery["📁 gallery"]
+  entities --> entities_treatments["📁 treatments"]
+  entities --> entities_user["📁 user"]
+  entities --> entities_veil["📁 veil"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+*No files directly in this directory.*
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📁 gallery` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 user` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 treatments` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 admin-settings` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 veil` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
-No external/internal aliases used directly in these files.
+## 🔗 Dependencies
+*No internal path aliases detected in this directory.*
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-// This directory groups child modules/layers. Navigate into subdirectories for specific logic.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

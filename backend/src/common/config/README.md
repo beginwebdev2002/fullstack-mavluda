@@ -1,42 +1,37 @@
-# 📂 CONFIG
+# 🔧 Config
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [backend](../../../) > [src](../../) > [common](../) > [config](./)
 
-### 📍 Breadcrumb Navigation
-`. > backend > src > common > config`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Config** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Backend Core/Infrastructure` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Backend Core/Infrastructure`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[config]
-    Root --> F0[📄 app-config.service.ts]
-    Root --> F1[📄 env.validation.ts]
-    Root --> F2[📄 configuration.ts]
-    Root --> F3[📄 app-config.module.ts]
+  config["🔧 config"]
+  config --> config_app_config_module_ts["📄 app-config.module.ts"]
+  config --> config_app_config_service_ts["📄 app-config.service.ts"]
+  config --> config_configuration_ts["📄 configuration.ts"]
+  config --> config_env_validation_ts["📄 env.validation.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `app-config.module.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/config, @nestjs/common |
+| `app-config.service.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/config, @nestjs/common |
+| `configuration.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `env.validation.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 app-config.service.ts` | `.ts` | Service logic | `@nestjs/config, @nestjs/common` |
-| `📄 env.validation.ts` | `.ts` | General functionality | `None` |
-| `📄 configuration.ts` | `.ts` | General functionality | `None` |
-| `📄 app-config.module.ts` | `.ts` | Module configuration | `@nestjs/config, @nestjs/common` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
 - `@nestjs/common`
 - `@nestjs/config`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './app-config.service';
-
-// Integrate app-config.service logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

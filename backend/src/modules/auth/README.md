@@ -1,55 +1,44 @@
-# 📂 AUTH
+# 📁 Auth
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [backend](../../../) > [src](../../) > [modules](../) > [auth](./)
 
-### 📍 Breadcrumb Navigation
-`. > backend > src > modules > auth`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Module Root` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Module Root`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[auth]
-    Root --> F0[📂 infrastructure]
-    Root --> F1[📄 auth.module.ts]
-    Root --> F2[📄 auth.service.ts]
-    Root --> F3[📂 dto]
-    Root --> F4[📄 telegram-auth.service.ts]
-    Root --> F5[📄 index.ts]
-    Root --> F6[📂 interfaces]
-    Root --> F7[📄 auth.controller.ts]
+  auth["📁 auth"]
+  auth --> auth_dto["📁 dto"]
+  auth --> auth_infrastructure["📁 infrastructure"]
+  auth --> auth_interfaces["📁 interfaces"]
+  auth --> auth_auth_controller_ts["📄 auth.controller.ts"]
+  auth --> auth_auth_module_ts["📄 auth.module.ts"]
+  auth --> auth_auth_service_ts["📄 auth.service.ts"]
+  auth --> auth_index_ts["📄 index.ts"]
+  auth --> auth_telegram_auth_service_ts["📄 telegram-auth.service.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `auth.controller.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
+| `auth.module.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/jwt, @nestjs/passport, @nestjs/common, @modules/user |
+| `auth.service.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/jwt, @nestjs/common, @modules/user |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `telegram-auth.service.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common, @modules/user |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📁 infrastructure` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 auth.module.ts` | `.ts` | Module configuration | `@common/config/app-config.service, @modules/user, @nestjs/common, @nestjs/passport, @common/config/app-config.module, @nestjs/jwt` |
-| `📄 auth.service.ts` | `.ts` | Service logic | `@modules/user, @nestjs/common, @nestjs/jwt` |
-| `📁 dto` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 telegram-auth.service.ts` | `.ts` | Service logic | `@common/config/app-config.service, @nestjs/common, @modules/user` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📁 interfaces` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 auth.controller.ts` | `.ts` | Controller logic | `@common/decorators/public.decorator, @nestjs/common` |
 
-## 🔗 DEPENDENCIES
-- `@common/config/app-config.service`
-- `@common/decorators/public.decorator`
+## 🔗 Dependencies
 - `@modules/user`
 - `@nestjs/common`
-- `@nestjs/passport`
-- `@common/config/app-config.module`
 - `@nestjs/jwt`
+- `@nestjs/passport`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './auth.module';
-
-// Integrate auth.module logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

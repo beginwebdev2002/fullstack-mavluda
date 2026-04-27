@@ -8,6 +8,8 @@ import {
   Delete,
   UseInterceptors,
   UploadedFiles,
+  NotFoundException,
+  InternalServerErrorException,
 } from '@nestjs/common';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
@@ -23,17 +25,35 @@ export class GalleryController {
 
   @Get('count')
   async count(): Promise<number> {
-    return this.galleryService.count();
+    try {
+      return await this.galleryService.count();
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Get()
   async findAll(): Promise<Gallery[]> {
-    return this.galleryService.findAll();
+    try {
+      return await this.galleryService.findAll();
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Get(':id')
   async findOne(@Param('id') id: string): Promise<Gallery> {
-    return this.galleryService.findOne(id);
+    try {
+      return await this.galleryService.findOne(id);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Post()
@@ -54,19 +74,26 @@ export class GalleryController {
     @Body() createGalleryDto: CreateGalleryDto,
     @UploadedFiles() files: Array<Express.Multer.File>,
   ): Promise<Gallery> {
-    const imagePath =
-      files && files.length > 0
-        ? `/uploads/gallery/${files[0].filename}`
-        : null;
+    try {
+      const imagePath =
+        files && files.length > 0
+          ? `/uploads/gallery/${files[0].filename}`
+          : null;
 
-    const galleryData = {
-      ...createGalleryDto,
-      imageUrl: imagePath || (createGalleryDto as any).imageUrl,
-    };
+      const galleryData = {
+        ...createGalleryDto,
+        imageUrl: imagePath || (createGalleryDto as any).imageUrl,
+      };
 
-    // Mapping DTO to Domain Entity
-    const gallery = galleryData as unknown as Omit<Gallery, 'id' | 'createdAt'>;
-    return this.galleryService.create(gallery);
+      // Mapping DTO to Domain Entity
+      const gallery = galleryData as unknown as Omit<
+        Gallery,
+        'id' | 'createdAt'
+      >;
+      return await this.galleryService.create(gallery);
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Put(':id')
@@ -88,23 +115,43 @@ export class GalleryController {
     @Body() updateGalleryDto: UpdateGalleryDto,
     @UploadedFiles() files: Array<Express.Multer.File>,
   ): Promise<Gallery> {
-    const imagePath =
-      files && files.length > 0
-        ? `/uploads/gallery/${files[0].filename}`
-        : null;
+    try {
+      const imagePath =
+        files && files.length > 0
+          ? `/uploads/gallery/${files[0].filename}`
+          : null;
 
-    if (imagePath) {
-      updateGalleryDto.imageUrl = imagePath;
+      if (imagePath) {
+        updateGalleryDto.imageUrl = imagePath;
+      }
+
+      return await this.galleryService.update(
+        id,
+        updateGalleryDto as unknown as Partial<Gallery>,
+      );
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
     }
-
-    return this.galleryService.update(
-      id,
-      updateGalleryDto as unknown as Partial<Gallery>,
-    );
   }
 
   @Delete(':id')
   async remove(@Param('id') id: string): Promise<void> {
-    return this.galleryService.remove(id);
+    try {
+      return await this.galleryService.remove(id);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 }

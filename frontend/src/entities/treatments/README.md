@@ -1,43 +1,37 @@
-# 📂 TREATMENTS
+# 📁 Treatments
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [entities](../) > [treatments](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > entities > treatments`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Entities` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Entities`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[treatments]
-    Root --> F0[📄 index.ts]
-    Root --> F1[📄 treatments.service.ts]
-    Root --> F2[📂 constants]
+  treatments["📁 treatments"]
+  treatments --> treatments_constants["📁 constants"]
+  treatments --> treatments_index_ts["📄 index.ts"]
+  treatments --> treatments_treatments_service_ts["📄 treatments.service.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `treatments.service.ts` | TypeScript | Core logic and utilities for this domain. | @features/treatments, @core/constants, @angular/core, @shared/lib, @angular/common/http |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📄 treatments.service.ts` | `.ts` | Service logic | `@core/constants, @angular/core, @shared/lib, @features/treatments, @angular/common/http` |
-| `📁 constants` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
-- `@core/constants`
-- `@angular/core`
-- `@shared/lib`
-- `@features/treatments`
+## 🔗 Dependencies
 - `@angular/common/http`
+- `@angular/core`
+- `@core/constants`
+- `@features/treatments`
+- `@shared/lib`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './index';
-
-// Integrate index logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

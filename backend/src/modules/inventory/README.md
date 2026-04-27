@@ -1,46 +1,37 @@
-# 📂 INVENTORY
+# 📁 Inventory
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [backend](../../../) > [src](../../) > [modules](../) > [inventory](./)
 
-### 📍 Breadcrumb Navigation
-`. > backend > src > modules > inventory`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Inventory** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Module Root` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Module Root`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[inventory]
-    Root --> F0[📂 infrastructure]
-    Root --> F1[📂 presentation]
-    Root --> F2[📄 index.ts]
-    Root --> F3[📂 domain]
-    Root --> F4[📄 inventory.module.ts]
-    Root --> F5[📂 application]
+  inventory["📁 inventory"]
+  inventory --> inventory_application["📁 application"]
+  inventory --> inventory_domain["📁 domain"]
+  inventory --> inventory_infrastructure["📁 infrastructure"]
+  inventory --> inventory_presentation["📁 presentation"]
+  inventory --> inventory_index_ts["📄 index.ts"]
+  inventory --> inventory_inventory_module_ts["📄 inventory.module.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `inventory.module.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common, @nestjs/mongoose |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📁 infrastructure` | `Directory` | Subdirectory logic grouping | `None` |
-| `📁 presentation` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📁 domain` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 inventory.module.ts` | `.ts` | Module configuration | `@nestjs/common, @nestjs/mongoose` |
-| `📁 application` | `Directory` | Subdirectory logic grouping | `None` |
 
-## 🔗 DEPENDENCIES
+## 🔗 Dependencies
 - `@nestjs/common`
 - `@nestjs/mongoose`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './index';
-
-// Integrate index logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

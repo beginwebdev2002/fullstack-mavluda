@@ -1,51 +1,45 @@
-# 📂 TREATMENTS
+# 📁 Treatments
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [treatments](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > pages > treatments`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Pages` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Pages`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[treatments]
-    Root --> F0[📄 treatments.component.scss]
-    Root --> F1[📂 components]
-    Root --> F2[📄 treatments.component.html]
-    Root --> F3[📄 index.ts]
-    Root --> F4[📄 treatments.component.ts]
+  treatments["📁 treatments"]
+  treatments --> treatments_components["📁 components"]
+  treatments --> treatments_index_ts["📄 index.ts"]
+  treatments --> treatments_treatments_component_html["📄 treatments.component.html"]
+  treatments --> treatments_treatments_component_scss["📄 treatments.component.scss"]
+  treatments --> treatments_treatments_component_ts["📄 treatments.component.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `treatments.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `treatments.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `treatments.component.ts` | TypeScript | Core logic and utilities for this domain. | @features/treatments, @environments/environment, @angular/core, @shared/ui, @entities/admin-settings, @entities/treatments, @shared/lib, @angular/common, @angular/forms |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 treatments.component.scss` | `.scss` | Component logic | `None` |
-| `📁 components` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 treatments.component.html` | `.html` | Component logic | `None` |
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📄 treatments.component.ts` | `.ts` | Component logic | `@environments/environment, @angular/core, @angular/common, @angular/forms, @entities/admin-settings, @shared/lib, @entities/treatments, @features/treatments, @shared/ui` |
 
-## 🔗 DEPENDENCIES
-- `@environments/environment`
-- `@angular/core`
-- `@entities/admin-settings`
+## 🔗 Dependencies
 - `@angular/common`
+- `@angular/core`
 - `@angular/forms`
-- `@shared/lib`
-- `@features/treatments`
-- `@shared/ui`
+- `@entities/admin-settings`
 - `@entities/treatments`
+- `@environments/environment`
+- `@features/treatments`
+- `@shared/lib`
+- `@shared/ui`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './index';
-
-// Integrate index logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

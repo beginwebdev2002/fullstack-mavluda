@@ -1,52 +1,46 @@
-# 📂 GALLERY
+# 📁 Gallery
 
-> 💎 **Mavluda Beauty - Luxury Professional Architecture**
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [gallery](./)
 
-### 📍 Breadcrumb Navigation
-`. > frontend > src > pages > gallery`
+## 🎯 Purpose
+Delivering luxury-tier architectural components and high-performance logic for the **Gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🎯 PURPOSE
-This directory encapsulates `Pages` level functionality within the Mavluda Beauty ecosystem, ensuring proper separation of concerns and architectural transparency.
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
-**FSD / Architecture Layer:** `Pages`
-
-## 🏗️ ARCHITECTURE
+## 🏗️ Architecture
 ```mermaid
 graph TD
-    Root[gallery]
-    Root --> F0[📄 index.ts]
-    Root --> F1[📄 gallery.component.scss]
-    Root --> F2[📂 ui]
-    Root --> F3[📄 gallery.component.ts]
-    Root --> F4[📄 gallery.component.html]
+  gallery["📁 gallery"]
+  gallery --> gallery_ui["📁 ui"]
+  gallery --> gallery_gallery_component_html["📄 gallery.component.html"]
+  gallery --> gallery_gallery_component_scss["📄 gallery.component.scss"]
+  gallery --> gallery_gallery_component_ts["📄 gallery.component.ts"]
+  gallery --> gallery_index_ts["📄 index.ts"]
 ```
 
-## 📄 FILE REGISTRY
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `gallery.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `gallery.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
+| `gallery.component.ts` | TypeScript | Core logic and utilities for this domain. | @environments/environment, @angular/core, @shared/ui, @entities/admin-settings, @shared/lib, @angular/common, @angular/forms, @entities/gallery, @shared/lib/object, @shared/models |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-| Item Name | Type | Responsibility | Key Aliases Used |
-|-----------|------|----------------|------------------|
-| `📄 index.ts` | `.ts` | General functionality | `None` |
-| `📄 gallery.component.scss` | `.scss` | Component logic | `None` |
-| `📁 ui` | `Directory` | Subdirectory logic grouping | `None` |
-| `📄 gallery.component.ts` | `.ts` | Component logic | `@shared/lib/object, @environments/environment, @angular/core, @shared/models, @entities/admin-settings, @angular/common, @angular/forms, @shared/lib, @shared/ui, @entities/gallery` |
-| `📄 gallery.component.html` | `.html` | Component logic | `None` |
 
-## 🔗 DEPENDENCIES
-- `@shared/lib/object`
-- `@environments/environment`
-- `@angular/core`
-- `@shared/models`
-- `@entities/admin-settings`
+## 🔗 Dependencies
 - `@angular/common`
+- `@angular/core`
 - `@angular/forms`
-- `@shared/lib`
-- `@shared/ui`
+- `@entities/admin-settings`
 - `@entities/gallery`
+- `@environments/environment`
+- `@shared/lib`
+- `@shared/lib/object`
+- `@shared/models`
+- `@shared/ui`
 
-## 🛠️ USAGE
-```typescript
-// Example usage context
-import { ... } from './index';
-
-// Integrate index logic into your feature.
+## 🛠️ Usage
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
