@@ -1,32 +1,29 @@
-# 📁 Decorators
+# 📁 decorators
 
-[Root](../../../../) > [backend](../../../) > [src](../../) > [common](../) > [decorators](./)
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [decorators](/backend/src/common/decorators)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Decorators** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
+Shared utility functions, helpers, and common logic applicable across multiple modules.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  decorators["📁 decorators"]
-  decorators --> decorators_public_decorator_ts["📄 public.decorator.ts"]
-  decorators --> decorators_roles_decorator_ts["📄 roles.decorator.ts"]
+  Root["📁 decorators"]
+  Root --> public_decorator_ts["📄 public.decorator.ts"]
+  Root --> roles_decorator_ts["📄 roles.decorator.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `public.decorator.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
-| `roles.decorator.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
-
+| `public.decorator.ts` | TypeScript | Provides core logic and orchestration for public.decorator.ts. | @nestjs |
+| `roles.decorator.ts` | TypeScript | Provides core logic and orchestration for roles.decorator.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `@nestjs/common`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+import { specificUtility } from './utils';
+const result = specificUtility(input);
 ```

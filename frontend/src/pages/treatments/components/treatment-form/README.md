@@ -1,36 +1,34 @@
-# 📁 Treatment Form
+# 📁 treatment-form
 
-[Root](../../../../../../) > [frontend](../../../../../) > [src](../../../../) > [pages](../../../) > [treatments](../../) > [components](../) > [treatment-form](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [treatments](/frontend/src/pages/treatments) > [components](/frontend/src/pages/treatments/components) > [treatment-form](/frontend/src/pages/treatments/components/treatment-form)
+
+**FSD Layer:** Page
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Treatment Form** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
+Frontend UI components containing template structures, styling, and specific behavioral logic.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  treatment_form["📁 treatment-form"]
-  treatment_form --> treatment_form_treatment_form_component_html["📄 treatment-form.component.html"]
-  treatment_form --> treatment_form_treatment_form_component_ts["📄 treatment-form.component.ts"]
+  Root["📁 treatment-form"]
+  Root --> treatment_form_component_html["📄 treatment-form.component.html"]
+  Root --> treatment_form_component_ts["📄 treatment-form.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatment-form.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
-| `treatment-form.component.ts` | TypeScript | Core logic and utilities for this domain. | @features/treatments, @angular/core, @shared/lib, @angular/common, @angular/forms |
-
+| `treatment-form.component.html` | Template | Structural template and layout for treatment-form.component.html. | N/A |
+| `treatment-form.component.ts` | TypeScript | UI component logic and state management for treatment-form.component.ts. | @angular, @features, @shared |
 
 ## 🔗 Dependencies
 - `@angular/common`
-- `@angular/core`
 - `@angular/forms`
 - `@features/treatments`
 - `@shared/lib`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```html
+<!-- Example usage in a parent component template -->
+<app-component-selector></app-component-selector>
 ```

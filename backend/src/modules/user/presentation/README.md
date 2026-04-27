@@ -1,33 +1,35 @@
-# 🎭 Presentation
+# 📁 presentation
 
-[Root](../../../../../) > [backend](../../../../) > [src](../../../) > [modules](../../) > [user](../) > [presentation](./)
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [presentation](/backend/src/modules/user/presentation)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Presentation** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
+Backend module defining application routes, business logic, and data access for the domain.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  presentation["🎭 presentation"]
-  presentation --> presentation_dto["📁 dto"]
-  presentation --> presentation_user_controller_ts["📄 user.controller.ts"]
+  Root["📁 presentation"]
+  Root --> dto["📁 dto"]
+  Root --> user_controller_ts["📄 user.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.controller.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common, @nestjs/platform-express, @modules/user |
-
+| `user.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for user.controller.ts. | @common, @modules, @nestjs |
 
 ## 🔗 Dependencies
+- `../application/user.service`
+- `./dto/create-user.dto`
+- `./dto/update-user.dto`
+- `@common/interfaces/authenticated-request.interface`
 - `@modules/user`
-- `@nestjs/common`
 - `@nestjs/platform-express`
+- `multer`
+- `path`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+import { Module } from '@nestjs/common';
+// Import specific services/controllers provided by this module
 ```

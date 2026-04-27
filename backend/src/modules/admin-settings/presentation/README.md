@@ -1,31 +1,31 @@
-# 🎭 Presentation
+# 📁 presentation
 
-[Root](../../../../../) > [backend](../../../../) > [src](../../../) > [modules](../../) > [admin-settings](../) > [presentation](./)
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [presentation](/backend/src/modules/admin-settings/presentation)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Presentation** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
+Backend module defining application routes, business logic, and data access for the domain.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  presentation["🎭 presentation"]
-  presentation --> presentation_dto["📁 dto"]
-  presentation --> presentation_admin_settings_controller_ts["📄 admin-settings.controller.ts"]
+  Root["📁 presentation"]
+  Root --> dto["📁 dto"]
+  Root --> admin_settings_controller_ts["📄 admin-settings.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.controller.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
-
+| `admin-settings.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for admin-settings.controller.ts. | N/A |
 
 ## 🔗 Dependencies
-- `@nestjs/common`
+- `../application/admin-settings.service`
+- `../domain/admin-settings.entity`
+- `./dto/create-admin-settings.dto`
+- `./dto/update-admin-settings.dto`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+import { Module } from '@nestjs/common';
+// Import specific services/controllers provided by this module
 ```

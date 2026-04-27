@@ -1,41 +1,47 @@
-# 📁 Settings
+# 📁 settings
 
-[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [settings](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [settings](/frontend/src/pages/settings)
+
+**FSD Layer:** Page
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Settings** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
+Frontend UI components containing template structures, styling, and specific behavioral logic.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  settings["📁 settings"]
-  settings --> settings_ui["📁 ui"]
-  settings --> settings_index_ts["📄 index.ts"]
-  settings --> settings_settings_component_html["📄 settings.component.html"]
-  settings --> settings_settings_component_scss["📄 settings.component.scss"]
-  settings --> settings_settings_component_ts["📄 settings.component.ts"]
+  Root["📁 settings"]
+  Root --> ui["📁 ui"]
+  Root --> index_ts["📄 index.ts"]
+  Root --> settings_component_html["📄 settings.component.html"]
+  Root --> settings_component_scss["📄 settings.component.scss"]
+  Root --> settings_component_ts["📄 settings.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `settings.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
-| `settings.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
-| `settings.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @entities/admin-settings, @angular/common, @angular/forms, @angular/core/rxjs-interop |
-
+| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `settings.component.html` | Template | Structural template and layout for settings.component.html. | N/A |
+| `settings.component.scss` | Stylesheet | Luxury styling and visual presentation for settings.component.scss. | N/A |
+| `settings.component.ts` | TypeScript | UI component logic and state management for settings.component.ts. | @angular, @entities, @shared |
 
 ## 🔗 Dependencies
+- `./ui/additional-links.component`
+- `./ui/business-profile.component`
+- `./ui/general-info.component`
+- `./ui/selects-settings.component`
+- `./ui/social-matrix.component`
 - `@angular/common`
 - `@angular/core`
 - `@angular/core/rxjs-interop`
 - `@angular/forms`
 - `@entities/admin-settings`
+- `@shared/models/admin-settings.model`
+- `rxjs`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```html
+<!-- Example usage in a parent component template -->
+<app-component-selector></app-component-selector>
 ```

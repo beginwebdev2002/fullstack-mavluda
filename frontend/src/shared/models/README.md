@@ -1,40 +1,39 @@
-# 🧬 Models
+# 📁 models
 
-[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [models](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [models](/frontend/src/shared/models)
+
+**FSD Layer:** Shared
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Models** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
+Data models, type definitions, schemas, and Data Transfer Objects (DTOs) for structural typing.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  models["🧬 models"]
-  models --> models_admin_settings_model_ts["📄 admin-settings.model.ts"]
-  models --> models_api_response_model_ts["📄 api-response.model.ts"]
-  models --> models_gallery_model_ts["📄 gallery.model.ts"]
-  models --> models_index_ts["📄 index.ts"]
-  models --> models_service_model_ts["📄 service.model.ts"]
-  models --> models_more_files["...and 1 more files"]
+  Root["📁 models"]
+  Root --> admin_settings_model_ts["📄 admin-settings.model.ts"]
+  Root --> api_response_model_ts["📄 api-response.model.ts"]
+  Root --> gallery_model_ts["📄 gallery.model.ts"]
+  Root --> index_ts["📄 index.ts"]
+  Root --> service_model_ts["📄 service.model.ts"]
+  Root --> user_model_ts["📄 user.model.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.model.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `api-response.model.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `gallery.model.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `service.model.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `user.model.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-
+| `admin-settings.model.ts` | TypeScript | Provides core logic and orchestration for admin-settings.model.ts. | N/A |
+| `api-response.model.ts` | TypeScript | Provides core logic and orchestration for api-response.model.ts. | N/A |
+| `gallery.model.ts` | TypeScript | Provides core logic and orchestration for gallery.model.ts. | N/A |
+| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `service.model.ts` | TypeScript | Encapsulates business logic and data access for service.model.ts. | N/A |
+| `user.model.ts` | TypeScript | Provides core logic and orchestration for user.model.ts. | N/A |
 
 ## 🔗 Dependencies
-*No internal path aliases detected in this directory.*
+- No external dependencies.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+import { SpecificModel } from './models';
+let data: SpecificModel;
 ```

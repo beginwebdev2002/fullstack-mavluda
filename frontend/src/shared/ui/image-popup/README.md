@@ -1,33 +1,32 @@
-# 📁 Image Popup
+# 📁 image-popup
 
-[Root](../../../../../) > [frontend](../../../../) > [src](../../../) > [shared](../../) > [ui](../) > [image-popup](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [image-popup](/frontend/src/shared/ui/image-popup)
+
+**FSD Layer:** Shared
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Image Popup** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
+Frontend UI components containing template structures, styling, and specific behavioral logic.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  image_popup["📁 image-popup"]
-  image_popup --> image_popup_image_popup_component_html["📄 image-popup.component.html"]
-  image_popup --> image_popup_image_popup_component_ts["📄 image-popup.component.ts"]
+  Root["📁 image-popup"]
+  Root --> image_popup_component_html["📄 image-popup.component.html"]
+  Root --> image_popup_component_ts["📄 image-popup.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `image-popup.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
-| `image-popup.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/common |
-
+| `image-popup.component.html` | Template | Structural template and layout for image-popup.component.html. | N/A |
+| `image-popup.component.ts` | TypeScript | UI component logic and state management for image-popup.component.ts. | @angular |
 
 ## 🔗 Dependencies
 - `@angular/common`
 - `@angular/core`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```html
+<!-- Example usage in a parent component template -->
+<app-component-selector></app-component-selector>
 ```

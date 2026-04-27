@@ -1,30 +1,29 @@
-# 📁 Veils Catalog
+# 📁 veils-catalog
 
-[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [veils-catalog](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veils-catalog](/frontend/src/pages/veils-catalog)
+
+**FSD Layer:** Page
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Veils Catalog** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
+Frontend UI components containing template structures, styling, and specific behavioral logic.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  veils_catalog["📁 veils-catalog"]
-  veils_catalog --> veils_catalog_index_ts["📄 index.ts"]
-  veils_catalog --> veils_catalog_veils_catalog_component_html["📄 veils-catalog.component.html"]
-  veils_catalog --> veils_catalog_veils_catalog_component_scss["📄 veils-catalog.component.scss"]
-  veils_catalog --> veils_catalog_veils_catalog_component_ts["📄 veils-catalog.component.ts"]
+  Root["📁 veils-catalog"]
+  Root --> index_ts["📄 index.ts"]
+  Root --> veils_catalog_component_html["📄 veils-catalog.component.html"]
+  Root --> veils_catalog_component_scss["📄 veils-catalog.component.scss"]
+  Root --> veils_catalog_component_ts["📄 veils-catalog.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `veils-catalog.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
-| `veils-catalog.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
-| `veils-catalog.component.ts` | TypeScript | Core logic and utilities for this domain. | @environments/environment, @angular/core, @shared/ui, @entities/admin-settings, @shared/lib, @angular/common, @entities/veil |
-
+| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `veils-catalog.component.html` | Template | Structural template and layout for veils-catalog.component.html. | N/A |
+| `veils-catalog.component.scss` | Stylesheet | Luxury styling and visual presentation for veils-catalog.component.scss. | N/A |
+| `veils-catalog.component.ts` | TypeScript | UI component logic and state management for veils-catalog.component.ts. | @angular, @entities, @environments, @shared |
 
 ## 🔗 Dependencies
 - `@angular/common`
@@ -36,7 +35,7 @@ graph TD
 - `@shared/ui`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```html
+<!-- Example usage in a parent component template -->
+<app-component-selector></app-component-selector>
 ```

@@ -1,32 +1,32 @@
-# 🧬 Entities
+# 📁 entities
 
-[Root](../../../) > [frontend](../../) > [src](../) > [entities](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities)
+
+**FSD Layer:** Entity
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Entities** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
+Data models, type definitions, schemas, and Data Transfer Objects (DTOs) for structural typing.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  entities["🧬 entities"]
-  entities --> entities_admin_settings["📁 admin-settings"]
-  entities --> entities_gallery["📁 gallery"]
-  entities --> entities_treatments["📁 treatments"]
-  entities --> entities_user["📁 user"]
-  entities --> entities_veil["📁 veil"]
+  Root["📁 entities"]
+  Root --> admin-settings["📁 admin-settings"]
+  Root --> gallery["📁 gallery"]
+  Root --> treatments["📁 treatments"]
+  Root --> user["📁 user"]
+  Root --> veil["📁 veil"]
 ```
 
 ## 📄 File Registry
-*No files directly in this directory.*
-
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
 
 ## 🔗 Dependencies
-*No internal path aliases detected in this directory.*
+- No external dependencies.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+import { SpecificModel } from './models';
+let data: SpecificModel;
 ```

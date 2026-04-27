@@ -1,26 +1,26 @@
-# 📁 Public
+# 📁 public
 
-[Root](../../) > [frontend](../) > [public](./)
+[Root](/.) > [frontend](/frontend) > [public](/frontend/public)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Public** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Static assets, images, icons, and public resources served directly to the client.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  public["📁 public"]
-  public --> public_images["📁 images"]
+  Root["📁 public"]
+  Root --> images["📁 images"]
 ```
 
 ## 📄 File Registry
-*No files directly in this directory.*
-
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
 
 ## 🔗 Dependencies
-*No internal path aliases detected in this directory.*
+- No external dependencies.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```html
+<!-- Example reference in a template -->
+<img src="/assets/image.png" alt="Asset" />
 ```

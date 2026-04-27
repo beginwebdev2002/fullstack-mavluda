@@ -33,14 +33,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-*.md
-!README.md
-!GEMINI.md
-!AGENTS.md
-# Stop gitignore errors
-!README.md
+
 !**/README.md
-*.md
-!README.md
-!GEMINI.md
-!AGENTS.md
