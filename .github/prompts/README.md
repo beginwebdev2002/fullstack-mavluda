@@ -1,6 +1,6 @@
-# 📁 prompts
+# 📁 Mavluda Beauty prompts
 
-[Root](/.) > [.github](/.github) > [prompts](/.github/prompts)
+[.github](/.github) / [prompts](/.github/prompts)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **prompts** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,20 +8,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 prompts"]
-  Root --> Empty["(Empty / No recognized files)"]
+  prompts["📁 prompts"]
+  prompts --> mavluda_beauty_md["📄 mavluda-beauty.md"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
+| `mavluda-beauty.md` | File | Core logic and utilities for this domain. | N/A |
 
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+No external or alias dependencies detected.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+```typescript
+// Example integration for prompts
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.
