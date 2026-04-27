@@ -1,33 +1,30 @@
-# 📁 widgets
+# 📁 Widgets
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets)
-
-**FSD Layer:** Widget
+[Root](../../../) > [frontend](../../) > [src](../) > [widgets](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **widgets** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **Widgets** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Widgets (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 widgets"]
-  Root --> header["📁 header"]
-  Root --> layouts["📁 layouts"]
-  Root --> sidebar["📁 sidebar"]
+  widgets["📁 widgets"]
+  widgets --> widgets_header["📁 header"]
+  widgets --> widgets_layouts["📁 layouts"]
+  widgets --> widgets_sidebar["📁 sidebar"]
 ```
 
 ## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
+*No files directly in this directory.*
+
 
 ## 🔗 Dependencies
-- No external dependencies.
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './widgets';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

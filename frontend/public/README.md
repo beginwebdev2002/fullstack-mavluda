@@ -1,29 +1,26 @@
-# 📁 public
+# 📁 Public
 
-[Root](/.) > [frontend](/frontend) > [public](/frontend/public)
+[Root](../../) > [frontend](../) > [public](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **public** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **Public** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 public"]
-  Root --> images["📁 images"]
+  public["📁 public"]
+  public --> public_images["📁 images"]
 ```
 
 ## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
+*No files directly in this directory.*
+
 
 ## 🔗 Dependencies
-- No external dependencies.
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './public';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

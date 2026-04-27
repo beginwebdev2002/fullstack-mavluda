@@ -9,6 +9,8 @@ import {
   Req,
   UseInterceptors,
   UploadedFile,
+  NotFoundException,
+  InternalServerErrorException,
 } from '@nestjs/common';
 import { UserService } from '../application/user.service';
 import { User } from '@modules/user';
@@ -40,28 +42,50 @@ export class UserController {
     @Body() createUserDto: CreateUserDto,
     @UploadedFile() file: Express.Multer.File,
   ): Promise<User> {
-    const userData: Record<string, any> = { ...createUserDto };
-    if (file) {
-      userData['photoUrl'] = `/uploads/users/${file.filename}`;
+    try {
+      const userData: Record<string, any> = { ...createUserDto };
+      if (file) {
+        userData['photoUrl'] = `/uploads/users/${file.filename}`;
+      }
+      return await this.userService.create(
+        userData as Omit<User, 'id' | 'createdAt'> & { password?: string },
+      );
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
     }
-    return this.userService.create(
-      userData as Omit<User, 'id' | 'createdAt'> & { password?: string },
-    );
   }
 
   @Get('count')
   async count(): Promise<number> {
-    return this.userService.count();
+    try {
+      return await this.userService.count();
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Get()
   async findAll(): Promise<User[]> {
-    return this.userService.findAll();
+    try {
+      return await this.userService.findAll();
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Get(':id')
   async findOne(@Param('id') id: string): Promise<User> {
-    return this.userService.findOne(id);
+    try {
+      return await this.userService.findOne(id);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Put(':id')
@@ -71,24 +95,55 @@ export class UserController {
     @Body() updateUserDto: UpdateUserDto,
     @UploadedFile() file: Express.Multer.File,
   ): Promise<User> {
-    const userData: Record<string, any> = { ...updateUserDto };
-    if (file) {
-      userData['photoUrl'] = `/uploads/users/${file.filename}`;
+    try {
+      const userData: Record<string, any> = { ...updateUserDto };
+      if (file) {
+        userData['photoUrl'] = `/uploads/users/${file.filename}`;
+      }
+      return await this.userService.update(id, userData);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
     }
-    return this.userService.update(id, userData);
   }
 
   @Delete(':id')
   async remove(@Param('id') id: string): Promise<void> {
-    return this.userService.remove(id);
+    try {
+      return await this.userService.remove(id);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Get('profile')
   async getProfile(@Req() req: AuthenticatedRequest): Promise<User> {
-    const userId = req.user?.sub || req.user?.id;
-    if (!userId) {
-      throw new Error('User not found in request');
+    try {
+      const userId = req.user?.sub || req.user?.id;
+      if (!userId) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      return await this.userService.findOne(userId);
+    } catch (error) {
+      if (
+        (error instanceof Error &&
+          error.message.toLowerCase().includes('not found')) ||
+        error instanceof NotFoundException
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
     }
-    return this.userService.findOne(userId);
   }
 }

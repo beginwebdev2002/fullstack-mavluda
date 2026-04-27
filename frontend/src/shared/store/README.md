@@ -1,34 +1,32 @@
-# 📁 store
+# 📁 Store
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [store](/frontend/src/shared/store)
-
-**FSD Layer:** Shared
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [store](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **store** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **Store** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 store"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> signal_store_base_ts["📄 signal-store.base.ts"]
+  store["📁 store"]
+  store --> store_index_ts["📄 index.ts"]
+  store --> store_signal_store_base_ts["📄 signal-store.base.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `signal-store.base.ts` | TypeScript | Provides core logic and orchestration for signal-store.base.ts. | @angular |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `signal-store.base.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core |
+
 
 ## 🔗 Dependencies
 - `@angular/core`
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './store';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

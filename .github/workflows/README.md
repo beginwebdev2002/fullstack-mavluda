@@ -1,6 +1,6 @@
-# 📁 workflows
+# 📁 Mavluda Beauty workflows
 
-[Root](/.) > [.github](/.github) > [workflows](/.github/workflows)
+[.github](/.github) / [workflows](/.github/workflows)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **workflows** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,20 +8,26 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 workflows"]
-  Root --> Empty["(Empty / No recognized files)"]
+  workflows["📁 workflows"]
+  workflows --> backend_deploy_yml["📄 backend-deploy.yml"]
+  workflows --> ci_yml["📄 ci.yml"]
+  workflows --> frontend_deployment_yml["📄 frontend-deployment.yml"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| _No matching files_ | - | - | - |
+| `backend-deploy.yml` | File | Core logic and utilities for this domain. | N/A |
+| `ci.yml` | File | Core logic and utilities for this domain. | N/A |
+| `frontend-deployment.yml` | File | Core logic and utilities for this domain. | N/A |
 
 
 ## 🔗 Dependencies
-- _No external or internal dependencies detected._
+No external or alias dependencies detected.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or configuration hub.
+```typescript
+// Example integration for workflows
+// Import capabilities from this directory to enrich your modules.
 ```
+> This directory provides specialized logic tailored to the Mavluda Beauty standard.

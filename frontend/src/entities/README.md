@@ -1,35 +1,32 @@
-# 📁 entities
+# 🧬 Entities
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities)
-
-**FSD Layer:** Entity
+[Root](../../../) > [frontend](../../) > [src](../) > [entities](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **entities** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **Entities** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 entities"]
-  Root --> admin-settings["📁 admin-settings"]
-  Root --> gallery["📁 gallery"]
-  Root --> treatments["📁 treatments"]
-  Root --> user["📁 user"]
-  Root --> veil["📁 veil"]
+  entities["🧬 entities"]
+  entities --> entities_admin_settings["📁 admin-settings"]
+  entities --> entities_gallery["📁 gallery"]
+  entities --> entities_treatments["📁 treatments"]
+  entities --> entities_user["📁 user"]
+  entities --> entities_veil["📁 veil"]
 ```
 
 ## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
+*No files directly in this directory.*
+
 
 ## 🔗 Dependencies
-- No external dependencies.
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './entities';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

@@ -1,36 +1,33 @@
-# 📁 shared
+# 🤝 Shared
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared)
-
-**FSD Layer:** Shared
+[Root](../../../) > [frontend](../../) > [src](../) > [shared](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **shared** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **Shared** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 shared"]
-  Root --> lib["📁 lib"]
-  Root --> models["📁 models"]
-  Root --> pipes["📁 pipes"]
-  Root --> services["📁 services"]
-  Root --> store["📁 store"]
-  Root --> ui["📁 ui"]
+  shared["🤝 shared"]
+  shared --> shared_lib["📁 lib"]
+  shared --> shared_models["📁 models"]
+  shared --> shared_pipes["📁 pipes"]
+  shared --> shared_services["📁 services"]
+  shared --> shared_store["📁 store"]
+  shared --> shared_ui["📁 ui"]
 ```
 
 ## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
+*No files directly in this directory.*
+
 
 ## 🔗 Dependencies
-- No external dependencies.
+*No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './shared';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```

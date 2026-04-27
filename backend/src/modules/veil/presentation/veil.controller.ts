@@ -8,6 +8,8 @@ import {
   Delete,
   UseInterceptors,
   UploadedFiles,
+  NotFoundException,
+  InternalServerErrorException,
 } from '@nestjs/common';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
@@ -23,22 +25,44 @@ export class VeilController {
 
   @Get('count')
   async count(): Promise<number> {
-    return this.veilService.count();
+    try {
+      return await this.veilService.count();
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Get()
   async findAll(): Promise<Veil[]> {
-    return this.veilService.findAll();
+    try {
+      return await this.veilService.findAll();
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Get('available')
   async getAvailable(): Promise<Veil[]> {
-    return this.veilService.getAvailable();
+    try {
+      return await this.veilService.getAvailable();
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Get(':id')
   async findOne(@Param('id') id: string): Promise<Veil> {
-    return this.veilService.findOne(id);
+    try {
+      return await this.veilService.findOne(id);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Post()
@@ -59,15 +83,21 @@ export class VeilController {
     @Body() createVeilDto: CreateVeilDto,
     @UploadedFiles() files: Array<Express.Multer.File>,
   ): Promise<Veil> {
-    const imagePath =
-      files && files.length > 0 ? `/uploads/veils/${files[0].filename}` : null;
+    try {
+      const imagePath =
+        files && files.length > 0
+          ? `/uploads/veils/${files[0].filename}`
+          : null;
 
-    const veilData = {
-      ...createVeilDto,
-      image: imagePath || createVeilDto.image,
-    };
-    const veil = veilData as unknown as Omit<Veil, 'id' | 'createdAt'>;
-    return this.veilService.create(veil);
+      const veilData = {
+        ...createVeilDto,
+        image: imagePath || createVeilDto.image,
+      };
+      const veil = veilData as unknown as Omit<Veil, 'id' | 'createdAt'>;
+      return await this.veilService.create(veil);
+    } catch {
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 
   @Put(':id')
@@ -89,22 +119,47 @@ export class VeilController {
     @Body() updateVeilDto: UpdateVeilDto,
     @UploadedFiles() files: Array<Express.Multer.File>,
   ): Promise<Veil> {
-    const imagePath =
-      files && files.length > 0 ? `/uploads/veils/${files[0].filename}` : null;
+    try {
+      const imagePath =
+        files && files.length > 0
+          ? `/uploads/veils/${files[0].filename}`
+          : null;
 
-    const veilData = {
-      ...updateVeilDto,
-    };
+      const veilData = {
+        ...updateVeilDto,
+      };
 
-    if (imagePath) {
-      veilData.image = imagePath;
+      if (imagePath) {
+        veilData.image = imagePath;
+      }
+
+      return await this.veilService.update(
+        id,
+        veilData as unknown as Partial<Veil>,
+      );
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
     }
-
-    return this.veilService.update(id, veilData as unknown as Partial<Veil>);
   }
 
   @Delete(':id')
   async remove(@Param('id') id: string): Promise<void> {
-    return this.veilService.remove(id);
+    try {
+      return await this.veilService.remove(id);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.toLowerCase().includes('not found')
+      ) {
+        throw new NotFoundException('NOT_FOUND');
+      }
+      throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
   }
 }

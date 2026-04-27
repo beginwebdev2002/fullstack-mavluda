@@ -1,35 +1,33 @@
-# 📁 pipes
+# 📁 Pipes
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [pipes](/frontend/src/shared/pipes)
-
-**FSD Layer:** Shared
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [shared](../) > [pipes](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **pipes** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **Pipes** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 pipes"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> safe_html_pipe_ts["📄 safe-html.pipe.ts"]
+  pipes["📁 pipes"]
+  pipes --> pipes_index_ts["📄 index.ts"]
+  pipes --> pipes_safe_html_pipe_ts["📄 safe-html.pipe.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `safe-html.pipe.ts` | TypeScript | Provides core logic and orchestration for safe-html.pipe.ts. | @angular |
+| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `safe-html.pipe.ts` | TypeScript | Core logic and utilities for this domain. | @angular/platform-browser, @angular/core |
+
 
 ## 🔗 Dependencies
 - `@angular/core`
 - `@angular/platform-browser`
 
 ## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './pipes';
-
-// Integrate into the application architecture
-relevantMember.execute();
+```markdown
+> This directory acts primarily as a structural container or logic module.
+> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
 ```
