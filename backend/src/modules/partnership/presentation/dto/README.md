@@ -1,24 +1,29 @@
-# 📁 dto
+# 📁 Dto
 
-[Root](/.) / [backend](../../../../..) / [src](../../../..) / [modules](../../..) / [partnership](../..) / [presentation](..) / [dto](.)
+[Root](../../../../../../) > [backend](../../../../../) > [src](../../../../) > [modules](../../../) > [partnership](../../) > [presentation](../) > [dto](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   dto["📁 dto"]
+  dto --> dto_create_partnership_dto_ts["📄 create-partnership.dto.ts"]
+  dto --> dto_update_partnership_dto_ts["📄 update-partnership.dto.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-partnership.dto.ts` | TypeScript | Data Transfer Object definition and validation. | N/A |
-| `update-partnership.dto.ts` | TypeScript | Data Transfer Object definition and validation. | @nestjs |
+| `create-partnership.dto.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+| `update-partnership.dto.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/mapped-types |
+
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/mapped-types`
 
 ## 🛠️ Usage
 ```markdown

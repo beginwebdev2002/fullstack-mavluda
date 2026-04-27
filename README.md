@@ -1,16 +1,20 @@
-# 👑 Mavluda Beauty Root
+# 📁 Mavluda_Beauty_Root
 
 [Root](/.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Mavluda Beauty Root** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **Mavluda_Beauty_Root** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Mavluda_Beauty_Root["👑 Mavluda Beauty Root"]
-  Mavluda_Beauty_Root --> backend["📁 backend"]
-  Mavluda_Beauty_Root --> frontend["📁 frontend"]
+  Mavluda_Beauty_Root["📁 Mavluda_Beauty_Root"]
+  Mavluda_Beauty_Root --> Mavluda_Beauty_Root_backend["📁 backend"]
+  Mavluda_Beauty_Root --> Mavluda_Beauty_Root_frontend["📁 frontend"]
+  Mavluda_Beauty_Root --> Mavluda_Beauty_Root__env["📄 .env"]
+  Mavluda_Beauty_Root --> Mavluda_Beauty_Root__gitignore["📄 .gitignore"]
+  Mavluda_Beauty_Root --> Mavluda_Beauty_Root__gitignore_append["📄 .gitignore_append"]
+  Mavluda_Beauty_Root --> Mavluda_Beauty_Root_GEMINI_md["📄 GEMINI.md"]
 ```
 
 ## 📄 File Registry
@@ -19,8 +23,8 @@ graph TD
 | `.env` | File | Core logic and utilities for this domain. | N/A |
 | `.gitignore` | File | Core logic and utilities for this domain. | N/A |
 | `.gitignore_append` | File | Core logic and utilities for this domain. | N/A |
-| `GEMINI.md` | Documentation | Core logic and utilities for this domain. | N/A |
-| `generate_readmes.js` | JavaScript | Core logic and utilities for this domain. | N/A |
+| `GEMINI.md` | Markdown | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*

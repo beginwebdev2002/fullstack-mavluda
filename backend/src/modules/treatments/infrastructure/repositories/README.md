@@ -1,23 +1,28 @@
-# 📁 repositories
+# 📁 Repositories
 
-[Root](/.) / [backend](../../../../..) / [src](../../../..) / [modules](../../..) / [treatments](../..) / [infrastructure](..) / [repositories](.)
+[Root](../../../../../../) > [backend](../../../../../) > [src](../../../../) > [modules](../../../) > [treatments](../../) > [infrastructure](../) > [repositories](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **repositories** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Repositories** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   repositories["📁 repositories"]
+  repositories --> repositories_treatments_repository_ts["📄 treatments.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.repository.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs |
+| `treatments.repository.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common, @nestjs/mongoose |
+
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/common`
+- `@nestjs/mongoose`
 
 ## 🛠️ Usage
 ```markdown

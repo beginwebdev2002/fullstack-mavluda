@@ -1,23 +1,25 @@
-# 📁 gallery
+# 📁 Gallery
 
-[Root](/.) / [frontend](../../..) / [src](../..) / [features](..) / [gallery](.)
+[Root](../../../../) > [frontend](../../../) > [src](../../) > [features](../) > [gallery](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **gallery** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-*This directory operates strictly within the **Features** layer of our Feature Sliced Design (FSD) architecture.*
+**Architecture Layer:** Features (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   gallery["📁 gallery"]
-  gallery --> model["📁 model"]
+  gallery --> gallery_model["📁 model"]
+  gallery --> gallery_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*

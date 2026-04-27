@@ -1,20 +1,24 @@
-# 🧠 domain
+# 🌐 Domain
 
-[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [user](..) / [domain](.)
+[Root](../../../../../) > [backend](../../../../) > [src](../../../) > [modules](../../) > [user](../) > [domain](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **domain** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Domain** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  domain["🧠 domain"]
+  domain["🌐 domain"]
+  domain --> domain_user_entity_ts["📄 user.entity.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.entity.ts` | TypeScript | Data modeling and database schemas. | N/A |
+| `user.entity.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
+
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*

@@ -1,24 +1,29 @@
-# 📁 interfaces
+# 📁 Interfaces
 
-[Root](/.) / [backend](../../../..) / [src](../../..) / [modules](../..) / [auth](..) / [interfaces](.)
+[Root](../../../../../) > [backend](../../../../) > [src](../../../) > [modules](../../) > [auth](../) > [interfaces](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **interfaces** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Interfaces** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   interfaces["📁 interfaces"]
+  interfaces --> interfaces_auth_response_interface_ts["📄 auth-response.interface.ts"]
+  interfaces --> interfaces_jwt_payload_interface_ts["📄 jwt-payload.interface.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth-response.interface.ts` | TypeScript | Core logic and utilities for this domain. | @modules |
+| `auth-response.interface.ts` | TypeScript | Core logic and utilities for this domain. | @modules/user |
 | `jwt-payload.interface.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
+
 ## 🔗 Dependencies
-- `@modules`
+- `@modules/user`
 
 ## 🛠️ Usage
 ```markdown

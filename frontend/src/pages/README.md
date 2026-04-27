@@ -1,36 +1,35 @@
-# 🍰 pages
+# 📄 Pages
 
-[Root](/.) / [frontend](../..) / [src](..) / [pages](.)
+[Root](../../../) > [frontend](../../) > [src](../) > [pages](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **pages** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Pages** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-*This directory operates strictly within the **Pages** layer of our Feature Sliced Design (FSD) architecture.*
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  pages["🍰 pages"]
-  pages --> about["📁 about"]
-  pages --> auth["📁 auth"]
-  pages --> clients["📁 clients"]
-  pages --> dashboard["📁 dashboard"]
-  pages --> gallery["📁 gallery"]
-  pages --> inventory["📁 inventory"]
-  pages --> portfolio["📁 portfolio"]
-  pages --> settings["📁 settings"]
-  pages --> treatments["📁 treatments"]
-  pages --> treatments_catalog["📁 treatments-catalog"]
-  pages --> user_home["📁 user-home"]
-  pages --> user_profile["📁 user-profile"]
-  pages --> veil["📁 veil"]
-  pages --> veils_catalog["📁 veils-catalog"]
+  pages["📄 pages"]
+  pages --> pages_about["📁 about"]
+  pages --> pages_auth["📁 auth"]
+  pages --> pages_clients["📁 clients"]
+  pages --> pages_dashboard["📁 dashboard"]
+  pages --> pages_gallery["📁 gallery"]
+  pages --> pages_inventory["📁 inventory"]
+  pages --> pages_portfolio["📁 portfolio"]
+  pages --> pages_settings["📁 settings"]
+  pages --> pages_treatments["📁 treatments"]
+  pages --> pages_treatments_catalog["📁 treatments-catalog"]
+  pages --> pages_user_home["📁 user-home"]
+  pages --> pages_user_profile["📁 user-profile"]
+  pages --> pages_veil["📁 veil"]
+  pages --> pages_veils_catalog["📁 veils-catalog"]
 ```
 
 ## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| *No files* | - | - | - |
+*No files directly in this directory.*
+
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*

@@ -1,28 +1,33 @@
-# 📁 veil-form
+# 📁 Veil Form
 
-[Root](/.) / [frontend](../../../../..) / [src](../../../..) / [pages](../../..) / [veil](../..) / [ui](..) / [veil-form](.)
+[Root](../../../../../../) > [frontend](../../../../../) > [src](../../../../) > [pages](../../../) > [veil](../../) > [ui](../) > [veil-form](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **veil-form** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Veil Form** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-*This directory operates strictly within the **Pages** layer of our Feature Sliced Design (FSD) architecture.*
+**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   veil_form["📁 veil-form"]
+  veil_form --> veil_form_veil_form_component_html["📄 veil-form.component.html"]
+  veil_form --> veil_form_veil_form_component_ts["📄 veil-form.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil-form.component.html` | Template | Component template structural layout. | N/A |
-| `veil-form.component.ts` | TypeScript | UI rendering and user interaction. | @angular, @features, @shared |
+| `veil-form.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
+| `veil-form.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/forms/signals, @angular/core, @features/veil, @shared/lib, @angular/common |
+
 
 ## 🔗 Dependencies
-- `@angular`
-- `@features`
-- `@shared`
+- `@angular/common`
+- `@angular/core`
+- `@angular/forms/signals`
+- `@features/veil`
+- `@shared/lib`
 
 ## 🛠️ Usage
 ```markdown

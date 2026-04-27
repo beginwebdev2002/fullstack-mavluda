@@ -1,28 +1,29 @@
-# 📁 common
+# 📁 Common
 
-[Root](/.) / [backend](../..) / [src](..) / [common](.)
+[Root](../../../) > [backend](../../) > [src](../) > [common](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **common** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Common** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   common["📁 common"]
-  common --> config["📁 config"]
-  common --> constants["📁 constants"]
-  common --> database["📁 database"]
-  common --> decorators["📁 decorators"]
-  common --> filters["📁 filters"]
-  common --> guards["📁 guards"]
-  common --> interfaces["📁 interfaces"]
-  common --> utils["📁 utils"]
+  common --> common_config["📁 config"]
+  common --> common_constants["📁 constants"]
+  common --> common_database["📁 database"]
+  common --> common_decorators["📁 decorators"]
+  common --> common_filters["📁 filters"]
+  common --> common_guards["📁 guards"]
+  common --> common_interfaces["📁 interfaces"]
+  common --> common_utils["📁 utils"]
 ```
 
 ## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| *No files* | - | - | - |
+*No files directly in this directory.*
+
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*

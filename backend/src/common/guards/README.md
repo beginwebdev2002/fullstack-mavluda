@@ -1,24 +1,31 @@
-# 📁 guards
+# 📁 Guards
 
-[Root](/.) / [backend](../../..) / [src](../..) / [common](..) / [guards](.)
+[Root](../../../../) > [backend](../../../) > [src](../../) > [common](../) > [guards](./)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **guards** domain. This directory orchestrates precise operations within the Mavluda Beauty ecosystem, maintaining our elite standards of digital excellence.
+Delivering luxury-tier architectural components and high-performance logic for the **Guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   guards["📁 guards"]
+  guards --> guards_jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
+  guards --> guards_roles_guard_ts["📄 roles.guard.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `jwt-auth.guard.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs |
-| `roles.guard.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs |
+| `jwt-auth.guard.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/passport, @nestjs/core, @nestjs/common |
+| `roles.guard.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/core, @nestjs/common |
+
 
 ## 🔗 Dependencies
-- `@nestjs`
+- `@nestjs/common`
+- `@nestjs/core`
+- `@nestjs/passport`
 
 ## 🛠️ Usage
 ```markdown
