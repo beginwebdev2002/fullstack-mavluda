@@ -1,30 +1,34 @@
-# 🛠️ Application
+# 📁 application
 
-[Root](../../../../../) > [backend](../../../../) > [src](../../../) > [modules](../../) > [partnership](../) > [application](./)
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [partnership](/backend/src/modules/partnership) > [application](/backend/src/modules/partnership/application)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
+Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  application["🛠️ application"]
-  application --> application_partnership_service_ts["📄 partnership.service.ts"]
+  Root["📁 application"]
+  Root --> partnership_service_ts["📄 partnership.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.service.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common |
-
+| `partnership.service.ts` | TypeScript | Encapsulates business logic and data access for partnership.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
+- `../domain/partnership.entity`
+- `../infrastructure/repositories/partnership.repository`
+- `../presentation/dto/create-partnership.dto`
+- `../presentation/dto/update-partnership.dto`
 - `@nestjs/common`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './application';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

@@ -1,34 +1,35 @@
-# 📁 App
+# 📁 app
 
-[Root](../../../) > [frontend](../../) > [src](../) > [app](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [app](/frontend/src/app)
+
+**FSD Layer:** App
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **App** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** App (Feature Sliced Design / Layered Architecture)
+Delivering luxury-tier architectural components and high-performance logic for the **app** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  app["📁 app"]
-  app --> app_app_config_ts["📄 app.config.ts"]
+  Root["📁 app"]
+  Root --> app_config_ts["📄 app.config.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.config.ts` | TypeScript | Core logic and utilities for this domain. | @core/interceptors, @angular/core, @angular/common/http, @angular/router, @angular/platform-browser/animations |
-
+| `app.config.ts` | TypeScript | Provides core logic and orchestration for app.config.ts. | @angular, @core, @src |
 
 ## 🔗 Dependencies
-- `@angular/common/http`
-- `@angular/core`
 - `@angular/platform-browser/animations`
 - `@angular/router`
 - `@core/interceptors`
+- `@src/app.routes`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './app';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

@@ -1,24 +1,23 @@
-# 📁 Global Error
+# 📁 global-error
 
-[Root](../../../../../) > [frontend](../../../../) > [src](../../../) > [shared](../../) > [ui](../) > [global-error](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [global-error](/frontend/src/shared/ui/global-error)
+
+**FSD Layer:** Shared
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Global Error** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
+Delivering luxury-tier architectural components and high-performance logic for the **global-error** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  global_error["📁 global-error"]
-  global_error --> global_error_global_error_component_ts["📄 global-error.component.ts"]
+  Root["📁 global-error"]
+  Root --> global_error_component_ts["📄 global-error.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `global-error.component.ts` | TypeScript | Core logic and utilities for this domain. | @shared/services, @angular/core, @angular/common, @angular/animations |
-
+| `global-error.component.ts` | TypeScript | UI component logic and state management for global-error.component.ts. | @angular, @shared |
 
 ## 🔗 Dependencies
 - `@angular/animations`
@@ -27,7 +26,10 @@ graph TD
 - `@shared/services`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './global-error';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

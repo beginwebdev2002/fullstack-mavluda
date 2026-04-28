@@ -1,39 +1,40 @@
-# 📁 User Profile
+# 📁 user-profile
 
-[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [user-profile](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [user-profile](/frontend/src/pages/user-profile)
+
+**FSD Layer:** Page
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **User Profile** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Pages (Feature Sliced Design / Layered Architecture)
+Delivering luxury-tier architectural components and high-performance logic for the **user-profile** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  user_profile["📁 user-profile"]
-  user_profile --> user_profile_index_ts["📄 index.ts"]
-  user_profile --> user_profile_user_profile_component_html["📄 user-profile.component.html"]
-  user_profile --> user_profile_user_profile_component_scss["📄 user-profile.component.scss"]
-  user_profile --> user_profile_user_profile_component_ts["📄 user-profile.component.ts"]
+  Root["📁 user-profile"]
+  Root --> index_ts["📄 index.ts"]
+  Root --> user_profile_component_html["📄 user-profile.component.html"]
+  Root --> user_profile_component_scss["📄 user-profile.component.scss"]
+  Root --> user_profile_component_ts["📄 user-profile.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `user-profile.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
-| `user-profile.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
-| `user-profile.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @entities/user, @angular/common, @angular/forms |
-
+| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `user-profile.component.html` | Template | Structural template and layout for user-profile.component.html. | N/A |
+| `user-profile.component.scss` | Stylesheet | Luxury styling and visual presentation for user-profile.component.scss. | N/A |
+| `user-profile.component.ts` | TypeScript | UI component logic and state management for user-profile.component.ts. | @angular, @entities |
 
 ## 🔗 Dependencies
 - `@angular/common`
-- `@angular/core`
 - `@angular/forms`
 - `@entities/user`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './user-profile';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

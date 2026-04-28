@@ -1,28 +1,27 @@
-# 📁 List View
+# 📁 list-view
 
-[Root](../../../../../) > [frontend](../../../../) > [src](../../../) > [shared](../../) > [ui](../) > [list-view](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [list-view](/frontend/src/shared/ui/list-view)
+
+**FSD Layer:** Shared
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **List View** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Shared (Feature Sliced Design / Layered Architecture)
+Delivering luxury-tier architectural components and high-performance logic for the **list-view** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  list_view["📁 list-view"]
-  list_view --> list_view_list_view_component_html["📄 list-view.component.html"]
-  list_view --> list_view_list_view_component_scss["📄 list-view.component.scss"]
-  list_view --> list_view_list_view_component_ts["📄 list-view.component.ts"]
+  Root["📁 list-view"]
+  Root --> list_view_component_html["📄 list-view.component.html"]
+  Root --> list_view_component_scss["📄 list-view.component.scss"]
+  Root --> list_view_component_ts["📄 list-view.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `list-view.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
-| `list-view.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
-| `list-view.component.ts` | TypeScript | Core logic and utilities for this domain. | @shared/lib, @angular/core, @angular/common |
-
+| `list-view.component.html` | Template | Structural template and layout for list-view.component.html. | N/A |
+| `list-view.component.scss` | Stylesheet | Luxury styling and visual presentation for list-view.component.scss. | N/A |
+| `list-view.component.ts` | TypeScript | UI component logic and state management for list-view.component.ts. | @angular, @shared |
 
 ## 🔗 Dependencies
 - `@angular/common`
@@ -30,7 +29,10 @@ graph TD
 - `@shared/lib`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './list-view';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

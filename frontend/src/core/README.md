@@ -1,30 +1,30 @@
-# 📁 Core
+# 📁 core
 
-[Root](../../../) > [frontend](../../) > [src](../) > [core](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Core** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Core Logic (Feature Sliced Design / Layered Architecture)
+Delivering luxury-tier architectural components and high-performance logic for the **core** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  core["📁 core"]
-  core --> core_constants["📁 constants"]
-  core --> core_guards["📁 guards"]
-  core --> core_interceptors["📁 interceptors"]
+  Root["📁 core"]
+  Root --> constants["📁 constants"]
+  Root --> guards["📁 guards"]
+  Root --> interceptors["📁 interceptors"]
 ```
 
 ## 📄 File Registry
-*No files directly in this directory.*
-
+*No relevant files in this directory.*
 
 ## 🔗 Dependencies
-*No internal path aliases detected in this directory.*
+- No external dependencies.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './core';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

@@ -1,37 +1,40 @@
-# 📁 Admin Settings
+# 📁 admin-settings
 
-[Root](../../../../) > [backend](../../../) > [src](../../) > [modules](../) > [admin-settings](./)
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Admin Settings** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Backend Infrastructure (Feature Sliced Design / Layered Architecture)
+Delivering luxury-tier architectural components and high-performance logic for the **admin-settings** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  admin_settings["📁 admin-settings"]
-  admin_settings --> admin_settings_application["📁 application"]
-  admin_settings --> admin_settings_domain["📁 domain"]
-  admin_settings --> admin_settings_infrastructure["📁 infrastructure"]
-  admin_settings --> admin_settings_presentation["📁 presentation"]
-  admin_settings --> admin_settings_admin_settings_module_ts["📄 admin-settings.module.ts"]
-  admin_settings --> admin_settings_index_ts["📄 index.ts"]
+  Root["📁 admin-settings"]
+  Root --> application["📁 application"]
+  Root --> domain["📁 domain"]
+  Root --> infrastructure["📁 infrastructure"]
+  Root --> presentation["📁 presentation"]
+  Root --> admin_settings_module_ts["📄 admin-settings.module.ts"]
+  Root --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.module.ts` | TypeScript | Core logic and utilities for this domain. | @nestjs/common, @nestjs/mongoose |
-| `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-
+| `admin-settings.module.ts` | TypeScript | Defines the architectural module boundaries for admin-settings.module.ts. | @nestjs |
+| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
+- `./application/admin-settings.service`
+- `./infrastructure/repositories/admin-settings.repository`
+- `./presentation/admin-settings.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './admin-settings';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```

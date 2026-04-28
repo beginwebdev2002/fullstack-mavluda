@@ -1,30 +1,32 @@
-# 📁 Constants
+# 📁 constants
 
-[Root](../../../../../) > [frontend](../../../../) > [src](../../../) > [entities](../../) > [user](../) > [constants](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [user](/frontend/src/entities/user) > [constants](/frontend/src/entities/user/constants)
+
+**FSD Layer:** Entity
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-**Architecture Layer:** Entities (Feature Sliced Design / Layered Architecture)
+Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  constants["📁 constants"]
-  constants --> constants_user_constants_ts["📄 user.constants.ts"]
+  Root["📁 constants"]
+  Root --> user_constants_ts["📄 user.constants.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.constants.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-
+| `user.constants.ts` | TypeScript | Provides core logic and orchestration for user.constants.ts. | N/A |
 
 ## 🔗 Dependencies
-*No internal path aliases detected in this directory.*
+- No external dependencies.
 
 ## 🛠️ Usage
-```markdown
-> This directory acts primarily as a structural container or logic module.
-> To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```typescript
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './constants';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```
