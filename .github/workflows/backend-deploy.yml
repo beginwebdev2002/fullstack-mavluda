@@ -1,6 +1,8 @@
 name: Build Backend NestJS
 
 on:
+  workflow_dispatch:
+    
   push:
     branches:
       - main
