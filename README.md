@@ -8,13 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Mavluda_Beauty_Root["📁 Mavluda_Beauty_Root"]
-  Mavluda_Beauty_Root --> Mavluda_Beauty_Root_backend["📁 backend"]
-  Mavluda_Beauty_Root --> Mavluda_Beauty_Root_frontend["📁 frontend"]
-  Mavluda_Beauty_Root --> Mavluda_Beauty_Root__env["📄 .env"]
-  Mavluda_Beauty_Root --> Mavluda_Beauty_Root__gitignore["📄 .gitignore"]
-  Mavluda_Beauty_Root --> Mavluda_Beauty_Root__gitignore_append["📄 .gitignore_append"]
-  Mavluda_Beauty_Root --> Mavluda_Beauty_Root_GEMINI_md["📄 GEMINI.md"]
+  Root["📁 Mavluda_Beauty_Root"]
+  Root --> backend["📁 backend"]
+  Root --> frontend["📁 frontend"]
+  Root --> scripts["📁 scripts"]
+  Root --> _env["📄 .env"]
+  Root --> _gitignore["📄 .gitignore"]
+  Root --> GEMINI_md["📄 GEMINI.md"]
+  Root --> generate_all_readmes_py["📄 generate_all_readmes.py"]
+  Root --> generate_readmes_py["📄 generate_readmes.py"]
+  Root --> update_gitignore_sh["📄 update_gitignore.sh"]
 ```
 
 ## 📄 File Registry
@@ -22,15 +25,18 @@ graph TD
 |---|---|---|---|
 | `.env` | File | Core logic and utilities for this domain. | N/A |
 | `.gitignore` | File | Core logic and utilities for this domain. | N/A |
-| `.gitignore_append` | File | Core logic and utilities for this domain. | N/A |
-| `GEMINI.md` | Markdown | Core logic and utilities for this domain. | N/A |
-
+| `GEMINI.md` | File | Core logic and utilities for this domain. | N/A |
+| `generate_all_readmes.py` | File | Provides core logic and orchestration for generate_all_readmes.py. | N/A |
+| `generate_readmes.py` | File | Provides core logic and orchestration for generate_readmes.py. | N/A |
+| `update_gitignore.sh` | File | Provides core logic and orchestration for update_gitignore.sh. | N/A |
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
+```markdown
 > This directory acts primarily as a structural container or logic module.
 > To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```
 ```

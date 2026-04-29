@@ -1,6 +1,8 @@
-# 📄 Pages
+# 📁 pages
 
-[Root](../../../) > [frontend](../../) > [src](../) > [pages](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages)
+
+**FSD Layer:** Page
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **Pages** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,32 +12,34 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  pages["📄 pages"]
-  pages --> pages_about["📁 about"]
-  pages --> pages_auth["📁 auth"]
-  pages --> pages_clients["📁 clients"]
-  pages --> pages_dashboard["📁 dashboard"]
-  pages --> pages_gallery["📁 gallery"]
-  pages --> pages_inventory["📁 inventory"]
-  pages --> pages_portfolio["📁 portfolio"]
-  pages --> pages_settings["📁 settings"]
-  pages --> pages_treatments["📁 treatments"]
-  pages --> pages_treatments_catalog["📁 treatments-catalog"]
-  pages --> pages_user_home["📁 user-home"]
-  pages --> pages_user_profile["📁 user-profile"]
-  pages --> pages_veil["📁 veil"]
-  pages --> pages_veils_catalog["📁 veils-catalog"]
+  Root["📁 pages"]
+  Root --> about["📁 about"]
+  Root --> auth["📁 auth"]
+  Root --> clients["📁 clients"]
+  Root --> dashboard["📁 dashboard"]
+  Root --> gallery["📁 gallery"]
+  Root --> inventory["📁 inventory"]
+  Root --> portfolio["📁 portfolio"]
+  Root --> settings["📁 settings"]
+  Root --> treatments["📁 treatments"]
+  Root --> treatments-catalog["📁 treatments-catalog"]
+  Root --> user-home["📁 user-home"]
+  Root --> user-profile["📁 user-profile"]
+  Root --> veil["📁 veil"]
+  Root --> veils-catalog["📁 veils-catalog"]
 ```
 
 ## 📄 File Registry
-*No files directly in this directory.*
-
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
+```markdown
 > This directory acts primarily as a structural container or logic module.
 > To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```
 ```

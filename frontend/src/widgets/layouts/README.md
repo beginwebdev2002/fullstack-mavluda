@@ -1,6 +1,8 @@
-# 📁 Layouts
+# 📁 layouts
 
-[Root](../../../../) > [frontend](../../../) > [src](../../) > [widgets](../) > [layouts](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [layouts](/frontend/src/widgets/layouts)
+
+**FSD Layer:** Widget
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **Layouts** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,26 +12,26 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  layouts["📁 layouts"]
-  layouts --> layouts_admin_layout_component_html["📄 admin-layout.component.html"]
-  layouts --> layouts_admin_layout_component_scss["📄 admin-layout.component.scss"]
-  layouts --> layouts_admin_layout_component_ts["📄 admin-layout.component.ts"]
-  layouts --> layouts_index_ts["📄 index.ts"]
-  layouts --> layouts_user_layout_component_html["📄 user-layout.component.html"]
-  layouts --> layouts_more_files["...and 2 more files"]
+  Root["📁 layouts"]
+  Root --> admin_layout_component_html["📄 admin-layout.component.html"]
+  Root --> admin_layout_component_scss["📄 admin-layout.component.scss"]
+  Root --> admin_layout_component_ts["📄 admin-layout.component.ts"]
+  Root --> index_ts["📄 index.ts"]
+  Root --> user_layout_component_html["📄 user-layout.component.html"]
+  Root --> user_layout_component_scss["📄 user-layout.component.scss"]
+  Root --> user_layout_component_ts["📄 user-layout.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-layout.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
-| `admin-layout.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
-| `admin-layout.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/router, @widgets/sidebar, @widgets/header |
+| `admin-layout.component.html` | Template | Core logic and utilities for this domain. | N/A |
+| `admin-layout.component.scss` | Stylesheet | Core logic and utilities for this domain. | N/A |
+| `admin-layout.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @widgets |
 | `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `user-layout.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
-| `user-layout.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
-| `user-layout.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/router, @angular/common |
-
+| `user-layout.component.html` | Template | Core logic and utilities for this domain. | N/A |
+| `user-layout.component.scss` | Stylesheet | Core logic and utilities for this domain. | N/A |
+| `user-layout.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular |
 
 ## 🔗 Dependencies
 - `@angular/common`
@@ -40,6 +42,8 @@ graph TD
 
 ## 🛠️ Usage
 ```markdown
+```markdown
 > This directory acts primarily as a structural container or logic module.
 > To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```
 ```

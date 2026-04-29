@@ -1,6 +1,6 @@
-# 🏗️ Infrastructure
+# 📁 infrastructure
 
-[Root](../../../../../) > [backend](../../../../) > [src](../../../) > [modules](../../) > [user](../) > [infrastructure](./)
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [infrastructure](/backend/src/modules/user/infrastructure)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **Infrastructure** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,20 +10,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  infrastructure["🏗️ infrastructure"]
-  infrastructure --> infrastructure_repositories["📁 repositories"]
-  infrastructure --> infrastructure_schemas["📁 schemas"]
+  Root["📁 infrastructure"]
+  Root --> repositories["📁 repositories"]
+  Root --> schemas["📁 schemas"]
 ```
 
 ## 📄 File Registry
-*No files directly in this directory.*
-
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
 
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
+```markdown
 > This directory acts primarily as a structural container or logic module.
 > To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```
 ```

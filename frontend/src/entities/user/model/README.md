@@ -1,6 +1,8 @@
-# 📁 Model
+# 📁 model
 
-[Root](../../../../../) > [frontend](../../../../) > [src](../../../) > [entities](../../) > [user](../) > [model](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [user](/frontend/src/entities/user) > [model](/frontend/src/entities/user/model)
+
+**FSD Layer:** Entity
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **Model** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,8 +12,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  model["📁 model"]
-  model --> model_user_model_ts["📄 user.model.ts"]
+  Root["📁 model"]
+  Root --> user_model_ts["📄 user.model.ts"]
 ```
 
 ## 📄 File Registry
@@ -19,12 +21,13 @@ graph TD
 |---|---|---|---|
 | `user.model.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
+```markdown
 > This directory acts primarily as a structural container or logic module.
 > To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```
 ```
