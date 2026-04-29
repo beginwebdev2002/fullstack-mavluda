@@ -2,7 +2,6 @@ name: Build Backend NestJS
 
 on:
   workflow_dispatch:
-
   push:
     branches:
       - main
@@ -17,11 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Clone Project on VR Machine
-        uses: actions/checkout@4.2.2
+      - name: Clone Project
+        uses: actions/checkout@v4 # Используем мажорную версию v4 для стабильности
         
-      - name: Setup NodeJS on VR Machine
-        uses: actions/setup-node@4.2.2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
         with: 
           node-version: "22"
           cache: "npm"
@@ -30,19 +29,17 @@ jobs:
       - name: Install Dependencies
         run: | 
           cd backend
-          npm run ci
+          npm ci --legacy-peer-deps
         
       - name: Build Backend NestJS
         run: |
           cd backend
-          npm run build --omit=production
+          npm run build
       
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4
+        uses: JamesIves/github-pages-deploy-action@v4 # Обязательно @v4
         with:
           folder: backend/dist
           branch: gh-backend
           token: ${{ secrets.GITHUB_TOKEN }}
           clean: true
-      
-      
