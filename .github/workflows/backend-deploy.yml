@@ -2,7 +2,7 @@ name: Build Backend NestJS
 
 on:
   workflow_dispatch:
-    
+
   push:
     branches:
       - main
@@ -38,7 +38,7 @@ jobs:
           npm run build --omit=production
       
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.4.0
+        uses: JamesIves/github-pages-deploy-action@4
         with:
           folder: backend/dist
           branch: gh-backend
