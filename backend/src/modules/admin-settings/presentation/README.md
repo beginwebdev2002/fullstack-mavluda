@@ -8,26 +8,23 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
-  Root --> admin_settings_controller_ts["📄 admin-settings.controller.ts"]
+  presentation["📁 presentation"]
+  presentation --> dto["📁 dto"]
+  presentation --> admin_settings_controller_ts["📄 admin-settings.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for admin-settings.controller.ts. | N/A |
+| `admin-settings.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for admin-settings.controller.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../application/admin-settings.service`
-- `../domain/admin-settings.entity`
-- `./dto/create-admin-settings.dto`
-- `./dto/update-admin-settings.dto`
+- `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './presentation';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

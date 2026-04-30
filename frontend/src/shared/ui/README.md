@@ -2,20 +2,20 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **ui** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** `Shared`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 ui"]
-  Root --> card-view["📁 card-view"]
-  Root --> global-error["📁 global-error"]
-  Root --> image-popup["📁 image-popup"]
-  Root --> list-view["📁 list-view"]
-  Root --> index_ts["📄 index.ts"]
+  ui["📁 ui"]
+  ui --> list_view["📁 list-view"]
+  ui --> global_error["📁 global-error"]
+  ui --> card_view["📁 card-view"]
+  ui --> image_popup["📁 image-popup"]
+  ui --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
@@ -29,7 +29,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './ui';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

@@ -2,21 +2,21 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [models](/frontend/src/shared/models)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **models** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** `Shared`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 models"]
-  Root --> admin_settings_model_ts["📄 admin-settings.model.ts"]
-  Root --> api_response_model_ts["📄 api-response.model.ts"]
-  Root --> gallery_model_ts["📄 gallery.model.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> service_model_ts["📄 service.model.ts"]
-  Root --> user_model_ts["📄 user.model.ts"]
+  models["📁 models"]
+  models --> index_ts["📄 index.ts"]
+  models --> api_response_model_ts["📄 api-response.model.ts"]
+  models --> user_model_ts["📄 user.model.ts"]
+  models --> service_model_ts["📄 service.model.ts"]
+  models --> admin_settings_model_ts["📄 admin-settings.model.ts"]
+  models --> gallery_model_ts["📄 gallery.model.ts"]
 ```
 
 ## 📄 File Registry
@@ -35,7 +35,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './models';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

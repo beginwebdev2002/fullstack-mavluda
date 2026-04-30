@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 database"]
-  Root --> database_module_ts["📄 database.module.ts"]
+  database["📁 database"]
+  database --> database_module_ts["📄 database.module.ts"]
 ```
 
 ## 📄 File Registry
@@ -25,7 +25,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './database';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

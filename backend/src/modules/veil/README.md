@@ -8,13 +8,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 veil"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> veil_module_ts["📄 veil.module.ts"]
+  veil["📁 veil"]
+  veil --> infrastructure["📁 infrastructure"]
+  veil --> presentation["📁 presentation"]
+  veil --> domain["📁 domain"]
+  veil --> application["📁 application"]
+  veil --> index_ts["📄 index.ts"]
+  veil --> veil_module_ts["📄 veil.module.ts"]
 ```
 
 ## 📄 File Registry
@@ -24,16 +24,13 @@ graph TD
 | `veil.module.ts` | TypeScript | Defines the architectural module boundaries for veil.module.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./application/veil.service`
-- `./infrastructure/repositories/veil.repository`
-- `./presentation/veil.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './veil';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

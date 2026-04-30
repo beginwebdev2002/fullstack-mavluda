@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 schemas"]
-  Root --> admin_settings_schema_ts["📄 admin-settings.schema.ts"]
+  schemas["📁 schemas"]
+  schemas --> admin_settings_schema_ts["📄 admin-settings.schema.ts"]
 ```
 
 ## 📄 File Registry
@@ -24,7 +24,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './schemas';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

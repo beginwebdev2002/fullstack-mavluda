@@ -8,14 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 core"]
-  Root --> constants["📁 constants"]
-  Root --> guards["📁 guards"]
-  Root --> interceptors["📁 interceptors"]
+  core["📁 core"]
+  core --> guards["📁 guards"]
+  core --> constants["📁 constants"]
+  core --> interceptors["📁 interceptors"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| (No files) | - | - | - |
 
 ## 🔗 Dependencies
 - No external dependencies.

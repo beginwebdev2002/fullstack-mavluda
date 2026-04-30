@@ -2,20 +2,20 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [user](/frontend/src/entities/user)
 
-**FSD Layer:** Entity
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **user** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** `Entities`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 user"]
-  Root --> constants["📁 constants"]
-  Root --> model["📁 model"]
-  Root --> auth_service_ts["📄 auth.service.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> user_service_ts["📄 user.service.ts"]
+  user["📁 user"]
+  user --> model["📁 model"]
+  user --> constants["📁 constants"]
+  user --> auth_service_ts["📄 auth.service.ts"]
+  user --> index_ts["📄 index.ts"]
+  user --> user_service_ts["📄 user.service.ts"]
 ```
 
 ## 📄 File Registry
@@ -26,7 +26,6 @@ graph TD
 | `user.service.ts` | TypeScript | Encapsulates business logic and data access for user.service.ts. | @angular |
 
 ## 🔗 Dependencies
-- `./model/user.model`
 - `@angular/common/http`
 - `@angular/core`
 - `@angular/router`
@@ -37,7 +36,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './user';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

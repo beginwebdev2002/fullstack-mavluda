@@ -8,10 +8,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 strategies"]
-  Root --> alif_pay_strategy_ts["📄 alif-pay.strategy.ts"]
-  Root --> mock_card_strategy_ts["📄 mock-card.strategy.ts"]
-  Root --> payment_strategy_ts["📄 payment.strategy.ts"]
+  strategies["📁 strategies"]
+  strategies --> mock_card_strategy_ts["📄 mock-card.strategy.ts"]
+  strategies --> alif_pay_strategy_ts["📄 alif-pay.strategy.ts"]
+  strategies --> payment_strategy_ts["📄 payment.strategy.ts"]
 ```
 
 ## 📄 File Registry
@@ -27,7 +27,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './strategies';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

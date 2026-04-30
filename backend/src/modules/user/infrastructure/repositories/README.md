@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> user_repository_ts["📄 user.repository.ts"]
+  repositories["📁 repositories"]
+  repositories --> user_repository_ts["📄 user.repository.ts"]
 ```
 
 ## 📄 File Registry
@@ -18,8 +18,6 @@ graph TD
 | `user.repository.ts` | TypeScript | Provides core logic and orchestration for user.repository.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../../domain/user.entity`
-- `../schemas/user.schema`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 - `mongoose`
@@ -27,7 +25,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './repositories';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

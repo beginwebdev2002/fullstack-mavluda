@@ -8,10 +8,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 utils"]
-  Root --> file_system_ts["📄 file-system.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> object_ts["📄 object.ts"]
+  utils["📁 utils"]
+  utils --> object_ts["📄 object.ts"]
+  utils --> index_ts["📄 index.ts"]
+  utils --> file_system_ts["📄 file-system.ts"]
 ```
 
 ## 📄 File Registry
@@ -29,7 +29,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './utils';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

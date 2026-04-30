@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> error_messages_constant_ts["📄 error-messages.constant.ts"]
+  constants["📁 constants"]
+  constants --> error_messages_constant_ts["📄 error-messages.constant.ts"]
 ```
 
 ## 📄 File Registry
@@ -23,7 +23,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './constants';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

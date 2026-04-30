@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> gallery_service_ts["📄 gallery.service.ts"]
+  application["📁 application"]
+  application --> gallery_service_ts["📄 gallery.service.ts"]
 ```
 
 ## 📄 File Registry
@@ -18,14 +18,12 @@ graph TD
 | `gallery.service.ts` | TypeScript | Encapsulates business logic and data access for gallery.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../domain/gallery.entity`
-- `../infrastructure/repositories/gallery.repository`
 - `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './application';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

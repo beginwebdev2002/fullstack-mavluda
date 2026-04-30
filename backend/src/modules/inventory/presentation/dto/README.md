@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_inventory_dto_ts["📄 create-inventory.dto.ts"]
-  Root --> update_inventory_dto_ts["📄 update-inventory.dto.ts"]
+  dto["📁 dto"]
+  dto --> create_inventory_dto_ts["📄 create-inventory.dto.ts"]
+  dto --> update_inventory_dto_ts["📄 update-inventory.dto.ts"]
 ```
 
 ## 📄 File Registry
@@ -20,13 +20,12 @@ graph TD
 | `update-inventory.dto.ts` | TypeScript | Provides core logic and orchestration for update-inventory.dto.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./create-inventory.dto`
 - `@nestjs/mapped-types`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

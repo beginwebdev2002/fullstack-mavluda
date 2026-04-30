@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_booking_dto_ts["📄 create-booking.dto.ts"]
-  Root --> update_booking_dto_ts["📄 update-booking.dto.ts"]
+  dto["📁 dto"]
+  dto --> create_booking_dto_ts["📄 create-booking.dto.ts"]
+  dto --> update_booking_dto_ts["📄 update-booking.dto.ts"]
 ```
 
 ## 📄 File Registry
@@ -20,13 +20,12 @@ graph TD
 | `update-booking.dto.ts` | TypeScript | Provides core logic and orchestration for update-booking.dto.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./create-booking.dto`
 - `@nestjs/mapped-types`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

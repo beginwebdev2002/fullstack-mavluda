@@ -8,21 +8,23 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 modules"]
-  Root --> admin-settings["📁 admin-settings"]
-  Root --> auth["📁 auth"]
-  Root --> booking["📁 booking"]
-  Root --> gallery["📁 gallery"]
-  Root --> inventory["📁 inventory"]
-  Root --> partnership["📁 partnership"]
-  Root --> payment["📁 payment"]
-  Root --> treatments["📁 treatments"]
-  Root --> user["📁 user"]
-  Root --> veil["📁 veil"]
+  modules["📁 modules"]
+  modules --> gallery["📁 gallery"]
+  modules --> user["📁 user"]
+  modules --> treatments["📁 treatments"]
+  modules --> admin_settings["📁 admin-settings"]
+  modules --> veil["📁 veil"]
+  modules --> payment["📁 payment"]
+  modules --> booking["📁 booking"]
+  modules --> inventory["📁 inventory"]
+  modules --> partnership["📁 partnership"]
+  modules --> auth["📁 auth"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| (No files) | - | - | - |
 
 ## 🔗 Dependencies
 - No external dependencies.
@@ -30,7 +32,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './modules';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

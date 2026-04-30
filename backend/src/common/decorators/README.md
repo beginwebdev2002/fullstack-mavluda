@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 decorators"]
-  Root --> public_decorator_ts["📄 public.decorator.ts"]
-  Root --> roles_decorator_ts["📄 roles.decorator.ts"]
+  decorators["📁 decorators"]
+  decorators --> public_decorator_ts["📄 public.decorator.ts"]
+  decorators --> roles_decorator_ts["📄 roles.decorator.ts"]
 ```
 
 ## 📄 File Registry
@@ -25,7 +25,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './decorators';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

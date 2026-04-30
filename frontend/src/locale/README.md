@@ -8,10 +8,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 locale"]
-  Root --> messages_ru_xlf["📄 messages.ru.xlf"]
-  Root --> messages_tj_xlf["📄 messages.tj.xlf"]
-  Root --> messages_xlf["📄 messages.xlf"]
+  locale["📁 locale"]
+  locale --> messages_tj_xlf["📄 messages.tj.xlf"]
+  locale --> messages_xlf["📄 messages.xlf"]
+  locale --> messages_ru_xlf["📄 messages.ru.xlf"]
 ```
 
 ## 📄 File Registry
@@ -27,7 +27,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './locale';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

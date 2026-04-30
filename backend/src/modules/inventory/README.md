@@ -8,13 +8,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 inventory"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> inventory_module_ts["📄 inventory.module.ts"]
+  inventory["📁 inventory"]
+  inventory --> infrastructure["📁 infrastructure"]
+  inventory --> presentation["📁 presentation"]
+  inventory --> domain["📁 domain"]
+  inventory --> application["📁 application"]
+  inventory --> index_ts["📄 index.ts"]
+  inventory --> inventory_module_ts["📄 inventory.module.ts"]
 ```
 
 ## 📄 File Registry
@@ -24,16 +24,13 @@ graph TD
 | `inventory.module.ts` | TypeScript | Defines the architectural module boundaries for inventory.module.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./application/inventory.service`
-- `./infrastructure/repositories/inventory.repository`
-- `./presentation/inventory.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './inventory';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

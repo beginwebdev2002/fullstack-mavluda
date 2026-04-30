@@ -8,12 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 public"]
-  Root --> images["📁 images"]
+  public["📁 public"]
+  public --> images["📁 images"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| (No files) | - | - | - |
 
 ## 🔗 Dependencies
 - No external dependencies.
@@ -21,7 +23,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './public';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

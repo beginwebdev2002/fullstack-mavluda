@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_veil_dto_ts["📄 create-veil.dto.ts"]
-  Root --> update_veil_dto_ts["📄 update-veil.dto.ts"]
+  dto["📁 dto"]
+  dto --> update_veil_dto_ts["📄 update-veil.dto.ts"]
+  dto --> create_veil_dto_ts["📄 create-veil.dto.ts"]
 ```
 
 ## 📄 File Registry
@@ -20,14 +20,14 @@ graph TD
 | `update-veil.dto.ts` | TypeScript | Provides core logic and orchestration for update-veil.dto.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./create-veil.dto`
 - `@nestjs/mapped-types`
 - `class-transformer`
+- `class-validator`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

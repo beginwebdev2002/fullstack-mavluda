@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 types"]
-  Root --> telegram_ts["📄 telegram.ts"]
+  types["📁 types"]
+  types --> telegram_ts["📄 telegram.ts"]
 ```
 
 ## 📄 File Registry
@@ -23,7 +23,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './types';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

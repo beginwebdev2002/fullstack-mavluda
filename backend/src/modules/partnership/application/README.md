@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> partnership_service_ts["📄 partnership.service.ts"]
+  application["📁 application"]
+  application --> partnership_service_ts["📄 partnership.service.ts"]
 ```
 
 ## 📄 File Registry
@@ -18,16 +18,12 @@ graph TD
 | `partnership.service.ts` | TypeScript | Encapsulates business logic and data access for partnership.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../domain/partnership.entity`
-- `../infrastructure/repositories/partnership.repository`
-- `../presentation/dto/create-partnership.dto`
-- `../presentation/dto/update-partnership.dto`
 - `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './application';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

@@ -8,18 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> veil_repository_ts["📄 veil.repository.ts"]
+  repositories["📁 repositories"]
+  repositories --> veil_repository_ts["📄 veil.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.repository.ts` | TypeScript | Provides core logic and orchestration for veil.repository.ts. | @common, @nestjs |
+| `veil.repository.ts` | TypeScript | Provides core logic and orchestration for veil.repository.ts. | @nestjs, @common |
 
 ## 🔗 Dependencies
-- `../../domain/veil.entity`
-- `../schemas/veil.schema`
 - `@common/utils/file-system`
 - `@nestjs/common`
 - `@nestjs/mongoose`
@@ -28,7 +26,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './repositories';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

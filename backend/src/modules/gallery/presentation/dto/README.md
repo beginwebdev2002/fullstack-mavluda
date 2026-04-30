@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_gallery_dto_ts["📄 create-gallery.dto.ts"]
-  Root --> update_gallery_dto_ts["📄 update-gallery.dto.ts"]
+  dto["📁 dto"]
+  dto --> update_gallery_dto_ts["📄 update-gallery.dto.ts"]
+  dto --> create_gallery_dto_ts["📄 create-gallery.dto.ts"]
 ```
 
 ## 📄 File Registry
@@ -20,14 +20,13 @@ graph TD
 | `update-gallery.dto.ts` | TypeScript | Provides core logic and orchestration for update-gallery.dto.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./create-gallery.dto`
 - `@nestjs/mapped-types`
 - `class-validator`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

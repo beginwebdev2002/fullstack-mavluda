@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 environments"]
-  Root --> environment_prod_ts["📄 environment.prod.ts"]
-  Root --> environment_ts["📄 environment.ts"]
+  environments["📁 environments"]
+  environments --> environment_prod_ts["📄 environment.prod.ts"]
+  environments --> environment_ts["📄 environment.ts"]
 ```
 
 ## 📄 File Registry
@@ -25,7 +25,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './environments';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

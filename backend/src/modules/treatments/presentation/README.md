@@ -8,17 +8,19 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
-  Root --> treatments_controller_ts["📄 treatments.controller.ts"]
+  presentation["📁 presentation"]
+  presentation --> dto["📁 dto"]
+  presentation --> treatments_controller_ts["📄 treatments.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for treatments.controller.ts. | @nestjs |
+| `treatments.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for treatments.controller.ts. | @nestjs, @modules |
 
 ## 🔗 Dependencies
+- `@modules/treatments`
+- `@nestjs/common`
 - `@nestjs/platform-express`
 - `multer`
 - `path`
@@ -26,7 +28,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './presentation';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

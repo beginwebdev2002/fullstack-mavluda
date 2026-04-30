@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 backend"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> telegram_auth_guard_ts["📄 telegram-auth.guard.ts"]
+  backend["📁 backend"]
+  backend --> index_ts["📄 index.ts"]
+  backend --> telegram_auth_guard_ts["📄 telegram-auth.guard.ts"]
 ```
 
 ## 📄 File Registry
@@ -27,7 +27,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './backend';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

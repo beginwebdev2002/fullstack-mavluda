@@ -8,17 +8,17 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 interceptors"]
-  Root --> api_interceptor_ts["📄 api.interceptor.ts"]
-  Root --> error_interceptor_ts["📄 error.interceptor.ts"]
-  Root --> index_ts["📄 index.ts"]
+  interceptors["📁 interceptors"]
+  interceptors --> error_interceptor_ts["📄 error.interceptor.ts"]
+  interceptors --> index_ts["📄 index.ts"]
+  interceptors --> api_interceptor_ts["📄 api.interceptor.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `api.interceptor.ts` | TypeScript | Provides core logic and orchestration for api.interceptor.ts. | @angular, @shared |
-| `error.interceptor.ts` | TypeScript | Provides core logic and orchestration for error.interceptor.ts. | @angular, @shared |
+| `api.interceptor.ts` | TypeScript | Provides core logic and orchestration for api.interceptor.ts. | @shared, @angular |
+| `error.interceptor.ts` | TypeScript | Provides core logic and orchestration for error.interceptor.ts. | @shared, @angular |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
@@ -31,7 +31,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './interceptors';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

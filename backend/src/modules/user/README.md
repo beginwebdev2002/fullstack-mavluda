@@ -8,13 +8,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 user"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> user_module_ts["📄 user.module.ts"]
+  user["📁 user"]
+  user --> infrastructure["📁 infrastructure"]
+  user --> presentation["📁 presentation"]
+  user --> domain["📁 domain"]
+  user --> application["📁 application"]
+  user --> user_module_ts["📄 user.module.ts"]
+  user --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
@@ -24,16 +24,13 @@ graph TD
 | `user.module.ts` | TypeScript | Defines the architectural module boundaries for user.module.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./application/user.service`
-- `./infrastructure/repositories/user.repository`
-- `./presentation/user.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './user';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

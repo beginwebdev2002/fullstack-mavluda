@@ -8,13 +8,15 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 infrastructure"]
-  Root --> repositories["📁 repositories"]
-  Root --> schemas["📁 schemas"]
+  infrastructure["📁 infrastructure"]
+  infrastructure --> repositories["📁 repositories"]
+  infrastructure --> schemas["📁 schemas"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| (No files) | - | - | - |
 
 ## 🔗 Dependencies
 - No external dependencies.
@@ -22,7 +24,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './infrastructure';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

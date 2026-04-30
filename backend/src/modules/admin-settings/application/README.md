@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> admin_settings_service_ts["📄 admin-settings.service.ts"]
+  application["📁 application"]
+  application --> admin_settings_service_ts["📄 admin-settings.service.ts"]
 ```
 
 ## 📄 File Registry
@@ -18,14 +18,12 @@ graph TD
 | `admin-settings.service.ts` | TypeScript | Encapsulates business logic and data access for admin-settings.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../domain/admin-settings.entity`
-- `../infrastructure/repositories/admin-settings.repository`
 - `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './application';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

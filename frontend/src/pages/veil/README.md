@@ -2,20 +2,20 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veil](/frontend/src/pages/veil)
 
-**FSD Layer:** Page
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **veil** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** `Pages`
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 veil"]
-  Root --> ui["📁 ui"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> veil_component_html["📄 veil.component.html"]
-  Root --> veil_component_scss["📄 veil.component.scss"]
-  Root --> veil_component_ts["📄 veil.component.ts"]
+  veil["📁 veil"]
+  veil --> ui["📁 ui"]
+  veil --> veil_component_ts["📄 veil.component.ts"]
+  veil --> veil_component_html["📄 veil.component.html"]
+  veil --> index_ts["📄 index.ts"]
+  veil --> veil_component_scss["📄 veil.component.scss"]
 ```
 
 ## 📄 File Registry
@@ -23,12 +23,12 @@ graph TD
 |---|---|---|---|
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 | `veil.component.html` | Template | Structural template and layout for veil.component.html. | N/A |
-| `veil.component.scss` | Stylesheet | Luxury styling and visual presentation for veil.component.scss. | N/A |
-| `veil.component.ts` | TypeScript | UI component logic and state management for veil.component.ts. | @angular, @entities, @environments, @features, @shared |
+| `veil.component.scss` | Style | Luxury styling and visual presentation for veil.component.scss. | N/A |
+| `veil.component.ts` | TypeScript | UI component logic and state management for veil.component.ts. | @features, @entities, @environments, @angular, @shared |
 
 ## 🔗 Dependencies
-- `./ui/veil-form/veil-form.component`
 - `@angular/common`
+- `@angular/core`
 - `@entities/admin-settings`
 - `@entities/veil`
 - `@environments/environment`
@@ -40,7 +40,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './veil';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

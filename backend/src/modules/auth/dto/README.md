@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> login_dto_ts["📄 login.dto.ts"]
-  Root --> register_dto_ts["📄 register.dto.ts"]
+  dto["📁 dto"]
+  dto --> register_dto_ts["📄 register.dto.ts"]
+  dto --> login_dto_ts["📄 login.dto.ts"]
 ```
 
 ## 📄 File Registry
@@ -25,7 +25,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

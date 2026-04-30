@@ -8,25 +8,23 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
-  Root --> booking_controller_ts["📄 booking.controller.ts"]
+  presentation["📁 presentation"]
+  presentation --> dto["📁 dto"]
+  presentation --> booking_controller_ts["📄 booking.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for booking.controller.ts. | N/A |
+| `booking.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for booking.controller.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../application/booking.service`
-- `./dto/create-booking.dto`
-- `./dto/update-booking.dto`
+- `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './presentation';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

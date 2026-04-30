@@ -8,34 +8,29 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 payment"]
-  Root --> strategies["📁 strategies"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> payment_controller_ts["📄 payment.controller.ts"]
-  Root --> payment_module_ts["📄 payment.module.ts"]
-  Root --> payment_service_ts["📄 payment.service.ts"]
+  payment["📁 payment"]
+  payment --> strategies["📁 strategies"]
+  payment --> payment_module_ts["📄 payment.module.ts"]
+  payment --> index_ts["📄 index.ts"]
+  payment --> payment_service_ts["📄 payment.service.ts"]
+  payment --> payment_controller_ts["📄 payment.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `payment.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for payment.controller.ts. | N/A |
+| `payment.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for payment.controller.ts. | @nestjs |
 | `payment.module.ts` | TypeScript | Defines the architectural module boundaries for payment.module.ts. | @nestjs |
 | `payment.service.ts` | TypeScript | Encapsulates business logic and data access for payment.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./payment.controller`
-- `./payment.service`
-- `./strategies/alif-pay.strategy`
-- `./strategies/mock-card.strategy`
-- `./strategies/payment.strategy`
 - `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './payment';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

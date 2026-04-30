@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> treatments_entity_ts["📄 treatments.entity.ts"]
+  domain["📁 domain"]
+  domain --> treatments_entity_ts["📄 treatments.entity.ts"]
 ```
 
 ## 📄 File Registry
@@ -23,7 +23,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './domain';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

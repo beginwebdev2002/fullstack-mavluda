@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_user_dto_ts["📄 create-user.dto.ts"]
-  Root --> update_user_dto_ts["📄 update-user.dto.ts"]
+  dto["📁 dto"]
+  dto --> update_user_dto_ts["📄 update-user.dto.ts"]
+  dto --> create_user_dto_ts["📄 create-user.dto.ts"]
 ```
 
 ## 📄 File Registry
@@ -20,13 +20,13 @@ graph TD
 | `update-user.dto.ts` | TypeScript | Provides core logic and orchestration for update-user.dto.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./create-user.dto`
 - `@nestjs/mapped-types`
+- `class-validator`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

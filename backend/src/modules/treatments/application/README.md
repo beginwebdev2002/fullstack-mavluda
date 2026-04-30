@@ -8,25 +8,23 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> treatments_service_ts["📄 treatments.service.ts"]
+  application["📁 application"]
+  application --> treatments_service_ts["📄 treatments.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.service.ts` | TypeScript | Encapsulates business logic and data access for treatments.service.ts. | @common, @nestjs |
+| `treatments.service.ts` | TypeScript | Encapsulates business logic and data access for treatments.service.ts. | @nestjs, @common |
 
 ## 🔗 Dependencies
-- `../domain/treatments.entity`
-- `../infrastructure/repositories/treatments.repository`
 - `@common/utils`
 - `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './application';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

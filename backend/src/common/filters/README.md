@@ -8,23 +8,23 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 filters"]
-  Root --> i18n_exception_filter_ts["📄 i18n-exception.filter.ts"]
+  filters["📁 filters"]
+  filters --> i18n_exception_filter_ts["📄 i18n-exception.filter.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `i18n-exception.filter.ts` | TypeScript | Provides core logic and orchestration for i18n-exception.filter.ts. | N/A |
+| `i18n-exception.filter.ts` | TypeScript | Provides core logic and orchestration for i18n-exception.filter.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../constants/error-messages.constant`
+- `@nestjs/common`
 - `express`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './filters';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

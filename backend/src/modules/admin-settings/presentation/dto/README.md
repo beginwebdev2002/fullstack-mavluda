@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_admin_settings_dto_ts["📄 create-admin-settings.dto.ts"]
-  Root --> update_admin_settings_dto_ts["📄 update-admin-settings.dto.ts"]
+  dto["📁 dto"]
+  dto --> create_admin_settings_dto_ts["📄 create-admin-settings.dto.ts"]
+  dto --> update_admin_settings_dto_ts["📄 update-admin-settings.dto.ts"]
 ```
 
 ## 📄 File Registry
@@ -20,14 +20,14 @@ graph TD
 | `update-admin-settings.dto.ts` | TypeScript | Provides core logic and orchestration for update-admin-settings.dto.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./create-admin-settings.dto`
 - `@nestjs/mapped-types`
 - `class-transformer`
+- `class-validator`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();
