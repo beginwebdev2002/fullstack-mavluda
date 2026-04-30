@@ -1,6 +1,8 @@
-# 📁 Veil Item
+# 📁 veil-item
 
-[Root](../../../../../../) > [frontend](../../../../../) > [src](../../../../) > [pages](../../../) > [veil](../../) > [ui](../) > [veil-item](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veil](/frontend/src/pages/veil) > [ui](/frontend/src/pages/veil/ui) > [veil-item](/frontend/src/pages/veil/ui/veil-item)
+
+**FSD Layer:** Page
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **Veil Item** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,17 +12,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  veil_item["📁 veil-item"]
-  veil_item --> veil_item_veil_item_component_html["📄 veil-item.component.html"]
-  veil_item --> veil_item_veil_item_component_ts["📄 veil-item.component.ts"]
+  Root["📁 veil-item"]
+  Root --> veil_item_component_html["📄 veil-item.component.html"]
+  Root --> veil_item_component_ts["📄 veil-item.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil-item.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
-| `veil-item.component.ts` | TypeScript | Core logic and utilities for this domain. | @features/veil, @angular/core, @angular/common |
-
+| `veil-item.component.html` | Template | Core logic and utilities for this domain. | N/A |
+| `veil-item.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @features |
 
 ## 🔗 Dependencies
 - `@angular/common`
@@ -29,6 +30,8 @@ graph TD
 
 ## 🛠️ Usage
 ```markdown
+```markdown
 > This directory acts primarily as a structural container or logic module.
 > To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```
 ```
