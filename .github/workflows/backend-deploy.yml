@@ -7,6 +7,8 @@ on:
       - main
     paths:
       - "backend/**"
+      
+  workflow_call:
 
 permissions: 
   contents: write
