@@ -1,11 +1,12 @@
-name: Build Backend NestJS
+name: Build Frontend Angular
 
 on:
   workflow_dispatch:
   push:
     branches:
       - main
-    paths:
+    paths-ignore:
+      - "frontend/**"
       - "backend/**"
 
 permissions: 
@@ -24,22 +25,22 @@ jobs:
         with: 
           node-version: "22"
           cache: "npm"
-          cache-dependency-path: "backend/package-lock.json"
+          cache-dependency-path: "frontend/package-lock.json"
         
       - name: Install Dependencies
         run: | 
-          cd backend
+          cd frontend
           npm ci --legacy-peer-deps
         
-      - name: Build Backend NestJS
+      - name: Build Frontend Angular
         run: |
-          cd backend
-          npm run build
+          cd frontend
+          npm run build --prod
       
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4 # Обязательно @v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: backend/dist
-          branch: gh-backend
+          folder: frontend/dist
+          branch: gh-frontend
           token: ${{ secrets.GITHUB_TOKEN }}
           clean: true
