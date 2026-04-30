@@ -1,5 +1,6 @@
 declare const _default: () => {
-    mongoUri: string | undefined;
+    MONGO_URI: string | undefined;
+    MONGO_DB_NAME: string | undefined;
     jwtSecret: string | undefined;
     jwtExpiresIn: string | undefined;
     telegramBotToken: string | undefined;
