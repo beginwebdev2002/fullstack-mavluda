@@ -1,6 +1,8 @@
-# 📁 Header
+# 📁 header
 
-[Root](../../../../) > [frontend](../../../) > [src](../../) > [widgets](../) > [header](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [header](/frontend/src/widgets/header)
+
+**FSD Layer:** Widget
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **Header** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,21 +12,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  header["📁 header"]
-  header --> header_header_component_html["📄 header.component.html"]
-  header --> header_header_component_scss["📄 header.component.scss"]
-  header --> header_header_component_ts["📄 header.component.ts"]
-  header --> header_index_ts["📄 index.ts"]
+  Root["📁 header"]
+  Root --> header_component_html["📄 header.component.html"]
+  Root --> header_component_scss["📄 header.component.scss"]
+  Root --> header_component_ts["📄 header.component.ts"]
+  Root --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `header.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
-| `header.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
-| `header.component.ts` | TypeScript | Core logic and utilities for this domain. | @features/language-selection, @angular/core, @angular/router, @angular/common |
+| `header.component.html` | Template | Core logic and utilities for this domain. | N/A |
+| `header.component.scss` | Stylesheet | Core logic and utilities for this domain. | N/A |
+| `header.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @features |
 | `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-
 
 ## 🔗 Dependencies
 - `@angular/common`
@@ -34,6 +35,8 @@ graph TD
 
 ## 🛠️ Usage
 ```markdown
+```markdown
 > This directory acts primarily as a structural container or logic module.
 > To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```
 ```

@@ -1,6 +1,8 @@
-# 📁 Constants
+# 📁 constants
 
-[Root](../../../../../) > [frontend](../../../../) > [src](../../../) > [entities](../../) > [veil](../) > [constants](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [veil](/frontend/src/entities/veil) > [constants](/frontend/src/entities/veil/constants)
+
+**FSD Layer:** Entity
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **Constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,8 +12,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  constants["📁 constants"]
-  constants --> constants_veil_constants_ts["📄 veil.constants.ts"]
+  Root["📁 constants"]
+  Root --> veil_constants_ts["📄 veil.constants.ts"]
 ```
 
 ## 📄 File Registry
@@ -19,12 +21,13 @@ graph TD
 |---|---|---|---|
 | `veil.constants.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
+```markdown
 > This directory acts primarily as a structural container or logic module.
 > To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```
 ```

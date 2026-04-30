@@ -1,6 +1,6 @@
-# 🌐 Domain
+# 📁 domain
 
-[Root](../../../../../) > [backend](../../../../) > [src](../../../) > [modules](../../) > [gallery](../) > [domain](./)
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [gallery](/backend/src/modules/gallery) > [domain](/backend/src/modules/gallery/domain)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **Domain** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,8 +10,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  domain["🌐 domain"]
-  domain --> domain_gallery_entity_ts["📄 gallery.entity.ts"]
+  Root["📁 domain"]
+  Root --> gallery_entity_ts["📄 gallery.entity.ts"]
 ```
 
 ## 📄 File Registry
@@ -19,12 +19,13 @@ graph TD
 |---|---|---|---|
 | `gallery.entity.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
+```markdown
 > This directory acts primarily as a structural container or logic module.
 > To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```
 ```

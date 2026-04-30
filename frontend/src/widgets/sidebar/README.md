@@ -1,6 +1,8 @@
-# 📁 Sidebar
+# 📁 sidebar
 
-[Root](../../../../) > [frontend](../../../) > [src](../../) > [widgets](../) > [sidebar](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [sidebar](/frontend/src/widgets/sidebar)
+
+**FSD Layer:** Widget
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **Sidebar** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,28 +12,30 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  sidebar["📁 sidebar"]
-  sidebar --> sidebar_index_ts["📄 index.ts"]
-  sidebar --> sidebar_sidebar_component_html["📄 sidebar.component.html"]
-  sidebar --> sidebar_sidebar_component_ts["📄 sidebar.component.ts"]
+  Root["📁 sidebar"]
+  Root --> index_ts["📄 index.ts"]
+  Root --> sidebar_component_html["📄 sidebar.component.html"]
+  Root --> sidebar_component_ts["📄 sidebar.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `sidebar.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
-| `sidebar.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular/core, @angular/router, @angular/common, @shared/pipes |
-
+| `sidebar.component.html` | Template | Core logic and utilities for this domain. | N/A |
+| `sidebar.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @shared |
 
 ## 🔗 Dependencies
 - `@angular/common`
 - `@angular/core`
 - `@angular/router`
 - `@shared/pipes`
+- `rxjs`
 
 ## 🛠️ Usage
 ```markdown
+```markdown
 > This directory acts primarily as a structural container or logic module.
 > To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```
 ```

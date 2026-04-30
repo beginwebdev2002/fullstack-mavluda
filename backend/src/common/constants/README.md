@@ -1,6 +1,6 @@
-# 📁 Constants
+# 📁 constants
 
-[Root](../../../../) > [backend](../../../) > [src](../../) > [common](../) > [constants](./)
+[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [constants](/backend/src/common/constants)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **Constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,8 +10,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  constants["📁 constants"]
-  constants --> constants_error_messages_constant_ts["📄 error-messages.constant.ts"]
+  Root["📁 constants"]
+  Root --> error_messages_constant_ts["📄 error-messages.constant.ts"]
 ```
 
 ## 📄 File Registry
@@ -19,12 +19,13 @@ graph TD
 |---|---|---|---|
 | `error-messages.constant.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
 
-
 ## 🔗 Dependencies
 *No internal path aliases detected in this directory.*
 
 ## 🛠️ Usage
 ```markdown
+```markdown
 > This directory acts primarily as a structural container or logic module.
 > To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```
 ```

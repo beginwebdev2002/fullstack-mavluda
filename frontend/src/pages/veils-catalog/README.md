@@ -1,6 +1,8 @@
-# 📁 Veils Catalog
+# 📁 veils-catalog
 
-[Root](../../../../) > [frontend](../../../) > [src](../../) > [pages](../) > [veils-catalog](./)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veils-catalog](/frontend/src/pages/veils-catalog)
+
+**FSD Layer:** Page
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **Veils Catalog** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,21 +12,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  veils_catalog["📁 veils-catalog"]
-  veils_catalog --> veils_catalog_index_ts["📄 index.ts"]
-  veils_catalog --> veils_catalog_veils_catalog_component_html["📄 veils-catalog.component.html"]
-  veils_catalog --> veils_catalog_veils_catalog_component_scss["📄 veils-catalog.component.scss"]
-  veils_catalog --> veils_catalog_veils_catalog_component_ts["📄 veils-catalog.component.ts"]
+  Root["📁 veils-catalog"]
+  Root --> index_ts["📄 index.ts"]
+  Root --> veils_catalog_component_html["📄 veils-catalog.component.html"]
+  Root --> veils_catalog_component_scss["📄 veils-catalog.component.scss"]
+  Root --> veils_catalog_component_ts["📄 veils-catalog.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Core logic and utilities for this domain. | N/A |
-| `veils-catalog.component.html` | HTML Template | Core logic and utilities for this domain. | N/A |
-| `veils-catalog.component.scss` | SCSS Stylesheet | Core logic and utilities for this domain. | N/A |
-| `veils-catalog.component.ts` | TypeScript | Core logic and utilities for this domain. | @environments/environment, @angular/core, @shared/ui, @entities/admin-settings, @shared/lib, @angular/common, @entities/veil |
-
+| `veils-catalog.component.html` | Template | Core logic and utilities for this domain. | N/A |
+| `veils-catalog.component.scss` | Stylesheet | Core logic and utilities for this domain. | N/A |
+| `veils-catalog.component.ts` | TypeScript | Core logic and utilities for this domain. | @angular, @entities, @environments, @shared |
 
 ## 🔗 Dependencies
 - `@angular/common`
@@ -37,6 +38,8 @@ graph TD
 
 ## 🛠️ Usage
 ```markdown
+```markdown
 > This directory acts primarily as a structural container or logic module.
 > To interact with its contents, import the relevant exported members from the `index.ts` or specifically targeted files.
+```
 ```
