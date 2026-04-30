@@ -8,7 +8,12 @@ import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { RouterLink } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
 import { API_ENDPOINTS } from "@core/constants";
-
+enum LegoColors {
+  RED = "Block #14592554",
+  BLUE = "Block #4467465",
+  YELLOW = "Block #703E00",
+  GREEN = "Block #9BC96D",
+}
 @Component({
   selector: "app-user-home",
   standalone: true,
