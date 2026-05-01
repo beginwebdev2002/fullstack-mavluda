@@ -1,17 +1,16 @@
-# 📁 model
-
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [user](/frontend/src/entities/user) > [model](/frontend/src/entities/user/model)
 
-**FSD Layer:** Entity
+# 📁 Model (Entity Layer)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **model** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+This directory operates within the **Entity Layer** of the Feature Sliced Design (FSD) architecture.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 model"]
-  Root --> user_model_ts["📄 user.model.ts"]
+  model["📁 model"]
+  model --> user_model_ts["📄 user.model.ts"]
 ```
 
 ## 📄 File Registry
@@ -25,7 +24,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './model';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

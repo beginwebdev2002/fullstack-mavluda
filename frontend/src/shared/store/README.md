@@ -1,18 +1,17 @@
-# 📁 store
-
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [store](/frontend/src/shared/store)
 
-**FSD Layer:** Shared
+# 📁 Store (Shared Layer)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **store** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+This directory operates within the **Shared Layer** of the Feature Sliced Design (FSD) architecture.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 store"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> signal_store_base_ts["📄 signal-store.base.ts"]
+  store["📁 store"]
+  store --> index_ts["📄 index.ts"]
+  store --> signal_store_base_ts["📄 signal-store.base.ts"]
 ```
 
 ## 📄 File Registry
@@ -22,12 +21,12 @@ graph TD
 | `signal-store.base.ts` | TypeScript | Provides core logic and orchestration for signal-store.base.ts. | @angular |
 
 ## 🔗 Dependencies
-- `@angular/core`
+- `./signal-store.base`, `@angular/core`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './store';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

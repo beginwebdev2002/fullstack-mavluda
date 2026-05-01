@@ -1,6 +1,6 @@
-# 📁 utils
-
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [utils](/backend/src/common/utils)
+
+# 📁 Utils
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **utils** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,10 +8,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 utils"]
-  Root --> file_system_ts["📄 file-system.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> object_ts["📄 object.ts"]
+  utils["📁 utils"]
+  utils --> file_system_ts["📄 file-system.ts"]
+  utils --> index_ts["📄 index.ts"]
+  utils --> object_ts["📄 object.ts"]
 ```
 
 ## 📄 File Registry
@@ -22,14 +22,12 @@ graph TD
 | `object.ts` | TypeScript | Provides core logic and orchestration for object.ts. | N/A |
 
 ## 🔗 Dependencies
-- `fs`
-- `path`
-- `util`
+- `./file-system`, `./object`, `fs`, `path`, `util`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './utils';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

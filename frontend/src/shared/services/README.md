@@ -1,21 +1,20 @@
-# 📁 services
-
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [services](/frontend/src/shared/services)
 
-**FSD Layer:** Shared
+# 📁 Services (Shared Layer)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **services** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+This directory operates within the **Shared Layer** of the Feature Sliced Design (FSD) architecture.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 services"]
-  Root --> auth_service_ts["📄 auth.service.ts"]
-  Root --> error_service_ts["📄 error.service.ts"]
-  Root --> image_service_ts["📄 image.service.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> telegram_service_ts["📄 telegram.service.ts"]
+  services["📁 services"]
+  services --> auth_service_ts["📄 auth.service.ts"]
+  services --> error_service_ts["📄 error.service.ts"]
+  services --> image_service_ts["📄 image.service.ts"]
+  services --> index_ts["📄 index.ts"]
+  services --> telegram_service_ts["📄 telegram.service.ts"]
 ```
 
 ## 📄 File Registry
@@ -28,19 +27,12 @@ graph TD
 | `telegram.service.ts` | TypeScript | Encapsulates business logic and data access for telegram.service.ts. | @angular, @src |
 
 ## 🔗 Dependencies
-- `./telegram.service`
-- `@angular/common/http`
-- `@angular/core`
-- `@angular/router`
-- `@core/constants`
-- `@shared/models`
-- `@src/types/telegram`
-- `rxjs`
+- `./auth.service`, `./error.service`, `./image.service`, `./telegram.service`, `@angular/common/http`, `@angular/core`, `@angular/router`, `@core/constants`, `@shared/models`, `@src/types/telegram`, `rxjs`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './services';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

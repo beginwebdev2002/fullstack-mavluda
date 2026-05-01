@@ -1,6 +1,6 @@
-# 📁 config
-
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [config](/backend/src/common/config)
+
+# 📁 Config
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **config** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,11 +8,11 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 config"]
-  Root --> app_config_module_ts["📄 app-config.module.ts"]
-  Root --> app_config_service_ts["📄 app-config.service.ts"]
-  Root --> configuration_ts["📄 configuration.ts"]
-  Root --> env_validation_ts["📄 env.validation.ts"]
+  config["📁 config"]
+  config --> app_config_module_ts["📄 app-config.module.ts"]
+  config --> app_config_service_ts["📄 app-config.service.ts"]
+  config --> configuration_ts["📄 configuration.ts"]
+  config --> env_validation_ts["📄 env.validation.ts"]
 ```
 
 ## 📄 File Registry
@@ -24,17 +24,12 @@ graph TD
 | `env.validation.ts` | TypeScript | Provides core logic and orchestration for env.validation.ts. | N/A |
 
 ## 🔗 Dependencies
-- `./app-config.service`
-- `./configuration`
-- `./env.validation`
-- `@nestjs/common`
-- `@nestjs/config`
-- `class-transformer`
+- `./app-config.service`, `./configuration`, `./env.validation`, `@nestjs/common`, `@nestjs/config`, `class-transformer`, `class-validator`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './config';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

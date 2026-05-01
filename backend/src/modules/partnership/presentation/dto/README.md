@@ -1,6 +1,6 @@
-# 📁 dto
-
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [partnership](/backend/src/modules/partnership) > [presentation](/backend/src/modules/partnership/presentation) > [dto](/backend/src/modules/partnership/presentation/dto)
+
+# 📁 Dto
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_partnership_dto_ts["📄 create-partnership.dto.ts"]
-  Root --> update_partnership_dto_ts["📄 update-partnership.dto.ts"]
+  dto["📁 dto"]
+  dto --> create_partnership_dto_ts["📄 create-partnership.dto.ts"]
+  dto --> update_partnership_dto_ts["📄 update-partnership.dto.ts"]
 ```
 
 ## 📄 File Registry
@@ -20,13 +20,12 @@ graph TD
 | `update-partnership.dto.ts` | TypeScript | Provides core logic and orchestration for update-partnership.dto.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./create-partnership.dto`
-- `@nestjs/mapped-types`
+- `./create-partnership.dto`, `@nestjs/mapped-types`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

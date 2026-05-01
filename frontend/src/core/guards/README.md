@@ -1,6 +1,6 @@
-# 📁 guards
-
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [guards](/frontend/src/core/guards)
+
+# 📁 Guards
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,10 +8,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> admin_guard_ts["📄 admin.guard.ts"]
-  Root --> auth_guard_ts["📄 auth.guard.ts"]
-  Root --> index_ts["📄 index.ts"]
+  guards["📁 guards"]
+  guards --> admin_guard_ts["📄 admin.guard.ts"]
+  guards --> auth_guard_ts["📄 auth.guard.ts"]
+  guards --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
@@ -22,14 +22,12 @@ graph TD
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
-- `@angular/core`
-- `@angular/router`
-- `@entities/user`
+- `./admin.guard`, `./auth.guard`, `@angular/core`, `@angular/router`, `@entities/user`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './guards';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

@@ -1,6 +1,6 @@
-# 📁 interfaces
-
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [domain](/backend/src/modules/admin-settings/domain) > [interfaces](/backend/src/modules/admin-settings/domain/interfaces)
+
+# 📁 Interfaces
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **interfaces** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 interfaces"]
-  Root --> admin_settings_interface_ts["📄 admin-settings.interface.ts"]
+  interfaces["📁 interfaces"]
+  interfaces --> admin_settings_interface_ts["📄 admin-settings.interface.ts"]
 ```
 
 ## 📄 File Registry
@@ -23,7 +23,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './interfaces';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

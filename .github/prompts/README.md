@@ -1,6 +1,6 @@
-# 📁 Mavluda Beauty prompts
+[Root](/.) > [.github](/.github) > [prompts](/.github/prompts)
 
-[.github](/.github) / [prompts](/.github/prompts)
+# 📁 Prompts
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **prompts** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -15,15 +15,16 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `mavluda-beauty.md` | File | Core logic and utilities for this domain. | N/A |
-
+| `mavluda-beauty.md` | Markdown | Core logic and utilities for this domain. | N/A |
 
 ## 🔗 Dependencies
-No external or alias dependencies detected.
+- No external dependencies.
 
 ## 🛠️ Usage
 ```typescript
-// Example integration for prompts
-// Import capabilities from this directory to enrich your modules.
+// Example usage within the Mavluda Beauty ecosystem
+import { relevantMember } from './core';
+
+// Integrate into the application architecture
+relevantMember.execute();
 ```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.
