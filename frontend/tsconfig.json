@@ -31,7 +31,7 @@
       "@shared/*": ["src/shared/*"],
       "@types/*": ["src/types/*"],
       "@widgets/*": ["src/widgets/*"],
-      "@environments/*": ["src/environments/*"],
+      "@environments/*": ["environments/*"],
       "@src/*": ["src/*"],
       "@core/*": ["src/core/*"]
     }

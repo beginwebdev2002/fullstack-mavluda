@@ -9,3 +9,4 @@ export interface Environment {
   apiUrl: string;
   telegramBotName: string;
 }
+

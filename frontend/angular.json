@@ -40,27 +40,51 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "./src/environments/environment.ts",
-                  "with": "./src/environments/environment.prod.ts"
-                }
-              ],
               "outputHashing": "all"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "environments/environment.ts",
+                  "with": "environments/environment.development.ts"
+                }
+              ]
             },
             "en": {
-              "localize": ["en-US"]
+              "localize": [
+                "en-US"
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "environments/environment.ts",
+                  "with": "environments/environment.en.ts"
+                }
+              ]
             },
             "ru": {
-              "localize": ["ru"]
+              "localize": [
+                "ru"
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "environments/environment.ts",
+                  "with": "environments/environment.ru.ts"
+                }
+              ]
             },
             "tg": {
-              "localize": ["tg"]
+              "localize": [
+                "tg"
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "environments/environment.ts",
+                  "with": "environments/environment.tg.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
