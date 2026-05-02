@@ -9,16 +9,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 repositories"]
+  Root --> README_md["📄 README.md"]
   Root --> partnership_repository_ts["📄 partnership.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `partnership.repository.ts` | TypeScript | Provides core logic and orchestration for partnership.repository.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `../../domain/partnership.entity`
+- `../schemas/partnership.schema`
+- `./repositories`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 - `mongoose`

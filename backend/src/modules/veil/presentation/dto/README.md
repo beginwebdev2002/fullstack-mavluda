@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 dto"]
+  Root --> README_md["📄 README.md"]
   Root --> create_veil_dto_ts["📄 create-veil.dto.ts"]
   Root --> update_veil_dto_ts["📄 update-veil.dto.ts"]
 ```
@@ -16,13 +17,16 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `create-veil.dto.ts` | TypeScript | Provides core logic and orchestration for create-veil.dto.ts. | N/A |
 | `update-veil.dto.ts` | TypeScript | Provides core logic and orchestration for update-veil.dto.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `./create-veil.dto`
+- `./dto`
 - `@nestjs/mapped-types`
 - `class-transformer`
+- `class-validator`
 
 ## 🛠️ Usage
 ```typescript

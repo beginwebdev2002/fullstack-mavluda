@@ -9,7 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 modules"]
-  Root --> admin-settings["📁 admin-settings"]
+  Root --> admin_settings["📁 admin-settings"]
   Root --> auth["📁 auth"]
   Root --> booking["📁 booking"]
   Root --> gallery["📁 gallery"]
@@ -19,13 +19,16 @@ graph TD
   Root --> treatments["📁 treatments"]
   Root --> user["📁 user"]
   Root --> veil["📁 veil"]
+  Root --> README_md["📄 README.md"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `./modules`
 
 ## 🛠️ Usage
 ```typescript

@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 test"]
+  Root --> README_md["📄 README.md"]
   Root --> app_e2e_spec_ts["📄 app.e2e-spec.ts"]
   Root --> jest_e2e_json["📄 jest-e2e.json"]
 ```
@@ -16,11 +17,13 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `app.e2e-spec.ts` | TypeScript | Unit testing and quality assurance for app.e2e-spec.ts. | @nestjs |
 | `jest-e2e.json` | JSON Configuration | Provides core logic and orchestration for jest-e2e.json. | N/A |
 
 ## 🔗 Dependencies
 - `./../src/app.module`
+- `./test`
 - `@nestjs/common`
 - `@nestjs/testing`
 - `supertest`

@@ -13,6 +13,7 @@ graph TD
   Root --> domain["📁 domain"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
+  Root --> README_md["📄 README.md"]
   Root --> index_ts["📄 index.ts"]
   Root --> veil_module_ts["📄 veil.module.ts"]
 ```
@@ -20,13 +21,20 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 | `veil.module.ts` | TypeScript | Defines the architectural module boundaries for veil.module.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `./application/veil.service`
+- `./domain/veil.entity`
 - `./infrastructure/repositories/veil.repository`
+- `./infrastructure/schemas/veil.schema`
+- `./presentation/dto/create-veil.dto`
+- `./presentation/dto/update-veil.dto`
 - `./presentation/veil.controller`
+- `./veil`
+- `./veil.module`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

@@ -13,6 +13,7 @@ graph TD
   Root --> domain["📁 domain"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
+  Root --> README_md["📄 README.md"]
   Root --> index_ts["📄 index.ts"]
   Root --> inventory_module_ts["📄 inventory.module.ts"]
 ```
@@ -20,12 +21,19 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 | `inventory.module.ts` | TypeScript | Defines the architectural module boundaries for inventory.module.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `./application/inventory.service`
+- `./domain/inventory.entity`
 - `./infrastructure/repositories/inventory.repository`
+- `./infrastructure/schemas/inventory.schema`
+- `./inventory`
+- `./inventory.module`
+- `./presentation/dto/create-inventory.dto`
+- `./presentation/dto/update-inventory.dto`
 - `./presentation/inventory.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`

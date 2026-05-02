@@ -9,15 +9,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 database"]
+  Root --> README_md["📄 README.md"]
   Root --> database_module_ts["📄 database.module.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `database.module.ts` | TypeScript | Defines the architectural module boundaries for database.module.ts. | @nestjs |
 
 ## 🔗 Dependencies
+- `./database`
 - `@nestjs/common`
 - `@nestjs/config`
 - `@nestjs/mongoose`

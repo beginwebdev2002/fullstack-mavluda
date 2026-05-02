@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 interceptors"]
+  Root --> README_md["📄 README.md"]
   Root --> api_interceptor_ts["📄 api.interceptor.ts"]
   Root --> error_interceptor_ts["📄 error.interceptor.ts"]
   Root --> index_ts["📄 index.ts"]
@@ -17,11 +18,15 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `api.interceptor.ts` | TypeScript | Provides core logic and orchestration for api.interceptor.ts. | @angular, @shared |
 | `error.interceptor.ts` | TypeScript | Provides core logic and orchestration for error.interceptor.ts. | @angular, @shared |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
+- `./api.interceptor`
+- `./error.interceptor`
+- `./interceptors`
 - `@angular/common/http`
 - `@angular/core`
 - `@shared/lib`

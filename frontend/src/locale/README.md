@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 locale"]
+  Root --> README_md["📄 README.md"]
   Root --> messages_ru_xlf["📄 messages.ru.xlf"]
   Root --> messages_tj_xlf["📄 messages.tj.xlf"]
   Root --> messages_xlf["📄 messages.xlf"]
@@ -17,12 +18,13 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `messages.ru.xlf` | File | Provides core logic and orchestration for messages.ru.xlf. | N/A |
 | `messages.tj.xlf` | File | Provides core logic and orchestration for messages.tj.xlf. | N/A |
 | `messages.xlf` | File | Provides core logic and orchestration for messages.xlf. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `./locale`
 
 ## 🛠️ Usage
 ```typescript

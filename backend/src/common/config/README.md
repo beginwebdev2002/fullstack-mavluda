@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 config"]
+  Root --> README_md["📄 README.md"]
   Root --> app_config_module_ts["📄 app-config.module.ts"]
   Root --> app_config_service_ts["📄 app-config.service.ts"]
   Root --> configuration_ts["📄 configuration.ts"]
@@ -18,6 +19,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `app-config.module.ts` | TypeScript | Defines the architectural module boundaries for app-config.module.ts. | @nestjs |
 | `app-config.service.ts` | TypeScript | Encapsulates business logic and data access for app-config.service.ts. | @nestjs |
 | `configuration.ts` | TypeScript | Provides core logic and orchestration for configuration.ts. | N/A |
@@ -25,11 +27,13 @@ graph TD
 
 ## 🔗 Dependencies
 - `./app-config.service`
+- `./config`
 - `./configuration`
 - `./env.validation`
 - `@nestjs/common`
 - `@nestjs/config`
 - `class-transformer`
+- `class-validator`
 
 ## 🛠️ Usage
 ```typescript

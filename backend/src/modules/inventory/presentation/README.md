@@ -10,18 +10,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 graph TD
   Root["📁 presentation"]
   Root --> dto["📁 dto"]
+  Root --> README_md["📄 README.md"]
   Root --> inventory_controller_ts["📄 inventory.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for inventory.controller.ts. | N/A |
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
+| `inventory.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for inventory.controller.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `../application/inventory.service`
 - `./dto/create-inventory.dto`
 - `./dto/update-inventory.dto`
+- `./presentation`
+- `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript

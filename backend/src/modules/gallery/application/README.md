@@ -9,17 +9,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 application"]
+  Root --> README_md["📄 README.md"]
   Root --> gallery_service_ts["📄 gallery.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `gallery.service.ts` | TypeScript | Encapsulates business logic and data access for gallery.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `../domain/gallery.entity`
 - `../infrastructure/repositories/gallery.repository`
+- `./application`
 - `@nestjs/common`
 
 ## 🛠️ Usage

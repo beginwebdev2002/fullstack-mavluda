@@ -2,23 +2,26 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [gallery](/frontend/src/pages/gallery) > [ui](/frontend/src/pages/gallery/ui)
 
-**FSD Layer:** Page
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **ui** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+💎 **FSD Layer:** This directory represents the **Pages** layer in the Feature Sliced Design (FSD) architecture, strictly adhering to its modular principles.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 ui"]
-  Root --> gallery-form["📁 gallery-form"]
+  Root --> gallery_form["📁 gallery-form"]
+  Root --> README_md["📄 README.md"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `./ui`
 
 ## 🛠️ Usage
 ```typescript

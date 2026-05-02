@@ -9,15 +9,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 interfaces"]
+  Root --> README_md["📄 README.md"]
   Root --> authenticated_request_interface_ts["📄 authenticated-request.interface.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `authenticated-request.interface.ts` | TypeScript | Provides core logic and orchestration for authenticated-request.interface.ts. | N/A |
 
 ## 🔗 Dependencies
+- `./interfaces`
 - `express`
 
 ## 🛠️ Usage

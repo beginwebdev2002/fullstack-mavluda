@@ -49,3 +49,7 @@ dist-ssr
 !**/README.md
 !GEMINI.md
 !AGENTS.md
+
+# Allow generated readmes to be committed
+!**/README.md
+!README.md

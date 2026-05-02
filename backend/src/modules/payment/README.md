@@ -10,6 +10,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 graph TD
   Root["📁 payment"]
   Root --> strategies["📁 strategies"]
+  Root --> README_md["📄 README.md"]
   Root --> index_ts["📄 index.ts"]
   Root --> payment_controller_ts["📄 payment.controller.ts"]
   Root --> payment_module_ts["📄 payment.module.ts"]
@@ -19,13 +20,16 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `payment.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for payment.controller.ts. | N/A |
+| `payment.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for payment.controller.ts. | @nestjs |
 | `payment.module.ts` | TypeScript | Defines the architectural module boundaries for payment.module.ts. | @nestjs |
 | `payment.service.ts` | TypeScript | Encapsulates business logic and data access for payment.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
+- `./payment`
 - `./payment.controller`
+- `./payment.module`
 - `./payment.service`
 - `./strategies/alif-pay.strategy`
 - `./strategies/mock-card.strategy`

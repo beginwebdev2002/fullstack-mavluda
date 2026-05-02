@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 constants"]
+  Root --> README_md["📄 README.md"]
   Root --> api_endpoints_ts["📄 api-endpoints.ts"]
   Root --> index_ts["📄 index.ts"]
 ```
@@ -16,10 +17,13 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `api-endpoints.ts` | TypeScript | Provides core logic and orchestration for api-endpoints.ts. | @shared |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
+- `./api-endpoints`
+- `./constants`
 - `@shared/lib`
 
 ## 🛠️ Usage

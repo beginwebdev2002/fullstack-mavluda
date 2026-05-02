@@ -13,6 +13,7 @@ graph TD
   Root --> domain["📁 domain"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
+  Root --> README_md["📄 README.md"]
   Root --> index_ts["📄 index.ts"]
   Root --> treatments_module_ts["📄 treatments.module.ts"]
 ```
@@ -20,12 +21,23 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 | `treatments.module.ts` | TypeScript | Defines the architectural module boundaries for treatments.module.ts. | @modules, @nestjs |
 
 ## 🔗 Dependencies
+- `./application/treatments.service`
+- `./domain/treatments.entity`
+- `./infrastructure/repositories/treatments.repository`
+- `./infrastructure/schemas/treatments.schema`
+- `./presentation/dto/create-treatments.dto`
+- `./presentation/dto/update-treatments.dto`
+- `./presentation/treatments.controller`
+- `./treatments`
+- `./treatments.module`
 - `@modules/treatments/application/treatments.service`
 - `@modules/treatments/infrastructure/repositories/treatments.repository`
+- `@modules/treatments/infrastructure/schemas/treatments.schema`
 - `@modules/treatments/presentation/treatments.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`

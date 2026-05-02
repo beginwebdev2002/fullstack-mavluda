@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 guards"]
+  Root --> README_md["📄 README.md"]
   Root --> jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
   Root --> roles_guard_ts["📄 roles.guard.ts"]
 ```
@@ -16,12 +17,14 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `jwt-auth.guard.ts` | TypeScript | Provides core logic and orchestration for jwt-auth.guard.ts. | @nestjs |
 | `roles.guard.ts` | TypeScript | Provides core logic and orchestration for roles.guard.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `../decorators/public.decorator`
 - `../decorators/roles.decorator`
+- `./guards`
 - `@nestjs/common`
 - `@nestjs/core`
 - `@nestjs/passport`

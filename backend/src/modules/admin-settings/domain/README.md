@@ -10,16 +10,19 @@ Delivering luxury-tier architectural components and high-performance logic for t
 graph TD
   Root["📁 domain"]
   Root --> interfaces["📁 interfaces"]
+  Root --> README_md["📄 README.md"]
   Root --> admin_settings_entity_ts["📄 admin-settings.entity.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `admin-settings.entity.ts` | TypeScript | Provides core logic and orchestration for admin-settings.entity.ts. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `./domain`
+- `./interfaces/admin-settings.interface`
 
 ## 🛠️ Usage
 ```typescript

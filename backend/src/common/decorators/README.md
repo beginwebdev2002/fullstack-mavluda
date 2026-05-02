@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 decorators"]
+  Root --> README_md["📄 README.md"]
   Root --> public_decorator_ts["📄 public.decorator.ts"]
   Root --> roles_decorator_ts["📄 roles.decorator.ts"]
 ```
@@ -16,10 +17,12 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `public.decorator.ts` | TypeScript | Provides core logic and orchestration for public.decorator.ts. | @nestjs |
 | `roles.decorator.ts` | TypeScript | Provides core logic and orchestration for roles.decorator.ts. | @nestjs |
 
 ## 🔗 Dependencies
+- `./decorators`
 - `@nestjs/common`
 
 ## 🛠️ Usage

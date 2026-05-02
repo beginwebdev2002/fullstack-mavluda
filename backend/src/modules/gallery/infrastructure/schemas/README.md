@@ -9,15 +9,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 schemas"]
+  Root --> README_md["📄 README.md"]
   Root --> gallery_schema_ts["📄 gallery.schema.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `gallery.schema.ts` | TypeScript | Provides core logic and orchestration for gallery.schema.ts. | @nestjs |
 
 ## 🔗 Dependencies
+- `./schemas`
 - `@nestjs/mongoose`
 - `mongoose`
 

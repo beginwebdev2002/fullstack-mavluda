@@ -11,13 +11,16 @@ graph TD
   Root["📁 infrastructure"]
   Root --> repositories["📁 repositories"]
   Root --> schemas["📁 schemas"]
+  Root --> README_md["📄 README.md"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `./infrastructure`
 
 ## 🛠️ Usage
 ```typescript

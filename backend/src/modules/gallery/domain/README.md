@@ -9,16 +9,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 domain"]
+  Root --> README_md["📄 README.md"]
   Root --> gallery_entity_ts["📄 gallery.entity.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `gallery.entity.ts` | TypeScript | Provides core logic and orchestration for gallery.entity.ts. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `./domain`
 
 ## 🛠️ Usage
 ```typescript

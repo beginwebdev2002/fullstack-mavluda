@@ -10,20 +10,24 @@ Delivering luxury-tier architectural components and high-performance logic for t
 graph TD
   Root["📁 presentation"]
   Root --> dto["📁 dto"]
+  Root --> README_md["📄 README.md"]
   Root --> user_controller_ts["📄 user.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `user.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for user.controller.ts. | @common, @modules, @nestjs |
 
 ## 🔗 Dependencies
 - `../application/user.service`
 - `./dto/create-user.dto`
 - `./dto/update-user.dto`
+- `./presentation`
 - `@common/interfaces/authenticated-request.interface`
 - `@modules/user`
+- `@nestjs/common`
 - `@nestjs/platform-express`
 - `multer`
 - `path`

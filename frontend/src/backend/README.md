@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 backend"]
+  Root --> README_md["📄 README.md"]
   Root --> index_ts["📄 index.ts"]
   Root --> telegram_auth_guard_ts["📄 telegram-auth.guard.ts"]
 ```
@@ -16,10 +17,13 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 | `telegram-auth.guard.ts` | TypeScript | Provides core logic and orchestration for telegram-auth.guard.ts. | @nestjs |
 
 ## 🔗 Dependencies
+- `./backend`
+- `./telegram-auth.guard`
 - `@nestjs/common`
 - `crypto`
 - `express`

@@ -11,6 +11,7 @@ graph TD
   Root["📁 src"]
   Root --> common["📁 common"]
   Root --> modules["📁 modules"]
+  Root --> README_md["📄 README.md"]
   Root --> app_controller_spec_ts["📄 app.controller.spec.ts"]
   Root --> app_controller_ts["📄 app.controller.ts"]
   Root --> app_module_ts["📄 app.module.ts"]
@@ -21,6 +22,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `app.controller.spec.ts` | TypeScript | Unit testing and quality assurance for app.controller.spec.ts. | @nestjs |
 | `app.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for app.controller.ts. | @nestjs |
 | `app.module.ts` | TypeScript | Defines the architectural module boundaries for app.module.ts. | @modules, @nestjs |
@@ -34,6 +36,7 @@ graph TD
 - `./common/config/app-config.module`
 - `./common/database/database.module`
 - `./common/filters/i18n-exception.filter`
+- `./src`
 - `@modules/admin-settings`
 - `@modules/auth`
 - `@modules/booking`

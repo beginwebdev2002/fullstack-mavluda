@@ -2,15 +2,16 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [services](/frontend/src/shared/services)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **services** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+💎 **FSD Layer:** This directory represents the **Shared** layer in the Feature Sliced Design (FSD) architecture, strictly adhering to its modular principles.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 services"]
+  Root --> README_md["📄 README.md"]
   Root --> auth_service_ts["📄 auth.service.ts"]
   Root --> error_service_ts["📄 error.service.ts"]
   Root --> image_service_ts["📄 image.service.ts"]
@@ -21,6 +22,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `auth.service.ts` | TypeScript | Encapsulates business logic and data access for auth.service.ts. | @angular, @core, @shared |
 | `error.service.ts` | TypeScript | Encapsulates business logic and data access for error.service.ts. | @angular |
 | `image.service.ts` | TypeScript | Encapsulates business logic and data access for image.service.ts. | @angular |
@@ -28,6 +30,10 @@ graph TD
 | `telegram.service.ts` | TypeScript | Encapsulates business logic and data access for telegram.service.ts. | @angular, @src |
 
 ## 🔗 Dependencies
+- `./auth.service`
+- `./error.service`
+- `./image.service`
+- `./services`
 - `./telegram.service`
 - `@angular/common/http`
 - `@angular/core`

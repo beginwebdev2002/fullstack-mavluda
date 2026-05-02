@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 utils"]
+  Root --> README_md["📄 README.md"]
   Root --> file_system_ts["📄 file-system.ts"]
   Root --> index_ts["📄 index.ts"]
   Root --> object_ts["📄 object.ts"]
@@ -17,11 +18,15 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `file-system.ts` | TypeScript | Provides core logic and orchestration for file-system.ts. | N/A |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 | `object.ts` | TypeScript | Provides core logic and orchestration for object.ts. | N/A |
 
 ## 🔗 Dependencies
+- `./file-system`
+- `./object`
+- `./utils`
 - `fs`
 - `path`
 - `util`

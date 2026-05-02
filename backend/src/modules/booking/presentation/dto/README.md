@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 dto"]
+  Root --> README_md["📄 README.md"]
   Root --> create_booking_dto_ts["📄 create-booking.dto.ts"]
   Root --> update_booking_dto_ts["📄 update-booking.dto.ts"]
 ```
@@ -16,11 +17,13 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `create-booking.dto.ts` | TypeScript | Provides core logic and orchestration for create-booking.dto.ts. | N/A |
 | `update-booking.dto.ts` | TypeScript | Provides core logic and orchestration for update-booking.dto.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `./create-booking.dto`
+- `./dto`
 - `@nestjs/mapped-types`
 
 ## 🛠️ Usage

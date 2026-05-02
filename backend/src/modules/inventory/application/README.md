@@ -9,12 +9,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 application"]
+  Root --> README_md["📄 README.md"]
   Root --> inventory_service_ts["📄 inventory.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `inventory.service.ts` | TypeScript | Encapsulates business logic and data access for inventory.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
@@ -22,6 +24,7 @@ graph TD
 - `../infrastructure/repositories/inventory.repository`
 - `../presentation/dto/create-inventory.dto`
 - `../presentation/dto/update-inventory.dto`
+- `./application`
 - `@nestjs/common`
 
 ## 🛠️ Usage

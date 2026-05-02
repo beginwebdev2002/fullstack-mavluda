@@ -2,15 +2,16 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [models](/frontend/src/shared/models)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **models** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+💎 **FSD Layer:** This directory represents the **Shared** layer in the Feature Sliced Design (FSD) architecture, strictly adhering to its modular principles.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 models"]
+  Root --> README_md["📄 README.md"]
   Root --> admin_settings_model_ts["📄 admin-settings.model.ts"]
   Root --> api_response_model_ts["📄 api-response.model.ts"]
   Root --> gallery_model_ts["📄 gallery.model.ts"]
@@ -22,6 +23,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `admin-settings.model.ts` | TypeScript | Provides core logic and orchestration for admin-settings.model.ts. | N/A |
 | `api-response.model.ts` | TypeScript | Provides core logic and orchestration for api-response.model.ts. | N/A |
 | `gallery.model.ts` | TypeScript | Provides core logic and orchestration for gallery.model.ts. | N/A |
@@ -30,7 +32,12 @@ graph TD
 | `user.model.ts` | TypeScript | Provides core logic and orchestration for user.model.ts. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `./admin-settings.model`
+- `./api-response.model`
+- `./gallery.model`
+- `./models`
+- `./service.model`
+- `./user.model`
 
 ## 🛠️ Usage
 ```typescript

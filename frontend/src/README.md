@@ -13,13 +13,13 @@ graph TD
   Root --> backend["📁 backend"]
   Root --> core["📁 core"]
   Root --> entities["📁 entities"]
-  Root --> environments["📁 environments"]
   Root --> features["📁 features"]
   Root --> locale["📁 locale"]
   Root --> pages["📁 pages"]
   Root --> shared["📁 shared"]
   Root --> types["📁 types"]
   Root --> widgets["📁 widgets"]
+  Root --> README_md["📄 README.md"]
   Root --> app_component_html["📄 app.component.html"]
   Root --> app_component_scss["📄 app.component.scss"]
   Root --> app_component_ts["📄 app.component.ts"]
@@ -30,6 +30,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `app.component.html` | Template | Structural template and layout for app.component.html. | N/A |
 | `app.component.scss` | Stylesheet | Luxury styling and visual presentation for app.component.scss. | N/A |
 | `app.component.ts` | TypeScript | UI component logic and state management for app.component.ts. | @angular, @shared |
@@ -39,10 +40,24 @@ graph TD
 ## 🔗 Dependencies
 - `./app.component`
 - `./app/app.config`
+- `./src`
 - `@angular/common`
+- `@angular/core`
 - `@angular/platform-browser`
 - `@angular/router`
+- `@pages/about`
 - `@pages/auth`
+- `@pages/clients`
+- `@pages/dashboard`
+- `@pages/gallery`
+- `@pages/portfolio`
+- `@pages/settings`
+- `@pages/treatments`
+- `@pages/treatments-catalog`
+- `@pages/user-home`
+- `@pages/user-profile`
+- `@pages/veil`
+- `@pages/veils-catalog`
 - `@shared/services`
 - `@shared/ui`
 - `@widgets/layouts`

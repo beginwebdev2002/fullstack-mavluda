@@ -10,12 +10,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 graph TD
   Root["📁 presentation"]
   Root --> dto["📁 dto"]
+  Root --> README_md["📄 README.md"]
   Root --> veil_controller_ts["📄 veil.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `veil.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for veil.controller.ts. | @nestjs |
 
 ## 🔗 Dependencies
@@ -23,6 +25,8 @@ graph TD
 - `../domain/veil.entity`
 - `./dto/create-veil.dto`
 - `./dto/update-veil.dto`
+- `./presentation`
+- `@nestjs/common`
 - `@nestjs/platform-express`
 - `multer`
 - `path`

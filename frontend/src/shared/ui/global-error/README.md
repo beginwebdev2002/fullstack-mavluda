@@ -2,24 +2,27 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [global-error](/frontend/src/shared/ui/global-error)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **global-error** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+💎 **FSD Layer:** This directory represents the **Shared** layer in the Feature Sliced Design (FSD) architecture, strictly adhering to its modular principles.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 global-error"]
+  Root --> README_md["📄 README.md"]
   Root --> global_error_component_ts["📄 global-error.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `global-error.component.ts` | TypeScript | UI component logic and state management for global-error.component.ts. | @angular, @shared |
 
 ## 🔗 Dependencies
+- `./global-error`
 - `@angular/animations`
 - `@angular/common`
 - `@angular/core`

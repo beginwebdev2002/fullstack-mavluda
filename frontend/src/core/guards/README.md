@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 guards"]
+  Root --> README_md["📄 README.md"]
   Root --> admin_guard_ts["📄 admin.guard.ts"]
   Root --> auth_guard_ts["📄 auth.guard.ts"]
   Root --> index_ts["📄 index.ts"]
@@ -17,11 +18,15 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `admin.guard.ts` | TypeScript | Provides core logic and orchestration for admin.guard.ts. | @angular, @entities |
 | `auth.guard.ts` | TypeScript | Provides core logic and orchestration for auth.guard.ts. | @angular, @entities |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
+- `./admin.guard`
+- `./auth.guard`
+- `./guards`
 - `@angular/core`
 - `@angular/router`
 - `@entities/user`

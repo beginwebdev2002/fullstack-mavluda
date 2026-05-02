@@ -9,17 +9,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 application"]
+  Root --> README_md["📄 README.md"]
   Root --> treatments_service_ts["📄 treatments.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `treatments.service.ts` | TypeScript | Encapsulates business logic and data access for treatments.service.ts. | @common, @nestjs |
 
 ## 🔗 Dependencies
 - `../domain/treatments.entity`
 - `../infrastructure/repositories/treatments.repository`
+- `./application`
 - `@common/utils`
 - `@nestjs/common`
 

@@ -9,16 +9,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 repositories"]
+  Root --> README_md["📄 README.md"]
   Root --> admin_settings_repository_ts["📄 admin-settings.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `admin-settings.repository.ts` | TypeScript | Provides core logic and orchestration for admin-settings.repository.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `../../domain/admin-settings.entity`
+- `../schemas/admin-settings.schema`
+- `./repositories`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 - `mongoose`

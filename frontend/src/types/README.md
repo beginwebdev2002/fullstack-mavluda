@@ -9,16 +9,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 types"]
+  Root --> README_md["📄 README.md"]
   Root --> telegram_ts["📄 telegram.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `telegram.ts` | TypeScript | Provides core logic and orchestration for telegram.ts. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `./types`
 
 ## 🛠️ Usage
 ```typescript

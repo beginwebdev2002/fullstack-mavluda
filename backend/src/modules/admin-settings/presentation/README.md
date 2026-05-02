@@ -10,19 +10,23 @@ Delivering luxury-tier architectural components and high-performance logic for t
 graph TD
   Root["📁 presentation"]
   Root --> dto["📁 dto"]
+  Root --> README_md["📄 README.md"]
   Root --> admin_settings_controller_ts["📄 admin-settings.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for admin-settings.controller.ts. | N/A |
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
+| `admin-settings.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for admin-settings.controller.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `../application/admin-settings.service`
 - `../domain/admin-settings.entity`
 - `./dto/create-admin-settings.dto`
 - `./dto/update-admin-settings.dto`
+- `./presentation`
+- `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript

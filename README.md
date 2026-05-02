@@ -11,11 +11,11 @@ graph TD
   Root["📁 Mavluda Beauty Repository"]
   Root --> backend["📁 backend"]
   Root --> frontend["📁 frontend"]
-  Root --> scripts["📁 scripts"]
   Root --> _env["📄 .env"]
   Root --> _gitignore["📄 .gitignore"]
-  Root --> _gitignore_append["📄 .gitignore_append"]
   Root --> GEMINI_md["📄 GEMINI.md"]
+  Root --> README_md["📄 README.md"]
+  Root --> SECURITY_md["📄 SECURITY.md"]
   Root --> generate_readmes_py["📄 generate_readmes.py"]
 ```
 
@@ -24,17 +24,19 @@ graph TD
 |---|---|---|---|
 | `.env` | File | Provides core logic and orchestration for .env. | N/A |
 | `.gitignore` | File | Provides core logic and orchestration for .gitignore. | N/A |
-| `.gitignore_append` | File | Provides core logic and utilities for this domain. | N/A |
 | `GEMINI.md` | Markdown | Provides core logic and orchestration for GEMINI.md. | N/A |
-| `generate_readmes.py` | File | Provides core logic and orchestration for generate_readmes.py. | N/A |
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
+| `SECURITY.md` | Markdown | Provides core logic and configuration for SECURITY.md. | N/A |
+| `generate_readmes.py` | Python Script | Provides core logic and orchestration for generate_readmes.py. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `./Mavluda Beauty Repository`
+- `./{dir_name}`
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './core';
+import { relevantMember } from './Mavluda Beauty Repository';
 
 // Integrate into the application architecture
 relevantMember.execute();

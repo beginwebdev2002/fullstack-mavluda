@@ -9,12 +9,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 application"]
+  Root --> README_md["📄 README.md"]
   Root --> booking_service_ts["📄 booking.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `booking.service.ts` | TypeScript | Encapsulates business logic and data access for booking.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
@@ -22,6 +24,7 @@ graph TD
 - `../infrastructure/repositories/booking.repository`
 - `../presentation/dto/create-booking.dto`
 - `../presentation/dto/update-booking.dto`
+- `./application`
 - `@nestjs/common`
 
 ## 🛠️ Usage

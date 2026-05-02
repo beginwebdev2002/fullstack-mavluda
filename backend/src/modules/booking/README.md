@@ -13,6 +13,7 @@ graph TD
   Root --> domain["📁 domain"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
+  Root --> README_md["📄 README.md"]
   Root --> booking_module_ts["📄 booking.module.ts"]
   Root --> index_ts["📄 index.ts"]
 ```
@@ -20,13 +21,20 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `booking.module.ts` | TypeScript | Defines the architectural module boundaries for booking.module.ts. | @nestjs |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
 - `./application/booking.service`
+- `./booking`
+- `./booking.module`
+- `./domain/booking.entity`
 - `./infrastructure/repositories/booking.repository`
+- `./infrastructure/schemas/booking.schema`
 - `./presentation/booking.controller`
+- `./presentation/dto/create-booking.dto`
+- `./presentation/dto/update-booking.dto`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

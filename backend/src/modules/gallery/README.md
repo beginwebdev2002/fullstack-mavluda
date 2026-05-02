@@ -13,6 +13,7 @@ graph TD
   Root --> domain["📁 domain"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
+  Root --> README_md["📄 README.md"]
   Root --> gallery_module_ts["📄 gallery.module.ts"]
   Root --> index_ts["📄 index.ts"]
 ```
@@ -20,12 +21,19 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `gallery.module.ts` | TypeScript | Defines the architectural module boundaries for gallery.module.ts. | @nestjs |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
 - `./application/gallery.service`
+- `./domain/gallery.entity`
+- `./gallery`
+- `./gallery.module`
 - `./infrastructure/repositories/gallery.repository`
+- `./infrastructure/schemas/gallery.schema`
+- `./presentation/dto/create-gallery.dto`
+- `./presentation/dto/update-gallery.dto`
 - `./presentation/gallery.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`

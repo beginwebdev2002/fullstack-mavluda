@@ -2,10 +2,10 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages)
 
-**FSD Layer:** Page
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **pages** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+💎 **FSD Layer:** This directory represents the **Pages** layer in the Feature Sliced Design (FSD) architecture, strictly adhering to its modular principles.
 
 ## 🏗️ Architecture
 ```mermaid
@@ -20,18 +20,21 @@ graph TD
   Root --> portfolio["📁 portfolio"]
   Root --> settings["📁 settings"]
   Root --> treatments["📁 treatments"]
-  Root --> treatments-catalog["📁 treatments-catalog"]
-  Root --> user-home["📁 user-home"]
-  Root --> user-profile["📁 user-profile"]
+  Root --> treatments_catalog["📁 treatments-catalog"]
+  Root --> user_home["📁 user-home"]
+  Root --> user_profile["📁 user-profile"]
   Root --> veil["📁 veil"]
-  Root --> veils-catalog["📁 veils-catalog"]
+  Root --> veils_catalog["📁 veils-catalog"]
+  Root --> README_md["📄 README.md"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `./pages`
 
 ## 🛠️ Usage
 ```typescript

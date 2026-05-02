@@ -10,18 +10,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 graph TD
   Root["📁 presentation"]
   Root --> dto["📁 dto"]
+  Root --> README_md["📄 README.md"]
   Root --> booking_controller_ts["📄 booking.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for booking.controller.ts. | N/A |
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
+| `booking.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for booking.controller.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `../application/booking.service`
 - `./dto/create-booking.dto`
 - `./dto/update-booking.dto`
+- `./presentation`
+- `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript

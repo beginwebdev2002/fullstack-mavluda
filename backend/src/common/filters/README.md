@@ -9,16 +9,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 filters"]
+  Root --> README_md["📄 README.md"]
   Root --> i18n_exception_filter_ts["📄 i18n-exception.filter.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `i18n-exception.filter.ts` | TypeScript | Provides core logic and orchestration for i18n-exception.filter.ts. | N/A |
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
+| `i18n-exception.filter.ts` | TypeScript | Provides core logic and orchestration for i18n-exception.filter.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `../constants/error-messages.constant`
+- `./filters`
+- `@nestjs/common`
 - `express`
 
 ## 🛠️ Usage

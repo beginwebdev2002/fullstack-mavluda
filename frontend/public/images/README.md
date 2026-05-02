@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 images"]
+  Root --> README_md["📄 README.md"]
   Root --> treatments_add_img_png["📄 treatments-add-img.png"]
   Root --> treatments_no_img_png["📄 treatments-no-img.png"]
 ```
@@ -16,11 +17,12 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `treatments-add-img.png` | File | Provides core logic and orchestration for treatments-add-img.png. | N/A |
 | `treatments-no-img.png` | File | Provides core logic and orchestration for treatments-no-img.png. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `./images`
 
 ## 🛠️ Usage
 ```typescript

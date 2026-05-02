@@ -10,15 +10,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 graph TD
   Root["📁 presentation"]
   Root --> dto["📁 dto"]
+  Root --> README_md["📄 README.md"]
   Root --> treatments_controller_ts["📄 treatments.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for treatments.controller.ts. | @nestjs |
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
+| `treatments.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for treatments.controller.ts. | @modules, @nestjs |
 
 ## 🔗 Dependencies
+- `./presentation`
+- `@modules/treatments`
+- `@nestjs/common`
 - `@nestjs/platform-express`
 - `multer`
 - `path`

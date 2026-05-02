@@ -9,16 +9,19 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 infrastructure"]
+  Root --> README_md["📄 README.md"]
   Root --> jwt_strategy_ts["📄 jwt.strategy.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `jwt.strategy.ts` | TypeScript | Provides core logic and orchestration for jwt.strategy.ts. | @common, @nestjs |
 
 ## 🔗 Dependencies
 - `../interfaces/jwt-payload.interface`
+- `./infrastructure`
 - `@common/config/app-config.service`
 - `@nestjs/common`
 - `@nestjs/passport`

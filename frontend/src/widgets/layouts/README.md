@@ -2,15 +2,16 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [layouts](/frontend/src/widgets/layouts)
 
-**FSD Layer:** Widget
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **layouts** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+💎 **FSD Layer:** This directory represents the **Widgets** layer in the Feature Sliced Design (FSD) architecture, strictly adhering to its modular principles.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
   Root["📁 layouts"]
+  Root --> README_md["📄 README.md"]
   Root --> admin_layout_component_html["📄 admin-layout.component.html"]
   Root --> admin_layout_component_scss["📄 admin-layout.component.scss"]
   Root --> admin_layout_component_ts["📄 admin-layout.component.ts"]
@@ -23,6 +24,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `admin-layout.component.html` | Template | Structural template and layout for admin-layout.component.html. | N/A |
 | `admin-layout.component.scss` | Stylesheet | Luxury styling and visual presentation for admin-layout.component.scss. | N/A |
 | `admin-layout.component.ts` | TypeScript | UI component logic and state management for admin-layout.component.ts. | @angular, @widgets |
@@ -32,6 +34,9 @@ graph TD
 | `user-layout.component.ts` | TypeScript | UI component logic and state management for user-layout.component.ts. | @angular |
 
 ## 🔗 Dependencies
+- `./admin-layout.component`
+- `./layouts`
+- `./user-layout.component`
 - `@angular/common`
 - `@angular/core`
 - `@angular/router`

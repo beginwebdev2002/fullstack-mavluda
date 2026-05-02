@@ -9,8 +9,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 frontend"]
+  Root --> environments["📁 environments"]
   Root --> public["📁 public"]
   Root --> src["📁 src"]
+  Root --> README_md["📄 README.md"]
   Root --> angular_json["📄 angular.json"]
   Root --> index_html["📄 index.html"]
   Root --> index_tsx["📄 index.tsx"]
@@ -24,9 +26,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `angular.json` | JSON Configuration | Provides core logic and orchestration for angular.json. | N/A |
 | `index.html` | Template | Provides core logic and orchestration for index.html. | N/A |
-| `index.tsx` | File | Provides core logic and orchestration for index.tsx. | @angular |
+| `index.tsx` | TypeScript | Provides core logic and orchestration for index.tsx. | @angular |
 | `leaflet.css` | Stylesheet | Provides core logic and orchestration for leaflet.css. | N/A |
 | `metadata.json` | JSON Configuration | Provides core logic and orchestration for metadata.json. | N/A |
 | `package-lock.json` | JSON Configuration | Provides core logic and orchestration for package-lock.json. | N/A |
@@ -34,10 +37,10 @@ graph TD
 | `tsconfig.json` | JSON Configuration | Provides core logic and orchestration for tsconfig.json. | N/A |
 
 ## 🔗 Dependencies
+- `./frontend`
 - `./src/app.component`
 - `./src/app/app.config`
 - `@angular/platform-browser`
-- `leaflet/dist/leaflet.css`
 
 ## 🛠️ Usage
 ```typescript

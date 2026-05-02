@@ -9,16 +9,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 constants"]
+  Root --> README_md["📄 README.md"]
   Root --> error_messages_constant_ts["📄 error-messages.constant.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `error-messages.constant.ts` | TypeScript | Provides core logic and orchestration for error-messages.constant.ts. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `./constants`
 
 ## 🛠️ Usage
 ```typescript

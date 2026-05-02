@@ -9,17 +9,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 application"]
+  Root --> README_md["📄 README.md"]
   Root --> admin_settings_service_ts["📄 admin-settings.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `admin-settings.service.ts` | TypeScript | Encapsulates business logic and data access for admin-settings.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `../domain/admin-settings.entity`
 - `../infrastructure/repositories/admin-settings.repository`
+- `./application`
 - `@nestjs/common`
 
 ## 🛠️ Usage

@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 interfaces"]
+  Root --> README_md["📄 README.md"]
   Root --> auth_response_interface_ts["📄 auth-response.interface.ts"]
   Root --> jwt_payload_interface_ts["📄 jwt-payload.interface.ts"]
 ```
@@ -16,10 +17,12 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `auth-response.interface.ts` | TypeScript | Provides core logic and orchestration for auth-response.interface.ts. | @modules |
 | `jwt-payload.interface.ts` | TypeScript | Provides core logic and orchestration for jwt-payload.interface.ts. | N/A |
 
 ## 🔗 Dependencies
+- `./interfaces`
 - `@modules/user`
 
 ## 🛠️ Usage

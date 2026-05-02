@@ -10,18 +10,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 graph TD
   Root["📁 presentation"]
   Root --> dto["📁 dto"]
+  Root --> README_md["📄 README.md"]
   Root --> partnership_controller_ts["📄 partnership.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for partnership.controller.ts. | N/A |
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
+| `partnership.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for partnership.controller.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `../application/partnership.service`
 - `./dto/create-partnership.dto`
 - `./dto/update-partnership.dto`
+- `./presentation`
+- `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript

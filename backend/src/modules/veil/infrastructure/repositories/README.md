@@ -9,17 +9,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 repositories"]
+  Root --> README_md["📄 README.md"]
   Root --> veil_repository_ts["📄 veil.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
+| `README.md` | Markdown | Provides core logic and configuration for README.md. | N/A |
 | `veil.repository.ts` | TypeScript | Provides core logic and orchestration for veil.repository.ts. | @common, @nestjs |
 
 ## 🔗 Dependencies
 - `../../domain/veil.entity`
 - `../schemas/veil.schema`
+- `./repositories`
 - `@common/utils/file-system`
 - `@nestjs/common`
 - `@nestjs/mongoose`
