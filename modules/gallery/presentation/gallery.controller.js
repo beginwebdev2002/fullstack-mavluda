@@ -60,7 +60,8 @@ let GalleryController = class GalleryController {
                 : null;
             const galleryData = {
                 ...createGalleryDto,
-                imageUrl: imagePath || createGalleryDto.imageUrl,
+                imageUrl: imagePath ||
+                    createGalleryDto.imageUrl,
             };
             const gallery = galleryData;
             return await this.galleryService.create(gallery);

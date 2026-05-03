@@ -53,7 +53,7 @@ let VeilRepository = class VeilRepository {
             return null;
         }
         if (veil.image) {
-            const isDeleted = (0, file_system_1.fileDelete)(veil.image);
+            (0, file_system_1.fileDelete)(veil.image);
         }
         const doc = await this.veilModel
             .findByIdAndUpdate(id, { $set: updateData }, { new: true })

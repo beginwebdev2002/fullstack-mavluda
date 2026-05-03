@@ -23,7 +23,10 @@ let RolesGuard = class RolesGuard {
         if (!requiredRoles) {
             return true;
         }
-        const { user } = context.switchToHttp().getRequest();
+        const request = context
+            .switchToHttp()
+            .getRequest();
+        const user = request.user;
         if (!user || !user.role || !requiredRoles.includes(user.role)) {
             throw new common_1.ForbiddenException('Insufficient permissions');
         }

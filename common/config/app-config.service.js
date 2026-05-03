@@ -18,54 +18,77 @@ let AppConfigService = class AppConfigService {
         this.configService = configService;
     }
     get port() {
-        return this.configService.get('PORT', { infer: true }) ?? 3000;
+        return (this.configService.get('PORT', { infer: true }) ??
+            3000);
     }
     get nodeEnv() {
         return (this.configService.get('NODE_ENV', { infer: true }) ??
             'development');
     }
     get apiPrefix() {
-        return (this.configService.get('API_PREFIX', { infer: true }) ?? 'api');
+        return (this.configService.get('API_PREFIX', {
+            infer: true,
+        }) ?? 'api');
     }
     get frontendUrl() {
-        return (this.configService.get('FRONTEND_URL', { infer: true }) ?? '');
+        return (this.configService.get('FRONTEND_URL', {
+            infer: true,
+        }) ?? '');
     }
     get mongoUri() {
-        return this.configService.get('MONGO_URI', { infer: true }) ?? '';
+        return (this.configService.get('MONGO_URI', {
+            infer: true,
+        }) ?? '');
     }
     get mongoDbName() {
-        return (this.configService.get('MONGO_DB_NAME', { infer: true }) ??
-            'mavluda-beauty');
+        return (this.configService.get('MONGO_DB_NAME', {
+            infer: true,
+        }) ?? 'mavluda-beauty');
     }
     get jwtSecret() {
-        return this.configService.get('JWT_SECRET', { infer: true }) ?? '';
+        return (this.configService.get('JWT_SECRET', {
+            infer: true,
+        }) ?? '');
     }
     get jwtExpiresIn() {
-        return (this.configService.get('JWT_EXPIRES_IN', { infer: true }) ?? '1d');
+        return (this.configService.get('JWT_EXPIRES_IN', {
+            infer: true,
+        }) ?? 60 * 60 * 24);
     }
     get telegramBotToken() {
-        return (this.configService.get('TELEGRAM_BOT_TOKEN', { infer: true }) ??
-            '');
+        return (this.configService.get('TELEGRAM_BOT_TOKEN', {
+            infer: true,
+        }) ?? '');
     }
     get telegramWebAppUrl() {
-        return (this.configService.get('TELEGRAM_WEBAPP_URL', { infer: true }) ??
-            '');
+        return (this.configService.get('TELEGRAM_WEBAPP_URL', {
+            infer: true,
+        }) ?? '');
     }
     get alifMerchantId() {
-        return (this.configService.get('ALIF_MERCHANT_ID', { infer: true }) ?? '');
+        return (this.configService.get('ALIF_MERCHANT_ID', {
+            infer: true,
+        }) ?? '');
     }
     get alifToken() {
-        return this.configService.get('ALIF_TOKEN', { infer: true }) ?? '';
+        return (this.configService.get('ALIF_TOKEN', {
+            infer: true,
+        }) ?? '');
     }
     get alifCallbackKey() {
-        return (this.configService.get('ALIF_CALLBACK_KEY', { infer: true }) ?? '');
+        return (this.configService.get('ALIF_CALLBACK_KEY', {
+            infer: true,
+        }) ?? '');
     }
     get cardPaymentApiKey() {
-        return (this.configService.get('CARD_PAYMENT_API_KEY', { infer: true }) ??
-            '');
+        return (this.configService.get('CARD_PAYMENT_API_KEY', {
+            infer: true,
+        }) ?? '');
     }
     get settingsId() {
-        return this.configService.get('SETTINGS_ID', { infer: true }) ?? '';
+        return (this.configService.get('SETTINGS_ID', {
+            infer: true,
+        }) ?? '');
     }
 };
 exports.AppConfigService = AppConfigService;

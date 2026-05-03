@@ -61,7 +61,7 @@ async function deleteFileSafe(relativePath) {
         await (0, exports.unlinkAsync)(absolutePath);
         return true;
     }
-    catch (_) {
+    catch {
         return false;
     }
 }

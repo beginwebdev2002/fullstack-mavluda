@@ -27,7 +27,11 @@ let I18nExceptionFilter = I18nExceptionFilter_1 = class I18nExceptionFilter {
         const exceptionResponse = exception.getResponse();
         const rawMessage = typeof exceptionResponse === 'string'
             ? exceptionResponse
-            : exceptionResponse.message || exception.message;
+            : typeof exceptionResponse === 'object' &&
+                exceptionResponse !== null &&
+                'message' in exceptionResponse
+                ? exceptionResponse.message
+                : exception.message;
         let translatedMessage = rawMessage;
         const translateString = (msg) => {
             for (const [key, translations] of Object.entries(error_messages_constant_1.ErrorMessages)) {

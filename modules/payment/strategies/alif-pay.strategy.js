@@ -12,22 +12,22 @@ const common_1 = require("@nestjs/common");
 let AlifPayStrategy = AlifPayStrategy_1 = class AlifPayStrategy {
     name = 'alif-pay';
     logger = new common_1.Logger(AlifPayStrategy_1.name);
-    async initiatePayment(dto) {
+    initiatePayment(dto) {
         this.logger.log(`Initiating Alif Pay for order ${dto.orderId}`);
-        return {
+        return Promise.resolve({
             success: true,
             transactionId: `alif_${Date.now()}`,
             redirectUrl: `https://alifpay.mock/checkout?order=${dto.orderId}`,
             message: 'Payment initiated via Alif Pay',
-        };
+        });
     }
-    async validateCallback(data) {
+    validateCallback(data) {
         this.logger.log('Validating Alif Pay callback', data);
-        return {
+        return Promise.resolve({
             success: true,
             transactionId: data.transactionId,
             message: 'Callback validated',
-        };
+        });
     }
 };
 exports.AlifPayStrategy = AlifPayStrategy;

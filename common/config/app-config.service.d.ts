@@ -9,7 +9,7 @@ export declare class AppConfigService {
     get mongoUri(): string;
     get mongoDbName(): string;
     get jwtSecret(): string;
-    get jwtExpiresIn(): string;
+    get jwtExpiresIn(): number;
     get telegramBotToken(): string;
     get telegramWebAppUrl(): string;
     get alifMerchantId(): string;

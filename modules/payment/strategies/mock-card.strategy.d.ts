@@ -3,5 +3,5 @@ export declare class MockCardStrategy implements PaymentStrategy {
     name: string;
     private readonly logger;
     initiatePayment(dto: InitiatePaymentDto): Promise<PaymentResult>;
-    validateCallback(data: PaymentCallbackData): Promise<PaymentResult>;
+    validateCallback(_data: PaymentCallbackData): Promise<PaymentResult>;
 }

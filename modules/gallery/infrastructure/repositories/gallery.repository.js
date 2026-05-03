@@ -55,9 +55,8 @@ let GalleryRepository = class GalleryRepository {
         return !!result;
     }
     toDomain(doc) {
-        const { _id, title, imageUrl, category, tags, createdAt } = doc;
-        console.log('createdAT: ', createdAt);
-        return new gallery_entity_1.Gallery(_id.toString(), title, imageUrl, category, tags, createdAt);
+        const d = doc;
+        return new gallery_entity_1.Gallery(d._id.toString(), d.title, d.imageUrl, d.category, d.status, d.alt);
     }
 };
 exports.GalleryRepository = GalleryRepository;

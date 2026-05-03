@@ -12,19 +12,19 @@ const common_1 = require("@nestjs/common");
 let MockCardStrategy = MockCardStrategy_1 = class MockCardStrategy {
     name = 'card';
     logger = new common_1.Logger(MockCardStrategy_1.name);
-    async initiatePayment(dto) {
+    initiatePayment(dto) {
         this.logger.log(`Initiating Mock Card Payment for order ${dto.orderId}`);
-        return {
+        return Promise.resolve({
             success: true,
             transactionId: `card_${Date.now()}`,
             message: 'Mock Card Payment Successful',
-        };
+        });
     }
-    async validateCallback(data) {
-        return {
+    validateCallback(_data) {
+        return Promise.resolve({
             success: true,
             message: 'Mock callback validated',
-        };
+        });
     }
 };
 exports.MockCardStrategy = MockCardStrategy;

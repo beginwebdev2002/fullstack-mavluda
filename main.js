@@ -25,5 +25,5 @@ async function bootstrap() {
     const PORT = configService.get('port') || 3000;
     await app.listen(PORT);
 }
-bootstrap();
+bootstrap().catch((err) => console.error(err));
 //# sourceMappingURL=main.js.map
