@@ -1,18 +1,19 @@
-# 📁 treatments
+# 📁 auth
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features) > [treatments](/frontend/src/features/treatments)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features) > [auth](/frontend/src/features/auth)
 
 **FSD Layer:** Feature
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 treatments"]
+  Root["📁 auth"]
   Root --> index_ts["📄 index.ts"]
   Root --> model["📁 model"]
+  Root --> ui["📁 ui"]
 ```
 
 ## 📄 File Registry
@@ -26,7 +27,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './treatments';
+import { relevantMember } from './auth';
 
 // Integrate into the application architecture
 relevantMember.execute();

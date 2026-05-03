@@ -11,13 +11,15 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 ui"]
-  Root --> veil-form["📁 veil-form"]
-  Root --> veil-item["📁 veil-item"]
-  Root --> veil-modal["📁 veil-modal"]
+  Root --> veil_form["📁 veil-form"]
+  Root --> veil_item["📁 veil-item"]
+  Root --> veil_modal["📁 veil-modal"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| No files | - | - | - |
 
 ## 🔗 Dependencies
 - No external dependencies.

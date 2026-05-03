@@ -11,10 +11,10 @@ graph TD
   Root["📁 gallery"]
   Root --> application["📁 application"]
   Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
   Root --> gallery_module_ts["📄 gallery.module.ts"]
   Root --> index_ts["📄 index.ts"]
+  Root --> infrastructure["📁 infrastructure"]
+  Root --> presentation["📁 presentation"]
 ```
 
 ## 📄 File Registry

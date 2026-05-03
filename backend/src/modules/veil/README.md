@@ -11,9 +11,9 @@ graph TD
   Root["📁 veil"]
   Root --> application["📁 application"]
   Root --> domain["📁 domain"]
+  Root --> index_ts["📄 index.ts"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
   Root --> veil_module_ts["📄 veil.module.ts"]
 ```
 

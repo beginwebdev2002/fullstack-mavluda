@@ -20,8 +20,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `dashboard.component.html` | Template | Structural template and layout for dashboard.component.html. | N/A |
-| `dashboard.component.scss` | Stylesheet | Luxury styling and visual presentation for dashboard.component.scss. | N/A |
+| `dashboard.component.html` | HTML | Structural template and layout for dashboard.component.html. | N/A |
+| `dashboard.component.scss` | SCSS | Luxury styling and visual presentation for dashboard.component.scss. | N/A |
 | `dashboard.component.ts` | TypeScript | UI component logic and state management for dashboard.component.ts. | @angular, @entities |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 

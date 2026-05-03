@@ -10,30 +10,29 @@ Delivering luxury-tier architectural components and high-performance logic for t
 graph TD
   Root["📁 src"]
   Root --> app["📁 app"]
-  Root --> backend["📁 backend"]
-  Root --> core["📁 core"]
-  Root --> entities["📁 entities"]
-  Root --> environments["📁 environments"]
-  Root --> features["📁 features"]
-  Root --> locale["📁 locale"]
-  Root --> pages["📁 pages"]
-  Root --> shared["📁 shared"]
-  Root --> types["📁 types"]
-  Root --> widgets["📁 widgets"]
   Root --> app_component_html["📄 app.component.html"]
   Root --> app_component_scss["📄 app.component.scss"]
   Root --> app_component_ts["📄 app.component.ts"]
   Root --> app_routes_ts["📄 app.routes.ts"]
+  Root --> backend["📁 backend"]
+  Root --> core["📁 core"]
+  Root --> entities["📁 entities"]
+  Root --> features["📁 features"]
+  Root --> locale["📁 locale"]
   Root --> main_ts["📄 main.ts"]
+  Root --> pages["📁 pages"]
+  Root --> shared["📁 shared"]
+  Root --> types["📁 types"]
+  Root --> widgets["📁 widgets"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.component.html` | Template | Structural template and layout for app.component.html. | N/A |
-| `app.component.scss` | Stylesheet | Luxury styling and visual presentation for app.component.scss. | N/A |
+| `app.component.html` | HTML | Structural template and layout for app.component.html. | N/A |
+| `app.component.scss` | SCSS | Luxury styling and visual presentation for app.component.scss. | N/A |
 | `app.component.ts` | TypeScript | UI component logic and state management for app.component.ts. | @angular, @shared |
-| `app.routes.ts` | TypeScript | Provides core logic and orchestration for app.routes.ts. | @angular, @pages, @widgets |
+| `app.routes.ts` | TypeScript | Provides core logic and orchestration for app.routes.ts. | @angular |
 | `main.ts` | TypeScript | Provides core logic and orchestration for main.ts. | @angular |
 
 ## 🔗 Dependencies
@@ -42,10 +41,8 @@ graph TD
 - `@angular/common`
 - `@angular/platform-browser`
 - `@angular/router`
-- `@pages/auth`
 - `@shared/services`
 - `@shared/ui`
-- `@widgets/layouts`
 
 ## 🛠️ Usage
 ```typescript

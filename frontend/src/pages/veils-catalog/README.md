@@ -21,8 +21,8 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `veils-catalog.component.html` | Template | Structural template and layout for veils-catalog.component.html. | N/A |
-| `veils-catalog.component.scss` | Stylesheet | Luxury styling and visual presentation for veils-catalog.component.scss. | N/A |
+| `veils-catalog.component.html` | HTML | Structural template and layout for veils-catalog.component.html. | N/A |
+| `veils-catalog.component.scss` | SCSS | Luxury styling and visual presentation for veils-catalog.component.scss. | N/A |
 | `veils-catalog.component.ts` | TypeScript | UI component logic and state management for veils-catalog.component.ts. | @angular, @entities, @environments, @shared |
 
 ## 🔗 Dependencies

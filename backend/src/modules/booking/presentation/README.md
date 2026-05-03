@@ -9,8 +9,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 presentation"]
-  Root --> dto["📁 dto"]
   Root --> booking_controller_ts["📄 booking.controller.ts"]
+  Root --> dto["📁 dto"]
 ```
 
 ## 📄 File Registry

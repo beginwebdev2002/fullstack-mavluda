@@ -1,8 +1,8 @@
 # 📁 ui
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [gallery](/frontend/src/pages/gallery) > [ui](/frontend/src/pages/gallery/ui)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features) > [auth](/frontend/src/features/auth) > [ui](/frontend/src/features/auth/ui)
 
-**FSD Layer:** Page
+**FSD Layer:** Feature
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **ui** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -11,7 +11,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 ui"]
-  Root --> gallery_form["📁 gallery-form"]
+  Root --> signin_form["📁 signin-form"]
+  Root --> signup_form["📁 signup-form"]
 ```
 
 ## 📄 File Registry

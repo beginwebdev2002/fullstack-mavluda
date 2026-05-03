@@ -21,8 +21,8 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `user-profile.component.html` | Template | Structural template and layout for user-profile.component.html. | N/A |
-| `user-profile.component.scss` | Stylesheet | Luxury styling and visual presentation for user-profile.component.scss. | N/A |
+| `user-profile.component.html` | HTML | Structural template and layout for user-profile.component.html. | N/A |
+| `user-profile.component.scss` | SCSS | Luxury styling and visual presentation for user-profile.component.scss. | N/A |
 | `user-profile.component.ts` | TypeScript | UI component logic and state management for user-profile.component.ts. | @angular, @entities |
 
 ## 🔗 Dependencies

@@ -18,7 +18,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil-form.component.html` | Template | Structural template and layout for veil-form.component.html. | N/A |
+| `veil-form.component.html` | HTML | Structural template and layout for veil-form.component.html. | N/A |
 | `veil-form.component.ts` | TypeScript | UI component logic and state management for veil-form.component.ts. | @angular, @shared |
 
 ## 🔗 Dependencies

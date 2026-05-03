@@ -20,7 +20,7 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `sidebar.component.html` | Template | Structural template and layout for sidebar.component.html. | N/A |
+| `sidebar.component.html` | HTML | Structural template and layout for sidebar.component.html. | N/A |
 | `sidebar.component.ts` | TypeScript | UI component logic and state management for sidebar.component.ts. | @angular, @shared |
 
 ## 🔗 Dependencies

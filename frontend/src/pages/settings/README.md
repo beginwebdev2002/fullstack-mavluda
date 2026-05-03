@@ -11,19 +11,19 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 settings"]
-  Root --> ui["📁 ui"]
   Root --> index_ts["📄 index.ts"]
   Root --> settings_component_html["📄 settings.component.html"]
   Root --> settings_component_scss["📄 settings.component.scss"]
   Root --> settings_component_ts["📄 settings.component.ts"]
+  Root --> ui["📁 ui"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `settings.component.html` | Template | Structural template and layout for settings.component.html. | N/A |
-| `settings.component.scss` | Stylesheet | Luxury styling and visual presentation for settings.component.scss. | N/A |
+| `settings.component.html` | HTML | Structural template and layout for settings.component.html. | N/A |
+| `settings.component.scss` | SCSS | Luxury styling and visual presentation for settings.component.scss. | N/A |
 | `settings.component.ts` | TypeScript | UI component logic and state management for settings.component.ts. | @angular, @entities, @shared |
 
 ## 🔗 Dependencies

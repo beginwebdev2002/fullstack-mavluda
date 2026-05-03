@@ -10,11 +10,11 @@ Delivering luxury-tier architectural components and high-performance logic for t
 graph TD
   Root["📁 booking"]
   Root --> application["📁 application"]
+  Root --> booking_module_ts["📄 booking.module.ts"]
   Root --> domain["📁 domain"]
+  Root --> index_ts["📄 index.ts"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
-  Root --> booking_module_ts["📄 booking.module.ts"]
-  Root --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry

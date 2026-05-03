@@ -9,13 +9,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 auth"]
-  Root --> dto["📁 dto"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> interfaces["📁 interfaces"]
   Root --> auth_controller_ts["📄 auth.controller.ts"]
   Root --> auth_module_ts["📄 auth.module.ts"]
   Root --> auth_service_ts["📄 auth.service.ts"]
+  Root --> dto["📁 dto"]
   Root --> index_ts["📄 index.ts"]
+  Root --> infrastructure["📁 infrastructure"]
+  Root --> interfaces["📁 interfaces"]
   Root --> telegram_auth_service_ts["📄 telegram-auth.service.ts"]
 ```
 

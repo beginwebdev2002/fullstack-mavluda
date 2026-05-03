@@ -9,12 +9,12 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 admin-settings"]
+  Root --> admin_settings_module_ts["📄 admin-settings.module.ts"]
   Root --> application["📁 application"]
   Root --> domain["📁 domain"]
+  Root --> index_ts["📄 index.ts"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
-  Root --> admin_settings_module_ts["📄 admin-settings.module.ts"]
-  Root --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry

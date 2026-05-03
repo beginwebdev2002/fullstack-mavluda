@@ -11,8 +11,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 veil"]
-  Root --> ui["📁 ui"]
   Root --> index_ts["📄 index.ts"]
+  Root --> ui["📁 ui"]
   Root --> veil_component_html["📄 veil.component.html"]
   Root --> veil_component_scss["📄 veil.component.scss"]
   Root --> veil_component_ts["📄 veil.component.ts"]
@@ -22,8 +22,8 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `veil.component.html` | Template | Structural template and layout for veil.component.html. | N/A |
-| `veil.component.scss` | Stylesheet | Luxury styling and visual presentation for veil.component.scss. | N/A |
+| `veil.component.html` | HTML | Structural template and layout for veil.component.html. | N/A |
+| `veil.component.scss` | SCSS | Luxury styling and visual presentation for veil.component.scss. | N/A |
 | `veil.component.ts` | TypeScript | UI component logic and state management for veil.component.ts. | @angular, @entities, @environments, @features, @shared |
 
 ## 🔗 Dependencies

@@ -11,9 +11,9 @@ graph TD
   Root["📁 treatments"]
   Root --> application["📁 application"]
   Root --> domain["📁 domain"]
+  Root --> index_ts["📄 index.ts"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
   Root --> treatments_module_ts["📄 treatments.module.ts"]
 ```
 

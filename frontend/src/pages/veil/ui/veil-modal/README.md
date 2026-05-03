@@ -18,7 +18,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil-modal.component.html` | Template | Structural template and layout for veil-modal.component.html. | N/A |
+| `veil-modal.component.html` | HTML | Structural template and layout for veil-modal.component.html. | N/A |
 | `veil-modal.component.ts` | TypeScript | UI component logic and state management for veil-modal.component.ts. | @angular, @features |
 
 ## 🔗 Dependencies

@@ -18,7 +18,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatment-form.component.html` | Template | Structural template and layout for treatment-form.component.html. | N/A |
+| `treatment-form.component.html` | HTML | Structural template and layout for treatment-form.component.html. | N/A |
 | `treatment-form.component.ts` | TypeScript | UI component logic and state management for treatment-form.component.ts. | @angular, @features, @shared |
 
 ## 🔗 Dependencies

@@ -18,7 +18,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery-form.component.html` | Template | Structural template and layout for gallery-form.component.html. | N/A |
+| `gallery-form.component.html` | HTML | Structural template and layout for gallery-form.component.html. | N/A |
 | `gallery-form.component.ts` | TypeScript | UI component logic and state management for gallery-form.component.ts. | @angular, @environments, @features, @shared |
 
 ## 🔗 Dependencies

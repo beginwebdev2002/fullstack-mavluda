@@ -11,10 +11,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 user"]
-  Root --> constants["📁 constants"]
-  Root --> model["📁 model"]
   Root --> auth_service_ts["📄 auth.service.ts"]
+  Root --> constants["📁 constants"]
   Root --> index_ts["📄 index.ts"]
+  Root --> model["📁 model"]
   Root --> user_service_ts["📄 user.service.ts"]
 ```
 

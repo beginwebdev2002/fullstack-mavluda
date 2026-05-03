@@ -11,8 +11,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 veil"]
-  Root --> model["📁 model"]
   Root --> index_ts["📄 index.ts"]
+  Root --> model["📁 model"]
 ```
 
 ## 📄 File Registry

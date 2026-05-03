@@ -9,13 +9,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 src"]
-  Root --> common["📁 common"]
-  Root --> modules["📁 modules"]
   Root --> app_controller_spec_ts["📄 app.controller.spec.ts"]
   Root --> app_controller_ts["📄 app.controller.ts"]
   Root --> app_module_ts["📄 app.module.ts"]
   Root --> app_service_ts["📄 app.service.ts"]
+  Root --> common["📁 common"]
   Root --> main_ts["📄 main.ts"]
+  Root --> modules["📁 modules"]
 ```
 
 ## 📄 File Registry

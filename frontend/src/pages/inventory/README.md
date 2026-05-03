@@ -21,8 +21,8 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `inventory.component.html` | Template | Structural template and layout for inventory.component.html. | N/A |
-| `inventory.component.scss` | Stylesheet | Luxury styling and visual presentation for inventory.component.scss. | N/A |
+| `inventory.component.html` | HTML | Structural template and layout for inventory.component.html. | N/A |
+| `inventory.component.scss` | SCSS | Luxury styling and visual presentation for inventory.component.scss. | N/A |
 | `inventory.component.ts` | TypeScript | UI component logic and state management for inventory.component.ts. | @angular |
 
 ## 🔗 Dependencies

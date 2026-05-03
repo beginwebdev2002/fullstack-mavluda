@@ -19,7 +19,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `clients.component.html` | Template | Structural template and layout for clients.component.html. | N/A |
+| `clients.component.html` | HTML | Structural template and layout for clients.component.html. | N/A |
 | `clients.component.ts` | TypeScript | UI component logic and state management for clients.component.ts. | @angular, @entities, @features, @shared |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 

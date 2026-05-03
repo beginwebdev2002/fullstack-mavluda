@@ -17,7 +17,7 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `app.e2e-spec.ts` | TypeScript | Unit testing and quality assurance for app.e2e-spec.ts. | @nestjs |
-| `jest-e2e.json` | JSON Configuration | Provides core logic and orchestration for jest-e2e.json. | N/A |
+| `jest-e2e.json` | JSON | Provides core logic and orchestration for jest-e2e.json. | N/A |
 
 ## 🔗 Dependencies
 - `./../src/app.module`

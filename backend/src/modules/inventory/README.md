@@ -11,10 +11,10 @@ graph TD
   Root["📁 inventory"]
   Root --> application["📁 application"]
   Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
   Root --> index_ts["📄 index.ts"]
+  Root --> infrastructure["📁 infrastructure"]
   Root --> inventory_module_ts["📄 inventory.module.ts"]
+  Root --> presentation["📁 presentation"]
 ```
 
 ## 📄 File Registry

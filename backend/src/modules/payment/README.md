@@ -9,11 +9,11 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 payment"]
-  Root --> strategies["📁 strategies"]
   Root --> index_ts["📄 index.ts"]
   Root --> payment_controller_ts["📄 payment.controller.ts"]
   Root --> payment_module_ts["📄 payment.module.ts"]
   Root --> payment_service_ts["📄 payment.service.ts"]
+  Root --> strategies["📁 strategies"]
 ```
 
 ## 📄 File Registry

@@ -18,7 +18,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `image-popup.component.html` | Template | Structural template and layout for image-popup.component.html. | N/A |
+| `image-popup.component.html` | HTML | Structural template and layout for image-popup.component.html. | N/A |
 | `image-popup.component.ts` | TypeScript | UI component logic and state management for image-popup.component.ts. | @angular |
 
 ## 🔗 Dependencies

@@ -21,8 +21,8 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `user-home.component.html` | Template | Structural template and layout for user-home.component.html. | N/A |
-| `user-home.component.scss` | Stylesheet | Luxury styling and visual presentation for user-home.component.scss. | N/A |
+| `user-home.component.html` | HTML | Structural template and layout for user-home.component.html. | N/A |
+| `user-home.component.scss` | SCSS | Luxury styling and visual presentation for user-home.component.scss. | N/A |
 | `user-home.component.ts` | TypeScript | UI component logic and state management for user-home.component.ts. | @angular, @core |
 
 ## 🔗 Dependencies

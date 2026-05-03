@@ -19,8 +19,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `list-view.component.html` | Template | Structural template and layout for list-view.component.html. | N/A |
-| `list-view.component.scss` | Stylesheet | Luxury styling and visual presentation for list-view.component.scss. | N/A |
+| `list-view.component.html` | HTML | Structural template and layout for list-view.component.html. | N/A |
+| `list-view.component.scss` | SCSS | Luxury styling and visual presentation for list-view.component.scss. | N/A |
 | `list-view.component.ts` | TypeScript | UI component logic and state management for list-view.component.ts. | @angular, @shared |
 
 ## 🔗 Dependencies

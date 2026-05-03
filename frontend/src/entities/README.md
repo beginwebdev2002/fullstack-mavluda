@@ -11,7 +11,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 entities"]
-  Root --> admin-settings["📁 admin-settings"]
+  Root --> admin_settings["📁 admin-settings"]
   Root --> gallery["📁 gallery"]
   Root --> treatments["📁 treatments"]
   Root --> user["📁 user"]
@@ -19,7 +19,9 @@ graph TD
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| No files | - | - | - |
 
 ## 🔗 Dependencies
 - No external dependencies.

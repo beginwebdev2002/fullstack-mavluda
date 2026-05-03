@@ -21,8 +21,8 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `portfolio.component.html` | Template | Structural template and layout for portfolio.component.html. | N/A |
-| `portfolio.component.scss` | Stylesheet | Luxury styling and visual presentation for portfolio.component.scss. | N/A |
+| `portfolio.component.html` | HTML | Structural template and layout for portfolio.component.html. | N/A |
+| `portfolio.component.scss` | SCSS | Luxury styling and visual presentation for portfolio.component.scss. | N/A |
 | `portfolio.component.ts` | TypeScript | UI component logic and state management for portfolio.component.ts. | @angular, @entities, @environments, @shared |
 
 ## 🔗 Dependencies
