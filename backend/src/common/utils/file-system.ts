@@ -27,7 +27,7 @@ export async function deleteFileSafe(relativePath: string): Promise<boolean> {
     // await fs.access(absolutePath);
     await unlinkAsync(absolutePath);
     return true;
-  } catch (_) {
+  } catch {
     return false;
   }
 }

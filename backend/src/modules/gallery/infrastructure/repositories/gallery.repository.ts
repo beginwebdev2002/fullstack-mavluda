@@ -56,16 +56,22 @@ export class GalleryRepository {
   }
 
   private toDomain(doc: GalleryDocument): Gallery {
-    const { _id, title, imageUrl, category, tags, createdAt } = doc as any;
-    console.log('createdAT: ', createdAt);
+    const d = doc as unknown as {
+      _id: { toString: () => string };
+      title: string;
+      imageUrl: string;
+      category: string;
+      status: string;
+      alt: string;
+    };
 
     return new Gallery(
-      _id.toString(),
-      title,
-      imageUrl,
-      category,
-      tags,
-      createdAt,
+      d._id.toString(),
+      d.title,
+      d.imageUrl,
+      d.category,
+      d.status,
+      d.alt,
     );
   }
 }

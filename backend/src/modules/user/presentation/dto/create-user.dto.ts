@@ -4,8 +4,6 @@ import {
   IsOptional,
   IsNumber,
   IsEnum,
-  IsUrl,
-  isNotEmpty,
 } from 'class-validator';
 
 export class CreateUserDto {

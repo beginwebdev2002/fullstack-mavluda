@@ -51,7 +51,14 @@ export class BookingRepository {
   }
 
   private toDomain(doc: BookingDocument): Booking {
-    const d = doc as any;
+    const d = doc as unknown as {
+      _id: { toString: () => string };
+      customerName: string;
+      date: Date;
+      status: 'pending' | 'confirmed' | 'cancelled';
+      createdAt: Date;
+      updatedAt: Date;
+    };
     return new Booking(
       d._id.toString(),
       d.customerName,

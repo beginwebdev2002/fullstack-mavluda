@@ -51,7 +51,14 @@ export class PartnershipRepository {
   }
 
   private toDomain(doc: PartnershipDocument): Partnership {
-    const d = doc as any;
+    const d = doc as unknown as {
+      _id: { toString: () => string };
+      partnerName: string;
+      contactEmail: string;
+      type: string;
+      status: 'active' | 'inactive';
+      createdAt: Date;
+    };
     return new Partnership(
       d._id.toString(),
       d.partnerName,

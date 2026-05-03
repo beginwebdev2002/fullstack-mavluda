@@ -29,13 +29,17 @@ export class I18nExceptionFilter implements ExceptionFilter {
         ? (langHeader.toLowerCase() as 'en' | 'ru' | 'tj')
         : 'en';
 
-    const exceptionResponse: any = exception.getResponse();
+    const exceptionResponse: unknown = exception.getResponse();
 
     // Extract original message(s) from exception response
     const rawMessage: string | string[] =
       typeof exceptionResponse === 'string'
         ? exceptionResponse
-        : exceptionResponse.message || exception.message;
+        : typeof exceptionResponse === 'object' &&
+            exceptionResponse !== null &&
+            'message' in exceptionResponse
+          ? (exceptionResponse as { message: string | string[] }).message
+          : exception.message;
 
     let translatedMessage: string | string[] = rawMessage;
 

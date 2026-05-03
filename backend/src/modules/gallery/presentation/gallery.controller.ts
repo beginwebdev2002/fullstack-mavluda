@@ -82,7 +82,9 @@ export class GalleryController {
 
       const galleryData = {
         ...createGalleryDto,
-        imageUrl: imagePath || (createGalleryDto as any).imageUrl,
+        imageUrl:
+          imagePath ||
+          (createGalleryDto as unknown as { imageUrl?: string }).imageUrl,
       };
 
       // Mapping DTO to Domain Entity

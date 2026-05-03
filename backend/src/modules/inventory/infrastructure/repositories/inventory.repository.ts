@@ -51,7 +51,13 @@ export class InventoryRepository {
   }
 
   private toDomain(doc: InventoryDocument): Inventory {
-    const d = doc as any;
+    const d = doc as unknown as {
+      _id: { toString: () => string };
+      itemName: string;
+      quantity: number;
+      location: string;
+      updatedAt: Date;
+    };
     return new Inventory(
       d._id.toString(),
       d.itemName,

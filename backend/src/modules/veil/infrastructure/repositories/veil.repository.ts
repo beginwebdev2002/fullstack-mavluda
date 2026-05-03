@@ -46,7 +46,7 @@ export class VeilRepository {
       return null;
     }
     if (veil.image) {
-      const isDeleted = fileDelete(veil.image);
+      fileDelete(veil.image);
     }
 
     const doc = await this.veilModel

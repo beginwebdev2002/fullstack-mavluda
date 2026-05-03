@@ -1,15 +1,17 @@
 import { Routes } from "@angular/router";
-import { AuthComponent } from "@pages/auth";
-import { AdminLayoutComponent, UserLayoutComponent } from "@widgets/layouts";
 
 export const routes: Routes = [
-  { path: "", redirectTo: "user/home", pathMatch: "full" },
-  { path: "auth", component: AuthComponent },
+  { path: "", redirectTo: "auth", pathMatch: "full" },
+  {
+    path: "auth",
+    loadComponent: () => import("@pages/auth").then((m) => m.AuthComponent),
+  },
 
   // Admin Routes
   {
     path: "admin",
-    component: AdminLayoutComponent,
+    loadComponent: () =>
+      import("@widgets/layouts").then((m) => m.AdminLayoutComponent),
     // canActivate: [adminGuard],
     children: [
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
@@ -49,7 +51,8 @@ export const routes: Routes = [
   // User Routes
   {
     path: "user",
-    component: UserLayoutComponent,
+    loadComponent: () =>
+      import("@widgets/layouts").then((m) => m.UserLayoutComponent),
     children: [
       { path: "", redirectTo: "home", pathMatch: "full" },
       {
@@ -87,5 +90,5 @@ export const routes: Routes = [
     ],
   },
 
-  { path: "**", redirectTo: "user/home" },
+  { path: "**", redirectTo: "auth" },
 ];

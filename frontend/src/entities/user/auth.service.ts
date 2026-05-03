@@ -24,13 +24,13 @@ export class AuthService {
      // Optional: Validate token expiration on init
   }
 
-  login(credentials: any) {
+  signin(credentials: any) {
     return this.http.post<AuthResponse>('/auth/login', credentials).pipe(
       tap(response => this.setSession(response.access_token))
     );
   }
 
-  register(data: any) {
+  signup(data: any) {
     return this.http.post<AuthResponse>('/auth/register', data).pipe(
       tap(response => this.setSession(response.access_token))
     );

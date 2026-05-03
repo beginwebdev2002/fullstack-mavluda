@@ -14,6 +14,9 @@
       "node",
       "@angular/localize"
     ],
+    "plugins": [
+      { "name": "@angular/language-service" }
+    ],
     "moduleResolution": "bundler",
     "isolatedModules": true,
     "moduleDetection": "force",
