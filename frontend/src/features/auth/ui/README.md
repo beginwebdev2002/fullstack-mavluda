@@ -1,8 +1,8 @@
 # 📁 ui
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui)
+[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features) > [auth](/frontend/src/features/auth) > [ui](/frontend/src/features/auth/ui)
 
-**FSD Layer:** Shared
+**FSD Layer:** Feature
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **ui** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -11,17 +11,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 ui"]
-  Root --> card_view["📁 card-view"]
-  Root --> global_error["📁 global-error"]
-  Root --> image_popup["📁 image-popup"]
-  Root --> list_view["📁 list-view"]
-  Root --> index_ts["📄 index.ts"]
+  Root --> signin_form["📁 signin-form"]
+  Root --> signup_form["📁 signup-form"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| N/A | N/A | No files in this directory. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.

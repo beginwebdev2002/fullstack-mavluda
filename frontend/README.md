@@ -9,6 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 frontend"]
+  Root --> environments["📁 environments"]
   Root --> public["📁 public"]
   Root --> src["📁 src"]
   Root --> angular_json["📄 angular.json"]
@@ -34,10 +35,7 @@ graph TD
 | `tsconfig.json` | JSON Configuration | Provides core logic and orchestration for tsconfig.json. | N/A |
 
 ## 🔗 Dependencies
-- `./src/app.component`
-- `./src/app/app.config`
-- `@angular/platform-browser`
-- `leaflet/dist/leaflet.css`
+- No external dependencies.
 
 ## 🛠️ Usage
 ```typescript

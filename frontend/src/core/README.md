@@ -15,7 +15,9 @@ graph TD
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| N/A | N/A | No files in this directory. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.

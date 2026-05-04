@@ -24,7 +24,7 @@ graph TD
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `.prettierrc` | File | Provides core logic and orchestration for .prettierrc. | N/A |
-| `eslint.config.mjs` | JavaScript | Provides core logic and orchestration for eslint.config.mjs. | N/A |
+| `eslint.config.mjs` | JavaScript | Provides core logic and orchestration for eslint.config.mjs. | @eslint |
 | `nest-cli.json` | JSON Configuration | Provides core logic and orchestration for nest-cli.json. | N/A |
 | `package-lock.json` | JSON Configuration | Provides core logic and orchestration for package-lock.json. | N/A |
 | `package.json` | JSON Configuration | Provides core logic and orchestration for package.json. | N/A |
@@ -32,7 +32,10 @@ graph TD
 | `tsconfig.json` | JSON Configuration | Provides core logic and orchestration for tsconfig.json. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `@eslint/js`
+- `eslint-plugin-prettier/recommended`
+- `globals`
+- `typescript-eslint`
 
 ## 🛠️ Usage
 ```typescript

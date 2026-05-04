@@ -13,7 +13,6 @@ graph TD
   Root --> backend["📁 backend"]
   Root --> core["📁 core"]
   Root --> entities["📁 entities"]
-  Root --> environments["📁 environments"]
   Root --> features["📁 features"]
   Root --> locale["📁 locale"]
   Root --> pages["📁 pages"]
@@ -42,10 +41,8 @@ graph TD
 - `@angular/common`
 - `@angular/platform-browser`
 - `@angular/router`
-- `@pages/auth`
 - `@shared/services`
 - `@shared/ui`
-- `@widgets/layouts`
 
 ## 🛠️ Usage
 ```typescript

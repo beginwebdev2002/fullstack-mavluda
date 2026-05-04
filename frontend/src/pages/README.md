@@ -20,15 +20,17 @@ graph TD
   Root --> portfolio["📁 portfolio"]
   Root --> settings["📁 settings"]
   Root --> treatments["📁 treatments"]
-  Root --> treatments-catalog["📁 treatments-catalog"]
-  Root --> user-home["📁 user-home"]
-  Root --> user-profile["📁 user-profile"]
+  Root --> treatments_catalog["📁 treatments-catalog"]
+  Root --> user_home["📁 user-home"]
+  Root --> user_profile["📁 user-profile"]
   Root --> veil["📁 veil"]
-  Root --> veils-catalog["📁 veils-catalog"]
+  Root --> veils_catalog["📁 veils-catalog"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| N/A | N/A | No files in this directory. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.

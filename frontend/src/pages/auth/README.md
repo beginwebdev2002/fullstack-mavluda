@@ -29,6 +29,8 @@ graph TD
 - `@angular/common`
 - `@angular/router`
 - `@entities/user`
+- `@features/auth`
+- `@features/auth/model/auth.model`
 - `@features/language-selection`
 
 ## 🛠️ Usage
