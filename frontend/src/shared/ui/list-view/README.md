@@ -1,27 +1,26 @@
-# 📁 list-view
+# 📁 List-View Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [list-view](/frontend/src/shared/ui/list-view)
+[frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [list-view](/frontend/src/shared/ui/list-view)
+
+## 🎯 Purpose
+A high-level module handling `list-view` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
 
 **FSD Layer:** Shared
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **list-view** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 list-view"]
-  Root --> list_view_component_html["📄 list-view.component.html"]
-  Root --> list_view_component_scss["📄 list-view.component.scss"]
-  Root --> list_view_component_ts["📄 list-view.component.ts"]
+    list_view[list-view] --> Files
 ```
+
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `list-view.component.html` | Template | Structural template and layout for list-view.component.html. | N/A |
-| `list-view.component.scss` | Stylesheet | Luxury styling and visual presentation for list-view.component.scss. | N/A |
-| `list-view.component.ts` | TypeScript | UI component logic and state management for list-view.component.ts. | @angular, @shared |
+|-----------|------|----------------|------------------|
+| `list-view.component.html` | Template | Angular UI standalone component logic. | None |
+| `list-view.component.scss` | Style | Angular UI standalone component logic. | None |
+| `list-view.component.ts` | Component | Angular UI standalone component logic. | @shared/lib, @angular/core, @angular/common |
 
 ## 🔗 Dependencies
 - `@angular/common`
@@ -30,9 +29,7 @@ graph TD
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './list-view';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
 ```

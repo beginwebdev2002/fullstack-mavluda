@@ -1,3 +1,36 @@
+# 🧰 Utils Directory
+
+[backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [utils](/backend/src/common/utils)
+
+## 🎯 Purpose
+A high-level module handling `utils` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    utils[utils] --> Files
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `file-system.ts` | TypeScript | Provides localized typescript definitions. | None |
+| `index.ts` | TypeScript | Provides localized typescript definitions. | None |
+| `object.ts` | TypeScript | Provides localized typescript definitions. | None |
+
+## 🔗 Dependencies
+- No major internal/external path aliases detected.
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 utils
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [utils](/backend/src/common/utils)

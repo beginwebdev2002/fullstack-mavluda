@@ -1,34 +1,31 @@
-# 📁 strategies
+# 📁 Strategies Directory
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [payment](/backend/src/modules/payment) > [strategies](/backend/src/modules/payment/strategies)
+[backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [payment](/backend/src/modules/payment) > [strategies](/backend/src/modules/payment/strategies)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **strategies** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+A high-level module handling `strategies` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 strategies"]
-  Root --> alif_pay_strategy_ts["📄 alif-pay.strategy.ts"]
-  Root --> mock_card_strategy_ts["📄 mock-card.strategy.ts"]
-  Root --> payment_strategy_ts["📄 payment.strategy.ts"]
+    strategies[strategies] --> Files
 ```
+
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `alif-pay.strategy.ts` | TypeScript | Provides core logic and orchestration for alif-pay.strategy.ts. | @nestjs |
-| `mock-card.strategy.ts` | TypeScript | Provides core logic and orchestration for mock-card.strategy.ts. | @nestjs |
-| `payment.strategy.ts` | TypeScript | Provides core logic and orchestration for payment.strategy.ts. | N/A |
+|-----------|------|----------------|------------------|
+| `alif-pay.strategy.ts` | TypeScript | Provides localized typescript definitions. | @nestjs/common |
+| `mock-card.strategy.ts` | TypeScript | Provides localized typescript definitions. | @nestjs/common |
+| `payment.strategy.ts` | TypeScript | Provides localized typescript definitions. | None |
 
 ## 🔗 Dependencies
 - `@nestjs/common`
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './strategies';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
 ```

@@ -1,3 +1,36 @@
+# 📄 Schemas Directory
+
+[backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil) > [infrastructure](/backend/src/modules/veil/infrastructure) > [schemas](/backend/src/modules/veil/infrastructure/schemas)
+
+## 🎯 Purpose
+A high-level module handling `schemas` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+classDiagram
+    class VeilSchema {
+        +... properties/methods
+    }
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `veil.schema.ts` | TypeScript | Defines MongoDB data structure and validation. | @nestjs/mongoose |
+
+## 🔗 Dependencies
+- `@nestjs/mongoose`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 schemas
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil) > [infrastructure](/backend/src/modules/veil/infrastructure) > [schemas](/backend/src/modules/veil/infrastructure/schemas)

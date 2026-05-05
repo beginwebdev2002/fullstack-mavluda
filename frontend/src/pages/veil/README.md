@@ -1,47 +1,42 @@
-# 📁 veil
+# 📁 Veil Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veil](/frontend/src/pages/veil)
-
-**FSD Layer:** Page
+[frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veil](/frontend/src/pages/veil)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **veil** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+A high-level module handling `veil` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+**FSD Layer:** Pages
+
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 veil"]
-  Root --> ui["📁 ui"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> veil_component_html["📄 veil.component.html"]
-  Root --> veil_component_scss["📄 veil.component.scss"]
-  Root --> veil_component_ts["📄 veil.component.ts"]
+    veil[veil] --> Files
+    veil --> ui[ui]
 ```
+
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `veil.component.html` | Template | Structural template and layout for veil.component.html. | N/A |
-| `veil.component.scss` | Stylesheet | Luxury styling and visual presentation for veil.component.scss. | N/A |
-| `veil.component.ts` | TypeScript | UI component logic and state management for veil.component.ts. | @angular, @entities, @environments, @features, @shared |
+|-----------|------|----------------|------------------|
+| `index.ts` | TypeScript | Provides localized typescript definitions. | None |
+| `veil.component.html` | Template | Angular UI standalone component logic. | None |
+| `veil.component.scss` | Style | Angular UI standalone component logic. | None |
+| `veil.component.ts` | Component | Angular UI standalone component logic. | @entities/admin-settings, @angular/core, @environments/environment, @shared/lib, @shared/ui, @features/veil, @entities/veil, @angular/common |
 
 ## 🔗 Dependencies
-- `./ui/veil-form/veil-form.component`
 - `@angular/common`
+- `@angular/core`
 - `@entities/admin-settings`
 - `@entities/veil`
 - `@environments/environment`
 - `@features/veil`
 - `@shared/lib`
 - `@shared/ui`
-- `rxjs`
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './veil';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
 ```

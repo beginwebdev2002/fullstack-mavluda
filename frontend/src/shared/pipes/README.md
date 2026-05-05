@@ -1,25 +1,25 @@
-# 📁 pipes
+# 📁 Pipes Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [pipes](/frontend/src/shared/pipes)
+[frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [pipes](/frontend/src/shared/pipes)
+
+## 🎯 Purpose
+A high-level module handling `pipes` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
 
 **FSD Layer:** Shared
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **pipes** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 pipes"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> safe_html_pipe_ts["📄 safe-html.pipe.ts"]
+    pipes[pipes] --> Files
 ```
+
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `safe-html.pipe.ts` | TypeScript | Provides core logic and orchestration for safe-html.pipe.ts. | @angular |
+|-----------|------|----------------|------------------|
+| `index.ts` | TypeScript | Provides localized typescript definitions. | None |
+| `safe-html.pipe.ts` | TypeScript | Provides localized typescript definitions. | @angular/core, @angular/platform-browser |
 
 ## 🔗 Dependencies
 - `@angular/core`
@@ -27,9 +27,7 @@ graph TD
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './pipes';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
 ```

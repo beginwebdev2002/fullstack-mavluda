@@ -1,3 +1,35 @@
+# 📦 Dto Directory
+
+[backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [partnership](/backend/src/modules/partnership) > [presentation](/backend/src/modules/partnership/presentation) > [dto](/backend/src/modules/partnership/presentation/dto)
+
+## 🎯 Purpose
+A high-level module handling `dto` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    dto[dto] --> Files
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `create-partnership.dto.ts` | DTO | Data Transfer Object for input validation. | None |
+| `update-partnership.dto.ts` | DTO | Data Transfer Object for input validation. | @nestjs/mapped-types |
+
+## 🔗 Dependencies
+- `@nestjs/mapped-types`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 dto
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [partnership](/backend/src/modules/partnership) > [presentation](/backend/src/modules/partnership/presentation) > [dto](/backend/src/modules/partnership/presentation/dto)

@@ -1,41 +1,40 @@
-# 📁 auth
+# 📁 Auth Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [auth](/frontend/src/pages/auth)
-
-**FSD Layer:** Page
+[frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [auth](/frontend/src/pages/auth)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+A high-level module handling `auth` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+**FSD Layer:** Pages
+
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 auth"]
-  Root --> auth_component_html["📄 auth.component.html"]
-  Root --> auth_component_scss["📄 auth.component.scss"]
-  Root --> auth_component_ts["📄 auth.component.ts"]
-  Root --> index_ts["📄 index.ts"]
+    auth[auth] --> Files
 ```
+
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `auth.component.html` | Template | Structural template and layout for auth.component.html. | N/A |
-| `auth.component.scss` | Stylesheet | Luxury styling and visual presentation for auth.component.scss. | N/A |
-| `auth.component.ts` | TypeScript | UI component logic and state management for auth.component.ts. | @angular, @entities, @features |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+|-----------|------|----------------|------------------|
+| `auth.component.html` | Template | Angular UI standalone component logic. | None |
+| `auth.component.scss` | Style | Angular UI standalone component logic. | None |
+| `auth.component.ts` | Component | Angular UI standalone component logic. | @features/language-selection, @entities/user, @angular/core, @angular/router, @features/auth, @features/auth/model/auth.model, @angular/common |
+| `index.ts` | TypeScript | Provides localized typescript definitions. | None |
 
 ## 🔗 Dependencies
 - `@angular/common`
+- `@angular/core`
 - `@angular/router`
 - `@entities/user`
+- `@features/auth`
+- `@features/auth/model/auth.model`
 - `@features/language-selection`
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './auth';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
 ```

@@ -1,3 +1,35 @@
+# ✨ Decorators Directory
+
+[backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [decorators](/backend/src/common/decorators)
+
+## 🎯 Purpose
+A high-level module handling `decorators` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    decorators[decorators] --> Files
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `public.decorator.ts` | TypeScript | Provides localized typescript definitions. | @nestjs/common |
+| `roles.decorator.ts` | TypeScript | Provides localized typescript definitions. | @nestjs/common |
+
+## 🔗 Dependencies
+- `@nestjs/common`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 decorators
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [decorators](/backend/src/common/decorators)

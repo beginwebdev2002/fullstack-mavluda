@@ -1,26 +1,26 @@
-# 📁 treatments
+# 📁 Treatments Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [treatments](/frontend/src/entities/treatments)
-
-**FSD Layer:** Entity
+[frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [treatments](/frontend/src/entities/treatments)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+A high-level module handling `treatments` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+**FSD Layer:** Entities
+
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 treatments"]
-  Root --> constants["📁 constants"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> treatments_service_ts["📄 treatments.service.ts"]
+    treatments[treatments] --> Files
+    treatments --> constants[constants]
 ```
+
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `treatments.service.ts` | TypeScript | Encapsulates business logic and data access for treatments.service.ts. | @angular, @core, @features, @shared |
+|-----------|------|----------------|------------------|
+| `index.ts` | TypeScript | Provides localized typescript definitions. | None |
+| `treatments.service.ts` | Service | Executes core business logic and use cases. | @angular/core, @features/treatments, @core/constants, @angular/common/http, @shared/lib |
 
 ## 🔗 Dependencies
 - `@angular/common/http`
@@ -28,13 +28,10 @@ graph TD
 - `@core/constants`
 - `@features/treatments`
 - `@shared/lib`
-- `rxjs`
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './treatments';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
 ```

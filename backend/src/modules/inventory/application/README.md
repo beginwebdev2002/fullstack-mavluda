@@ -1,3 +1,34 @@
+# 🚀 Application Directory
+
+[backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [application](/backend/src/modules/inventory/application)
+
+## 🎯 Purpose
+A high-level module handling `application` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    application[application] --> Files
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `inventory.service.ts` | Service | Executes core business logic and use cases. | @nestjs/common |
+
+## 🔗 Dependencies
+- `@nestjs/common`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 application
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [application](/backend/src/modules/inventory/application)

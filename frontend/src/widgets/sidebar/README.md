@@ -1,40 +1,36 @@
-# 📁 sidebar
+# 📁 Sidebar Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [sidebar](/frontend/src/widgets/sidebar)
-
-**FSD Layer:** Widget
+[frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [sidebar](/frontend/src/widgets/sidebar)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **sidebar** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+A high-level module handling `sidebar` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+**FSD Layer:** Widgets
+
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 sidebar"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> sidebar_component_html["📄 sidebar.component.html"]
-  Root --> sidebar_component_ts["📄 sidebar.component.ts"]
+    sidebar[sidebar] --> Files
 ```
+
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `sidebar.component.html` | Template | Structural template and layout for sidebar.component.html. | N/A |
-| `sidebar.component.ts` | TypeScript | UI component logic and state management for sidebar.component.ts. | @angular, @shared |
+|-----------|------|----------------|------------------|
+| `index.ts` | TypeScript | Provides localized typescript definitions. | None |
+| `sidebar.component.html` | Template | Angular UI standalone component logic. | None |
+| `sidebar.component.ts` | Component | Angular UI standalone component logic. | @angular/core, @angular/router, @angular/common, @shared/pipes |
 
 ## 🔗 Dependencies
 - `@angular/common`
 - `@angular/core`
 - `@angular/router`
 - `@shared/pipes`
-- `rxjs`
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './sidebar';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
 ```

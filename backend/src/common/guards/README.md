@@ -1,3 +1,37 @@
+# 🛡️ Guards Directory
+
+[backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [guards](/backend/src/common/guards)
+
+## 🎯 Purpose
+A high-level module handling `guards` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    guards[guards] --> Files
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `jwt-auth.guard.ts` | TypeScript | Handles authentication/authorization protection. | @nestjs/common, @nestjs/core, @nestjs/passport |
+| `roles.guard.ts` | TypeScript | Handles authentication/authorization protection. | @nestjs/common, @nestjs/core |
+
+## 🔗 Dependencies
+- `@nestjs/common`
+- `@nestjs/core`
+- `@nestjs/passport`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 guards
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [guards](/backend/src/common/guards)

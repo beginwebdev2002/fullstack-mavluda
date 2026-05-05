@@ -1,3 +1,35 @@
+# 🔢 Constants Directory
+
+[frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [constants](/frontend/src/core/constants)
+
+## 🎯 Purpose
+A high-level module handling `constants` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    constants[constants] --> Files
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `api-endpoints.ts` | TypeScript | Provides localized typescript definitions. | @shared/lib |
+| `index.ts` | TypeScript | Provides localized typescript definitions. | None |
+
+## 🔗 Dependencies
+- `@shared/lib`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 constants
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [constants](/frontend/src/core/constants)

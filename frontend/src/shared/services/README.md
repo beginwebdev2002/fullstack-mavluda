@@ -1,47 +1,40 @@
-# 📁 services
+# 📁 Services Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [services](/frontend/src/shared/services)
+[frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [services](/frontend/src/shared/services)
+
+## 🎯 Purpose
+A high-level module handling `services` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
 
 **FSD Layer:** Shared
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **services** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 services"]
-  Root --> auth_service_ts["📄 auth.service.ts"]
-  Root --> error_service_ts["📄 error.service.ts"]
-  Root --> image_service_ts["📄 image.service.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> telegram_service_ts["📄 telegram.service.ts"]
+    services[services] --> Files
 ```
+
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `auth.service.ts` | TypeScript | Encapsulates business logic and data access for auth.service.ts. | @angular, @core, @shared |
-| `error.service.ts` | TypeScript | Encapsulates business logic and data access for error.service.ts. | @angular |
-| `image.service.ts` | TypeScript | Encapsulates business logic and data access for image.service.ts. | @angular |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `telegram.service.ts` | TypeScript | Encapsulates business logic and data access for telegram.service.ts. | @angular, @src |
+|-----------|------|----------------|------------------|
+| `auth.service.ts` | Service | Executes core business logic and use cases. | @angular/core, @angular/router, @shared/models, @core/constants, @angular/common/http |
+| `error.service.ts` | Service | Executes core business logic and use cases. | @angular/core |
+| `image.service.ts` | Service | Executes core business logic and use cases. | @angular/core |
+| `index.ts` | TypeScript | Provides localized typescript definitions. | None |
+| `telegram.service.ts` | Service | Executes core business logic and use cases. | @angular/core, @src/types/telegram |
 
 ## 🔗 Dependencies
-- `./telegram.service`
 - `@angular/common/http`
 - `@angular/core`
 - `@angular/router`
 - `@core/constants`
 - `@shared/models`
 - `@src/types/telegram`
-- `rxjs`
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './services';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
 ```

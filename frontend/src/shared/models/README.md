@@ -1,3 +1,58 @@
+# 🧱 Models Directory
+
+[frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [models](/frontend/src/shared/models)
+
+## 🎯 Purpose
+A high-level module handling `models` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+**FSD Layer:** Shared
+
+
+## 🏗️ Architecture
+```mermaid
+classDiagram
+    class Index {
+        +... properties/methods
+    }
+    class ApiResponseModel {
+        +... properties/methods
+    }
+    class UserModel {
+        +... properties/methods
+    }
+    class ServiceModel {
+        +... properties/methods
+    }
+    class AdminSettingsModel {
+        +... properties/methods
+    }
+    class GalleryModel {
+        +... properties/methods
+    }
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `admin-settings.model.ts` | Model | Provides localized model definitions. | None |
+| `api-response.model.ts` | Model | Provides localized model definitions. | None |
+| `gallery.model.ts` | Model | Provides localized model definitions. | None |
+| `index.ts` | TypeScript | Provides localized typescript definitions. | None |
+| `service.model.ts` | Model | Executes core business logic and use cases. | None |
+| `user.model.ts` | Model | Provides localized model definitions. | None |
+
+## 🔗 Dependencies
+- No major internal/external path aliases detected.
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 models
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [models](/frontend/src/shared/models)

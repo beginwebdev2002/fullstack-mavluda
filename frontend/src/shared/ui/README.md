@@ -1,3 +1,37 @@
+# 🖼️ Ui Directory
+
+[frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui)
+
+## 🎯 Purpose
+A high-level module handling `ui` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+**FSD Layer:** Shared
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    ui --> Components
+    Components --> Index
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `index.ts` | TypeScript | Provides localized typescript definitions. | None |
+
+## 🔗 Dependencies
+- No major internal/external path aliases detected.
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 ui
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui)

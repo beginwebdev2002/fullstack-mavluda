@@ -1,3 +1,34 @@
+# 📋 Interfaces Directory
+
+[backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [interfaces](/backend/src/common/interfaces)
+
+## 🎯 Purpose
+A high-level module handling `interfaces` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    interfaces[interfaces] --> Files
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `authenticated-request.interface.ts` | Interface | Provides localized interface definitions. | None |
+
+## 🔗 Dependencies
+- No major internal/external path aliases detected.
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 interfaces
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [interfaces](/backend/src/common/interfaces)

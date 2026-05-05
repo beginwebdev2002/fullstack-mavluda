@@ -1,3 +1,38 @@
+# 🛡️ Guards Directory
+
+[frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [guards](/frontend/src/core/guards)
+
+## 🎯 Purpose
+A high-level module handling `guards` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    guards[guards] --> Files
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `admin.guard.ts` | TypeScript | Handles authentication/authorization protection. | @entities/user, @angular/core, @angular/router |
+| `auth.guard.ts` | TypeScript | Handles authentication/authorization protection. | @entities/user, @angular/core, @angular/router |
+| `index.ts` | TypeScript | Provides localized typescript definitions. | None |
+
+## 🔗 Dependencies
+- `@angular/core`
+- `@angular/router`
+- `@entities/user`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 guards
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [guards](/frontend/src/core/guards)

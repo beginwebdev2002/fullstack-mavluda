@@ -1,37 +1,36 @@
-# 📁 treatment-form
+# 📁 Treatment-Form Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [treatments](/frontend/src/pages/treatments) > [components](/frontend/src/pages/treatments/components) > [treatment-form](/frontend/src/pages/treatments/components/treatment-form)
-
-**FSD Layer:** Page
+[frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [treatments](/frontend/src/pages/treatments) > [components](/frontend/src/pages/treatments/components) > [treatment-form](/frontend/src/pages/treatments/components/treatment-form)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **treatment-form** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+A high-level module handling `treatment-form` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+**FSD Layer:** Pages
+
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 treatment-form"]
-  Root --> treatment_form_component_html["📄 treatment-form.component.html"]
-  Root --> treatment_form_component_ts["📄 treatment-form.component.ts"]
+    treatment_form[treatment-form] --> Files
 ```
+
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `treatment-form.component.html` | Template | Structural template and layout for treatment-form.component.html. | N/A |
-| `treatment-form.component.ts` | TypeScript | UI component logic and state management for treatment-form.component.ts. | @angular, @features, @shared |
+|-----------|------|----------------|------------------|
+| `treatment-form.component.html` | Template | Angular UI standalone component logic. | None |
+| `treatment-form.component.ts` | Component | Angular UI standalone component logic. | @angular/forms, @angular/core, @features/treatments, @shared/lib, @angular/common |
 
 ## 🔗 Dependencies
 - `@angular/common`
+- `@angular/core`
 - `@angular/forms`
 - `@features/treatments`
 - `@shared/lib`
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './treatment-form';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
 ```

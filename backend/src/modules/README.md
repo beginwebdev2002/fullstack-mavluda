@@ -1,3 +1,43 @@
+# 📦 Modules Directory
+
+[backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules)
+
+## 🎯 Purpose
+A high-level module handling `modules` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    modules[modules] --> Files
+    modules --> gallery[gallery]
+    modules --> user[user]
+    modules --> treatments[treatments]
+    modules --> admin_settings[admin-settings]
+    modules --> veil[veil]
+    modules --> payment[payment]
+    modules --> booking[booking]
+    modules --> inventory[inventory]
+    modules --> partnership[partnership]
+    modules --> auth[auth]
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+
+## 🔗 Dependencies
+- No major internal/external path aliases detected.
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 modules
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules)

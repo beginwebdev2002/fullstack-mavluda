@@ -1,3 +1,35 @@
+# ⚙️ Backend Directory
+
+[frontend](/frontend) > [src](/frontend/src) > [backend](/frontend/src/backend)
+
+## 🎯 Purpose
+A high-level module handling `backend` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    backend[backend] --> Files
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `index.ts` | TypeScript | Provides localized typescript definitions. | None |
+| `telegram-auth.guard.ts` | TypeScript | Handles authentication/authorization protection. | @nestjs/common |
+
+## 🔗 Dependencies
+- `@nestjs/common`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 backend
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [backend](/frontend/src/backend)

@@ -1,3 +1,48 @@
+# 🖼️ Ui Directory
+
+[frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [settings](/frontend/src/pages/settings) > [ui](/frontend/src/pages/settings/ui)
+
+## 🎯 Purpose
+A high-level module handling `ui` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+**FSD Layer:** Pages
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    ui --> Components
+    Components --> AdditionalLinksComponent
+    Components --> SocialMatrixComponent
+    Components --> SelectsSettingsComponent
+    Components --> GeneralInfoComponent
+    Components --> BusinessProfileComponent
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `additional-links.component.ts` | Component | Angular UI standalone component logic. | @angular/forms, @angular/core, @angular/common |
+| `business-profile.component.ts` | Component | Angular UI standalone component logic. | @angular/forms, @angular/core, @angular/common, @shared/models |
+| `general-info.component.ts` | Component | Angular UI standalone component logic. | @angular/forms, @angular/core, @angular/common |
+| `selects-settings.component.ts` | Component | Angular UI standalone component logic. | @angular/forms, @angular/core, @angular/common |
+| `social-matrix.component.ts` | Component | Angular UI standalone component logic. | @angular/forms, @angular/core, @angular/common |
+
+## 🔗 Dependencies
+- `@angular/common`
+- `@angular/core`
+- `@angular/forms`
+- `@shared/models`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 ui
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [settings](/frontend/src/pages/settings) > [ui](/frontend/src/pages/settings/ui)

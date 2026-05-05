@@ -1,30 +1,29 @@
-# 📁 types
+# 📁 Types Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [types](/frontend/src/types)
+[frontend](/frontend) > [src](/frontend/src) > [types](/frontend/src/types)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **types** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+A high-level module handling `types` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 types"]
-  Root --> telegram_ts["📄 telegram.ts"]
+    types[types] --> Files
 ```
+
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `telegram.ts` | TypeScript | Provides core logic and orchestration for telegram.ts. | N/A |
+|-----------|------|----------------|------------------|
+| `telegram.ts` | TypeScript | Provides localized typescript definitions. | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- No major internal/external path aliases detected.
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './types';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
 ```

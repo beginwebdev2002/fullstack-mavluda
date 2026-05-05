@@ -1,3 +1,36 @@
+# 📄 Schemas Directory
+
+[backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [infrastructure](/backend/src/modules/inventory/infrastructure) > [schemas](/backend/src/modules/inventory/infrastructure/schemas)
+
+## 🎯 Purpose
+A high-level module handling `schemas` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+classDiagram
+    class InventorySchema {
+        +... properties/methods
+    }
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `inventory.schema.ts` | TypeScript | Defines MongoDB data structure and validation. | @nestjs/mongoose |
+
+## 🔗 Dependencies
+- `@nestjs/mongoose`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 schemas
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [infrastructure](/backend/src/modules/inventory/infrastructure) > [schemas](/backend/src/modules/inventory/infrastructure/schemas)

@@ -1,3 +1,36 @@
+# 🖥️ Presentation Directory
+
+[backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [gallery](/backend/src/modules/gallery) > [presentation](/backend/src/modules/gallery/presentation)
+
+## 🎯 Purpose
+A high-level module handling `presentation` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    presentation[presentation] --> Files
+    presentation --> dto[dto]
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `gallery.controller.ts` | Controller | Handles incoming HTTP requests and routing. | @nestjs/common, @nestjs/platform-express |
+
+## 🔗 Dependencies
+- `@nestjs/common`
+- `@nestjs/platform-express`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 presentation
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [gallery](/backend/src/modules/gallery) > [presentation](/backend/src/modules/gallery/presentation)

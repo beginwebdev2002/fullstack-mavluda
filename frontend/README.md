@@ -1,3 +1,44 @@
+# 🎨 Frontend Directory
+
+[frontend](/frontend)
+
+## 🎯 Purpose
+A high-level module handling `frontend` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    frontend[frontend] --> Files
+    frontend --> public[public]
+    frontend --> environments[environments]
+    frontend --> src[src]
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `angular.json` | File | Provides localized file definitions. | None |
+| `index.html` | Template | Provides localized template definitions. | None |
+| `index.tsx` | File | Provides localized file definitions. | @angular/platform-browser |
+| `leaflet.css` | Style | Provides localized style definitions. | None |
+| `metadata.json` | File | Provides localized file definitions. | None |
+| `package-lock.json` | File | Provides localized file definitions. | None |
+| `package.json` | File | Provides localized file definitions. | None |
+| `tsconfig.json` | File | Provides localized file definitions. | None |
+
+## 🔗 Dependencies
+- `@angular/platform-browser`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 frontend
 
 [Root](/.) > [frontend](/frontend)

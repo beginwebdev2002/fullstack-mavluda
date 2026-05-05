@@ -1,3 +1,53 @@
+# 💻 Src Directory
+
+[frontend](/frontend) > [src](/frontend/src)
+
+## 🎯 Purpose
+A high-level module handling `src` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    src[src] --> Files
+    src --> backend[backend]
+    src --> entities[entities]
+    src --> app[app]
+    src --> locale[locale]
+    src --> core[core]
+    src --> shared[shared]
+    src --> widgets[widgets]
+    src --> pages[pages]
+    src --> features[features]
+    src --> types[types]
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `app.component.html` | Template | Angular UI standalone component logic. | None |
+| `app.component.scss` | Style | Angular UI standalone component logic. | None |
+| `app.component.ts` | Component | Angular UI standalone component logic. | @angular/core, @angular/router, @shared/ui, @shared/services, @angular/common |
+| `app.routes.ts` | TypeScript | Provides localized typescript definitions. | @angular/router |
+| `main.ts` | TypeScript | Provides localized typescript definitions. | @angular/platform-browser |
+
+## 🔗 Dependencies
+- `@angular/common`
+- `@angular/core`
+- `@angular/platform-browser`
+- `@angular/router`
+- `@shared/services`
+- `@shared/ui`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 src
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src)

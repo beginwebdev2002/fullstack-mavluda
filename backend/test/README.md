@@ -1,3 +1,36 @@
+# 🧪 Test Directory
+
+[backend](/backend) > [test](/backend/test)
+
+## 🎯 Purpose
+A high-level module handling `test` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    test[test] --> Files
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `app.e2e-spec.ts` | TypeScript | Provides localized typescript definitions. | @nestjs/common, @nestjs/testing |
+| `jest-e2e.json` | File | Provides localized file definitions. | None |
+
+## 🔗 Dependencies
+- `@nestjs/common`
+- `@nestjs/testing`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 test
 
 [Root](/.) > [backend](/backend) > [test](/backend/test)

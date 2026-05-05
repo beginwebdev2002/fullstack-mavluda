@@ -1,3 +1,54 @@
+# 💻 Src Directory
+
+[backend](/backend) > [src](/backend/src)
+
+## 🎯 Purpose
+A high-level module handling `src` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    src[src] --> Files
+    src --> common[common]
+    src --> modules[modules]
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `app.controller.spec.ts` | Test | Handles incoming HTTP requests and routing. | @nestjs/testing |
+| `app.controller.ts` | Controller | Handles incoming HTTP requests and routing. | @nestjs/common |
+| `app.module.ts` | Module | Provides localized module definitions. | @modules/veil, @modules/payment, @modules/partnership, @modules/gallery, @nestjs/serve-static, @modules/user, @modules/treatments, @modules/auth, @modules/booking, @modules/admin-settings, @nestjs/common, @modules/inventory |
+| `app.service.ts` | Service | Executes core business logic and use cases. | @nestjs/common |
+| `main.ts` | TypeScript | Provides localized typescript definitions. | @nestjs/common, @nestjs/core, @nestjs/config |
+
+## 🔗 Dependencies
+- `@modules/admin-settings`
+- `@modules/auth`
+- `@modules/booking`
+- `@modules/gallery`
+- `@modules/inventory`
+- `@modules/partnership`
+- `@modules/payment`
+- `@modules/treatments`
+- `@modules/user`
+- `@modules/veil`
+- `@nestjs/common`
+- `@nestjs/config`
+- `@nestjs/core`
+- `@nestjs/serve-static`
+- `@nestjs/testing`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 src
 
 [Root](/.) > [backend](/backend) > [src](/backend/src)

@@ -1,36 +1,35 @@
-# 📁 veil-modal
+# 📁 Veil-Modal Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veil](/frontend/src/pages/veil) > [ui](/frontend/src/pages/veil/ui) > [veil-modal](/frontend/src/pages/veil/ui/veil-modal)
-
-**FSD Layer:** Page
+[frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veil](/frontend/src/pages/veil) > [ui](/frontend/src/pages/veil/ui) > [veil-modal](/frontend/src/pages/veil/ui/veil-modal)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **veil-modal** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+A high-level module handling `veil-modal` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+**FSD Layer:** Pages
+
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 veil-modal"]
-  Root --> veil_modal_component_html["📄 veil-modal.component.html"]
-  Root --> veil_modal_component_ts["📄 veil-modal.component.ts"]
+    veil_modal[veil-modal] --> Files
 ```
+
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `veil-modal.component.html` | Template | Structural template and layout for veil-modal.component.html. | N/A |
-| `veil-modal.component.ts` | TypeScript | UI component logic and state management for veil-modal.component.ts. | @angular, @features |
+|-----------|------|----------------|------------------|
+| `veil-modal.component.html` | Template | Angular UI standalone component logic. | None |
+| `veil-modal.component.ts` | Component | Angular UI standalone component logic. | @angular/forms, @angular/core, @features/veil, @angular/common |
 
 ## 🔗 Dependencies
 - `@angular/common`
+- `@angular/core`
 - `@angular/forms`
 - `@features/veil`
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './veil-modal';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
 ```

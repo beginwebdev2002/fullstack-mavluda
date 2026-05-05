@@ -1,3 +1,38 @@
+# ⚙️ Config Directory
+
+[backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [config](/backend/src/common/config)
+
+## 🎯 Purpose
+A high-level module handling `config` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    config[config] --> Files
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `app-config.module.ts` | Module | Provides localized module definitions. | @nestjs/common, @nestjs/config |
+| `app-config.service.ts` | Service | Executes core business logic and use cases. | @nestjs/common, @nestjs/config |
+| `configuration.ts` | TypeScript | Provides localized typescript definitions. | None |
+| `env.validation.ts` | TypeScript | Provides localized typescript definitions. | None |
+
+## 🔗 Dependencies
+- `@nestjs/common`
+- `@nestjs/config`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 config
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [config](/backend/src/common/config)

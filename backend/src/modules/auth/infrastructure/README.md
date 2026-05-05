@@ -1,3 +1,36 @@
+# 🏗️ Infrastructure Directory
+
+[backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [infrastructure](/backend/src/modules/auth/infrastructure)
+
+## 🎯 Purpose
+A high-level module handling `infrastructure` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
+
+## 🏗️ Architecture
+```mermaid
+graph TD
+    infrastructure[infrastructure] --> Files
+```
+
+
+## 📄 File Registry
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `jwt.strategy.ts` | TypeScript | Provides localized typescript definitions. | @nestjs/passport, @common/config/app-config.service, @nestjs/common |
+
+## 🔗 Dependencies
+- `@common/config/app-config.service`
+- `@nestjs/common`
+- `@nestjs/passport`
+
+## 🛠️ Usage
+```typescript
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
+```
+
+## 📝 Existing Context
 # 📁 infrastructure
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [infrastructure](/backend/src/modules/auth/infrastructure)

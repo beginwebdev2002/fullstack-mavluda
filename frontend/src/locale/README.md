@@ -1,34 +1,31 @@
-# 📁 locale
+# 📁 Locale Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [locale](/frontend/src/locale)
+[frontend](/frontend) > [src](/frontend/src) > [locale](/frontend/src/locale)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **locale** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+A high-level module handling `locale` logic within the Mavluda Beauty ecosystem. This directory adheres to our "Luxury Professional" architectural standards.
+
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 locale"]
-  Root --> messages_ru_xlf["📄 messages.ru.xlf"]
-  Root --> messages_tj_xlf["📄 messages.tj.xlf"]
-  Root --> messages_xlf["📄 messages.xlf"]
+    locale[locale] --> Files
 ```
+
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `messages.ru.xlf` | File | Provides core logic and orchestration for messages.ru.xlf. | N/A |
-| `messages.tj.xlf` | File | Provides core logic and orchestration for messages.tj.xlf. | N/A |
-| `messages.xlf` | File | Provides core logic and orchestration for messages.xlf. | N/A |
+|-----------|------|----------------|------------------|
+| `messages.ru.xlf` | File | Provides localized file definitions. | None |
+| `messages.tj.xlf` | File | Provides localized file definitions. | None |
+| `messages.xlf` | File | Provides localized file definitions. | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- No major internal/external path aliases detected.
 
 ## 🛠️ Usage
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './locale';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Architectural overview snippet
+import { InternalLogic } from './internal-file';
+// Ensure adherence to Hexagonal / FSD principles
 ```
