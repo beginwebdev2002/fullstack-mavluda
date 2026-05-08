@@ -1,20 +1,20 @@
 # 📁 header
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [header](/frontend/src/widgets/header)
-
-**FSD Layer:** Widget
+[Root](/../../../../README.md) / [frontend](../../../README.md) / [src](../../README.md) / [widgets](../README.md) / [header](./README.md)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **header** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
+**FSD Layer:** Widgets
+
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 header"]
-  Root --> header_component_html["📄 header.component.html"]
-  Root --> header_component_scss["📄 header.component.scss"]
-  Root --> header_component_ts["📄 header.component.ts"]
-  Root --> index_ts["📄 index.ts"]
+  header["📁 header"]
+  header --> header_component_html["🖼️ header.component.html"]
+  header --> header_component_scss["🎨 header.component.scss"]
+  header --> header_component_ts["📜 header.component.ts"]
+  header --> index_ts["📜 index.ts"]
 ```
 
 ## 📄 File Registry
@@ -22,19 +22,23 @@ graph TD
 |---|---|---|---|
 | `header.component.html` | Template | Structural template and layout for header.component.html. | N/A |
 | `header.component.scss` | Stylesheet | Luxury styling and visual presentation for header.component.scss. | N/A |
-| `header.component.ts` | TypeScript | UI component logic and state management for header.component.ts. | @angular, @features |
+| `header.component.ts` | Component | UI component logic and state management for header.component.ts. | @angular, @features |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
+
 ## 🔗 Dependencies
+**Internal / Aliases:**
 - `@angular/common`
 - `@angular/core`
 - `@angular/router`
 - `@features/language-selection`
 
+
+
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './header';
+import { relevantMember } from './header.component';
 
 // Integrate into the application architecture
 relevantMember.execute();

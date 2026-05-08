@@ -1,6 +1,6 @@
-# 📁 backend
+# ⚙️ backend
 
-[Root](/.) > [backend](/backend)
+[Root](/../README.md) / [backend](./README.md)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **backend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,36 +8,44 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 backend"]
-  Root --> src["📁 src"]
-  Root --> test["📁 test"]
-  Root --> _prettierrc["📄 .prettierrc"]
-  Root --> eslint_config_mjs["📄 eslint.config.mjs"]
-  Root --> nest_cli_json["📄 nest-cli.json"]
-  Root --> package_lock_json["📄 package-lock.json"]
-  Root --> package_json["📄 package.json"]
-  Root --> tsconfig_build_json["📄 tsconfig.build.json"]
-  Root --> tsconfig_json["📄 tsconfig.json"]
+  backend["⚙️ backend"]
+  backend --> src["📁 src"]
+  backend --> test["📁 test"]
+  backend --> _prettierrc["📄 .prettierrc"]
+  backend --> eslint_config_mjs["📄 eslint.config.mjs"]
+  backend --> nest_cli_json["⚙️ nest-cli.json"]
+  backend --> package_lock_json["⚙️ package-lock.json"]
+  backend --> package_json["⚙️ package.json"]
+  backend --> tsconfig_build_json["⚙️ tsconfig.build.json"]
+  backend --> tsconfig_json["⚙️ tsconfig.json"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `.prettierrc` | File | Provides core logic and orchestration for .prettierrc. | N/A |
-| `eslint.config.mjs` | JavaScript | Provides core logic and orchestration for eslint.config.mjs. | N/A |
-| `nest-cli.json` | JSON Configuration | Provides core logic and orchestration for nest-cli.json. | N/A |
-| `package-lock.json` | JSON Configuration | Provides core logic and orchestration for package-lock.json. | N/A |
-| `package.json` | JSON Configuration | Provides core logic and orchestration for package.json. | N/A |
-| `tsconfig.build.json` | JSON Configuration | Provides core logic and orchestration for tsconfig.build.json. | N/A |
-| `tsconfig.json` | JSON Configuration | Provides core logic and orchestration for tsconfig.json. | N/A |
+| `eslint.config.mjs` | File | Provides core logic and orchestration for eslint.config.mjs. | @eslint |
+| `nest-cli.json` | Configuration | Provides core logic and orchestration for nest-cli.json. | N/A |
+| `package-lock.json` | Configuration | Provides core logic and orchestration for package-lock.json. | N/A |
+| `package.json` | Configuration | Provides core logic and orchestration for package.json. | N/A |
+| `tsconfig.build.json` | Configuration | Provides core logic and orchestration for tsconfig.build.json. | N/A |
+| `tsconfig.json` | Configuration | Provides core logic and orchestration for tsconfig.json. | N/A |
+
 
 ## 🔗 Dependencies
-- No external dependencies.
+**Internal / Aliases:**
+- `@eslint/js`
+
+**External:**
+- `eslint-plugin-prettier/recommended`
+- `globals`
+- `typescript-eslint`
+
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './backend';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

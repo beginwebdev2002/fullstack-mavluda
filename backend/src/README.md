@@ -1,6 +1,6 @@
 # 📁 src
 
-[Root](/.) > [backend](/backend) > [src](/backend/src)
+[Root](/../../README.md) / [backend](../README.md) / [src](./README.md)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **src** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,26 +8,28 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 src"]
-  Root --> common["📁 common"]
-  Root --> modules["📁 modules"]
-  Root --> app_controller_spec_ts["📄 app.controller.spec.ts"]
-  Root --> app_controller_ts["📄 app.controller.ts"]
-  Root --> app_module_ts["📄 app.module.ts"]
-  Root --> app_service_ts["📄 app.service.ts"]
-  Root --> main_ts["📄 main.ts"]
+  src["📁 src"]
+  src --> common["📁 common"]
+  src --> modules["📁 modules"]
+  src --> app_controller_spec_ts["📜 app.controller.spec.ts"]
+  src --> app_controller_ts["📜 app.controller.ts"]
+  src --> app_module_ts["📜 app.module.ts"]
+  src --> app_service_ts["📜 app.service.ts"]
+  src --> main_ts["📜 main.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.controller.spec.ts` | TypeScript | Unit testing and quality assurance for app.controller.spec.ts. | @nestjs |
-| `app.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for app.controller.ts. | @nestjs |
-| `app.module.ts` | TypeScript | Defines the architectural module boundaries for app.module.ts. | @modules, @nestjs |
-| `app.service.ts` | TypeScript | Encapsulates business logic and data access for app.service.ts. | @nestjs |
+| `app.controller.spec.ts` | Test | Unit testing and quality assurance for app.controller.spec.ts. | @nestjs |
+| `app.controller.ts` | Controller | Handles incoming HTTP requests and routing for app.controller.ts. | @nestjs |
+| `app.module.ts` | Module | Defines the architectural module boundaries for app.module.ts. | @modules, @nestjs |
+| `app.service.ts` | Service | Encapsulates business logic and data access for app.service.ts. | @nestjs |
 | `main.ts` | TypeScript | Provides core logic and orchestration for main.ts. | @nestjs |
 
+
 ## 🔗 Dependencies
+**Internal / Aliases:**
 - `./app.controller`
 - `./app.module`
 - `./app.service`
@@ -49,12 +51,15 @@ graph TD
 - `@nestjs/core`
 - `@nestjs/serve-static`
 - `@nestjs/testing`
+
+**External:**
 - `path`
+
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './src';
+import { relevantMember } from './app.controller.spec';
 
 // Integrate into the application architecture
 relevantMember.execute();

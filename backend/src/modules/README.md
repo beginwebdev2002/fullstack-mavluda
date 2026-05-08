@@ -1,6 +1,6 @@
 # 📁 modules
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules)
+[Root](/../../../README.md) / [backend](../../README.md) / [src](../README.md) / [modules](./README.md)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **modules** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,21 +8,24 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 modules"]
-  Root --> admin-settings["📁 admin-settings"]
-  Root --> auth["📁 auth"]
-  Root --> booking["📁 booking"]
-  Root --> gallery["📁 gallery"]
-  Root --> inventory["📁 inventory"]
-  Root --> partnership["📁 partnership"]
-  Root --> payment["📁 payment"]
-  Root --> treatments["📁 treatments"]
-  Root --> user["📁 user"]
-  Root --> veil["📁 veil"]
+  modules["📁 modules"]
+  modules --> admin_settings["📁 admin-settings"]
+  modules --> auth["📁 auth"]
+  modules --> booking["📁 booking"]
+  modules --> gallery["📁 gallery"]
+  modules --> inventory["📁 inventory"]
+  modules --> partnership["📁 partnership"]
+  modules --> payment["📁 payment"]
+  modules --> treatments["📁 treatments"]
+  modules --> user["📁 user"]
+  modules --> veil["📁 veil"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| N/A | N/A | No files in this directory. | N/A |
+
 
 ## 🔗 Dependencies
 - No external dependencies.
@@ -30,7 +33,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './modules';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

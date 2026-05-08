@@ -1,6 +1,6 @@
-# 📁 domain
+# 🧠 domain
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [domain](/backend/src/modules/inventory/domain)
+[Root](/../../../../../README.md) / [backend](../../../../README.md) / [src](../../../README.md) / [modules](../../README.md) / [inventory](../README.md) / [domain](./README.md)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **domain** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,14 +8,15 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> inventory_entity_ts["📄 inventory.entity.ts"]
+  domain["🧠 domain"]
+  domain --> inventory_entity_ts["📜 inventory.entity.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.entity.ts` | TypeScript | Provides core logic and orchestration for inventory.entity.ts. | N/A |
+| `inventory.entity.ts` | Entity | Provides core logic and orchestration for inventory.entity.ts. | N/A |
+
 
 ## 🔗 Dependencies
 - No external dependencies.
@@ -23,7 +24,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './domain';
+import { relevantMember } from './inventory.entity';
 
 // Integrate into the application architecture
 relevantMember.execute();

@@ -1,20 +1,20 @@
 # 📁 veils-catalog
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veils-catalog](/frontend/src/pages/veils-catalog)
-
-**FSD Layer:** Page
+[Root](/../../../../README.md) / [frontend](../../../README.md) / [src](../../README.md) / [pages](../README.md) / [veils-catalog](./README.md)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **veils-catalog** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
+**FSD Layer:** Pages
+
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 veils-catalog"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> veils_catalog_component_html["📄 veils-catalog.component.html"]
-  Root --> veils_catalog_component_scss["📄 veils-catalog.component.scss"]
-  Root --> veils_catalog_component_ts["📄 veils-catalog.component.ts"]
+  veils_catalog["📁 veils-catalog"]
+  veils_catalog --> index_ts["📜 index.ts"]
+  veils_catalog --> veils_catalog_component_html["🖼️ veils-catalog.component.html"]
+  veils_catalog --> veils_catalog_component_scss["🎨 veils-catalog.component.scss"]
+  veils_catalog --> veils_catalog_component_ts["📜 veils-catalog.component.ts"]
 ```
 
 ## 📄 File Registry
@@ -23,9 +23,11 @@ graph TD
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 | `veils-catalog.component.html` | Template | Structural template and layout for veils-catalog.component.html. | N/A |
 | `veils-catalog.component.scss` | Stylesheet | Luxury styling and visual presentation for veils-catalog.component.scss. | N/A |
-| `veils-catalog.component.ts` | TypeScript | UI component logic and state management for veils-catalog.component.ts. | @angular, @entities, @environments, @shared |
+| `veils-catalog.component.ts` | Component | UI component logic and state management for veils-catalog.component.ts. | @angular, @entities, @environments, @shared |
+
 
 ## 🔗 Dependencies
+**Internal / Aliases:**
 - `@angular/common`
 - `@angular/core`
 - `@entities/admin-settings`
@@ -34,10 +36,12 @@ graph TD
 - `@shared/lib`
 - `@shared/ui`
 
+
+
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './veils-catalog';
+import { relevantMember } from './index';
 
 // Integrate into the application architecture
 relevantMember.execute();

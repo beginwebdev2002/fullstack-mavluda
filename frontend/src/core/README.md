@@ -1,6 +1,6 @@
 # 📁 core
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core)
+[Root](/../../../README.md) / [frontend](../../README.md) / [src](../README.md) / [core](./README.md)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **core** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,14 +8,17 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 core"]
-  Root --> constants["📁 constants"]
-  Root --> guards["📁 guards"]
-  Root --> interceptors["📁 interceptors"]
+  core["📁 core"]
+  core --> constants["📁 constants"]
+  core --> guards["📁 guards"]
+  core --> interceptors["📁 interceptors"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| N/A | N/A | No files in this directory. | N/A |
+
 
 ## 🔗 Dependencies
 - No external dependencies.

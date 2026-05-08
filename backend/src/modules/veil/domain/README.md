@@ -1,6 +1,6 @@
-# 📁 domain
+# 🧠 domain
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil) > [domain](/backend/src/modules/veil/domain)
+[Root](/../../../../../README.md) / [backend](../../../../README.md) / [src](../../../README.md) / [modules](../../README.md) / [veil](../README.md) / [domain](./README.md)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **domain** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,14 +8,15 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> veil_entity_ts["📄 veil.entity.ts"]
+  domain["🧠 domain"]
+  domain --> veil_entity_ts["📜 veil.entity.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.entity.ts` | TypeScript | Provides core logic and orchestration for veil.entity.ts. | N/A |
+| `veil.entity.ts` | Entity | Provides core logic and orchestration for veil.entity.ts. | N/A |
+
 
 ## 🔗 Dependencies
 - No external dependencies.
@@ -23,7 +24,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './domain';
+import { relevantMember } from './veil.entity';
 
 // Integrate into the application architecture
 relevantMember.execute();

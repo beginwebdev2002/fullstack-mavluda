@@ -1,6 +1,6 @@
-# 📁 presentation
+# 🎭 presentation
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil) > [presentation](/backend/src/modules/veil/presentation)
+[Root](/../../../../../README.md) / [backend](../../../../README.md) / [src](../../../README.md) / [modules](../../README.md) / [veil](../README.md) / [presentation](./README.md)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **presentation** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,29 +8,34 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
-  Root --> veil_controller_ts["📄 veil.controller.ts"]
+  presentation["🎭 presentation"]
+  presentation --> dto["📁 dto"]
+  presentation --> veil_controller_ts["📜 veil.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for veil.controller.ts. | @nestjs |
+| `veil.controller.ts` | Controller | Handles incoming HTTP requests and routing for veil.controller.ts. | @nestjs |
+
 
 ## 🔗 Dependencies
+**Internal / Aliases:**
 - `../application/veil.service`
 - `../domain/veil.entity`
 - `./dto/create-veil.dto`
 - `./dto/update-veil.dto`
 - `@nestjs/platform-express`
+
+**External:**
 - `multer`
 - `path`
+
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './presentation';
+import { relevantMember } from './veil.controller';
 
 // Integrate into the application architecture
 relevantMember.execute();
