@@ -1,33 +1,50 @@
-# 📁 repositories
+# 🗄️ repositories
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [partnership](/backend/src/modules/partnership) > [infrastructure](/backend/src/modules/partnership/infrastructure) > [repositories](/backend/src/modules/partnership/infrastructure/repositories)
+[backend](../../../../../README.md) > [src](../../../../README.md) > [modules](../../../README.md) > [partnership](../../README.md) > [infrastructure](../README.md) > [repositories](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **repositories** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Infrastructure Layer (External systems, DBs, frameworks) operations.
+
+*FSD Layer:* **Infrastructure Layer (External systems, DBs, frameworks)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> partnership_repository_ts["📄 partnership.repository.ts"]
+  subgraph repositories
+    partnership_repository_ts["partnership.repository.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `partnership.repository.ts` | TypeScript | Provides core logic and orchestration for partnership.repository.ts. | @nestjs |
 
-## 🔗 Dependencies
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `partnership.repository.ts` | Repository | Handles repository logic for Mavluda Beauty's luxury standards. | `@nestjs` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
+- `mongoose`
 - `../../domain/partnership.entity`
 - `@nestjs/common`
+- `../schemas/partnership.schema`
 - `@nestjs/mongoose`
-- `mongoose`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Infrastructure Layer (External systems, DBs, frameworks) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './repositories';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/repositories';
 ```

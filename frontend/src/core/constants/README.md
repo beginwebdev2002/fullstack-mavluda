@@ -1,32 +1,49 @@
-# 📁 constants
+# 📌 constants
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [constants](/frontend/src/core/constants)
+[frontend](../../../README.md) > [src](../../README.md) > [core](../README.md) > [constants](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Root / Operational Layer operations.
+
+*FSD Layer:* **Root / Operational Layer**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> api_endpoints_ts["📄 api-endpoints.ts"]
-  Root --> index_ts["📄 index.ts"]
+  subgraph constants
+    api_endpoints_ts["api-endpoints.ts"]
+    index_ts["index.ts"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `api-endpoints.ts` | TypeScript | Provides core logic and orchestration for api-endpoints.ts. | @shared |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+|-----------|------|----------------|------------------|
+| `api-endpoints.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `@shared` |
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
 
-## 🔗 Dependencies
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@shared`
+
+Notable imports:
 - `@shared/lib`
+- `./api-endpoints`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Root / Operational Layer boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './constants';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/constants';
 ```

@@ -1,33 +1,50 @@
-# 📁 repositories
+# 🗄️ repositories
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [infrastructure](/backend/src/modules/admin-settings/infrastructure) > [repositories](/backend/src/modules/admin-settings/infrastructure/repositories)
+[backend](../../../../../README.md) > [src](../../../../README.md) > [modules](../../../README.md) > [admin-settings](../../README.md) > [infrastructure](../README.md) > [repositories](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **repositories** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Infrastructure Layer (External systems, DBs, frameworks) operations.
+
+*FSD Layer:* **Infrastructure Layer (External systems, DBs, frameworks)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> admin_settings_repository_ts["📄 admin-settings.repository.ts"]
+  subgraph repositories
+    admin_settings_repository_ts["admin-settings.repository.ts"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `admin-settings.repository.ts` | TypeScript | Provides core logic and orchestration for admin-settings.repository.ts. | @nestjs |
+|-----------|------|----------------|------------------|
+| `admin-settings.repository.ts` | Repository | Handles repository logic for Mavluda Beauty's luxury standards. | `@nestjs` |
 
-## 🔗 Dependencies
-- `../../domain/admin-settings.entity`
-- `@nestjs/common`
-- `@nestjs/mongoose`
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
 - `mongoose`
+- `../schemas/admin-settings.schema`
+- `@nestjs/common`
+- `../../domain/admin-settings.entity`
+- `@nestjs/mongoose`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Infrastructure Layer (External systems, DBs, frameworks) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './repositories';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/repositories';
 ```

@@ -1,38 +1,54 @@
-# 📁 presentation
+# 🎭 presentation
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [presentation](/backend/src/modules/user/presentation)
+[backend](../../../../README.md) > [src](../../../README.md) > [modules](../../README.md) > [user](../README.md) > [presentation](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **presentation** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Presentation Layer (Controllers, Resolvers, DTOs) operations.
+
+*FSD Layer:* **Presentation Layer (Controllers, Resolvers, DTOs)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
-  Root --> user_controller_ts["📄 user.controller.ts"]
+  subgraph presentation
+    user_controller_ts["user.controller.ts"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `user.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for user.controller.ts. | @common, @modules, @nestjs |
+|-----------|------|----------------|------------------|
+| `user.controller.ts` | Controller | Handles controller logic for Mavluda Beauty's luxury standards. | `@modules, @common, @nestjs` |
 
-## 🔗 Dependencies
-- `../application/user.service`
-- `./dto/create-user.dto`
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@modules`, `@common`, `@nestjs`
+
+Notable imports:
 - `./dto/update-user.dto`
-- `@common/interfaces/authenticated-request.interface`
-- `@modules/user`
-- `@nestjs/platform-express`
 - `multer`
+- `../application/user.service`
+- `@modules/user`
+- `@common/interfaces/authenticated-request.interface`
 - `path`
+- `@nestjs/platform-express`
+- `./dto/create-user.dto`
+- `@nestjs/common`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Presentation Layer (Controllers, Resolvers, DTOs) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './presentation';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/presentation';
 ```

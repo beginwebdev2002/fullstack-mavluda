@@ -1,32 +1,48 @@
 # 📁 decorators
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [decorators](/backend/src/common/decorators)
+[backend](../../../README.md) > [src](../../README.md) > [common](../README.md) > [decorators](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **decorators** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Common Layer (Cross-cutting concerns) operations.
+
+*FSD Layer:* **Common Layer (Cross-cutting concerns)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 decorators"]
-  Root --> public_decorator_ts["📄 public.decorator.ts"]
-  Root --> roles_decorator_ts["📄 roles.decorator.ts"]
+  subgraph decorators
+    public_decorator_ts["public.decorator.ts"]
+    roles_decorator_ts["roles.decorator.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `public.decorator.ts` | TypeScript | Provides core logic and orchestration for public.decorator.ts. | @nestjs |
-| `roles.decorator.ts` | TypeScript | Provides core logic and orchestration for roles.decorator.ts. | @nestjs |
 
-## 🔗 Dependencies
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `public.decorator.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `@nestjs` |
+| `roles.decorator.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `@nestjs` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
 - `@nestjs/common`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './decorators';
+---
 
-// Integrate into the application architecture
-relevantMember.execute();
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Common Layer (Cross-cutting concerns) boundaries.
+
+```typescript
+// Example integration snippet
+import { FeatureModule } from '@path/to/decorators';
 ```

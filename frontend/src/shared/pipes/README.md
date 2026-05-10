@@ -1,35 +1,50 @@
-# 📁 pipes
+# 🚰 pipes
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [pipes](/frontend/src/shared/pipes)
+[frontend](../../../README.md) > [src](../../README.md) > [shared](../README.md) > [pipes](README.md)
 
-**FSD Layer:** Shared
+---
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **pipes** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Shared Layer (Reusable infrastructure, UI kits) operations.
 
-## 🏗️ Architecture
+*FSD Layer:* **Shared Layer (Reusable infrastructure, UI kits)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 pipes"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> safe_html_pipe_ts["📄 safe-html.pipe.ts"]
+  subgraph pipes
+    index_ts["index.ts"]
+    safe_html_pipe_ts["safe-html.pipe.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `safe-html.pipe.ts` | TypeScript | Provides core logic and orchestration for safe-html.pipe.ts. | @angular |
 
-## 🔗 Dependencies
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `safe-html.pipe.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `@angular` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@angular`
+
+Notable imports:
+- `./safe-html.pipe`
 - `@angular/core`
 - `@angular/platform-browser`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './pipes';
+---
 
-// Integrate into the application architecture
-relevantMember.execute();
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Shared Layer (Reusable infrastructure, UI kits) boundaries.
+
+```typescript
+// Example integration snippet
+import { FeatureModule } from '@path/to/pipes';
 ```

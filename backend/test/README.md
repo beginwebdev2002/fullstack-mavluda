@@ -1,36 +1,52 @@
-# 📁 test
+# 🧪 test
 
-[Root](/.) > [backend](/backend) > [test](/backend/test)
+[backend](../README.md) > [test](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **test** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Root / Operational Layer operations.
+
+*FSD Layer:* **Root / Operational Layer**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 test"]
-  Root --> app_e2e_spec_ts["📄 app.e2e-spec.ts"]
-  Root --> jest_e2e_json["📄 jest-e2e.json"]
+  subgraph test
+    jest_e2e_json["jest-e2e.json"]
+    app_e2e_spec_ts["app.e2e-spec.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `app.e2e-spec.ts` | TypeScript | Unit testing and quality assurance for app.e2e-spec.ts. | @nestjs |
-| `jest-e2e.json` | JSON Configuration | Provides core logic and orchestration for jest-e2e.json. | N/A |
 
-## 🔗 Dependencies
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `jest-e2e.json` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `app.e2e-spec.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `@nestjs` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
+- `supertest`
+- `supertest/types`
 - `./../src/app.module`
 - `@nestjs/common`
 - `@nestjs/testing`
-- `supertest`
-- `supertest/types`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Root / Operational Layer boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './test';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/test';
 ```

@@ -1,48 +1,62 @@
-# 📁 gallery
+# 🖼️ gallery
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [gallery](/frontend/src/pages/gallery)
+[frontend](../../../README.md) > [src](../../README.md) > [pages](../README.md) > [gallery](README.md)
 
-**FSD Layer:** Page
+---
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Pages Layer (Routing and page-level components) operations.
 
-## 🏗️ Architecture
+*FSD Layer:* **Pages Layer (Routing and page-level components)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 gallery"]
-  Root --> ui["📁 ui"]
-  Root --> gallery_component_html["📄 gallery.component.html"]
-  Root --> gallery_component_scss["📄 gallery.component.scss"]
-  Root --> gallery_component_ts["📄 gallery.component.ts"]
-  Root --> index_ts["📄 index.ts"]
+  subgraph gallery
+    index_ts["index.ts"]
+    gallery_component_scss["gallery.component.scss"]
+    gallery_component_ts["gallery.component.ts"]
+    gallery_component_html["gallery.component.html"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `gallery.component.html` | Template | Structural template and layout for gallery.component.html. | N/A |
-| `gallery.component.scss` | Stylesheet | Luxury styling and visual presentation for gallery.component.scss. | N/A |
-| `gallery.component.ts` | TypeScript | UI component logic and state management for gallery.component.ts. | @angular, @entities, @environments, @shared |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
-## 🔗 Dependencies
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `gallery.component.scss` | Styles | Handles styles logic for Mavluda Beauty's luxury standards. | `None` |
+| `gallery.component.ts` | Component | Handles component logic for Mavluda Beauty's luxury standards. | `@shared, @entities, @angular, @environments` |
+| `gallery.component.html` | Template | Handles template logic for Mavluda Beauty's luxury standards. | `None` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@shared`, `@entities`, `@angular`, `@environments`
+
+Notable imports:
+- `@angular/forms`
+- `@shared/models`
+- `@environments/environment`
+- `@entities/admin-settings`
+- `@shared/ui`
+- `@angular/core`
+- `@entities/gallery`
 - `./ui/gallery-form/gallery-form.component`
 - `@angular/common`
-- `@angular/forms`
-- `@entities/admin-settings`
-- `@entities/gallery`
-- `@environments/environment`
-- `@shared/lib`
 - `@shared/lib/object`
-- `@shared/models`
-- `@shared/ui`
+- *...and 2 more*
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Pages Layer (Routing and page-level components) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './gallery';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/gallery';
 ```

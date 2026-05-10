@@ -1,31 +1,47 @@
-# 📁 schemas
+# 📝 schemas
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil) > [infrastructure](/backend/src/modules/veil/infrastructure) > [schemas](/backend/src/modules/veil/infrastructure/schemas)
+[backend](../../../../../README.md) > [src](../../../../README.md) > [modules](../../../README.md) > [veil](../../README.md) > [infrastructure](../README.md) > [schemas](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **schemas** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Infrastructure Layer (External systems, DBs, frameworks) operations.
+
+*FSD Layer:* **Infrastructure Layer (External systems, DBs, frameworks)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 schemas"]
-  Root --> veil_schema_ts["📄 veil.schema.ts"]
+  subgraph schemas
+    veil_schema_ts["veil.schema.ts"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `veil.schema.ts` | TypeScript | Provides core logic and orchestration for veil.schema.ts. | @nestjs |
+|-----------|------|----------------|------------------|
+| `veil.schema.ts` | Schema | Handles schema logic for Mavluda Beauty's luxury standards. | `@nestjs` |
 
-## 🔗 Dependencies
-- `@nestjs/mongoose`
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
 - `mongoose`
+- `@nestjs/mongoose`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Infrastructure Layer (External systems, DBs, frameworks) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './schemas';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/schemas';
 ```

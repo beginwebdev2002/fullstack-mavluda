@@ -1,34 +1,52 @@
-# 📁 dto
+# 📦 dto
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [presentation](/backend/src/modules/admin-settings/presentation) > [dto](/backend/src/modules/admin-settings/presentation/dto)
+[backend](../../../../../README.md) > [src](../../../../README.md) > [modules](../../../README.md) > [admin-settings](../../README.md) > [presentation](../README.md) > [dto](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Presentation Layer (Controllers, Resolvers, DTOs) operations.
+
+*FSD Layer:* **Presentation Layer (Controllers, Resolvers, DTOs)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_admin_settings_dto_ts["📄 create-admin-settings.dto.ts"]
-  Root --> update_admin_settings_dto_ts["📄 update-admin-settings.dto.ts"]
+  subgraph dto
+    create_admin_settings_dto_ts["create-admin-settings.dto.ts"]
+    update_admin_settings_dto_ts["update-admin-settings.dto.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `create-admin-settings.dto.ts` | TypeScript | Provides core logic and orchestration for create-admin-settings.dto.ts. | N/A |
-| `update-admin-settings.dto.ts` | TypeScript | Provides core logic and orchestration for update-admin-settings.dto.ts. | @nestjs |
 
-## 🔗 Dependencies
-- `./create-admin-settings.dto`
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `create-admin-settings.dto.ts` | DTO | Handles dto logic for Mavluda Beauty's luxury standards. | `None` |
+| `update-admin-settings.dto.ts` | DTO | Handles dto logic for Mavluda Beauty's luxury standards. | `@nestjs` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
+- `class-validator`
+- `../../domain/interfaces/admin-settings.interface`
 - `@nestjs/mapped-types`
 - `class-transformer`
+- `./create-admin-settings.dto`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Presentation Layer (Controllers, Resolvers, DTOs) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/dto';
 ```

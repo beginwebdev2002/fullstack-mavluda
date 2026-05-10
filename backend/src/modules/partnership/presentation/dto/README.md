@@ -1,33 +1,49 @@
-# 📁 dto
+# 📦 dto
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [partnership](/backend/src/modules/partnership) > [presentation](/backend/src/modules/partnership/presentation) > [dto](/backend/src/modules/partnership/presentation/dto)
+[backend](../../../../../README.md) > [src](../../../../README.md) > [modules](../../../README.md) > [partnership](../../README.md) > [presentation](../README.md) > [dto](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Presentation Layer (Controllers, Resolvers, DTOs) operations.
+
+*FSD Layer:* **Presentation Layer (Controllers, Resolvers, DTOs)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_partnership_dto_ts["📄 create-partnership.dto.ts"]
-  Root --> update_partnership_dto_ts["📄 update-partnership.dto.ts"]
+  subgraph dto
+    create_partnership_dto_ts["create-partnership.dto.ts"]
+    update_partnership_dto_ts["update-partnership.dto.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `create-partnership.dto.ts` | TypeScript | Provides core logic and orchestration for create-partnership.dto.ts. | N/A |
-| `update-partnership.dto.ts` | TypeScript | Provides core logic and orchestration for update-partnership.dto.ts. | @nestjs |
 
-## 🔗 Dependencies
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `create-partnership.dto.ts` | DTO | Handles dto logic for Mavluda Beauty's luxury standards. | `None` |
+| `update-partnership.dto.ts` | DTO | Handles dto logic for Mavluda Beauty's luxury standards. | `@nestjs` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
 - `./create-partnership.dto`
 - `@nestjs/mapped-types`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
+---
 
-// Integrate into the application architecture
-relevantMember.execute();
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Presentation Layer (Controllers, Resolvers, DTOs) boundaries.
+
+```typescript
+// Example integration snippet
+import { FeatureModule } from '@path/to/dto';
 ```

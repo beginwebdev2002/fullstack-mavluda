@@ -1,49 +1,63 @@
-# 📁 frontend
+# 💻 frontend
 
-[Root](/.) > [frontend](/frontend)
+[frontend](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **frontend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Root / Operational Layer operations.
+
+*FSD Layer:* **Root / Operational Layer**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 frontend"]
-  Root --> public["📁 public"]
-  Root --> src["📁 src"]
-  Root --> angular_json["📄 angular.json"]
-  Root --> index_html["📄 index.html"]
-  Root --> index_tsx["📄 index.tsx"]
-  Root --> leaflet_css["📄 leaflet.css"]
-  Root --> metadata_json["📄 metadata.json"]
-  Root --> package_lock_json["📄 package-lock.json"]
-  Root --> package_json["📄 package.json"]
-  Root --> tsconfig_json["📄 tsconfig.json"]
+  subgraph frontend
+    package_lock_json["package-lock.json"]
+    angular_json["angular.json"]
+    metadata_json["metadata.json"]
+    index_tsx["index.tsx"]
+    leaflet_css["leaflet.css"]
+    tsconfig_json["tsconfig.json"]
+    index_html["index.html"]
+    package_json["package.json"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `angular.json` | JSON Configuration | Provides core logic and orchestration for angular.json. | N/A |
-| `index.html` | Template | Provides core logic and orchestration for index.html. | N/A |
-| `index.tsx` | File | Provides core logic and orchestration for index.tsx. | @angular |
-| `leaflet.css` | Stylesheet | Provides core logic and orchestration for leaflet.css. | N/A |
-| `metadata.json` | JSON Configuration | Provides core logic and orchestration for metadata.json. | N/A |
-| `package-lock.json` | JSON Configuration | Provides core logic and orchestration for package-lock.json. | N/A |
-| `package.json` | JSON Configuration | Provides core logic and orchestration for package.json. | N/A |
-| `tsconfig.json` | JSON Configuration | Provides core logic and orchestration for tsconfig.json. | N/A |
+|-----------|------|----------------|------------------|
+| `package-lock.json` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `angular.json` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `metadata.json` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `index.tsx` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `@angular` |
+| `leaflet.css` | Styles | Handles styles logic for Mavluda Beauty's luxury standards. | `None` |
+| `tsconfig.json` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `index.html` | Template | Handles template logic for Mavluda Beauty's luxury standards. | `None` |
+| `package.json` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
 
-## 🔗 Dependencies
-- `./src/app.component`
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@angular`
+
+Notable imports:
 - `./src/app/app.config`
-- `@angular/platform-browser`
 - `leaflet/dist/leaflet.css`
+- `./src/app.component`
+- `@angular/platform-browser`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Root / Operational Layer boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './frontend';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/frontend';
 ```

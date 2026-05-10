@@ -49,3 +49,5 @@ dist-ssr
 !**/README.md
 !GEMINI.md
 !AGENTS.md
+
+!**/README.md

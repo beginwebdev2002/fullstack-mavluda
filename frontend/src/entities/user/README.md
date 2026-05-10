@@ -1,44 +1,58 @@
-# 📁 user
+# 👤 user
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [user](/frontend/src/entities/user)
+[frontend](../../../README.md) > [src](../../README.md) > [entities](../README.md) > [user](README.md)
 
-**FSD Layer:** Entity
+---
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **user** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Entities Layer (Business entities and state) operations.
 
-## 🏗️ Architecture
+*FSD Layer:* **Entities Layer (Business entities and state)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 user"]
-  Root --> constants["📁 constants"]
-  Root --> model["📁 model"]
-  Root --> auth_service_ts["📄 auth.service.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> user_service_ts["📄 user.service.ts"]
+  subgraph user
+    auth_service_ts["auth.service.ts"]
+    index_ts["index.ts"]
+    user_service_ts["user.service.ts"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `auth.service.ts` | TypeScript | Encapsulates business logic and data access for auth.service.ts. | @angular |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `user.service.ts` | TypeScript | Encapsulates business logic and data access for user.service.ts. | @angular |
+|-----------|------|----------------|------------------|
+| `auth.service.ts` | Service | Handles service logic for Mavluda Beauty's luxury standards. | `@angular` |
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `user.service.ts` | Service | Handles service logic for Mavluda Beauty's luxury standards. | `@angular` |
 
-## 🔗 Dependencies
-- `./model/user.model`
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@angular`
+
+Notable imports:
 - `@angular/common/http`
-- `@angular/core`
-- `@angular/router`
-- `jwt-decode`
+- `./model/user.model`
 - `rxjs`
+- `jwt-decode`
+- `@angular/core`
 - `rxjs/operators`
+- `./user.service`
+- `@angular/router`
+- `./auth.service`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Entities Layer (Business entities and state) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './user';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/user';
 ```

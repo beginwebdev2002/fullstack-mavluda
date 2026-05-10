@@ -1,32 +1,46 @@
-# 📁 dto
+# 📦 dto
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [dto](/backend/src/modules/auth/dto)
+[backend](../../../../README.md) > [src](../../../README.md) > [modules](../../README.md) > [auth](../README.md) > [dto](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Feature Module Layer (Bounded Contexts) operations.
+
+*FSD Layer:* **Feature Module Layer (Bounded Contexts)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> login_dto_ts["📄 login.dto.ts"]
-  Root --> register_dto_ts["📄 register.dto.ts"]
+  subgraph dto
+    register_dto_ts["register.dto.ts"]
+    login_dto_ts["login.dto.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `login.dto.ts` | TypeScript | Provides core logic and orchestration for login.dto.ts. | N/A |
-| `register.dto.ts` | TypeScript | Provides core logic and orchestration for register.dto.ts. | N/A |
 
-## 🔗 Dependencies
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `register.dto.ts` | DTO | Handles dto logic for Mavluda Beauty's luxury standards. | `None` |
+| `login.dto.ts` | DTO | Handles dto logic for Mavluda Beauty's luxury standards. | `None` |
+
+---
+
+### 🔗 DEPENDENCIES
+Notable imports:
 - `class-validator`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
+---
 
-// Integrate into the application architecture
-relevantMember.execute();
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Feature Module Layer (Bounded Contexts) boundaries.
+
+```typescript
+// Example integration snippet
+import { FeatureModule } from '@path/to/dto';
 ```

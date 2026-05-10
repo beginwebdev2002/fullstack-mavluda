@@ -1,40 +1,57 @@
 # 📁 admin-settings
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings)
+[backend](../../../README.md) > [src](../../README.md) > [modules](../README.md) > [admin-settings](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **admin-settings** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Feature Module Layer (Bounded Contexts) operations.
+
+*FSD Layer:* **Feature Module Layer (Bounded Contexts)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 admin-settings"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> admin_settings_module_ts["📄 admin-settings.module.ts"]
-  Root --> index_ts["📄 index.ts"]
+  subgraph admin_settings
+    index_ts["index.ts"]
+    admin_settings_module_ts["admin-settings.module.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `admin-settings.module.ts` | TypeScript | Defines the architectural module boundaries for admin-settings.module.ts. | @nestjs |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
-## 🔗 Dependencies
-- `./application/admin-settings.service`
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `admin-settings.module.ts` | Module | Handles module logic for Mavluda Beauty's luxury standards. | `@nestjs` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
+- `./domain/admin-settings.entity`
 - `./infrastructure/repositories/admin-settings.repository`
+- `./presentation/dto/create-admin-settings.dto`
+- `./admin-settings.module`
 - `./presentation/admin-settings.controller`
 - `@nestjs/common`
+- `./application/admin-settings.service`
+- `./presentation/dto/update-admin-settings.dto`
+- `./infrastructure/schemas/admin-settings.schema`
 - `@nestjs/mongoose`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './admin-settings';
+---
 
-// Integrate into the application architecture
-relevantMember.execute();
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Feature Module Layer (Bounded Contexts) boundaries.
+
+```typescript
+// Example integration snippet
+import { FeatureModule } from '@path/to/admin-settings';
 ```

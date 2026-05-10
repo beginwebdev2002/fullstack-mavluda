@@ -1,35 +1,41 @@
-# 📁 common
+# 🧰 common
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common)
+[backend](../../README.md) > [src](../README.md) > [common](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **common** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Common Layer (Cross-cutting concerns) operations.
+
+*FSD Layer:* **Common Layer (Cross-cutting concerns)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 common"]
-  Root --> config["📁 config"]
-  Root --> constants["📁 constants"]
-  Root --> database["📁 database"]
-  Root --> decorators["📁 decorators"]
-  Root --> filters["📁 filters"]
-  Root --> guards["📁 guards"]
-  Root --> interfaces["📁 interfaces"]
-  Root --> utils["📁 utils"]
+  commonEmpty["Directory Structure Only"]
 ```
 
-## 📄 File Registry
-*No relevant files in this directory.*
 
-## 🔗 Dependencies
-- No external dependencies.
+---
 
-## 🛠️ Usage
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| No files | N/A | Structure container | N/A |
+
+---
+
+### 🔗 DEPENDENCIES
+No external or internal dependencies detected.
+
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Common Layer (Cross-cutting concerns) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './common';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/common';
 ```

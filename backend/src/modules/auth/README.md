@@ -1,56 +1,64 @@
 # 📁 auth
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth)
+[backend](../../../README.md) > [src](../../README.md) > [modules](../README.md) > [auth](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Feature Module Layer (Bounded Contexts) operations.
+
+*FSD Layer:* **Feature Module Layer (Bounded Contexts)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 auth"]
-  Root --> dto["📁 dto"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> interfaces["📁 interfaces"]
-  Root --> auth_controller_ts["📄 auth.controller.ts"]
-  Root --> auth_module_ts["📄 auth.module.ts"]
-  Root --> auth_service_ts["📄 auth.service.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> telegram_auth_service_ts["📄 telegram-auth.service.ts"]
+  subgraph auth
+    auth_module_ts["auth.module.ts"]
+    auth_service_ts["auth.service.ts"]
+    telegram_auth_service_ts["telegram-auth.service.ts"]
+    index_ts["index.ts"]
+    auth_controller_ts["auth.controller.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `auth.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for auth.controller.ts. | @common |
-| `auth.module.ts` | TypeScript | Defines the architectural module boundaries for auth.module.ts. | @common, @modules, @nestjs |
-| `auth.service.ts` | TypeScript | Encapsulates business logic and data access for auth.service.ts. | @modules, @nestjs |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `telegram-auth.service.ts` | TypeScript | Encapsulates business logic and data access for telegram-auth.service.ts. | @common, @modules, @nestjs |
 
-## 🔗 Dependencies
-- `./auth.controller`
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `auth.module.ts` | Module | Handles module logic for Mavluda Beauty's luxury standards. | `@modules, @common, @nestjs` |
+| `auth.service.ts` | Service | Handles service logic for Mavluda Beauty's luxury standards. | `@modules, @nestjs` |
+| `telegram-auth.service.ts` | Service | Handles service logic for Mavluda Beauty's luxury standards. | `@modules, @common, @nestjs` |
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `auth.controller.ts` | Controller | Handles controller logic for Mavluda Beauty's luxury standards. | `@common, @nestjs` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`, `@modules`, `@common`
+
+Notable imports:
+- `./interfaces/jwt-payload.interface`
+- `crypto`
 - `./auth.service`
-- `./dto/login.dto`
-- `./dto/register.dto`
-- `./infrastructure/jwt.strategy`
-- `./interfaces/auth-response.interface`
-- `./telegram-auth.service`
-- `@common/config/app-config.module`
-- `@common/config/app-config.service`
-- `@common/decorators/public.decorator`
 - `@modules/user`
 - `@nestjs/common`
+- `@common/config/app-config.service`
+- `@common/config/app-config.module`
+- `./auth.module`
 - `@nestjs/jwt`
-- `@nestjs/passport`
-- `bcrypt`
-- `crypto`
+- `./dto/login.dto`
+- *...and 8 more*
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Feature Module Layer (Bounded Contexts) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './auth';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/auth';
 ```

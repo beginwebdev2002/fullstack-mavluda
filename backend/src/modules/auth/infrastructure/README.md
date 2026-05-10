@@ -1,34 +1,50 @@
-# 📁 infrastructure
+# 🏗️ infrastructure
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [infrastructure](/backend/src/modules/auth/infrastructure)
+[backend](../../../../README.md) > [src](../../../README.md) > [modules](../../README.md) > [auth](../README.md) > [infrastructure](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **infrastructure** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Infrastructure Layer (External systems, DBs, frameworks) operations.
+
+*FSD Layer:* **Infrastructure Layer (External systems, DBs, frameworks)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 infrastructure"]
-  Root --> jwt_strategy_ts["📄 jwt.strategy.ts"]
+  subgraph infrastructure
+    jwt_strategy_ts["jwt.strategy.ts"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `jwt.strategy.ts` | TypeScript | Provides core logic and orchestration for jwt.strategy.ts. | @common, @nestjs |
+|-----------|------|----------------|------------------|
+| `jwt.strategy.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `@common, @nestjs` |
 
-## 🔗 Dependencies
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@common`, `@nestjs`
+
+Notable imports:
 - `../interfaces/jwt-payload.interface`
-- `@common/config/app-config.service`
-- `@nestjs/common`
-- `@nestjs/passport`
 - `passport-jwt`
+- `@nestjs/common`
+- `@common/config/app-config.service`
+- `@nestjs/passport`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Infrastructure Layer (External systems, DBs, frameworks) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './infrastructure';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/infrastructure';
 ```

@@ -1,33 +1,50 @@
-# 📁 repositories
+# 🗄️ repositories
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [booking](/backend/src/modules/booking) > [infrastructure](/backend/src/modules/booking/infrastructure) > [repositories](/backend/src/modules/booking/infrastructure/repositories)
+[backend](../../../../../README.md) > [src](../../../../README.md) > [modules](../../../README.md) > [booking](../../README.md) > [infrastructure](../README.md) > [repositories](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **repositories** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Infrastructure Layer (External systems, DBs, frameworks) operations.
+
+*FSD Layer:* **Infrastructure Layer (External systems, DBs, frameworks)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> booking_repository_ts["📄 booking.repository.ts"]
+  subgraph repositories
+    booking_repository_ts["booking.repository.ts"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `booking.repository.ts` | TypeScript | Provides core logic and orchestration for booking.repository.ts. | @nestjs |
+|-----------|------|----------------|------------------|
+| `booking.repository.ts` | Repository | Handles repository logic for Mavluda Beauty's luxury standards. | `@nestjs` |
 
-## 🔗 Dependencies
-- `../../domain/booking.entity`
-- `@nestjs/common`
-- `@nestjs/mongoose`
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
 - `mongoose`
+- `../schemas/booking.schema`
+- `@nestjs/common`
+- `../../domain/booking.entity`
+- `@nestjs/mongoose`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Infrastructure Layer (External systems, DBs, frameworks) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './repositories';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/repositories';
 ```

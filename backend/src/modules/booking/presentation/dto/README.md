@@ -1,33 +1,49 @@
-# 📁 dto
+# 📦 dto
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [booking](/backend/src/modules/booking) > [presentation](/backend/src/modules/booking/presentation) > [dto](/backend/src/modules/booking/presentation/dto)
+[backend](../../../../../README.md) > [src](../../../../README.md) > [modules](../../../README.md) > [booking](../../README.md) > [presentation](../README.md) > [dto](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Presentation Layer (Controllers, Resolvers, DTOs) operations.
+
+*FSD Layer:* **Presentation Layer (Controllers, Resolvers, DTOs)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_booking_dto_ts["📄 create-booking.dto.ts"]
-  Root --> update_booking_dto_ts["📄 update-booking.dto.ts"]
+  subgraph dto
+    create_booking_dto_ts["create-booking.dto.ts"]
+    update_booking_dto_ts["update-booking.dto.ts"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `create-booking.dto.ts` | TypeScript | Provides core logic and orchestration for create-booking.dto.ts. | N/A |
-| `update-booking.dto.ts` | TypeScript | Provides core logic and orchestration for update-booking.dto.ts. | @nestjs |
+|-----------|------|----------------|------------------|
+| `create-booking.dto.ts` | DTO | Handles dto logic for Mavluda Beauty's luxury standards. | `None` |
+| `update-booking.dto.ts` | DTO | Handles dto logic for Mavluda Beauty's luxury standards. | `@nestjs` |
 
-## 🔗 Dependencies
-- `./create-booking.dto`
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
 - `@nestjs/mapped-types`
+- `./create-booking.dto`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Presentation Layer (Controllers, Resolvers, DTOs) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/dto';
 ```

@@ -1,48 +1,64 @@
 # 📁 layouts
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [layouts](/frontend/src/widgets/layouts)
+[frontend](../../../README.md) > [src](../../README.md) > [widgets](../README.md) > [layouts](README.md)
 
-**FSD Layer:** Widget
+---
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **layouts** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Widgets Layer (Independent, complex UI blocks) operations.
 
-## 🏗️ Architecture
+*FSD Layer:* **Widgets Layer (Independent, complex UI blocks)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 layouts"]
-  Root --> admin_layout_component_html["📄 admin-layout.component.html"]
-  Root --> admin_layout_component_scss["📄 admin-layout.component.scss"]
-  Root --> admin_layout_component_ts["📄 admin-layout.component.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> user_layout_component_html["📄 user-layout.component.html"]
-  Root --> user_layout_component_scss["📄 user-layout.component.scss"]
-  Root --> user_layout_component_ts["📄 user-layout.component.ts"]
+  subgraph layouts
+    admin_layout_component_ts["admin-layout.component.ts"]
+    index_ts["index.ts"]
+    user_layout_component_ts["user-layout.component.ts"]
+    admin_layout_component_scss["admin-layout.component.scss"]
+    admin_layout_component_html["admin-layout.component.html"]
+    user_layout_component_scss["user-layout.component.scss"]
+    user_layout_component_html["user-layout.component.html"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `admin-layout.component.html` | Template | Structural template and layout for admin-layout.component.html. | N/A |
-| `admin-layout.component.scss` | Stylesheet | Luxury styling and visual presentation for admin-layout.component.scss. | N/A |
-| `admin-layout.component.ts` | TypeScript | UI component logic and state management for admin-layout.component.ts. | @angular, @widgets |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `user-layout.component.html` | Template | Structural template and layout for user-layout.component.html. | N/A |
-| `user-layout.component.scss` | Stylesheet | Luxury styling and visual presentation for user-layout.component.scss. | N/A |
-| `user-layout.component.ts` | TypeScript | UI component logic and state management for user-layout.component.ts. | @angular |
 
-## 🔗 Dependencies
-- `@angular/common`
-- `@angular/core`
-- `@angular/router`
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `admin-layout.component.ts` | Component | Handles component logic for Mavluda Beauty's luxury standards. | `@widgets, @angular` |
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `user-layout.component.ts` | Component | Handles component logic for Mavluda Beauty's luxury standards. | `@angular` |
+| `admin-layout.component.scss` | Styles | Handles styles logic for Mavluda Beauty's luxury standards. | `None` |
+| `admin-layout.component.html` | Template | Handles template logic for Mavluda Beauty's luxury standards. | `None` |
+| `user-layout.component.scss` | Styles | Handles styles logic for Mavluda Beauty's luxury standards. | `None` |
+| `user-layout.component.html` | Template | Handles template logic for Mavluda Beauty's luxury standards. | `None` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@widgets`, `@angular`
+
+Notable imports:
 - `@widgets/header`
 - `@widgets/sidebar`
+- `./user-layout.component`
+- `@angular/core`
+- `./admin-layout.component`
+- `@angular/common`
+- `@angular/router`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Widgets Layer (Independent, complex UI blocks) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './layouts';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/layouts';
 ```

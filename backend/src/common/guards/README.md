@@ -1,36 +1,52 @@
-# 📁 guards
+# 🛡️ guards
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [guards](/backend/src/common/guards)
+[backend](../../../README.md) > [src](../../README.md) > [common](../README.md) > [guards](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Common Layer (Cross-cutting concerns) operations.
+
+*FSD Layer:* **Common Layer (Cross-cutting concerns)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
-  Root --> roles_guard_ts["📄 roles.guard.ts"]
+  subgraph guards
+    roles_guard_ts["roles.guard.ts"]
+    jwt_auth_guard_ts["jwt-auth.guard.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `jwt-auth.guard.ts` | TypeScript | Provides core logic and orchestration for jwt-auth.guard.ts. | @nestjs |
-| `roles.guard.ts` | TypeScript | Provides core logic and orchestration for roles.guard.ts. | @nestjs |
 
-## 🔗 Dependencies
-- `../decorators/public.decorator`
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `roles.guard.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `@nestjs` |
+| `jwt-auth.guard.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `@nestjs` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
 - `../decorators/roles.decorator`
-- `@nestjs/common`
 - `@nestjs/core`
+- `@nestjs/common`
+- `../decorators/public.decorator`
 - `@nestjs/passport`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './guards';
+---
 
-// Integrate into the application architecture
-relevantMember.execute();
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Common Layer (Cross-cutting concerns) boundaries.
+
+```typescript
+// Example integration snippet
+import { FeatureModule } from '@path/to/guards';
 ```

@@ -1,40 +1,57 @@
 # 📁 inventory
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory)
+[backend](../../../README.md) > [src](../../README.md) > [modules](../README.md) > [inventory](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **inventory** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Feature Module Layer (Bounded Contexts) operations.
+
+*FSD Layer:* **Feature Module Layer (Bounded Contexts)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 inventory"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> inventory_module_ts["📄 inventory.module.ts"]
+  subgraph inventory
+    index_ts["index.ts"]
+    inventory_module_ts["inventory.module.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `inventory.module.ts` | TypeScript | Defines the architectural module boundaries for inventory.module.ts. | @nestjs |
 
-## 🔗 Dependencies
-- `./application/inventory.service`
-- `./infrastructure/repositories/inventory.repository`
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `inventory.module.ts` | Module | Handles module logic for Mavluda Beauty's luxury standards. | `@nestjs` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
 - `./presentation/inventory.controller`
+- `./infrastructure/repositories/inventory.repository`
+- `./inventory.module`
+- `./application/inventory.service`
+- `./presentation/dto/update-inventory.dto`
+- `./presentation/dto/create-inventory.dto`
+- `./domain/inventory.entity`
 - `@nestjs/common`
+- `./infrastructure/schemas/inventory.schema`
 - `@nestjs/mongoose`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './inventory';
+---
 
-// Integrate into the application architecture
-relevantMember.execute();
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Feature Module Layer (Bounded Contexts) boundaries.
+
+```typescript
+// Example integration snippet
+import { FeatureModule } from '@path/to/inventory';
 ```

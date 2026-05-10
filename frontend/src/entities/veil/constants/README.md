@@ -1,32 +1,43 @@
-# 📁 constants
+# 📌 constants
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [veil](/frontend/src/entities/veil) > [constants](/frontend/src/entities/veil/constants)
+[frontend](../../../../README.md) > [src](../../../README.md) > [entities](../../README.md) > [veil](../README.md) > [constants](README.md)
 
-**FSD Layer:** Entity
+---
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Entities Layer (Business entities and state) operations.
 
-## 🏗️ Architecture
+*FSD Layer:* **Entities Layer (Business entities and state)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> veil_constants_ts["📄 veil.constants.ts"]
+  subgraph constants
+    veil_constants_ts["veil.constants.ts"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `veil.constants.ts` | TypeScript | Provides core logic and orchestration for veil.constants.ts. | N/A |
+|-----------|------|----------------|------------------|
+| `veil.constants.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
 
-## 🔗 Dependencies
-- No external dependencies.
+---
 
-## 🛠️ Usage
+### 🔗 DEPENDENCIES
+No external or internal dependencies detected.
+
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Entities Layer (Business entities and state) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './constants';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/constants';
 ```

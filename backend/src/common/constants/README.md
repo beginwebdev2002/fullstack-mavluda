@@ -1,30 +1,43 @@
-# 📁 constants
+# 📌 constants
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [constants](/backend/src/common/constants)
+[backend](../../../README.md) > [src](../../README.md) > [common](../README.md) > [constants](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Common Layer (Cross-cutting concerns) operations.
+
+*FSD Layer:* **Common Layer (Cross-cutting concerns)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> error_messages_constant_ts["📄 error-messages.constant.ts"]
+  subgraph constants
+    error_messages_constant_ts["error-messages.constant.ts"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `error-messages.constant.ts` | TypeScript | Provides core logic and orchestration for error-messages.constant.ts. | N/A |
+|-----------|------|----------------|------------------|
+| `error-messages.constant.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
 
-## 🔗 Dependencies
-- No external dependencies.
+---
 
-## 🛠️ Usage
+### 🔗 DEPENDENCIES
+No external or internal dependencies detected.
+
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Common Layer (Cross-cutting concerns) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './constants';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/constants';
 ```

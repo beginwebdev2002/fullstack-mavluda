@@ -1,40 +1,57 @@
-# 📁 user
+# 👤 user
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user)
+[backend](../../../README.md) > [src](../../README.md) > [modules](../README.md) > [user](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **user** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Feature Module Layer (Bounded Contexts) operations.
+
+*FSD Layer:* **Feature Module Layer (Bounded Contexts)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 user"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> user_module_ts["📄 user.module.ts"]
+  subgraph user
+    user_module_ts["user.module.ts"]
+    index_ts["index.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `user.module.ts` | TypeScript | Defines the architectural module boundaries for user.module.ts. | @nestjs |
 
-## 🔗 Dependencies
-- `./application/user.service`
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `user.module.ts` | Module | Handles module logic for Mavluda Beauty's luxury standards. | `@nestjs` |
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
+- `./presentation/dto/update-user.dto`
 - `./infrastructure/repositories/user.repository`
 - `./presentation/user.controller`
+- `./domain/user.entity`
+- `./user.module`
+- `./infrastructure/schemas/user.schema`
+- `./application/user.service`
 - `@nestjs/common`
+- `./presentation/dto/create-user.dto`
 - `@nestjs/mongoose`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './user';
+---
 
-// Integrate into the application architecture
-relevantMember.execute();
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Feature Module Layer (Bounded Contexts) boundaries.
+
+```typescript
+// Example integration snippet
+import { FeatureModule } from '@path/to/user';
 ```

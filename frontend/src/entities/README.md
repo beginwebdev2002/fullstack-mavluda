@@ -1,34 +1,41 @@
-# 📁 entities
+# 🧱 entities
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities)
+[frontend](../../README.md) > [src](../README.md) > [entities](README.md)
 
-**FSD Layer:** Entity
+---
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **entities** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Entities Layer (Business entities and state) operations.
 
-## 🏗️ Architecture
+*FSD Layer:* **Entities Layer (Business entities and state)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 entities"]
-  Root --> admin-settings["📁 admin-settings"]
-  Root --> gallery["📁 gallery"]
-  Root --> treatments["📁 treatments"]
-  Root --> user["📁 user"]
-  Root --> veil["📁 veil"]
+  entitiesEmpty["Directory Structure Only"]
 ```
 
-## 📄 File Registry
-*No relevant files in this directory.*
 
-## 🔗 Dependencies
-- No external dependencies.
+---
 
-## 🛠️ Usage
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| No files | N/A | Structure container | N/A |
+
+---
+
+### 🔗 DEPENDENCIES
+No external or internal dependencies detected.
+
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Entities Layer (Business entities and state) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './entities';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/entities';
 ```

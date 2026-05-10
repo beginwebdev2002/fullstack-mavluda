@@ -1,36 +1,52 @@
 # 📁 utils
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [utils](/backend/src/common/utils)
+[backend](../../../README.md) > [src](../../README.md) > [common](../README.md) > [utils](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **utils** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Common Layer (Cross-cutting concerns) operations.
+
+*FSD Layer:* **Common Layer (Cross-cutting concerns)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 utils"]
-  Root --> file_system_ts["📄 file-system.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> object_ts["📄 object.ts"]
+  subgraph utils
+    object_ts["object.ts"]
+    index_ts["index.ts"]
+    file_system_ts["file-system.ts"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `file-system.ts` | TypeScript | Provides core logic and orchestration for file-system.ts. | N/A |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `object.ts` | TypeScript | Provides core logic and orchestration for object.ts. | N/A |
+|-----------|------|----------------|------------------|
+| `object.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `file-system.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
 
-## 🔗 Dependencies
+---
+
+### 🔗 DEPENDENCIES
+Notable imports:
 - `fs`
-- `path`
 - `util`
+- `path`
+- `./object`
+- `./file-system`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Common Layer (Cross-cutting concerns) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './utils';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/utils';
 ```

@@ -1,36 +1,54 @@
-# 📁 guards
+# 🛡️ guards
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [guards](/frontend/src/core/guards)
+[frontend](../../../README.md) > [src](../../README.md) > [core](../README.md) > [guards](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Root / Operational Layer operations.
+
+*FSD Layer:* **Root / Operational Layer**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> admin_guard_ts["📄 admin.guard.ts"]
-  Root --> auth_guard_ts["📄 auth.guard.ts"]
-  Root --> index_ts["📄 index.ts"]
+  subgraph guards
+    index_ts["index.ts"]
+    admin_guard_ts["admin.guard.ts"]
+    auth_guard_ts["auth.guard.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `admin.guard.ts` | TypeScript | Provides core logic and orchestration for admin.guard.ts. | @angular, @entities |
-| `auth.guard.ts` | TypeScript | Provides core logic and orchestration for auth.guard.ts. | @angular, @entities |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
-## 🔗 Dependencies
-- `@angular/core`
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `admin.guard.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `@entities, @angular` |
+| `auth.guard.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `@entities, @angular` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@entities`, `@angular`
+
+Notable imports:
+- `./admin.guard`
 - `@angular/router`
 - `@entities/user`
+- `@angular/core`
+- `./auth.guard`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Root / Operational Layer boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './guards';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/guards';
 ```

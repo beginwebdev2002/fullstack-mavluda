@@ -1,40 +1,58 @@
-# 📁 treatments
+# 💆‍♀️ treatments
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments)
+[backend](../../../README.md) > [src](../../README.md) > [modules](../README.md) > [treatments](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Feature Module Layer (Bounded Contexts) operations.
+
+*FSD Layer:* **Feature Module Layer (Bounded Contexts)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 treatments"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> treatments_module_ts["📄 treatments.module.ts"]
+  subgraph treatments
+    index_ts["index.ts"]
+    treatments_module_ts["treatments.module.ts"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `treatments.module.ts` | TypeScript | Defines the architectural module boundaries for treatments.module.ts. | @modules, @nestjs |
 
-## 🔗 Dependencies
-- `@modules/treatments/application/treatments.service`
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `treatments.module.ts` | Module | Handles module logic for Mavluda Beauty's luxury standards. | `@modules, @nestjs` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@modules`, `@nestjs`
+
+Notable imports:
+- `./presentation/dto/create-treatments.dto`
+- `./presentation/treatments.controller`
+- `./presentation/dto/update-treatments.dto`
+- `@modules/treatments/infrastructure/schemas/treatments.schema`
 - `@modules/treatments/infrastructure/repositories/treatments.repository`
+- `@modules/treatments/application/treatments.service`
+- `./domain/treatments.entity`
 - `@modules/treatments/presentation/treatments.controller`
 - `@nestjs/common`
-- `@nestjs/mongoose`
+- `./application/treatments.service`
+- *...and 4 more*
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Feature Module Layer (Bounded Contexts) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './treatments';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/treatments';
 ```

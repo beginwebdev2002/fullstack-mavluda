@@ -1,41 +1,59 @@
 # 📁 auth
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [auth](/frontend/src/pages/auth)
+[frontend](../../../README.md) > [src](../../README.md) > [pages](../README.md) > [auth](README.md)
 
-**FSD Layer:** Page
+---
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Pages Layer (Routing and page-level components) operations.
 
-## 🏗️ Architecture
+*FSD Layer:* **Pages Layer (Routing and page-level components)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 auth"]
-  Root --> auth_component_html["📄 auth.component.html"]
-  Root --> auth_component_scss["📄 auth.component.scss"]
-  Root --> auth_component_ts["📄 auth.component.ts"]
-  Root --> index_ts["📄 index.ts"]
+  subgraph auth
+    index_ts["index.ts"]
+    auth_component_scss["auth.component.scss"]
+    auth_component_ts["auth.component.ts"]
+    auth_component_html["auth.component.html"]
+  end
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `auth.component.html` | Template | Structural template and layout for auth.component.html. | N/A |
-| `auth.component.scss` | Stylesheet | Luxury styling and visual presentation for auth.component.scss. | N/A |
-| `auth.component.ts` | TypeScript | UI component logic and state management for auth.component.ts. | @angular, @entities, @features |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
-## 🔗 Dependencies
+---
+
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|-----------|------|----------------|------------------|
+| `index.ts` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `None` |
+| `auth.component.scss` | Styles | Handles styles logic for Mavluda Beauty's luxury standards. | `None` |
+| `auth.component.ts` | Component | Handles component logic for Mavluda Beauty's luxury standards. | `@entities, @features, @angular` |
+| `auth.component.html` | Template | Handles template logic for Mavluda Beauty's luxury standards. | `None` |
+
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@entities`, `@features`, `@angular`
+
+Notable imports:
+- `./auth.component`
+- `@entities/user`
+- `@angular/core`
+- `@features/auth`
 - `@angular/common`
 - `@angular/router`
-- `@entities/user`
+- `@features/auth/model/auth.model`
 - `@features/language-selection`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './auth';
+---
 
-// Integrate into the application architecture
-relevantMember.execute();
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Pages Layer (Routing and page-level components) boundaries.
+
+```typescript
+// Example integration snippet
+import { FeatureModule } from '@path/to/auth';
 ```

@@ -1,34 +1,50 @@
-# 📁 application
+# ⚙️ application
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [application](/backend/src/modules/inventory/application)
+[backend](../../../../README.md) > [src](../../../README.md) > [modules](../../README.md) > [inventory](../README.md) > [application](README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+---
 
-## 🏗️ Architecture
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Application Layer (Use cases and orchestration) operations.
+
+*FSD Layer:* **Application Layer (Use cases and orchestration)**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> inventory_service_ts["📄 inventory.service.ts"]
+  subgraph application
+    inventory_service_ts["inventory.service.ts"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `inventory.service.ts` | TypeScript | Encapsulates business logic and data access for inventory.service.ts. | @nestjs |
+|-----------|------|----------------|------------------|
+| `inventory.service.ts` | Service | Handles service logic for Mavluda Beauty's luxury standards. | `@nestjs` |
 
-## 🔗 Dependencies
+---
+
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@nestjs`
+
+Notable imports:
 - `../domain/inventory.entity`
-- `../infrastructure/repositories/inventory.repository`
-- `../presentation/dto/create-inventory.dto`
 - `../presentation/dto/update-inventory.dto`
+- `../infrastructure/repositories/inventory.repository`
 - `@nestjs/common`
+- `../presentation/dto/create-inventory.dto`
 
-## 🛠️ Usage
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Application Layer (Use cases and orchestration) boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './application';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/application';
 ```

@@ -1,41 +1,50 @@
-# 📁 Mavluda Beauty Repository
+# 📁 Mavluda Beauty Root
 
-[Root](/.)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Mavluda Beauty Repository** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
-## 🏗️ Architecture
+---
+
+### 🎯 PURPOSE
+Elevating the digital experience for the Mavluda Beauty ecosystem, this module manages the sophisticated Root / Operational Layer operations.
+
+*FSD Layer:* **Root / Operational Layer**
+
+---
+
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 Mavluda Beauty Repository"]
-  Root --> backend["📁 backend"]
-  Root --> frontend["📁 frontend"]
-  Root --> scripts["📁 scripts"]
-  Root --> _env["📄 .env"]
-  Root --> _gitignore["📄 .gitignore"]
-  Root --> _gitignore_append["📄 .gitignore_append"]
-  Root --> GEMINI_md["📄 GEMINI.md"]
-  Root --> generate_readmes_py["📄 generate_readmes.py"]
+  subgraph Mavluda Beauty Root
+    GEMINI_md["GEMINI.md"]
+    SECURITY_md["SECURITY.md"]
+    generate_docs_py["generate_docs.py"]
+  end
 ```
 
-## 📄 File Registry
+
+---
+
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `.env` | File | Provides core logic and orchestration for .env. | N/A |
-| `.gitignore` | File | Provides core logic and orchestration for .gitignore. | N/A |
-| `.gitignore_append` | File | Provides core logic and utilities for this domain. | N/A |
-| `GEMINI.md` | Markdown | Provides core logic and orchestration for GEMINI.md. | N/A |
-| `generate_readmes.py` | File | Provides core logic and orchestration for generate_readmes.py. | N/A |
+|-----------|------|----------------|------------------|
+| `GEMINI.md` | Documentation | Handles documentation logic for Mavluda Beauty's luxury standards. | `None` |
+| `SECURITY.md` | Documentation | Handles documentation logic for Mavluda Beauty's luxury standards. | `None` |
+| `generate_docs.py` | Source | Handles source logic for Mavluda Beauty's luxury standards. | `@path` |
 
-## 🔗 Dependencies
-- No external dependencies.
+---
 
-## 🛠️ Usage
+### 🔗 DEPENDENCIES
+**Key Path Aliases Detected:** `@path`
+
+Notable imports:
+- `@path/to/{dir_name}`
+
+---
+
+### 🛠️ USAGE
+To interact with this directory's luxurious logic, integrate its exported components or services directly into your feature modules. Ensure strict adherence to the Root / Operational Layer boundaries.
+
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './core';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example integration snippet
+import { FeatureModule } from '@path/to/Mavluda Beauty Root';
 ```
