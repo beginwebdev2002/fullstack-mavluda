@@ -16,11 +16,11 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments-add-img.png` | File | Provides core logic and orchestration for treatments-add-img.png. | N/A |
-| `treatments-no-img.png` | File | Provides core logic and orchestration for treatments-no-img.png. | N/A |
+| `treatments-add-img.png` | PNG | Handles logic and definitions for treatments-add-img.png | None |
+| `treatments-no-img.png` | PNG | Handles logic and definitions for treatments-no-img.png | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

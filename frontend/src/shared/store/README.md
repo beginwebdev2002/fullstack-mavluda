@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [store](/frontend/src/shared/store)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **store** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -18,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `signal-store.base.ts` | TypeScript | Provides core logic and orchestration for signal-store.base.ts. | @angular |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
+| `signal-store.base.ts` | TypeScript | Handles logic and definitions for signal-store.base.ts | @angular/core |
 
 ## 🔗 Dependencies
 - `@angular/core`

@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-gallery.dto.ts` | TypeScript | Provides core logic and orchestration for create-gallery.dto.ts. | N/A |
-| `update-gallery.dto.ts` | TypeScript | Provides core logic and orchestration for update-gallery.dto.ts. | @nestjs |
+| `create-gallery.dto.ts` | TypeScript | Handles logic and definitions for create-gallery.dto.ts | None |
+| `update-gallery.dto.ts` | TypeScript | Handles logic and definitions for update-gallery.dto.ts | @nestjs/mapped-types |
 
 ## 🔗 Dependencies
 - `./create-gallery.dto`

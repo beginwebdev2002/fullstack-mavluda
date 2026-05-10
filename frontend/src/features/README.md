@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features)
 
-**FSD Layer:** Feature
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **features** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -11,18 +9,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 features"]
-  Root --> client-form["📁 client-form"]
+  Root --> auth["📁 auth"]
+  Root --> client_form["📁 client-form"]
   Root --> gallery["📁 gallery"]
-  Root --> language-selection["📁 language-selection"]
+  Root --> language_selection["📁 language-selection"]
   Root --> treatments["📁 treatments"]
+  Root --> user["📁 user"]
   Root --> veil["📁 veil"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+*(No immediate files in this directory)*
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

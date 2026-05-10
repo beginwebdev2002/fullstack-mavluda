@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `jwt.strategy.ts` | TypeScript | Provides core logic and orchestration for jwt.strategy.ts. | @common, @nestjs |
+| `jwt.strategy.ts` | TypeScript | Handles logic and definitions for jwt.strategy.ts | @common/config/app-config.service, @nestjs/common, @nestjs/passport |
 
 ## 🔗 Dependencies
 - `../interfaces/jwt-payload.interface`

@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `login.dto.ts` | TypeScript | Provides core logic and orchestration for login.dto.ts. | N/A |
-| `register.dto.ts` | TypeScript | Provides core logic and orchestration for register.dto.ts. | N/A |
+| `login.dto.ts` | TypeScript | Handles logic and definitions for login.dto.ts | None |
+| `register.dto.ts` | TypeScript | Handles logic and definitions for register.dto.ts | None |
 
 ## 🔗 Dependencies
 - `class-validator`

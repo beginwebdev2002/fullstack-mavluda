@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-partnership.dto.ts` | TypeScript | Provides core logic and orchestration for create-partnership.dto.ts. | N/A |
-| `update-partnership.dto.ts` | TypeScript | Provides core logic and orchestration for update-partnership.dto.ts. | @nestjs |
+| `create-partnership.dto.ts` | TypeScript | Handles logic and definitions for create-partnership.dto.ts | None |
+| `update-partnership.dto.ts` | TypeScript | Handles logic and definitions for update-partnership.dto.ts | @nestjs/mapped-types |
 
 ## 🔗 Dependencies
 - `./create-partnership.dto`

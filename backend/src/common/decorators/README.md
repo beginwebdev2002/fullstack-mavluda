@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `public.decorator.ts` | TypeScript | Provides core logic and orchestration for public.decorator.ts. | @nestjs |
-| `roles.decorator.ts` | TypeScript | Provides core logic and orchestration for roles.decorator.ts. | @nestjs |
+| `public.decorator.ts` | TypeScript | Handles logic and definitions for public.decorator.ts | @nestjs/common |
+| `roles.decorator.ts` | TypeScript | Handles logic and definitions for roles.decorator.ts | @nestjs/common |
 
 ## 🔗 Dependencies
 - `@nestjs/common`

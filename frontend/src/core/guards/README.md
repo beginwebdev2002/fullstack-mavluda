@@ -17,9 +17,9 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin.guard.ts` | TypeScript | Provides core logic and orchestration for admin.guard.ts. | @angular, @entities |
-| `auth.guard.ts` | TypeScript | Provides core logic and orchestration for auth.guard.ts. | @angular, @entities |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `admin.guard.ts` | TypeScript | Handles logic and definitions for admin.guard.ts | @angular/core, @angular/router, @entities/user |
+| `auth.guard.ts` | TypeScript | Handles logic and definitions for auth.guard.ts | @angular/core, @angular/router, @entities/user |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
 
 ## 🔗 Dependencies
 - `@angular/core`

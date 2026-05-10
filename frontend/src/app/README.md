@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [app](/frontend/src/app)
 
-**FSD Layer:** App
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **app** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -17,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.config.ts` | TypeScript | Provides core logic and orchestration for app.config.ts. | @angular, @core, @src |
+| `app.config.ts` | TypeScript | Handles logic and definitions for app.config.ts | @angular/platform-browser/animations, @angular/router, @core/interceptors, @src/app.routes |
 
 ## 🔗 Dependencies
 - `@angular/platform-browser/animations`

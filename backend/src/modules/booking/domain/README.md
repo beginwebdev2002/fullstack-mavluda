@@ -15,10 +15,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.entity.ts` | TypeScript | Provides core logic and orchestration for booking.entity.ts. | N/A |
+| `booking.entity.ts` | TypeScript | Handles logic and definitions for booking.entity.ts | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

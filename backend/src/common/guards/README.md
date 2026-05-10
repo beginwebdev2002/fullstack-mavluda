@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `jwt-auth.guard.ts` | TypeScript | Provides core logic and orchestration for jwt-auth.guard.ts. | @nestjs |
-| `roles.guard.ts` | TypeScript | Provides core logic and orchestration for roles.guard.ts. | @nestjs |
+| `jwt-auth.guard.ts` | TypeScript | Handles logic and definitions for jwt-auth.guard.ts | @nestjs/common, @nestjs/core, @nestjs/passport |
+| `roles.guard.ts` | TypeScript | Handles logic and definitions for roles.guard.ts | @nestjs/core |
 
 ## 🔗 Dependencies
 - `../decorators/public.decorator`

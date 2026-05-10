@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [settings](/frontend/src/pages/settings) > [ui](/frontend/src/pages/settings/ui)
 
-**FSD Layer:** Page
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **ui** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -21,11 +19,11 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `additional-links.component.ts` | TypeScript | UI component logic and state management for additional-links.component.ts. | @angular |
-| `business-profile.component.ts` | TypeScript | UI component logic and state management for business-profile.component.ts. | @angular, @shared |
-| `general-info.component.ts` | TypeScript | UI component logic and state management for general-info.component.ts. | @angular |
-| `selects-settings.component.ts` | TypeScript | UI component logic and state management for selects-settings.component.ts. | @angular |
-| `social-matrix.component.ts` | TypeScript | UI component logic and state management for social-matrix.component.ts. | @angular |
+| `additional-links.component.ts` | TypeScript | Handles logic and definitions for additional-links.component.ts | @angular/common, @angular/core, @angular/forms |
+| `business-profile.component.ts` | TypeScript | Handles logic and definitions for business-profile.component.ts | @angular/common, @angular/core, @angular/forms, @shared/models |
+| `general-info.component.ts` | TypeScript | Handles logic and definitions for general-info.component.ts | @angular/common, @angular/core, @angular/forms |
+| `selects-settings.component.ts` | TypeScript | Handles logic and definitions for selects-settings.component.ts | @angular/common, @angular/core, @angular/forms |
+| `social-matrix.component.ts` | TypeScript | Handles logic and definitions for social-matrix.component.ts | @angular/common, @angular/core, @angular/forms |
 
 ## 🔗 Dependencies
 - `@angular/common`

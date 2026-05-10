@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.service.ts` | TypeScript | Encapsulates business logic and data access for inventory.service.ts. | @nestjs |
+| `inventory.service.ts` | TypeScript | Encapsulates business logic for inventory | @nestjs/common |
 
 ## 🔗 Dependencies
 - `../domain/inventory.entity`

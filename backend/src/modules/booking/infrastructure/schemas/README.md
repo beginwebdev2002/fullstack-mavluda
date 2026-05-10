@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.schema.ts` | TypeScript | Provides core logic and orchestration for booking.schema.ts. | @nestjs |
+| `booking.schema.ts` | TypeScript | Handles logic and definitions for booking.schema.ts | @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `@nestjs/mongoose`

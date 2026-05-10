@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.repository.ts` | TypeScript | Provides core logic and orchestration for veil.repository.ts. | @common, @nestjs |
+| `veil.repository.ts` | TypeScript | Handles logic and definitions for veil.repository.ts | @common/utils/file-system, @nestjs/common, @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `../../domain/veil.entity`

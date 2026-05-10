@@ -9,35 +9,33 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 frontend"]
-  Root --> public["📁 public"]
-  Root --> src["📁 src"]
   Root --> angular_json["📄 angular.json"]
+  Root --> environments["📁 environments"]
   Root --> index_html["📄 index.html"]
   Root --> index_tsx["📄 index.tsx"]
   Root --> leaflet_css["📄 leaflet.css"]
   Root --> metadata_json["📄 metadata.json"]
   Root --> package_lock_json["📄 package-lock.json"]
   Root --> package_json["📄 package.json"]
+  Root --> public["📁 public"]
+  Root --> src["📁 src"]
   Root --> tsconfig_json["📄 tsconfig.json"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `angular.json` | JSON Configuration | Provides core logic and orchestration for angular.json. | N/A |
-| `index.html` | Template | Provides core logic and orchestration for index.html. | N/A |
-| `index.tsx` | File | Provides core logic and orchestration for index.tsx. | @angular |
-| `leaflet.css` | Stylesheet | Provides core logic and orchestration for leaflet.css. | N/A |
-| `metadata.json` | JSON Configuration | Provides core logic and orchestration for metadata.json. | N/A |
-| `package-lock.json` | JSON Configuration | Provides core logic and orchestration for package-lock.json. | N/A |
-| `package.json` | JSON Configuration | Provides core logic and orchestration for package.json. | N/A |
-| `tsconfig.json` | JSON Configuration | Provides core logic and orchestration for tsconfig.json. | N/A |
+| `angular.json` | JSON | Handles logic and definitions for angular.json | None |
+| `index.html` | HTML | Handles logic and definitions for index.html | None |
+| `index.tsx` | TSX | Handles logic and definitions for index.tsx | @angular/platform-browser |
+| `leaflet.css` | CSS | Handles logic and definitions for leaflet.css | None |
+| `metadata.json` | JSON | Handles logic and definitions for metadata.json | None |
+| `package-lock.json` | JSON | Handles logic and definitions for package-lock.json | None |
+| `package.json` | JSON | Handles logic and definitions for package.json | None |
+| `tsconfig.json` | JSON | Handles logic and definitions for tsconfig.json | None |
 
 ## 🔗 Dependencies
-- `./src/app.component`
-- `./src/app/app.config`
-- `@angular/platform-browser`
-- `leaflet/dist/leaflet.css`
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

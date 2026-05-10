@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `authenticated-request.interface.ts` | TypeScript | Provides core logic and orchestration for authenticated-request.interface.ts. | N/A |
+| `authenticated-request.interface.ts` | TypeScript | Handles logic and definitions for authenticated-request.interface.ts | None |
 
 ## 🔗 Dependencies
 - `express`

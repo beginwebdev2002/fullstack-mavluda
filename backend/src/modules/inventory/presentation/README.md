@@ -16,7 +16,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for inventory.controller.ts. | N/A |
+| `inventory.controller.ts` | TypeScript | Handles incoming requests and routing for inventory | None |
 
 ## 🔗 Dependencies
 - `../application/inventory.service`

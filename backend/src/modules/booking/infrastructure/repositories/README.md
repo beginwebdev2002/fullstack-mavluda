@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.repository.ts` | TypeScript | Provides core logic and orchestration for booking.repository.ts. | @nestjs |
+| `booking.repository.ts` | TypeScript | Handles logic and definitions for booking.repository.ts | @nestjs/common, @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `../../domain/booking.entity`

@@ -16,7 +16,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for user.controller.ts. | @common, @modules, @nestjs |
+| `user.controller.ts` | TypeScript | Handles incoming requests and routing for user | @common/interfaces/authenticated-request.interface, @modules/user, @nestjs/platform-express |
 
 ## 🔗 Dependencies
 - `../application/user.service`

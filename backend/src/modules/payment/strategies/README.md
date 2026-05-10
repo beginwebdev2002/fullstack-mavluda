@@ -17,9 +17,9 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `alif-pay.strategy.ts` | TypeScript | Provides core logic and orchestration for alif-pay.strategy.ts. | @nestjs |
-| `mock-card.strategy.ts` | TypeScript | Provides core logic and orchestration for mock-card.strategy.ts. | @nestjs |
-| `payment.strategy.ts` | TypeScript | Provides core logic and orchestration for payment.strategy.ts. | N/A |
+| `alif-pay.strategy.ts` | TypeScript | Handles logic and definitions for alif-pay.strategy.ts | @nestjs/common |
+| `mock-card.strategy.ts` | TypeScript | Handles logic and definitions for mock-card.strategy.ts | @nestjs/common |
+| `payment.strategy.ts` | TypeScript | Handles logic and definitions for payment.strategy.ts | None |
 
 ## 🔗 Dependencies
 - `@nestjs/common`

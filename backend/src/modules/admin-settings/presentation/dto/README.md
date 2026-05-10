@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-admin-settings.dto.ts` | TypeScript | Provides core logic and orchestration for create-admin-settings.dto.ts. | N/A |
-| `update-admin-settings.dto.ts` | TypeScript | Provides core logic and orchestration for update-admin-settings.dto.ts. | @nestjs |
+| `create-admin-settings.dto.ts` | TypeScript | Handles logic and definitions for create-admin-settings.dto.ts | None |
+| `update-admin-settings.dto.ts` | TypeScript | Handles logic and definitions for update-admin-settings.dto.ts | @nestjs/mapped-types |
 
 ## 🔗 Dependencies
 - `./create-admin-settings.dto`

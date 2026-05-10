@@ -17,12 +17,12 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `messages.ru.xlf` | File | Provides core logic and orchestration for messages.ru.xlf. | N/A |
-| `messages.tj.xlf` | File | Provides core logic and orchestration for messages.tj.xlf. | N/A |
-| `messages.xlf` | File | Provides core logic and orchestration for messages.xlf. | N/A |
+| `messages.ru.xlf` | XLF | Handles logic and definitions for messages.ru.xlf | None |
+| `messages.tj.xlf` | XLF | Handles logic and definitions for messages.tj.xlf | None |
+| `messages.xlf` | XLF | Handles logic and definitions for messages.xlf | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

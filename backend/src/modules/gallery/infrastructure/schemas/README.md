@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.schema.ts` | TypeScript | Provides core logic and orchestration for gallery.schema.ts. | @nestjs |
+| `gallery.schema.ts` | TypeScript | Handles logic and definitions for gallery.schema.ts | @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `@nestjs/mongoose`

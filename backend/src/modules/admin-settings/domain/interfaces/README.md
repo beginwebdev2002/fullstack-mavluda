@@ -15,10 +15,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.interface.ts` | TypeScript | Provides core logic and orchestration for admin-settings.interface.ts. | N/A |
+| `admin-settings.interface.ts` | TypeScript | Handles logic and definitions for admin-settings.interface.ts | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

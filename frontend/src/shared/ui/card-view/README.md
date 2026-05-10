@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [card-view](/frontend/src/shared/ui/card-view)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **card-view** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -20,10 +18,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `card-view.component.html` | Template | Structural template and layout for card-view.component.html. | N/A |
-| `card-view.component.scss` | Stylesheet | Luxury styling and visual presentation for card-view.component.scss. | N/A |
-| `card-view.component.ts` | TypeScript | UI component logic and state management for card-view.component.ts. | @angular, @environments, @shared |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `card-view.component.html` | HTML | Handles logic and definitions for card-view.component.html | None |
+| `card-view.component.scss` | SCSS | Handles logic and definitions for card-view.component.scss | None |
+| `card-view.component.ts` | TypeScript | Handles logic and definitions for card-view.component.ts | @angular/common, @environments/environment, @shared/lib |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
 
 ## 🔗 Dependencies
 - `@angular/common`

@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `i18n-exception.filter.ts` | TypeScript | Provides core logic and orchestration for i18n-exception.filter.ts. | N/A |
+| `i18n-exception.filter.ts` | TypeScript | Handles logic and definitions for i18n-exception.filter.ts | None |
 
 ## 🔗 Dependencies
 - `../constants/error-messages.constant`

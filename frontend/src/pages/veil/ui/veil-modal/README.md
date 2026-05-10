@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veil](/frontend/src/pages/veil) > [ui](/frontend/src/pages/veil/ui) > [veil-modal](/frontend/src/pages/veil/ui/veil-modal)
 
-**FSD Layer:** Page
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **veil-modal** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -18,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil-modal.component.html` | Template | Structural template and layout for veil-modal.component.html. | N/A |
-| `veil-modal.component.ts` | TypeScript | UI component logic and state management for veil-modal.component.ts. | @angular, @features |
+| `veil-modal.component.html` | HTML | Handles logic and definitions for veil-modal.component.html | None |
+| `veil-modal.component.ts` | TypeScript | Handles logic and definitions for veil-modal.component.ts | @angular/common, @angular/forms, @features/veil |
 
 ## 🔗 Dependencies
 - `@angular/common`

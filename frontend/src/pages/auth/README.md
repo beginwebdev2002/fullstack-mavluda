@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [auth](/frontend/src/pages/auth)
 
-**FSD Layer:** Page
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -20,15 +18,17 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth.component.html` | Template | Structural template and layout for auth.component.html. | N/A |
-| `auth.component.scss` | Stylesheet | Luxury styling and visual presentation for auth.component.scss. | N/A |
-| `auth.component.ts` | TypeScript | UI component logic and state management for auth.component.ts. | @angular, @entities, @features |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `auth.component.html` | HTML | Handles logic and definitions for auth.component.html | None |
+| `auth.component.scss` | SCSS | Handles logic and definitions for auth.component.scss | None |
+| `auth.component.ts` | TypeScript | Handles logic and definitions for auth.component.ts | @angular/common, @angular/router, @entities/user, @features/auth, @features/auth/model/auth.model, @features/language-selection |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
 
 ## 🔗 Dependencies
 - `@angular/common`
 - `@angular/router`
 - `@entities/user`
+- `@features/auth`
+- `@features/auth/model/auth.model`
 - `@features/language-selection`
 
 ## 🛠️ Usage

@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.service.ts` | TypeScript | Encapsulates business logic and data access for booking.service.ts. | @nestjs |
+| `booking.service.ts` | TypeScript | Encapsulates business logic for booking | @nestjs/common |
 
 ## 🔗 Dependencies
 - `../domain/booking.entity`

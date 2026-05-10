@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth-response.interface.ts` | TypeScript | Provides core logic and orchestration for auth-response.interface.ts. | @modules |
-| `jwt-payload.interface.ts` | TypeScript | Provides core logic and orchestration for jwt-payload.interface.ts. | N/A |
+| `auth-response.interface.ts` | TypeScript | Handles logic and definitions for auth-response.interface.ts | @modules/user |
+| `jwt-payload.interface.ts` | TypeScript | Handles logic and definitions for jwt-payload.interface.ts | None |
 
 ## 🔗 Dependencies
 - `@modules/user`

@@ -11,17 +11,17 @@ graph TD
   Root["📁 gallery"]
   Root --> application["📁 application"]
   Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
   Root --> gallery_module_ts["📄 gallery.module.ts"]
   Root --> index_ts["📄 index.ts"]
+  Root --> infrastructure["📁 infrastructure"]
+  Root --> presentation["📁 presentation"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.module.ts` | TypeScript | Defines the architectural module boundaries for gallery.module.ts. | @nestjs |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `gallery.module.ts` | TypeScript | Defines module boundaries for gallery | @nestjs/common, @nestjs/mongoose |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
 
 ## 🔗 Dependencies
 - `./application/gallery.service`

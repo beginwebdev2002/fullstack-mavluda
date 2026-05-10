@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-booking.dto.ts` | TypeScript | Provides core logic and orchestration for create-booking.dto.ts. | N/A |
-| `update-booking.dto.ts` | TypeScript | Provides core logic and orchestration for update-booking.dto.ts. | @nestjs |
+| `create-booking.dto.ts` | TypeScript | Handles logic and definitions for create-booking.dto.ts | None |
+| `update-booking.dto.ts` | TypeScript | Handles logic and definitions for update-booking.dto.ts | @nestjs/mapped-types |
 
 ## 🔗 Dependencies
 - `./create-booking.dto`

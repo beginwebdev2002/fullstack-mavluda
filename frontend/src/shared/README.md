@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **shared** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -20,10 +18,10 @@ graph TD
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+*(No immediate files in this directory)*
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

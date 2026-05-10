@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features) > [gallery](/frontend/src/features/gallery) > [model](/frontend/src/features/gallery/model)
 
-**FSD Layer:** Feature
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **model** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -17,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.data.ts` | TypeScript | Provides core logic and orchestration for gallery.data.ts. | @angular, @shared |
+| `gallery.data.ts` | TypeScript | Handles logic and definitions for gallery.data.ts | @angular/forms/signals, @shared/models |
 
 ## 🔗 Dependencies
 - `@angular/forms/signals`

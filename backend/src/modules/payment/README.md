@@ -9,20 +9,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 payment"]
-  Root --> strategies["📁 strategies"]
   Root --> index_ts["📄 index.ts"]
   Root --> payment_controller_ts["📄 payment.controller.ts"]
   Root --> payment_module_ts["📄 payment.module.ts"]
   Root --> payment_service_ts["📄 payment.service.ts"]
+  Root --> strategies["📁 strategies"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `payment.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for payment.controller.ts. | N/A |
-| `payment.module.ts` | TypeScript | Defines the architectural module boundaries for payment.module.ts. | @nestjs |
-| `payment.service.ts` | TypeScript | Encapsulates business logic and data access for payment.service.ts. | @nestjs |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
+| `payment.controller.ts` | TypeScript | Handles incoming requests and routing for payment | None |
+| `payment.module.ts` | TypeScript | Defines module boundaries for payment | @nestjs/common |
+| `payment.service.ts` | TypeScript | Encapsulates business logic for payment | @nestjs/common |
 
 ## 🔗 Dependencies
 - `./payment.controller`

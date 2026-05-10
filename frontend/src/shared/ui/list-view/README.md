@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [list-view](/frontend/src/shared/ui/list-view)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **list-view** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -19,9 +17,9 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `list-view.component.html` | Template | Structural template and layout for list-view.component.html. | N/A |
-| `list-view.component.scss` | Stylesheet | Luxury styling and visual presentation for list-view.component.scss. | N/A |
-| `list-view.component.ts` | TypeScript | UI component logic and state management for list-view.component.ts. | @angular, @shared |
+| `list-view.component.html` | HTML | Handles logic and definitions for list-view.component.html | None |
+| `list-view.component.scss` | SCSS | Handles logic and definitions for list-view.component.scss | None |
+| `list-view.component.ts` | TypeScript | Handles logic and definitions for list-view.component.ts | @angular/common, @angular/core, @shared/lib |
 
 ## 🔗 Dependencies
 - `@angular/common`

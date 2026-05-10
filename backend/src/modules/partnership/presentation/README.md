@@ -16,7 +16,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for partnership.controller.ts. | N/A |
+| `partnership.controller.ts` | TypeScript | Handles incoming requests and routing for partnership | None |
 
 ## 🔗 Dependencies
 - `../application/partnership.service`

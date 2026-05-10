@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-inventory.dto.ts` | TypeScript | Provides core logic and orchestration for create-inventory.dto.ts. | N/A |
-| `update-inventory.dto.ts` | TypeScript | Provides core logic and orchestration for update-inventory.dto.ts. | @nestjs |
+| `create-inventory.dto.ts` | TypeScript | Handles logic and definitions for create-inventory.dto.ts | None |
+| `update-inventory.dto.ts` | TypeScript | Handles logic and definitions for update-inventory.dto.ts | @nestjs/mapped-types |
 
 ## 🔗 Dependencies
 - `./create-inventory.dto`

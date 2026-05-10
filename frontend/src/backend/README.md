@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `telegram-auth.guard.ts` | TypeScript | Provides core logic and orchestration for telegram-auth.guard.ts. | @nestjs |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
+| `telegram-auth.guard.ts` | TypeScript | Handles logic and definitions for telegram-auth.guard.ts | @nestjs/common |
 
 ## 🔗 Dependencies
 - `@nestjs/common`

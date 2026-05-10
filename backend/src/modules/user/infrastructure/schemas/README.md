@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.schema.ts` | TypeScript | Provides core logic and orchestration for user.schema.ts. | @nestjs |
+| `user.schema.ts` | TypeScript | Handles logic and definitions for user.schema.ts | @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `@nestjs/mongoose`

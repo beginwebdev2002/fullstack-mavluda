@@ -11,17 +11,17 @@ graph TD
   Root["📁 veil"]
   Root --> application["📁 application"]
   Root --> domain["📁 domain"]
+  Root --> index_ts["📄 index.ts"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
   Root --> veil_module_ts["📄 veil.module.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `veil.module.ts` | TypeScript | Defines the architectural module boundaries for veil.module.ts. | @nestjs |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
+| `veil.module.ts` | TypeScript | Defines module boundaries for veil | @nestjs/common, @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `./application/veil.service`

@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.repository.ts` | TypeScript | Provides core logic and orchestration for treatments.repository.ts. | @nestjs |
+| `treatments.repository.ts` | TypeScript | Handles logic and definitions for treatments.repository.ts | @nestjs/common, @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `../../domain/treatments.entity`

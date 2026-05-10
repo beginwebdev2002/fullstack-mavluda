@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.repository.ts` | TypeScript | Provides core logic and orchestration for admin-settings.repository.ts. | @nestjs |
+| `admin-settings.repository.ts` | TypeScript | Handles logic and definitions for admin-settings.repository.ts | @nestjs/common, @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `../../domain/admin-settings.entity`

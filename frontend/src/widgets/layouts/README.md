@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [layouts](/frontend/src/widgets/layouts)
 
-**FSD Layer:** Widget
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **layouts** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -23,13 +21,13 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-layout.component.html` | Template | Structural template and layout for admin-layout.component.html. | N/A |
-| `admin-layout.component.scss` | Stylesheet | Luxury styling and visual presentation for admin-layout.component.scss. | N/A |
-| `admin-layout.component.ts` | TypeScript | UI component logic and state management for admin-layout.component.ts. | @angular, @widgets |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `user-layout.component.html` | Template | Structural template and layout for user-layout.component.html. | N/A |
-| `user-layout.component.scss` | Stylesheet | Luxury styling and visual presentation for user-layout.component.scss. | N/A |
-| `user-layout.component.ts` | TypeScript | UI component logic and state management for user-layout.component.ts. | @angular |
+| `admin-layout.component.html` | HTML | Handles logic and definitions for admin-layout.component.html | None |
+| `admin-layout.component.scss` | SCSS | Handles logic and definitions for admin-layout.component.scss | None |
+| `admin-layout.component.ts` | TypeScript | Handles logic and definitions for admin-layout.component.ts | @angular/core, @angular/router, @widgets/header, @widgets/sidebar |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
+| `user-layout.component.html` | HTML | Handles logic and definitions for user-layout.component.html | None |
+| `user-layout.component.scss` | SCSS | Handles logic and definitions for user-layout.component.scss | None |
+| `user-layout.component.ts` | TypeScript | Handles logic and definitions for user-layout.component.ts | @angular/common, @angular/core, @angular/router |
 
 ## 🔗 Dependencies
 - `@angular/common`

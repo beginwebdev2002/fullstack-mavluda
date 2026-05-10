@@ -11,17 +11,17 @@ graph TD
   Root["📁 partnership"]
   Root --> application["📁 application"]
   Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
   Root --> index_ts["📄 index.ts"]
+  Root --> infrastructure["📁 infrastructure"]
   Root --> partnership_module_ts["📄 partnership.module.ts"]
+  Root --> presentation["📁 presentation"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `partnership.module.ts` | TypeScript | Defines the architectural module boundaries for partnership.module.ts. | @nestjs |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
+| `partnership.module.ts` | TypeScript | Defines module boundaries for partnership | @nestjs/common, @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `./application/partnership.service`

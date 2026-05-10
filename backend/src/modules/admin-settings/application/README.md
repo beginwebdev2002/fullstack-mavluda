@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.service.ts` | TypeScript | Encapsulates business logic and data access for admin-settings.service.ts. | @nestjs |
+| `admin-settings.service.ts` | TypeScript | Encapsulates business logic for admin-settings | @nestjs/common |
 
 ## 🔗 Dependencies
 - `../domain/admin-settings.entity`

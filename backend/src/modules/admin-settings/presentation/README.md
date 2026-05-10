@@ -9,14 +9,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 presentation"]
-  Root --> dto["📁 dto"]
   Root --> admin_settings_controller_ts["📄 admin-settings.controller.ts"]
+  Root --> dto["📁 dto"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for admin-settings.controller.ts. | N/A |
+| `admin-settings.controller.ts` | TypeScript | Handles incoming requests and routing for admin-settings | None |
 
 ## 🔗 Dependencies
 - `../application/admin-settings.service`

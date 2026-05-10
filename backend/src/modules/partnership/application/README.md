@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.service.ts` | TypeScript | Encapsulates business logic and data access for partnership.service.ts. | @nestjs |
+| `partnership.service.ts` | TypeScript | Encapsulates business logic for partnership | @nestjs/common |
 
 ## 🔗 Dependencies
 - `../domain/partnership.entity`

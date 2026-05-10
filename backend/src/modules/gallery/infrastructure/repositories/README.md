@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.repository.ts` | TypeScript | Provides core logic and orchestration for gallery.repository.ts. | @nestjs |
+| `gallery.repository.ts` | TypeScript | Handles logic and definitions for gallery.repository.ts | @nestjs/common, @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `../../domain/gallery.entity`

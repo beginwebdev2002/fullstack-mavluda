@@ -16,7 +16,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for gallery.controller.ts. | @nestjs |
+| `gallery.controller.ts` | TypeScript | Handles incoming requests and routing for gallery | @nestjs/platform-express |
 
 ## 🔗 Dependencies
 - `../application/gallery.service`

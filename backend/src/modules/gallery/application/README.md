@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.service.ts` | TypeScript | Encapsulates business logic and data access for gallery.service.ts. | @nestjs |
+| `gallery.service.ts` | TypeScript | Encapsulates business logic for gallery | @nestjs/common |
 
 ## 🔗 Dependencies
 - `../domain/gallery.entity`

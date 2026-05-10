@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.schema.ts` | TypeScript | Provides core logic and orchestration for partnership.schema.ts. | @nestjs |
+| `partnership.schema.ts` | TypeScript | Handles logic and definitions for partnership.schema.ts | @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `@nestjs/mongoose`

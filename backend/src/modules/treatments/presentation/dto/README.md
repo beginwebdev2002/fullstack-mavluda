@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-treatments.dto.ts` | TypeScript | Provides core logic and orchestration for create-treatments.dto.ts. | N/A |
-| `update-treatments.dto.ts` | TypeScript | Provides core logic and orchestration for update-treatments.dto.ts. | @nestjs |
+| `create-treatments.dto.ts` | TypeScript | Handles logic and definitions for create-treatments.dto.ts | None |
+| `update-treatments.dto.ts` | TypeScript | Handles logic and definitions for update-treatments.dto.ts | @nestjs/mapped-types |
 
 ## 🔗 Dependencies
 - `./create-treatments.dto`

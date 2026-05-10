@@ -10,18 +10,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 graph TD
   Root["📁 booking"]
   Root --> application["📁 application"]
+  Root --> booking_module_ts["📄 booking.module.ts"]
   Root --> domain["📁 domain"]
+  Root --> index_ts["📄 index.ts"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
-  Root --> booking_module_ts["📄 booking.module.ts"]
-  Root --> index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.module.ts` | TypeScript | Defines the architectural module boundaries for booking.module.ts. | @nestjs |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `booking.module.ts` | TypeScript | Defines module boundaries for booking | @nestjs/common, @nestjs/mongoose |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
 
 ## 🔗 Dependencies
 - `./application/booking.service`

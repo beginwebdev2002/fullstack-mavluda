@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [services](/frontend/src/shared/services)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **services** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -21,11 +19,11 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth.service.ts` | TypeScript | Encapsulates business logic and data access for auth.service.ts. | @angular, @core, @shared |
-| `error.service.ts` | TypeScript | Encapsulates business logic and data access for error.service.ts. | @angular |
-| `image.service.ts` | TypeScript | Encapsulates business logic and data access for image.service.ts. | @angular |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `telegram.service.ts` | TypeScript | Encapsulates business logic and data access for telegram.service.ts. | @angular, @src |
+| `auth.service.ts` | TypeScript | Encapsulates business logic for auth | @angular/common/http, @angular/core, @angular/router, @core/constants, @shared/models |
+| `error.service.ts` | TypeScript | Encapsulates business logic for error | @angular/core |
+| `image.service.ts` | TypeScript | Encapsulates business logic for image | @angular/core |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
+| `telegram.service.ts` | TypeScript | Encapsulates business logic for telegram | @angular/core, @src/types/telegram |
 
 ## 🔗 Dependencies
 - `./telegram.service`

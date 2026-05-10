@@ -9,14 +9,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 presentation"]
-  Root --> dto["📁 dto"]
   Root --> booking_controller_ts["📄 booking.controller.ts"]
+  Root --> dto["📁 dto"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for booking.controller.ts. | N/A |
+| `booking.controller.ts` | TypeScript | Handles incoming requests and routing for booking | None |
 
 ## 🔗 Dependencies
 - `../application/booking.service`

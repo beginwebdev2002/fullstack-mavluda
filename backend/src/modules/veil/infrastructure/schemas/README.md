@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.schema.ts` | TypeScript | Provides core logic and orchestration for veil.schema.ts. | @nestjs |
+| `veil.schema.ts` | TypeScript | Handles logic and definitions for veil.schema.ts | @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `@nestjs/mongoose`

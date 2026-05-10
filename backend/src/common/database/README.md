@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `database.module.ts` | TypeScript | Defines the architectural module boundaries for database.module.ts. | @nestjs |
+| `database.module.ts` | TypeScript | Defines module boundaries for database | @nestjs/common, @nestjs/config, @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `@nestjs/common`

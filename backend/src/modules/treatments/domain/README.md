@@ -15,10 +15,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.entity.ts` | TypeScript | Provides core logic and orchestration for treatments.entity.ts. | N/A |
+| `treatments.entity.ts` | TypeScript | Handles logic and definitions for treatments.entity.ts | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

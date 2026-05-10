@@ -15,10 +15,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.entity.ts` | TypeScript | Provides core logic and orchestration for veil.entity.ts. | N/A |
+| `veil.entity.ts` | TypeScript | Handles logic and definitions for veil.entity.ts | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

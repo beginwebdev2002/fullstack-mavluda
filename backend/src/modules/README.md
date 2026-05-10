@@ -9,7 +9,7 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 modules"]
-  Root --> admin-settings["📁 admin-settings"]
+  Root --> admin_settings["📁 admin-settings"]
   Root --> auth["📁 auth"]
   Root --> booking["📁 booking"]
   Root --> gallery["📁 gallery"]
@@ -22,10 +22,10 @@ graph TD
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+*(No immediate files in this directory)*
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

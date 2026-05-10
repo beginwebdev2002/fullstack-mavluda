@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [sidebar](/frontend/src/widgets/sidebar)
 
-**FSD Layer:** Widget
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **sidebar** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -19,9 +17,9 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `sidebar.component.html` | Template | Structural template and layout for sidebar.component.html. | N/A |
-| `sidebar.component.ts` | TypeScript | UI component logic and state management for sidebar.component.ts. | @angular, @shared |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
+| `sidebar.component.html` | HTML | Handles logic and definitions for sidebar.component.html | None |
+| `sidebar.component.ts` | TypeScript | Handles logic and definitions for sidebar.component.ts | @angular/common, @angular/core, @angular/router, @shared/pipes |
 
 ## 🔗 Dependencies
 - `@angular/common`

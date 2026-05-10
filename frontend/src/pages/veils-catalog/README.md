@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veils-catalog](/frontend/src/pages/veils-catalog)
 
-**FSD Layer:** Page
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **veils-catalog** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -20,10 +18,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `veils-catalog.component.html` | Template | Structural template and layout for veils-catalog.component.html. | N/A |
-| `veils-catalog.component.scss` | Stylesheet | Luxury styling and visual presentation for veils-catalog.component.scss. | N/A |
-| `veils-catalog.component.ts` | TypeScript | UI component logic and state management for veils-catalog.component.ts. | @angular, @entities, @environments, @shared |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
+| `veils-catalog.component.html` | HTML | Handles logic and definitions for veils-catalog.component.html | None |
+| `veils-catalog.component.scss` | SCSS | Handles logic and definitions for veils-catalog.component.scss | None |
+| `veils-catalog.component.ts` | TypeScript | Handles logic and definitions for veils-catalog.component.ts | @angular/common, @angular/core, @entities/admin-settings, @entities/veil, @environments/environment, @shared/lib, @shared/ui |
 
 ## 🔗 Dependencies
 - `@angular/common`

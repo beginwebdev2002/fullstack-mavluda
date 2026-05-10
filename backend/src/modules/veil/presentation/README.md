@@ -16,7 +16,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for veil.controller.ts. | @nestjs |
+| `veil.controller.ts` | TypeScript | Handles incoming requests and routing for veil | @nestjs/platform-express |
 
 ## 🔗 Dependencies
 - `../application/veil.service`

@@ -9,23 +9,23 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ```mermaid
 graph TD
   Root["📁 src"]
-  Root --> common["📁 common"]
-  Root --> modules["📁 modules"]
   Root --> app_controller_spec_ts["📄 app.controller.spec.ts"]
   Root --> app_controller_ts["📄 app.controller.ts"]
   Root --> app_module_ts["📄 app.module.ts"]
   Root --> app_service_ts["📄 app.service.ts"]
+  Root --> common["📁 common"]
   Root --> main_ts["📄 main.ts"]
+  Root --> modules["📁 modules"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.controller.spec.ts` | TypeScript | Unit testing and quality assurance for app.controller.spec.ts. | @nestjs |
-| `app.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for app.controller.ts. | @nestjs |
-| `app.module.ts` | TypeScript | Defines the architectural module boundaries for app.module.ts. | @modules, @nestjs |
-| `app.service.ts` | TypeScript | Encapsulates business logic and data access for app.service.ts. | @nestjs |
-| `main.ts` | TypeScript | Provides core logic and orchestration for main.ts. | @nestjs |
+| `app.controller.spec.ts` | TypeScript | Handles incoming requests and routing for app | @nestjs/testing |
+| `app.controller.ts` | TypeScript | Handles incoming requests and routing for app | @nestjs/common |
+| `app.module.ts` | TypeScript | Defines module boundaries for app | @modules/admin-settings, @modules/auth, @modules/booking, @modules/gallery, @modules/inventory, @modules/partnership, @modules/payment, @modules/treatments, @modules/user, @modules/veil, @nestjs/common, @nestjs/serve-static |
+| `app.service.ts` | TypeScript | Encapsulates business logic for app | @nestjs/common |
+| `main.ts` | TypeScript | Handles logic and definitions for main.ts | @nestjs/common, @nestjs/config, @nestjs/core |
 
 ## 🔗 Dependencies
 - `./app.controller`

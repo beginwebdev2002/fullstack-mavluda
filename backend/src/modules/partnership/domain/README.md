@@ -15,10 +15,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.entity.ts` | TypeScript | Provides core logic and orchestration for partnership.entity.ts. | N/A |
+| `partnership.entity.ts` | TypeScript | Handles logic and definitions for partnership.entity.ts | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

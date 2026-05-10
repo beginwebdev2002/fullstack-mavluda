@@ -15,10 +15,10 @@ graph TD
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+*(No immediate files in this directory)*
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

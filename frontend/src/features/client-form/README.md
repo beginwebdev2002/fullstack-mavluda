@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features) > [client-form](/frontend/src/features/client-form)
 
-**FSD Layer:** Feature
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **client-form** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -19,9 +17,9 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `client-form.component.html` | Template | Structural template and layout for client-form.component.html. | N/A |
-| `client-form.component.ts` | TypeScript | UI component logic and state management for client-form.component.ts. | @angular, @entities, @shared |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `client-form.component.html` | HTML | Handles logic and definitions for client-form.component.html | None |
+| `client-form.component.ts` | TypeScript | Handles logic and definitions for client-form.component.ts | @angular/common, @angular/core, @angular/forms, @entities/user, @shared/lib |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
 
 ## 🔗 Dependencies
 - `@angular/common`

@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.schema.ts` | TypeScript | Provides core logic and orchestration for admin-settings.schema.ts. | @nestjs |
+| `admin-settings.schema.ts` | TypeScript | Handles logic and definitions for admin-settings.schema.ts | @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `@nestjs/mongoose`

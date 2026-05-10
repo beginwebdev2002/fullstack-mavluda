@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-user.dto.ts` | TypeScript | Provides core logic and orchestration for create-user.dto.ts. | N/A |
-| `update-user.dto.ts` | TypeScript | Provides core logic and orchestration for update-user.dto.ts. | @nestjs |
+| `create-user.dto.ts` | TypeScript | Handles logic and definitions for create-user.dto.ts | None |
+| `update-user.dto.ts` | TypeScript | Handles logic and definitions for update-user.dto.ts | @nestjs/mapped-types |
 
 ## 🔗 Dependencies
 - `./create-user.dto`

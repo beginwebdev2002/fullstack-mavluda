@@ -15,10 +15,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.entity.ts` | TypeScript | Provides core logic and orchestration for inventory.entity.ts. | N/A |
+| `inventory.entity.ts` | TypeScript | Handles logic and definitions for inventory.entity.ts | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

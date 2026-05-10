@@ -15,10 +15,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.entity.ts` | TypeScript | Provides core logic and orchestration for user.entity.ts. | N/A |
+| `user.entity.ts` | TypeScript | Handles logic and definitions for user.entity.ts | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

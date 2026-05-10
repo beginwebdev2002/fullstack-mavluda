@@ -18,10 +18,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app-config.module.ts` | TypeScript | Defines the architectural module boundaries for app-config.module.ts. | @nestjs |
-| `app-config.service.ts` | TypeScript | Encapsulates business logic and data access for app-config.service.ts. | @nestjs |
-| `configuration.ts` | TypeScript | Provides core logic and orchestration for configuration.ts. | N/A |
-| `env.validation.ts` | TypeScript | Provides core logic and orchestration for env.validation.ts. | N/A |
+| `app-config.module.ts` | TypeScript | Defines module boundaries for app-config | @nestjs/common, @nestjs/config |
+| `app-config.service.ts` | TypeScript | Encapsulates business logic for app-config | @nestjs/common, @nestjs/config |
+| `configuration.ts` | TypeScript | Handles logic and definitions for configuration.ts | None |
+| `env.validation.ts` | TypeScript | Handles logic and definitions for env.validation.ts | None |
 
 ## 🔗 Dependencies
 - `./app-config.service`

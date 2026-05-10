@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [treatments](/frontend/src/entities/treatments) > [constants](/frontend/src/entities/treatments/constants)
 
-**FSD Layer:** Entity
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -17,10 +15,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.constants.ts` | TypeScript | Provides core logic and orchestration for treatments.constants.ts. | N/A |
+| `treatments.constants.ts` | TypeScript | Handles logic and definitions for treatments.constants.ts | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

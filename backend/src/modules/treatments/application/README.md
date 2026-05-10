@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.service.ts` | TypeScript | Encapsulates business logic and data access for treatments.service.ts. | @common, @nestjs |
+| `treatments.service.ts` | TypeScript | Encapsulates business logic for treatments | @common/utils, @nestjs/common |
 
 ## 🔗 Dependencies
 - `../domain/treatments.entity`

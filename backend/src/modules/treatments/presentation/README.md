@@ -16,7 +16,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for treatments.controller.ts. | @nestjs |
+| `treatments.controller.ts` | TypeScript | Handles incoming requests and routing for treatments | @nestjs/platform-express |
 
 ## 🔗 Dependencies
 - `@nestjs/platform-express`

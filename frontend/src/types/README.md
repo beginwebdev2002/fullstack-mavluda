@@ -15,10 +15,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `telegram.ts` | TypeScript | Provides core logic and orchestration for telegram.ts. | N/A |
+| `telegram.ts` | TypeScript | Handles logic and definitions for telegram.ts | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

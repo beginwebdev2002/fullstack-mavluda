@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.repository.ts` | TypeScript | Provides core logic and orchestration for user.repository.ts. | @nestjs |
+| `user.repository.ts` | TypeScript | Handles logic and definitions for user.repository.ts | @nestjs/common, @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `../../domain/user.entity`

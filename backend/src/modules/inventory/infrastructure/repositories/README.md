@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.repository.ts` | TypeScript | Provides core logic and orchestration for inventory.repository.ts. | @nestjs |
+| `inventory.repository.ts` | TypeScript | Handles logic and definitions for inventory.repository.ts | @nestjs/common, @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `../../domain/inventory.entity`

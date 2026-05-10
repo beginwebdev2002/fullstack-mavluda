@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [lib](/frontend/src/shared/lib)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **lib** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -20,10 +18,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `array.ts` | TypeScript | Provides core logic and orchestration for array.ts. | N/A |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `link.ts` | TypeScript | Provides core logic and orchestration for link.ts. | @environments |
-| `object.ts` | TypeScript | Provides core logic and orchestration for object.ts. | N/A |
+| `array.ts` | TypeScript | Handles logic and definitions for array.ts | None |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
+| `link.ts` | TypeScript | Handles logic and definitions for link.ts | @environments/environment |
+| `object.ts` | TypeScript | Handles logic and definitions for object.ts | None |
 
 ## 🔗 Dependencies
 - `@environments/environment`

@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.repository.ts` | TypeScript | Provides core logic and orchestration for partnership.repository.ts. | @nestjs |
+| `partnership.repository.ts` | TypeScript | Handles logic and definitions for partnership.repository.ts | @nestjs/common, @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `../../domain/partnership.entity`

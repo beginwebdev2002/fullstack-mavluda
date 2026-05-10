@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-veil.dto.ts` | TypeScript | Provides core logic and orchestration for create-veil.dto.ts. | N/A |
-| `update-veil.dto.ts` | TypeScript | Provides core logic and orchestration for update-veil.dto.ts. | @nestjs |
+| `create-veil.dto.ts` | TypeScript | Handles logic and definitions for create-veil.dto.ts | None |
+| `update-veil.dto.ts` | TypeScript | Handles logic and definitions for update-veil.dto.ts | @nestjs/mapped-types |
 
 ## 🔗 Dependencies
 - `./create-veil.dto`

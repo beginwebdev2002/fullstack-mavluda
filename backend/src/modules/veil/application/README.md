@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.service.ts` | TypeScript | Encapsulates business logic and data access for veil.service.ts. | @nestjs |
+| `veil.service.ts` | TypeScript | Encapsulates business logic for veil | @nestjs/common |
 
 ## 🔗 Dependencies
 - `../domain/veil.entity`

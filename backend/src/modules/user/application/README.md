@@ -15,7 +15,7 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.service.ts` | TypeScript | Encapsulates business logic and data access for user.service.ts. | @nestjs |
+| `user.service.ts` | TypeScript | Encapsulates business logic for user | @nestjs/common |
 
 ## 🔗 Dependencies
 - `../domain/user.entity`

@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [treatments](/frontend/src/pages/treatments)
 
-**FSD Layer:** Page
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -21,10 +19,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `treatments.component.html` | Template | Structural template and layout for treatments.component.html. | N/A |
-| `treatments.component.scss` | Stylesheet | Luxury styling and visual presentation for treatments.component.scss. | N/A |
-| `treatments.component.ts` | TypeScript | UI component logic and state management for treatments.component.ts. | @angular, @entities, @environments, @features, @shared |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
+| `treatments.component.html` | HTML | Handles logic and definitions for treatments.component.html | None |
+| `treatments.component.scss` | SCSS | Handles logic and definitions for treatments.component.scss | None |
+| `treatments.component.ts` | TypeScript | Handles logic and definitions for treatments.component.ts | @angular/common, @angular/forms, @entities/admin-settings, @entities/treatments, @environments/environment, @features/treatments, @shared/lib, @shared/ui |
 
 ## 🔗 Dependencies
 - `./components/treatment-form/treatment-form.component`

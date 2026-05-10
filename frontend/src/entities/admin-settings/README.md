@@ -2,8 +2,6 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [admin-settings](/frontend/src/entities/admin-settings)
 
-**FSD Layer:** Entity
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **admin-settings** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
@@ -18,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.service.ts` | TypeScript | Encapsulates business logic and data access for admin-settings.service.ts. | @angular, @core, @shared |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `admin-settings.service.ts` | TypeScript | Encapsulates business logic for admin-settings | @angular/common/http, @angular/core, @core/constants/api-endpoints, @shared/models/admin-settings.model |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
 
 ## 🔗 Dependencies
 - `@angular/common/http`

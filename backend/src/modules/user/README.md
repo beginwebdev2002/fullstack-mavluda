@@ -11,17 +11,17 @@ graph TD
   Root["📁 user"]
   Root --> application["📁 application"]
   Root --> domain["📁 domain"]
+  Root --> index_ts["📄 index.ts"]
   Root --> infrastructure["📁 infrastructure"]
   Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
   Root --> user_module_ts["📄 user.module.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `user.module.ts` | TypeScript | Defines the architectural module boundaries for user.module.ts. | @nestjs |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
+| `user.module.ts` | TypeScript | Defines module boundaries for user | @nestjs/common, @nestjs/mongoose |
 
 ## 🔗 Dependencies
 - `./application/user.service`

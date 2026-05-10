@@ -16,8 +16,8 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `api-endpoints.ts` | TypeScript | Provides core logic and orchestration for api-endpoints.ts. | @shared |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `api-endpoints.ts` | TypeScript | Handles logic and definitions for api-endpoints.ts | @shared/lib |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
 
 ## 🔗 Dependencies
 - `@shared/lib`

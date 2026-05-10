@@ -15,10 +15,10 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.entity.ts` | TypeScript | Provides core logic and orchestration for gallery.entity.ts. | N/A |
+| `gallery.entity.ts` | TypeScript | Handles logic and definitions for gallery.entity.ts | None |
 
 ## 🔗 Dependencies
-- No external dependencies.
+*(No specific external or cross-module dependencies detected)*
 
 ## 🛠️ Usage
 ```typescript

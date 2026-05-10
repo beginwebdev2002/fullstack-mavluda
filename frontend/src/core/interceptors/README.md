@@ -17,9 +17,9 @@ graph TD
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `api.interceptor.ts` | TypeScript | Provides core logic and orchestration for api.interceptor.ts. | @angular, @shared |
-| `error.interceptor.ts` | TypeScript | Provides core logic and orchestration for error.interceptor.ts. | @angular, @shared |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `api.interceptor.ts` | TypeScript | Handles logic and definitions for api.interceptor.ts | @angular/common/http, @shared/lib |
+| `error.interceptor.ts` | TypeScript | Handles logic and definitions for error.interceptor.ts | @angular/common/http, @angular/core, @shared/services |
+| `index.ts` | TypeScript | Handles logic and definitions for index.ts | None |
 
 ## 🔗 Dependencies
 - `@angular/common/http`
