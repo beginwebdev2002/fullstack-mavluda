@@ -8,9 +8,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
+  Root__gemini["📁 .gemini"]
   _gemini["📁 .gemini"]
+  Root__gemini --> _gemini
   _gemini --> commands["📁 commands"]
+  Root__gemini --> _gemini --> commands
   _gemini --> gemini_md["📄 gemini.md"]
+  Root__gemini --> _gemini --> gemini_md
 ```
 
 ## 📄 File Registry

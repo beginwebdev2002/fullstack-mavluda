@@ -1,30 +1,32 @@
+[🏠 Home](../../../README.md) > [frontend](../../README.md) > [src](../README.md) > [core](./README.md)
+
 # 📁 core
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core)
+### 🎯 PURPOSE
+Welcome to the exquisite **core** module of the Mavluda Beauty ecosystem. This directory handles specific domain assets and logic. It is designed adhering to our 'Luxury Professional' standards.
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **core** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-## 🏗️ Architecture
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 core"]
-  Root --> constants["📁 constants"]
-  Root --> guards["📁 guards"]
-  Root --> interceptors["📁 interceptors"]
+  Root_core["📁 core"]
+  f_guards["📁 guards"]
+  Root_core --> f_guards
+  f_constants["📁 constants"]
+  Root_core --> f_constants
+  f_interceptors["📁 interceptors"]
+  Root_core --> f_interceptors
 ```
 
-## 📄 File Registry
-*No relevant files in this directory.*
+### 📄 FILE REGISTRY
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| _No files_ | - | - | - |
 
-## 🔗 Dependencies
-- No external dependencies.
+### 🔗 DEPENDENCIES
+No notable dependencies detected.
 
-## 🛠️ Usage
+### 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './core';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example interaction or integration snippet
+// Import members from core based on module boundaries
 ```

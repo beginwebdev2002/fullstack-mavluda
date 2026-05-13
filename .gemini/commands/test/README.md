@@ -8,8 +8,11 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
+  Root_test["📁 test"]
   test["📁 test"]
+  Root_test --> test
   test --> gen_toml["📄 gen.toml"]
+  Root_test --> test --> gen_toml
 ```
 
 ## 📄 File Registry

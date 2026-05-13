@@ -8,8 +8,11 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
+  Root_commands["📁 commands"]
   commands["📁 commands"]
+  Root_commands --> commands
   commands --> test["📁 test"]
+  Root_commands --> commands --> test
 ```
 
 ## 📄 File Registry

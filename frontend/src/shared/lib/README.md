@@ -1,38 +1,39 @@
+[🏠 Home](../../../../README.md) > [frontend](../../../README.md) > [src](../../README.md) > [shared](../README.md) > [lib](./README.md)
+
 # 📁 lib
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [lib](/frontend/src/shared/lib)
+**FSD Layer:** `Shared`
 
-**FSD Layer:** Shared
+### 🎯 PURPOSE
+Welcome to the exquisite **lib** module of the Mavluda Beauty ecosystem. This directory handles specific domain assets and logic. It is designed adhering to our 'Luxury Professional' standards.
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **lib** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-## 🏗️ Architecture
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 lib"]
-  Root --> array_ts["📄 array.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> link_ts["📄 link.ts"]
-  Root --> object_ts["📄 object.ts"]
+  Root_lib["📁 lib"]
+  f_object_ts["object.ts"]
+  Root_lib --> f_object_ts
+  f_index_ts["index.ts"]
+  Root_lib --> f_index_ts
+  f_array_ts["array.ts"]
+  Root_lib --> f_array_ts
+  f_link_ts["link.ts"]
+  Root_lib --> f_link_ts
 ```
 
-## 📄 File Registry
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `array.ts` | TypeScript | Provides core logic and orchestration for array.ts. | N/A |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `link.ts` | TypeScript | Provides core logic and orchestration for link.ts. | @environments |
-| `object.ts` | TypeScript | Provides core logic and orchestration for object.ts. | N/A |
+| `array.ts` | TypeScript File | Implements utilities: deleteArrayItemById. | None |
+| `index.ts` | TypeScript File | Exports or orchestrates module members. | None |
+| `link.ts` | TypeScript File | Implements utilities: linkCombine, linkServerConvert. | @environments |
+| `object.ts` | TypeScript File | Implements utilities: objectExcludePropety, formDataExcludeProperty, convertFormData. | None |
 
-## 🔗 Dependencies
+### 🔗 DEPENDENCIES
 - `@environments/environment`
 
-## 🛠️ Usage
+### 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './lib';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example interaction or integration snippet
+import { utility } from '@shared/path';
 ```

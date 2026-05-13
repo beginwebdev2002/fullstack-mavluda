@@ -1,32 +1,31 @@
+[🏠 Home](../../../../README.md) > [backend](../../../README.md) > [src](../../README.md) > [common](../README.md) > [decorators](./README.md)
+
 # 📁 decorators
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [decorators](/backend/src/common/decorators)
+### 🎯 PURPOSE
+Welcome to the exquisite **decorators** module of the Mavluda Beauty ecosystem. This directory handles specific domain assets and logic. It is designed adhering to our 'Luxury Professional' standards.
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **decorators** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-## 🏗️ Architecture
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 decorators"]
-  Root --> public_decorator_ts["📄 public.decorator.ts"]
-  Root --> roles_decorator_ts["📄 roles.decorator.ts"]
+  Root_decorators["📁 decorators"]
+  f_public_decorator_ts["public.decorator.ts"]
+  Root_decorators --> f_public_decorator_ts
+  f_roles_decorator_ts["roles.decorator.ts"]
+  Root_decorators --> f_roles_decorator_ts
 ```
 
-## 📄 File Registry
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `public.decorator.ts` | TypeScript | Provides core logic and orchestration for public.decorator.ts. | @nestjs |
-| `roles.decorator.ts` | TypeScript | Provides core logic and orchestration for roles.decorator.ts. | @nestjs |
+| `public.decorator.ts` | TypeScript File | Provides logic and definitions for public.decorator.ts. | @nestjs |
+| `roles.decorator.ts` | TypeScript File | Provides logic and definitions for roles.decorator.ts. | @nestjs |
 
-## 🔗 Dependencies
+### 🔗 DEPENDENCIES
 - `@nestjs/common`
 
-## 🛠️ Usage
+### 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './decorators';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example interaction or integration snippet
+// Import members from decorators based on module boundaries
 ```

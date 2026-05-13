@@ -1,34 +1,32 @@
+[🏠 Home](../../../../../../README.md) > [backend](../../../../../README.md) > [src](../../../../README.md) > [modules](../../../README.md) > [treatments](../../README.md) > [presentation](../README.md) > [dto](./README.md)
+
 # 📁 dto
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments) > [presentation](/backend/src/modules/treatments/presentation) > [dto](/backend/src/modules/treatments/presentation/dto)
+### 🎯 PURPOSE
+Welcome to the exquisite **dto** module of the Mavluda Beauty ecosystem. This directory handles specific domain assets and logic. It is designed adhering to our 'Luxury Professional' standards.
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-## 🏗️ Architecture
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_treatments_dto_ts["📄 create-treatments.dto.ts"]
-  Root --> update_treatments_dto_ts["📄 update-treatments.dto.ts"]
+  Root_dto["📁 dto"]
+  f_create_treatments_dto_ts["create-treatments.dto.ts"]
+  Root_dto --> f_create_treatments_dto_ts
+  f_update_treatments_dto_ts["update-treatments.dto.ts"]
+  Root_dto --> f_update_treatments_dto_ts
 ```
 
-## 📄 File Registry
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-treatments.dto.ts` | TypeScript | Provides core logic and orchestration for create-treatments.dto.ts. | N/A |
-| `update-treatments.dto.ts` | TypeScript | Provides core logic and orchestration for update-treatments.dto.ts. | @nestjs |
+| `create-treatments.dto.ts` | TypeScript File | Defines classes: CreateServiceDto. | None |
+| `update-treatments.dto.ts` | TypeScript File | Defines classes: UpdateServiceDto. | @nestjs |
 
-## 🔗 Dependencies
-- `./create-treatments.dto`
+### 🔗 DEPENDENCIES
 - `@nestjs/mapped-types`
 - `class-transformer`
 
-## 🛠️ Usage
+### 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example interaction or integration snippet
+// Import members from dto based on module boundaries
 ```

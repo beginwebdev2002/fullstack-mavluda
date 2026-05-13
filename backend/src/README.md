@@ -1,39 +1,40 @@
-# 📁 src
+[🏠 Home](../../README.md) > [backend](../README.md) > [src](./README.md)
 
-[Root](/.) > [backend](/backend) > [src](/backend/src)
+# 💻 src
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **src** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+### 🎯 PURPOSE
+Welcome to the exquisite **src** module of the Mavluda Beauty ecosystem. This directory focuses on orchestrating Business Services, HTTP APIs. It is designed adhering to our 'Luxury Professional' standards.
 
-## 🏗️ Architecture
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 src"]
-  Root --> common["📁 common"]
-  Root --> modules["📁 modules"]
-  Root --> app_controller_spec_ts["📄 app.controller.spec.ts"]
-  Root --> app_controller_ts["📄 app.controller.ts"]
-  Root --> app_module_ts["📄 app.module.ts"]
-  Root --> app_service_ts["📄 app.service.ts"]
-  Root --> main_ts["📄 main.ts"]
+  Root_src["📁 src"]
+  f_app_controller_spec_ts["app.controller.spec.ts"]
+  Root_src --> f_app_controller_spec_ts
+  f_main_ts["main.ts"]
+  Root_src --> f_main_ts
+  f_app_module_ts["app.module.ts"]
+  Root_src --> f_app_module_ts
+  f_app_controller_ts["app.controller.ts"]
+  Root_src --> f_app_controller_ts
+  f_app_service_ts["app.service.ts"]
+  Root_src --> f_app_service_ts
+  f_common["📁 common"]
+  Root_src --> f_common
+  f_modules["📁 modules"]
+  Root_src --> f_modules
 ```
 
-## 📄 File Registry
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.controller.spec.ts` | TypeScript | Unit testing and quality assurance for app.controller.spec.ts. | @nestjs |
-| `app.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for app.controller.ts. | @nestjs |
-| `app.module.ts` | TypeScript | Defines the architectural module boundaries for app.module.ts. | @modules, @nestjs |
-| `app.service.ts` | TypeScript | Encapsulates business logic and data access for app.service.ts. | @nestjs |
-| `main.ts` | TypeScript | Provides core logic and orchestration for main.ts. | @nestjs |
+| `app.controller.spec.ts` | Unit Test | Provides logic and definitions for app.controller.spec.ts. | @nestjs |
+| `app.controller.ts` | NestJS Controller | Handles incoming HTTP requests Defines classes: AppController. | @nestjs |
+| `app.module.ts` | Angular Module | Configures an application module or layer Defines classes: AppModule. | @nestjs, @modules |
+| `app.service.ts` | Angular Service | Provides injectable business logic or services Defines classes: AppService. | @nestjs |
+| `main.ts` | TypeScript File | Implements utilities: bootstrap. | @nestjs |
 
-## 🔗 Dependencies
-- `./app.controller`
-- `./app.module`
-- `./app.service`
-- `./common/config/app-config.module`
-- `./common/database/database.module`
-- `./common/filters/i18n-exception.filter`
+### 🔗 DEPENDENCIES
 - `@modules/admin-settings`
 - `@modules/auth`
 - `@modules/booking`
@@ -51,11 +52,8 @@ graph TD
 - `@nestjs/testing`
 - `path`
 
-## 🛠️ Usage
+### 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './src';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example interaction or integration snippet
+// Import members from src based on module boundaries
 ```

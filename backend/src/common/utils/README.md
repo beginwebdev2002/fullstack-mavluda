@@ -1,36 +1,36 @@
+[🏠 Home](../../../../README.md) > [backend](../../../README.md) > [src](../../README.md) > [common](../README.md) > [utils](./README.md)
+
 # 📁 utils
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [utils](/backend/src/common/utils)
+### 🎯 PURPOSE
+Welcome to the exquisite **utils** module of the Mavluda Beauty ecosystem. This directory handles specific domain assets and logic. It is designed adhering to our 'Luxury Professional' standards.
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **utils** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-## 🏗️ Architecture
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 utils"]
-  Root --> file_system_ts["📄 file-system.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> object_ts["📄 object.ts"]
+  Root_utils["📁 utils"]
+  f_object_ts["object.ts"]
+  Root_utils --> f_object_ts
+  f_index_ts["index.ts"]
+  Root_utils --> f_index_ts
+  f_file_system_ts["file-system.ts"]
+  Root_utils --> f_file_system_ts
 ```
 
-## 📄 File Registry
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `file-system.ts` | TypeScript | Provides core logic and orchestration for file-system.ts. | N/A |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `object.ts` | TypeScript | Provides core logic and orchestration for object.ts. | N/A |
+| `file-system.ts` | TypeScript File | Implements utilities: fileDelete, deleteFileSafe. | None |
+| `index.ts` | TypeScript File | Exports or orchestrates module members. | None |
+| `object.ts` | TypeScript File | Implements utilities: deleteProperties. | None |
 
-## 🔗 Dependencies
+### 🔗 DEPENDENCIES
 - `fs`
 - `path`
 - `util`
 
-## 🛠️ Usage
+### 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './utils';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example interaction or integration snippet
+// Import members from utils based on module boundaries
 ```

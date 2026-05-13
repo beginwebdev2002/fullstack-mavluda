@@ -1,41 +1,42 @@
+[🏠 Home](../../../../README.md) > [backend](../../../README.md) > [src](../../README.md) > [modules](../README.md) > [auth](./README.md)
+
 # 📁 auth
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth)
+### 🎯 PURPOSE
+Welcome to the exquisite **auth** module of the Mavluda Beauty ecosystem. This directory focuses on orchestrating Business Services, HTTP APIs. It is designed adhering to our 'Luxury Professional' standards.
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-## 🏗️ Architecture
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 auth"]
-  Root --> dto["📁 dto"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> interfaces["📁 interfaces"]
-  Root --> auth_controller_ts["📄 auth.controller.ts"]
-  Root --> auth_module_ts["📄 auth.module.ts"]
-  Root --> auth_service_ts["📄 auth.service.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> telegram_auth_service_ts["📄 telegram-auth.service.ts"]
+  Root_auth["📁 auth"]
+  f_auth_module_ts["auth.module.ts"]
+  Root_auth --> f_auth_module_ts
+  f_auth_service_ts["auth.service.ts"]
+  Root_auth --> f_auth_service_ts
+  f_telegram_auth_service_ts["telegram-auth.service.ts"]
+  Root_auth --> f_telegram_auth_service_ts
+  f_index_ts["index.ts"]
+  Root_auth --> f_index_ts
+  f_auth_controller_ts["auth.controller.ts"]
+  Root_auth --> f_auth_controller_ts
+  f_infrastructure["📁 infrastructure"]
+  Root_auth --> f_infrastructure
+  f_dto["📁 dto"]
+  Root_auth --> f_dto
+  f_interfaces["📁 interfaces"]
+  Root_auth --> f_interfaces
 ```
 
-## 📄 File Registry
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for auth.controller.ts. | @common |
-| `auth.module.ts` | TypeScript | Defines the architectural module boundaries for auth.module.ts. | @common, @modules, @nestjs |
-| `auth.service.ts` | TypeScript | Encapsulates business logic and data access for auth.service.ts. | @modules, @nestjs |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `telegram-auth.service.ts` | TypeScript | Encapsulates business logic and data access for telegram-auth.service.ts. | @common, @modules, @nestjs |
+| `auth.controller.ts` | NestJS Controller | Handles incoming HTTP requests Defines classes: AuthController. | @common |
+| `auth.module.ts` | Angular Module | Configures an application module or layer Defines classes: AuthModule. | @nestjs, @modules, @common |
+| `auth.service.ts` | Angular Service | Provides injectable business logic or services Defines classes: AuthService. | @nestjs, @modules |
+| `index.ts` | TypeScript File | Exports or orchestrates module members. | None |
+| `telegram-auth.service.ts` | Angular Service | Provides injectable business logic or services Defines classes: TelegramAuthService. | @nestjs, @modules, @common |
 
-## 🔗 Dependencies
-- `./auth.controller`
-- `./auth.service`
-- `./dto/login.dto`
-- `./dto/register.dto`
-- `./infrastructure/jwt.strategy`
-- `./interfaces/auth-response.interface`
-- `./telegram-auth.service`
+### 🔗 DEPENDENCIES
 - `@common/config/app-config.module`
 - `@common/config/app-config.service`
 - `@common/decorators/public.decorator`
@@ -46,11 +47,8 @@ graph TD
 - `bcrypt`
 - `crypto`
 
-## 🛠️ Usage
+### 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './auth';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example interaction or integration snippet
+// Import members from auth based on module boundaries
 ```

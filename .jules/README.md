@@ -8,11 +8,17 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
+  Root__jules["📁 .jules"]
   _jules["📁 .jules"]
+  Root__jules --> _jules
   _jules --> agents_md["📄 agents.md"]
+  Root__jules --> _jules --> agents_md
   _jules --> bolt_md["📄 bolt.md"]
+  Root__jules --> _jules --> bolt_md
   _jules --> palette_md["📄 palette.md"]
+  Root__jules --> _jules --> palette_md
   _jules --> sentinel_md["📄 sentinel.md"]
+  Root__jules --> _jules --> sentinel_md
 ```
 
 ## 📄 File Registry

@@ -1,36 +1,33 @@
+[🏠 Home](../../../../README.md) > [backend](../../../README.md) > [src](../../README.md) > [common](../README.md) > [guards](./README.md)
+
 # 📁 guards
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [guards](/backend/src/common/guards)
+### 🎯 PURPOSE
+Welcome to the exquisite **guards** module of the Mavluda Beauty ecosystem. This directory handles specific domain assets and logic. It is designed adhering to our 'Luxury Professional' standards.
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
-
-## 🏗️ Architecture
+### 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
-  Root --> roles_guard_ts["📄 roles.guard.ts"]
+  Root_guards["📁 guards"]
+  f_roles_guard_ts["roles.guard.ts"]
+  Root_guards --> f_roles_guard_ts
+  f_jwt_auth_guard_ts["jwt-auth.guard.ts"]
+  Root_guards --> f_jwt_auth_guard_ts
 ```
 
-## 📄 File Registry
+### 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `jwt-auth.guard.ts` | TypeScript | Provides core logic and orchestration for jwt-auth.guard.ts. | @nestjs |
-| `roles.guard.ts` | TypeScript | Provides core logic and orchestration for roles.guard.ts. | @nestjs |
+| `jwt-auth.guard.ts` | TypeScript File | Provides injectable business logic or services Defines classes: JwtAuthGuard. | @nestjs |
+| `roles.guard.ts` | TypeScript File | Provides injectable business logic or services Defines classes: RolesGuard. | @nestjs |
 
-## 🔗 Dependencies
-- `../decorators/public.decorator`
-- `../decorators/roles.decorator`
+### 🔗 DEPENDENCIES
 - `@nestjs/common`
 - `@nestjs/core`
 - `@nestjs/passport`
 
-## 🛠️ Usage
+### 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './guards';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example interaction or integration snippet
+// Import members from guards based on module boundaries
 ```
