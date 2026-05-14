@@ -8,10 +8,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 interceptors"]
-  Root --> api_interceptor_ts["📄 api.interceptor.ts"]
-  Root --> error_interceptor_ts["📄 error.interceptor.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_interceptors["📁 interceptors"]
+  Root_interceptors --> f_api_interceptor_ts["📄 api.interceptor.ts"]
+  Root_interceptors --> f_error_interceptor_ts["📄 error.interceptor.ts"]
+  Root_interceptors --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry

@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 interfaces"]
-  Root --> admin_settings_interface_ts["📄 admin-settings.interface.ts"]
+  Root_interfaces["📁 interfaces"]
+  Root_interfaces --> f_admin_settings_interface_ts["📄 admin-settings.interface.ts"]
 ```
 
 ## 📄 File Registry

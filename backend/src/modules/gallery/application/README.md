@@ -1,4 +1,4 @@
-# 📁 application
+# 📱 application
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [gallery](/backend/src/modules/gallery) > [application](/backend/src/modules/gallery/application)
 
@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> gallery_service_ts["📄 gallery.service.ts"]
+  Root_application["📁 application"]
+  Root_application --> f_gallery_service_ts["📄 gallery.service.ts"]
 ```
 
 ## 📄 File Registry

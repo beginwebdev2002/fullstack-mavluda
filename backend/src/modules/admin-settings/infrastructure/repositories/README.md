@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> admin_settings_repository_ts["📄 admin-settings.repository.ts"]
+  Root_repositories["📁 repositories"]
+  Root_repositories --> f_admin_settings_repository_ts["📄 admin-settings.repository.ts"]
 ```
 
 ## 📄 File Registry

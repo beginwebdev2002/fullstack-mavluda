@@ -1,4 +1,4 @@
-# 📁 backend
+# ⚙️ backend
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [backend](/frontend/src/backend)
 
@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 backend"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> telegram_auth_guard_ts["📄 telegram-auth.guard.ts"]
+  Root_backend["📁 backend"]
+  Root_backend --> f_index_ts["📄 index.ts"]
+  Root_backend --> f_telegram_auth_guard_ts["📄 telegram-auth.guard.ts"]
 ```
 
 ## 📄 File Registry

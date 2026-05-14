@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 schemas"]
-  Root --> admin_settings_schema_ts["📄 admin-settings.schema.ts"]
+  Root_schemas["📁 schemas"]
+  Root_schemas --> f_admin_settings_schema_ts["📄 admin-settings.schema.ts"]
 ```
 
 ## 📄 File Registry

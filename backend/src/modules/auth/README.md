@@ -8,15 +8,15 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 auth"]
-  Root --> dto["📁 dto"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> interfaces["📁 interfaces"]
-  Root --> auth_controller_ts["📄 auth.controller.ts"]
-  Root --> auth_module_ts["📄 auth.module.ts"]
-  Root --> auth_service_ts["📄 auth.service.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> telegram_auth_service_ts["📄 telegram-auth.service.ts"]
+  Root_auth["📁 auth"]
+  Root_auth --> d_dto["📁 dto"]
+  Root_auth --> d_infrastructure["📁 infrastructure"]
+  Root_auth --> d_interfaces["📁 interfaces"]
+  Root_auth --> f_auth_controller_ts["📄 auth.controller.ts"]
+  Root_auth --> f_auth_module_ts["📄 auth.module.ts"]
+  Root_auth --> f_auth_service_ts["📄 auth.service.ts"]
+  Root_auth --> f_index_ts["📄 index.ts"]
+  Root_auth --> f_telegram_auth_service_ts["📄 telegram-auth.service.ts"]
 ```
 
 ## 📄 File Registry

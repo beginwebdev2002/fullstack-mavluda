@@ -1,4 +1,4 @@
-# 📁 src
+# 💻 src
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src)
 
@@ -8,23 +8,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 src"]
-  Root --> app["📁 app"]
-  Root --> backend["📁 backend"]
-  Root --> core["📁 core"]
-  Root --> entities["📁 entities"]
-  Root --> environments["📁 environments"]
-  Root --> features["📁 features"]
-  Root --> locale["📁 locale"]
-  Root --> pages["📁 pages"]
-  Root --> shared["📁 shared"]
-  Root --> types["📁 types"]
-  Root --> widgets["📁 widgets"]
-  Root --> app_component_html["📄 app.component.html"]
-  Root --> app_component_scss["📄 app.component.scss"]
-  Root --> app_component_ts["📄 app.component.ts"]
-  Root --> app_routes_ts["📄 app.routes.ts"]
-  Root --> main_ts["📄 main.ts"]
+  Root_src["📁 src"]
+  Root_src --> d_app["📁 app"]
+  Root_src --> d_backend["📁 backend"]
+  Root_src --> d_core["📁 core"]
+  Root_src --> d_entities["📁 entities"]
+  Root_src --> d_features["📁 features"]
+  Root_src --> d_locale["📁 locale"]
+  Root_src --> d_pages["📁 pages"]
+  Root_src --> d_shared["📁 shared"]
+  Root_src --> d_types["📁 types"]
+  Root_src --> d_widgets["📁 widgets"]
+  Root_src --> f_app_component_html["📄 app.component.html"]
+  Root_src --> f_app_component_scss["📄 app.component.scss"]
+  Root_src --> f_app_component_ts["📄 app.component.ts"]
+  Root_src --> f_app_routes_ts["📄 app.routes.ts"]
+  Root_src --> f_main_ts["📄 main.ts"]
 ```
 
 ## 📄 File Registry

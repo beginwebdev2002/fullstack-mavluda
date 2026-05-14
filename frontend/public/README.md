@@ -8,12 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 public"]
-  Root --> images["📁 images"]
+  Root_public["📁 public"]
+  Root_public --> d_images["📁 images"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| No files | - | - | - |
 
 ## 🔗 Dependencies
 - No external dependencies.

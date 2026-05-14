@@ -1,4 +1,4 @@
-# 📁 frontend
+# 🎨 frontend
 
 [Root](/.) > [frontend](/frontend)
 
@@ -8,17 +8,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 frontend"]
-  Root --> public["📁 public"]
-  Root --> src["📁 src"]
-  Root --> angular_json["📄 angular.json"]
-  Root --> index_html["📄 index.html"]
-  Root --> index_tsx["📄 index.tsx"]
-  Root --> leaflet_css["📄 leaflet.css"]
-  Root --> metadata_json["📄 metadata.json"]
-  Root --> package_lock_json["📄 package-lock.json"]
-  Root --> package_json["📄 package.json"]
-  Root --> tsconfig_json["📄 tsconfig.json"]
+  Root_frontend["📁 frontend"]
+  Root_frontend --> d_environments["📁 environments"]
+  Root_frontend --> d_public["📁 public"]
+  Root_frontend --> d_src["📁 src"]
+  Root_frontend --> f_angular_json["📄 angular.json"]
+  Root_frontend --> f_index_html["📄 index.html"]
+  Root_frontend --> f_index_tsx["📄 index.tsx"]
+  Root_frontend --> f_leaflet_css["📄 leaflet.css"]
+  Root_frontend --> f_metadata_json["📄 metadata.json"]
+  Root_frontend --> f_package_lock_json["📄 package-lock.json"]
+  Root_frontend --> f_package_json["📄 package.json"]
+  Root_frontend --> f_tsconfig_json["📄 tsconfig.json"]
 ```
 
 ## 📄 File Registry

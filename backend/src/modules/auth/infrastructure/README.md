@@ -1,4 +1,4 @@
-# 📁 infrastructure
+# 🏗️ infrastructure
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [infrastructure](/backend/src/modules/auth/infrastructure)
 
@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 infrastructure"]
-  Root --> jwt_strategy_ts["📄 jwt.strategy.ts"]
+  Root_infrastructure["📁 infrastructure"]
+  Root_infrastructure --> f_jwt_strategy_ts["📄 jwt.strategy.ts"]
 ```
 
 ## 📄 File Registry

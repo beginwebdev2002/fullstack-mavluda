@@ -10,9 +10,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 image-popup"]
-  Root --> image_popup_component_html["📄 image-popup.component.html"]
-  Root --> image_popup_component_ts["📄 image-popup.component.ts"]
+  Root_image_popup["📁 image-popup"]
+  Root_image_popup --> f_image_popup_component_html["📄 image-popup.component.html"]
+  Root_image_popup --> f_image_popup_component_ts["📄 image-popup.component.ts"]
 ```
 
 ## 📄 File Registry

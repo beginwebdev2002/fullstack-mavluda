@@ -1,4 +1,4 @@
-# 📁 core
+# 🧠 core
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core)
 
@@ -8,14 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 core"]
-  Root --> constants["📁 constants"]
-  Root --> guards["📁 guards"]
-  Root --> interceptors["📁 interceptors"]
+  Root_core["📁 core"]
+  Root_core --> d_constants["📁 constants"]
+  Root_core --> d_guards["📁 guards"]
+  Root_core --> d_interceptors["📁 interceptors"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| No files | - | - | - |
 
 ## 🔗 Dependencies
 - No external dependencies.

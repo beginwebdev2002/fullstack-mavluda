@@ -10,10 +10,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 list-view"]
-  Root --> list_view_component_html["📄 list-view.component.html"]
-  Root --> list_view_component_scss["📄 list-view.component.scss"]
-  Root --> list_view_component_ts["📄 list-view.component.ts"]
+  Root_list_view["📁 list-view"]
+  Root_list_view --> f_list_view_component_html["📄 list-view.component.html"]
+  Root_list_view --> f_list_view_component_scss["📄 list-view.component.scss"]
+  Root_list_view --> f_list_view_component_ts["📄 list-view.component.ts"]
 ```
 
 ## 📄 File Registry

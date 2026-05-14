@@ -10,9 +10,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 store"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> signal_store_base_ts["📄 signal-store.base.ts"]
+  Root_store["📁 store"]
+  Root_store --> f_index_ts["📄 index.ts"]
+  Root_store --> f_signal_store_base_ts["📄 signal-store.base.ts"]
 ```
 
 ## 📄 File Registry

@@ -2,7 +2,7 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [auth](/frontend/src/pages/auth)
 
-**FSD Layer:** Page
+**FSD Layer:** Pages
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,11 +10,11 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 auth"]
-  Root --> auth_component_html["📄 auth.component.html"]
-  Root --> auth_component_scss["📄 auth.component.scss"]
-  Root --> auth_component_ts["📄 auth.component.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_auth["📁 auth"]
+  Root_auth --> f_auth_component_html["📄 auth.component.html"]
+  Root_auth --> f_auth_component_scss["📄 auth.component.scss"]
+  Root_auth --> f_auth_component_ts["📄 auth.component.ts"]
+  Root_auth --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry

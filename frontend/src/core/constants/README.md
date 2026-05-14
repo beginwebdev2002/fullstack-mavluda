@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> api_endpoints_ts["📄 api-endpoints.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_constants["📁 constants"]
+  Root_constants --> f_api_endpoints_ts["📄 api-endpoints.ts"]
+  Root_constants --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry

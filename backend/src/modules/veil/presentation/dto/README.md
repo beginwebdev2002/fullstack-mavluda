@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_veil_dto_ts["📄 create-veil.dto.ts"]
-  Root --> update_veil_dto_ts["📄 update-veil.dto.ts"]
+  Root_dto["📁 dto"]
+  Root_dto --> f_create_veil_dto_ts["📄 create-veil.dto.ts"]
+  Root_dto --> f_update_veil_dto_ts["📄 update-veil.dto.ts"]
 ```
 
 ## 📄 File Registry

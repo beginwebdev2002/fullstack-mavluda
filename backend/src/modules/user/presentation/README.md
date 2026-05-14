@@ -1,4 +1,4 @@
-# 📁 presentation
+# 🎭 presentation
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [presentation](/backend/src/modules/user/presentation)
 
@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
-  Root --> user_controller_ts["📄 user.controller.ts"]
+  Root_presentation["📁 presentation"]
+  Root_presentation --> d_dto["📁 dto"]
+  Root_presentation --> f_user_controller_ts["📄 user.controller.ts"]
 ```
 
 ## 📄 File Registry

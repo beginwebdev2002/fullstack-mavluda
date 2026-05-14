@@ -1,4 +1,4 @@
-# 📁 presentation
+# 🎭 presentation
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [presentation](/backend/src/modules/admin-settings/presentation)
 
@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
-  Root --> admin_settings_controller_ts["📄 admin-settings.controller.ts"]
+  Root_presentation["📁 presentation"]
+  Root_presentation --> d_dto["📁 dto"]
+  Root_presentation --> f_admin_settings_controller_ts["📄 admin-settings.controller.ts"]
 ```
 
 ## 📄 File Registry

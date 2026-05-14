@@ -8,10 +8,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 strategies"]
-  Root --> alif_pay_strategy_ts["📄 alif-pay.strategy.ts"]
-  Root --> mock_card_strategy_ts["📄 mock-card.strategy.ts"]
-  Root --> payment_strategy_ts["📄 payment.strategy.ts"]
+  Root_strategies["📁 strategies"]
+  Root_strategies --> f_alif_pay_strategy_ts["📄 alif-pay.strategy.ts"]
+  Root_strategies --> f_mock_card_strategy_ts["📄 mock-card.strategy.ts"]
+  Root_strategies --> f_payment_strategy_ts["📄 payment.strategy.ts"]
 ```
 
 ## 📄 File Registry

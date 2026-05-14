@@ -1,4 +1,4 @@
-# 📁 application
+# 📱 application
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [application](/backend/src/modules/inventory/application)
 
@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> inventory_service_ts["📄 inventory.service.ts"]
+  Root_application["📁 application"]
+  Root_application --> f_inventory_service_ts["📄 inventory.service.ts"]
 ```
 
 ## 📄 File Registry

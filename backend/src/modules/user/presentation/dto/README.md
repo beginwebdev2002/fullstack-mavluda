@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_user_dto_ts["📄 create-user.dto.ts"]
-  Root --> update_user_dto_ts["📄 update-user.dto.ts"]
+  Root_dto["📁 dto"]
+  Root_dto --> f_create_user_dto_ts["📄 create-user.dto.ts"]
+  Root_dto --> f_update_user_dto_ts["📄 update-user.dto.ts"]
 ```
 
 ## 📄 File Registry

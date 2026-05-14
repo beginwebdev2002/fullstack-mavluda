@@ -1,4 +1,4 @@
-# 📁 domain
+# 🎯 domain
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [gallery](/backend/src/modules/gallery) > [domain](/backend/src/modules/gallery/domain)
 
@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> gallery_entity_ts["📄 gallery.entity.ts"]
+  Root_domain["📁 domain"]
+  Root_domain --> f_gallery_entity_ts["📄 gallery.entity.ts"]
 ```
 
 ## 📄 File Registry

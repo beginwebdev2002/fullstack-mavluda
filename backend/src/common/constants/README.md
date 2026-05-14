@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> error_messages_constant_ts["📄 error-messages.constant.ts"]
+  Root_constants["📁 constants"]
+  Root_constants --> f_error_messages_constant_ts["📄 error-messages.constant.ts"]
 ```
 
 ## 📄 File Registry

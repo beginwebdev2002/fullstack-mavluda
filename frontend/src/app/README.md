@@ -1,4 +1,4 @@
-# 📁 app
+# 🚀 app
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [app](/frontend/src/app)
 
@@ -10,8 +10,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 app"]
-  Root --> app_config_ts["📄 app.config.ts"]
+  Root_app["📁 app"]
+  Root_app --> f_app_config_ts["📄 app.config.ts"]
 ```
 
 ## 📄 File Registry

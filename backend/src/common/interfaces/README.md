@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 interfaces"]
-  Root --> authenticated_request_interface_ts["📄 authenticated-request.interface.ts"]
+  Root_interfaces["📁 interfaces"]
+  Root_interfaces --> f_authenticated_request_interface_ts["📄 authenticated-request.interface.ts"]
 ```
 
 ## 📄 File Registry

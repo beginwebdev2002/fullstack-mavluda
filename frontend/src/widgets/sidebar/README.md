@@ -2,7 +2,7 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [widgets](/frontend/src/widgets) > [sidebar](/frontend/src/widgets/sidebar)
 
-**FSD Layer:** Widget
+**FSD Layer:** Widgets
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **sidebar** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,10 +10,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 sidebar"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> sidebar_component_html["📄 sidebar.component.html"]
-  Root --> sidebar_component_ts["📄 sidebar.component.ts"]
+  Root_sidebar["📁 sidebar"]
+  Root_sidebar --> f_index_ts["📄 index.ts"]
+  Root_sidebar --> f_sidebar_component_html["📄 sidebar.component.html"]
+  Root_sidebar --> f_sidebar_component_ts["📄 sidebar.component.ts"]
 ```
 
 ## 📄 File Registry

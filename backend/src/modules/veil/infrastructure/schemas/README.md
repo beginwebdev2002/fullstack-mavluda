@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 schemas"]
-  Root --> veil_schema_ts["📄 veil.schema.ts"]
+  Root_schemas["📁 schemas"]
+  Root_schemas --> f_veil_schema_ts["📄 veil.schema.ts"]
 ```
 
 ## 📄 File Registry

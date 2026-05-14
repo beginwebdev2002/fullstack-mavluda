@@ -1,4 +1,4 @@
-# 📁 domain
+# 🎯 domain
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil) > [domain](/backend/src/modules/veil/domain)
 
@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> veil_entity_ts["📄 veil.entity.ts"]
+  Root_domain["📁 domain"]
+  Root_domain --> f_veil_entity_ts["📄 veil.entity.ts"]
 ```
 
 ## 📄 File Registry

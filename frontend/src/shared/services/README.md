@@ -1,4 +1,4 @@
-# 📁 services
+# 🛠️ services
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [services](/frontend/src/shared/services)
 
@@ -10,12 +10,12 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 services"]
-  Root --> auth_service_ts["📄 auth.service.ts"]
-  Root --> error_service_ts["📄 error.service.ts"]
-  Root --> image_service_ts["📄 image.service.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> telegram_service_ts["📄 telegram.service.ts"]
+  Root_services["📁 services"]
+  Root_services --> f_auth_service_ts["📄 auth.service.ts"]
+  Root_services --> f_error_service_ts["📄 error.service.ts"]
+  Root_services --> f_image_service_ts["📄 image.service.ts"]
+  Root_services --> f_index_ts["📄 index.ts"]
+  Root_services --> f_telegram_service_ts["📄 telegram.service.ts"]
 ```
 
 ## 📄 File Registry

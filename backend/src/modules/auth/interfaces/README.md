@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 interfaces"]
-  Root --> auth_response_interface_ts["📄 auth-response.interface.ts"]
-  Root --> jwt_payload_interface_ts["📄 jwt-payload.interface.ts"]
+  Root_interfaces["📁 interfaces"]
+  Root_interfaces --> f_auth_response_interface_ts["📄 auth-response.interface.ts"]
+  Root_interfaces --> f_jwt_payload_interface_ts["📄 jwt-payload.interface.ts"]
 ```
 
 ## 📄 File Registry

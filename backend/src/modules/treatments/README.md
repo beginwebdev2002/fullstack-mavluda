@@ -8,13 +8,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 treatments"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> treatments_module_ts["📄 treatments.module.ts"]
+  Root_treatments["📁 treatments"]
+  Root_treatments --> d_application["📁 application"]
+  Root_treatments --> d_domain["📁 domain"]
+  Root_treatments --> d_infrastructure["📁 infrastructure"]
+  Root_treatments --> d_presentation["📁 presentation"]
+  Root_treatments --> f_index_ts["📄 index.ts"]
+  Root_treatments --> f_treatments_module_ts["📄 treatments.module.ts"]
 ```
 
 ## 📄 File Registry

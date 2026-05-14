@@ -8,10 +8,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> admin_guard_ts["📄 admin.guard.ts"]
-  Root --> auth_guard_ts["📄 auth.guard.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_guards["📁 guards"]
+  Root_guards --> f_admin_guard_ts["📄 admin.guard.ts"]
+  Root_guards --> f_auth_guard_ts["📄 auth.guard.ts"]
+  Root_guards --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry

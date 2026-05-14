@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 types"]
-  Root --> telegram_ts["📄 telegram.ts"]
+  Root_types["📁 types"]
+  Root_types --> f_telegram_ts["📄 telegram.ts"]
 ```
 
 ## 📄 File Registry

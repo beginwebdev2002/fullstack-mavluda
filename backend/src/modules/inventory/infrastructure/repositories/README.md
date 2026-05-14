@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> inventory_repository_ts["📄 inventory.repository.ts"]
+  Root_repositories["📁 repositories"]
+  Root_repositories --> f_inventory_repository_ts["📄 inventory.repository.ts"]
 ```
 
 ## 📄 File Registry

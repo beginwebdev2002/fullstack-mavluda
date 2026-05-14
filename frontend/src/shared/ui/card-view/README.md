@@ -10,11 +10,11 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 card-view"]
-  Root --> card_view_component_html["📄 card-view.component.html"]
-  Root --> card_view_component_scss["📄 card-view.component.scss"]
-  Root --> card_view_component_ts["📄 card-view.component.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_card_view["📁 card-view"]
+  Root_card_view --> f_card_view_component_html["📄 card-view.component.html"]
+  Root_card_view --> f_card_view_component_scss["📄 card-view.component.scss"]
+  Root_card_view --> f_card_view_component_ts["📄 card-view.component.ts"]
+  Root_card_view --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry

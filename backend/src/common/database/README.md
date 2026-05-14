@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 database"]
-  Root --> database_module_ts["📄 database.module.ts"]
+  Root_database["📁 database"]
+  Root_database --> f_database_module_ts["📄 database.module.ts"]
 ```
 
 ## 📄 File Registry

@@ -2,7 +2,7 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [settings](/frontend/src/pages/settings)
 
-**FSD Layer:** Page
+**FSD Layer:** Pages
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **settings** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,12 +10,12 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 settings"]
-  Root --> ui["📁 ui"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> settings_component_html["📄 settings.component.html"]
-  Root --> settings_component_scss["📄 settings.component.scss"]
-  Root --> settings_component_ts["📄 settings.component.ts"]
+  Root_settings["📁 settings"]
+  Root_settings --> d_ui["📁 ui"]
+  Root_settings --> f_index_ts["📄 index.ts"]
+  Root_settings --> f_settings_component_html["📄 settings.component.html"]
+  Root_settings --> f_settings_component_scss["📄 settings.component.scss"]
+  Root_settings --> f_settings_component_ts["📄 settings.component.ts"]
 ```
 
 ## 📄 File Registry

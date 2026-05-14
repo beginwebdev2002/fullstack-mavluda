@@ -10,8 +10,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 global-error"]
-  Root --> global_error_component_ts["📄 global-error.component.ts"]
+  Root_global_error["📁 global-error"]
+  Root_global_error --> f_global_error_component_ts["📄 global-error.component.ts"]
 ```
 
 ## 📄 File Registry

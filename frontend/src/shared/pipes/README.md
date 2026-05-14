@@ -10,9 +10,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 pipes"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> safe_html_pipe_ts["📄 safe-html.pipe.ts"]
+  Root_pipes["📁 pipes"]
+  Root_pipes --> f_index_ts["📄 index.ts"]
+  Root_pipes --> f_safe_html_pipe_ts["📄 safe-html.pipe.ts"]
 ```
 
 ## 📄 File Registry

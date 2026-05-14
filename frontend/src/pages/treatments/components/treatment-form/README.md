@@ -2,7 +2,7 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [treatments](/frontend/src/pages/treatments) > [components](/frontend/src/pages/treatments/components) > [treatment-form](/frontend/src/pages/treatments/components/treatment-form)
 
-**FSD Layer:** Page
+**FSD Layer:** Pages
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **treatment-form** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,9 +10,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 treatment-form"]
-  Root --> treatment_form_component_html["📄 treatment-form.component.html"]
-  Root --> treatment_form_component_ts["📄 treatment-form.component.ts"]
+  Root_treatment_form["📁 treatment-form"]
+  Root_treatment_form --> f_treatment_form_component_html["📄 treatment-form.component.html"]
+  Root_treatment_form --> f_treatment_form_component_ts["📄 treatment-form.component.ts"]
 ```
 
 ## 📄 File Registry

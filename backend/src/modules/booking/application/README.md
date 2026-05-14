@@ -1,4 +1,4 @@
-# 📁 application
+# 📱 application
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [booking](/backend/src/modules/booking) > [application](/backend/src/modules/booking/application)
 
@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> booking_service_ts["📄 booking.service.ts"]
+  Root_application["📁 application"]
+  Root_application --> f_booking_service_ts["📄 booking.service.ts"]
 ```
 
 ## 📄 File Registry

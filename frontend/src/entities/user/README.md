@@ -2,7 +2,7 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [user](/frontend/src/entities/user)
 
-**FSD Layer:** Entity
+**FSD Layer:** Entities
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **user** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,12 +10,12 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 user"]
-  Root --> constants["📁 constants"]
-  Root --> model["📁 model"]
-  Root --> auth_service_ts["📄 auth.service.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> user_service_ts["📄 user.service.ts"]
+  Root_user["📁 user"]
+  Root_user --> d_constants["📁 constants"]
+  Root_user --> d_model["📁 model"]
+  Root_user --> f_auth_service_ts["📄 auth.service.ts"]
+  Root_user --> f_index_ts["📄 index.ts"]
+  Root_user --> f_user_service_ts["📄 user.service.ts"]
 ```
 
 ## 📄 File Registry

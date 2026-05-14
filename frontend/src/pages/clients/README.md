@@ -2,7 +2,7 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [clients](/frontend/src/pages/clients)
 
-**FSD Layer:** Page
+**FSD Layer:** Pages
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **clients** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,10 +10,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 clients"]
-  Root --> clients_component_html["📄 clients.component.html"]
-  Root --> clients_component_ts["📄 clients.component.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_clients["📁 clients"]
+  Root_clients --> f_clients_component_html["📄 clients.component.html"]
+  Root_clients --> f_clients_component_ts["📄 clients.component.ts"]
+  Root_clients --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry

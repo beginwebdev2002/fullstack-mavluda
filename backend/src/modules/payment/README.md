@@ -8,12 +8,12 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 payment"]
-  Root --> strategies["📁 strategies"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> payment_controller_ts["📄 payment.controller.ts"]
-  Root --> payment_module_ts["📄 payment.module.ts"]
-  Root --> payment_service_ts["📄 payment.service.ts"]
+  Root_payment["📁 payment"]
+  Root_payment --> d_strategies["📁 strategies"]
+  Root_payment --> f_index_ts["📄 index.ts"]
+  Root_payment --> f_payment_controller_ts["📄 payment.controller.ts"]
+  Root_payment --> f_payment_module_ts["📄 payment.module.ts"]
+  Root_payment --> f_payment_service_ts["📄 payment.service.ts"]
 ```
 
 ## 📄 File Registry

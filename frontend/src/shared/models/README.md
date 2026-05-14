@@ -10,13 +10,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 models"]
-  Root --> admin_settings_model_ts["📄 admin-settings.model.ts"]
-  Root --> api_response_model_ts["📄 api-response.model.ts"]
-  Root --> gallery_model_ts["📄 gallery.model.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> service_model_ts["📄 service.model.ts"]
-  Root --> user_model_ts["📄 user.model.ts"]
+  Root_models["📁 models"]
+  Root_models --> f_admin_settings_model_ts["📄 admin-settings.model.ts"]
+  Root_models --> f_api_response_model_ts["📄 api-response.model.ts"]
+  Root_models --> f_gallery_model_ts["📄 gallery.model.ts"]
+  Root_models --> f_index_ts["📄 index.ts"]
+  Root_models --> f_service_model_ts["📄 service.model.ts"]
+  Root_models --> f_user_model_ts["📄 user.model.ts"]
 ```
 
 ## 📄 File Registry
