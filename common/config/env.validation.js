@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentVariables = void 0;
 exports.validate = validate;
 const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
@@ -19,8 +20,13 @@ class EnvironmentVariables {
     FRONTEND_URL;
     MONGO_URI;
     MONGO_DB_NAME;
-    JWT_SECRET;
-    JWT_EXPIRES_IN;
+    JWT_ACCESS_SECRET;
+    JWT_ACCESS_EXPIRES_IN;
+    JWT_REFRESH_SECRET;
+    JWT_REFRESH_EXPIRES_IN;
+    HASH_SALT;
+    ADMIN_EMAIL;
+    ADMIN_PASSWORD;
     TELEGRAM_BOT_TOKEN;
     TELEGRAM_WEBAPP_URL;
     ALIF_MERCHANT_ID;
@@ -28,7 +34,9 @@ class EnvironmentVariables {
     ALIF_CALLBACK_KEY;
     CARD_PAYMENT_API_KEY;
     LOG_LEVEL;
+    SETTINGS_ID;
 }
+exports.EnvironmentVariables = EnvironmentVariables;
 __decorate([
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
@@ -57,11 +65,31 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], EnvironmentVariables.prototype, "JWT_SECRET", void 0);
+], EnvironmentVariables.prototype, "JWT_ACCESS_SECRET", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], EnvironmentVariables.prototype, "JWT_EXPIRES_IN", void 0);
+], EnvironmentVariables.prototype, "JWT_ACCESS_EXPIRES_IN", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], EnvironmentVariables.prototype, "JWT_REFRESH_SECRET", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], EnvironmentVariables.prototype, "JWT_REFRESH_EXPIRES_IN", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], EnvironmentVariables.prototype, "HASH_SALT", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], EnvironmentVariables.prototype, "ADMIN_EMAIL", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], EnvironmentVariables.prototype, "ADMIN_PASSWORD", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
@@ -96,6 +124,10 @@ __decorate([
     (0, class_validator_1.IsEnum)(['error', 'warn', 'info', 'debug', 'verbose']),
     __metadata("design:type", String)
 ], EnvironmentVariables.prototype, "LOG_LEVEL", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], EnvironmentVariables.prototype, "SETTINGS_ID", void 0);
 function validate(config) {
     const validatedConfig = (0, class_transformer_1.plainToInstance)(EnvironmentVariables, config, {
         enableImplicitConversion: true,

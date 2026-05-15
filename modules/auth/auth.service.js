@@ -47,12 +47,15 @@ const common_1 = require("@nestjs/common");
 const user_1 = require("../user");
 const jwt_1 = require("@nestjs/jwt");
 const bcrypt = __importStar(require("bcrypt"));
+const app_config_service_1 = require("../../common/config/app-config.service");
 let AuthService = class AuthService {
     userService;
     jwtService;
-    constructor(userService, jwtService) {
+    configService;
+    constructor(userService, jwtService, configService) {
         this.userService = userService;
         this.jwtService = jwtService;
+        this.configService = configService;
     }
     async validateUser(email, pass) {
         const user = await this.userService.findByEmail(email);
@@ -65,11 +68,7 @@ let AuthService = class AuthService {
         }
         return null;
     }
-    async login(loginDto) {
-        const user = await this.validateUser(loginDto.email, loginDto.password);
-        if (!user) {
-            throw new common_1.UnauthorizedException('Invalid credentials');
-        }
+    generateTokens(user) {
         const payload = {
             email: user.email,
             sub: user.id,
@@ -78,8 +77,23 @@ let AuthService = class AuthService {
             lastName: user.lastName,
             photoUrl: user.photoUrl,
         };
+        const accessToken = this.jwtService.sign(payload);
+        const refreshToken = this.jwtService.sign(payload, {
+            secret: this.configService.jwtRefreshSecret,
+            expiresIn: this.configService.jwtRefreshExpiresIn,
+        });
+        return { access_token: accessToken, refresh_token: refreshToken };
+    }
+    async login(loginDto) {
+        const user = await this.validateUser(loginDto.email, loginDto.password);
+        if (!user) {
+            throw new common_1.UnauthorizedException('Invalid credentials');
+        }
+        const tokens = this.generateTokens(user);
+        const { createdAt, ...userPayload } = user;
         return {
-            access_token: this.jwtService.sign(payload),
+            ...tokens,
+            user: userPayload,
         };
     }
     async register(registerDto) {
@@ -97,23 +111,39 @@ let AuthService = class AuthService {
             role: 'user',
             username: registerDto.username,
         });
-        const payload = {
-            email: newUser.email,
-            sub: newUser.id,
-            role: newUser.role,
-            firstName: newUser.firstName,
-            lastName: newUser.lastName,
-            photoUrl: newUser.photoUrl,
-        };
+        const tokens = this.generateTokens(newUser);
+        const { passwordHash: _, createdAt, ...userPayload } = newUser;
         return {
-            access_token: this.jwtService.sign(payload),
+            ...tokens,
+            user: userPayload,
         };
+    }
+    async refreshTokens(refreshToken) {
+        try {
+            const payload = this.jwtService.verify(refreshToken, {
+                secret: this.configService.jwtRefreshSecret,
+            });
+            const user = await this.userService.findOne(payload.sub);
+            if (!user) {
+                throw new common_1.UnauthorizedException('User not found');
+            }
+            const tokens = this.generateTokens(user);
+            const { passwordHash, createdAt, ...userPayload } = user;
+            return {
+                ...tokens,
+                user: userPayload,
+            };
+        }
+        catch (e) {
+            throw new common_1.UnauthorizedException('Invalid refresh token');
+        }
     }
 };
 exports.AuthService = AuthService;
 exports.AuthService = AuthService = __decorate([
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [user_1.UserService,
-        jwt_1.JwtService])
+        jwt_1.JwtService,
+        app_config_service_1.AppConfigService])
 ], AuthService);
 //# sourceMappingURL=auth.service.js.map

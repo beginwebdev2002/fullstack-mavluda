@@ -27,6 +27,10 @@ const payment_1 = require("./modules/payment");
 const booking_1 = require("./modules/booking");
 const inventory_1 = require("./modules/inventory");
 const partnership_1 = require("./modules/partnership");
+const seed_module_1 = require("./common/seed/seed.module");
+const core_1 = require("@nestjs/core");
+const jwt_auth_guard_1 = require("./common/guards/jwt-auth.guard");
+const roles_guard_1 = require("./common/guards/roles.guard");
 let AppModule = class AppModule {
     constructor() { }
 };
@@ -36,6 +40,7 @@ exports.AppModule = AppModule = __decorate([
         imports: [
             app_config_module_1.AppConfigModule,
             database_module_1.DatabaseModule,
+            seed_module_1.SeedModule,
             user_1.UserModule,
             admin_settings_1.AdminSettingsModule,
             veil_1.VeilModule,
@@ -52,7 +57,17 @@ exports.AppModule = AppModule = __decorate([
             }),
         ],
         controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        providers: [
+            app_service_1.AppService,
+            {
+                provide: core_1.APP_GUARD,
+                useClass: jwt_auth_guard_1.JwtAuthGuard,
+            },
+            {
+                provide: core_1.APP_GUARD,
+                useClass: roles_guard_1.RolesGuard,
+            },
+        ],
     }),
     __metadata("design:paramtypes", [])
 ], AppModule);

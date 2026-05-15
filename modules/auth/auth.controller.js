@@ -26,9 +26,19 @@ let AuthController = class AuthController {
         this.telegramAuthService = telegramAuthService;
         this.authService = authService;
     }
-    async login(loginDto) {
+    setRefreshTokenCookie(res, refreshToken) {
+        res.cookie('refresh_token', refreshToken, {
+            httpOnly: true,
+            secure: true,
+            sameSite: 'strict',
+            maxAge: 7 * 24 * 60 * 60 * 1000,
+        });
+    }
+    async login(loginDto, res) {
         try {
-            return await this.authService.login(loginDto);
+            const { access_token, refresh_token, user } = await this.authService.login(loginDto);
+            this.setRefreshTokenCookie(res, refresh_token);
+            return { access_token, user };
         }
         catch (error) {
             if (error instanceof Error &&
@@ -41,9 +51,11 @@ let AuthController = class AuthController {
             throw new common_1.InternalServerErrorException('INTERNAL_SERVER_ERROR');
         }
     }
-    async register(registerDto) {
+    async register(registerDto, res) {
         try {
-            return await this.authService.register(registerDto);
+            const { access_token, refresh_token, user } = await this.authService.register(registerDto);
+            this.setRefreshTokenCookie(res, refresh_token);
+            return { access_token, user };
         }
         catch (error) {
             if (error instanceof Error &&
@@ -51,6 +63,20 @@ let AuthController = class AuthController {
                 throw new common_1.BadRequestException('USER_ALREADY_EXISTS');
             }
             throw new common_1.InternalServerErrorException('INTERNAL_SERVER_ERROR');
+        }
+    }
+    async refresh(req, res) {
+        const refreshToken = req.cookies?.['refresh_token'];
+        if (!refreshToken) {
+            throw new common_1.UnauthorizedException('Refresh token not found');
+        }
+        try {
+            const { access_token, refresh_token: newRefreshToken, user } = await this.authService.refreshTokens(refreshToken);
+            this.setRefreshTokenCookie(res, newRefreshToken);
+            return { access_token, user };
+        }
+        catch (e) {
+            throw new common_1.UnauthorizedException('Invalid or expired refresh token');
         }
     }
     async telegramAuth(body) {
@@ -74,18 +100,29 @@ __decorate([
     (0, public_decorator_1.Public)(),
     (0, common_1.Post)('login'),
     __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Res)({ passthrough: true })),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [login_dto_1.LoginDto]),
+    __metadata("design:paramtypes", [login_dto_1.LoginDto, Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "login", null);
 __decorate([
     (0, public_decorator_1.Public)(),
     (0, common_1.Post)('register'),
     __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Res)({ passthrough: true })),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [register_dto_1.RegisterDto]),
+    __metadata("design:paramtypes", [register_dto_1.RegisterDto, Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "register", null);
+__decorate([
+    (0, public_decorator_1.Public)(),
+    (0, common_1.Post)('refresh'),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Res)({ passthrough: true })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], AuthController.prototype, "refresh", null);
 __decorate([
     (0, common_1.Post)('telegram'),
     __param(0, (0, common_1.Body)()),

@@ -1,3 +1,4 @@
+import type { Response, Request } from 'express';
 import { TelegramAuthService } from './telegram-auth.service';
 import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
@@ -7,8 +8,10 @@ export declare class AuthController {
     private readonly telegramAuthService;
     private readonly authService;
     constructor(telegramAuthService: TelegramAuthService, authService: AuthService);
-    login(loginDto: LoginDto): Promise<AuthResponse>;
-    register(registerDto: RegisterDto): Promise<AuthResponse>;
+    private setRefreshTokenCookie;
+    login(loginDto: LoginDto, res: Response): Promise<AuthResponse>;
+    register(registerDto: RegisterDto, res: Response): Promise<AuthResponse>;
+    refresh(req: Request, res: Response): Promise<AuthResponse>;
     telegramAuth(body: {
         initData: string;
     }): Promise<TelegramAuthResponse>;
