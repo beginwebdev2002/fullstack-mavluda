@@ -11,33 +11,31 @@ import { animate, style, transition, trigger } from "@angular/animations";
     @if (errorService.error()) {
       <div
         @fadeInOut
-        class="fixed top-24 right-6 z-50 max-w-sm w-full bg-white border-l-4 border-red-500 rounded shadow-lg overflow-hidden"
-        role="alert"
+        class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+        role="dialog"
+        aria-modal="true"
       >
-        <div class="p-4 flex items-start">
-          <div class="flex-shrink-0">
-            <span class="material-symbols-outlined text-red-500">error</span>
-          </div>
-          <div class="ml-3 w-0 flex-1 pt-0.5">
-            <p class="text-sm font-medium text-gray-900">
+        <div class="bg-white rounded-lg shadow-2xl max-w-sm w-full overflow-hidden border border-red-100">
+          <div class="p-5 flex flex-col items-center text-center">
+            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-red-500 text-2xl">error</span>
+            </div>
+            <h3 class="text-lg font-medium text-gray-900 mb-1">
               Error
               {{
                 errorService.error()?.statusCode
                   ? "(" + errorService.error()?.statusCode + ")"
                   : ""
               }}
-            </p>
-            <p class="mt-1 text-sm text-gray-500 whitespace-pre-line">
+            </h3>
+            <p class="text-sm text-gray-500 whitespace-pre-line mb-6">
               {{ errorService.error()?.message }}
             </p>
-          </div>
-          <div class="ml-4 flex-shrink-0 flex">
             <button
               (click)="close()"
-              class="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+              class="w-full bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
             >
-              <span class="sr-only">Close</span>
-              <span class="material-symbols-outlined">close</span>
+              Close
             </button>
           </div>
         </div>

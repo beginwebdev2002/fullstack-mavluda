@@ -4,8 +4,8 @@ import { linkServerConvert } from "@shared/lib";
 export const apiInterceptor: HttpInterceptorFn = (req, next) => {
   if (req.url.startsWith("/")) {
     const token =
-      typeof localStorage !== "undefined"
-        ? localStorage.getItem("token")
+      typeof sessionStorage !== "undefined"
+        ? sessionStorage.getItem("token")
         : null;
     let headers = req.headers;
     if (token) {

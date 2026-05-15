@@ -1,124 +1,94 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { EnvironmentVariables } from './env.validation';
 
 @Injectable()
 export class AppConfigService {
-  constructor(private configService: ConfigService) {}
+  constructor(
+    private configService: ConfigService<EnvironmentVariables, true>,
+  ) {}
 
   get port(): number {
-    return (
-      (this.configService.get<number>('PORT', { infer: true }) as number) ??
-      3000
-    );
+    return this.configService.get('PORT', { infer: true });
   }
 
   get nodeEnv(): string {
-    return (
-      (this.configService.get<string>('NODE_ENV', { infer: true }) as string) ??
-      'development'
-    );
+    return this.configService.get('NODE_ENV', { infer: true });
   }
 
   get apiPrefix(): string {
-    return (
-      (this.configService.get<string>('API_PREFIX', {
-        infer: true,
-      }) as string) ?? 'api'
-    );
+    return this.configService.get('API_PREFIX', { infer: true });
   }
 
   get frontendUrl(): string {
-    return (
-      (this.configService.get<string>('FRONTEND_URL', {
-        infer: true,
-      }) as string) ?? ''
-    );
+    return this.configService.get('FRONTEND_URL', { infer: true });
   }
 
   get mongoUri(): string {
-    return (
-      (this.configService.get<string>('MONGO_URI', {
-        infer: true,
-      }) as string) ?? ''
-    );
+    return this.configService.get('MONGO_URI', { infer: true });
   }
 
   get mongoDbName(): string {
-    return (
-      (this.configService.get<string>('MONGO_DB_NAME', {
-        infer: true,
-      }) as string) ?? 'mavluda-beauty'
-    );
+    return this.configService.get('MONGO_DB_NAME', { infer: true });
   }
 
   get jwtSecret(): string {
-    return (
-      (this.configService.get<string>('JWT_SECRET', {
-        infer: true,
-      }) as string) ?? ''
-    );
+    return this.configService.get('JWT_ACCESS_SECRET', { infer: true });
   }
 
-  get jwtExpiresIn(): number {
-    return (
-      (this.configService.get<number>('JWT_EXPIRES_IN', {
-        infer: true,
-      }) as number) ?? 60 * 60 * 24
-    );
+  get jwtExpiresIn(): string {
+    return this.configService.get('JWT_ACCESS_EXPIRES_IN', { infer: true });
+  }
+
+  get jwtRefreshSecret(): string {
+    return this.configService.get('JWT_REFRESH_SECRET', { infer: true });
+  }
+
+  get jwtRefreshExpiresIn(): string {
+    return this.configService.get('JWT_REFRESH_EXPIRES_IN', { infer: true });
+  }
+
+  get adminEmail(): string {
+    return this.configService.get('ADMIN_EMAIL', { infer: true });
+  }
+
+  get adminPassword(): string {
+    return this.configService.get('ADMIN_PASSWORD', { infer: true });
+  }
+
+  get hashSalt(): number {
+    return this.configService.get('HASH_SALT', { infer: true });
   }
 
   get telegramBotToken(): string {
-    return (
-      (this.configService.get<string>('TELEGRAM_BOT_TOKEN', {
-        infer: true,
-      }) as string) ?? ''
-    );
+    return this.configService.get('TELEGRAM_BOT_TOKEN', { infer: true });
   }
 
-  get telegramWebAppUrl(): string {
-    return (
-      (this.configService.get<string>('TELEGRAM_WEBAPP_URL', {
-        infer: true,
-      }) as string) ?? ''
-    );
+  get telegramWebAppUrl(): string | undefined {
+    return this.configService.get('TELEGRAM_WEBAPP_URL', { infer: true });
   }
 
-  get alifMerchantId(): string {
-    return (
-      (this.configService.get<string>('ALIF_MERCHANT_ID', {
-        infer: true,
-      }) as string) ?? ''
-    );
+  get alifMerchantId(): string | undefined {
+    return this.configService.get('ALIF_MERCHANT_ID', { infer: true });
   }
 
-  get alifToken(): string {
-    return (
-      (this.configService.get<string>('ALIF_TOKEN', {
-        infer: true,
-      }) as string) ?? ''
-    );
+  get alifToken(): string | undefined {
+    return this.configService.get('ALIF_TOKEN', { infer: true });
   }
 
-  get alifCallbackKey(): string {
-    return (
-      (this.configService.get<string>('ALIF_CALLBACK_KEY', {
-        infer: true,
-      }) as string) ?? ''
-    );
+  get alifCallbackKey(): string | undefined {
+    return this.configService.get('ALIF_CALLBACK_KEY', { infer: true });
   }
 
-  get cardPaymentApiKey(): string {
-    return (
-      (this.configService.get<string>('CARD_PAYMENT_API_KEY', {
-        infer: true,
-      }) as string) ?? ''
-    );
+  get cardPaymentApiKey(): string | undefined {
+    return this.configService.get('CARD_PAYMENT_API_KEY', { infer: true });
   }
+
+  get logLevel(): string {
+    return this.configService.get('LOG_LEVEL', { infer: true });
+  }
+
   get settingsId(): string {
-    return (
-      (this.configService.get<string>('SETTINGS_ID', {
-        infer: true,
-      }) as string) ?? ''
-    );
+    return this.configService.get('SETTINGS_ID', { infer: true });
   }
 }

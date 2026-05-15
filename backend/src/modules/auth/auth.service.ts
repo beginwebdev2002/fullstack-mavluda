@@ -8,6 +8,7 @@ import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
+import { AppConfigService } from '@common/config/app-config.service';
 
 import { AuthResponse } from './interfaces/auth-response.interface';
 import { User } from '@modules/user';
@@ -17,6 +18,7 @@ export class AuthService {
   constructor(
     private userService: UserService,
     private jwtService: JwtService,
+    private configService: AppConfigService,
   ) {}
 
   async validateUser(
@@ -35,11 +37,7 @@ export class AuthService {
     return null;
   }
 
-  async login(loginDto: LoginDto): Promise<AuthResponse> {
-    const user = await this.validateUser(loginDto.email, loginDto.password);
-    if (!user) {
-      throw new UnauthorizedException('Invalid credentials');
-    }
+  private generateTokens(user: Partial<User>) {
     const payload = {
       email: user.email,
       sub: user.id,
@@ -48,12 +46,32 @@ export class AuthService {
       lastName: user.lastName,
       photoUrl: user.photoUrl,
     };
+
+    const accessToken = this.jwtService.sign(payload);
+    const refreshToken = this.jwtService.sign(payload, {
+      secret: this.configService.jwtRefreshSecret,
+      expiresIn: this.configService.jwtRefreshExpiresIn as any,
+    });
+
+    return { access_token: accessToken, refresh_token: refreshToken };
+  }
+
+  async login(loginDto: LoginDto): Promise<{ access_token: string; refresh_token: string; user: Omit<User, 'passwordHash' | 'createdAt'> }> {
+    const user = await this.validateUser(loginDto.email, loginDto.password);
+    if (!user) {
+      throw new UnauthorizedException('Invalid credentials');
+    }
+    
+    const tokens = this.generateTokens(user);
+    const { createdAt, ...userPayload } = user;
+    
     return {
-      access_token: this.jwtService.sign(payload),
+      ...tokens,
+      user: userPayload as Omit<User, 'passwordHash' | 'createdAt'>,
     };
   }
 
-  async register(registerDto: RegisterDto): Promise<AuthResponse> {
+  async register(registerDto: RegisterDto): Promise<{ access_token: string; refresh_token: string; user: Omit<User, 'passwordHash' | 'createdAt'> }> {
     const existing = await this.userService.findByEmail(registerDto.email);
     if (existing) {
       throw new ConflictException('User with this email already exists');
@@ -62,8 +80,6 @@ export class AuthService {
     const salt = await bcrypt.genSalt();
     const passwordHash = await bcrypt.hash(registerDto.password, salt);
 
-    // Create user logic using UserService.create
-    // UserService.create expects Omit<User, 'id' | 'createdAt'>
     const newUser = await this.userService.create({
       firstName: registerDto.firstName,
       lastName: registerDto.lastName,
@@ -73,16 +89,36 @@ export class AuthService {
       username: registerDto.username,
     } as unknown as Omit<User, 'id' | 'createdAt'>);
 
-    const payload = {
-      email: newUser.email,
-      sub: newUser.id,
-      role: newUser.role,
-      firstName: newUser.firstName,
-      lastName: newUser.lastName,
-      photoUrl: newUser.photoUrl,
-    };
+    const tokens = this.generateTokens(newUser);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { passwordHash: _, createdAt, ...userPayload } = newUser;
+
     return {
-      access_token: this.jwtService.sign(payload),
+      ...tokens,
+      user: userPayload as Omit<User, 'passwordHash' | 'createdAt'>,
     };
+  }
+
+  async refreshTokens(refreshToken: string): Promise<{ access_token: string; refresh_token: string; user: Omit<User, 'passwordHash' | 'createdAt'> }> {
+    try {
+      const payload = this.jwtService.verify(refreshToken, {
+        secret: this.configService.jwtRefreshSecret,
+      });
+      const user = await this.userService.findOne(payload.sub);
+      if (!user) {
+        throw new UnauthorizedException('User not found');
+      }
+      
+      const tokens = this.generateTokens(user);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { passwordHash, createdAt, ...userPayload } = user;
+      
+      return {
+        ...tokens,
+        user: userPayload as Omit<User, 'passwordHash' | 'createdAt'>,
+      };
+    } catch (e) {
+      throw new UnauthorizedException('Invalid refresh token');
+    }
   }
 }

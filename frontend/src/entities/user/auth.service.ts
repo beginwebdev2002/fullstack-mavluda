@@ -26,30 +26,49 @@ export class AuthService {
 
   signin(credentials: any) {
     return this.http.post<AuthResponse>('/auth/login', credentials).pipe(
-      tap(response => this.setSession(response.access_token))
+      tap(response => {
+        if(response && response.access_token) {
+          this.setSession(response.access_token, response.user);
+        }
+      })
     );
   }
 
   signup(data: any) {
     return this.http.post<AuthResponse>('/auth/register', data).pipe(
-      tap(response => this.setSession(response.access_token))
+      tap(response => {
+        if(response && response.access_token) {
+          this.setSession(response.access_token, response.user);
+        }
+      })
+    );
+  }
+
+  refreshToken() {
+    return this.http.post<AuthResponse>('/auth/refresh', {}, { withCredentials: true }).pipe(
+      tap(response => {
+        if(response && response.access_token) {
+          this.setSession(response.access_token, response.user);
+        }
+      })
     );
   }
 
   logout() {
-    localStorage.removeItem('token');
+    sessionStorage.removeItem('token');
     this._currentUser.set(null);
     this.router.navigate(['/auth/login']);
   }
 
-  private setSession(token: string) {
-    localStorage.setItem('token', token);
-    const user = this.decodeToken(token);
+  private setSession(token: string, userPayload?: any) {
+    sessionStorage.setItem('token', token);
+    const user = userPayload || this.decodeToken(token);
     this._currentUser.set(user);
   }
 
   private getUserFromStorage(): User | null {
-    const token = localStorage.getItem('token');
+    if (typeof sessionStorage === 'undefined') return null;
+    const token = sessionStorage.getItem('token');
     if (token) {
       return this.decodeToken(token);
     }

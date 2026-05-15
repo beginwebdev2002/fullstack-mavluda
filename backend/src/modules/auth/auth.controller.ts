@@ -6,7 +6,10 @@ import {
   InternalServerErrorException,
   NotFoundException,
   BadRequestException,
+  Res,
+  Req,
 } from '@nestjs/common';
+import type { Response, Request } from 'express';
 import { TelegramAuthService } from './telegram-auth.service';
 import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
@@ -25,11 +28,25 @@ export class AuthController {
     private readonly authService: AuthService,
   ) {}
 
+  private setRefreshTokenCookie(res: Response, refreshToken: string) {
+    res.cookie('refresh_token', refreshToken, {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'strict',
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in ms
+    });
+  }
+
   @Public()
   @Post('login')
-  async login(@Body() loginDto: LoginDto): Promise<AuthResponse> {
+  async login(
+    @Body() loginDto: LoginDto,
+    @Res({ passthrough: true }) res: Response,
+  ): Promise<AuthResponse> {
     try {
-      return await this.authService.login(loginDto);
+      const { access_token, refresh_token, user } = await this.authService.login(loginDto);
+      this.setRefreshTokenCookie(res, refresh_token);
+      return { access_token, user };
     } catch (error) {
       if (
         error instanceof Error &&
@@ -37,7 +54,6 @@ export class AuthController {
       ) {
         throw new NotFoundException('USER_NOT_FOUND');
       }
-      // If login throws custom Unauthorized stuff, we bubble it up
       if (error instanceof UnauthorizedException) {
         throw error;
       }
@@ -47,9 +63,14 @@ export class AuthController {
 
   @Public()
   @Post('register')
-  async register(@Body() registerDto: RegisterDto): Promise<AuthResponse> {
+  async register(
+    @Body() registerDto: RegisterDto,
+    @Res({ passthrough: true }) res: Response,
+  ): Promise<AuthResponse> {
     try {
-      return await this.authService.register(registerDto);
+      const { access_token, refresh_token, user } = await this.authService.register(registerDto);
+      this.setRefreshTokenCookie(res, refresh_token);
+      return { access_token, user };
     } catch (error) {
       if (
         error instanceof Error &&
@@ -58,6 +79,26 @@ export class AuthController {
         throw new BadRequestException('USER_ALREADY_EXISTS');
       }
       throw new InternalServerErrorException('INTERNAL_SERVER_ERROR');
+    }
+  }
+
+  @Public()
+  @Post('refresh')
+  async refresh(
+    @Req() req: Request,
+    @Res({ passthrough: true }) res: Response,
+  ): Promise<AuthResponse> {
+    const refreshToken = req.cookies?.['refresh_token'];
+    if (!refreshToken) {
+      throw new UnauthorizedException('Refresh token not found');
+    }
+
+    try {
+      const { access_token, refresh_token: newRefreshToken, user } = await this.authService.refreshTokens(refreshToken);
+      this.setRefreshTokenCookie(res, newRefreshToken);
+      return { access_token, user };
+    } catch (e) {
+      throw new UnauthorizedException('Invalid or expired refresh token');
     }
   }
 

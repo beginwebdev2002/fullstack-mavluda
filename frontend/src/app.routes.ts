@@ -1,4 +1,5 @@
 import { Routes } from "@angular/router";
+import { adminGuard, authGuard } from "@core/guards";
 
 export const routes: Routes = [
   { path: "", redirectTo: "auth", pathMatch: "full" },
@@ -12,7 +13,7 @@ export const routes: Routes = [
     path: "admin",
     loadComponent: () =>
       import("@widgets/layouts").then((m) => m.AdminLayoutComponent),
-    // canActivate: [adminGuard],
+    canActivate: [adminGuard],
     children: [
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
       {
@@ -53,6 +54,7 @@ export const routes: Routes = [
     path: "user",
     loadComponent: () =>
       import("@widgets/layouts").then((m) => m.UserLayoutComponent),
+    canActivate: [authGuard],
     children: [
       { path: "", redirectTo: "home", pathMatch: "full" },
       {

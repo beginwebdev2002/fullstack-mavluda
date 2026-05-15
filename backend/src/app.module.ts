@@ -15,11 +15,16 @@ import { PaymentModule } from '@modules/payment';
 import { BookingModule } from '@modules/booking';
 import { InventoryModule } from '@modules/inventory';
 import { PartnershipModule } from '@modules/partnership';
+import { SeedModule } from './common/seed/seed.module';
+import { APP_GUARD } from '@nestjs/core';
+import { JwtAuthGuard } from './common/guards/jwt-auth.guard';
+import { RolesGuard } from './common/guards/roles.guard';
 
 @Module({
   imports: [
     AppConfigModule,
     DatabaseModule,
+    SeedModule,
     UserModule,
     AdminSettingsModule,
     VeilModule,
@@ -36,7 +41,17 @@ import { PartnershipModule } from '@modules/partnership';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: APP_GUARD,
+      useClass: JwtAuthGuard,
+    },
+    {
+      provide: APP_GUARD,
+      useClass: RolesGuard,
+    },
+  ],
 })
 export class AppModule {
   constructor() {}
