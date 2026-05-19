@@ -1,4 +1,4 @@
-# 📁 repositories
+# 📁 Repositories
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [booking](/backend/src/modules/booking) > [infrastructure](/backend/src/modules/booking/infrastructure) > [repositories](/backend/src/modules/booking/infrastructure/repositories)
 
@@ -8,17 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> booking_repository_ts["📄 booking.repository.ts"]
+  Root_repositories["📁 repositories"]
+  Root_repositories --> f_booking_repository_ts["📄 booking.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.repository.ts` | TypeScript | Provides core logic and orchestration for booking.repository.ts. | @nestjs |
+| `booking.repository.ts` | TypeScript/JavaScript | Provides core logic and orchestration for booking.repository.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../../domain/booking.entity`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 - `mongoose`

@@ -1,4 +1,4 @@
-# 📁 interfaces
+# 📁 Interfaces
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [interfaces](/backend/src/common/interfaces)
 
@@ -8,14 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 interfaces"]
-  Root --> authenticated_request_interface_ts["📄 authenticated-request.interface.ts"]
+  Root_interfaces["📁 interfaces"]
+  Root_interfaces --> f_authenticated_request_interface_ts["📄 authenticated-request.interface.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `authenticated-request.interface.ts` | TypeScript | Provides core logic and orchestration for authenticated-request.interface.ts. | N/A |
+| `authenticated-request.interface.ts` | TypeScript/JavaScript | Provides core logic and orchestration for authenticated-request.interface.ts. | N/A |
 
 ## 🔗 Dependencies
 - `express`

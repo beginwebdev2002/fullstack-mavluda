@@ -1,4 +1,4 @@
-# 📁 presentation
+# 📁 Presentation
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil) > [presentation](/backend/src/modules/veil/presentation)
 
@@ -8,21 +8,17 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
-  Root --> veil_controller_ts["📄 veil.controller.ts"]
+  Root_presentation["📁 presentation"]
+  Root_presentation --> d_dto["📁 dto"]
+  Root_presentation --> f_veil_controller_ts["📄 veil.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for veil.controller.ts. | @nestjs |
+| `veil.controller.ts` | TypeScript/JavaScript | Handles incoming HTTP requests and routing for veil.controller.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../application/veil.service`
-- `../domain/veil.entity`
-- `./dto/create-veil.dto`
-- `./dto/update-veil.dto`
 - `@nestjs/platform-express`
 - `multer`
 - `path`

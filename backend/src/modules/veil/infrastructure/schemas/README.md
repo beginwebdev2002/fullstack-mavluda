@@ -1,4 +1,4 @@
-# 📁 schemas
+# 📁 Schemas
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil) > [infrastructure](/backend/src/modules/veil/infrastructure) > [schemas](/backend/src/modules/veil/infrastructure/schemas)
 
@@ -8,14 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 schemas"]
-  Root --> veil_schema_ts["📄 veil.schema.ts"]
+  Root_schemas["📁 schemas"]
+  Root_schemas --> f_veil_schema_ts["📄 veil.schema.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.schema.ts` | TypeScript | Provides core logic and orchestration for veil.schema.ts. | @nestjs |
+| `veil.schema.ts` | TypeScript/JavaScript | Provides core logic and orchestration for veil.schema.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `@nestjs/mongoose`

@@ -1,4 +1,4 @@
-# 📁 public
+# 🌐 Public
 
 [Root](/.) > [frontend](/frontend) > [public](/frontend/public)
 
@@ -8,12 +8,12 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 public"]
-  Root --> images["📁 images"]
+  Root_public["🌐 public"]
+  Root_public --> d_images["📁 images"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+*No files present in this directory.*
 
 ## 🔗 Dependencies
 - No external dependencies.

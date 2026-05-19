@@ -1,4 +1,4 @@
-# 📁 dto
+# 📁 Dto
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [dto](/backend/src/modules/auth/dto)
 
@@ -8,16 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> login_dto_ts["📄 login.dto.ts"]
-  Root --> register_dto_ts["📄 register.dto.ts"]
+  Root_dto["📁 dto"]
+  Root_dto --> f_login_dto_ts["📄 login.dto.ts"]
+  Root_dto --> f_register_dto_ts["📄 register.dto.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `login.dto.ts` | TypeScript | Provides core logic and orchestration for login.dto.ts. | N/A |
-| `register.dto.ts` | TypeScript | Provides core logic and orchestration for register.dto.ts. | N/A |
+| `login.dto.ts` | TypeScript/JavaScript | Provides core logic and orchestration for login.dto.ts. | N/A |
+| `register.dto.ts` | TypeScript/JavaScript | Provides core logic and orchestration for register.dto.ts. | N/A |
 
 ## 🔗 Dependencies
 - `class-validator`

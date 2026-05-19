@@ -1,8 +1,8 @@
-# 📁 veil
+# 📁 Veil
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features) > [veil](/frontend/src/features/veil)
 
-**FSD Layer:** Feature
+**FSD Layer:** Features ✨
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **veil** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,15 +10,15 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 veil"]
-  Root --> model["📁 model"]
-  Root --> index_ts["📄 index.ts"]
+  Root_veil["📁 veil"]
+  Root_veil --> d_model["📁 model"]
+  Root_veil --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.

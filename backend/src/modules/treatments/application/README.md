@@ -1,4 +1,4 @@
-# 📁 application
+# 📁 Application
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments) > [application](/backend/src/modules/treatments/application)
 
@@ -8,18 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> treatments_service_ts["📄 treatments.service.ts"]
+  Root_application["📁 application"]
+  Root_application --> f_treatments_service_ts["📄 treatments.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.service.ts` | TypeScript | Encapsulates business logic and data access for treatments.service.ts. | @common, @nestjs |
+| `treatments.service.ts` | TypeScript/JavaScript | Encapsulates business logic and data access for treatments.service.ts. | @common, @nestjs |
 
 ## 🔗 Dependencies
-- `../domain/treatments.entity`
-- `../infrastructure/repositories/treatments.repository`
 - `@common/utils`
 - `@nestjs/common`
 

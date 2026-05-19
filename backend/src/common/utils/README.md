@@ -1,4 +1,4 @@
-# 📁 utils
+# 🧰 Utils
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [utils](/backend/src/common/utils)
 
@@ -8,18 +8,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 utils"]
-  Root --> file_system_ts["📄 file-system.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> object_ts["📄 object.ts"]
+  Root_utils["🧰 utils"]
+  Root_utils --> f_file_system_ts["📄 file-system.ts"]
+  Root_utils --> f_index_ts["📄 index.ts"]
+  Root_utils --> f_object_ts["📄 object.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `file-system.ts` | TypeScript | Provides core logic and orchestration for file-system.ts. | N/A |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `object.ts` | TypeScript | Provides core logic and orchestration for object.ts. | N/A |
+| `file-system.ts` | TypeScript/JavaScript | Provides core logic and orchestration for file-system.ts. | N/A |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
+| `object.ts` | TypeScript/JavaScript | Provides core logic and orchestration for object.ts. | N/A |
 
 ## 🔗 Dependencies
 - `fs`

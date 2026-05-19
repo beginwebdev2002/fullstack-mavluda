@@ -1,4 +1,4 @@
-# 📁 veil
+# 📁 Veil
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil)
 
@@ -8,25 +8,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 veil"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> veil_module_ts["📄 veil.module.ts"]
+  Root_veil["📁 veil"]
+  Root_veil --> d_application["📁 application"]
+  Root_veil --> d_domain["📁 domain"]
+  Root_veil --> d_infrastructure["📁 infrastructure"]
+  Root_veil --> d_presentation["📁 presentation"]
+  Root_veil --> f_index_ts["📄 index.ts"]
+  Root_veil --> f_veil_module_ts["📄 veil.module.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `veil.module.ts` | TypeScript | Defines the architectural module boundaries for veil.module.ts. | @nestjs |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
+| `veil.module.ts` | TypeScript/JavaScript | Defines the architectural module boundaries for veil.module.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./application/veil.service`
-- `./infrastructure/repositories/veil.repository`
-- `./presentation/veil.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

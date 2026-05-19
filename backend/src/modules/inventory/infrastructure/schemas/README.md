@@ -1,4 +1,4 @@
-# 📁 schemas
+# 📁 Schemas
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [infrastructure](/backend/src/modules/inventory/infrastructure) > [schemas](/backend/src/modules/inventory/infrastructure/schemas)
 
@@ -8,14 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 schemas"]
-  Root --> inventory_schema_ts["📄 inventory.schema.ts"]
+  Root_schemas["📁 schemas"]
+  Root_schemas --> f_inventory_schema_ts["📄 inventory.schema.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.schema.ts` | TypeScript | Provides core logic and orchestration for inventory.schema.ts. | @nestjs |
+| `inventory.schema.ts` | TypeScript/JavaScript | Provides core logic and orchestration for inventory.schema.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `@nestjs/mongoose`

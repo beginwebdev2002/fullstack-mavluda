@@ -1,4 +1,4 @@
-# 📁 user
+# 📁 User
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user)
 
@@ -8,25 +8,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 user"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> user_module_ts["📄 user.module.ts"]
+  Root_user["📁 user"]
+  Root_user --> d_application["📁 application"]
+  Root_user --> d_domain["📁 domain"]
+  Root_user --> d_infrastructure["📁 infrastructure"]
+  Root_user --> d_presentation["📁 presentation"]
+  Root_user --> f_index_ts["📄 index.ts"]
+  Root_user --> f_user_module_ts["📄 user.module.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `user.module.ts` | TypeScript | Defines the architectural module boundaries for user.module.ts. | @nestjs |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
+| `user.module.ts` | TypeScript/JavaScript | Defines the architectural module boundaries for user.module.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./application/user.service`
-- `./infrastructure/repositories/user.repository`
-- `./presentation/user.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

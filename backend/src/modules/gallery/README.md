@@ -1,4 +1,4 @@
-# 📁 gallery
+# 📁 Gallery
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [gallery](/backend/src/modules/gallery)
 
@@ -8,25 +8,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 gallery"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> gallery_module_ts["📄 gallery.module.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_gallery["📁 gallery"]
+  Root_gallery --> d_application["📁 application"]
+  Root_gallery --> d_domain["📁 domain"]
+  Root_gallery --> d_infrastructure["📁 infrastructure"]
+  Root_gallery --> d_presentation["📁 presentation"]
+  Root_gallery --> f_gallery_module_ts["📄 gallery.module.ts"]
+  Root_gallery --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.module.ts` | TypeScript | Defines the architectural module boundaries for gallery.module.ts. | @nestjs |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `gallery.module.ts` | TypeScript/JavaScript | Defines the architectural module boundaries for gallery.module.ts. | @nestjs |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
-- `./application/gallery.service`
-- `./infrastructure/repositories/gallery.repository`
-- `./presentation/gallery.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

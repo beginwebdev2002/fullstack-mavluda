@@ -1,4 +1,4 @@
-# 📁 repositories
+# 📁 Repositories
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [infrastructure](/backend/src/modules/user/infrastructure) > [repositories](/backend/src/modules/user/infrastructure/repositories)
 
@@ -8,18 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> user_repository_ts["📄 user.repository.ts"]
+  Root_repositories["📁 repositories"]
+  Root_repositories --> f_user_repository_ts["📄 user.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.repository.ts` | TypeScript | Provides core logic and orchestration for user.repository.ts. | @nestjs |
+| `user.repository.ts` | TypeScript/JavaScript | Provides core logic and orchestration for user.repository.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../../domain/user.entity`
-- `../schemas/user.schema`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 - `mongoose`

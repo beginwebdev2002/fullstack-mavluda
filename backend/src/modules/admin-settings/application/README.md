@@ -1,4 +1,4 @@
-# 📁 application
+# 📁 Application
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [application](/backend/src/modules/admin-settings/application)
 
@@ -8,18 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> admin_settings_service_ts["📄 admin-settings.service.ts"]
+  Root_application["📁 application"]
+  Root_application --> f_admin_settings_service_ts["📄 admin-settings.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.service.ts` | TypeScript | Encapsulates business logic and data access for admin-settings.service.ts. | @nestjs |
+| `admin-settings.service.ts` | TypeScript/JavaScript | Encapsulates business logic and data access for admin-settings.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../domain/admin-settings.entity`
-- `../infrastructure/repositories/admin-settings.repository`
 - `@nestjs/common`
 
 ## 🛠️ Usage

@@ -1,4 +1,4 @@
-# 📁 strategies
+# 📁 Strategies
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [payment](/backend/src/modules/payment) > [strategies](/backend/src/modules/payment/strategies)
 
@@ -8,18 +8,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 strategies"]
-  Root --> alif_pay_strategy_ts["📄 alif-pay.strategy.ts"]
-  Root --> mock_card_strategy_ts["📄 mock-card.strategy.ts"]
-  Root --> payment_strategy_ts["📄 payment.strategy.ts"]
+  Root_strategies["📁 strategies"]
+  Root_strategies --> f_alif_pay_strategy_ts["📄 alif-pay.strategy.ts"]
+  Root_strategies --> f_mock_card_strategy_ts["📄 mock-card.strategy.ts"]
+  Root_strategies --> f_payment_strategy_ts["📄 payment.strategy.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `alif-pay.strategy.ts` | TypeScript | Provides core logic and orchestration for alif-pay.strategy.ts. | @nestjs |
-| `mock-card.strategy.ts` | TypeScript | Provides core logic and orchestration for mock-card.strategy.ts. | @nestjs |
-| `payment.strategy.ts` | TypeScript | Provides core logic and orchestration for payment.strategy.ts. | N/A |
+| `alif-pay.strategy.ts` | TypeScript/JavaScript | Provides core logic and orchestration for alif-pay.strategy.ts. | @nestjs |
+| `mock-card.strategy.ts` | TypeScript/JavaScript | Provides core logic and orchestration for mock-card.strategy.ts. | @nestjs |
+| `payment.strategy.ts` | TypeScript/JavaScript | Provides core logic and orchestration for payment.strategy.ts. | N/A |
 
 ## 🔗 Dependencies
 - `@nestjs/common`

@@ -1,4 +1,4 @@
-# 📁 database
+# 📁 Database
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [database](/backend/src/common/database)
 
@@ -8,14 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 database"]
-  Root --> database_module_ts["📄 database.module.ts"]
+  Root_database["📁 database"]
+  Root_database --> f_database_module_ts["📄 database.module.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `database.module.ts` | TypeScript | Defines the architectural module boundaries for database.module.ts. | @nestjs |
+| `database.module.ts` | TypeScript/JavaScript | Defines the architectural module boundaries for database.module.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `@nestjs/common`

@@ -1,4 +1,4 @@
-# 📁 schemas
+# 📁 Schemas
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [infrastructure](/backend/src/modules/user/infrastructure) > [schemas](/backend/src/modules/user/infrastructure/schemas)
 
@@ -8,14 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 schemas"]
-  Root --> user_schema_ts["📄 user.schema.ts"]
+  Root_schemas["📁 schemas"]
+  Root_schemas --> f_user_schema_ts["📄 user.schema.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.schema.ts` | TypeScript | Provides core logic and orchestration for user.schema.ts. | @nestjs |
+| `user.schema.ts` | TypeScript/JavaScript | Provides core logic and orchestration for user.schema.ts. | @nestjs |
 
 ## 🔗 Dependencies
 - `@nestjs/mongoose`

@@ -1,8 +1,8 @@
-# 📁 gallery
+# 📁 Gallery
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [gallery](/frontend/src/entities/gallery)
 
-**FSD Layer:** Entity
+**FSD Layer:** Entities 📦
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **gallery** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,17 +10,17 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 gallery"]
-  Root --> constants["📁 constants"]
-  Root --> gallery_service_ts["📄 gallery.service.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_gallery["📁 gallery"]
+  Root_gallery --> d_constants["📁 constants"]
+  Root_gallery --> f_gallery_service_ts["📄 gallery.service.ts"]
+  Root_gallery --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.service.ts` | TypeScript | Encapsulates business logic and data access for gallery.service.ts. | @angular, @shared |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `gallery.service.ts` | TypeScript/JavaScript | Encapsulates business logic and data access for gallery.service.ts. | @angular, @shared |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
 - `@angular/common/http`

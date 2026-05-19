@@ -1,4 +1,4 @@
-# 📁 constants
+# 📁 Constants
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [constants](/backend/src/common/constants)
 
@@ -8,14 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> error_messages_constant_ts["📄 error-messages.constant.ts"]
+  Root_constants["📁 constants"]
+  Root_constants --> f_error_messages_constant_ts["📄 error-messages.constant.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `error-messages.constant.ts` | TypeScript | Provides core logic and orchestration for error-messages.constant.ts. | N/A |
+| `error-messages.constant.ts` | TypeScript/JavaScript | Provides core logic and orchestration for error-messages.constant.ts. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.

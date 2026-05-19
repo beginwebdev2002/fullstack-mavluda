@@ -1,8 +1,8 @@
-# 📁 pipes
+# 📁 Pipes
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [pipes](/frontend/src/shared/pipes)
 
-**FSD Layer:** Shared
+**FSD Layer:** Shared 🤝
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **pipes** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,16 +10,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 pipes"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> safe_html_pipe_ts["📄 safe-html.pipe.ts"]
+  Root_pipes["📁 pipes"]
+  Root_pipes --> f_index_ts["📄 index.ts"]
+  Root_pipes --> f_safe_html_pipe_ts["📄 safe-html.pipe.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `safe-html.pipe.ts` | TypeScript | Provides core logic and orchestration for safe-html.pipe.ts. | @angular |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
+| `safe-html.pipe.ts` | TypeScript/JavaScript | Provides core logic and orchestration for safe-html.pipe.ts. | @angular |
 
 ## 🔗 Dependencies
 - `@angular/core`

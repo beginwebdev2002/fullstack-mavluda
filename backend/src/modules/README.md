@@ -1,4 +1,4 @@
-# 📁 modules
+# 📁 Modules
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules)
 
@@ -8,21 +8,21 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 modules"]
-  Root --> admin-settings["📁 admin-settings"]
-  Root --> auth["📁 auth"]
-  Root --> booking["📁 booking"]
-  Root --> gallery["📁 gallery"]
-  Root --> inventory["📁 inventory"]
-  Root --> partnership["📁 partnership"]
-  Root --> payment["📁 payment"]
-  Root --> treatments["📁 treatments"]
-  Root --> user["📁 user"]
-  Root --> veil["📁 veil"]
+  Root_modules["📁 modules"]
+  Root_modules --> d_admin_settings["📁 admin-settings"]
+  Root_modules --> d_auth["📁 auth"]
+  Root_modules --> d_booking["📁 booking"]
+  Root_modules --> d_gallery["📁 gallery"]
+  Root_modules --> d_inventory["📁 inventory"]
+  Root_modules --> d_partnership["📁 partnership"]
+  Root_modules --> d_payment["📁 payment"]
+  Root_modules --> d_treatments["📁 treatments"]
+  Root_modules --> d_user["📁 user"]
+  Root_modules --> d_veil["📁 veil"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+*No files present in this directory.*
 
 ## 🔗 Dependencies
 - No external dependencies.

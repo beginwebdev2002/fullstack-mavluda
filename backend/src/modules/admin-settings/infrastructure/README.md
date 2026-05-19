@@ -1,4 +1,4 @@
-# 📁 infrastructure
+# 📁 Infrastructure
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [infrastructure](/backend/src/modules/admin-settings/infrastructure)
 
@@ -8,13 +8,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 infrastructure"]
-  Root --> repositories["📁 repositories"]
-  Root --> schemas["📁 schemas"]
+  Root_infrastructure["📁 infrastructure"]
+  Root_infrastructure --> d_repositories["📁 repositories"]
+  Root_infrastructure --> d_schemas["📁 schemas"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+*No files present in this directory.*
 
 ## 🔗 Dependencies
 - No external dependencies.

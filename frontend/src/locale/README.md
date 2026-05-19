@@ -1,4 +1,4 @@
-# 📁 locale
+# 📁 Locale
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [locale](/frontend/src/locale)
 
@@ -8,10 +8,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 locale"]
-  Root --> messages_ru_xlf["📄 messages.ru.xlf"]
-  Root --> messages_tj_xlf["📄 messages.tj.xlf"]
-  Root --> messages_xlf["📄 messages.xlf"]
+  Root_locale["📁 locale"]
+  Root_locale --> f_messages_ru_xlf["📄 messages.ru.xlf"]
+  Root_locale --> f_messages_tj_xlf["📄 messages.tj.xlf"]
+  Root_locale --> f_messages_xlf["📄 messages.xlf"]
 ```
 
 ## 📄 File Registry

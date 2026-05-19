@@ -1,4 +1,4 @@
-# 📁 guards
+# 📁 Guards
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [guards](/frontend/src/core/guards)
 
@@ -8,18 +8,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> admin_guard_ts["📄 admin.guard.ts"]
-  Root --> auth_guard_ts["📄 auth.guard.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_guards["📁 guards"]
+  Root_guards --> f_admin_guard_ts["📄 admin.guard.ts"]
+  Root_guards --> f_auth_guard_ts["📄 auth.guard.ts"]
+  Root_guards --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin.guard.ts` | TypeScript | Provides core logic and orchestration for admin.guard.ts. | @angular, @entities |
-| `auth.guard.ts` | TypeScript | Provides core logic and orchestration for auth.guard.ts. | @angular, @entities |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `admin.guard.ts` | TypeScript/JavaScript | Provides core logic and orchestration for admin.guard.ts. | @angular, @entities |
+| `auth.guard.ts` | TypeScript/JavaScript | Provides core logic and orchestration for auth.guard.ts. | @angular, @entities |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
 - `@angular/core`

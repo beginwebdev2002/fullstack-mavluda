@@ -1,4 +1,4 @@
-# 📁 dto
+# 📁 Dto
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [booking](/backend/src/modules/booking) > [presentation](/backend/src/modules/booking/presentation) > [dto](/backend/src/modules/booking/presentation/dto)
 
@@ -8,19 +8,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_booking_dto_ts["📄 create-booking.dto.ts"]
-  Root --> update_booking_dto_ts["📄 update-booking.dto.ts"]
+  Root_dto["📁 dto"]
+  Root_dto --> f_create_booking_dto_ts["📄 create-booking.dto.ts"]
+  Root_dto --> f_update_booking_dto_ts["📄 update-booking.dto.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-booking.dto.ts` | TypeScript | Provides core logic and orchestration for create-booking.dto.ts. | N/A |
-| `update-booking.dto.ts` | TypeScript | Provides core logic and orchestration for update-booking.dto.ts. | @nestjs |
+| `create-booking.dto.ts` | TypeScript/JavaScript | Provides core logic and orchestration for create-booking.dto.ts. | N/A |
+| `update-booking.dto.ts` | TypeScript/JavaScript | Provides core logic and orchestration for update-booking.dto.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./create-booking.dto`
 - `@nestjs/mapped-types`
 
 ## 🛠️ Usage

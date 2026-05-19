@@ -1,8 +1,8 @@
-# 📁 about
+# 📁 About
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [about](/frontend/src/pages/about)
 
-**FSD Layer:** Page
+**FSD Layer:** Pages 📄
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **about** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,11 +10,11 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 about"]
-  Root --> about_component_html["📄 about.component.html"]
-  Root --> about_component_scss["📄 about.component.scss"]
-  Root --> about_component_ts["📄 about.component.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_about["📁 about"]
+  Root_about --> f_about_component_html["📄 about.component.html"]
+  Root_about --> f_about_component_scss["📄 about.component.scss"]
+  Root_about --> f_about_component_ts["📄 about.component.ts"]
+  Root_about --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
@@ -22,8 +22,8 @@ graph TD
 |---|---|---|---|
 | `about.component.html` | Template | Structural template and layout for about.component.html. | N/A |
 | `about.component.scss` | Stylesheet | Luxury styling and visual presentation for about.component.scss. | N/A |
-| `about.component.ts` | TypeScript | UI component logic and state management for about.component.ts. | @angular, @entities |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `about.component.ts` | TypeScript/JavaScript | UI component logic and state management for about.component.ts. | @angular, @entities |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
 - `@angular/common`

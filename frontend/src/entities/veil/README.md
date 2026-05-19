@@ -1,8 +1,8 @@
-# 📁 veil
+# 📁 Veil
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [veil](/frontend/src/entities/veil)
 
-**FSD Layer:** Entity
+**FSD Layer:** Entities 📦
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **veil** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,17 +10,17 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 veil"]
-  Root --> constants["📁 constants"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> veil_service_ts["📄 veil.service.ts"]
+  Root_veil["📁 veil"]
+  Root_veil --> d_constants["📁 constants"]
+  Root_veil --> f_index_ts["📄 index.ts"]
+  Root_veil --> f_veil_service_ts["📄 veil.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `veil.service.ts` | TypeScript | Encapsulates business logic and data access for veil.service.ts. | @angular, @core, @features, @shared |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
+| `veil.service.ts` | TypeScript/JavaScript | Encapsulates business logic and data access for veil.service.ts. | @angular, @core, @features, @shared |
 
 ## 🔗 Dependencies
 - `@angular/common/http`

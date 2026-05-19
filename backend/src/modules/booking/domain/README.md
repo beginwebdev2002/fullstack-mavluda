@@ -1,4 +1,4 @@
-# 📁 domain
+# 📁 Domain
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [booking](/backend/src/modules/booking) > [domain](/backend/src/modules/booking/domain)
 
@@ -8,14 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> booking_entity_ts["📄 booking.entity.ts"]
+  Root_domain["📁 domain"]
+  Root_domain --> f_booking_entity_ts["📄 booking.entity.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.entity.ts` | TypeScript | Provides core logic and orchestration for booking.entity.ts. | N/A |
+| `booking.entity.ts` | TypeScript/JavaScript | Provides core logic and orchestration for booking.entity.ts. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.

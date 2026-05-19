@@ -1,4 +1,4 @@
-# 📁 Mavluda Beauty Repository
+# 📁 Mavluda beauty repository
 
 [Root](/.)
 
@@ -8,25 +8,20 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 Mavluda Beauty Repository"]
-  Root --> backend["📁 backend"]
-  Root --> frontend["📁 frontend"]
-  Root --> scripts["📁 scripts"]
-  Root --> _env["📄 .env"]
-  Root --> _gitignore["📄 .gitignore"]
-  Root --> _gitignore_append["📄 .gitignore_append"]
-  Root --> GEMINI_md["📄 GEMINI.md"]
-  Root --> generate_readmes_py["📄 generate_readmes.py"]
+  Root_Mavluda_Beauty_Repository["📁 Mavluda Beauty Repository"]
+  Root_Mavluda_Beauty_Repository --> d_backend["⚙️ backend"]
+  Root_Mavluda_Beauty_Repository --> d_frontend["🎨 frontend"]
+  Root_Mavluda_Beauty_Repository --> f__gitignore["📄 .gitignore"]
+  Root_Mavluda_Beauty_Repository --> f_GEMINI_md["📄 GEMINI.md"]
+  Root_Mavluda_Beauty_Repository --> f_SECURITY_md["📄 SECURITY.md"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `.env` | File | Provides core logic and orchestration for .env. | N/A |
 | `.gitignore` | File | Provides core logic and orchestration for .gitignore. | N/A |
-| `.gitignore_append` | File | Provides core logic and utilities for this domain. | N/A |
 | `GEMINI.md` | Markdown | Provides core logic and orchestration for GEMINI.md. | N/A |
-| `generate_readmes.py` | File | Provides core logic and orchestration for generate_readmes.py. | N/A |
+| `SECURITY.md` | Markdown | Provides core logic and orchestration for SECURITY.md. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.

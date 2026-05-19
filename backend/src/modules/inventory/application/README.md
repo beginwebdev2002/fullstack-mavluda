@@ -1,4 +1,4 @@
-# 📁 application
+# 📁 Application
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [application](/backend/src/modules/inventory/application)
 
@@ -8,20 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> inventory_service_ts["📄 inventory.service.ts"]
+  Root_application["📁 application"]
+  Root_application --> f_inventory_service_ts["📄 inventory.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.service.ts` | TypeScript | Encapsulates business logic and data access for inventory.service.ts. | @nestjs |
+| `inventory.service.ts` | TypeScript/JavaScript | Encapsulates business logic and data access for inventory.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../domain/inventory.entity`
-- `../infrastructure/repositories/inventory.repository`
-- `../presentation/dto/create-inventory.dto`
-- `../presentation/dto/update-inventory.dto`
 - `@nestjs/common`
 
 ## 🛠️ Usage

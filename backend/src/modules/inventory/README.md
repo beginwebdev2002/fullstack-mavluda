@@ -1,4 +1,4 @@
-# 📁 inventory
+# 📁 Inventory
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory)
 
@@ -8,25 +8,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 inventory"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> inventory_module_ts["📄 inventory.module.ts"]
+  Root_inventory["📁 inventory"]
+  Root_inventory --> d_application["📁 application"]
+  Root_inventory --> d_domain["📁 domain"]
+  Root_inventory --> d_infrastructure["📁 infrastructure"]
+  Root_inventory --> d_presentation["📁 presentation"]
+  Root_inventory --> f_index_ts["📄 index.ts"]
+  Root_inventory --> f_inventory_module_ts["📄 inventory.module.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `inventory.module.ts` | TypeScript | Defines the architectural module boundaries for inventory.module.ts. | @nestjs |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
+| `inventory.module.ts` | TypeScript/JavaScript | Defines the architectural module boundaries for inventory.module.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./application/inventory.service`
-- `./infrastructure/repositories/inventory.repository`
-- `./presentation/inventory.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

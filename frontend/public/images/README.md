@@ -1,4 +1,4 @@
-# 📁 images
+# 📁 Images
 
 [Root](/.) > [frontend](/frontend) > [public](/frontend/public) > [images](/frontend/public/images)
 
@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 images"]
-  Root --> treatments_add_img_png["📄 treatments-add-img.png"]
-  Root --> treatments_no_img_png["📄 treatments-no-img.png"]
+  Root_images["📁 images"]
+  Root_images --> f_treatments_add_img_png["📄 treatments-add-img.png"]
+  Root_images --> f_treatments_no_img_png["📄 treatments-no-img.png"]
 ```
 
 ## 📄 File Registry

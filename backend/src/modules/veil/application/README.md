@@ -1,4 +1,4 @@
-# 📁 application
+# 📁 Application
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil) > [application](/backend/src/modules/veil/application)
 
@@ -8,18 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> veil_service_ts["📄 veil.service.ts"]
+  Root_application["📁 application"]
+  Root_application --> f_veil_service_ts["📄 veil.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `veil.service.ts` | TypeScript | Encapsulates business logic and data access for veil.service.ts. | @nestjs |
+| `veil.service.ts` | TypeScript/JavaScript | Encapsulates business logic and data access for veil.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../domain/veil.entity`
-- `../infrastructure/repositories/veil.repository`
 - `@nestjs/common`
 
 ## 🛠️ Usage

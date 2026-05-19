@@ -1,4 +1,4 @@
-# 📁 admin-settings
+# 📁 Admin-settings
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings)
 
@@ -8,25 +8,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 admin-settings"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> admin_settings_module_ts["📄 admin-settings.module.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_admin_settings["📁 admin-settings"]
+  Root_admin_settings --> d_application["📁 application"]
+  Root_admin_settings --> d_domain["📁 domain"]
+  Root_admin_settings --> d_infrastructure["📁 infrastructure"]
+  Root_admin_settings --> d_presentation["📁 presentation"]
+  Root_admin_settings --> f_admin_settings_module_ts["📄 admin-settings.module.ts"]
+  Root_admin_settings --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.module.ts` | TypeScript | Defines the architectural module boundaries for admin-settings.module.ts. | @nestjs |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `admin-settings.module.ts` | TypeScript/JavaScript | Defines the architectural module boundaries for admin-settings.module.ts. | @nestjs |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
-- `./application/admin-settings.service`
-- `./infrastructure/repositories/admin-settings.repository`
-- `./presentation/admin-settings.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

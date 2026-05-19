@@ -1,4 +1,4 @@
-# 📁 repositories
+# 📁 Repositories
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments) > [infrastructure](/backend/src/modules/treatments/infrastructure) > [repositories](/backend/src/modules/treatments/infrastructure/repositories)
 
@@ -8,17 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> treatments_repository_ts["📄 treatments.repository.ts"]
+  Root_repositories["📁 repositories"]
+  Root_repositories --> f_treatments_repository_ts["📄 treatments.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.repository.ts` | TypeScript | Provides core logic and orchestration for treatments.repository.ts. | @nestjs |
+| `treatments.repository.ts` | TypeScript/JavaScript | Provides core logic and orchestration for treatments.repository.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../../domain/treatments.entity`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 - `mongoose`

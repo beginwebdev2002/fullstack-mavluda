@@ -1,4 +1,4 @@
-# 📁 filters
+# 📁 Filters
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [filters](/backend/src/common/filters)
 
@@ -8,17 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 filters"]
-  Root --> i18n_exception_filter_ts["📄 i18n-exception.filter.ts"]
+  Root_filters["📁 filters"]
+  Root_filters --> f_i18n_exception_filter_ts["📄 i18n-exception.filter.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `i18n-exception.filter.ts` | TypeScript | Provides core logic and orchestration for i18n-exception.filter.ts. | N/A |
+| `i18n-exception.filter.ts` | TypeScript/JavaScript | Provides core logic and orchestration for i18n-exception.filter.ts. | N/A |
 
 ## 🔗 Dependencies
-- `../constants/error-messages.constant`
 - `express`
 
 ## 🛠️ Usage

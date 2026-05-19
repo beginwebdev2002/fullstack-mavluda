@@ -1,8 +1,8 @@
-# 📁 dashboard
+# 📁 Dashboard
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [dashboard](/frontend/src/pages/dashboard)
 
-**FSD Layer:** Page
+**FSD Layer:** Pages 📄
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **dashboard** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,11 +10,11 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dashboard"]
-  Root --> dashboard_component_html["📄 dashboard.component.html"]
-  Root --> dashboard_component_scss["📄 dashboard.component.scss"]
-  Root --> dashboard_component_ts["📄 dashboard.component.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_dashboard["📁 dashboard"]
+  Root_dashboard --> f_dashboard_component_html["📄 dashboard.component.html"]
+  Root_dashboard --> f_dashboard_component_scss["📄 dashboard.component.scss"]
+  Root_dashboard --> f_dashboard_component_ts["📄 dashboard.component.ts"]
+  Root_dashboard --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
@@ -22,8 +22,8 @@ graph TD
 |---|---|---|---|
 | `dashboard.component.html` | Template | Structural template and layout for dashboard.component.html. | N/A |
 | `dashboard.component.scss` | Stylesheet | Luxury styling and visual presentation for dashboard.component.scss. | N/A |
-| `dashboard.component.ts` | TypeScript | UI component logic and state management for dashboard.component.ts. | @angular, @entities |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `dashboard.component.ts` | TypeScript/JavaScript | UI component logic and state management for dashboard.component.ts. | @angular, @entities |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
 - `@angular/common`

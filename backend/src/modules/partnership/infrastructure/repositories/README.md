@@ -1,4 +1,4 @@
-# 📁 repositories
+# 📁 Repositories
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [partnership](/backend/src/modules/partnership) > [infrastructure](/backend/src/modules/partnership/infrastructure) > [repositories](/backend/src/modules/partnership/infrastructure/repositories)
 
@@ -8,17 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> partnership_repository_ts["📄 partnership.repository.ts"]
+  Root_repositories["📁 repositories"]
+  Root_repositories --> f_partnership_repository_ts["📄 partnership.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.repository.ts` | TypeScript | Provides core logic and orchestration for partnership.repository.ts. | @nestjs |
+| `partnership.repository.ts` | TypeScript/JavaScript | Provides core logic and orchestration for partnership.repository.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../../domain/partnership.entity`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 - `mongoose`

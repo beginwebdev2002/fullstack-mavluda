@@ -1,4 +1,4 @@
-# 📁 booking
+# 📁 Booking
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [booking](/backend/src/modules/booking)
 
@@ -8,25 +8,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 booking"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> booking_module_ts["📄 booking.module.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_booking["📁 booking"]
+  Root_booking --> d_application["📁 application"]
+  Root_booking --> d_domain["📁 domain"]
+  Root_booking --> d_infrastructure["📁 infrastructure"]
+  Root_booking --> d_presentation["📁 presentation"]
+  Root_booking --> f_booking_module_ts["📄 booking.module.ts"]
+  Root_booking --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.module.ts` | TypeScript | Defines the architectural module boundaries for booking.module.ts. | @nestjs |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `booking.module.ts` | TypeScript/JavaScript | Defines the architectural module boundaries for booking.module.ts. | @nestjs |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
-- `./application/booking.service`
-- `./infrastructure/repositories/booking.repository`
-- `./presentation/booking.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 

@@ -1,4 +1,4 @@
-# 📁 constants
+# 📁 Constants
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [constants](/frontend/src/core/constants)
 
@@ -8,16 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> api_endpoints_ts["📄 api-endpoints.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_constants["📁 constants"]
+  Root_constants --> f_api_endpoints_ts["📄 api-endpoints.ts"]
+  Root_constants --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `api-endpoints.ts` | TypeScript | Provides core logic and orchestration for api-endpoints.ts. | @shared |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `api-endpoints.ts` | TypeScript/JavaScript | Provides core logic and orchestration for api-endpoints.ts. | @shared |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
 - `@shared/lib`

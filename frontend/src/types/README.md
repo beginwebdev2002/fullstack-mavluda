@@ -1,4 +1,4 @@
-# 📁 types
+# 📁 Types
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [types](/frontend/src/types)
 
@@ -8,14 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 types"]
-  Root --> telegram_ts["📄 telegram.ts"]
+  Root_types["📁 types"]
+  Root_types --> f_telegram_ts["📄 telegram.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `telegram.ts` | TypeScript | Provides core logic and orchestration for telegram.ts. | N/A |
+| `telegram.ts` | TypeScript/JavaScript | Provides core logic and orchestration for telegram.ts. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.

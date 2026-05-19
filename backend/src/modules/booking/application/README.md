@@ -1,4 +1,4 @@
-# 📁 application
+# 📁 Application
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [booking](/backend/src/modules/booking) > [application](/backend/src/modules/booking/application)
 
@@ -8,20 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> booking_service_ts["📄 booking.service.ts"]
+  Root_application["📁 application"]
+  Root_application --> f_booking_service_ts["📄 booking.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `booking.service.ts` | TypeScript | Encapsulates business logic and data access for booking.service.ts. | @nestjs |
+| `booking.service.ts` | TypeScript/JavaScript | Encapsulates business logic and data access for booking.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../domain/booking.entity`
-- `../infrastructure/repositories/booking.repository`
-- `../presentation/dto/create-booking.dto`
-- `../presentation/dto/update-booking.dto`
 - `@nestjs/common`
 
 ## 🛠️ Usage

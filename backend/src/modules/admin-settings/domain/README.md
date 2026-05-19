@@ -1,4 +1,4 @@
-# 📁 domain
+# 📁 Domain
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [domain](/backend/src/modules/admin-settings/domain)
 
@@ -8,15 +8,15 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> interfaces["📁 interfaces"]
-  Root --> admin_settings_entity_ts["📄 admin-settings.entity.ts"]
+  Root_domain["📁 domain"]
+  Root_domain --> d_interfaces["📁 interfaces"]
+  Root_domain --> f_admin_settings_entity_ts["📄 admin-settings.entity.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.entity.ts` | TypeScript | Provides core logic and orchestration for admin-settings.entity.ts. | N/A |
+| `admin-settings.entity.ts` | TypeScript/JavaScript | Provides core logic and orchestration for admin-settings.entity.ts. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.

@@ -1,4 +1,4 @@
-# 📁 domain
+# 📁 Domain
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments) > [domain](/backend/src/modules/treatments/domain)
 
@@ -8,14 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> treatments_entity_ts["📄 treatments.entity.ts"]
+  Root_domain["📁 domain"]
+  Root_domain --> f_treatments_entity_ts["📄 treatments.entity.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.entity.ts` | TypeScript | Provides core logic and orchestration for treatments.entity.ts. | N/A |
+| `treatments.entity.ts` | TypeScript/JavaScript | Provides core logic and orchestration for treatments.entity.ts. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.

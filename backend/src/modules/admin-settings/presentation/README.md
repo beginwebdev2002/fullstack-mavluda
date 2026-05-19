@@ -1,4 +1,4 @@
-# 📁 presentation
+# 📁 Presentation
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [presentation](/backend/src/modules/admin-settings/presentation)
 
@@ -8,21 +8,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
-  Root --> admin_settings_controller_ts["📄 admin-settings.controller.ts"]
+  Root_presentation["📁 presentation"]
+  Root_presentation --> d_dto["📁 dto"]
+  Root_presentation --> f_admin_settings_controller_ts["📄 admin-settings.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for admin-settings.controller.ts. | N/A |
+| `admin-settings.controller.ts` | TypeScript/JavaScript | Handles incoming HTTP requests and routing for admin-settings.controller.ts. | N/A |
 
 ## 🔗 Dependencies
-- `../application/admin-settings.service`
-- `../domain/admin-settings.entity`
-- `./dto/create-admin-settings.dto`
-- `./dto/update-admin-settings.dto`
+- No external dependencies.
 
 ## 🛠️ Usage
 ```typescript

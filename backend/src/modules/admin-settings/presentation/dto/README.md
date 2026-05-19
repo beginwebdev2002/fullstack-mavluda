@@ -1,4 +1,4 @@
-# 📁 dto
+# 📁 Dto
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [presentation](/backend/src/modules/admin-settings/presentation) > [dto](/backend/src/modules/admin-settings/presentation/dto)
 
@@ -8,19 +8,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_admin_settings_dto_ts["📄 create-admin-settings.dto.ts"]
-  Root --> update_admin_settings_dto_ts["📄 update-admin-settings.dto.ts"]
+  Root_dto["📁 dto"]
+  Root_dto --> f_create_admin_settings_dto_ts["📄 create-admin-settings.dto.ts"]
+  Root_dto --> f_update_admin_settings_dto_ts["📄 update-admin-settings.dto.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `create-admin-settings.dto.ts` | TypeScript | Provides core logic and orchestration for create-admin-settings.dto.ts. | N/A |
-| `update-admin-settings.dto.ts` | TypeScript | Provides core logic and orchestration for update-admin-settings.dto.ts. | @nestjs |
+| `create-admin-settings.dto.ts` | TypeScript/JavaScript | Provides core logic and orchestration for create-admin-settings.dto.ts. | N/A |
+| `update-admin-settings.dto.ts` | TypeScript/JavaScript | Provides core logic and orchestration for update-admin-settings.dto.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `./create-admin-settings.dto`
 - `@nestjs/mapped-types`
 - `class-transformer`
 

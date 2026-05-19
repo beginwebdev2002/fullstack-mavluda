@@ -1,4 +1,4 @@
-# 📁 guards
+# 📁 Guards
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [guards](/backend/src/common/guards)
 
@@ -8,20 +8,18 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
-  Root --> roles_guard_ts["📄 roles.guard.ts"]
+  Root_guards["📁 guards"]
+  Root_guards --> f_jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
+  Root_guards --> f_roles_guard_ts["📄 roles.guard.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `jwt-auth.guard.ts` | TypeScript | Provides core logic and orchestration for jwt-auth.guard.ts. | @nestjs |
-| `roles.guard.ts` | TypeScript | Provides core logic and orchestration for roles.guard.ts. | @nestjs |
+| `jwt-auth.guard.ts` | TypeScript/JavaScript | Provides core logic and orchestration for jwt-auth.guard.ts. | @nestjs |
+| `roles.guard.ts` | TypeScript/JavaScript | Provides core logic and orchestration for roles.guard.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../decorators/public.decorator`
-- `../decorators/roles.decorator`
 - `@nestjs/common`
 - `@nestjs/core`
 - `@nestjs/passport`

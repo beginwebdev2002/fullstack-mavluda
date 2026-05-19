@@ -1,4 +1,4 @@
-# 📁 repositories
+# 📁 Repositories
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [infrastructure](/backend/src/modules/inventory/infrastructure) > [repositories](/backend/src/modules/inventory/infrastructure/repositories)
 
@@ -8,17 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> inventory_repository_ts["📄 inventory.repository.ts"]
+  Root_repositories["📁 repositories"]
+  Root_repositories --> f_inventory_repository_ts["📄 inventory.repository.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `inventory.repository.ts` | TypeScript | Provides core logic and orchestration for inventory.repository.ts. | @nestjs |
+| `inventory.repository.ts` | TypeScript/JavaScript | Provides core logic and orchestration for inventory.repository.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../../domain/inventory.entity`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 - `mongoose`

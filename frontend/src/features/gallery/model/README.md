@@ -1,8 +1,8 @@
-# 📁 model
+# 📁 Model
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features) > [gallery](/frontend/src/features/gallery) > [model](/frontend/src/features/gallery/model)
 
-**FSD Layer:** Feature
+**FSD Layer:** Features ✨
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **model** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,14 +10,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 model"]
-  Root --> gallery_data_ts["📄 gallery.data.ts"]
+  Root_model["📁 model"]
+  Root_model --> f_gallery_data_ts["📄 gallery.data.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.data.ts` | TypeScript | Provides core logic and orchestration for gallery.data.ts. | @angular, @shared |
+| `gallery.data.ts` | TypeScript/JavaScript | Provides core logic and orchestration for gallery.data.ts. | @angular, @shared |
 
 ## 🔗 Dependencies
 - `@angular/forms/signals`

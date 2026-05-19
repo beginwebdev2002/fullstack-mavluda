@@ -1,4 +1,4 @@
-# 📁 application
+# 📁 Application
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [gallery](/backend/src/modules/gallery) > [application](/backend/src/modules/gallery/application)
 
@@ -8,18 +8,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> gallery_service_ts["📄 gallery.service.ts"]
+  Root_application["📁 application"]
+  Root_application --> f_gallery_service_ts["📄 gallery.service.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `gallery.service.ts` | TypeScript | Encapsulates business logic and data access for gallery.service.ts. | @nestjs |
+| `gallery.service.ts` | TypeScript/JavaScript | Encapsulates business logic and data access for gallery.service.ts. | @nestjs |
 
 ## 🔗 Dependencies
-- `../domain/gallery.entity`
-- `../infrastructure/repositories/gallery.repository`
 - `@nestjs/common`
 
 ## 🛠️ Usage

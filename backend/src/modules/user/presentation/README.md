@@ -1,4 +1,4 @@
-# 📁 presentation
+# 📁 Presentation
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [user](/backend/src/modules/user) > [presentation](/backend/src/modules/user/presentation)
 
@@ -8,20 +8,17 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
-  Root --> user_controller_ts["📄 user.controller.ts"]
+  Root_presentation["📁 presentation"]
+  Root_presentation --> d_dto["📁 dto"]
+  Root_presentation --> f_user_controller_ts["📄 user.controller.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `user.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for user.controller.ts. | @common, @modules, @nestjs |
+| `user.controller.ts` | TypeScript/JavaScript | Handles incoming HTTP requests and routing for user.controller.ts. | @common, @modules, @nestjs |
 
 ## 🔗 Dependencies
-- `../application/user.service`
-- `./dto/create-user.dto`
-- `./dto/update-user.dto`
 - `@common/interfaces/authenticated-request.interface`
 - `@modules/user`
 - `@nestjs/platform-express`

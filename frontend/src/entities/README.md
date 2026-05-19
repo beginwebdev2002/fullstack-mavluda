@@ -1,8 +1,8 @@
-# 📁 entities
+# 📦 Entities
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities)
 
-**FSD Layer:** Entity
+**FSD Layer:** Entities 📦
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **entities** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,16 +10,16 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 entities"]
-  Root --> admin-settings["📁 admin-settings"]
-  Root --> gallery["📁 gallery"]
-  Root --> treatments["📁 treatments"]
-  Root --> user["📁 user"]
-  Root --> veil["📁 veil"]
+  Root_entities["📦 entities"]
+  Root_entities --> d_admin_settings["📁 admin-settings"]
+  Root_entities --> d_gallery["📁 gallery"]
+  Root_entities --> d_treatments["📁 treatments"]
+  Root_entities --> d_user["📁 user"]
+  Root_entities --> d_veil["📁 veil"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+*No files present in this directory.*
 
 ## 🔗 Dependencies
 - No external dependencies.

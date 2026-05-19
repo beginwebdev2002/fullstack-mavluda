@@ -1,8 +1,8 @@
-# 📁 settings
+# 📁 Settings
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [settings](/frontend/src/pages/settings)
 
-**FSD Layer:** Page
+**FSD Layer:** Pages 📄
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **settings** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,28 +10,23 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 settings"]
-  Root --> ui["📁 ui"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> settings_component_html["📄 settings.component.html"]
-  Root --> settings_component_scss["📄 settings.component.scss"]
-  Root --> settings_component_ts["📄 settings.component.ts"]
+  Root_settings["📁 settings"]
+  Root_settings --> d_ui["📁 ui"]
+  Root_settings --> f_index_ts["📄 index.ts"]
+  Root_settings --> f_settings_component_html["📄 settings.component.html"]
+  Root_settings --> f_settings_component_scss["📄 settings.component.scss"]
+  Root_settings --> f_settings_component_ts["📄 settings.component.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `index.ts` | TypeScript/JavaScript | Provides core logic and orchestration for index.ts. | N/A |
 | `settings.component.html` | Template | Structural template and layout for settings.component.html. | N/A |
 | `settings.component.scss` | Stylesheet | Luxury styling and visual presentation for settings.component.scss. | N/A |
-| `settings.component.ts` | TypeScript | UI component logic and state management for settings.component.ts. | @angular, @entities, @shared |
+| `settings.component.ts` | TypeScript/JavaScript | UI component logic and state management for settings.component.ts. | @angular, @entities, @shared |
 
 ## 🔗 Dependencies
-- `./ui/additional-links.component`
-- `./ui/business-profile.component`
-- `./ui/general-info.component`
-- `./ui/selects-settings.component`
-- `./ui/social-matrix.component`
 - `@angular/common`
 - `@angular/core`
 - `@angular/core/rxjs-interop`

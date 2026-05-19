@@ -1,4 +1,4 @@
-# 📁 domain
+# 📁 Domain
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [partnership](/backend/src/modules/partnership) > [domain](/backend/src/modules/partnership/domain)
 
@@ -8,14 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> partnership_entity_ts["📄 partnership.entity.ts"]
+  Root_domain["📁 domain"]
+  Root_domain --> f_partnership_entity_ts["📄 partnership.entity.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `partnership.entity.ts` | TypeScript | Provides core logic and orchestration for partnership.entity.ts. | N/A |
+| `partnership.entity.ts` | TypeScript/JavaScript | Provides core logic and orchestration for partnership.entity.ts. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.

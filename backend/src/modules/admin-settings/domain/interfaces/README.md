@@ -1,4 +1,4 @@
-# 📁 interfaces
+# 📁 Interfaces
 
 [Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [domain](/backend/src/modules/admin-settings/domain) > [interfaces](/backend/src/modules/admin-settings/domain/interfaces)
 
@@ -8,14 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 interfaces"]
-  Root --> admin_settings_interface_ts["📄 admin-settings.interface.ts"]
+  Root_interfaces["📁 interfaces"]
+  Root_interfaces --> f_admin_settings_interface_ts["📄 admin-settings.interface.ts"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin-settings.interface.ts` | TypeScript | Provides core logic and orchestration for admin-settings.interface.ts. | N/A |
+| `admin-settings.interface.ts` | TypeScript/JavaScript | Provides core logic and orchestration for admin-settings.interface.ts. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.

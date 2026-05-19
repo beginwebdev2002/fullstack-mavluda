@@ -1,8 +1,8 @@
-# 📁 ui
+# 📁 Ui
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veil](/frontend/src/pages/veil) > [ui](/frontend/src/pages/veil/ui)
 
-**FSD Layer:** Page
+**FSD Layer:** Pages 📄
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **ui** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -10,14 +10,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 ui"]
-  Root --> veil-form["📁 veil-form"]
-  Root --> veil-item["📁 veil-item"]
-  Root --> veil-modal["📁 veil-modal"]
+  Root_ui["📁 ui"]
+  Root_ui --> d_veil_form["📁 veil-form"]
+  Root_ui --> d_veil_item["📁 veil-item"]
+  Root_ui --> d_veil_modal["📁 veil-modal"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+*No files present in this directory.*
 
 ## 🔗 Dependencies
 - No external dependencies.
