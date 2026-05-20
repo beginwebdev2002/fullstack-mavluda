@@ -1,30 +1,32 @@
-# 📁 core
+# 🏷️ Core
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core)
+[🏠 Home](../../../README.md) ❯ [frontend](../../README.md) ❯ [src](../README.md) ❯ **core**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **core** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the core domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 core"]
-  Root --> constants["📁 constants"]
-  Root --> guards["📁 guards"]
-  Root --> interceptors["📁 interceptors"]
+    f_core["📁 core"]
+    f_core --> f_guards["📁 guards"]
+    f_core --> f_constants["📁 constants"]
+    f_core --> f_interceptors["📁 interceptors"]
 ```
 
-## 📄 File Registry
-*No relevant files in this directory.*
 
-## 🔗 Dependencies
-- No external dependencies.
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `📁 guards` | Directory | Contains child logic and structural domains | None |
+| `📁 constants` | Directory | Contains child logic and structural domains | None |
+| `📁 interceptors` | Directory | Contains child logic and structural domains | None |
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './core';
 
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🔗 DEPENDENCIES
+- No internal path aliases detected.
+
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

@@ -1,41 +1,34 @@
-# 📁 Mavluda Beauty Repository
+# 🏷️ App
 
-[Root](/.)
+[🏠 Home](./README.md)
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Mavluda Beauty Repository** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the app domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 Mavluda Beauty Repository"]
-  Root --> backend["📁 backend"]
-  Root --> frontend["📁 frontend"]
-  Root --> scripts["📁 scripts"]
-  Root --> _env["📄 .env"]
-  Root --> _gitignore["📄 .gitignore"]
-  Root --> _gitignore_append["📄 .gitignore_append"]
-  Root --> GEMINI_md["📄 GEMINI.md"]
-  Root --> generate_readmes_py["📄 generate_readmes.py"]
+    f_app["📁 app"]
+    f_app --> f_GEMINI_md["📄 GEMINI.md"]
+    f_app --> f_SECURITY_md["📄 SECURITY.md"]
+    f_app --> f_backend["📁 backend"]
+    f_app --> f_frontend["📁 frontend"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
+
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `.env` | File | Provides core logic and orchestration for .env. | N/A |
-| `.gitignore` | File | Provides core logic and orchestration for .gitignore. | N/A |
-| `.gitignore_append` | File | Provides core logic and utilities for this domain. | N/A |
-| `GEMINI.md` | Markdown | Provides core logic and orchestration for GEMINI.md. | N/A |
-| `generate_readmes.py` | File | Provides core logic and orchestration for generate_readmes.py. | N/A |
+| `📁 backend` | Directory | Contains child logic and structural domains | None |
+| `📁 frontend` | Directory | Contains child logic and structural domains | None |
+| `📄 GEMINI.md` | Asset | Structural or configuration definitions. | None |
+| `📄 SECURITY.md` | Asset | Structural or configuration definitions. | None |
 
-## 🔗 Dependencies
-- No external dependencies.
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './core';
+## 🔗 DEPENDENCIES
+- No internal path aliases detected.
 
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

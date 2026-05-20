@@ -1,35 +1,44 @@
-# 📁 common
+# 🏷️ Common
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common)
+[🏠 Home](../../../README.md) ❯ [backend](../../README.md) ❯ [src](../README.md) ❯ **common**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **common** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the common domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 common"]
-  Root --> config["📁 config"]
-  Root --> constants["📁 constants"]
-  Root --> database["📁 database"]
-  Root --> decorators["📁 decorators"]
-  Root --> filters["📁 filters"]
-  Root --> guards["📁 guards"]
-  Root --> interfaces["📁 interfaces"]
-  Root --> utils["📁 utils"]
+    f_common["📁 common"]
+    f_common --> f_database["📁 database"]
+    f_common --> f_config["📁 config"]
+    f_common --> f_utils["📁 utils"]
+    f_common --> f_filters["📁 filters"]
+    f_common --> f_interfaces["📁 interfaces"]
+    f_common --> f_seed["📁 seed"]
+    f_common --> f_guards["📁 guards"]
+    f_common --> f_decorators["📁 decorators"]
+    f_common --> f_constants["📁 constants"]
 ```
 
-## 📄 File Registry
-*No relevant files in this directory.*
 
-## 🔗 Dependencies
-- No external dependencies.
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `📁 database` | Directory | Contains child logic and structural domains | None |
+| `📁 config` | Directory | Contains child logic and structural domains | None |
+| `📁 utils` | Directory | Contains child logic and structural domains | None |
+| `📁 filters` | Directory | Contains child logic and structural domains | None |
+| `📁 interfaces` | Directory | Contains child logic and structural domains | None |
+| `📁 seed` | Directory | Contains child logic and structural domains | None |
+| `📁 guards` | Directory | Contains child logic and structural domains | None |
+| `📁 decorators` | Directory | Contains child logic and structural domains | None |
+| `📁 constants` | Directory | Contains child logic and structural domains | None |
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './common';
 
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🔗 DEPENDENCIES
+- No internal path aliases detected.
+
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

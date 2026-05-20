@@ -1,42 +1,39 @@
-# 📁 treatments-catalog
+# 🏷️ Treatments-catalog
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [treatments-catalog](/frontend/src/pages/treatments-catalog)
+[🏠 Home](../../../../README.md) ❯ [frontend](../../../README.md) ❯ [src](../../README.md) ❯ [pages](../README.md) ❯ **treatments-catalog**
 
-**FSD Layer:** Page
+**FSD Layer:** `Pages`
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **treatments-catalog** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+## 🎯 PURPOSE
+Core implementation for the treatments-catalog domain within the luxury Mavluda Beauty ecosystem.
 
-## 🏗️ Architecture
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 treatments-catalog"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> treatments_catalog_component_html["📄 treatments-catalog.component.html"]
-  Root --> treatments_catalog_component_scss["📄 treatments-catalog.component.scss"]
-  Root --> treatments_catalog_component_ts["📄 treatments-catalog.component.ts"]
+    f_treatments_catalog["📁 treatments-catalog"]
+    f_treatments_catalog --> f_treatments_catalog_component_scss["📄 treatments-catalog.component.scss"]
+    f_treatments_catalog --> f_index_ts["📄 index.ts"]
+    f_treatments_catalog --> f_treatments_catalog_component_html["📄 treatments-catalog.component.html"]
+    f_treatments_catalog --> f_treatments_catalog_component_ts["📄 treatments-catalog.component.ts"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
+
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `treatments-catalog.component.html` | Template | Structural template and layout for treatments-catalog.component.html. | N/A |
-| `treatments-catalog.component.scss` | Stylesheet | Luxury styling and visual presentation for treatments-catalog.component.scss. | N/A |
-| `treatments-catalog.component.ts` | TypeScript | UI component logic and state management for treatments-catalog.component.ts. | @angular, @entities, @environments, @shared |
+| `📄 treatments-catalog.component.scss` | Style | Structural or configuration definitions. | None |
+| `📄 index.ts` | Logic/Utility | Structural or configuration definitions. | None |
+| `📄 treatments-catalog.component.html` | Template | Structural or configuration definitions. | None |
+| `📄 treatments-catalog.component.ts` | Component | Classes: ServicesCatalogComponent | @entities/admin-settings, @shared/lib, @environments/environment, @angular/common, @entities/treatments, @angular/core |
 
-## 🔗 Dependencies
-- `@angular/common`
+
+## 🔗 DEPENDENCIES
 - `@entities/admin-settings`
-- `@entities/treatments`
-- `@environments/environment`
 - `@shared/lib`
+- `@environments/environment`
+- `@angular/common`
+- `@entities/treatments`
+- `@angular/core`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './treatments-catalog';
-
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

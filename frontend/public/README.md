@@ -1,28 +1,28 @@
-# 📁 public
+# 🏷️ Public
 
-[Root](/.) > [frontend](/frontend) > [public](/frontend/public)
+[🏠 Home](../../README.md) ❯ [frontend](../README.md) ❯ **public**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **public** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the public domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 public"]
-  Root --> images["📁 images"]
+    f_public["📁 public"]
+    f_public --> f_images["📁 images"]
 ```
 
-## 📄 File Registry
-*No relevant files in this directory.*
 
-## 🔗 Dependencies
-- No external dependencies.
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `📁 images` | Directory | Contains child logic and structural domains | None |
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './public';
 
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🔗 DEPENDENCIES
+- No internal path aliases detected.
+
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

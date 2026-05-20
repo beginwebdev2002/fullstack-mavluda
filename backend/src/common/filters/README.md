@@ -1,31 +1,28 @@
-# 📁 filters
+# 🏷️ Filters
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [filters](/backend/src/common/filters)
+[🏠 Home](../../../../README.md) ❯ [backend](../../../README.md) ❯ [src](../../README.md) ❯ [common](../README.md) ❯ **filters**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **filters** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the filters domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 filters"]
-  Root --> i18n_exception_filter_ts["📄 i18n-exception.filter.ts"]
+    f_filters["📁 filters"]
+    f_filters --> f_i18n_exception_filter_ts["📄 i18n-exception.filter.ts"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
+
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `i18n-exception.filter.ts` | TypeScript | Provides core logic and orchestration for i18n-exception.filter.ts. | N/A |
+| `📄 i18n-exception.filter.ts` | Logic/Utility | Classes: I18nExceptionFilter | @nestjs/common |
 
-## 🔗 Dependencies
-- `../constants/error-messages.constant`
-- `express`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './filters';
+## 🔗 DEPENDENCIES
+- `@nestjs/common`
 
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

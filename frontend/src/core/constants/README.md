@@ -1,32 +1,30 @@
-# 📁 constants
+# 🏷️ Constants
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [constants](/frontend/src/core/constants)
+[🏠 Home](../../../../README.md) ❯ [frontend](../../../README.md) ❯ [src](../../README.md) ❯ [core](../README.md) ❯ **constants**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the constants domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> api_endpoints_ts["📄 api-endpoints.ts"]
-  Root --> index_ts["📄 index.ts"]
+    f_constants["📁 constants"]
+    f_constants --> f_api_endpoints_ts["📄 api-endpoints.ts"]
+    f_constants --> f_index_ts["📄 index.ts"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `api-endpoints.ts` | TypeScript | Provides core logic and orchestration for api-endpoints.ts. | @shared |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
-## 🔗 Dependencies
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `📄 api-endpoints.ts` | Logic/Utility | Structural or configuration definitions. | @shared/lib |
+| `📄 index.ts` | Logic/Utility | Structural or configuration definitions. | None |
+
+
+## 🔗 DEPENDENCIES
 - `@shared/lib`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './constants';
-
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

@@ -1,33 +1,29 @@
-# 📁 repositories
+# 🏷️ Repositories
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [admin-settings](/backend/src/modules/admin-settings) > [infrastructure](/backend/src/modules/admin-settings/infrastructure) > [repositories](/backend/src/modules/admin-settings/infrastructure/repositories)
+[🏠 Home](../../../../../../README.md) ❯ [backend](../../../../../README.md) ❯ [src](../../../../README.md) ❯ [modules](../../../README.md) ❯ [admin-settings](../../README.md) ❯ [infrastructure](../README.md) ❯ **repositories**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **repositories** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the repositories domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> admin_settings_repository_ts["📄 admin-settings.repository.ts"]
+    f_repositories["📁 repositories"]
+    f_repositories --> f_admin_settings_repository_ts["📄 admin-settings.repository.ts"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `admin-settings.repository.ts` | TypeScript | Provides core logic and orchestration for admin-settings.repository.ts. | @nestjs |
 
-## 🔗 Dependencies
-- `../../domain/admin-settings.entity`
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `📄 admin-settings.repository.ts` | Service | Classes: AdminSettingsRepository | @nestjs/common, @nestjs/mongoose |
+
+
+## 🔗 DEPENDENCIES
 - `@nestjs/common`
 - `@nestjs/mongoose`
-- `mongoose`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './repositories';
-
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

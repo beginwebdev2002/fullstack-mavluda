@@ -1,34 +1,28 @@
-# 📁 application
+# 🏷️ Application
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [partnership](/backend/src/modules/partnership) > [application](/backend/src/modules/partnership/application)
+[🏠 Home](../../../../../README.md) ❯ [backend](../../../../README.md) ❯ [src](../../../README.md) ❯ [modules](../../README.md) ❯ [partnership](../README.md) ❯ **application**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **application** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the application domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 application"]
-  Root --> partnership_service_ts["📄 partnership.service.ts"]
+    f_application["📁 application"]
+    f_application --> f_partnership_service_ts["📄 partnership.service.ts"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `partnership.service.ts` | TypeScript | Encapsulates business logic and data access for partnership.service.ts. | @nestjs |
 
-## 🔗 Dependencies
-- `../domain/partnership.entity`
-- `../infrastructure/repositories/partnership.repository`
-- `../presentation/dto/create-partnership.dto`
-- `../presentation/dto/update-partnership.dto`
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `📄 partnership.service.ts` | Service | Classes: PartnershipService | @nestjs/common |
+
+
+## 🔗 DEPENDENCIES
 - `@nestjs/common`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './application';
-
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

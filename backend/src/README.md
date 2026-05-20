@@ -1,61 +1,54 @@
-# 📁 src
+# 🏷️ Src
 
-[Root](/.) > [backend](/backend) > [src](/backend/src)
+[🏠 Home](../../README.md) ❯ [backend](../README.md) ❯ **src**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **src** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the src domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 src"]
-  Root --> common["📁 common"]
-  Root --> modules["📁 modules"]
-  Root --> app_controller_spec_ts["📄 app.controller.spec.ts"]
-  Root --> app_controller_ts["📄 app.controller.ts"]
-  Root --> app_module_ts["📄 app.module.ts"]
-  Root --> app_service_ts["📄 app.service.ts"]
-  Root --> main_ts["📄 main.ts"]
+    f_src["📁 src"]
+    f_src --> f_app_controller_spec_ts["📄 app.controller.spec.ts"]
+    f_src --> f_main_ts["📄 main.ts"]
+    f_src --> f_app_module_ts["📄 app.module.ts"]
+    f_src --> f_app_controller_ts["📄 app.controller.ts"]
+    f_src --> f_app_service_ts["📄 app.service.ts"]
+    f_src --> f_common["📁 common"]
+    f_src --> f_modules["📁 modules"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `app.controller.spec.ts` | TypeScript | Unit testing and quality assurance for app.controller.spec.ts. | @nestjs |
-| `app.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for app.controller.ts. | @nestjs |
-| `app.module.ts` | TypeScript | Defines the architectural module boundaries for app.module.ts. | @modules, @nestjs |
-| `app.service.ts` | TypeScript | Encapsulates business logic and data access for app.service.ts. | @nestjs |
-| `main.ts` | TypeScript | Provides core logic and orchestration for main.ts. | @nestjs |
 
-## 🔗 Dependencies
-- `./app.controller`
-- `./app.module`
-- `./app.service`
-- `./common/config/app-config.module`
-- `./common/database/database.module`
-- `./common/filters/i18n-exception.filter`
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `📁 common` | Directory | Contains child logic and structural domains | None |
+| `📁 modules` | Directory | Contains child logic and structural domains | None |
+| `📄 app.controller.spec.ts` | Logic/Utility | Structural or configuration definitions. | @nestjs/testing |
+| `📄 main.ts` | Logic/Utility | Functions: bootstrap | @nestjs/core, @nestjs/common, @nestjs/config |
+| `📄 app.module.ts` | Module | Classes: AppModule | @modules/admin-settings, @nestjs/common, @nestjs/core, @modules/user, @modules/veil, @nestjs/serve-static, @modules/inventory, @modules/treatments, @modules/booking, @modules/partnership, @modules/payment, @modules/auth, @modules/gallery |
+| `📄 app.controller.ts` | Controller | Classes: AppController | @nestjs/common |
+| `📄 app.service.ts` | Service | Classes: AppService | @nestjs/common |
+
+
+## 🔗 DEPENDENCIES
+- `@nestjs/core`
+- `@nestjs/common`
 - `@modules/admin-settings`
-- `@modules/auth`
-- `@modules/booking`
-- `@modules/gallery`
+- `@modules/user`
+- `@nestjs/testing`
+- `@modules/veil`
+- `@nestjs/serve-static`
 - `@modules/inventory`
+- `@modules/gallery`
+- `@nestjs/config`
+- `@modules/treatments`
 - `@modules/partnership`
 - `@modules/payment`
-- `@modules/treatments`
-- `@modules/user`
-- `@modules/veil`
-- `@nestjs/common`
-- `@nestjs/config`
-- `@nestjs/core`
-- `@nestjs/serve-static`
-- `@nestjs/testing`
-- `path`
+- `@modules/auth`
+- `@modules/booking`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './src';
-
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

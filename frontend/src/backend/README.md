@@ -1,34 +1,30 @@
-# 📁 backend
+# 🏷️ Backend
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [backend](/frontend/src/backend)
+[🏠 Home](../../../README.md) ❯ [frontend](../../README.md) ❯ [src](../README.md) ❯ **backend**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **backend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the backend domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 backend"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> telegram_auth_guard_ts["📄 telegram-auth.guard.ts"]
+    f_backend["📁 backend"]
+    f_backend --> f_index_ts["📄 index.ts"]
+    f_backend --> f_telegram_auth_guard_ts["📄 telegram-auth.guard.ts"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
+
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `telegram-auth.guard.ts` | TypeScript | Provides core logic and orchestration for telegram-auth.guard.ts. | @nestjs |
+| `📄 index.ts` | Logic/Utility | Structural or configuration definitions. | None |
+| `📄 telegram-auth.guard.ts` | Service | Classes: TelegramAuthGuard | @nestjs/common |
 
-## 🔗 Dependencies
+
+## 🔗 DEPENDENCIES
 - `@nestjs/common`
-- `crypto`
-- `express`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './backend';
-
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

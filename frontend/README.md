@@ -1,49 +1,48 @@
-# 📁 frontend
+# 🏷️ Frontend
 
-[Root](/.) > [frontend](/frontend)
+[🏠 Home](../README.md) ❯ **frontend**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **frontend** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the frontend domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 frontend"]
-  Root --> public["📁 public"]
-  Root --> src["📁 src"]
-  Root --> angular_json["📄 angular.json"]
-  Root --> index_html["📄 index.html"]
-  Root --> index_tsx["📄 index.tsx"]
-  Root --> leaflet_css["📄 leaflet.css"]
-  Root --> metadata_json["📄 metadata.json"]
-  Root --> package_lock_json["📄 package-lock.json"]
-  Root --> package_json["📄 package.json"]
-  Root --> tsconfig_json["📄 tsconfig.json"]
+    f_frontend["📁 frontend"]
+    f_frontend --> f_package_lock_json["📄 package-lock.json"]
+    f_frontend --> f_angular_json["📄 angular.json"]
+    f_frontend --> f_metadata_json["📄 metadata.json"]
+    f_frontend --> f_index_tsx["📄 index.tsx"]
+    f_frontend --> f_leaflet_css["📄 leaflet.css"]
+    f_frontend --> f_tsconfig_json["📄 tsconfig.json"]
+    f_frontend --> f_index_html["📄 index.html"]
+    f_frontend --> f_package_json["📄 package.json"]
+    f_frontend --> f_public["📁 public"]
+    f_frontend --> f_environments["📁 environments"]
+    f_frontend --> f_src["📁 src"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
+
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `angular.json` | JSON Configuration | Provides core logic and orchestration for angular.json. | N/A |
-| `index.html` | Template | Provides core logic and orchestration for index.html. | N/A |
-| `index.tsx` | File | Provides core logic and orchestration for index.tsx. | @angular |
-| `leaflet.css` | Stylesheet | Provides core logic and orchestration for leaflet.css. | N/A |
-| `metadata.json` | JSON Configuration | Provides core logic and orchestration for metadata.json. | N/A |
-| `package-lock.json` | JSON Configuration | Provides core logic and orchestration for package-lock.json. | N/A |
-| `package.json` | JSON Configuration | Provides core logic and orchestration for package.json. | N/A |
-| `tsconfig.json` | JSON Configuration | Provides core logic and orchestration for tsconfig.json. | N/A |
+| `📁 public` | Directory | Contains child logic and structural domains | None |
+| `📁 environments` | Directory | Contains child logic and structural domains | None |
+| `📁 src` | Directory | Contains child logic and structural domains | None |
+| `📄 package-lock.json` | Configuration | Structural or configuration definitions. | None |
+| `📄 angular.json` | Configuration | Structural or configuration definitions. | None |
+| `📄 metadata.json` | Configuration | Structural or configuration definitions. | None |
+| `📄 index.tsx` | Logic/Utility | Structural or configuration definitions. | @angular/platform-browser |
+| `📄 leaflet.css` | Style | Structural or configuration definitions. | None |
+| `📄 tsconfig.json` | Configuration | Structural or configuration definitions. | None |
+| `📄 index.html` | Template | Structural or configuration definitions. | None |
+| `📄 package.json` | Configuration | Structural or configuration definitions. | None |
 
-## 🔗 Dependencies
-- `./src/app.component`
-- `./src/app/app.config`
+
+## 🔗 DEPENDENCIES
 - `@angular/platform-browser`
-- `leaflet/dist/leaflet.css`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './frontend';
-
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

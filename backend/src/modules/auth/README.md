@@ -1,56 +1,48 @@
-# 📁 auth
+# 🏷️ Auth
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth)
+[🏠 Home](../../../../README.md) ❯ [backend](../../../README.md) ❯ [src](../../README.md) ❯ [modules](../README.md) ❯ **auth**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **auth** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the auth domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 auth"]
-  Root --> dto["📁 dto"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> interfaces["📁 interfaces"]
-  Root --> auth_controller_ts["📄 auth.controller.ts"]
-  Root --> auth_module_ts["📄 auth.module.ts"]
-  Root --> auth_service_ts["📄 auth.service.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> telegram_auth_service_ts["📄 telegram-auth.service.ts"]
+    f_auth["📁 auth"]
+    f_auth --> f_auth_module_ts["📄 auth.module.ts"]
+    f_auth --> f_auth_service_ts["📄 auth.service.ts"]
+    f_auth --> f_telegram_auth_service_ts["📄 telegram-auth.service.ts"]
+    f_auth --> f_index_ts["📄 index.ts"]
+    f_auth --> f_auth_controller_ts["📄 auth.controller.ts"]
+    f_auth --> f_infrastructure["📁 infrastructure"]
+    f_auth --> f_dto["📁 dto"]
+    f_auth --> f_interfaces["📁 interfaces"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
+
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `auth.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for auth.controller.ts. | @common |
-| `auth.module.ts` | TypeScript | Defines the architectural module boundaries for auth.module.ts. | @common, @modules, @nestjs |
-| `auth.service.ts` | TypeScript | Encapsulates business logic and data access for auth.service.ts. | @modules, @nestjs |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `telegram-auth.service.ts` | TypeScript | Encapsulates business logic and data access for telegram-auth.service.ts. | @common, @modules, @nestjs |
+| `📁 infrastructure` | Directory | Contains child logic and structural domains | None |
+| `📁 dto` | Directory | Contains child logic and structural domains | None |
+| `📁 interfaces` | Directory | Contains child logic and structural domains | None |
+| `📄 auth.module.ts` | Module | Classes: AuthModule | @nestjs/common, @common/config/app-config.module, @modules/user, @nestjs/passport, @nestjs/jwt, @common/config/app-config.service |
+| `📄 auth.service.ts` | Service | Classes: AuthService | @nestjs/common, @nestjs/jwt, @modules/user, @common/config/app-config.service |
+| `📄 telegram-auth.service.ts` | Service | Classes: TelegramAuthService | @nestjs/common, @common/config/app-config.service, @modules/user |
+| `📄 index.ts` | Logic/Utility | Structural or configuration definitions. | None |
+| `📄 auth.controller.ts` | Controller | Classes: AuthController | @nestjs/common, @common/decorators/public.decorator |
 
-## 🔗 Dependencies
-- `./auth.controller`
-- `./auth.service`
-- `./dto/login.dto`
-- `./dto/register.dto`
-- `./infrastructure/jwt.strategy`
-- `./interfaces/auth-response.interface`
-- `./telegram-auth.service`
-- `@common/config/app-config.module`
-- `@common/config/app-config.service`
-- `@common/decorators/public.decorator`
-- `@modules/user`
+
+## 🔗 DEPENDENCIES
 - `@nestjs/common`
-- `@nestjs/jwt`
+- `@common/config/app-config.module`
+- `@modules/user`
+- `@common/decorators/public.decorator`
 - `@nestjs/passport`
-- `bcrypt`
-- `crypto`
+- `@nestjs/jwt`
+- `@common/config/app-config.service`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './auth';
-
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

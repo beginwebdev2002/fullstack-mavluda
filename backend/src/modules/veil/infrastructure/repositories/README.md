@@ -1,35 +1,30 @@
-# 📁 repositories
+# 🏷️ Repositories
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [veil](/backend/src/modules/veil) > [infrastructure](/backend/src/modules/veil/infrastructure) > [repositories](/backend/src/modules/veil/infrastructure/repositories)
+[🏠 Home](../../../../../../README.md) ❯ [backend](../../../../../README.md) ❯ [src](../../../../README.md) ❯ [modules](../../../README.md) ❯ [veil](../../README.md) ❯ [infrastructure](../README.md) ❯ **repositories**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **repositories** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the repositories domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 repositories"]
-  Root --> veil_repository_ts["📄 veil.repository.ts"]
+    f_repositories["📁 repositories"]
+    f_repositories --> f_veil_repository_ts["📄 veil.repository.ts"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `veil.repository.ts` | TypeScript | Provides core logic and orchestration for veil.repository.ts. | @common, @nestjs |
 
-## 🔗 Dependencies
-- `../../domain/veil.entity`
-- `../schemas/veil.schema`
-- `@common/utils/file-system`
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `📄 veil.repository.ts` | Service | Classes: VeilRepository | @nestjs/common, @nestjs/mongoose, @common/utils/file-system |
+
+
+## 🔗 DEPENDENCIES
 - `@nestjs/common`
 - `@nestjs/mongoose`
-- `mongoose`
+- `@common/utils/file-system`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './repositories';
-
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

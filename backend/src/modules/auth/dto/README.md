@@ -1,32 +1,30 @@
-# 📁 dto
+# 🏷️ Dto
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [dto](/backend/src/modules/auth/dto)
+[🏠 Home](../../../../../README.md) ❯ [backend](../../../../README.md) ❯ [src](../../../README.md) ❯ [modules](../../README.md) ❯ [auth](../README.md) ❯ **dto**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the dto domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> login_dto_ts["📄 login.dto.ts"]
-  Root --> register_dto_ts["📄 register.dto.ts"]
+    f_dto["📁 dto"]
+    f_dto --> f_register_dto_ts["📄 register.dto.ts"]
+    f_dto --> f_login_dto_ts["📄 login.dto.ts"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
+
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `login.dto.ts` | TypeScript | Provides core logic and orchestration for login.dto.ts. | N/A |
-| `register.dto.ts` | TypeScript | Provides core logic and orchestration for register.dto.ts. | N/A |
+| `📄 register.dto.ts` | Logic/Utility | Classes: RegisterDto | None |
+| `📄 login.dto.ts` | Logic/Utility | Classes: LoginDto | None |
 
-## 🔗 Dependencies
-- `class-validator`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
+## 🔗 DEPENDENCIES
+- No internal path aliases detected.
 
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

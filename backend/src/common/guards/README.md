@@ -1,36 +1,32 @@
-# 📁 guards
+# 🏷️ Guards
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [guards](/backend/src/common/guards)
+[🏠 Home](../../../../README.md) ❯ [backend](../../../README.md) ❯ [src](../../README.md) ❯ [common](../README.md) ❯ **guards**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the guards domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
-  Root --> roles_guard_ts["📄 roles.guard.ts"]
+    f_guards["📁 guards"]
+    f_guards --> f_roles_guard_ts["📄 roles.guard.ts"]
+    f_guards --> f_jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `jwt-auth.guard.ts` | TypeScript | Provides core logic and orchestration for jwt-auth.guard.ts. | @nestjs |
-| `roles.guard.ts` | TypeScript | Provides core logic and orchestration for roles.guard.ts. | @nestjs |
 
-## 🔗 Dependencies
-- `../decorators/public.decorator`
-- `../decorators/roles.decorator`
-- `@nestjs/common`
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `📄 roles.guard.ts` | Service | Classes: RolesGuard | @nestjs/core, @nestjs/common |
+| `📄 jwt-auth.guard.ts` | Service | Classes: JwtAuthGuard | @nestjs/core, @nestjs/common, @nestjs/passport |
+
+
+## 🔗 DEPENDENCIES
 - `@nestjs/core`
+- `@nestjs/common`
 - `@nestjs/passport`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './guards';
-
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

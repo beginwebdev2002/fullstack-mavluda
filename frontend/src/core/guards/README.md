@@ -1,36 +1,34 @@
-# 📁 guards
+# 🏷️ Guards
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [guards](/frontend/src/core/guards)
+[🏠 Home](../../../../README.md) ❯ [frontend](../../../README.md) ❯ [src](../../README.md) ❯ [core](../README.md) ❯ **guards**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the guards domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> admin_guard_ts["📄 admin.guard.ts"]
-  Root --> auth_guard_ts["📄 auth.guard.ts"]
-  Root --> index_ts["📄 index.ts"]
+    f_guards["📁 guards"]
+    f_guards --> f_index_ts["📄 index.ts"]
+    f_guards --> f_admin_guard_ts["📄 admin.guard.ts"]
+    f_guards --> f_auth_guard_ts["📄 auth.guard.ts"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
+
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `admin.guard.ts` | TypeScript | Provides core logic and orchestration for admin.guard.ts. | @angular, @entities |
-| `auth.guard.ts` | TypeScript | Provides core logic and orchestration for auth.guard.ts. | @angular, @entities |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `📄 index.ts` | Logic/Utility | Structural or configuration definitions. | None |
+| `📄 admin.guard.ts` | Logic/Utility | Structural or configuration definitions. | @angular/core, @entities/user, @angular/router |
+| `📄 auth.guard.ts` | Logic/Utility | Structural or configuration definitions. | @angular/core, @entities/user, @angular/router |
 
-## 🔗 Dependencies
+
+## 🔗 DEPENDENCIES
 - `@angular/core`
-- `@angular/router`
 - `@entities/user`
+- `@angular/router`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './guards';
-
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

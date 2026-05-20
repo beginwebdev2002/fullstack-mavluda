@@ -1,33 +1,30 @@
-# 📁 dto
+# 🏷️ Dto
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [presentation](/backend/src/modules/inventory/presentation) > [dto](/backend/src/modules/inventory/presentation/dto)
+[🏠 Home](../../../../../../README.md) ❯ [backend](../../../../../README.md) ❯ [src](../../../../README.md) ❯ [modules](../../../README.md) ❯ [inventory](../../README.md) ❯ [presentation](../README.md) ❯ **dto**
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** `App`
 
-## 🏗️ Architecture
+## 🎯 PURPOSE
+Core implementation for the dto domain within the luxury Mavluda Beauty ecosystem.
+
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_inventory_dto_ts["📄 create-inventory.dto.ts"]
-  Root --> update_inventory_dto_ts["📄 update-inventory.dto.ts"]
+    f_dto["📁 dto"]
+    f_dto --> f_create_inventory_dto_ts["📄 create-inventory.dto.ts"]
+    f_dto --> f_update_inventory_dto_ts["📄 update-inventory.dto.ts"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
-|---|---|---|---|
-| `create-inventory.dto.ts` | TypeScript | Provides core logic and orchestration for create-inventory.dto.ts. | N/A |
-| `update-inventory.dto.ts` | TypeScript | Provides core logic and orchestration for update-inventory.dto.ts. | @nestjs |
 
-## 🔗 Dependencies
-- `./create-inventory.dto`
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
+| `📄 create-inventory.dto.ts` | Logic/Utility | Classes: CreateInventoryDto | None |
+| `📄 update-inventory.dto.ts` | Logic/Utility | Classes: UpdateInventoryDto | @nestjs/mapped-types |
+
+
+## 🔗 DEPENDENCIES
 - `@nestjs/mapped-types`
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
-
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.

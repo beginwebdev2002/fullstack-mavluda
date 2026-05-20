@@ -1,32 +1,28 @@
-# 📁 constants
+# 🏷️ Constants
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [treatments](/frontend/src/entities/treatments) > [constants](/frontend/src/entities/treatments/constants)
+[🏠 Home](../../../../../README.md) ❯ [frontend](../../../../README.md) ❯ [src](../../../README.md) ❯ [entities](../../README.md) ❯ [treatments](../README.md) ❯ **constants**
 
-**FSD Layer:** Entity
+**FSD Layer:** `Entities`
 
-## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+## 🎯 PURPOSE
+Core implementation for the constants domain within the luxury Mavluda Beauty ecosystem.
 
-## 🏗️ Architecture
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> treatments_constants_ts["📄 treatments.constants.ts"]
+    f_constants["📁 constants"]
+    f_constants --> f_treatments_constants_ts["📄 treatments.constants.ts"]
 ```
 
-## 📄 File Registry
-| File Name | Type | Responsibility | Key Aliases Used |
+
+## 📄 FILE REGISTRY
+| Entry Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `treatments.constants.ts` | TypeScript | Provides core logic and orchestration for treatments.constants.ts. | N/A |
+| `📄 treatments.constants.ts` | Logic/Utility | Structural or configuration definitions. | None |
 
-## 🔗 Dependencies
-- No external dependencies.
 
-## 🛠️ Usage
-```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './constants';
+## 🔗 DEPENDENCIES
+- No internal path aliases detected.
 
-// Integrate into the application architecture
-relevantMember.execute();
-```
+## 🛠️ USAGE
+Explore the files and directories within this path to understand the refined logic that powers the Mavluda Beauty experience. Refer to the specific classes and functions outlined in the registry for implementation details.
