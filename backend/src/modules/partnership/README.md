@@ -1,39 +1,34 @@
-# 📁 partnership
+# 📁 Partnership Directory
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [partnership](/backend/src/modules/partnership)
+[Root](/.) / [backend](/backend) / [src](/backend/src) / [modules](/backend/src/modules) / [partnership](/backend/src/modules/partnership)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **partnership** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
-graph TD
-  Root["📁 partnership"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> partnership_module_ts["📄 partnership.module.ts"]
+classDiagram
+  class PartnershipModule
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `partnership.module.ts` | TypeScript | Defines the architectural module boundaries for partnership.module.ts. | @nestjs |
+| `application` | Directory | Contains architectural sub-modules and layer logic for application. | N/A |
+| `domain` | Directory | Contains architectural sub-modules and layer logic for domain. | N/A |
+| `index.ts` | File | Provides core logic and orchestration for index.ts. | N/A |
+| `infrastructure` | Directory | Contains architectural sub-modules and layer logic for infrastructure. | N/A |
+| `partnership.module.ts` | File | Defines the architectural module boundaries for partnership.module.ts. | @nestjs/mongoose, @nestjs/common |
+| `presentation` | Directory | Contains architectural sub-modules and layer logic for presentation. | N/A |
 
 ## 🔗 Dependencies
-- `./application/partnership.service`
-- `./infrastructure/repositories/partnership.repository`
-- `./presentation/partnership.controller`
-- `@nestjs/common`
-- `@nestjs/mongoose`
+- Relies on internal Mavluda Beauty architecture and designated FSD layers.
+- See 'Key Aliases Used' in the File Registry for explicit cross-domain references.
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './partnership';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

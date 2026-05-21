@@ -1,6 +1,6 @@
-# 📁 images
+# 📁 Images Directory
 
-[Root](/.) > [frontend](/frontend) > [public](/frontend/public) > [images](/frontend/public/images)
+[Root](/.) / [frontend](/frontend) / [public](/frontend/public) / [images](/frontend/public/images)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **images** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 images"]
-  Root --> treatments_add_img_png["📄 treatments-add-img.png"]
-  Root --> treatments_no_img_png["📄 treatments-no-img.png"]
+  Root_images["📁 images"]
+  Root_images --> f_treatments_add_img_png["📄 treatments-add-img.png"]
+  Root_images --> f_treatments_no_img_png["📄 treatments-no-img.png"]
 ```
 
 ## 📄 File Registry
@@ -20,12 +20,13 @@ graph TD
 | `treatments-no-img.png` | File | Provides core logic and orchestration for treatments-no-img.png. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- Relies on internal Mavluda Beauty architecture and designated FSD layers.
+- See 'Key Aliases Used' in the File Registry for explicit cross-domain references.
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './images';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

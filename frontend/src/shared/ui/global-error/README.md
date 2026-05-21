@@ -1,34 +1,31 @@
-# 📁 global-error
+# 📁 Global-error Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [global-error](/frontend/src/shared/ui/global-error)
-
-**FSD Layer:** Shared
+[Root](/.) / [frontend](/frontend) / [src](/frontend/src) / [shared](/frontend/src/shared) / [ui](/frontend/src/shared/ui) / [global-error](/frontend/src/shared/ui/global-error)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **global-error** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** Shared
+
 
 ## 🏗️ Architecture
 ```mermaid
-graph TD
-  Root["📁 global-error"]
-  Root --> global_error_component_ts["📄 global-error.component.ts"]
+classDiagram
+  class GlobalErrorComponent
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `global-error.component.ts` | TypeScript | UI component logic and state management for global-error.component.ts. | @angular, @shared |
+| `global-error.component.ts` | File | UI component logic and state management for global-error.component.ts. | @angular/animations, @shared/services, @angular/core, @angular/common |
 
 ## 🔗 Dependencies
-- `@angular/animations`
-- `@angular/common`
-- `@angular/core`
-- `@shared/services`
+- Relies on internal Mavluda Beauty architecture and designated FSD layers.
+- See 'Key Aliases Used' in the File Registry for explicit cross-domain references.
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './global-error';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

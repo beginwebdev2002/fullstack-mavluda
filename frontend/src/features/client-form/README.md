@@ -1,39 +1,33 @@
-# 📁 client-form
+# 📁 Client-form Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features) > [client-form](/frontend/src/features/client-form)
-
-**FSD Layer:** Feature
+[Root](/.) / [frontend](/frontend) / [src](/frontend/src) / [features](/frontend/src/features) / [client-form](/frontend/src/features/client-form)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **client-form** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** Features
+
 
 ## 🏗️ Architecture
 ```mermaid
-graph TD
-  Root["📁 client-form"]
-  Root --> client_form_component_html["📄 client-form.component.html"]
-  Root --> client_form_component_ts["📄 client-form.component.ts"]
-  Root --> index_ts["📄 index.ts"]
+classDiagram
+  class ClientFormComponent
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `client-form.component.html` | Template | Structural template and layout for client-form.component.html. | N/A |
-| `client-form.component.ts` | TypeScript | UI component logic and state management for client-form.component.ts. | @angular, @entities, @shared |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `client-form.component.html` | File | Structural template and layout for client-form.component.html. | N/A |
+| `client-form.component.ts` | File | UI component logic and state management for client-form.component.ts. | @shared/lib, @entities/user, @angular/forms, @angular/core, @angular/common |
+| `index.ts` | File | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
-- `@angular/common`
-- `@angular/core`
-- `@angular/forms`
-- `@entities/user`
-- `@shared/lib`
+- Relies on internal Mavluda Beauty architecture and designated FSD layers.
+- See 'Key Aliases Used' in the File Registry for explicit cross-domain references.
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './client-form';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

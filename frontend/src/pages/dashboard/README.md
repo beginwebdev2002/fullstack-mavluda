@@ -1,43 +1,34 @@
-# 📁 dashboard
+# 📁 Dashboard Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [dashboard](/frontend/src/pages/dashboard)
-
-**FSD Layer:** Page
+[Root](/.) / [frontend](/frontend) / [src](/frontend/src) / [pages](/frontend/src/pages) / [dashboard](/frontend/src/pages/dashboard)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **dashboard** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+**FSD Layer:** Pages
+
 
 ## 🏗️ Architecture
 ```mermaid
-graph TD
-  Root["📁 dashboard"]
-  Root --> dashboard_component_html["📄 dashboard.component.html"]
-  Root --> dashboard_component_scss["📄 dashboard.component.scss"]
-  Root --> dashboard_component_ts["📄 dashboard.component.ts"]
-  Root --> index_ts["📄 index.ts"]
+classDiagram
+  class DashboardComponent
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `dashboard.component.html` | Template | Structural template and layout for dashboard.component.html. | N/A |
-| `dashboard.component.scss` | Stylesheet | Luxury styling and visual presentation for dashboard.component.scss. | N/A |
-| `dashboard.component.ts` | TypeScript | UI component logic and state management for dashboard.component.ts. | @angular, @entities |
-| `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
+| `dashboard.component.html` | File | Structural template and layout for dashboard.component.html. | N/A |
+| `dashboard.component.scss` | File | Luxury styling and visual presentation for dashboard.component.scss. | N/A |
+| `dashboard.component.ts` | File | UI component logic and state management for dashboard.component.ts. | @angular/core, @angular/common |
+| `index.ts` | File | Provides core logic and orchestration for index.ts. | N/A |
 
 ## 🔗 Dependencies
-- `@angular/common`
-- `@angular/core`
-- `@entities/gallery/gallery.service`
-- `@entities/treatments/treatments.service`
-- `@entities/user/user.service`
-- `@entities/veil/veil.service`
-- `rxjs`
+- Relies on internal Mavluda Beauty architecture and designated FSD layers.
+- See 'Key Aliases Used' in the File Registry for explicit cross-domain references.
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dashboard';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();

@@ -1,6 +1,6 @@
-# 📁 locale
+# 📁 Locale Directory
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [locale](/frontend/src/locale)
+[Root](/.) / [frontend](/frontend) / [src](/frontend/src) / [locale](/frontend/src/locale)
 
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **locale** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
@@ -8,10 +8,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 locale"]
-  Root --> messages_ru_xlf["📄 messages.ru.xlf"]
-  Root --> messages_tj_xlf["📄 messages.tj.xlf"]
-  Root --> messages_xlf["📄 messages.xlf"]
+  Root_locale["📁 locale"]
+  Root_locale --> f_messages_ru_xlf["📄 messages.ru.xlf"]
+  Root_locale --> f_messages_tj_xlf["📄 messages.tj.xlf"]
+  Root_locale --> f_messages_xlf["📄 messages.xlf"]
 ```
 
 ## 📄 File Registry
@@ -22,12 +22,13 @@ graph TD
 | `messages.xlf` | File | Provides core logic and orchestration for messages.xlf. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- Relies on internal Mavluda Beauty architecture and designated FSD layers.
+- See 'Key Aliases Used' in the File Registry for explicit cross-domain references.
 
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './locale';
+import { relevantMember } from './core';
 
 // Integrate into the application architecture
 relevantMember.execute();
