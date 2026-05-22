@@ -1,44 +1,51 @@
-# 📁 ui
+### 🧭 Breadcrumbs
+[Root](/) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [settings](/frontend/src/pages/settings) > [ui](/frontend/src/pages/settings/ui)
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [settings](/frontend/src/pages/settings) > [ui](/frontend/src/pages/settings/ui)
-
-**FSD Layer:** Page
+# 📁 Ui Directory
+**Architecture Layer:** Page Layer
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **ui** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Provides luxury professional architectural implementation for the ui module within the Mavluda Beauty ecosystem. Ensure robust functionality and elegant integration with the broader architecture.
 
-## 🏗️ Architecture
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 ui"]
-  Root --> additional_links_component_ts["📄 additional-links.component.ts"]
-  Root --> business_profile_component_ts["📄 business-profile.component.ts"]
-  Root --> general_info_component_ts["📄 general-info.component.ts"]
-  Root --> selects_settings_component_ts["📄 selects-settings.component.ts"]
-  Root --> social_matrix_component_ts["📄 social-matrix.component.ts"]
+  f_Root_ui["📁 ui"]
+  f_additional_links_component_ts["📄 additional-links.component.ts"]
+  f_Root_ui --> f_additional_links_component_ts
+  f_business_profile_component_ts["📄 business-profile.component.ts"]
+  f_Root_ui --> f_business_profile_component_ts
+  f_general_info_component_ts["📄 general-info.component.ts"]
+  f_Root_ui --> f_general_info_component_ts
+  f_selects_settings_component_ts["📄 selects-settings.component.ts"]
+  f_Root_ui --> f_selects_settings_component_ts
+  f_social_matrix_component_ts["📄 social-matrix.component.ts"]
+  f_Root_ui --> f_social_matrix_component_ts
 ```
 
-## 📄 File Registry
+## 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `additional-links.component.ts` | TypeScript | UI component logic and state management for additional-links.component.ts. | @angular |
-| `business-profile.component.ts` | TypeScript | UI component logic and state management for business-profile.component.ts. | @angular, @shared |
-| `general-info.component.ts` | TypeScript | UI component logic and state management for general-info.component.ts. | @angular |
-| `selects-settings.component.ts` | TypeScript | UI component logic and state management for selects-settings.component.ts. | @angular |
-| `social-matrix.component.ts` | TypeScript | UI component logic and state management for social-matrix.component.ts. | @angular |
+| `additional-links.component.ts` | TypeScript | UI component logic and state management for additional-links.component.ts. | @angular/core, @angular/forms, @angular/common |
+| `business-profile.component.ts` | TypeScript | UI component logic and state management for business-profile.component.ts. | @angular/core, @shared/models, @angular/forms, @angular/common |
+| `general-info.component.ts` | TypeScript | UI component logic and state management for general-info.component.ts. | @angular/core, @angular/forms, @angular/common |
+| `selects-settings.component.ts` | TypeScript | UI component logic and state management for selects-settings.component.ts. | @angular/core, @angular/forms, @angular/common |
+| `social-matrix.component.ts` | TypeScript | UI component logic and state management for social-matrix.component.ts. | @angular/core, @angular/forms, @angular/common |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@angular/common`
 - `@angular/core`
 - `@angular/forms`
 - `@shared/models`
-- `leaflet`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './ui';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example architectural integration for ui
+// Utilize the exported members according to Mavluda Beauty's standard conventions.
 ```
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*

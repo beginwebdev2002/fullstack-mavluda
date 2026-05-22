@@ -49,3 +49,16 @@ dist-ssr
 !**/README.md
 !GEMINI.md
 !AGENTS.md
+
+backend_test.log
+backend_test_exit.txt
+generate_readmes.py
+verify_script.txt
+verify_script_exit.txt
+generate_log.txt
+generate_exit.txt
+frontend_test.log
+frontend_test_exit.txt
+e2e_test.log
+e2e_test_exit.txt
+test_exits.txt

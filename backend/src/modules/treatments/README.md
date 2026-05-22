@@ -1,40 +1,52 @@
-# 📁 treatments
+### 🧭 Breadcrumbs
+[Root](/) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments)
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [treatments](/backend/src/modules/treatments)
+# 📁 Treatments Directory
+**Architecture Layer:** Domain/Infrastructure Layer
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Provides luxury professional architectural implementation for the treatments module within the Mavluda Beauty ecosystem. Ensure robust functionality and elegant integration with the broader architecture.
 
-## 🏗️ Architecture
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 treatments"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> treatments_module_ts["📄 treatments.module.ts"]
+  f_Root_treatments["📁 treatments"]
+  f_index_ts["📄 index.ts"]
+  f_Root_treatments --> f_index_ts
+  f_treatments_module_ts["📄 treatments.module.ts"]
+  f_Root_treatments --> f_treatments_module_ts
+  f_Dir_infrastructure["📁 infrastructure"]
+  f_Root_treatments --> f_Dir_infrastructure
+  f_Dir_presentation["📁 presentation"]
+  f_Root_treatments --> f_Dir_presentation
+  f_Dir_domain["📁 domain"]
+  f_Root_treatments --> f_Dir_domain
+  f_Dir_application["📁 application"]
+  f_Root_treatments --> f_Dir_application
 ```
 
-## 📄 File Registry
+## 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
-| `treatments.module.ts` | TypeScript | Defines the architectural module boundaries for treatments.module.ts. | @modules, @nestjs |
+| `treatments.module.ts` | TypeScript | Defines the architectural module boundaries for treatments.module.ts. | @nestjs/common, @modules/treatments/infrastructure/repositories/treatments.repository, @modules/treatments/application/treatments.service, @modules/treatments/infrastructure/schemas/treatments.schema, @nestjs/mongoose, @modules/treatments/presentation/treatments.controller |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@modules/treatments/application/treatments.service`
 - `@modules/treatments/infrastructure/repositories/treatments.repository`
+- `@modules/treatments/infrastructure/schemas/treatments.schema`
 - `@modules/treatments/presentation/treatments.controller`
 - `@nestjs/common`
 - `@nestjs/mongoose`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './treatments';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example architectural integration for treatments
+// Utilize the exported members according to Mavluda Beauty's standard conventions.
 ```
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*

@@ -1,33 +1,39 @@
-# 📁 dto
+### 🧭 Breadcrumbs
+[Root](/) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [presentation](/backend/src/modules/inventory/presentation) > [dto](/backend/src/modules/inventory/presentation/dto)
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [inventory](/backend/src/modules/inventory) > [presentation](/backend/src/modules/inventory/presentation) > [dto](/backend/src/modules/inventory/presentation/dto)
+# 📁 Dto Directory
+**Architecture Layer:** Domain/Infrastructure Layer
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Provides luxury professional architectural implementation for the dto module within the Mavluda Beauty ecosystem. Ensure robust functionality and elegant integration with the broader architecture.
 
-## 🏗️ Architecture
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_inventory_dto_ts["📄 create-inventory.dto.ts"]
-  Root --> update_inventory_dto_ts["📄 update-inventory.dto.ts"]
+  f_Root_dto["📁 dto"]
+  f_create_inventory_dto_ts["📄 create-inventory.dto.ts"]
+  f_Root_dto --> f_create_inventory_dto_ts
+  f_update_inventory_dto_ts["📄 update-inventory.dto.ts"]
+  f_Root_dto --> f_update_inventory_dto_ts
 ```
 
-## 📄 File Registry
+## 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `create-inventory.dto.ts` | TypeScript | Provides core logic and orchestration for create-inventory.dto.ts. | N/A |
-| `update-inventory.dto.ts` | TypeScript | Provides core logic and orchestration for update-inventory.dto.ts. | @nestjs |
+| `update-inventory.dto.ts` | TypeScript | Provides core logic and orchestration for update-inventory.dto.ts. | @nestjs/mapped-types |
 
-## 🔗 Dependencies
-- `./create-inventory.dto`
+## 🔗 DEPENDENCIES
 - `@nestjs/mapped-types`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example architectural integration for dto
+// Utilize the exported members according to Mavluda Beauty's standard conventions.
 ```
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*

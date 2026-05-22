@@ -1,39 +1,42 @@
-# 📁 src
+### 🧭 Breadcrumbs
+[Root](/) > [backend](/backend) > [src](/backend/src)
 
-[Root](/.) > [backend](/backend) > [src](/backend/src)
+# 📁 Src Directory
+**Architecture Layer:** Domain/Infrastructure Layer
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **src** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Provides luxury professional architectural implementation for the src module within the Mavluda Beauty ecosystem. Ensure robust functionality and elegant integration with the broader architecture.
 
-## 🏗️ Architecture
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 src"]
-  Root --> common["📁 common"]
-  Root --> modules["📁 modules"]
-  Root --> app_controller_spec_ts["📄 app.controller.spec.ts"]
-  Root --> app_controller_ts["📄 app.controller.ts"]
-  Root --> app_module_ts["📄 app.module.ts"]
-  Root --> app_service_ts["📄 app.service.ts"]
-  Root --> main_ts["📄 main.ts"]
+  f_Root_src["📁 src"]
+  f_app_controller_spec_ts["📄 app.controller.spec.ts"]
+  f_Root_src --> f_app_controller_spec_ts
+  f_app_controller_ts["📄 app.controller.ts"]
+  f_Root_src --> f_app_controller_ts
+  f_app_module_ts["📄 app.module.ts"]
+  f_Root_src --> f_app_module_ts
+  f_app_service_ts["📄 app.service.ts"]
+  f_Root_src --> f_app_service_ts
+  f_main_ts["📄 main.ts"]
+  f_Root_src --> f_main_ts
+  f_Dir_common["📁 common"]
+  f_Root_src --> f_Dir_common
+  f_Dir_modules["📁 modules"]
+  f_Root_src --> f_Dir_modules
 ```
 
-## 📄 File Registry
+## 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `app.controller.spec.ts` | TypeScript | Unit testing and quality assurance for app.controller.spec.ts. | @nestjs |
-| `app.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for app.controller.ts. | @nestjs |
-| `app.module.ts` | TypeScript | Defines the architectural module boundaries for app.module.ts. | @modules, @nestjs |
-| `app.service.ts` | TypeScript | Encapsulates business logic and data access for app.service.ts. | @nestjs |
-| `main.ts` | TypeScript | Provides core logic and orchestration for main.ts. | @nestjs |
+| `app.controller.spec.ts` | TypeScript | Unit testing and quality assurance for app.controller.spec.ts. | @nestjs/testing |
+| `app.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for app.controller.ts. | @nestjs/common |
+| `app.module.ts` | TypeScript | Defines the architectural module boundaries for app.module.ts. | @nestjs/common, @modules/gallery, @modules/user, @nestjs/core, @modules/veil, @modules/partnership, @modules/auth, @modules/payment, @nestjs/serve-static, @modules/admin-settings, @modules/treatments, @modules/booking, @modules/inventory |
+| `app.service.ts` | TypeScript | Encapsulates business logic and data access for app.service.ts. | @nestjs/common |
+| `main.ts` | TypeScript | Provides core logic and orchestration for main.ts. | @nestjs/common, @nestjs/config, @nestjs/core |
 
-## 🔗 Dependencies
-- `./app.controller`
-- `./app.module`
-- `./app.service`
-- `./common/config/app-config.module`
-- `./common/database/database.module`
-- `./common/filters/i18n-exception.filter`
+## 🔗 DEPENDENCIES
 - `@modules/admin-settings`
 - `@modules/auth`
 - `@modules/booking`
@@ -49,13 +52,15 @@ graph TD
 - `@nestjs/core`
 - `@nestjs/serve-static`
 - `@nestjs/testing`
-- `path`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './src';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example architectural integration for src
+// Utilize the exported members according to Mavluda Beauty's standard conventions.
 ```
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*

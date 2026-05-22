@@ -1,32 +1,39 @@
-# 📁 dto
+### 🧭 Breadcrumbs
+[Root](/) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [dto](/backend/src/modules/auth/dto)
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [modules](/backend/src/modules) > [auth](/backend/src/modules/auth) > [dto](/backend/src/modules/auth/dto)
+# 📁 Dto Directory
+**Architecture Layer:** Domain/Infrastructure Layer
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **dto** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Provides luxury professional architectural implementation for the dto module within the Mavluda Beauty ecosystem. Ensure robust functionality and elegant integration with the broader architecture.
 
-## 🏗️ Architecture
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> login_dto_ts["📄 login.dto.ts"]
-  Root --> register_dto_ts["📄 register.dto.ts"]
+  f_Root_dto["📁 dto"]
+  f_login_dto_ts["📄 login.dto.ts"]
+  f_Root_dto --> f_login_dto_ts
+  f_register_dto_ts["📄 register.dto.ts"]
+  f_Root_dto --> f_register_dto_ts
 ```
 
-## 📄 File Registry
+## 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `login.dto.ts` | TypeScript | Provides core logic and orchestration for login.dto.ts. | N/A |
 | `register.dto.ts` | TypeScript | Provides core logic and orchestration for register.dto.ts. | N/A |
 
-## 🔗 Dependencies
-- `class-validator`
+## 🔗 DEPENDENCIES
+*No internal path alias dependencies explicitly resolved in this directory.*
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './dto';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example architectural integration for dto
+// Utilize the exported members according to Mavluda Beauty's standard conventions.
 ```
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*

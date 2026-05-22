@@ -1,36 +1,41 @@
-# 📁 guards
+### 🧭 Breadcrumbs
+[Root](/) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [guards](/backend/src/common/guards)
 
-[Root](/.) > [backend](/backend) > [src](/backend/src) > [common](/backend/src/common) > [guards](/backend/src/common/guards)
+# 📁 Guards Directory
+**Architecture Layer:** Domain/Infrastructure Layer
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **guards** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Provides luxury professional architectural implementation for the guards module within the Mavluda Beauty ecosystem. Ensure robust functionality and elegant integration with the broader architecture.
 
-## 🏗️ Architecture
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
-  Root --> roles_guard_ts["📄 roles.guard.ts"]
+  f_Root_guards["📁 guards"]
+  f_jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
+  f_Root_guards --> f_jwt_auth_guard_ts
+  f_roles_guard_ts["📄 roles.guard.ts"]
+  f_Root_guards --> f_roles_guard_ts
 ```
 
-## 📄 File Registry
+## 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `jwt-auth.guard.ts` | TypeScript | Provides core logic and orchestration for jwt-auth.guard.ts. | @nestjs |
-| `roles.guard.ts` | TypeScript | Provides core logic and orchestration for roles.guard.ts. | @nestjs |
+| `jwt-auth.guard.ts` | TypeScript | Provides core logic and orchestration for jwt-auth.guard.ts. | @nestjs/common, @nestjs/passport, @nestjs/core |
+| `roles.guard.ts` | TypeScript | Provides core logic and orchestration for roles.guard.ts. | @nestjs/common, @nestjs/core |
 
-## 🔗 Dependencies
-- `../decorators/public.decorator`
-- `../decorators/roles.decorator`
+## 🔗 DEPENDENCIES
 - `@nestjs/common`
 - `@nestjs/core`
 - `@nestjs/passport`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './guards';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example architectural integration for guards
+// Utilize the exported members according to Mavluda Beauty's standard conventions.
 ```
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*

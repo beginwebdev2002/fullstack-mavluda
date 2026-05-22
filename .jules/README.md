@@ -1,35 +1,42 @@
-# 📁 Mavluda Beauty .jules
+### 🧭 Breadcrumbs
+[Root](/) > [.jules](/.jules)
 
-[.jules](/.jules)
+# 📁 .jules Directory
+**Architecture Layer:** Domain/Infrastructure Layer
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **.jules** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Provides luxury professional architectural implementation for the .jules module within the Mavluda Beauty ecosystem. Ensure robust functionality and elegant integration with the broader architecture.
 
-## 🏗️ Architecture
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  _jules["📁 .jules"]
-  _jules --> agents_md["📄 agents.md"]
-  _jules --> bolt_md["📄 bolt.md"]
-  _jules --> palette_md["📄 palette.md"]
-  _jules --> sentinel_md["📄 sentinel.md"]
+  f_Root__jules["📁 .jules"]
+  f_agents_md["📄 agents.md"]
+  f_Root__jules --> f_agents_md
+  f_bolt_md["📄 bolt.md"]
+  f_Root__jules --> f_bolt_md
+  f_palette_md["📄 palette.md"]
+  f_Root__jules --> f_palette_md
+  f_sentinel_md["📄 sentinel.md"]
+  f_Root__jules --> f_sentinel_md
 ```
 
-## 📄 File Registry
+## 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `agents.md` | File | Core logic and utilities for this domain. | N/A |
-| `bolt.md` | File | Core logic and utilities for this domain. | N/A |
-| `palette.md` | File | Core logic and utilities for this domain. | N/A |
-| `sentinel.md` | File | Core logic and utilities for this domain. | N/A |
+| `agents.md` | Markdown | Core logic and utilities for this domain. | N/A |
+| `bolt.md` | Markdown | Core logic and utilities for this domain. | N/A |
+| `palette.md` | Markdown | Core logic and utilities for this domain. | N/A |
+| `sentinel.md` | Markdown | Core logic and utilities for this domain. | N/A |
 
+## 🔗 DEPENDENCIES
+*No internal path alias dependencies explicitly resolved in this directory.*
 
-## 🔗 Dependencies
-No external or alias dependencies detected.
+## 🛠️ USAGE
+Review the files in this directory for `.jules` integration and styling standards.
 
-## 🛠️ Usage
-```typescript
-// Example integration for .jules
-// Import capabilities from this directory to enrich your modules.
-```
-> This directory provides specialized logic tailored to the Mavluda Beauty standard.
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*

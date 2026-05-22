@@ -1,32 +1,39 @@
-# 📁 constants
+### 🧭 Breadcrumbs
+[Root](/) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [constants](/frontend/src/core/constants)
 
-[Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [core](/frontend/src/core) > [constants](/frontend/src/core/constants)
+# 📁 Constants Directory
+**Architecture Layer:** Domain/Infrastructure Layer
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Provides luxury professional architectural implementation for the constants module within the Mavluda Beauty ecosystem. Ensure robust functionality and elegant integration with the broader architecture.
 
-## 🏗️ Architecture
+## 🏗️ ARCHITECTURE
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> api_endpoints_ts["📄 api-endpoints.ts"]
-  Root --> index_ts["📄 index.ts"]
+  f_Root_constants["📁 constants"]
+  f_api_endpoints_ts["📄 api-endpoints.ts"]
+  f_Root_constants --> f_api_endpoints_ts
+  f_index_ts["📄 index.ts"]
+  f_Root_constants --> f_index_ts
 ```
 
-## 📄 File Registry
+## 📄 FILE REGISTRY
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `api-endpoints.ts` | TypeScript | Provides core logic and orchestration for api-endpoints.ts. | @shared |
+| `api-endpoints.ts` | TypeScript | Provides core logic and orchestration for api-endpoints.ts. | @shared/lib |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 
-## 🔗 Dependencies
+## 🔗 DEPENDENCIES
 - `@shared/lib`
 
-## 🛠️ Usage
+## 🛠️ USAGE
 ```typescript
-// Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './constants';
-
-// Integrate into the application architecture
-relevantMember.execute();
+// Example architectural integration for constants
+// Utilize the exported members according to Mavluda Beauty's standard conventions.
 ```
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*
+
+---
+*Maintained by Mavluda Beauty - Architecture & Engineering*
