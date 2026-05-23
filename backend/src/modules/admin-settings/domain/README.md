@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> interfaces["📁 interfaces"]
-  Root --> admin_settings_entity_ts["📄 admin-settings.entity.ts"]
+  Root_domain["📁 domain"]
+  Root_domain --> interfaces["📁 interfaces"]
+  Root_domain --> f_admin_settings_entity_ts["📄 admin-settings.entity.ts"]
 ```
 
 ## 📄 File Registry

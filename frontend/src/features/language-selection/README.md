@@ -2,19 +2,19 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features) > [language-selection](/frontend/src/features/language-selection)
 
-**FSD Layer:** Feature
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **language-selection** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Feature
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 language-selection"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> language_switcher_component_html["📄 language-switcher.component.html"]
-  Root --> language_switcher_component_scss["📄 language-switcher.component.scss"]
-  Root --> language_switcher_component_ts["📄 language-switcher.component.ts"]
+  Root_language_selection["📁 language-selection"]
+  Root_language_selection --> f_index_ts["📄 index.ts"]
+  Root_language_selection --> f_language_switcher_component_html["📄 language-switcher.component.html"]
+  Root_language_selection --> f_language_switcher_component_scss["📄 language-switcher.component.scss"]
+  Root_language_selection --> f_language_switcher_component_ts["📄 language-switcher.component.ts"]
 ```
 
 ## 📄 File Registry

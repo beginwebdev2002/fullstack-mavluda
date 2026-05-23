@@ -8,21 +8,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 modules"]
-  Root --> admin-settings["📁 admin-settings"]
-  Root --> auth["📁 auth"]
-  Root --> booking["📁 booking"]
-  Root --> gallery["📁 gallery"]
-  Root --> inventory["📁 inventory"]
-  Root --> partnership["📁 partnership"]
-  Root --> payment["📁 payment"]
-  Root --> treatments["📁 treatments"]
-  Root --> user["📁 user"]
-  Root --> veil["📁 veil"]
+  Root_modules["📁 modules"]
+  Root_modules --> admin_settings["📁 admin-settings"]
+  Root_modules --> auth["📁 auth"]
+  Root_modules --> booking["📁 booking"]
+  Root_modules --> gallery["📁 gallery"]
+  Root_modules --> inventory["📁 inventory"]
+  Root_modules --> partnership["📁 partnership"]
+  Root_modules --> payment["📁 payment"]
+  Root_modules --> treatments["📁 treatments"]
+  Root_modules --> user["📁 user"]
+  Root_modules --> veil["📁 veil"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
 
 ## 🔗 Dependencies
 - No external dependencies.

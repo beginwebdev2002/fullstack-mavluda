@@ -2,16 +2,16 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [user](/frontend/src/entities/user) > [constants](/frontend/src/entities/user/constants)
 
-**FSD Layer:** Entity
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **constants** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Entity
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 constants"]
-  Root --> user_constants_ts["📄 user.constants.ts"]
+  Root_constants["📁 constants"]
+  Root_constants --> f_user_constants_ts["📄 user.constants.ts"]
 ```
 
 ## 📄 File Registry

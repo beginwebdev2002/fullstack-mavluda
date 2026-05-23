@@ -2,17 +2,17 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [store](/frontend/src/shared/store)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **store** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Shared
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 store"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> signal_store_base_ts["📄 signal-store.base.ts"]
+  Root_store["📁 store"]
+  Root_store --> f_index_ts["📄 index.ts"]
+  Root_store --> f_signal_store_base_ts["📄 signal-store.base.ts"]
 ```
 
 ## 📄 File Registry

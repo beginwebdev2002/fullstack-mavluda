@@ -2,20 +2,20 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [services](/frontend/src/shared/services)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **services** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Shared
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 services"]
-  Root --> auth_service_ts["📄 auth.service.ts"]
-  Root --> error_service_ts["📄 error.service.ts"]
-  Root --> image_service_ts["📄 image.service.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> telegram_service_ts["📄 telegram.service.ts"]
+  Root_services["📁 services"]
+  Root_services --> f_auth_service_ts["📄 auth.service.ts"]
+  Root_services --> f_error_service_ts["📄 error.service.ts"]
+  Root_services --> f_image_service_ts["📄 image.service.ts"]
+  Root_services --> f_index_ts["📄 index.ts"]
+  Root_services --> f_telegram_service_ts["📄 telegram.service.ts"]
 ```
 
 ## 📄 File Registry

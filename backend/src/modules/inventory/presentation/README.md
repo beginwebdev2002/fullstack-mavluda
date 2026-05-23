@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 presentation"]
-  Root --> dto["📁 dto"]
-  Root --> inventory_controller_ts["📄 inventory.controller.ts"]
+  Root_presentation["📁 presentation"]
+  Root_presentation --> dto["📁 dto"]
+  Root_presentation --> f_inventory_controller_ts["📄 inventory.controller.ts"]
 ```
 
 ## 📄 File Registry

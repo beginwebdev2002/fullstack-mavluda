@@ -2,18 +2,18 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features) > [client-form](/frontend/src/features/client-form)
 
-**FSD Layer:** Feature
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **client-form** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Feature
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 client-form"]
-  Root --> client_form_component_html["📄 client-form.component.html"]
-  Root --> client_form_component_ts["📄 client-form.component.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_client_form["📁 client-form"]
+  Root_client_form --> f_client_form_component_html["📄 client-form.component.html"]
+  Root_client_form --> f_client_form_component_ts["📄 client-form.component.ts"]
+  Root_client_form --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry

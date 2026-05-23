@@ -8,13 +8,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 veil"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> veil_module_ts["📄 veil.module.ts"]
+  Root_veil["📁 veil"]
+  Root_veil --> application["📁 application"]
+  Root_veil --> domain["📁 domain"]
+  Root_veil --> infrastructure["📁 infrastructure"]
+  Root_veil --> presentation["📁 presentation"]
+  Root_veil --> f_index_ts["📄 index.ts"]
+  Root_veil --> f_veil_module_ts["📄 veil.module.ts"]
 ```
 
 ## 📄 File Registry

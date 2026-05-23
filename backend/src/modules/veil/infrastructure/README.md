@@ -8,13 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 infrastructure"]
-  Root --> repositories["📁 repositories"]
-  Root --> schemas["📁 schemas"]
+  Root_infrastructure["📁 infrastructure"]
+  Root_infrastructure --> repositories["📁 repositories"]
+  Root_infrastructure --> schemas["📁 schemas"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
 
 ## 🔗 Dependencies
 - No external dependencies.

@@ -8,13 +8,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 inventory"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> inventory_module_ts["📄 inventory.module.ts"]
+  Root_inventory["📁 inventory"]
+  Root_inventory --> application["📁 application"]
+  Root_inventory --> domain["📁 domain"]
+  Root_inventory --> infrastructure["📁 infrastructure"]
+  Root_inventory --> presentation["📁 presentation"]
+  Root_inventory --> f_index_ts["📄 index.ts"]
+  Root_inventory --> f_inventory_module_ts["📄 inventory.module.ts"]
 ```
 
 ## 📄 File Registry

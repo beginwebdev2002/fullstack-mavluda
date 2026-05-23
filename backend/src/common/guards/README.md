@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 guards"]
-  Root --> jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
-  Root --> roles_guard_ts["📄 roles.guard.ts"]
+  Root_guards["📁 guards"]
+  Root_guards --> f_jwt_auth_guard_ts["📄 jwt-auth.guard.ts"]
+  Root_guards --> f_roles_guard_ts["📄 roles.guard.ts"]
 ```
 
 ## 📄 File Registry

@@ -2,17 +2,17 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [gallery](/frontend/src/pages/gallery) > [ui](/frontend/src/pages/gallery/ui) > [gallery-form](/frontend/src/pages/gallery/ui/gallery-form)
 
-**FSD Layer:** Page
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **gallery-form** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Page
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 gallery-form"]
-  Root --> gallery_form_component_html["📄 gallery-form.component.html"]
-  Root --> gallery_form_component_ts["📄 gallery-form.component.ts"]
+  Root_gallery_form["📁 gallery-form"]
+  Root_gallery_form --> f_gallery_form_component_html["📄 gallery-form.component.html"]
+  Root_gallery_form --> f_gallery_form_component_ts["📄 gallery-form.component.ts"]
 ```
 
 ## 📄 File Registry

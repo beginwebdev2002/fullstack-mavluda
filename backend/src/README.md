@@ -8,14 +8,14 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 src"]
-  Root --> common["📁 common"]
-  Root --> modules["📁 modules"]
-  Root --> app_controller_spec_ts["📄 app.controller.spec.ts"]
-  Root --> app_controller_ts["📄 app.controller.ts"]
-  Root --> app_module_ts["📄 app.module.ts"]
-  Root --> app_service_ts["📄 app.service.ts"]
-  Root --> main_ts["📄 main.ts"]
+  Root_src["📁 src"]
+  Root_src --> common["📁 common"]
+  Root_src --> modules["📁 modules"]
+  Root_src --> f_app_controller_spec_ts["📄 app.controller.spec.ts"]
+  Root_src --> f_app_controller_ts["📄 app.controller.ts"]
+  Root_src --> f_app_module_ts["📄 app.module.ts"]
+  Root_src --> f_app_service_ts["📄 app.service.ts"]
+  Root_src --> f_main_ts["📄 main.ts"]
 ```
 
 ## 📄 File Registry
@@ -34,6 +34,9 @@ graph TD
 - `./common/config/app-config.module`
 - `./common/database/database.module`
 - `./common/filters/i18n-exception.filter`
+- `./common/guards/jwt-auth.guard`
+- `./common/guards/roles.guard`
+- `./common/seed/seed.module`
 - `@modules/admin-settings`
 - `@modules/auth`
 - `@modules/booking`
@@ -49,6 +52,7 @@ graph TD
 - `@nestjs/core`
 - `@nestjs/serve-static`
 - `@nestjs/testing`
+- `cookie-parser`
 - `path`
 
 ## 🛠️ Usage

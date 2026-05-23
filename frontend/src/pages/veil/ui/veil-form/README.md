@@ -2,17 +2,17 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veil](/frontend/src/pages/veil) > [ui](/frontend/src/pages/veil/ui) > [veil-form](/frontend/src/pages/veil/ui/veil-form)
 
-**FSD Layer:** Page
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **veil-form** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Page
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 veil-form"]
-  Root --> veil_form_component_html["📄 veil-form.component.html"]
-  Root --> veil_form_component_ts["📄 veil-form.component.ts"]
+  Root_veil_form["📁 veil-form"]
+  Root_veil_form --> f_veil_form_component_html["📄 veil-form.component.html"]
+  Root_veil_form --> f_veil_form_component_ts["📄 veil-form.component.ts"]
 ```
 
 ## 📄 File Registry

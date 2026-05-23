@@ -8,15 +8,15 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 auth"]
-  Root --> dto["📁 dto"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> interfaces["📁 interfaces"]
-  Root --> auth_controller_ts["📄 auth.controller.ts"]
-  Root --> auth_module_ts["📄 auth.module.ts"]
-  Root --> auth_service_ts["📄 auth.service.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> telegram_auth_service_ts["📄 telegram-auth.service.ts"]
+  Root_auth["📁 auth"]
+  Root_auth --> dto["📁 dto"]
+  Root_auth --> infrastructure["📁 infrastructure"]
+  Root_auth --> interfaces["📁 interfaces"]
+  Root_auth --> f_auth_controller_ts["📄 auth.controller.ts"]
+  Root_auth --> f_auth_module_ts["📄 auth.module.ts"]
+  Root_auth --> f_auth_service_ts["📄 auth.service.ts"]
+  Root_auth --> f_index_ts["📄 index.ts"]
+  Root_auth --> f_telegram_auth_service_ts["📄 telegram-auth.service.ts"]
 ```
 
 ## 📄 File Registry
@@ -24,7 +24,7 @@ graph TD
 |---|---|---|---|
 | `auth.controller.ts` | TypeScript | Handles incoming HTTP requests and routing for auth.controller.ts. | @common |
 | `auth.module.ts` | TypeScript | Defines the architectural module boundaries for auth.module.ts. | @common, @modules, @nestjs |
-| `auth.service.ts` | TypeScript | Encapsulates business logic and data access for auth.service.ts. | @modules, @nestjs |
+| `auth.service.ts` | TypeScript | Encapsulates business logic and data access for auth.service.ts. | @common, @modules, @nestjs |
 | `index.ts` | TypeScript | Provides core logic and orchestration for index.ts. | N/A |
 | `telegram-auth.service.ts` | TypeScript | Encapsulates business logic and data access for telegram-auth.service.ts. | @common, @modules, @nestjs |
 
@@ -45,6 +45,7 @@ graph TD
 - `@nestjs/passport`
 - `bcrypt`
 - `crypto`
+- `express`
 
 ## 🛠️ Usage
 ```typescript

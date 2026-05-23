@@ -8,13 +8,13 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 admin-settings"]
-  Root --> application["📁 application"]
-  Root --> domain["📁 domain"]
-  Root --> infrastructure["📁 infrastructure"]
-  Root --> presentation["📁 presentation"]
-  Root --> admin_settings_module_ts["📄 admin-settings.module.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_admin_settings["📁 admin-settings"]
+  Root_admin_settings --> application["📁 application"]
+  Root_admin_settings --> domain["📁 domain"]
+  Root_admin_settings --> infrastructure["📁 infrastructure"]
+  Root_admin_settings --> presentation["📁 presentation"]
+  Root_admin_settings --> f_admin_settings_module_ts["📄 admin-settings.module.ts"]
+  Root_admin_settings --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry

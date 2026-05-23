@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 filters"]
-  Root --> i18n_exception_filter_ts["📄 i18n-exception.filter.ts"]
+  Root_filters["📁 filters"]
+  Root_filters --> f_i18n_exception_filter_ts["📄 i18n-exception.filter.ts"]
 ```
 
 ## 📄 File Registry

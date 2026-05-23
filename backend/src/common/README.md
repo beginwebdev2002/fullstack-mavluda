@@ -8,19 +8,21 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 common"]
-  Root --> config["📁 config"]
-  Root --> constants["📁 constants"]
-  Root --> database["📁 database"]
-  Root --> decorators["📁 decorators"]
-  Root --> filters["📁 filters"]
-  Root --> guards["📁 guards"]
-  Root --> interfaces["📁 interfaces"]
-  Root --> utils["📁 utils"]
+  Root_common["📁 common"]
+  Root_common --> config["📁 config"]
+  Root_common --> constants["📁 constants"]
+  Root_common --> database["📁 database"]
+  Root_common --> decorators["📁 decorators"]
+  Root_common --> filters["📁 filters"]
+  Root_common --> guards["📁 guards"]
+  Root_common --> interfaces["📁 interfaces"]
+  Root_common --> seed["📁 seed"]
+  Root_common --> utils["📁 utils"]
 ```
 
 ## 📄 File Registry
-*No relevant files in this directory.*
+| File Name | Type | Responsibility | Key Aliases Used |
+|---|---|---|---|
 
 ## 🔗 Dependencies
 - No external dependencies.

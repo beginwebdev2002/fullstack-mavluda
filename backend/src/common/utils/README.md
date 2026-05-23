@@ -8,10 +8,10 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 utils"]
-  Root --> file_system_ts["📄 file-system.ts"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> object_ts["📄 object.ts"]
+  Root_utils["📁 utils"]
+  Root_utils --> f_file_system_ts["📄 file-system.ts"]
+  Root_utils --> f_index_ts["📄 index.ts"]
+  Root_utils --> f_object_ts["📄 object.ts"]
 ```
 
 ## 📄 File Registry

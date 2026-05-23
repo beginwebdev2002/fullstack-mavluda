@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> partnership_entity_ts["📄 partnership.entity.ts"]
+  Root_domain["📁 domain"]
+  Root_domain --> f_partnership_entity_ts["📄 partnership.entity.ts"]
 ```
 
 ## 📄 File Registry

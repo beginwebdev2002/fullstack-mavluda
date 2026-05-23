@@ -2,16 +2,16 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [features](/frontend/src/features) > [veil](/frontend/src/features/veil) > [model](/frontend/src/features/veil/model)
 
-**FSD Layer:** Feature
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **model** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Feature
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 model"]
-  Root --> veil_data_ts["📄 veil.data.ts"]
+  Root_model["📁 model"]
+  Root_model --> f_veil_data_ts["📄 veil.data.ts"]
 ```
 
 ## 📄 File Registry

@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 domain"]
-  Root --> inventory_entity_ts["📄 inventory.entity.ts"]
+  Root_domain["📁 domain"]
+  Root_domain --> f_inventory_entity_ts["📄 inventory.entity.ts"]
 ```
 
 ## 📄 File Registry

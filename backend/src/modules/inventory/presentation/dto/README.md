@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 dto"]
-  Root --> create_inventory_dto_ts["📄 create-inventory.dto.ts"]
-  Root --> update_inventory_dto_ts["📄 update-inventory.dto.ts"]
+  Root_dto["📁 dto"]
+  Root_dto --> f_create_inventory_dto_ts["📄 create-inventory.dto.ts"]
+  Root_dto --> f_update_inventory_dto_ts["📄 update-inventory.dto.ts"]
 ```
 
 ## 📄 File Registry

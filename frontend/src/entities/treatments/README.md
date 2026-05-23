@@ -2,18 +2,18 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [treatments](/frontend/src/entities/treatments)
 
-**FSD Layer:** Entity
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **treatments** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Entity
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 treatments"]
-  Root --> constants["📁 constants"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> treatments_service_ts["📄 treatments.service.ts"]
+  Root_treatments["📁 treatments"]
+  Root_treatments --> constants["📁 constants"]
+  Root_treatments --> f_index_ts["📄 index.ts"]
+  Root_treatments --> f_treatments_service_ts["📄 treatments.service.ts"]
 ```
 
 ## 📄 File Registry

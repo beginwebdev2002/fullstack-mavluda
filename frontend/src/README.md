@@ -8,23 +8,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 src"]
-  Root --> app["📁 app"]
-  Root --> backend["📁 backend"]
-  Root --> core["📁 core"]
-  Root --> entities["📁 entities"]
-  Root --> environments["📁 environments"]
-  Root --> features["📁 features"]
-  Root --> locale["📁 locale"]
-  Root --> pages["📁 pages"]
-  Root --> shared["📁 shared"]
-  Root --> types["📁 types"]
-  Root --> widgets["📁 widgets"]
-  Root --> app_component_html["📄 app.component.html"]
-  Root --> app_component_scss["📄 app.component.scss"]
-  Root --> app_component_ts["📄 app.component.ts"]
-  Root --> app_routes_ts["📄 app.routes.ts"]
-  Root --> main_ts["📄 main.ts"]
+  Root_src["📁 src"]
+  Root_src --> app["📁 app"]
+  Root_src --> backend["📁 backend"]
+  Root_src --> core["📁 core"]
+  Root_src --> entities["📁 entities"]
+  Root_src --> features["📁 features"]
+  Root_src --> locale["📁 locale"]
+  Root_src --> pages["📁 pages"]
+  Root_src --> shared["📁 shared"]
+  Root_src --> types["📁 types"]
+  Root_src --> widgets["📁 widgets"]
+  Root_src --> f_app_component_html["📄 app.component.html"]
+  Root_src --> f_app_component_scss["📄 app.component.scss"]
+  Root_src --> f_app_component_ts["📄 app.component.ts"]
+  Root_src --> f_app_routes_ts["📄 app.routes.ts"]
+  Root_src --> f_main_ts["📄 main.ts"]
 ```
 
 ## 📄 File Registry
@@ -33,7 +32,7 @@ graph TD
 | `app.component.html` | Template | Structural template and layout for app.component.html. | N/A |
 | `app.component.scss` | Stylesheet | Luxury styling and visual presentation for app.component.scss. | N/A |
 | `app.component.ts` | TypeScript | UI component logic and state management for app.component.ts. | @angular, @shared |
-| `app.routes.ts` | TypeScript | Provides core logic and orchestration for app.routes.ts. | @angular, @pages, @widgets |
+| `app.routes.ts` | TypeScript | Provides core logic and orchestration for app.routes.ts. | @angular, @core |
 | `main.ts` | TypeScript | Provides core logic and orchestration for main.ts. | @angular |
 
 ## 🔗 Dependencies
@@ -42,10 +41,9 @@ graph TD
 - `@angular/common`
 - `@angular/platform-browser`
 - `@angular/router`
-- `@pages/auth`
+- `@core/guards`
 - `@shared/services`
 - `@shared/ui`
-- `@widgets/layouts`
 
 ## 🛠️ Usage
 ```typescript

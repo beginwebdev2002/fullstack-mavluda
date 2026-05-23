@@ -1,32 +1,27 @@
-# 📁 Mavluda Beauty Repository
+# 📁 app
 
 [Root](/.)
 
 ## 🎯 Purpose
-Delivering luxury-tier architectural components and high-performance logic for the **Mavluda Beauty Repository** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+Delivering luxury-tier architectural components and high-performance logic for the **app** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 Mavluda Beauty Repository"]
-  Root --> backend["📁 backend"]
-  Root --> frontend["📁 frontend"]
-  Root --> scripts["📁 scripts"]
-  Root --> _env["📄 .env"]
-  Root --> _gitignore["📄 .gitignore"]
-  Root --> _gitignore_append["📄 .gitignore_append"]
-  Root --> GEMINI_md["📄 GEMINI.md"]
-  Root --> generate_readmes_py["📄 generate_readmes.py"]
+  Root_app["📁 app"]
+  Root_app --> backend["📁 backend"]
+  Root_app --> frontend["📁 frontend"]
+  Root_app --> f__gitignore["📄 .gitignore"]
+  Root_app --> f_GEMINI_md["📄 GEMINI.md"]
+  Root_app --> f_SECURITY_md["📄 SECURITY.md"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
-| `.env` | File | Provides core logic and orchestration for .env. | N/A |
 | `.gitignore` | File | Provides core logic and orchestration for .gitignore. | N/A |
-| `.gitignore_append` | File | Provides core logic and utilities for this domain. | N/A |
 | `GEMINI.md` | Markdown | Provides core logic and orchestration for GEMINI.md. | N/A |
-| `generate_readmes.py` | File | Provides core logic and orchestration for generate_readmes.py. | N/A |
+| `SECURITY.md` | Markdown | Provides core logic and orchestration for SECURITY.md. | N/A |
 
 ## 🔗 Dependencies
 - No external dependencies.
@@ -34,7 +29,7 @@ graph TD
 ## 🛠️ Usage
 ```typescript
 // Example usage within the Mavluda Beauty ecosystem
-import { relevantMember } from './core';
+import { relevantMember } from './app';
 
 // Integrate into the application architecture
 relevantMember.execute();

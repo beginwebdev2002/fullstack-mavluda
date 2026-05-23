@@ -2,19 +2,19 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [user-profile](/frontend/src/pages/user-profile)
 
-**FSD Layer:** Page
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **user-profile** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Page
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 user-profile"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> user_profile_component_html["📄 user-profile.component.html"]
-  Root --> user_profile_component_scss["📄 user-profile.component.scss"]
-  Root --> user_profile_component_ts["📄 user-profile.component.ts"]
+  Root_user_profile["📁 user-profile"]
+  Root_user_profile --> f_index_ts["📄 index.ts"]
+  Root_user_profile --> f_user_profile_component_html["📄 user-profile.component.html"]
+  Root_user_profile --> f_user_profile_component_scss["📄 user-profile.component.scss"]
+  Root_user_profile --> f_user_profile_component_ts["📄 user-profile.component.ts"]
 ```
 
 ## 📄 File Registry

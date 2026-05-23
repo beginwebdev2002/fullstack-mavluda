@@ -2,19 +2,19 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [pages](/frontend/src/pages) > [veils-catalog](/frontend/src/pages/veils-catalog)
 
-**FSD Layer:** Page
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **veils-catalog** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Page
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 veils-catalog"]
-  Root --> index_ts["📄 index.ts"]
-  Root --> veils_catalog_component_html["📄 veils-catalog.component.html"]
-  Root --> veils_catalog_component_scss["📄 veils-catalog.component.scss"]
-  Root --> veils_catalog_component_ts["📄 veils-catalog.component.ts"]
+  Root_veils_catalog["📁 veils-catalog"]
+  Root_veils_catalog --> f_index_ts["📄 index.ts"]
+  Root_veils_catalog --> f_veils_catalog_component_html["📄 veils-catalog.component.html"]
+  Root_veils_catalog --> f_veils_catalog_component_scss["📄 veils-catalog.component.scss"]
+  Root_veils_catalog --> f_veils_catalog_component_ts["📄 veils-catalog.component.ts"]
 ```
 
 ## 📄 File Registry

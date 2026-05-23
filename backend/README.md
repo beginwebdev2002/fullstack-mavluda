@@ -8,23 +8,22 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 backend"]
-  Root --> src["📁 src"]
-  Root --> test["📁 test"]
-  Root --> _prettierrc["📄 .prettierrc"]
-  Root --> eslint_config_mjs["📄 eslint.config.mjs"]
-  Root --> nest_cli_json["📄 nest-cli.json"]
-  Root --> package_lock_json["📄 package-lock.json"]
-  Root --> package_json["📄 package.json"]
-  Root --> tsconfig_build_json["📄 tsconfig.build.json"]
-  Root --> tsconfig_json["📄 tsconfig.json"]
+  Root_backend["📁 backend"]
+  Root_backend --> src["📁 src"]
+  Root_backend --> f__prettierrc["📄 .prettierrc"]
+  Root_backend --> f_eslint_config_mjs["📄 eslint.config.mjs"]
+  Root_backend --> f_nest_cli_json["📄 nest-cli.json"]
+  Root_backend --> f_package_lock_json["📄 package-lock.json"]
+  Root_backend --> f_package_json["📄 package.json"]
+  Root_backend --> f_tsconfig_build_json["📄 tsconfig.build.json"]
+  Root_backend --> f_tsconfig_json["📄 tsconfig.json"]
 ```
 
 ## 📄 File Registry
 | File Name | Type | Responsibility | Key Aliases Used |
 |---|---|---|---|
 | `.prettierrc` | File | Provides core logic and orchestration for .prettierrc. | N/A |
-| `eslint.config.mjs` | JavaScript | Provides core logic and orchestration for eslint.config.mjs. | N/A |
+| `eslint.config.mjs` | File | Provides core logic and orchestration for eslint.config.mjs. | @eslint |
 | `nest-cli.json` | JSON Configuration | Provides core logic and orchestration for nest-cli.json. | N/A |
 | `package-lock.json` | JSON Configuration | Provides core logic and orchestration for package-lock.json. | N/A |
 | `package.json` | JSON Configuration | Provides core logic and orchestration for package.json. | N/A |
@@ -32,7 +31,10 @@ graph TD
 | `tsconfig.json` | JSON Configuration | Provides core logic and orchestration for tsconfig.json. | N/A |
 
 ## 🔗 Dependencies
-- No external dependencies.
+- `@eslint/js`
+- `eslint-plugin-prettier/recommended`
+- `globals`
+- `typescript-eslint`
 
 ## 🛠️ Usage
 ```typescript

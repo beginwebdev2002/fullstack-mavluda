@@ -8,8 +8,8 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 schemas"]
-  Root --> user_schema_ts["📄 user.schema.ts"]
+  Root_schemas["📁 schemas"]
+  Root_schemas --> f_user_schema_ts["📄 user.schema.ts"]
 ```
 
 ## 📄 File Registry

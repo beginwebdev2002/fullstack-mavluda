@@ -2,17 +2,17 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [entities](/frontend/src/entities) > [admin-settings](/frontend/src/entities/admin-settings)
 
-**FSD Layer:** Entity
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **admin-settings** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Entity
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 admin-settings"]
-  Root --> admin_settings_service_ts["📄 admin-settings.service.ts"]
-  Root --> index_ts["📄 index.ts"]
+  Root_admin_settings["📁 admin-settings"]
+  Root_admin_settings --> f_admin_settings_service_ts["📄 admin-settings.service.ts"]
+  Root_admin_settings --> f_index_ts["📄 index.ts"]
 ```
 
 ## 📄 File Registry

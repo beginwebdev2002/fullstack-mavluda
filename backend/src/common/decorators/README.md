@@ -8,9 +8,9 @@ Delivering luxury-tier architectural components and high-performance logic for t
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 decorators"]
-  Root --> public_decorator_ts["📄 public.decorator.ts"]
-  Root --> roles_decorator_ts["📄 roles.decorator.ts"]
+  Root_decorators["📁 decorators"]
+  Root_decorators --> f_public_decorator_ts["📄 public.decorator.ts"]
+  Root_decorators --> f_roles_decorator_ts["📄 roles.decorator.ts"]
 ```
 
 ## 📄 File Registry

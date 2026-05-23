@@ -2,18 +2,18 @@
 
 [Root](/.) > [frontend](/frontend) > [src](/frontend/src) > [shared](/frontend/src/shared) > [ui](/frontend/src/shared/ui) > [list-view](/frontend/src/shared/ui/list-view)
 
-**FSD Layer:** Shared
-
 ## 🎯 Purpose
 Delivering luxury-tier architectural components and high-performance logic for the **list-view** domain. This directory is a crucial part of the Mavluda Beauty full-stack ecosystem, ensuring seamless scalability, robust performance, and an elite digital experience.
+
+**FSD Layer:** Shared
 
 ## 🏗️ Architecture
 ```mermaid
 graph TD
-  Root["📁 list-view"]
-  Root --> list_view_component_html["📄 list-view.component.html"]
-  Root --> list_view_component_scss["📄 list-view.component.scss"]
-  Root --> list_view_component_ts["📄 list-view.component.ts"]
+  Root_list_view["📁 list-view"]
+  Root_list_view --> f_list_view_component_html["📄 list-view.component.html"]
+  Root_list_view --> f_list_view_component_scss["📄 list-view.component.scss"]
+  Root_list_view --> f_list_view_component_ts["📄 list-view.component.ts"]
 ```
 
 ## 📄 File Registry
