@@ -6459,7 +6459,7 @@
       "format": "esm"
     },
     "src/entities/user/auth.service.ts": {
-      "bytes": 3270,
+      "bytes": 3285,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -9016,7 +9016,7 @@
       "format": "esm"
     },
     "src/app/app.config.ts": {
-      "bytes": 955,
+      "bytes": 950,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -9123,8 +9123,8 @@
       ],
       "format": "esm"
     },
-    "src/pages/auth/auth.component.scss": {
-      "bytes": 34,
+    "src/app.component.scss": {
+      "bytes": 33,
       "imports": []
     },
     "src/pages/dashboard/dashboard.component.scss": {
@@ -9135,6 +9135,10 @@
       "bytes": 37,
       "imports": []
     },
+    "src/pages/portfolio/portfolio.component.scss": {
+      "bytes": 39,
+      "imports": []
+    },
     "src/shared/ui/card-view/card-view.component.scss": {
       "bytes": 244,
       "imports": []
@@ -9143,36 +9147,8 @@
       "bytes": 38,
       "imports": []
     },
-    "src/pages/treatments-catalog/treatments-catalog.component.scss": {
-      "bytes": 46,
-      "imports": []
-    },
-    "src/pages/user-profile/user-profile.component.scss": {
-      "bytes": 42,
-      "imports": []
-    },
-    "src/pages/about/about.component.scss": {
-      "bytes": 35,
-      "imports": []
-    },
-    "src/app.component.scss": {
-      "bytes": 33,
-      "imports": []
-    },
-    "src/pages/treatments/treatments.component.scss": {
-      "bytes": 38,
-      "imports": []
-    },
-    "src/pages/portfolio/portfolio.component.scss": {
-      "bytes": 39,
-      "imports": []
-    },
     "src/pages/veils-catalog/veils-catalog.component.scss": {
       "bytes": 304,
-      "imports": []
-    },
-    "src/pages/user-home/user-home.component.scss": {
-      "bytes": 39,
       "imports": []
     },
     "src/features/language-selection/language-switcher.component.scss": {
@@ -9183,12 +9159,36 @@
       "bytes": 39,
       "imports": []
     },
-    "src/shared/ui/list-view/list-view.component.scss": {
-      "bytes": 239,
+    "src/pages/user-home/user-home.component.scss": {
+      "bytes": 39,
+      "imports": []
+    },
+    "src/pages/auth/auth.component.scss": {
+      "bytes": 34,
       "imports": []
     },
     "src/pages/veil/veil.component.scss": {
       "bytes": 34,
+      "imports": []
+    },
+    "src/pages/user-profile/user-profile.component.scss": {
+      "bytes": 42,
+      "imports": []
+    },
+    "src/pages/about/about.component.scss": {
+      "bytes": 35,
+      "imports": []
+    },
+    "src/pages/treatments/treatments.component.scss": {
+      "bytes": 38,
+      "imports": []
+    },
+    "src/pages/treatments-catalog/treatments-catalog.component.scss": {
+      "bytes": 46,
+      "imports": []
+    },
+    "src/shared/ui/list-view/list-view.component.scss": {
+      "bytes": 239,
       "imports": []
     },
     "angular:locale/data:en-US": {
@@ -9555,10 +9555,10 @@
       },
       "bytes": 19009
     },
-    "chunk-Z524LJE7.js": {
+    "chunk-N2OSZO6Z.js": {
       "imports": [
         {
-          "path": "chunk-RJE4GT3Z.js",
+          "path": "chunk-H7YKLQEK.js",
           "kind": "import-statement"
         },
         {
@@ -9596,14 +9596,14 @@
       },
       "bytes": 17213
     },
-    "main-5J252Q3U.js": {
+    "main-34HLDLUU.js": {
       "imports": [
         {
           "path": "chunk-VM2O74E3.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-RJE4GT3Z.js",
+          "path": "chunk-H7YKLQEK.js",
           "kind": "import-statement"
         },
         {
@@ -9635,7 +9635,7 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-KCWLOFKE.js",
+          "path": "chunk-5NBZDDVC.js",
           "kind": "dynamic-import"
         },
         {
@@ -9655,7 +9655,7 @@
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-6FS3D7CU.js",
+          "path": "chunk-3FEIJMGR.js",
           "kind": "dynamic-import"
         },
         {
@@ -9691,7 +9691,7 @@
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-Z524LJE7.js",
+          "path": "chunk-N2OSZO6Z.js",
           "kind": "dynamic-import"
         }
       ],
@@ -9732,7 +9732,7 @@
           "bytesInOutput": 645
         },
         "src/app/app.config.ts": {
-          "bytesInOutput": 102
+          "bytesInOutput": 88
         },
         "src/app.component.ts": {
           "bytesInOutput": 370
@@ -9741,16 +9741,16 @@
           "bytesInOutput": 37
         }
       },
-      "bytes": 67151
+      "bytes": 67137
     },
-    "chunk-KCWLOFKE.js": {
+    "chunk-5NBZDDVC.js": {
       "imports": [
         {
           "path": "chunk-T3FGNGCC.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-RJE4GT3Z.js",
+          "path": "chunk-H7YKLQEK.js",
           "kind": "import-statement"
         },
         {
@@ -10138,10 +10138,10 @@
       },
       "bytes": 0
     },
-    "chunk-6FS3D7CU.js": {
+    "chunk-3FEIJMGR.js": {
       "imports": [
         {
-          "path": "chunk-RJE4GT3Z.js",
+          "path": "chunk-H7YKLQEK.js",
           "kind": "import-statement"
         },
         {
@@ -10193,7 +10193,7 @@
       },
       "bytes": 11756
     },
-    "chunk-RJE4GT3Z.js": {
+    "chunk-H7YKLQEK.js": {
       "imports": [
         {
           "path": "chunk-CZ6GUC4N.js",
@@ -10209,13 +10209,13 @@
       ],
       "inputs": {
         "src/entities/user/auth.service.ts": {
-          "bytesInOutput": 1311
+          "bytesInOutput": 1316
         },
         "src/entities/user/index.ts": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 1452
+      "bytes": 1459
     },
     "chunk-CZ6GUC4N.js": {
       "imports": [
@@ -11085,10 +11085,10 @@
       },
       "bytes": 221412
     },
-    "auth.component-IAK6YEY3.css": {
+    "app.component-TJAU7YSO.css": {
       "imports": [],
       "inputs": {
-        "src/pages/auth/auth.component.scss": {
+        "src/app.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11115,6 +11115,16 @@
       "bytes": 0,
       "ng-component": true
     },
+    "portfolio.component-HVS6W3CR.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/portfolio/portfolio.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
     "card-view.component-6XEUSBKE.css": {
       "imports": [],
       "inputs": {
@@ -11135,10 +11145,60 @@
       "bytes": 0,
       "ng-component": true
     },
-    "treatments-catalog.component-XJAGPTDO.css": {
+    "veils-catalog.component-DRP3JBNJ.css": {
       "imports": [],
       "inputs": {
-        "src/pages/treatments-catalog/treatments-catalog.component.scss": {
+        "src/pages/veils-catalog/veils-catalog.component.scss": {
+          "bytesInOutput": 260
+        }
+      },
+      "bytes": 261,
+      "ng-component": true
+    },
+    "language-switcher.component-GCS7LFEK.css": {
+      "imports": [],
+      "inputs": {
+        "src/features/language-selection/language-switcher.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "inventory.component-ETSOI3KZ.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/inventory/inventory.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "user-home.component-VLFIUKKL.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/user-home/user-home.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "auth.component-IAK6YEY3.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/auth/auth.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "veil.component-SLDJBJKH.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/veil/veil.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11165,16 +11225,6 @@
       "bytes": 0,
       "ng-component": true
     },
-    "app.component-TJAU7YSO.css": {
-      "imports": [],
-      "inputs": {
-        "src/app.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
     "treatments.component-3JU3J4R7.css": {
       "imports": [],
       "inputs": {
@@ -11185,50 +11235,10 @@
       "bytes": 0,
       "ng-component": true
     },
-    "portfolio.component-HVS6W3CR.css": {
+    "treatments-catalog.component-XJAGPTDO.css": {
       "imports": [],
       "inputs": {
-        "src/pages/portfolio/portfolio.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "veils-catalog.component-DRP3JBNJ.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/veils-catalog/veils-catalog.component.scss": {
-          "bytesInOutput": 260
-        }
-      },
-      "bytes": 261,
-      "ng-component": true
-    },
-    "user-home.component-VLFIUKKL.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/user-home/user-home.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "language-switcher.component-GCS7LFEK.css": {
-      "imports": [],
-      "inputs": {
-        "src/features/language-selection/language-switcher.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "inventory.component-ETSOI3KZ.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/inventory/inventory.component.scss": {
+        "src/pages/treatments-catalog/treatments-catalog.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11243,16 +11253,6 @@
         }
       },
       "bytes": 159,
-      "ng-component": true
-    },
-    "veil.component-SLDJBJKH.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/veil/veil.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
       "ng-component": true
     },
     "polyfills-XUCFZZM5.js": {
