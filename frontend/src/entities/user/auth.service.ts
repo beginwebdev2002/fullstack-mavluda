@@ -1,7 +1,7 @@
 import { Injectable, signal, computed, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { tap } from 'rxjs/operators';
+import { take, tap } from 'rxjs/operators';
 import { User, AuthResponse } from './model/user.model';
 import { jwtDecode } from 'jwt-decode';
 import { SigninFormModel, SignupFormModel } from '@features/auth';
@@ -23,7 +23,9 @@ export class AuthService {
 
   authInit(): Observable<User> {
     return this.me()
-    .pipe(tap(user => {      
+    .pipe(
+      take(1),
+      tap(user => {      
       if(!user) {
         this.router.navigate(['/auth/login']);
         return;

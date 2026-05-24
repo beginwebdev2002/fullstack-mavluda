@@ -27,7 +27,7 @@ export const appConfig: ApplicationConfig = {
     ),
     provideAppInitializer(() => {
       const authService = inject(AuthService);
-      authService.authInit().subscribe();
+      return authService.authInit();
     })
   ],
 };
