@@ -27,7 +27,7 @@ let AuthController = class AuthController {
         this.authService = authService;
     }
     setRefreshTokenCookie(res, refreshToken) {
-        res.cookie('refresh_token', refreshToken, {
+        res.cookie('refreshToken', refreshToken, {
             httpOnly: true,
             secure: true,
             sameSite: 'strict',
@@ -36,8 +36,8 @@ let AuthController = class AuthController {
     }
     async login(loginDto, res) {
         try {
-            const { access_token, refresh_token, user } = await this.authService.login(loginDto);
-            this.setRefreshTokenCookie(res, refresh_token);
+            const { access_token, refreshToken, user } = await this.authService.login(loginDto);
+            this.setRefreshTokenCookie(res, refreshToken);
             return { access_token, user };
         }
         catch (error) {
@@ -53,8 +53,8 @@ let AuthController = class AuthController {
     }
     async register(registerDto, res) {
         try {
-            const { access_token, refresh_token, user } = await this.authService.register(registerDto);
-            this.setRefreshTokenCookie(res, refresh_token);
+            const { access_token, refreshToken, user } = await this.authService.register(registerDto);
+            this.setRefreshTokenCookie(res, refreshToken);
             return { access_token, user };
         }
         catch (error) {
@@ -66,16 +66,16 @@ let AuthController = class AuthController {
         }
     }
     async refresh(req, res) {
-        const refreshToken = req.cookies?.['refresh_token'];
+        const refreshToken = req.cookies?.refreshToken;
         if (!refreshToken) {
             throw new common_1.UnauthorizedException('Refresh token not found');
         }
         try {
-            const { access_token, refresh_token: newRefreshToken, user } = await this.authService.refreshTokens(refreshToken);
+            const { access_token, refreshToken: newRefreshToken, user, } = await this.authService.refreshTokens(refreshToken);
             this.setRefreshTokenCookie(res, newRefreshToken);
             return { access_token, user };
         }
-        catch (e) {
+        catch {
             throw new common_1.UnauthorizedException('Invalid or expired refresh token');
         }
     }
@@ -92,6 +92,24 @@ let AuthController = class AuthController {
                 throw error;
             }
             throw new common_1.UnauthorizedException('INVALID_TOKEN');
+        }
+    }
+    async me(req) {
+        const user = this.authService.whoami(req);
+        return user;
+    }
+    async isAdmin(req, res) {
+        const refreshToken = req.cookies?.refreshToken;
+        if (!refreshToken) {
+            throw new common_1.UnauthorizedException('Refresh token not found');
+        }
+        try {
+            const { access_token, refreshToken: newRefreshToken, user, } = await this.authService.refreshTokens(refreshToken);
+            this.setRefreshTokenCookie(res, newRefreshToken);
+            return { access_token, user };
+        }
+        catch {
+            throw new common_1.UnauthorizedException('Invalid or expired refresh token');
         }
     }
 };
@@ -116,7 +134,7 @@ __decorate([
 ], AuthController.prototype, "register", null);
 __decorate([
     (0, public_decorator_1.Public)(),
-    (0, common_1.Post)('refresh'),
+    (0, common_1.Get)('refresh'),
     __param(0, (0, common_1.Req)()),
     __param(1, (0, common_1.Res)({ passthrough: true })),
     __metadata("design:type", Function),
@@ -130,6 +148,21 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "telegramAuth", null);
+__decorate([
+    (0, common_1.Get)('me'),
+    __param(0, (0, common_1.Req)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], AuthController.prototype, "me", null);
+__decorate([
+    (0, common_1.Get)('check-admin'),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Res)({ passthrough: true })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], AuthController.prototype, "isAdmin", null);
 exports.AuthController = AuthController = __decorate([
     (0, common_1.Controller)('auth'),
     __metadata("design:paramtypes", [telegram_auth_service_1.TelegramAuthService,

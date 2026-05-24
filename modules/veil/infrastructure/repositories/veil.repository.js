@@ -25,7 +25,8 @@ let VeilRepository = class VeilRepository {
         this.veilModel = veilModel;
     }
     async count() {
-        return this.veilModel.countDocuments().exec();
+        const count = await this.veilModel.countDocuments().exec();
+        return count;
     }
     async findAll() {
         const docs = await this.veilModel.find().exec();

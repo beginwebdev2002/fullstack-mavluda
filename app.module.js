@@ -10,27 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
+const admin_settings_1 = require("./modules/admin-settings");
+const auth_1 = require("./modules/auth");
+const booking_1 = require("./modules/booking");
+const gallery_1 = require("./modules/gallery");
+const inventory_1 = require("./modules/inventory");
+const partnership_1 = require("./modules/partnership");
+const payment_1 = require("./modules/payment");
+const treatments_1 = require("./modules/treatments");
+const user_1 = require("./modules/user");
+const veil_1 = require("./modules/veil");
 const common_1 = require("@nestjs/common");
 const serve_static_1 = require("@nestjs/serve-static");
 const path_1 = require("path");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
-const app_config_module_1 = require("./common/config/app-config.module");
-const database_module_1 = require("./common/database/database.module");
-const user_1 = require("./modules/user");
-const admin_settings_1 = require("./modules/admin-settings");
-const veil_1 = require("./modules/veil");
-const treatments_1 = require("./modules/treatments");
-const gallery_1 = require("./modules/gallery");
-const auth_1 = require("./modules/auth");
-const payment_1 = require("./modules/payment");
-const booking_1 = require("./modules/booking");
-const inventory_1 = require("./modules/inventory");
-const partnership_1 = require("./modules/partnership");
-const seed_module_1 = require("./common/seed/seed.module");
-const core_1 = require("@nestjs/core");
-const jwt_auth_guard_1 = require("./common/guards/jwt-auth.guard");
-const roles_guard_1 = require("./common/guards/roles.guard");
+const config_1 = require("./common/config");
+const database_1 = require("./common/database");
+const seed_1 = require("./common/seed");
 let AppModule = class AppModule {
     constructor() { }
 };
@@ -38,9 +35,9 @@ exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
-            app_config_module_1.AppConfigModule,
-            database_module_1.DatabaseModule,
-            seed_module_1.SeedModule,
+            config_1.AppConfigModule,
+            database_1.DatabaseModule,
+            seed_1.SeedModule,
             user_1.UserModule,
             admin_settings_1.AdminSettingsModule,
             veil_1.VeilModule,
@@ -57,17 +54,7 @@ exports.AppModule = AppModule = __decorate([
             }),
         ],
         controllers: [app_controller_1.AppController],
-        providers: [
-            app_service_1.AppService,
-            {
-                provide: core_1.APP_GUARD,
-                useClass: jwt_auth_guard_1.JwtAuthGuard,
-            },
-            {
-                provide: core_1.APP_GUARD,
-                useClass: roles_guard_1.RolesGuard,
-            },
-        ],
+        providers: [app_service_1.AppService],
     }),
     __metadata("design:paramtypes", [])
 ], AppModule);

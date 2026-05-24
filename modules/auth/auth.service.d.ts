@@ -1,8 +1,9 @@
+import { AppConfigService } from '@common/config/app-config.service';
 import { UserService } from '@modules/user';
 import { JwtService } from '@nestjs/jwt';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
-import { AppConfigService } from '@common/config/app-config.service';
+import { AuthenticatedRequest } from '@common/interfaces/authenticated-request.interface';
 import { User } from '@modules/user';
 export declare class AuthService {
     private userService;
@@ -13,17 +14,18 @@ export declare class AuthService {
     private generateTokens;
     login(loginDto: LoginDto): Promise<{
         access_token: string;
-        refresh_token: string;
+        refreshToken: string;
         user: Omit<User, 'passwordHash' | 'createdAt'>;
     }>;
     register(registerDto: RegisterDto): Promise<{
         access_token: string;
-        refresh_token: string;
+        refreshToken: string;
         user: Omit<User, 'passwordHash' | 'createdAt'>;
     }>;
     refreshTokens(refreshToken: string): Promise<{
         access_token: string;
-        refresh_token: string;
+        refreshToken: string;
         user: Omit<User, 'passwordHash' | 'createdAt'>;
     }>;
+    whoami(req: AuthenticatedRequest): Promise<Omit<User, 'passwordHash' | 'createdAt'> | null>;
 }

@@ -43,11 +43,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthService = void 0;
-const common_1 = require("@nestjs/common");
+const app_config_service_1 = require("../../common/config/app-config.service");
 const user_1 = require("../user");
+const common_1 = require("@nestjs/common");
 const jwt_1 = require("@nestjs/jwt");
 const bcrypt = __importStar(require("bcrypt"));
-const app_config_service_1 = require("../../common/config/app-config.service");
 let AuthService = class AuthService {
     userService;
     jwtService;
@@ -62,8 +62,18 @@ let AuthService = class AuthService {
         if (user && user.passwordHash) {
             const isMatch = await bcrypt.compare(pass, user.passwordHash);
             if (isMatch) {
-                const { passwordHash, ...result } = user;
-                return result;
+                const { createdAt, firstName, id, role, email, lastName, photoUrl, telegramId, username, } = user;
+                return {
+                    id,
+                    email,
+                    firstName,
+                    lastName,
+                    photoUrl,
+                    role,
+                    username,
+                    telegramId,
+                    createdAt,
+                };
             }
         }
         return null;
@@ -82,7 +92,7 @@ let AuthService = class AuthService {
             secret: this.configService.jwtRefreshSecret,
             expiresIn: this.configService.jwtRefreshExpiresIn,
         });
-        return { access_token: accessToken, refresh_token: refreshToken };
+        return { access_token: accessToken, refreshToken: refreshToken };
     }
     async login(loginDto) {
         const user = await this.validateUser(loginDto.email, loginDto.password);
@@ -128,15 +138,34 @@ let AuthService = class AuthService {
                 throw new common_1.UnauthorizedException('User not found');
             }
             const tokens = this.generateTokens(user);
-            const { passwordHash, createdAt, ...userPayload } = user;
+            const { firstName, lastName, email, photoUrl, role, username, telegramId, } = user;
             return {
                 ...tokens,
-                user: userPayload,
+                user: {
+                    id: user.id,
+                    email,
+                    firstName,
+                    lastName,
+                    photoUrl,
+                    role,
+                    username,
+                    telegramId,
+                },
             };
         }
-        catch (e) {
+        catch {
             throw new common_1.UnauthorizedException('Invalid refresh token');
         }
+    }
+    async whoami(req) {
+        const refreshToken = req.cookies?.refreshToken;
+        if (!refreshToken) {
+            throw new common_1.UnauthorizedException();
+        }
+        const payload = this.jwtService.verify(refreshToken, {
+            secret: this.configService.jwtRefreshSecret,
+        });
+        return this.userService.findOne(payload.sub);
     }
 };
 exports.AuthService = AuthService;
