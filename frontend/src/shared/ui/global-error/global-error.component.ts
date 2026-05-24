@@ -1,8 +1,6 @@
 import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ErrorService } from "@shared/services";
-import { animate, style, transition, trigger } from "@angular/animations";
-
 @Component({
   selector: "app-global-error",
   standalone: true,
@@ -10,7 +8,6 @@ import { animate, style, transition, trigger } from "@angular/animations";
   template: `
     @if (errorService.error()) {
       <div
-        @fadeInOut
         class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
         role="dialog"
         aria-modal="true"
@@ -43,23 +40,6 @@ import { animate, style, transition, trigger } from "@angular/animations";
     }
   `,
   styles: [],
-  animations: [
-    trigger("fadeInOut", [
-      transition(":enter", [
-        style({ opacity: 0, transform: "translateY(-20px)" }),
-        animate(
-          "300ms ease-out",
-          style({ opacity: 1, transform: "translateY(0)" }),
-        ),
-      ]),
-      transition(":leave", [
-        animate(
-          "200ms ease-in",
-          style({ opacity: 0, transform: "translateY(-20px)" }),
-        ),
-      ]),
-    ]),
-  ],
 })
 export class GlobalErrorComponent {
   errorService = inject(ErrorService);

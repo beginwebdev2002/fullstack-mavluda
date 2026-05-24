@@ -140,11 +140,13 @@ export class TreatmentsPageComponent implements OnInit {
     const id = formData.get("id") as string | null;
 
     if (!id || id === "0" || id === "") {
-      this.treatmentsService.createTreatment(formData).subscribe(() => {
+      this.treatmentsService.createTreatment(formData)
+      .subscribe(() => {
         this.closeEditModal();
       });
     } else {
-      this.treatmentsService.updateTreatment(id, formData).subscribe(() => {
+      this.treatmentsService.updateTreatment(id, formData)
+      .subscribe(() => {
         this.closeEditModal();
       });
     }

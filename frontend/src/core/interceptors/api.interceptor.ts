@@ -1,22 +1,29 @@
 import { HttpInterceptorFn } from "@angular/common/http";
 import { linkServerConvert } from "@shared/lib";
+import { retry } from "rxjs";
 
 export const apiInterceptor: HttpInterceptorFn = (req, next) => {
-  if (req.url.startsWith("/")) {
-    const token =
-      typeof sessionStorage !== "undefined"
-        ? sessionStorage.getItem("token")
-        : null;
-    let headers = req.headers;
-    if (token) {
-      headers = headers.set("Authorization", `Bearer ${token}`);
-    }
-
+  const token = sessionStorage.getItem("token");
+  if (!token) {
     const apiReq = req.clone({
       url: linkServerConvert(req.url),
-      headers,
+      withCredentials: true,
     });
     return next(apiReq);
   }
-  return next(req);
+
+  const apiReq = req.clone({
+    url: req.url.startsWith("http") ? req.url : linkServerConvert(req.url),
+    withCredentials: true,
+    setHeaders: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return next(apiReq)
+  .pipe(
+    retry({
+      count: 2,
+      delay: 1000,
+    })
+  )
 };

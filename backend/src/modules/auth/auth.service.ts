@@ -1,16 +1,16 @@
+import { AppConfigService } from '@common/config/app-config.service';
+import { UserService } from '@modules/user';
 import {
   ConflictException,
   Injectable,
   UnauthorizedException,
 } from '@nestjs/common';
-import { UserService } from '@modules/user';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
-import { AppConfigService } from '@common/config/app-config.service';
 
-import { AuthResponse } from './interfaces/auth-response.interface';
+import { AuthenticatedRequest } from '@common/interfaces/authenticated-request.interface';
 import { User } from '@modules/user';
 
 @Injectable()
@@ -29,9 +29,28 @@ export class AuthService {
     if (user && user.passwordHash) {
       const isMatch = await bcrypt.compare(pass, user.passwordHash);
       if (isMatch) {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const { passwordHash, ...result } = user;
-        return result;
+        const {
+          createdAt,
+          firstName,
+          id,
+          role,
+          email,
+          lastName,
+          photoUrl,
+          telegramId,
+          username,
+        } = user;
+        return {
+          id,
+          email,
+          firstName,
+          lastName,
+          photoUrl,
+          role,
+          username,
+          telegramId,
+          createdAt,
+        };
       }
     }
     return null;
@@ -53,25 +72,33 @@ export class AuthService {
       expiresIn: this.configService.jwtRefreshExpiresIn as any,
     });
 
-    return { access_token: accessToken, refresh_token: refreshToken };
+    return { access_token: accessToken, refreshToken: refreshToken };
   }
 
-  async login(loginDto: LoginDto): Promise<{ access_token: string; refresh_token: string; user: Omit<User, 'passwordHash' | 'createdAt'> }> {
+  async login(loginDto: LoginDto): Promise<{
+    access_token: string;
+    refreshToken: string;
+    user: Omit<User, 'passwordHash' | 'createdAt'>;
+  }> {
     const user = await this.validateUser(loginDto.email, loginDto.password);
     if (!user) {
       throw new UnauthorizedException('Invalid credentials');
     }
-    
+
     const tokens = this.generateTokens(user);
     const { createdAt, ...userPayload } = user;
-    
+
     return {
       ...tokens,
       user: userPayload as Omit<User, 'passwordHash' | 'createdAt'>,
     };
   }
 
-  async register(registerDto: RegisterDto): Promise<{ access_token: string; refresh_token: string; user: Omit<User, 'passwordHash' | 'createdAt'> }> {
+  async register(registerDto: RegisterDto): Promise<{
+    access_token: string;
+    refreshToken: string;
+    user: Omit<User, 'passwordHash' | 'createdAt'>;
+  }> {
     const existing = await this.userService.findByEmail(registerDto.email);
     if (existing) {
       throw new ConflictException('User with this email already exists');
@@ -99,26 +126,61 @@ export class AuthService {
     };
   }
 
-  async refreshTokens(refreshToken: string): Promise<{ access_token: string; refresh_token: string; user: Omit<User, 'passwordHash' | 'createdAt'> }> {
+  async refreshTokens(refreshToken: string): Promise<{
+    access_token: string;
+    refreshToken: string;
+    user: Omit<User, 'passwordHash' | 'createdAt'>;
+  }> {
     try {
-      const payload = this.jwtService.verify(refreshToken, {
+      const payload = this.jwtService.verify<{ sub: string }>(refreshToken, {
         secret: this.configService.jwtRefreshSecret,
       });
       const user = await this.userService.findOne(payload.sub);
       if (!user) {
         throw new UnauthorizedException('User not found');
       }
-      
+
       const tokens = this.generateTokens(user);
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const { passwordHash, createdAt, ...userPayload } = user;
-      
+      const {
+        firstName,
+        lastName,
+        email,
+        photoUrl,
+        role,
+        username,
+        telegramId,
+      } = user;
+
       return {
         ...tokens,
-        user: userPayload as Omit<User, 'passwordHash' | 'createdAt'>,
+        user: {
+          id: user.id,
+          email,
+          firstName,
+          lastName,
+          photoUrl,
+          role,
+          username,
+          telegramId,
+        },
       };
-    } catch (e) {
+    } catch {
       throw new UnauthorizedException('Invalid refresh token');
     }
+  }
+
+  async whoami(
+    req: AuthenticatedRequest,
+  ): Promise<Omit<User, 'passwordHash' | 'createdAt'> | null> {
+    const refreshToken = req.cookies?.refreshToken;
+    if (!refreshToken) {
+      throw new UnauthorizedException();
+    }
+
+    const payload = this.jwtService.verify<{ sub: string }>(refreshToken, {
+      secret: this.configService.jwtRefreshSecret,
+    });
+
+    return this.userService.findOne(payload.sub);
   }
 }

@@ -14,12 +14,12 @@ export class VeilService {
   veils = this._veils.asReadonly();
 
   getCount(): Observable<number> {
-    return this.http.get<number>(`${API_ENDPOINTS.VEILS.BASE}/count`);
+    return this.http.get<number>(`${API_ENDPOINTS.VEILS.URL}/count`);
   }
 
   getVeils(): Observable<Veil[]> {
     return this.http
-      .get<Veil[]>(API_ENDPOINTS.VEILS.BASE)
+      .get<Veil[]>(API_ENDPOINTS.VEILS.URL)
       .pipe(tap((veils) => this._veils.set(veils)));
   }
 
@@ -29,7 +29,7 @@ export class VeilService {
 
   createVeil(veil: Omit<Veil, "id"> | FormData): Observable<Veil> {
     return this.http
-      .post<Veil>(API_ENDPOINTS.VEILS.BASE, veil)
+      .post<Veil>(API_ENDPOINTS.VEILS.URL, veil)
       .pipe(
         tap((newVeil) => this._veils.update((veils) => [...veils, newVeil])),
       );

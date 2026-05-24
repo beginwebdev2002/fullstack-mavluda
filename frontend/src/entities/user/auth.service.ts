@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { tap } from 'rxjs/operators';
 import { User, AuthResponse } from './model/user.model';
 import { jwtDecode } from 'jwt-decode';
+import { SigninFormModel, SignupFormModel } from '@features/auth';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,32 +14,48 @@ export class AuthService {
   private http = inject(HttpClient);
   private router = inject(Router);
   
-  // State
-  private _currentUser = signal<User | null>(this.getUserFromStorage());
+  private _currentUser = signal<User | null>(null);
   
-  // Public Signals
   currentUser = this._currentUser.asReadonly();
   isLoggedIn = computed(() => !!this.currentUser());
   isAdmin = computed(() => this.currentUser()?.role === 'admin');
+  
 
-  constructor() {
-     // Optional: Validate token expiration on init
+  authInit(): Observable<User> {
+    return this.me()
+    .pipe(tap(user => {      
+      if(!user) {
+        this.router.navigate(['/auth/login']);
+        return;
+      }
+      this._currentUser.set(user);
+      if(user.role === 'admin') {
+        this.router.navigate(['/admin/dashboard']);
+      } else {
+        this.router.navigate(['/user/home']);
+      }
+    }));
   }
 
-  signin(credentials: any) {
-    return this.http.post<AuthResponse>('/auth/login', credentials).pipe(
+  signin(body: SigninFormModel) {
+    return this.http.post<AuthResponse>('/auth/login', body)
+    .pipe(
       tap(response => {
         if(response && response.access_token) {
+          this._currentUser.set(response.user);
           this.setSession(response.access_token, response.user);
+          this.router.navigate(['/user/home']);
         }
       })
     );
   }
 
-  signup(data: any) {
-    return this.http.post<AuthResponse>('/auth/register', data).pipe(
+  signup(body: Partial<SignupFormModel>) {
+    return this.http.post<AuthResponse>('/auth/register', body)
+    .pipe(
       tap(response => {
         if(response && response.access_token) {
+          this._currentUser.set(response.user);
           this.setSession(response.access_token, response.user);
         }
       })
@@ -45,7 +63,8 @@ export class AuthService {
   }
 
   refreshToken() {
-    return this.http.post<AuthResponse>('/auth/refresh', {}, { withCredentials: true }).pipe(
+    return this.http.get<AuthResponse>('/auth/refresh')
+    .pipe(
       tap(response => {
         if(response && response.access_token) {
           this.setSession(response.access_token, response.user);
@@ -59,37 +78,14 @@ export class AuthService {
     this._currentUser.set(null);
     this.router.navigate(['/auth/login']);
   }
-
-  private setSession(token: string, userPayload?: any) {
-    sessionStorage.setItem('token', token);
-    const user = userPayload || this.decodeToken(token);
-    this._currentUser.set(user);
-  }
-
-  private getUserFromStorage(): User | null {
-    if (typeof sessionStorage === 'undefined') return null;
+  me(): Observable<User> {
     const token = sessionStorage.getItem('token');
-    if (token) {
-      return this.decodeToken(token);
-    }
-    return null;
+    if(!token) return of(null);
+    return this.http.get<User>('/auth/me');
   }
 
-  private decodeToken(token: string): User | null {
-    try {
-      const decoded: any = jwtDecode(token);
-      // Map decoded payload to User interface
-      // Payload: { sub: id, email, role, ... }
-      return {
-        id: decoded.sub,
-        email: decoded.email,
-        role: decoded.role,
-        firstName: decoded.firstName || '', // If included in token
-        lastName: decoded.lastName,
-        photoUrl: decoded.photoUrl
-      };
-    } catch (e) {
-      return null;
-    }
+  private setSession(token: string, userPayload: User) {
+    sessionStorage.setItem('token', token);
+    this._currentUser.set(userPayload);
   }
 }

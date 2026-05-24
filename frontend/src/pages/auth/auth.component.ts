@@ -5,29 +5,26 @@ import {
   inject,
   signal
 } from "@angular/core";
-import { Router } from "@angular/router";
-import { AuthService } from "@entities/user";
-import { SIGNIN_FORM_INITIAL_VALUES, SigninFormModel, signinFormSchema } from "@features/auth/model/auth.model";
+import { SigninFormComponent, SigninFormModel, SignupFormComponent, SignupFormModel } from "@features/auth";
 import { LanguageSwitcherComponent } from "@features/language-selection";
-import { SigninFormComponent, SignupFormComponent } from "@features/auth";
+import { AuthService } from "@entities/user";
+import { objectExcludePropety } from "@shared/lib";
 
 @Component({
   selector: "app-auth",
   imports: [CommonModule, LanguageSwitcherComponent, SigninFormComponent, SignupFormComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./auth.component.html",
-  styleUrls: ["./auth.component.scss"],
+  styleUrl: "./auth.component.scss",
 })
 export class AuthComponent {
   private document: Document = inject(DOCUMENT);
+  private readonly authService = inject(AuthService);
 
   isDarkMode = signal(this.document.documentElement.classList.contains("dark"));
 
-  // 'signin' or 'signup' mode
-  authMode = signal<"signin" | "signup">("signin");
 
-  constructor() {
-  }
+  authMode = signal<"signin" | "signup">("signin");
 
   setAuthMode(mode: "signin" | "signup") {
     this.authMode.set(mode);
@@ -39,6 +36,22 @@ export class AuthComponent {
     this.isDarkMode.set(
       this.document.documentElement.classList.contains("dark"),
     );
+  }
+
+
+  onSignInSubmit(body: SigninFormModel) {
+    const validateModel = objectExcludePropety(body, ['rememberMe']);
+    this.authService.signin(validateModel as SigninFormModel)
+    .subscribe((data) => {
+      console.log('Signed in Correct!', data);
+    });
+  }
+
+  onSignupSubmit(body: SignupFormModel) {
+    this.authService.signup(body)
+    .subscribe((data) => {
+      console.log('Signed up Correct!', data);
+    });
   }
 
 }

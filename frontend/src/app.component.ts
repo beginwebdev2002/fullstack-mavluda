@@ -1,14 +1,15 @@
+import { CommonModule } from "@angular/common";
 import {
-  Component,
   ChangeDetectionStrategy,
+  Component,
   inject,
   OnInit,
 } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
-import { CommonModule } from "@angular/common";
-import { AuthService } from "@shared/services";
-import { TelegramService } from "@shared/services";
+import { AuthService } from "@entities/user";
 import { GlobalErrorComponent } from "@shared/ui";
+import { API_ENDPOINTS } from "./core/constants";
+import { linkMerge } from "@shared/lib";
 
 @Component({
   selector: "app-root",
@@ -18,14 +19,11 @@ import { GlobalErrorComponent } from "@shared/ui";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
-  public authService = inject(AuthService);
-  public telegramService = inject(TelegramService);
+  authService = inject(AuthService);
 
-  ngOnInit() {
-    this.telegramService.ready();
-    this.telegramService.expand();
+  async ngOnInit() {
+    const link = linkMerge(API_ENDPOINTS.VEILS.URL, "1");
 
-    // Delegate auth logic to the comprehensive AuthService
-    this.authService.checkTelegramAuth();
+    console.log(link);
   }
 }

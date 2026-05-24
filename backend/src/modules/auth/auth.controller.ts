@@ -8,6 +8,7 @@ import {
   BadRequestException,
   Res,
   Req,
+  Get,
 } from '@nestjs/common';
 import type { Response, Request } from 'express';
 import { TelegramAuthService } from './telegram-auth.service';
@@ -20,6 +21,7 @@ import {
   AuthResponse,
   TelegramAuthResponse,
 } from './interfaces/auth-response.interface';
+import type { AuthenticatedRequest } from '@common/interfaces/authenticated-request.interface';
 
 @Controller('auth')
 export class AuthController {
@@ -29,7 +31,7 @@ export class AuthController {
   ) {}
 
   private setRefreshTokenCookie(res: Response, refreshToken: string) {
-    res.cookie('refresh_token', refreshToken, {
+    res.cookie('refreshToken', refreshToken, {
       httpOnly: true,
       secure: true,
       sameSite: 'strict',
@@ -44,8 +46,9 @@ export class AuthController {
     @Res({ passthrough: true }) res: Response,
   ): Promise<AuthResponse> {
     try {
-      const { access_token, refresh_token, user } = await this.authService.login(loginDto);
-      this.setRefreshTokenCookie(res, refresh_token);
+      const { access_token, refreshToken, user } =
+        await this.authService.login(loginDto);
+      this.setRefreshTokenCookie(res, refreshToken);
       return { access_token, user };
     } catch (error) {
       if (
@@ -68,8 +71,9 @@ export class AuthController {
     @Res({ passthrough: true }) res: Response,
   ): Promise<AuthResponse> {
     try {
-      const { access_token, refresh_token, user } = await this.authService.register(registerDto);
-      this.setRefreshTokenCookie(res, refresh_token);
+      const { access_token, refreshToken, user } =
+        await this.authService.register(registerDto);
+      this.setRefreshTokenCookie(res, refreshToken);
       return { access_token, user };
     } catch (error) {
       if (
@@ -83,21 +87,25 @@ export class AuthController {
   }
 
   @Public()
-  @Post('refresh')
+  @Get('refresh')
   async refresh(
-    @Req() req: Request,
+    @Req() req: AuthenticatedRequest,
     @Res({ passthrough: true }) res: Response,
   ): Promise<AuthResponse> {
-    const refreshToken = req.cookies?.['refresh_token'];
+    const refreshToken = req.cookies?.refreshToken;
     if (!refreshToken) {
       throw new UnauthorizedException('Refresh token not found');
     }
 
     try {
-      const { access_token, refresh_token: newRefreshToken, user } = await this.authService.refreshTokens(refreshToken);
+      const {
+        access_token,
+        refreshToken: newRefreshToken,
+        user,
+      } = await this.authService.refreshTokens(refreshToken);
       this.setRefreshTokenCookie(res, newRefreshToken);
       return { access_token, user };
-    } catch (e) {
+    } catch {
       throw new UnauthorizedException('Invalid or expired refresh token');
     }
   }
@@ -119,6 +127,35 @@ export class AuthController {
         throw error;
       }
       throw new UnauthorizedException('INVALID_TOKEN');
+    }
+  }
+
+  @Get('me')
+  async me(@Req() req: AuthenticatedRequest) {
+    const user = this.authService.whoami(req);
+    return user;
+  }
+
+  @Get('check-admin')
+  async isAdmin(
+    @Req() req: AuthenticatedRequest,
+    @Res({ passthrough: true }) res: Response,
+  ): Promise<AuthResponse> {
+    const refreshToken = req.cookies?.refreshToken;
+    if (!refreshToken) {
+      throw new UnauthorizedException('Refresh token not found');
+    }
+
+    try {
+      const {
+        access_token,
+        refreshToken: newRefreshToken,
+        user,
+      } = await this.authService.refreshTokens(refreshToken);
+      this.setRefreshTokenCookie(res, newRefreshToken);
+      return { access_token, user };
+    } catch {
+      throw new UnauthorizedException('Invalid or expired refresh token');
     }
   }
 }

@@ -2,9 +2,9 @@ import { Schema, email, minLength, required } from "@angular/forms/signals";
 
 
 export const SIGNIN_FORM_INITIAL_VALUES = {
-    email: "",
-    password: "",
-    rememberMe: false,
+    email: "admin@beauty.tj",
+    password: "beauty2026",
+    rememberMe: true,
 }
 
 export const SIGNUP_FORM_INITIAL_VALUES = {

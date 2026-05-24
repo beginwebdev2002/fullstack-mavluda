@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, output, signal } from "@angular/core";
 import { form, FormField } from "@angular/forms/signals";
 import { SIGNIN_FORM_INITIAL_VALUES, SigninFormModel, signinFormSchema } from "@features/auth/model/auth.model";
-import { AuthService } from "@shared/services";
+import { AuthService } from "@entities/user";
 
 @Component({
     selector: "app-signin-form",
@@ -11,25 +11,19 @@ import { AuthService } from "@shared/services";
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SigninFormComponent {
-    readonly authService = inject(AuthService);
-    constructor() {}
-    
+    readonly submitted = output<SigninFormModel>();
+
     isLoading = signal(false);
     showPassword = signal(false);
     signinModel = signal<SigninFormModel>(SIGNIN_FORM_INITIAL_VALUES);
     signinForm = form<SigninFormModel>(this.signinModel, signinFormSchema);
-    continueWithTelegram() {
-    }
     
     togglePassword() {
         this.showPassword.update((v) => !v);
     }
 
     onSubmit(event: Event) {
-        event.preventDefault();
-        console.dir(this.signinForm());
-        
-        this.isLoading.set(true);
-        
+        event.preventDefault();        
+        this.submitted.emit(this.signinForm().value());
     }
 }

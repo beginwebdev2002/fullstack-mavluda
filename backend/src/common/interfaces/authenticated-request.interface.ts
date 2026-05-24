@@ -1,10 +1,15 @@
-import { Request } from 'express';
+import type { Request } from 'express';
+
+
+export interface AppCookies {
+  refreshToken?: string;
+}
 
 export interface AuthenticatedRequest extends Request {
+  cookies: AppCookies;
   user?: {
     id: string;
     email: string;
     sub?: string;
-    // Add other properties that are attached to the user object by your authentication strategy
   };
 }

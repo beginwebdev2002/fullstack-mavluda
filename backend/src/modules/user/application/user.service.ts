@@ -57,10 +57,31 @@ export class UserService {
 
   async findOne(id: string): Promise<User> {
     const user = await this.userRepository.findById(id);
+
     if (!user) {
       throw new Error(`User with ID ${id} not found`);
     }
-    return user;
+    const {
+      createdAt,
+      firstName,
+      lastName,
+      role,
+      email,
+      telegramId,
+      username,
+      photoUrl,
+    } = user;
+    return {
+      id,
+      email,
+      firstName,
+      lastName,
+      photoUrl,
+      role,
+      username,
+      telegramId,
+      createdAt,
+    };
   }
 
   async update(

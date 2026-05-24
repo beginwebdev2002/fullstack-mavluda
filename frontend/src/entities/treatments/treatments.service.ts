@@ -14,12 +14,12 @@ export class TreatmentsService {
   treatments = this._treatments.asReadonly();
 
   getCount(): Observable<number> {
-    return this.http.get<number>(`${API_ENDPOINTS.TREATMENTS.BASE}/count`);
+    return this.http.get<number>(`${API_ENDPOINTS.TREATMENTS.URL}/count`);
   }
 
   getTreatments(): Observable<TreatmentItem[]> {
     return this.http
-      .get<TreatmentItem[]>(API_ENDPOINTS.TREATMENTS.BASE)
+      .get<TreatmentItem[]>(API_ENDPOINTS.TREATMENTS.URL)
       .pipe(tap((treatments) => this._treatments.set(treatments)));
   }
 
@@ -31,7 +31,7 @@ export class TreatmentsService {
     treatment: FormData,
   ): Observable<TreatmentItem> {
     return this.http
-      .post<TreatmentItem>(API_ENDPOINTS.TREATMENTS.BASE, treatment)
+      .post<TreatmentItem>(API_ENDPOINTS.TREATMENTS.URL, treatment)
       .pipe(
         tap((newTreatment) =>
           this._treatments.update((treatments) => [
@@ -47,10 +47,12 @@ export class TreatmentsService {
       "id",
       "createdAt",
       "updatedAt",
-    ]);    
+    ]);
+    const url = API_ENDPOINTS.TREATMENTS.URL_BY_ID(id);
+    console.log(url);
     return this.http
       .put<TreatmentItem>(
-        API_ENDPOINTS.TREATMENTS.URL_BY_ID(id),
+        url,
         updatedTreatment,
       )
       .pipe(

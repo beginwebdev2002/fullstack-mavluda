@@ -34,9 +34,9 @@
       </div>
       <div class="p-8">
         @if (authMode() === 'signin') {
-          <app-signin-form></app-signin-form>
+          <app-signin-form (submitted)="onSignInSubmit($event)"></app-signin-form>
         } @else {
-          <app-signup-form></app-signup-form>
+          <app-signup-form (submitted)="onSignupSubmit($event)"></app-signup-form>
         }
       </div>
 

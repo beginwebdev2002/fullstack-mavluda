@@ -1,6 +1,6 @@
 import { environment } from "@environments/environment";
 
-export function linkCombine(...links: string[]) {
+export function linkCombine(...links: string[]): string {
   const linkItems: string[] = [];
   links.forEach((item) => {
     const link = item.split("/");
@@ -11,6 +11,10 @@ export function linkCombine(...links: string[]) {
   return linkItems.filter(Boolean).join("/");
 }
 
-export function linkServerConvert(...link: string[]) {
+export function linkServerConvert(...link: string[]): string {
+  return new URL(linkCombine(...link), environment.apiUrl).href;
+}
+
+export function linkMerge(...link: string[]): string {
   return new URL(linkCombine(...link), environment.apiUrl).href;
 }

@@ -36,7 +36,11 @@
       "@widgets/*": ["src/widgets/*"],
       "@environments/*": ["environments/*"],
       "@src/*": ["src/*"],
-      "@core/*": ["src/core/*"]
+      "@core/*": ["src/core/*"],
+      "leaflet": [
+        "node_modules/@types/leaflet/index.d.ts",
+        "node_modules/leaflet/dist/leaflet-src.esm.js"
+      ]
     }
   },
   "angularCompilerOptions": {

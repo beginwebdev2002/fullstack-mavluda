@@ -13,7 +13,8 @@ export class VeilRepository {
   ) {}
 
   async count(): Promise<number> {
-    return this.veilModel.countDocuments().exec();
+    const count = await this.veilModel.countDocuments().exec();
+    return count;
   }
 
   async findAll(): Promise<Veil[]> {

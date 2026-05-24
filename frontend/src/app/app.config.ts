@@ -1,6 +1,9 @@
 import {
+  APP_INITIALIZER,
+  provideAppInitializer,
   ApplicationConfig,
   provideZonelessChangeDetection,
+  inject,
 } from "@angular/core";
 import { provideAnimations } from "@angular/platform-browser/animations";
 import { provideRouter, withHashLocation } from "@angular/router";
@@ -11,6 +14,7 @@ import {
   withInterceptors,
 } from "@angular/common/http";
 import { apiInterceptor, errorInterceptor } from "@core/interceptors";
+import { AuthService } from "@entities/user";
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -21,5 +25,9 @@ export const appConfig: ApplicationConfig = {
       withFetch(),
       withInterceptors([apiInterceptor, errorInterceptor]),
     ),
+    provideAppInitializer(() => {
+      const authService = inject(AuthService);
+      authService.authInit().subscribe();
+    })
   ],
 };
