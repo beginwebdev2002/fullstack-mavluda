@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { AuthController } from './auth.controller';
-import { TelegramAuthService } from './telegram-auth.service';
 import { AuthService } from './auth.service';
 import { UserModule } from '@modules/user';
 import { PassportModule } from '@nestjs/passport';
@@ -24,7 +23,7 @@ import { JwtStrategy } from './infrastructure/jwt.strategy';
     }),
   ],
   controllers: [AuthController],
-  providers: [TelegramAuthService, AuthService, JwtStrategy],
-  exports: [TelegramAuthService, AuthService, JwtModule],
+  providers: [AuthService, JwtStrategy],
+  exports: [AuthService, JwtModule],
 })
 export class AuthModule {}

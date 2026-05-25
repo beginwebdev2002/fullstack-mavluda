@@ -1,9 +1,12 @@
 import { HttpInterceptorFn } from "@angular/common/http";
+import { inject } from "@angular/core";
+import { Router } from "@angular/router";
 import { linkServerConvert } from "@shared/lib";
-import { retry } from "rxjs";
+import { catchError, of, retry, tap } from "rxjs";
 
 export const apiInterceptor: HttpInterceptorFn = (req, next) => {
   const token = sessionStorage.getItem("token");
+  const router = inject(Router)
   if (!token) {
     const apiReq = req.clone({
       url: linkServerConvert(req.url),
@@ -24,6 +27,14 @@ export const apiInterceptor: HttpInterceptorFn = (req, next) => {
     retry({
       count: 2,
       delay: 1000,
-    })
+    }),
+    catchError((err) => {
+      if (err.status === 401) {
+        sessionStorage.removeItem("token");
+        router.navigate(["auth/login"]);
+      }
+      return of()
+    }),
+    
   )
 };

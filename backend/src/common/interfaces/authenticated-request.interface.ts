@@ -1,6 +1,5 @@
 import type { Request } from 'express';
 
-
 export interface AppCookies {
   refreshToken?: string;
 }

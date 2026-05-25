@@ -11,12 +11,11 @@ import {
   Get,
 } from '@nestjs/common';
 import type { Response, Request } from 'express';
-import { TelegramAuthService } from './telegram-auth.service';
 import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
 import { Public } from '@common/decorators/public.decorator';
-
+import { AppConfigService } from '@common/config/app-config.service';
 import {
   AuthResponse,
   TelegramAuthResponse,
@@ -26,14 +25,15 @@ import type { AuthenticatedRequest } from '@common/interfaces/authenticated-requ
 @Controller('auth')
 export class AuthController {
   constructor(
-    private readonly telegramAuthService: TelegramAuthService,
     private readonly authService: AuthService,
+    private readonly configService: AppConfigService,
   ) {}
 
   private setRefreshTokenCookie(res: Response, refreshToken: string) {
+    const isProduction = this.configService.nodeEnv === 'production';
     res.cookie('refreshToken', refreshToken, {
       httpOnly: true,
-      secure: true,
+      secure: isProduction,
       sameSite: 'strict',
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in ms
     });
@@ -107,26 +107,6 @@ export class AuthController {
       return { access_token, user };
     } catch {
       throw new UnauthorizedException('Invalid or expired refresh token');
-    }
-  }
-
-  @Post('telegram')
-  async telegramAuth(
-    @Body() body: { initData: string },
-  ): Promise<TelegramAuthResponse> {
-    try {
-      if (!body.initData) {
-        throw new UnauthorizedException('No initData provided');
-      }
-      const user = await this.telegramAuthService.validateInitData(
-        body.initData,
-      );
-      return { success: true, user };
-    } catch (error) {
-      if (error instanceof UnauthorizedException) {
-        throw error;
-      }
-      throw new UnauthorizedException('INVALID_TOKEN');
     }
   }
 

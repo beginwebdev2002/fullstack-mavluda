@@ -16,9 +16,6 @@ export class EnvironmentVariables {
   @IsEnum(['development', 'production', 'test'])
   NODE_ENV: string;
 
-  @IsString()
-  API_PREFIX: string;
-
   @IsUrl({ require_tld: false })
   FRONTEND_URL: string;
 
@@ -48,29 +45,6 @@ export class EnvironmentVariables {
 
   @IsString()
   ADMIN_PASSWORD: string;
-
-  @IsString()
-  TELEGRAM_BOT_TOKEN: string;
-
-  @IsString()
-  @IsOptional()
-  TELEGRAM_WEBAPP_URL: string;
-
-  @IsString()
-  @IsOptional()
-  ALIF_MERCHANT_ID: string;
-
-  @IsString()
-  @IsOptional()
-  ALIF_TOKEN: string;
-
-  @IsString()
-  @IsOptional()
-  ALIF_CALLBACK_KEY: string;
-
-  @IsString()
-  @IsOptional()
-  CARD_PAYMENT_API_KEY: string;
 
   @IsString()
   @IsEnum(['error', 'warn', 'info', 'debug', 'verbose'])

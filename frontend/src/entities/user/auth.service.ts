@@ -1,11 +1,10 @@
-import { Injectable, signal, computed, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { computed, inject, Injectable, signal } from '@angular/core';
 import { Router } from '@angular/router';
-import { take, tap } from 'rxjs/operators';
-import { User, AuthResponse } from './model/user.model';
-import { jwtDecode } from 'jwt-decode';
 import { SigninFormModel, SignupFormModel } from '@features/auth';
 import { Observable, of } from 'rxjs';
+import { take, tap } from 'rxjs/operators';
+import { AuthResponse, User } from './model/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -30,12 +29,8 @@ export class AuthService {
         this.router.navigate(['/auth/login']);
         return;
       }
+
       this._currentUser.set(user);
-      if(user.role === 'admin') {
-        this.router.navigate(['/admin/dashboard']);
-      } else {
-        this.router.navigate(['/user/home']);
-      }
     }));
   }
 
