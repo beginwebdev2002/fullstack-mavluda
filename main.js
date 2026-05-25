@@ -22,7 +22,12 @@ async function bootstrap() {
     app.useGlobalFilters(new i18n_exception_filter_1.I18nExceptionFilter());
     const frontendUrl = configService.get('FRONTEND_URL') || 'http://localhost:4200';
     app.enableCors({
-        origin: [frontendUrl, 'http://localhost:4200', 'http://localhost:3000'],
+        origin: [
+            frontendUrl,
+            'http://localhost:4200',
+            'http://localhost:3000',
+            'https://beginwebdev2002.github.io',
+        ],
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
         credentials: true,
         allowedHeaders: 'Content-Type, Accept, Authorization',
