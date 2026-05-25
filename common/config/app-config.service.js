@@ -23,9 +23,6 @@ let AppConfigService = class AppConfigService {
     get nodeEnv() {
         return this.configService.get('NODE_ENV', { infer: true });
     }
-    get apiPrefix() {
-        return this.configService.get('API_PREFIX', { infer: true });
-    }
     get frontendUrl() {
         return this.configService.get('FRONTEND_URL', { infer: true });
     }
@@ -55,24 +52,6 @@ let AppConfigService = class AppConfigService {
     }
     get hashSalt() {
         return this.configService.get('HASH_SALT', { infer: true });
-    }
-    get telegramBotToken() {
-        return this.configService.get('TELEGRAM_BOT_TOKEN', { infer: true });
-    }
-    get telegramWebAppUrl() {
-        return this.configService.get('TELEGRAM_WEBAPP_URL', { infer: true });
-    }
-    get alifMerchantId() {
-        return this.configService.get('ALIF_MERCHANT_ID', { infer: true });
-    }
-    get alifToken() {
-        return this.configService.get('ALIF_TOKEN', { infer: true });
-    }
-    get alifCallbackKey() {
-        return this.configService.get('ALIF_CALLBACK_KEY', { infer: true });
-    }
-    get cardPaymentApiKey() {
-        return this.configService.get('CARD_PAYMENT_API_KEY', { infer: true });
     }
     get logLevel() {
         return this.configService.get('LOG_LEVEL', { infer: true });

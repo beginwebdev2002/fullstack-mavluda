@@ -14,22 +14,23 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthController = void 0;
 const common_1 = require("@nestjs/common");
-const telegram_auth_service_1 = require("./telegram-auth.service");
 const auth_service_1 = require("./auth.service");
 const login_dto_1 = require("./dto/login.dto");
 const register_dto_1 = require("./dto/register.dto");
 const public_decorator_1 = require("../../common/decorators/public.decorator");
+const app_config_service_1 = require("../../common/config/app-config.service");
 let AuthController = class AuthController {
-    telegramAuthService;
     authService;
-    constructor(telegramAuthService, authService) {
-        this.telegramAuthService = telegramAuthService;
+    configService;
+    constructor(authService, configService) {
         this.authService = authService;
+        this.configService = configService;
     }
     setRefreshTokenCookie(res, refreshToken) {
+        const isProduction = this.configService.nodeEnv === 'production';
         res.cookie('refreshToken', refreshToken, {
             httpOnly: true,
-            secure: true,
+            secure: isProduction,
             sameSite: 'strict',
             maxAge: 7 * 24 * 60 * 60 * 1000,
         });
@@ -77,21 +78,6 @@ let AuthController = class AuthController {
         }
         catch {
             throw new common_1.UnauthorizedException('Invalid or expired refresh token');
-        }
-    }
-    async telegramAuth(body) {
-        try {
-            if (!body.initData) {
-                throw new common_1.UnauthorizedException('No initData provided');
-            }
-            const user = await this.telegramAuthService.validateInitData(body.initData);
-            return { success: true, user };
-        }
-        catch (error) {
-            if (error instanceof common_1.UnauthorizedException) {
-                throw error;
-            }
-            throw new common_1.UnauthorizedException('INVALID_TOKEN');
         }
     }
     async me(req) {
@@ -142,13 +128,6 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "refresh", null);
 __decorate([
-    (0, common_1.Post)('telegram'),
-    __param(0, (0, common_1.Body)()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", Promise)
-], AuthController.prototype, "telegramAuth", null);
-__decorate([
     (0, common_1.Get)('me'),
     __param(0, (0, common_1.Req)()),
     __metadata("design:type", Function),
@@ -165,7 +144,7 @@ __decorate([
 ], AuthController.prototype, "isAdmin", null);
 exports.AuthController = AuthController = __decorate([
     (0, common_1.Controller)('auth'),
-    __metadata("design:paramtypes", [telegram_auth_service_1.TelegramAuthService,
-        auth_service_1.AuthService])
+    __metadata("design:paramtypes", [auth_service_1.AuthService,
+        app_config_service_1.AppConfigService])
 ], AuthController);
 //# sourceMappingURL=auth.controller.js.map

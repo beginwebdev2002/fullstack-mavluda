@@ -4,5 +4,4 @@ export * from './interfaces/auth-response.interface';
 export * from './interfaces/jwt-payload.interface';
 export * from './infrastructure/jwt.strategy';
 export * from './auth.service';
-export * from './telegram-auth.service';
 export * from './auth.module';

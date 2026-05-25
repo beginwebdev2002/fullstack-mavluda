@@ -20,6 +20,5 @@ __exportStar(require("./interfaces/auth-response.interface"), exports);
 __exportStar(require("./interfaces/jwt-payload.interface"), exports);
 __exportStar(require("./infrastructure/jwt.strategy"), exports);
 __exportStar(require("./auth.service"), exports);
-__exportStar(require("./telegram-auth.service"), exports);
 __exportStar(require("./auth.module"), exports);
 //# sourceMappingURL=index.js.map

@@ -9,7 +9,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthModule = void 0;
 const common_1 = require("@nestjs/common");
 const auth_controller_1 = require("./auth.controller");
-const telegram_auth_service_1 = require("./telegram-auth.service");
 const auth_service_1 = require("./auth.service");
 const user_1 = require("../user");
 const passport_1 = require("@nestjs/passport");
@@ -36,8 +35,8 @@ exports.AuthModule = AuthModule = __decorate([
             }),
         ],
         controllers: [auth_controller_1.AuthController],
-        providers: [telegram_auth_service_1.TelegramAuthService, auth_service_1.AuthService, jwt_strategy_1.JwtStrategy],
-        exports: [telegram_auth_service_1.TelegramAuthService, auth_service_1.AuthService, jwt_1.JwtModule],
+        providers: [auth_service_1.AuthService, jwt_strategy_1.JwtStrategy],
+        exports: [auth_service_1.AuthService, jwt_1.JwtModule],
     })
 ], AuthModule);
 //# sourceMappingURL=auth.module.js.map
