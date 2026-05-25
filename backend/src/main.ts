@@ -24,7 +24,12 @@ async function bootstrap() {
   const frontendUrl =
     configService.get<string>('FRONTEND_URL') || 'http://localhost:4200';
   app.enableCors({
-    origin: [frontendUrl, 'http://localhost:4200', 'http://localhost:3000'],
+    origin: [
+      frontendUrl,
+      'http://localhost:4200',
+      'http://localhost:3000',
+      'https://beginwebdev2002.github.io',
+    ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
     allowedHeaders: 'Content-Type, Accept, Authorization',
