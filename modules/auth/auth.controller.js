@@ -13,27 +13,18 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthController = void 0;
+const app_config_service_1 = require("../../common/config/app-config.service");
+const public_decorator_1 = require("../../common/decorators/public.decorator");
 const common_1 = require("@nestjs/common");
 const auth_service_1 = require("./auth.service");
 const login_dto_1 = require("./dto/login.dto");
 const register_dto_1 = require("./dto/register.dto");
-const public_decorator_1 = require("../../common/decorators/public.decorator");
-const app_config_service_1 = require("../../common/config/app-config.service");
 let AuthController = class AuthController {
     authService;
     configService;
     constructor(authService, configService) {
         this.authService = authService;
         this.configService = configService;
-    }
-    setRefreshTokenCookie(res, refreshToken) {
-        const isProduction = this.configService.nodeEnv === 'production';
-        res.cookie('refreshToken', refreshToken, {
-            httpOnly: true,
-            secure: isProduction,
-            sameSite: 'strict',
-            maxAge: 7 * 24 * 60 * 60 * 1000,
-        });
     }
     async login(loginDto, res) {
         try {
@@ -97,6 +88,15 @@ let AuthController = class AuthController {
         catch {
             throw new common_1.UnauthorizedException('Invalid or expired refresh token');
         }
+    }
+    setRefreshTokenCookie(res, refreshToken) {
+        const isProduction = this.configService.nodeEnv === 'production';
+        res.cookie('refreshToken', refreshToken, {
+            httpOnly: true,
+            secure: isProduction,
+            sameSite: 'lax',
+            maxAge: 7 * 24 * 60 * 60 * 1000,
+        });
     }
 };
 exports.AuthController = AuthController;
