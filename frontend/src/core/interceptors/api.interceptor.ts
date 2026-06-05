@@ -2,7 +2,7 @@ import { HttpInterceptorFn } from "@angular/common/http";
 import { inject } from "@angular/core";
 import { Router } from "@angular/router";
 import { linkServerConvert } from "@shared/lib";
-import { catchError, of, retry, tap } from "rxjs";
+import { catchError, of, retry } from "rxjs";
 
 export const apiInterceptor: HttpInterceptorFn = (req, next) => {
   const token = sessionStorage.getItem("token");

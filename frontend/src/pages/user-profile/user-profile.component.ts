@@ -8,6 +8,7 @@ import {
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { AuthService } from "@entities/user";
+import { SessionService } from "@entities/session";
 
 interface SocialHandles {
   telegram: string;
@@ -31,13 +32,10 @@ interface HistoryItem {
   styleUrls: ["./user-profile.component.scss"],
 })
 export class UserProfileComponent {
-  private authService = inject(AuthService);
-  currentUser = this.authService.currentUser;
+  private sessionService = inject(SessionService);
+  currentUser = this.sessionService.currentUser;
 
-  // Edit mode toggle
   isEditing = signal(false);
-
-  // Computed display data from auth
   user = computed(() => {
     const u = this.currentUser();
     return {
@@ -116,6 +114,6 @@ export class UserProfileComponent {
   }
 
   logout() {
-    this.authService.logout();
+    this.sessionService.logout();
   }
 }

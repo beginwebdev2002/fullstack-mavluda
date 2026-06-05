@@ -4,7 +4,7 @@ import { AdminSettingsService } from '@entities/admin-settings';
 import { VeilService } from '@entities/veil';
 import { environment } from '@environments/environment';
 import { linkServerConvert } from '@shared/lib';
-import { ImagePopupComponent } from "@shared/ui";
+import { ImagePopupComponent } from '@shared/ui';
 
 @Component({
   selector: 'app-veils-catalog',
@@ -44,6 +44,7 @@ export class VeilsCatalogComponent implements OnInit {
   selectedImage = signal<string | null>(null);
 
   ngOnInit() {
+    console.log("I am Catalog");
     if (!this.adminSettingsService.settings()) {
       this.adminSettingsService.getSettings().subscribe();
     }

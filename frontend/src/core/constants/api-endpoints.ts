@@ -20,6 +20,7 @@ export const API_ENDPOINTS = {
     CHECK_ADMIN: "/auth/check-admin",
     REFRESH: "/auth/refresh",
     TELEGRAM: "/auth/telegram",
+    LOGOUT: "/auth/logout",
   },
   ADMIN: {
     SETTINGS: "/admin-settings",

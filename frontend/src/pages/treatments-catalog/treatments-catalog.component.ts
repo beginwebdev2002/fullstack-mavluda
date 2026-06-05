@@ -1,21 +1,22 @@
+import { CommonModule } from "@angular/common";
 import {
-  Component,
   ChangeDetectionStrategy,
-  signal,
+  Component,
   computed,
   inject,
   OnInit,
+  signal,
 } from "@angular/core";
-import { CommonModule } from "@angular/common";
 import { AdminSettingsService } from "@entities/admin-settings";
 import { TreatmentsService } from "@entities/treatments";
 import { environment } from "@environments/environment";
 import { linkServerConvert } from "@shared/lib";
+import { ImagePopupComponent } from "@shared/ui";
 
 @Component({
-  selector: "app-services-catalog",
+  selector: "app-treatments-catalog",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ImagePopupComponent],
   providers: [TreatmentsService],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./treatments-catalog.component.html",
@@ -25,6 +26,9 @@ export class ServicesCatalogComponent implements OnInit {
   private treatmentsService = inject(TreatmentsService);
   private adminSettingsService = inject(AdminSettingsService);
   private env = signal(environment);
+  
+  // Full Screen Image Modal State
+  selectedImage = signal<string | null>(null);
 
   // Live data from backend GET /treatments
   treatments = this.treatmentsService.treatments;
@@ -62,5 +66,14 @@ export class ServicesCatalogComponent implements OnInit {
 
   setFilter(filter: string) {
     this.activeFilter.set(filter);
+  }
+
+  openImageModal(imageUrl: string | undefined) {
+    if (!imageUrl) return;
+    this.selectedImage.set(this.getImageUrl(imageUrl));
+  }
+
+  closeImageModal() {
+    this.selectedImage.set(null);
   }
 }

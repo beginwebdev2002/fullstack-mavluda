@@ -8,6 +8,16 @@
       "root": "",
       "sourceRoot": "./",
       "prefix": "app",
+      "schematics": {
+        "@schematics/angular:service": {
+          "path": "src",
+          "type": "service"
+        },
+        "@schematics/angular:component": {
+          "path": "src",
+          "type": "component"
+        }
+      },
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {

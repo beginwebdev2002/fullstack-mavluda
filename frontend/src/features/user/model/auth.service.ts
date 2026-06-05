@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { computed, inject, Injectable, signal } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { SigninFormModel, SignupFormModel } from '@features/auth';
 import { Observable, of } from 'rxjs';
-import { take, tap } from 'rxjs/operators';
-import { AuthResponse, User } from './model/user.model';
+import { tap } from 'rxjs/operators';
+import { AuthResponse, User } from '../../../entities/user/model/user.model';
+import { API_ENDPOINTS } from '@src/core/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -13,33 +14,11 @@ export class AuthService {
   private http = inject(HttpClient);
   private router = inject(Router);
   
-  private _currentUser = signal<User | null>(null);
-  
-  currentUser = this._currentUser.asReadonly();
-  isLoggedIn = computed(() => !!this.currentUser());
-  isAdmin = computed(() => this.currentUser()?.role === 'admin');
-  
-
-  authInit(): Observable<User> {
-    return this.me()
-    .pipe(
-      take(1),
-      tap(user => {      
-      if(!user) {
-        this.router.navigate(['/auth/login']);
-        return;
-      }
-
-      this._currentUser.set(user);
-    }));
-  }
-
-  signin(body: SigninFormModel) {
-    return this.http.post<AuthResponse>('/auth/login', body)
+   signin(body: SigninFormModel) {
+    return this.http.post<AuthResponse>(API_ENDPOINTS.AUTH.LOGIN, body)
     .pipe(
       tap(response => {
         if(response && response.access_token) {
-          this._currentUser.set(response.user);
           this.setSession(response.access_token, response.user);
           this.router.navigate(['/user/home']);
         }
@@ -48,11 +27,10 @@ export class AuthService {
   }
 
   signup(body: Partial<SignupFormModel>) {
-    return this.http.post<AuthResponse>('/auth/register', body)
+    return this.http.post<AuthResponse>(API_ENDPOINTS.AUTH.REGISTER, body)
     .pipe(
       tap(response => {
         if(response && response.access_token) {
-          this._currentUser.set(response.user);
           this.setSession(response.access_token, response.user);
         }
       })
@@ -60,7 +38,7 @@ export class AuthService {
   }
 
   refreshToken() {
-    return this.http.get<AuthResponse>('/auth/refresh')
+    return this.http.get<AuthResponse>(API_ENDPOINTS.AUTH.REFRESH)
     .pipe(
       tap(response => {
         if(response && response.access_token) {
@@ -69,20 +47,13 @@ export class AuthService {
       })
     );
   }
-
-  logout() {
-    sessionStorage.removeItem('token');
-    this._currentUser.set(null);
-    this.router.navigate(['/auth/login']);
-  }
   me(): Observable<User> {
     const token = sessionStorage.getItem('token');
     if(!token) return of(null);
-    return this.http.get<User>('/auth/me');
+    return this.http.get<User>(API_ENDPOINTS.AUTH.ME);
   }
 
   private setSession(token: string, userPayload: User) {
     sessionStorage.setItem('token', token);
-    this._currentUser.set(userPayload);
   }
 }

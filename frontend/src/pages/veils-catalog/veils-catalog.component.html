@@ -95,7 +95,7 @@
   </div>
 
 </div>
-
+@if (selectedImage()) {
 <!-- Fullscreen Image Modal -->
 <app-image-popup
   [imageUrl]="selectedImage()"
@@ -104,3 +104,4 @@
   (close)="closeImageModal()"
 >
 </app-image-popup>
+}

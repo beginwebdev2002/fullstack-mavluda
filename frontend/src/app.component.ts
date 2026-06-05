@@ -22,8 +22,5 @@ export class AppComponent implements OnInit {
   authService = inject(AuthService);
 
   async ngOnInit() {
-    const link = linkMerge(API_ENDPOINTS.VEILS.URL, "1");
-
-    console.log(this.authService.isAdmin());
   }
 }

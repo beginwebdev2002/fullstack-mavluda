@@ -15,6 +15,7 @@ import {
 } from "@angular/common/http";
 import { apiInterceptor, errorInterceptor } from "@core/interceptors";
 import { AuthService } from "@entities/user";
+import { SessionService } from "@entities/session/model/session.service";
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -26,8 +27,8 @@ export const appConfig: ApplicationConfig = {
       withInterceptors([apiInterceptor, errorInterceptor]),
     ),
     provideAppInitializer(() => {
-      const authService = inject(AuthService);
-      return authService.authInit();
+      const sessionService = inject(SessionService);
+      return sessionService.loadProfile();
     })
   ],
 };

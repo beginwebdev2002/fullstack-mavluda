@@ -1,4 +1,4 @@
-import { Component, input, output, signal, ChangeDetectionStrategy, effect } from "@angular/core";
+import { Component, input, output, signal, ChangeDetectionStrategy, effect, DOCUMENT, inject, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 @Component({
@@ -6,9 +6,11 @@ import { CommonModule } from "@angular/common";
   standalone: true,
   imports: [CommonModule],
   templateUrl: "./image-popup.component.html",
+  styleUrl: "./image-popup.component.scss",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ImagePopupComponent {
+  document = inject(DOCUMENT);
   imageUrl = input.required<string | null>();
   title = input<string>("Mavluda Beauty • Portfolio");
   loadingText = input<string>("Loading Asset");
@@ -23,12 +25,14 @@ export class ImagePopupComponent {
       }
     });
   }
-
+  
   onImageLoad() {
+    this.document.body.style.overflow = 'hidden';
     this.isLoading.set(false);
   }
 
   onClose() {
+    this.document.body.style.overflow = 'auto';
     this.close.emit();
   }
 }

@@ -9,6 +9,8 @@ import cookieParser from 'cookie-parser';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const configService = app.get(ConfigService);
+  const origins = configService.get<string>('FRONTEND_URL');
+
 
   app.use(cookieParser());
 
@@ -21,15 +23,8 @@ async function bootstrap() {
     }),
   );
   app.useGlobalFilters(new I18nExceptionFilter());
-  const frontendUrl =
-    configService.get<string>('FRONTEND_URL') || 'http://localhost:4200';
   app.enableCors({
-    origin: [
-      frontendUrl,
-      'http://localhost:4200',
-      'http://localhost:3000',
-      'https://beginwebdev2002.github.io',
-    ],
+    origin: origins,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
     allowedHeaders: 'Content-Type, Accept, Authorization',
