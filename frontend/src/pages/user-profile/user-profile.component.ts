@@ -7,7 +7,7 @@ import {
 } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
-import { AuthService } from "@entities/user";
+import { AuthService } from "@features/user";
 import { SessionService } from "@entities/session";
 
 interface SocialHandles {

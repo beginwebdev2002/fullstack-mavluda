@@ -61,7 +61,7 @@
                 <div (click)="openImageModal(service.imageUrl); $event.stopPropagation()" class="relative aspect-[4/5] w-full overflow-hidden rounded-3xl mb-6 shadow-2xl shadow-black/50">
                   <!-- Zoom Overlay -->
                   <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
-                    <span class="material-symbols-outlined text-white text-4xl drop-shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300 p-4 bg-white/10 rounded-full backdrop-blur-sm">zoom_in_map</span>
+                    <span class="material-symbols-outlined text-white text-4xl drop-shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300 p-4 bg-white/10 rounded-full backdrop-blur-sm cursor-pointer select-none">zoom_in_map</span>
                   </div>
                   <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300 opacity-60 group-hover:opacity-40"></div>
                    <img [src]="getImageUrl(service.imageUrl)" [alt]="service.name"

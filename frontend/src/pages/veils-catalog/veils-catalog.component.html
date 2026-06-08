@@ -15,7 +15,7 @@
   </header>
 
   <!-- Filter Bar -->
-  <div class="sticky top-20 z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md py-6 mb-12 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+  <div class="md:sticky md:top-20 z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md py-6 mb-12 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
     <div class="flex flex-wrap justify-center gap-4 px-4">
       @for (filter of filters(); track filter) {
         <button 
@@ -65,7 +65,7 @@
               
               <!-- Zoom Overlay -->
               <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                 <span class="material-symbols-outlined text-white text-4xl drop-shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300 p-4 bg-white/10 rounded-full backdrop-blur-sm">zoom_in_map</span>
+                 <span class="material-symbols-outlined text-white text-4xl drop-shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300 p-4 bg-white/10 rounded-full backdrop-blur-sm select-none">zoom_in_map</span>
               </div>
             </div>
             

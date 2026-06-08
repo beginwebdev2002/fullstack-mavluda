@@ -13,7 +13,7 @@ export class RegisterDto {
 
   @IsOptional()
   @IsString()
-  lastName?: string;
+  lastName: string;
 
   @IsNotEmpty()
   @IsEmail()
@@ -26,5 +26,5 @@ export class RegisterDto {
 
   @IsOptional()
   @IsString()
-  username?: string;
+  phone?: string;
 }

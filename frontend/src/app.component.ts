@@ -6,7 +6,7 @@ import {
   OnInit,
 } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
-import { AuthService } from "@entities/user";
+import { AuthService } from "@features/user";
 import { GlobalErrorComponent } from "@shared/ui";
 import { API_ENDPOINTS } from "./core/constants";
 import { linkMerge } from "@shared/lib";

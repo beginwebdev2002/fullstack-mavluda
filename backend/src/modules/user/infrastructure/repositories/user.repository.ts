@@ -18,12 +18,6 @@ export class UserRepository {
     const docs = await this.userModel.find().exec();
     return docs.map((doc) => this.toDomain(doc));
   }
-
-  async findByTelegramId(telegramId: number): Promise<User | null> {
-    const doc = await this.userModel.findOne({ telegramId }).exec();
-    return doc ? this.toDomain(doc) : null;
-  }
-
   async create(user: Omit<User, 'id' | 'createdAt'>): Promise<User> {
     const createdUser = new this.userModel(user);
     const doc = await createdUser.save();
@@ -61,12 +55,12 @@ export class UserRepository {
     return new User(
       doc._id.toString(),
       doc.firstName,
-      doc.telegramId,
       doc.email,
       doc.passwordHash,
       doc.lastName,
       doc.username,
       doc.photoUrl,
+      doc.phone,
       doc.role as 'user' | 'admin',
       // doc.createdAt is available because of timestamps: true
       (doc as unknown as { createdAt: Date }).createdAt,

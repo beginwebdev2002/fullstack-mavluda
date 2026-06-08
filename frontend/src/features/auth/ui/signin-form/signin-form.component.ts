@@ -1,7 +1,6 @@
-import { ChangeDetectionStrategy, Component, inject, output, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, output, signal } from "@angular/core";
 import { form, FormField } from "@angular/forms/signals";
 import { SIGNIN_FORM_INITIAL_VALUES, SigninFormModel, signinFormSchema } from "@features/auth/model/auth.model";
-import { AuthService } from "@entities/user";
 
 @Component({
     selector: "app-signin-form",

@@ -4,8 +4,9 @@ import { Router } from '@angular/router';
 import { SigninFormModel, SignupFormModel } from '@features/auth';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { AuthResponse, User } from '../../../entities/user/model/user.model';
+import { AuthResponse, User } from '@entities/user';
 import { API_ENDPOINTS } from '@src/core/constants';
+import { SessionService } from '@entities/session';
 
 @Injectable({
   providedIn: 'root'
@@ -13,14 +14,17 @@ import { API_ENDPOINTS } from '@src/core/constants';
 export class AuthService {
   private http = inject(HttpClient);
   private router = inject(Router);
+  private session = inject(SessionService)
   
    signin(body: SigninFormModel) {
     return this.http.post<AuthResponse>(API_ENDPOINTS.AUTH.LOGIN, body)
     .pipe(
       tap(response => {
         if(response && response.access_token) {
-          this.setSession(response.access_token, response.user);
+          this.session.setSession(response);
           this.router.navigate(['/user/home']);
+          console.log('signin response', response);
+          
         }
       })
     );
@@ -31,7 +35,8 @@ export class AuthService {
     .pipe(
       tap(response => {
         if(response && response.access_token) {
-          this.setSession(response.access_token, response.user);
+          this.session.setSession(response);
+          this.router.navigate(['/user/home']);
         }
       })
     );
@@ -42,7 +47,7 @@ export class AuthService {
     .pipe(
       tap(response => {
         if(response && response.access_token) {
-          this.setSession(response.access_token, response.user);
+          this.session.setSession(response);
         }
       })
     );
@@ -53,7 +58,4 @@ export class AuthService {
     return this.http.get<User>(API_ENDPOINTS.AUTH.ME);
   }
 
-  private setSession(token: string, userPayload: User) {
-    sessionStorage.setItem('token', token);
-  }
 }

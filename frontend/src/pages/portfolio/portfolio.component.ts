@@ -11,11 +11,12 @@ import { GalleryService } from "@entities/gallery";
 import { AdminSettingsService } from "@entities/admin-settings";
 import { linkServerConvert } from "@shared/lib";
 import { environment } from "@environments/environment";
+import { ImagePopupComponent } from "@shared/ui";
 
 @Component({
   selector: "app-portfolio-page",
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ImagePopupComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: "./portfolio.component.html",
   styleUrls: ["./portfolio.component.scss"],
@@ -26,6 +27,7 @@ export class PortfolioPageComponent implements OnInit {
   private env = signal(environment);
 
   galleryImages = this.galleryService.images;
+  selectedImage = signal<string | null>(null);
 
   // Dynamic filters from AdminSettings + "All Works"
   filters = computed<string[]>(() => {
@@ -83,5 +85,14 @@ export class PortfolioPageComponent implements OnInit {
       "aspect-square",
     ];
     return aspects[hash % aspects.length];
+  }
+
+  openImageModal(imageUrl: string | undefined) {
+    if (!imageUrl) return;
+    this.selectedImage.set(this.getImageUrl(imageUrl));
+  }
+
+  closeImageModal() {
+    this.selectedImage.set(null);
   }
 }

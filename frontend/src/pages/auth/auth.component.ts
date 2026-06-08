@@ -7,7 +7,7 @@ import {
 } from "@angular/core";
 import { SigninFormComponent, SigninFormModel, SignupFormComponent, SignupFormModel } from "@features/auth";
 import { LanguageSwitcherComponent } from "@features/language-selection";
-import { AuthService } from "@entities/user";
+import { AuthService } from "@features/user";
 import { objectExcludePropety } from "@shared/lib";
 
 @Component({
@@ -40,8 +40,7 @@ export class AuthComponent {
 
 
   onSignInSubmit(body: SigninFormModel) {
-    const validateModel = objectExcludePropety(body, ['rememberMe']);
-    this.authService.signin(validateModel as SigninFormModel)
+    this.authService.signin(body)
     .subscribe((data) => {
       console.log('Signed in Correct!', data);
     });

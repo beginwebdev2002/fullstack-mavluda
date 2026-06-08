@@ -37,7 +37,7 @@ export class AuthService {
           email,
           lastName,
           photoUrl,
-          telegramId,
+          phone,
           username,
         } = user;
         return {
@@ -48,7 +48,7 @@ export class AuthService {
           photoUrl,
           role,
           username,
-          telegramId,
+          phone,
           createdAt,
         };
       }
@@ -113,7 +113,6 @@ export class AuthService {
       email: registerDto.email,
       passwordHash: passwordHash,
       role: 'user',
-      username: registerDto.username,
     } as unknown as Omit<User, 'id' | 'createdAt'>);
 
     const tokens = this.generateTokens(newUser);
@@ -145,10 +144,10 @@ export class AuthService {
         firstName,
         lastName,
         email,
+        phone,
         photoUrl,
         role,
         username,
-        telegramId,
       } = user;
 
       return {
@@ -158,10 +157,10 @@ export class AuthService {
           email,
           firstName,
           lastName,
+          phone,
           photoUrl,
           role,
           username,
-          telegramId,
         },
       };
     } catch {

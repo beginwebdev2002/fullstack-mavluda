@@ -4,28 +4,25 @@ import {
   IsOptional,
   IsNumber,
   IsEnum,
+  IsEmail,
 } from 'class-validator';
 
 export class CreateUserDto {
-  @IsOptional()
-  @IsNumber()
-  telegramId?: number;
-
-  @IsOptional()
-  @IsString()
-  email?: string;
+  @IsEmail()
+  @IsNotEmpty()
+  email: string;
 
   @IsString()
   @IsNotEmpty()
   firstName: string;
 
-  @IsOptional()
   @IsString()
-  lastName?: string;
+  @IsNotEmpty()
+  lastName: string;
 
-  @IsOptional()
   @IsString()
-  username?: string;
+  @IsNotEmpty()
+  username: string;
 
   @IsOptional()
   @IsString()
@@ -37,5 +34,9 @@ export class CreateUserDto {
 
   @IsOptional()
   @IsString()
-  password?: string;
+  phone?: string;
+
+  @IsString()
+  @IsNotEmpty()
+  password: string;
 }

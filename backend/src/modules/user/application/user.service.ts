@@ -19,28 +19,6 @@ export class UserService {
     return await this.userRepository.findByEmail(email);
   }
 
-  async findOrCreate(
-    telegramId: number,
-    profile: {
-      firstName: string;
-      lastName?: string;
-      username?: string;
-      photoUrl?: string;
-    },
-  ): Promise<User> {
-    let user = await this.userRepository.findByTelegramId(telegramId);
-
-    if (!user) {
-      user = await this.userRepository.create({
-        telegramId,
-        ...profile,
-        role: 'user',
-      });
-    }
-
-    return user;
-  }
-
   async create(
     user: Omit<User, 'id' | 'createdAt'> & { password?: string },
   ): Promise<User> {
@@ -67,7 +45,7 @@ export class UserService {
       lastName,
       role,
       email,
-      telegramId,
+      phone,
       username,
       photoUrl,
     } = user;
@@ -79,7 +57,7 @@ export class UserService {
       photoUrl,
       role,
       username,
-      telegramId,
+      phone,
       createdAt,
     };
   }

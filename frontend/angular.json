@@ -35,7 +35,10 @@
             },
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.json",
-            "styles": [ "node_modules/leaflet/dist/leaflet.css" ],
+            "styles": [ 
+              "node_modules/leaflet/dist/leaflet.css",
+              "src/styles.scss"
+            ],
             "polyfills": [
               "@angular/localize/init"
             ],

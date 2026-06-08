@@ -6,9 +6,6 @@ export type UserDocument = HydratedDocument<UserSchemaEntity>;
 @Schema({ collection: 'users', timestamps: true })
 export class UserSchemaEntity {
   @Prop({ required: false, unique: true, index: true, sparse: true })
-  telegramId: number;
-
-  @Prop({ required: false, unique: true, index: true, sparse: true })
   email: string;
 
   @Prop({ required: false })
@@ -25,6 +22,9 @@ export class UserSchemaEntity {
 
   @Prop({ required: false })
   photoUrl: string;
+
+  @Prop({ required: false, type: String })
+  phone: string;
 
   @Prop({ required: true, default: 'user', enum: ['user', 'admin'] })
   role: string;

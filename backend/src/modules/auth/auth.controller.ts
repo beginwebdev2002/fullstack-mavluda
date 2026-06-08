@@ -103,6 +103,12 @@ export class AuthController {
     return user;
   }
 
+  @Post('logout')
+  logout(@Res({ passthrough: true }) res: Response) {
+    res.clearCookie('refreshToken');
+    return { message: 'Logged out successfully' };
+  }
+
   @Get('check-admin')
   async isAdmin(
     @Req() req: AuthenticatedRequest,
@@ -132,7 +138,7 @@ export class AuthController {
       httpOnly: true,
       secure: isProduction,
       sameSite: 'lax',
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in ms
+      maxAge: 7 * 24 * 60 * 60 * 1000,
     });
   }
 }

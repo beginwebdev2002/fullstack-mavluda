@@ -16,12 +16,12 @@ export class SignupFormComponent {
     signupModel = signal<SignupFormModel>(SIGNUP_FORM_INITIAL_VALUES);
     signupForm = form<SignupFormModel>(this.signupModel, signupFormSchema);
 
-    
     togglePassword() {
         this.showPassword.update((v) => !v);
     }
 
-    onSubmit() {
+    onSubmit(e: Event) {
+        e.preventDefault();
         this.submitted.emit(this.signupForm().value());
     }
 }

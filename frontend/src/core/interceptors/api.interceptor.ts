@@ -5,9 +5,10 @@ import { linkServerConvert } from "@shared/lib";
 import { catchError, of, retry } from "rxjs";
 
 export const apiInterceptor: HttpInterceptorFn = (req, next) => {
-  const token = sessionStorage.getItem("token");
-  const router = inject(Router)
-  if (!token) {
+  const accessToken = sessionStorage.getItem("access_token");
+  const router = inject(Router);
+  
+  if (!accessToken) {
     const apiReq = req.clone({
       url: linkServerConvert(req.url),
       withCredentials: true,
@@ -19,7 +20,7 @@ export const apiInterceptor: HttpInterceptorFn = (req, next) => {
     url: req.url.startsWith("http") ? req.url : linkServerConvert(req.url),
     withCredentials: true,
     setHeaders: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${accessToken}`,
     },
   });
   return next(apiReq)
