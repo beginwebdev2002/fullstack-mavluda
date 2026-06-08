@@ -9220,59 +9220,59 @@
       "bytes": 239,
       "imports": []
     },
-    "src/pages/auth/auth.component.scss": {
-      "bytes": 34,
+    "src/pages/treatments/treatments.component.scss": {
+      "bytes": 38,
       "imports": []
     },
     "src/pages/gallery/gallery.component.scss": {
       "bytes": 37,
       "imports": []
     },
-    "src/shared/ui/card-view/card-view.component.scss": {
-      "bytes": 244,
-      "imports": []
-    },
-    "src/pages/veils-catalog/veils-catalog.component.scss": {
-      "bytes": 304,
-      "imports": []
-    },
-    "src/pages/user-home/user-home.component.scss": {
-      "bytes": 39,
-      "imports": []
-    },
     "src/pages/user-profile/user-profile.component.scss": {
       "bytes": 42,
-      "imports": []
-    },
-    "src/pages/about/about.component.scss": {
-      "bytes": 35,
       "imports": []
     },
     "src/app.component.scss": {
       "bytes": 33,
       "imports": []
     },
+    "src/pages/veils-catalog/veils-catalog.component.scss": {
+      "bytes": 304,
+      "imports": []
+    },
+    "src/pages/about/about.component.scss": {
+      "bytes": 35,
+      "imports": []
+    },
+    "src/pages/portfolio/portfolio.component.scss": {
+      "bytes": 39,
+      "imports": []
+    },
+    "src/shared/ui/card-view/card-view.component.scss": {
+      "bytes": 244,
+      "imports": []
+    },
     "src/pages/settings/settings.component.scss": {
       "bytes": 38,
       "imports": []
     },
-    "src/pages/inventory/inventory.component.scss": {
-      "bytes": 39,
-      "imports": []
-    },
-    "src/features/language-selection/language-switcher.component.scss": {
-      "bytes": 47,
-      "imports": []
-    },
-    "src/pages/treatments-catalog/treatments-catalog.component.scss": {
-      "bytes": 46,
+    "src/pages/auth/auth.component.scss": {
+      "bytes": 34,
       "imports": []
     },
     "src/pages/dashboard/dashboard.component.scss": {
       "bytes": 39,
       "imports": []
     },
-    "src/pages/portfolio/portfolio.component.scss": {
+    "src/pages/treatments-catalog/treatments-catalog.component.scss": {
+      "bytes": 46,
+      "imports": []
+    },
+    "src/features/language-selection/language-switcher.component.scss": {
+      "bytes": 47,
+      "imports": []
+    },
+    "src/pages/inventory/inventory.component.scss": {
       "bytes": 39,
       "imports": []
     },
@@ -9280,8 +9280,8 @@
       "bytes": 34,
       "imports": []
     },
-    "src/pages/treatments/treatments.component.scss": {
-      "bytes": 38,
+    "src/pages/user-home/user-home.component.scss": {
+      "bytes": 39,
       "imports": []
     },
     "angular:locale/data:en-US": {
@@ -11247,10 +11247,10 @@
       "bytes": 159,
       "ng-component": true
     },
-    "auth.component-IAK6YEY3.css": {
+    "treatments.component-3JU3J4R7.css": {
       "imports": [],
       "inputs": {
-        "src/pages/auth/auth.component.scss": {
+        "src/pages/treatments/treatments.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11267,50 +11267,10 @@
       "bytes": 0,
       "ng-component": true
     },
-    "card-view.component-6XEUSBKE.css": {
-      "imports": [],
-      "inputs": {
-        "src/shared/ui/card-view/card-view.component.scss": {
-          "bytesInOutput": 182
-        }
-      },
-      "bytes": 183,
-      "ng-component": true
-    },
-    "veils-catalog.component-DRP3JBNJ.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/veils-catalog/veils-catalog.component.scss": {
-          "bytesInOutput": 260
-        }
-      },
-      "bytes": 261,
-      "ng-component": true
-    },
-    "user-home.component-VLFIUKKL.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/user-home/user-home.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
     "user-profile.component-5KYZPPUP.css": {
       "imports": [],
       "inputs": {
         "src/pages/user-profile/user-profile.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "about.component-IPUOG6NN.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/about/about.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11327,50 +11287,20 @@
       "bytes": 0,
       "ng-component": true
     },
-    "settings.component-5I5XCPGX.css": {
+    "veils-catalog.component-DRP3JBNJ.css": {
       "imports": [],
       "inputs": {
-        "src/pages/settings/settings.component.scss": {
-          "bytesInOutput": 0
+        "src/pages/veils-catalog/veils-catalog.component.scss": {
+          "bytesInOutput": 260
         }
       },
-      "bytes": 0,
+      "bytes": 261,
       "ng-component": true
     },
-    "inventory.component-ETSOI3KZ.css": {
+    "about.component-IPUOG6NN.css": {
       "imports": [],
       "inputs": {
-        "src/pages/inventory/inventory.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "language-switcher.component-GCS7LFEK.css": {
-      "imports": [],
-      "inputs": {
-        "src/features/language-selection/language-switcher.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "treatments-catalog.component-XJAGPTDO.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/treatments-catalog/treatments-catalog.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "dashboard.component-BRD6ARCA.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/dashboard/dashboard.component.scss": {
+        "src/pages/about/about.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11387,6 +11317,76 @@
       "bytes": 0,
       "ng-component": true
     },
+    "card-view.component-6XEUSBKE.css": {
+      "imports": [],
+      "inputs": {
+        "src/shared/ui/card-view/card-view.component.scss": {
+          "bytesInOutput": 182
+        }
+      },
+      "bytes": 183,
+      "ng-component": true
+    },
+    "settings.component-5I5XCPGX.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/settings/settings.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "auth.component-IAK6YEY3.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/auth/auth.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "dashboard.component-BRD6ARCA.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/dashboard/dashboard.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "treatments-catalog.component-XJAGPTDO.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/treatments-catalog/treatments-catalog.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "language-switcher.component-GCS7LFEK.css": {
+      "imports": [],
+      "inputs": {
+        "src/features/language-selection/language-switcher.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "inventory.component-ETSOI3KZ.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/inventory/inventory.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
     "veil.component-SLDJBJKH.css": {
       "imports": [],
       "inputs": {
@@ -11397,10 +11397,10 @@
       "bytes": 0,
       "ng-component": true
     },
-    "treatments.component-3JU3J4R7.css": {
+    "user-home.component-VLFIUKKL.css": {
       "imports": [],
       "inputs": {
-        "src/pages/treatments/treatments.component.scss": {
+        "src/pages/user-home/user-home.component.scss": {
           "bytesInOutput": 0
         }
       },
