@@ -6458,11 +6458,6 @@
       ],
       "format": "esm"
     },
-    "src/entities/session/constants/session.ts": {
-      "bytes": 57,
-      "imports": [],
-      "format": "esm"
-    },
     "environments/environment.ts": {
       "bytes": 206,
       "imports": [
@@ -6522,6 +6517,132 @@
       ],
       "format": "esm"
     },
+    "src/core/interceptors/api.interceptor.ts": {
+      "bytes": 1043,
+      "imports": [
+        {
+          "path": "@angular/common/http",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "node_modules/@angular/core/fesm2022/core.mjs",
+          "kind": "import-statement",
+          "original": "@angular/core"
+        },
+        {
+          "path": "node_modules/@angular/router/fesm2022/router.mjs",
+          "kind": "import-statement",
+          "original": "@angular/router"
+        },
+        {
+          "path": "src/shared/lib/index.ts",
+          "kind": "import-statement",
+          "original": "@shared/lib"
+        },
+        {
+          "path": "node_modules/rxjs/dist/esm/index.js",
+          "kind": "import-statement",
+          "original": "rxjs"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/shared/services/error.service.ts": {
+      "bytes": 1118,
+      "imports": [
+        {
+          "path": "node_modules/@angular/core/fesm2022/core.mjs",
+          "kind": "import-statement",
+          "original": "@angular/core"
+        },
+        {
+          "path": "node_modules/@angular/core/fesm2022/core.mjs",
+          "kind": "import-statement",
+          "original": "@angular/core"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/shared/services/image.service.ts": {
+      "bytes": 2552,
+      "imports": [
+        {
+          "path": "@angular/core",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "node_modules/@angular/core/fesm2022/core.mjs",
+          "kind": "import-statement",
+          "original": "@angular/core"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/shared/services/index.ts": {
+      "bytes": 66,
+      "imports": [
+        {
+          "path": "src/shared/services/error.service.ts",
+          "kind": "import-statement",
+          "original": "./error.service"
+        },
+        {
+          "path": "src/shared/services/image.service.ts",
+          "kind": "import-statement",
+          "original": "./image.service"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/core/interceptors/error.interceptor.ts": {
+      "bytes": 1670,
+      "imports": [
+        {
+          "path": "@angular/common/http",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "node_modules/@angular/core/fesm2022/core.mjs",
+          "kind": "import-statement",
+          "original": "@angular/core"
+        },
+        {
+          "path": "node_modules/rxjs/dist/esm/index.js",
+          "kind": "import-statement",
+          "original": "rxjs"
+        },
+        {
+          "path": "src/shared/services/index.ts",
+          "kind": "import-statement",
+          "original": "@shared/services"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/core/interceptors/index.ts": {
+      "bytes": 72,
+      "imports": [
+        {
+          "path": "src/core/interceptors/api.interceptor.ts",
+          "kind": "import-statement",
+          "original": "./api.interceptor"
+        },
+        {
+          "path": "src/core/interceptors/error.interceptor.ts",
+          "kind": "import-statement",
+          "original": "./error.interceptor"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/entities/session/constants/session.ts": {
+      "bytes": 57,
+      "imports": [],
+      "format": "esm"
+    },
     "src/core/constants/api-endpoints.ts": {
       "bytes": 758,
       "imports": [
@@ -6545,7 +6666,7 @@
       "format": "esm"
     },
     "src/entities/session/model/session.service.ts": {
-      "bytes": 2554,
+      "bytes": 3142,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -6636,7 +6757,7 @@
           "original": "@angular/router"
         },
         {
-          "path": "@entities/user",
+          "path": "@features/user",
           "kind": "import-statement",
           "external": true
         },
@@ -6773,7 +6894,7 @@
       "format": "esm"
     },
     "src/features/auth/model/auth.model.ts": {
-      "bytes": 954,
+      "bytes": 928,
       "imports": [
         {
           "path": "node_modules/@angular/forms/fesm2022/signals.mjs",
@@ -6784,7 +6905,7 @@
       "format": "esm"
     },
     "src/features/auth/ui/signin-form/signin-form.component.ts": {
-      "bytes": 9459,
+      "bytes": 8654,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -6802,11 +6923,6 @@
           "original": "@features/auth/model/auth.model"
         },
         {
-          "path": "@entities/user",
-          "kind": "import-statement",
-          "external": true
-        },
-        {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
           "kind": "import-statement",
           "original": "@angular/core"
@@ -6815,7 +6931,7 @@
       "format": "esm"
     },
     "src/features/auth/ui/signup-form/signup-form.component.ts": {
-      "bytes": 12166,
+      "bytes": 11384,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -6894,7 +7010,7 @@
       "format": "esm"
     },
     "src/features/user/model/auth.service.ts": {
-      "bytes": 2091,
+      "bytes": 2103,
       "imports": [
         {
           "path": "node_modules/@angular/common/fesm2022/http.mjs",
@@ -6927,7 +7043,7 @@
           "original": "rxjs/operators"
         },
         {
-          "path": "../../../entities/user/model/user.model",
+          "path": "@entities/user",
           "kind": "import-statement",
           "external": true
         },
@@ -6937,35 +7053,9 @@
           "original": "@src/core/constants"
         },
         {
-          "path": "node_modules/@angular/core/fesm2022/core.mjs",
+          "path": "src/entities/session/index.ts",
           "kind": "import-statement",
-          "original": "@angular/core"
-        }
-      ],
-      "format": "esm"
-    },
-    "src/entities/user/user.service.ts": {
-      "bytes": 1279,
-      "imports": [
-        {
-          "path": "node_modules/@angular/core/fesm2022/core.mjs",
-          "kind": "import-statement",
-          "original": "@angular/core"
-        },
-        {
-          "path": "node_modules/@angular/common/fesm2022/http.mjs",
-          "kind": "import-statement",
-          "original": "@angular/common/http"
-        },
-        {
-          "path": "rxjs",
-          "kind": "import-statement",
-          "external": true
-        },
-        {
-          "path": "./model/user.model",
-          "kind": "import-statement",
-          "external": true
+          "original": "@entities/session"
         },
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -6975,34 +7065,19 @@
       ],
       "format": "esm"
     },
-    "src/entities/user/model/user.model.ts": {
-      "bytes": 237,
-      "imports": [],
-      "format": "esm"
-    },
-    "src/entities/user/index.ts": {
-      "bytes": 124,
+    "src/features/user/index.ts": {
+      "bytes": 49,
       "imports": [
         {
           "path": "src/features/user/model/auth.service.ts",
           "kind": "import-statement",
-          "original": "../../features/user/model/auth.service"
-        },
-        {
-          "path": "src/entities/user/user.service.ts",
-          "kind": "import-statement",
-          "original": "./user.service"
-        },
-        {
-          "path": "src/entities/user/model/user.model.ts",
-          "kind": "import-statement",
-          "original": "./model/user.model"
+          "original": "./model/auth.service"
         }
       ],
       "format": "esm"
     },
     "src/pages/auth/auth.component.ts": {
-      "bytes": 7818,
+      "bytes": 7716,
       "imports": [
         {
           "path": "node_modules/@angular/common/fesm2022/common.mjs",
@@ -7025,14 +7100,14 @@
           "original": "@features/language-selection"
         },
         {
-          "path": "src/entities/user/index.ts",
+          "path": "src/features/user/index.ts",
           "kind": "import-statement",
-          "original": "@entities/user"
+          "original": "@features/user"
         },
         {
-          "path": "src/shared/lib/index.ts",
+          "path": "@shared/lib",
           "kind": "import-statement",
-          "original": "@shared/lib"
+          "external": true
         },
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -7263,6 +7338,37 @@
           "path": "src/widgets/layouts/user-layout.component.ts",
           "kind": "import-statement",
           "original": "./user-layout.component"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/entities/user/user.service.ts": {
+      "bytes": 1279,
+      "imports": [
+        {
+          "path": "node_modules/@angular/core/fesm2022/core.mjs",
+          "kind": "import-statement",
+          "original": "@angular/core"
+        },
+        {
+          "path": "node_modules/@angular/common/fesm2022/http.mjs",
+          "kind": "import-statement",
+          "original": "@angular/common/http"
+        },
+        {
+          "path": "rxjs",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "./model/user.model",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "node_modules/@angular/core/fesm2022/core.mjs",
+          "kind": "import-statement",
+          "original": "@angular/core"
         }
       ],
       "format": "esm"
@@ -7559,54 +7665,6 @@
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
           "kind": "import-statement",
           "original": "@angular/core"
-        }
-      ],
-      "format": "esm"
-    },
-    "src/shared/services/error.service.ts": {
-      "bytes": 1118,
-      "imports": [
-        {
-          "path": "node_modules/@angular/core/fesm2022/core.mjs",
-          "kind": "import-statement",
-          "original": "@angular/core"
-        },
-        {
-          "path": "node_modules/@angular/core/fesm2022/core.mjs",
-          "kind": "import-statement",
-          "original": "@angular/core"
-        }
-      ],
-      "format": "esm"
-    },
-    "src/shared/services/image.service.ts": {
-      "bytes": 2552,
-      "imports": [
-        {
-          "path": "@angular/core",
-          "kind": "import-statement",
-          "external": true
-        },
-        {
-          "path": "node_modules/@angular/core/fesm2022/core.mjs",
-          "kind": "import-statement",
-          "original": "@angular/core"
-        }
-      ],
-      "format": "esm"
-    },
-    "src/shared/services/index.ts": {
-      "bytes": 66,
-      "imports": [
-        {
-          "path": "src/shared/services/error.service.ts",
-          "kind": "import-statement",
-          "original": "./error.service"
-        },
-        {
-          "path": "src/shared/services/image.service.ts",
-          "kind": "import-statement",
-          "original": "./image.service"
         }
       ],
       "format": "esm"
@@ -7984,6 +8042,27 @@
           "path": "src/pages/treatments/treatments.component.ts",
           "kind": "import-statement",
           "original": "./treatments.component"
+        }
+      ],
+      "format": "esm"
+    },
+    "src/entities/user/model/user.model.ts": {
+      "bytes": 237,
+      "imports": [],
+      "format": "esm"
+    },
+    "src/entities/user/index.ts": {
+      "bytes": 68,
+      "imports": [
+        {
+          "path": "src/entities/user/user.service.ts",
+          "kind": "import-statement",
+          "original": "./user.service"
+        },
+        {
+          "path": "src/entities/user/model/user.model.ts",
+          "kind": "import-statement",
+          "original": "./model/user.model"
         }
       ],
       "format": "esm"
@@ -8649,7 +8728,7 @@
       "format": "esm"
     },
     "src/pages/veils-catalog/veils-catalog.component.ts": {
-      "bytes": 20077,
+      "bytes": 20098,
       "imports": [
         {
           "path": "node_modules/@angular/common/fesm2022/common.mjs",
@@ -8711,7 +8790,7 @@
       "format": "esm"
     },
     "src/pages/treatments-catalog/treatments-catalog.component.ts": {
-      "bytes": 22663,
+      "bytes": 22696,
       "imports": [
         {
           "path": "node_modules/@angular/common/fesm2022/common.mjs",
@@ -8773,7 +8852,7 @@
       "format": "esm"
     },
     "src/pages/portfolio/portfolio.component.ts": {
-      "bytes": 13316,
+      "bytes": 15505,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -8804,6 +8883,11 @@
           "path": "environments/environment.ts",
           "kind": "import-statement",
           "original": "@environments/environment"
+        },
+        {
+          "path": "src/shared/ui/index.ts",
+          "kind": "import-statement",
+          "original": "@shared/ui"
         },
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -8895,7 +8979,7 @@
           "original": "@angular/forms"
         },
         {
-          "path": "@entities/user",
+          "path": "@features/user",
           "kind": "import-statement",
           "external": true
         },
@@ -9024,82 +9108,14 @@
       ],
       "format": "esm"
     },
-    "src/core/interceptors/api.interceptor.ts": {
-      "bytes": 1014,
-      "imports": [
-        {
-          "path": "@angular/common/http",
-          "kind": "import-statement",
-          "external": true
-        },
-        {
-          "path": "node_modules/@angular/core/fesm2022/core.mjs",
-          "kind": "import-statement",
-          "original": "@angular/core"
-        },
-        {
-          "path": "node_modules/@angular/router/fesm2022/router.mjs",
-          "kind": "import-statement",
-          "original": "@angular/router"
-        },
-        {
-          "path": "src/shared/lib/index.ts",
-          "kind": "import-statement",
-          "original": "@shared/lib"
-        },
-        {
-          "path": "node_modules/rxjs/dist/esm/index.js",
-          "kind": "import-statement",
-          "original": "rxjs"
-        }
-      ],
-      "format": "esm"
-    },
-    "src/core/interceptors/error.interceptor.ts": {
-      "bytes": 1670,
-      "imports": [
-        {
-          "path": "@angular/common/http",
-          "kind": "import-statement",
-          "external": true
-        },
-        {
-          "path": "node_modules/@angular/core/fesm2022/core.mjs",
-          "kind": "import-statement",
-          "original": "@angular/core"
-        },
-        {
-          "path": "node_modules/rxjs/dist/esm/index.js",
-          "kind": "import-statement",
-          "original": "rxjs"
-        },
-        {
-          "path": "src/shared/services/index.ts",
-          "kind": "import-statement",
-          "original": "@shared/services"
-        }
-      ],
-      "format": "esm"
-    },
-    "src/core/interceptors/index.ts": {
-      "bytes": 72,
-      "imports": [
-        {
-          "path": "src/core/interceptors/api.interceptor.ts",
-          "kind": "import-statement",
-          "original": "./api.interceptor"
-        },
-        {
-          "path": "src/core/interceptors/error.interceptor.ts",
-          "kind": "import-statement",
-          "original": "./error.interceptor"
-        }
-      ],
-      "format": "esm"
-    },
     "src/app/app.config.ts": {
-      "bytes": 1036,
+      "bytes": 970,
       "imports": [
+        {
+          "path": "node_modules/@angular/common/fesm2022/http.mjs",
+          "kind": "import-statement",
+          "original": "@angular/common/http"
+        },
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
           "kind": "import-statement",
@@ -9116,29 +9132,19 @@
           "original": "@angular/router"
         },
         {
-          "path": "src/app.routes.ts",
-          "kind": "import-statement",
-          "original": "@src/app.routes"
-        },
-        {
-          "path": "node_modules/@angular/common/fesm2022/http.mjs",
-          "kind": "import-statement",
-          "original": "@angular/common/http"
-        },
-        {
           "path": "src/core/interceptors/index.ts",
           "kind": "import-statement",
           "original": "@core/interceptors"
         },
         {
-          "path": "@entities/user",
-          "kind": "import-statement",
-          "external": true
-        },
-        {
           "path": "src/entities/session/model/session.service.ts",
           "kind": "import-statement",
           "original": "@entities/session/model/session.service"
+        },
+        {
+          "path": "src/app.routes.ts",
+          "kind": "import-statement",
+          "original": "@src/app.routes"
         }
       ],
       "format": "esm"
@@ -9162,9 +9168,9 @@
           "original": "@angular/router"
         },
         {
-          "path": "src/entities/user/index.ts",
+          "path": "src/features/user/index.ts",
           "kind": "import-statement",
-          "original": "@entities/user"
+          "original": "@features/user"
         },
         {
           "path": "src/shared/ui/index.ts",
@@ -9210,35 +9216,63 @@
       ],
       "format": "esm"
     },
-    "src/pages/treatments/treatments.component.scss": {
-      "bytes": 38,
+    "src/shared/ui/list-view/list-view.component.scss": {
+      "bytes": 239,
       "imports": []
     },
     "src/pages/auth/auth.component.scss": {
       "bytes": 34,
       "imports": []
     },
-    "src/pages/user-profile/user-profile.component.scss": {
-      "bytes": 42,
-      "imports": []
-    },
-    "src/pages/dashboard/dashboard.component.scss": {
-      "bytes": 39,
-      "imports": []
-    },
-    "src/pages/treatments-catalog/treatments-catalog.component.scss": {
-      "bytes": 46,
-      "imports": []
-    },
-    "src/pages/settings/settings.component.scss": {
-      "bytes": 38,
+    "src/pages/gallery/gallery.component.scss": {
+      "bytes": 37,
       "imports": []
     },
     "src/shared/ui/card-view/card-view.component.scss": {
       "bytes": 244,
       "imports": []
     },
+    "src/pages/veils-catalog/veils-catalog.component.scss": {
+      "bytes": 304,
+      "imports": []
+    },
     "src/pages/user-home/user-home.component.scss": {
+      "bytes": 39,
+      "imports": []
+    },
+    "src/pages/user-profile/user-profile.component.scss": {
+      "bytes": 42,
+      "imports": []
+    },
+    "src/pages/about/about.component.scss": {
+      "bytes": 35,
+      "imports": []
+    },
+    "src/app.component.scss": {
+      "bytes": 33,
+      "imports": []
+    },
+    "src/pages/settings/settings.component.scss": {
+      "bytes": 38,
+      "imports": []
+    },
+    "src/pages/inventory/inventory.component.scss": {
+      "bytes": 39,
+      "imports": []
+    },
+    "src/features/language-selection/language-switcher.component.scss": {
+      "bytes": 47,
+      "imports": []
+    },
+    "src/pages/treatments-catalog/treatments-catalog.component.scss": {
+      "bytes": 46,
+      "imports": []
+    },
+    "src/pages/dashboard/dashboard.component.scss": {
+      "bytes": 39,
+      "imports": []
+    },
+    "src/pages/portfolio/portfolio.component.scss": {
       "bytes": 39,
       "imports": []
     },
@@ -9246,36 +9280,8 @@
       "bytes": 34,
       "imports": []
     },
-    "src/app.component.scss": {
-      "bytes": 33,
-      "imports": []
-    },
-    "src/pages/gallery/gallery.component.scss": {
-      "bytes": 37,
-      "imports": []
-    },
-    "src/pages/portfolio/portfolio.component.scss": {
-      "bytes": 39,
-      "imports": []
-    },
-    "src/shared/ui/list-view/list-view.component.scss": {
-      "bytes": 239,
-      "imports": []
-    },
-    "src/pages/inventory/inventory.component.scss": {
-      "bytes": 39,
-      "imports": []
-    },
-    "src/pages/about/about.component.scss": {
-      "bytes": 35,
-      "imports": []
-    },
-    "src/pages/veils-catalog/veils-catalog.component.scss": {
-      "bytes": 304,
-      "imports": []
-    },
-    "src/features/language-selection/language-switcher.component.scss": {
-      "bytes": 47,
+    "src/pages/treatments/treatments.component.scss": {
+      "bytes": 38,
       "imports": []
     },
     "angular:locale/data:en-US": {
@@ -9351,22 +9357,35 @@
         }
       ]
     },
+    "src/styles.scss": {
+      "bytes": 0,
+      "imports": []
+    },
     "angular:styles/global:styles": {
-      "bytes": 48,
+      "bytes": 75,
       "imports": [
         {
           "path": "node_modules/leaflet/dist/leaflet.css",
           "kind": "import-rule",
           "original": "node_modules/leaflet/dist/leaflet.css"
+        },
+        {
+          "path": "src/styles.scss",
+          "kind": "import-rule",
+          "original": "src/styles.scss"
         }
       ]
     }
   },
   "outputs": {
-    "chunk-YFXBBGOI.js": {
+    "chunk-G4LQDFJN.js": {
       "imports": [
         {
-          "path": "chunk-OKZOYAB7.js",
+          "path": "chunk-BP4FALGJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-Q2KYI4WJ.js",
           "kind": "import-statement"
         },
         {
@@ -9374,7 +9393,7 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-JBRDT5W5.js",
           "kind": "import-statement"
         },
         {
@@ -9415,9 +9434,9 @@
           "bytesInOutput": 0
         }
       },
-      "bytes": 184715
+      "bytes": 184743
     },
-    "chunk-7XZ42HPO.js": {
+    "chunk-3YMILPT7.js": {
       "imports": [
         {
           "path": "chunk-CZ6GUC4N.js",
@@ -9432,7 +9451,11 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-Q2KYI4WJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-JBRDT5W5.js",
           "kind": "import-statement"
         },
         {
@@ -9452,16 +9475,16 @@
           "bytesInOutput": 0
         }
       },
-      "bytes": 9351
+      "bytes": 9379
     },
-    "chunk-XI5S66UJ.js": {
+    "chunk-VC546ZUH.js": {
       "imports": [
         {
           "path": "chunk-FHVDMCFZ.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-MGBZPOCG.js",
+          "path": "chunk-G55UBMOH.js",
           "kind": "import-statement"
         },
         {
@@ -9469,15 +9492,19 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-OKZOYAB7.js",
+          "path": "chunk-BP4FALGJ.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-Y3XL5PBR.js",
+          "path": "chunk-Q2KYI4WJ.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-3734ZD7C.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-JBRDT5W5.js",
           "kind": "import-statement"
         },
         {
@@ -9491,22 +9518,22 @@
       "entryPoint": "src/pages/veils-catalog/index.ts",
       "inputs": {
         "src/pages/veils-catalog/veils-catalog.component.ts": {
-          "bytesInOutput": 8429
+          "bytesInOutput": 8449
         },
         "src/pages/veils-catalog/index.ts": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 8982
+      "bytes": 9030
     },
-    "chunk-IVUL47CT.js": {
+    "chunk-OFMA2N2L.js": {
       "imports": [
         {
           "path": "chunk-EFN6VTQN.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-7BNZFXRT.js",
+          "path": "chunk-NS26FMYQ.js",
           "kind": "import-statement"
         },
         {
@@ -9514,15 +9541,19 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-OKZOYAB7.js",
+          "path": "chunk-BP4FALGJ.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-Y3XL5PBR.js",
+          "path": "chunk-Q2KYI4WJ.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-3734ZD7C.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-JBRDT5W5.js",
           "kind": "import-statement"
         },
         {
@@ -9536,15 +9567,15 @@
       "entryPoint": "src/pages/treatments-catalog/index.ts",
       "inputs": {
         "src/pages/treatments-catalog/treatments-catalog.component.ts": {
-          "bytesInOutput": 9438
+          "bytesInOutput": 9469
         },
         "src/pages/treatments-catalog/index.ts": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 9994
+      "bytes": 10053
     },
-    "chunk-4WO7MMFC.js": {
+    "chunk-C5I6ZUOT.js": {
       "imports": [
         {
           "path": "chunk-MXICZ3CG.js",
@@ -9555,11 +9586,19 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-OKZOYAB7.js",
+          "path": "chunk-BP4FALGJ.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-Q2KYI4WJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-3734ZD7C.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-JBRDT5W5.js",
           "kind": "import-statement"
         },
         {
@@ -9573,26 +9612,30 @@
       "entryPoint": "src/pages/portfolio/index.ts",
       "inputs": {
         "src/pages/portfolio/portfolio.component.ts": {
-          "bytesInOutput": 5847
+          "bytesInOutput": 6978
         },
         "src/pages/portfolio/index.ts": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 6301
+      "bytes": 7500
     },
-    "chunk-QGEDKBJK.js": {
+    "chunk-7ZJC7PZJ.js": {
       "imports": [
         {
           "path": "chunk-3OC4DKNS.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-JZ74RBIC.js",
+          "path": "chunk-I2WVZKVH.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-OKZOYAB7.js",
+          "path": "chunk-BP4FALGJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-Q2KYI4WJ.js",
           "kind": "import-statement"
         },
         {
@@ -9600,7 +9643,7 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-JBRDT5W5.js",
           "kind": "import-statement"
         },
         {
@@ -9620,12 +9663,12 @@
           "bytesInOutput": 0
         }
       },
-      "bytes": 18981
+      "bytes": 19009
     },
-    "chunk-YR3ZB63S.js": {
+    "chunk-7Q5RKJV3.js": {
       "imports": [
         {
-          "path": "chunk-AUEKDZWD.js",
+          "path": "chunk-LAAI5LFC.js",
           "kind": "import-statement"
         },
         {
@@ -9641,11 +9684,15 @@
           "kind": "import-statement"
         },
         {
+          "path": "chunk-Q2KYI4WJ.js",
+          "kind": "import-statement"
+        },
+        {
           "path": "chunk-WQWRFFDP.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-JBRDT5W5.js",
           "kind": "import-statement"
         },
         {
@@ -9665,16 +9712,16 @@
           "bytesInOutput": 0
         }
       },
-      "bytes": 17250
+      "bytes": 17278
     },
-    "main-BJSU3IV5.js": {
+    "main-DJK3N7RG.js": {
       "imports": [
         {
-          "path": "chunk-AUEKDZWD.js",
+          "path": "chunk-VDYPOQWR.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-HEU542WB.js",
+          "path": "chunk-LAAI5LFC.js",
           "kind": "import-statement"
         },
         {
@@ -9686,19 +9733,19 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-B4NMLC6L.js",
-          "kind": "import-statement"
-        },
-        {
           "path": "chunk-VM2O74E3.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-Y3XL5PBR.js",
+          "path": "chunk-Q2KYI4WJ.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-3734ZD7C.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-JBRDT5W5.js",
           "kind": "import-statement"
         },
         {
@@ -9706,7 +9753,7 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-IVNKWFMG.js",
+          "path": "chunk-FLVTDJCM.js",
           "kind": "dynamic-import"
         },
         {
@@ -9714,27 +9761,27 @@
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-WB6KV366.js",
+          "path": "chunk-BUXMQXPL.js",
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-G3F6GI2U.js",
+          "path": "chunk-FGPF22YP.js",
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-MVYU7JPP.js",
+          "path": "chunk-ZWRZBHUW.js",
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-QHCYI2JT.js",
+          "path": "chunk-CUPB3CNO.js",
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-WMUTN77C.js",
+          "path": "chunk-OLHCBJGK.js",
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-YFXBBGOI.js",
+          "path": "chunk-G4LQDFJN.js",
           "kind": "dynamic-import"
         },
         {
@@ -9742,27 +9789,27 @@
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-7XZ42HPO.js",
+          "path": "chunk-3YMILPT7.js",
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-XI5S66UJ.js",
+          "path": "chunk-VC546ZUH.js",
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-IVUL47CT.js",
+          "path": "chunk-OFMA2N2L.js",
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-4WO7MMFC.js",
+          "path": "chunk-C5I6ZUOT.js",
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-QGEDKBJK.js",
+          "path": "chunk-7ZJC7PZJ.js",
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-YR3ZB63S.js",
+          "path": "chunk-7Q5RKJV3.js",
           "kind": "dynamic-import"
         }
       ],
@@ -9781,6 +9828,15 @@
         "node_modules/@angular/platform-browser/fesm2022/animations.mjs": {
           "bytesInOutput": 607
         },
+        "src/core/interceptors/api.interceptor.ts": {
+          "bytesInOutput": 396
+        },
+        "src/core/interceptors/index.ts": {
+          "bytesInOutput": 0
+        },
+        "src/core/interceptors/error.interceptor.ts": {
+          "bytesInOutput": 645
+        },
         "src/core/guards/admin.guard.ts": {
           "bytesInOutput": 164
         },
@@ -9793,15 +9849,6 @@
         "src/app.routes.ts": {
           "bytesInOutput": 1669
         },
-        "src/core/interceptors/api.interceptor.ts": {
-          "bytesInOutput": 389
-        },
-        "src/core/interceptors/index.ts": {
-          "bytesInOutput": 0
-        },
-        "src/core/interceptors/error.interceptor.ts": {
-          "bytesInOutput": 645
-        },
         "src/app/app.config.ts": {
           "bytesInOutput": 92
         },
@@ -9812,44 +9859,20 @@
           "bytesInOutput": 37
         }
       },
-      "bytes": 67212
+      "bytes": 67219
     },
-    "chunk-AUEKDZWD.js": {
+    "chunk-FLVTDJCM.js": {
       "imports": [
         {
-          "path": "chunk-CZ6GUC4N.js",
+          "path": "chunk-VDYPOQWR.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-LAAI5LFC.js",
           "kind": "import-statement"
         },
-        {
-          "path": "chunk-WRWTA5VF.js",
-          "kind": "import-statement"
-        }
-      ],
-      "exports": [
-        "a"
-      ],
-      "inputs": {
-        "src/entities/session/model/session.service.ts": {
-          "bytesInOutput": 721
-        },
-        "src/entities/session/index.ts": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 904
-    },
-    "chunk-IVNKWFMG.js": {
-      "imports": [
         {
           "path": "chunk-T3FGNGCC.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-HEU542WB.js",
           "kind": "import-statement"
         },
         {
@@ -9861,15 +9884,15 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-B4NMLC6L.js",
-          "kind": "import-statement"
-        },
-        {
           "path": "chunk-VM2O74E3.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-JZ74RBIC.js",
+          "path": "chunk-I2WVZKVH.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-Q2KYI4WJ.js",
           "kind": "import-statement"
         },
         {
@@ -9877,7 +9900,7 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-JBRDT5W5.js",
           "kind": "import-statement"
         },
         {
@@ -9891,25 +9914,85 @@
       "entryPoint": "src/pages/auth/index.ts",
       "inputs": {
         "src/features/auth/model/auth.model.ts": {
-          "bytesInOutput": 344
+          "bytesInOutput": 308
         },
         "src/features/auth/ui/signin-form/signin-form.component.ts": {
-          "bytesInOutput": 5271
+          "bytesInOutput": 4806
         },
         "src/features/auth/index.ts": {
           "bytesInOutput": 0
         },
         "src/features/auth/ui/signup-form/signup-form.component.ts": {
-          "bytesInOutput": 7010
+          "bytesInOutput": 6492
         },
         "src/pages/auth/auth.component.ts": {
-          "bytesInOutput": 3797
+          "bytesInOutput": 3771
         },
         "src/pages/auth/index.ts": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 17005
+      "bytes": 15983
+    },
+    "chunk-VDYPOQWR.js": {
+      "imports": [
+        {
+          "path": "chunk-LAAI5LFC.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-CZ6GUC4N.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-Q2KYI4WJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-WRWTA5VF.js",
+          "kind": "import-statement"
+        }
+      ],
+      "exports": [
+        "a"
+      ],
+      "inputs": {
+        "src/features/user/model/auth.service.ts": {
+          "bytesInOutput": 725
+        },
+        "src/features/user/index.ts": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 930
+    },
+    "chunk-LAAI5LFC.js": {
+      "imports": [
+        {
+          "path": "chunk-CZ6GUC4N.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-Q2KYI4WJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-WRWTA5VF.js",
+          "kind": "import-statement"
+        }
+      ],
+      "exports": [
+        "a"
+      ],
+      "inputs": {
+        "src/entities/session/model/session.service.ts": {
+          "bytesInOutput": 1035
+        },
+        "src/entities/session/index.ts": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 1218
     },
     "chunk-RONKTAFV.js": {
       "imports": [
@@ -9986,318 +10069,6 @@
       },
       "bytes": 3910
     },
-    "chunk-WB6KV366.js": {
-      "imports": [
-        {
-          "path": "chunk-MGBZPOCG.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-7BNZFXRT.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-B4NMLC6L.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-VM2O74E3.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-Q3CQBYM5.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-XQTQA43F.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-WRWTA5VF.js",
-          "kind": "import-statement"
-        }
-      ],
-      "exports": [
-        "DashboardComponent"
-      ],
-      "entryPoint": "src/pages/dashboard/index.ts",
-      "inputs": {
-        "src/pages/dashboard/dashboard.component.ts": {
-          "bytesInOutput": 8242
-        },
-        "src/pages/dashboard/index.ts": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 8682
-    },
-    "chunk-G3F6GI2U.js": {
-      "imports": [
-        {
-          "path": "chunk-FHVDMCFZ.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-MGBZPOCG.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-VM2O74E3.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-JZ74RBIC.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-OKZOYAB7.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-Y3XL5PBR.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-WQWRFFDP.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-XQTQA43F.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-WRWTA5VF.js",
-          "kind": "import-statement"
-        }
-      ],
-      "exports": [
-        "VeilFormComponent",
-        "VeilPageComponent"
-      ],
-      "entryPoint": "src/pages/veil/index.ts",
-      "inputs": {
-        "src/features/veil/model/veil.data.ts": {
-          "bytesInOutput": 1828
-        },
-        "src/features/veil/index.ts": {
-          "bytesInOutput": 0
-        },
-        "src/pages/veil/ui/veil-form/veil-form.component.ts": {
-          "bytesInOutput": 10111
-        },
-        "src/pages/veil/veil.component.ts": {
-          "bytesInOutput": 8670
-        },
-        "src/pages/veil/index.ts": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 21310
-    },
-    "chunk-FHVDMCFZ.js": {
-      "imports": [],
-      "exports": [],
-      "inputs": {
-        "src/entities/veil/index.ts": {
-          "bytesInOutput": 0
-        },
-        "src/entities/veil/constants/veil.constants.ts": {
-          "bytesInOutput": 801
-        }
-      },
-      "bytes": 802
-    },
-    "chunk-MGBZPOCG.js": {
-      "imports": [
-        {
-          "path": "chunk-XQTQA43F.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-WRWTA5VF.js",
-          "kind": "import-statement"
-        }
-      ],
-      "exports": [
-        "a"
-      ],
-      "inputs": {
-        "src/entities/veil/veil.service.ts": {
-          "bytesInOutput": 843
-        }
-      },
-      "bytes": 983
-    },
-    "chunk-MVYU7JPP.js": {
-      "imports": [
-        {
-          "path": "chunk-EFN6VTQN.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-7BNZFXRT.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-VM2O74E3.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-OKZOYAB7.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-Y3XL5PBR.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-WQWRFFDP.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-XQTQA43F.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-WRWTA5VF.js",
-          "kind": "import-statement"
-        }
-      ],
-      "exports": [
-        "TreatmentsPageComponent"
-      ],
-      "entryPoint": "src/pages/treatments/index.ts",
-      "inputs": {
-        "src/pages/treatments/components/treatment-form/treatment-form.component.ts": {
-          "bytesInOutput": 9428
-        },
-        "src/pages/treatments/treatments.component.ts": {
-          "bytesInOutput": 8153
-        },
-        "src/pages/treatments/index.ts": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 18327
-    },
-    "chunk-EFN6VTQN.js": {
-      "imports": [],
-      "exports": [],
-      "inputs": {
-        "src/entities/treatments/index.ts": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0
-    },
-    "chunk-7BNZFXRT.js": {
-      "imports": [
-        {
-          "path": "chunk-XQTQA43F.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-WRWTA5VF.js",
-          "kind": "import-statement"
-        }
-      ],
-      "exports": [
-        "a"
-      ],
-      "inputs": {
-        "src/entities/treatments/treatments.service.ts": {
-          "bytesInOutput": 962
-        }
-      },
-      "bytes": 1102
-    },
-    "chunk-QHCYI2JT.js": {
-      "imports": [
-        {
-          "path": "chunk-HEU542WB.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-CZ6GUC4N.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-3OC4DKNS.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-B4NMLC6L.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-VM2O74E3.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-Y3XL5PBR.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-WQWRFFDP.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-XQTQA43F.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-WRWTA5VF.js",
-          "kind": "import-statement"
-        }
-      ],
-      "exports": [
-        "ClientsPageComponent"
-      ],
-      "entryPoint": "src/pages/clients/index.ts",
-      "inputs": {
-        "src/features/client-form/client-form.component.ts": {
-          "bytesInOutput": 6941
-        },
-        "src/features/client-form/index.ts": {
-          "bytesInOutput": 0
-        },
-        "src/pages/clients/clients.component.ts": {
-          "bytesInOutput": 4242
-        },
-        "src/pages/clients/index.ts": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 11784
-    },
-    "chunk-HEU542WB.js": {
-      "imports": [
-        {
-          "path": "chunk-CZ6GUC4N.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-XQTQA43F.js",
-          "kind": "import-statement"
-        },
-        {
-          "path": "chunk-WRWTA5VF.js",
-          "kind": "import-statement"
-        }
-      ],
-      "exports": [
-        "a"
-      ],
-      "inputs": {
-        "src/features/user/model/auth.service.ts": {
-          "bytesInOutput": 721
-        },
-        "src/entities/user/index.ts": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 886
-    },
     "chunk-CZ6GUC4N.js": {
       "imports": [
         {
@@ -10358,6 +10129,307 @@
       },
       "bytes": 12853
     },
+    "chunk-BUXMQXPL.js": {
+      "imports": [
+        {
+          "path": "chunk-G55UBMOH.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-NS26FMYQ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-VM2O74E3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-B4NMLC6L.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-Q3CQBYM5.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-Q2KYI4WJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-JBRDT5W5.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-WRWTA5VF.js",
+          "kind": "import-statement"
+        }
+      ],
+      "exports": [
+        "DashboardComponent"
+      ],
+      "entryPoint": "src/pages/dashboard/index.ts",
+      "inputs": {
+        "src/pages/dashboard/dashboard.component.ts": {
+          "bytesInOutput": 8242
+        },
+        "src/pages/dashboard/index.ts": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 8710
+    },
+    "chunk-FGPF22YP.js": {
+      "imports": [
+        {
+          "path": "chunk-FHVDMCFZ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-G55UBMOH.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-VM2O74E3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-I2WVZKVH.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-BP4FALGJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-Q2KYI4WJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-3734ZD7C.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-WQWRFFDP.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-JBRDT5W5.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-WRWTA5VF.js",
+          "kind": "import-statement"
+        }
+      ],
+      "exports": [
+        "VeilFormComponent",
+        "VeilPageComponent"
+      ],
+      "entryPoint": "src/pages/veil/index.ts",
+      "inputs": {
+        "src/features/veil/model/veil.data.ts": {
+          "bytesInOutput": 1828
+        },
+        "src/features/veil/index.ts": {
+          "bytesInOutput": 0
+        },
+        "src/pages/veil/ui/veil-form/veil-form.component.ts": {
+          "bytesInOutput": 10111
+        },
+        "src/pages/veil/veil.component.ts": {
+          "bytesInOutput": 8670
+        },
+        "src/pages/veil/index.ts": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 21338
+    },
+    "chunk-FHVDMCFZ.js": {
+      "imports": [],
+      "exports": [],
+      "inputs": {
+        "src/entities/veil/index.ts": {
+          "bytesInOutput": 0
+        },
+        "src/entities/veil/constants/veil.constants.ts": {
+          "bytesInOutput": 801
+        }
+      },
+      "bytes": 802
+    },
+    "chunk-G55UBMOH.js": {
+      "imports": [
+        {
+          "path": "chunk-Q2KYI4WJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-JBRDT5W5.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-WRWTA5VF.js",
+          "kind": "import-statement"
+        }
+      ],
+      "exports": [
+        "a"
+      ],
+      "inputs": {
+        "src/entities/veil/veil.service.ts": {
+          "bytesInOutput": 843
+        }
+      },
+      "bytes": 1016
+    },
+    "chunk-ZWRZBHUW.js": {
+      "imports": [
+        {
+          "path": "chunk-EFN6VTQN.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-NS26FMYQ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-VM2O74E3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-BP4FALGJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-Q2KYI4WJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-3734ZD7C.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-WQWRFFDP.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-JBRDT5W5.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-WRWTA5VF.js",
+          "kind": "import-statement"
+        }
+      ],
+      "exports": [
+        "TreatmentsPageComponent"
+      ],
+      "entryPoint": "src/pages/treatments/index.ts",
+      "inputs": {
+        "src/pages/treatments/components/treatment-form/treatment-form.component.ts": {
+          "bytesInOutput": 9428
+        },
+        "src/pages/treatments/treatments.component.ts": {
+          "bytesInOutput": 8153
+        },
+        "src/pages/treatments/index.ts": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 18355
+    },
+    "chunk-EFN6VTQN.js": {
+      "imports": [],
+      "exports": [],
+      "inputs": {
+        "src/entities/treatments/index.ts": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0
+    },
+    "chunk-NS26FMYQ.js": {
+      "imports": [
+        {
+          "path": "chunk-Q2KYI4WJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-JBRDT5W5.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-WRWTA5VF.js",
+          "kind": "import-statement"
+        }
+      ],
+      "exports": [
+        "a"
+      ],
+      "inputs": {
+        "src/entities/treatments/treatments.service.ts": {
+          "bytesInOutput": 962
+        }
+      },
+      "bytes": 1135
+    },
+    "chunk-VM2O74E3.js": {
+      "imports": [],
+      "exports": [],
+      "inputs": {
+        "src/core/constants/index.ts": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0
+    },
+    "chunk-CUPB3CNO.js": {
+      "imports": [
+        {
+          "path": "chunk-B4NMLC6L.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-3734ZD7C.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-WQWRFFDP.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-JBRDT5W5.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-WRWTA5VF.js",
+          "kind": "import-statement"
+        }
+      ],
+      "exports": [
+        "ClientsPageComponent"
+      ],
+      "entryPoint": "src/pages/clients/index.ts",
+      "inputs": {
+        "src/entities/user/index.ts": {
+          "bytesInOutput": 0
+        },
+        "src/features/client-form/client-form.component.ts": {
+          "bytesInOutput": 6941
+        },
+        "src/features/client-form/index.ts": {
+          "bytesInOutput": 0
+        },
+        "src/pages/clients/clients.component.ts": {
+          "bytesInOutput": 4242
+        },
+        "src/pages/clients/index.ts": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 11672
+    },
     "chunk-B4NMLC6L.js": {
       "imports": [
         {
@@ -10375,17 +10447,7 @@
       },
       "bytes": 593
     },
-    "chunk-VM2O74E3.js": {
-      "imports": [],
-      "exports": [],
-      "inputs": {
-        "src/core/constants/index.ts": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0
-    },
-    "chunk-WMUTN77C.js": {
+    "chunk-OLHCBJGK.js": {
       "imports": [
         {
           "path": "chunk-MXICZ3CG.js",
@@ -10396,15 +10458,19 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-JZ74RBIC.js",
+          "path": "chunk-I2WVZKVH.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-OKZOYAB7.js",
+          "path": "chunk-BP4FALGJ.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-Y3XL5PBR.js",
+          "path": "chunk-Q2KYI4WJ.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "chunk-3734ZD7C.js",
           "kind": "import-statement"
         },
         {
@@ -10412,7 +10478,7 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-JBRDT5W5.js",
           "kind": "import-statement"
         },
         {
@@ -10441,7 +10507,7 @@
           "bytesInOutput": 0
         }
       },
-      "bytes": 16600
+      "bytes": 16628
     },
     "chunk-MXICZ3CG.js": {
       "imports": [],
@@ -10473,7 +10539,7 @@
       },
       "bytes": 867
     },
-    "chunk-JZ74RBIC.js": {
+    "chunk-I2WVZKVH.js": {
       "imports": [
         {
           "path": "chunk-WQWRFFDP.js",
@@ -10489,22 +10555,23 @@
         "b",
         "c",
         "d",
-        "e"
+        "e",
+        "f"
       ],
       "inputs": {
         "node_modules/@angular/forms/fesm2022/_validation_errors-chunk.mjs": {
-          "bytesInOutput": 22562
+          "bytesInOutput": 22596
         },
         "node_modules/@angular/forms/fesm2022/signals.mjs": {
           "bytesInOutput": 9430
         }
       },
-      "bytes": 32316
+      "bytes": 32358
     },
-    "chunk-OKZOYAB7.js": {
+    "chunk-BP4FALGJ.js": {
       "imports": [
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-Q2KYI4WJ.js",
           "kind": "import-statement"
         },
         {
@@ -10525,10 +10592,27 @@
       },
       "bytes": 742
     },
-    "chunk-Y3XL5PBR.js": {
+    "chunk-Q2KYI4WJ.js": {
       "imports": [
         {
-          "path": "chunk-XQTQA43F.js",
+          "path": "chunk-JBRDT5W5.js",
+          "kind": "import-statement"
+        }
+      ],
+      "exports": [
+        "a"
+      ],
+      "inputs": {
+        "src/core/constants/api-endpoints.ts": {
+          "bytesInOutput": 414
+        }
+      },
+      "bytes": 470
+    },
+    "chunk-3734ZD7C.js": {
+      "imports": [
+        {
+          "path": "chunk-JBRDT5W5.js",
           "kind": "import-statement"
         },
         {
@@ -10602,7 +10686,7 @@
       },
       "bytes": 28604
     },
-    "chunk-XQTQA43F.js": {
+    "chunk-JBRDT5W5.js": {
       "imports": [],
       "exports": [
         "a",
@@ -10610,9 +10694,7 @@
         "c",
         "d",
         "e",
-        "f",
-        "g",
-        "h"
+        "f"
       ],
       "inputs": {
         "environments/environment.ts": {
@@ -10622,19 +10704,16 @@
           "bytesInOutput": 167
         },
         "src/shared/lib/object.ts": {
-          "bytesInOutput": 386
+          "bytesInOutput": 325
         },
         "src/shared/lib/index.ts": {
           "bytesInOutput": 0
         },
         "src/shared/lib/array.ts": {
           "bytesInOutput": 45
-        },
-        "src/core/constants/api-endpoints.ts": {
-          "bytesInOutput": 414
         }
       },
-      "bytes": 1174
+      "bytes": 685
     },
     "chunk-WRWTA5VF.js": {
       "imports": [],
@@ -11158,100 +11237,20 @@
       },
       "bytes": 221412
     },
-    "treatments.component-3JU3J4R7.css": {
+    "list-view.component-43544S3S.css": {
       "imports": [],
       "inputs": {
-        "src/pages/treatments/treatments.component.scss": {
-          "bytesInOutput": 0
+        "src/shared/ui/list-view/list-view.component.scss": {
+          "bytesInOutput": 158
         }
       },
-      "bytes": 0,
+      "bytes": 159,
       "ng-component": true
     },
     "auth.component-IAK6YEY3.css": {
       "imports": [],
       "inputs": {
         "src/pages/auth/auth.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "user-profile.component-5KYZPPUP.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/user-profile/user-profile.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "dashboard.component-BRD6ARCA.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/dashboard/dashboard.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "treatments-catalog.component-XJAGPTDO.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/treatments-catalog/treatments-catalog.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "settings.component-5I5XCPGX.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/settings/settings.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "card-view.component-6XEUSBKE.css": {
-      "imports": [],
-      "inputs": {
-        "src/shared/ui/card-view/card-view.component.scss": {
-          "bytesInOutput": 182
-        }
-      },
-      "bytes": 183,
-      "ng-component": true
-    },
-    "user-home.component-VLFIUKKL.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/user-home/user-home.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "veil.component-SLDJBJKH.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/veil/veil.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "app.component-TJAU7YSO.css": {
-      "imports": [],
-      "inputs": {
-        "src/app.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11268,30 +11267,40 @@
       "bytes": 0,
       "ng-component": true
     },
-    "portfolio.component-HVS6W3CR.css": {
+    "card-view.component-6XEUSBKE.css": {
       "imports": [],
       "inputs": {
-        "src/pages/portfolio/portfolio.component.scss": {
+        "src/shared/ui/card-view/card-view.component.scss": {
+          "bytesInOutput": 182
+        }
+      },
+      "bytes": 183,
+      "ng-component": true
+    },
+    "veils-catalog.component-DRP3JBNJ.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/veils-catalog/veils-catalog.component.scss": {
+          "bytesInOutput": 260
+        }
+      },
+      "bytes": 261,
+      "ng-component": true
+    },
+    "user-home.component-VLFIUKKL.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/user-home/user-home.component.scss": {
           "bytesInOutput": 0
         }
       },
       "bytes": 0,
       "ng-component": true
     },
-    "list-view.component-43544S3S.css": {
+    "user-profile.component-5KYZPPUP.css": {
       "imports": [],
       "inputs": {
-        "src/shared/ui/list-view/list-view.component.scss": {
-          "bytesInOutput": 158
-        }
-      },
-      "bytes": 159,
-      "ng-component": true
-    },
-    "inventory.component-ETSOI3KZ.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/inventory/inventory.component.scss": {
+        "src/pages/user-profile/user-profile.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11308,20 +11317,90 @@
       "bytes": 0,
       "ng-component": true
     },
-    "veils-catalog.component-DRP3JBNJ.css": {
+    "app.component-TJAU7YSO.css": {
       "imports": [],
       "inputs": {
-        "src/pages/veils-catalog/veils-catalog.component.scss": {
-          "bytesInOutput": 260
+        "src/app.component.scss": {
+          "bytesInOutput": 0
         }
       },
-      "bytes": 261,
+      "bytes": 0,
+      "ng-component": true
+    },
+    "settings.component-5I5XCPGX.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/settings/settings.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "inventory.component-ETSOI3KZ.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/inventory/inventory.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
       "ng-component": true
     },
     "language-switcher.component-GCS7LFEK.css": {
       "imports": [],
       "inputs": {
         "src/features/language-selection/language-switcher.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "treatments-catalog.component-XJAGPTDO.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/treatments-catalog/treatments-catalog.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "dashboard.component-BRD6ARCA.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/dashboard/dashboard.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "portfolio.component-HVS6W3CR.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/portfolio/portfolio.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "veil.component-SLDJBJKH.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/veil/veil.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "treatments.component-3JU3J4R7.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/treatments/treatments.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11399,6 +11478,9 @@
       "inputs": {
         "node_modules/leaflet/dist/leaflet.css": {
           "bytesInOutput": 11071
+        },
+        "src/styles.scss": {
+          "bytesInOutput": 0
         },
         "angular:styles/global:styles": {
           "bytesInOutput": 0
