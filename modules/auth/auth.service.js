@@ -62,7 +62,7 @@ let AuthService = class AuthService {
         if (user && user.passwordHash) {
             const isMatch = await bcrypt.compare(pass, user.passwordHash);
             if (isMatch) {
-                const { createdAt, firstName, id, role, email, lastName, photoUrl, telegramId, username, } = user;
+                const { createdAt, firstName, id, role, email, lastName, photoUrl, phone, username, } = user;
                 return {
                     id,
                     email,
@@ -71,7 +71,7 @@ let AuthService = class AuthService {
                     photoUrl,
                     role,
                     username,
-                    telegramId,
+                    phone,
                     createdAt,
                 };
             }
@@ -119,7 +119,6 @@ let AuthService = class AuthService {
             email: registerDto.email,
             passwordHash: passwordHash,
             role: 'user',
-            username: registerDto.username,
         });
         const tokens = this.generateTokens(newUser);
         const { passwordHash: _, createdAt, ...userPayload } = newUser;
@@ -138,7 +137,7 @@ let AuthService = class AuthService {
                 throw new common_1.UnauthorizedException('User not found');
             }
             const tokens = this.generateTokens(user);
-            const { firstName, lastName, email, photoUrl, role, username, telegramId, } = user;
+            const { firstName, lastName, email, phone, photoUrl, role, username, } = user;
             return {
                 ...tokens,
                 user: {
@@ -146,10 +145,10 @@ let AuthService = class AuthService {
                     email,
                     firstName,
                     lastName,
+                    phone,
                     photoUrl,
                     role,
                     username,
-                    telegramId,
                 },
             };
         }

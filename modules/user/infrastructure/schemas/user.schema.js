@@ -12,20 +12,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserSchema = exports.UserSchemaEntity = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 let UserSchemaEntity = class UserSchemaEntity {
-    telegramId;
     email;
     passwordHash;
     firstName;
     lastName;
     username;
     photoUrl;
+    phone;
     role;
 };
 exports.UserSchemaEntity = UserSchemaEntity;
-__decorate([
-    (0, mongoose_1.Prop)({ required: false, unique: true, index: true, sparse: true }),
-    __metadata("design:type", Number)
-], UserSchemaEntity.prototype, "telegramId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: false, unique: true, index: true, sparse: true }),
     __metadata("design:type", String)
@@ -50,6 +46,10 @@ __decorate([
     (0, mongoose_1.Prop)({ required: false }),
     __metadata("design:type", String)
 ], UserSchemaEntity.prototype, "photoUrl", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: false, type: String }),
+    __metadata("design:type", String)
+], UserSchemaEntity.prototype, "phone", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true, default: 'user', enum: ['user', 'admin'] }),
     __metadata("design:type", String)

@@ -6,12 +6,6 @@ export declare class UserService {
     count(): Promise<number>;
     findAll(): Promise<User[]>;
     findByEmail(email: string): Promise<User | null>;
-    findOrCreate(telegramId: number, profile: {
-        firstName: string;
-        lastName?: string;
-        username?: string;
-        photoUrl?: string;
-    }): Promise<User>;
     create(user: Omit<User, 'id' | 'createdAt'> & {
         password?: string;
     }): Promise<User>;

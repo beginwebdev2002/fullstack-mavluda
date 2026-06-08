@@ -1,13 +1,13 @@
 import { HydratedDocument } from 'mongoose';
 export type UserDocument = HydratedDocument<UserSchemaEntity>;
 export declare class UserSchemaEntity {
-    telegramId: number;
     email: string;
     passwordHash: string;
     firstName: string;
     lastName: string;
     username: string;
     photoUrl: string;
+    phone: string;
     role: string;
 }
 export declare const UserSchema: import("mongoose").Schema<UserSchemaEntity, import("mongoose").Model<UserSchemaEntity, any, any, any, (import("mongoose").Document<unknown, any, UserSchemaEntity, any, import("mongoose").DefaultSchemaOptions> & UserSchemaEntity & {
@@ -29,15 +29,6 @@ export declare const UserSchema: import("mongoose").Schema<UserSchemaEntity, imp
 }, "id"> & {
     id: string;
 }, {
-    telegramId?: import("mongoose").SchemaDefinitionProperty<number, UserSchemaEntity, import("mongoose").Document<unknown, {}, UserSchemaEntity, {
-        id: string;
-    }, import("mongoose").ResolveSchemaOptions<import("mongoose").DefaultSchemaOptions>> & Omit<UserSchemaEntity & {
-        _id: import("mongoose").Types.ObjectId;
-    } & {
-        __v: number;
-    }, "id"> & {
-        id: string;
-    }> | undefined;
     email?: import("mongoose").SchemaDefinitionProperty<string, UserSchemaEntity, import("mongoose").Document<unknown, {}, UserSchemaEntity, {
         id: string;
     }, import("mongoose").ResolveSchemaOptions<import("mongoose").DefaultSchemaOptions>> & Omit<UserSchemaEntity & {
@@ -84,6 +75,15 @@ export declare const UserSchema: import("mongoose").Schema<UserSchemaEntity, imp
         id: string;
     }> | undefined;
     photoUrl?: import("mongoose").SchemaDefinitionProperty<string, UserSchemaEntity, import("mongoose").Document<unknown, {}, UserSchemaEntity, {
+        id: string;
+    }, import("mongoose").ResolveSchemaOptions<import("mongoose").DefaultSchemaOptions>> & Omit<UserSchemaEntity & {
+        _id: import("mongoose").Types.ObjectId;
+    } & {
+        __v: number;
+    }, "id"> & {
+        id: string;
+    }> | undefined;
+    phone?: import("mongoose").SchemaDefinitionProperty<string, UserSchemaEntity, import("mongoose").Document<unknown, {}, UserSchemaEntity, {
         id: string;
     }, import("mongoose").ResolveSchemaOptions<import("mongoose").DefaultSchemaOptions>> & Omit<UserSchemaEntity & {
         _id: import("mongoose").Types.ObjectId;

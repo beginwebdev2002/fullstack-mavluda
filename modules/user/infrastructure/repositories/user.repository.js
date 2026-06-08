@@ -30,10 +30,6 @@ let UserRepository = class UserRepository {
         const docs = await this.userModel.find().exec();
         return docs.map((doc) => this.toDomain(doc));
     }
-    async findByTelegramId(telegramId) {
-        const doc = await this.userModel.findOne({ telegramId }).exec();
-        return doc ? this.toDomain(doc) : null;
-    }
     async create(user) {
         const createdUser = new this.userModel(user);
         const doc = await createdUser.save();
@@ -61,7 +57,7 @@ let UserRepository = class UserRepository {
         return doc ? this.toDomain(doc) : null;
     }
     toDomain(doc) {
-        return new user_entity_1.User(doc._id.toString(), doc.firstName, doc.telegramId, doc.email, doc.passwordHash, doc.lastName, doc.username, doc.photoUrl, doc.role, doc.createdAt);
+        return new user_entity_1.User(doc._id.toString(), doc.firstName, doc.email, doc.passwordHash, doc.lastName, doc.username, doc.photoUrl, doc.phone, doc.role, doc.createdAt);
     }
 };
 exports.UserRepository = UserRepository;

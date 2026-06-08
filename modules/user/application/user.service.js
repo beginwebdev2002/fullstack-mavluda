@@ -60,17 +60,6 @@ let UserService = class UserService {
     async findByEmail(email) {
         return await this.userRepository.findByEmail(email);
     }
-    async findOrCreate(telegramId, profile) {
-        let user = await this.userRepository.findByTelegramId(telegramId);
-        if (!user) {
-            user = await this.userRepository.create({
-                telegramId,
-                ...profile,
-                role: 'user',
-            });
-        }
-        return user;
-    }
     async create(user) {
         const payload = { ...user };
         if (payload.password) {
@@ -85,7 +74,7 @@ let UserService = class UserService {
         if (!user) {
             throw new Error(`User with ID ${id} not found`);
         }
-        const { createdAt, firstName, lastName, role, email, telegramId, username, photoUrl, } = user;
+        const { createdAt, firstName, lastName, role, email, phone, username, photoUrl, } = user;
         return {
             id,
             email,
@@ -94,7 +83,7 @@ let UserService = class UserService {
             photoUrl,
             role,
             username,
-            telegramId,
+            phone,
             createdAt,
         };
     }

@@ -13,6 +13,9 @@ export declare class AuthController {
     register(registerDto: RegisterDto, res: Response): Promise<AuthResponse>;
     refresh(req: AuthenticatedRequest, res: Response): Promise<AuthResponse>;
     me(req: AuthenticatedRequest): Promise<Omit<import("../user").User, "createdAt" | "passwordHash"> | null>;
+    logout(res: Response): {
+        message: string;
+    };
     isAdmin(req: AuthenticatedRequest, res: Response): Promise<AuthResponse>;
     private setRefreshTokenCookie;
 }

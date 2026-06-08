@@ -75,6 +75,10 @@ let AuthController = class AuthController {
         const user = this.authService.whoami(req);
         return user;
     }
+    logout(res) {
+        res.clearCookie('refreshToken');
+        return { message: 'Logged out successfully' };
+    }
     async isAdmin(req, res) {
         const refreshToken = req.cookies?.refreshToken;
         if (!refreshToken) {
@@ -134,6 +138,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "me", null);
+__decorate([
+    (0, common_1.Post)('logout'),
+    __param(0, (0, common_1.Res)({ passthrough: true })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AuthController.prototype, "logout", null);
 __decorate([
     (0, common_1.Get)('check-admin'),
     __param(0, (0, common_1.Req)()),
