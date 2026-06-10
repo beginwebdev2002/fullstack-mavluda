@@ -1,5 +1,6 @@
 export declare class EnvironmentVariables {
     PORT: number;
+    IP_ADDRESS: string;
     NODE_ENV: string;
     FRONTEND_URL: string;
     MONGO_URI: string;

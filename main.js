@@ -29,7 +29,9 @@ async function bootstrap() {
         maxAge: 3600,
     });
     const PORT = configService.get('port') || 3000;
-    await app.listen(PORT);
+    const IP = configService.get('IP_ADDRESS') || '0.0.0.0';
+    console.log('🚀 ~ bootstrap ~ PORT:', IP, PORT);
+    await app.listen(PORT, IP);
 }
 bootstrap().catch((err) => console.error(err));
 //# sourceMappingURL=main.js.map

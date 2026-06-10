@@ -132,6 +132,9 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "refresh", null);
 __decorate([
+    (0, common_1.Header)('Cache-Control', 'no-cache, no-store, must-revalidate, proxy-revalidate'),
+    (0, common_1.Header)('Pragma', 'no-cache'),
+    (0, common_1.Header)('Expires', '0'),
     (0, common_1.Get)('me'),
     __param(0, (0, common_1.Req)()),
     __metadata("design:type", Function),
