@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    container_name: mavluda-backend
+    restart: always
+    ports:
+      - "3000:4100"
+    env_file:
+      - ./backend/.env
+    networks:
+      - mavluda-network
+  frontend:
+    build: ./frontend
+    container_name: mavluda-frontend
+    ports:
+      - "8088:80"
+    networks:
+      - mavluda-network
+    depends_on:
+      - backend
+
+networks:
+  mavluda-network:
+    driver: bridge

@@ -1,16 +1,18 @@
 import { plainToInstance } from 'class-transformer';
 import {
+  IsEnum,
   IsNumber,
   IsString,
   IsUrl,
-  IsEnum,
-  IsOptional,
   validateSync,
 } from 'class-validator';
 
 export class EnvironmentVariables {
   @IsNumber()
   PORT: number;
+
+  @IsString()
+  IP_ADDRESS: string;
 
   @IsString()
   @IsEnum(['development', 'production', 'test'])

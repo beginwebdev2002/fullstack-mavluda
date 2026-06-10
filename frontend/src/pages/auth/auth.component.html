@@ -4,12 +4,12 @@
   <header class="text-center mb-10">
     <div class="relative inline-block mb-6">
       <div class="w-20 h-20 rounded-full border border-primary flex items-center justify-center bg-black/40 backdrop-blur-sm gold-glow">
-        <span class="font-display text-4xl text-primary font-semibold">M</span>
+        <span class="font-display text-4xl text-primary font-semibold select-none">M</span>
       </div>
       <div class="absolute -inset-4 bg-primary/5 blur-2xl rounded-full -z-10"></div>
     </div>
-    <h1 class="font-display text-4xl md:text-5xl text-gray-900 dark:text-white mb-2 tracking-tight">Mavluda Beauty</h1>
-    <p class="font-accent text-[10px] md:text-xs tracking-[0.3em] text-primary uppercase font-bold">Medical Luxury Ecosystem</p>
+    <h1 class="font-display text-4xl md:text-5xl text-gray-900 dark:text-white mb-2 tracking-tight select-none">Mavluda Beauty</h1>
+    <p class="font-accent text-[10px] md:text-xs tracking-[0.3em] text-primary uppercase font-bold select-none">Medical Luxury Ecosystem</p>
   </header>
 
   <main class="w-full max-w-[440px]">
@@ -17,7 +17,7 @@
       <div class="flex border-b border-primary/30">
         <button 
           (click)="setAuthMode('signin')"
-          class="flex-1 py-4 text-sm font-semibold transition-colors"
+          class="flex-1 py-4 text-sm font-semibold transition-colors select-none"
           [class]="authMode() === 'signin' 
             ? 'text-primary' 
             : 'text-gray-500 hover:text-gray-700'">
@@ -25,7 +25,7 @@
         </button>
         <button 
           (click)="setAuthMode('signup')"
-          class="flex-1 py-4 text-sm font-semibold transition-colors"
+          class="flex-1 py-4 text-sm font-semibold transition-colors select-none"
           [class]="authMode() === 'signup' 
             ? 'text-primary' 
             : 'text-gray-500 hover:text-gray-700'">
@@ -41,7 +41,7 @@
       </div>
 
       <div class="px-8 py-4 bg-gray-50/50 dark:bg-black/20 border-t border-gray-200 dark:border-white/10 text-center">
-        <p class="text-[11px] text-gray-500 tracking-wide uppercase font-accent">
+        <p class="text-[11px] text-gray-500 tracking-wide uppercase font-accent select-none">
           Secure Access • End-to-End Encrypted
         </p>
       </div>
@@ -57,7 +57,7 @@
     </div>
   </main>
 
-  <footer class="mt-auto py-8 text-center text-gray-400 text-xs">
+  <footer class="mt-auto py-8 text-center text-gray-400 text-xs select-none">
     <p>© 2024 Mavluda Azizova. All rights reserved.</p>
   </footer>
 </div>

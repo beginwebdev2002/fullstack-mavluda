@@ -15,9 +15,12 @@ export const apiInterceptor: HttpInterceptorFn = (req, next) => {
     });
     return next(apiReq);
   }
+  if (req.url.startsWith('/') || req.url.startsWith('http')) {
+      return next(req);
+  }
 
   const apiReq = req.clone({
-    url: req.url.startsWith("http") ? req.url : linkServerConvert(req.url),
+    url: linkServerConvert(req.url),
     withCredentials: true,
     setHeaders: {
       Authorization: `Bearer ${accessToken}`,

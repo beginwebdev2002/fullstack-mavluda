@@ -1,6 +1,7 @@
 export const environment: Environment = {
   production: false,
-  apiUrl: "http://192.168.1.21:4100/",
+  // apiUrl: "http://10.83.95.181:4100/",
+  apiUrl: "api/",
   telegramBotName: "test_bot",
 };
 

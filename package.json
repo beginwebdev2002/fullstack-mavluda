@@ -1,0 +1,24 @@
+{
+  "name": "full-mavluda-beauty",
+  "version": "1.0.0",
+  "description": "[Root](/.)",
+  "main": "index.js",
+  "scripts": {
+    "up": "docker-compose up -d --build",
+    "down": "docker-compose down",
+    "logs": "docker-compose logs -f",
+    "exec": "docker-compose exec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beginwebdev2002/fullstack-mavluda.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/beginwebdev2002/fullstack-mavluda/issues"
+  },
+  "homepage": "https://github.com/beginwebdev2002/fullstack-mavluda#readme"
+}

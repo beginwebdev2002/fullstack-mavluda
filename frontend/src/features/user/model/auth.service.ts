@@ -52,10 +52,5 @@ export class AuthService {
       })
     );
   }
-  me(): Observable<User> {
-    const token = sessionStorage.getItem('token');
-    if(!token) return of(null);
-    return this.http.get<User>(API_ENDPOINTS.AUTH.ME);
-  }
 
 }

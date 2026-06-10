@@ -28,7 +28,9 @@ async function bootstrap() {
     maxAge: 3600,
   });
   const PORT = configService.get<number>('port') || 3000;
+  const IP = configService.get<string>('IP_ADDRESS') || '0.0.0.0';
+  console.log('🚀 ~ bootstrap ~ PORT:', IP, PORT);
 
-  await app.listen(PORT);
+  await app.listen(PORT, IP);
 }
 bootstrap().catch((err) => console.error(err));

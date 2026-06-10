@@ -6,6 +6,7 @@ import {
   Body,
   Controller,
   Get,
+  Header,
   InternalServerErrorException,
   NotFoundException,
   Post,
@@ -97,6 +98,12 @@ export class AuthController {
     }
   }
 
+  @Header(
+    'Cache-Control',
+    'no-cache, no-store, must-revalidate, proxy-revalidate',
+  )
+  @Header('Pragma', 'no-cache')
+  @Header('Expires', '0')
   @Get('me')
   async me(@Req() req: AuthenticatedRequest) {
     const user = this.authService.whoami(req);
