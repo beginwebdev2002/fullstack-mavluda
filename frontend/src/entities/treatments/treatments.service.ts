@@ -14,7 +14,7 @@ export class TreatmentsService {
   treatments = this._treatments.asReadonly();
 
   getCount(): Observable<number> {
-    return this.http.get<number>(`${API_ENDPOINTS.TREATMENTS.URL}/count`);
+    return this.http.get<number>(API_ENDPOINTS.TREATMENTS.COUNT);
   }
 
   getTreatments(): Observable<TreatmentItem[]> {

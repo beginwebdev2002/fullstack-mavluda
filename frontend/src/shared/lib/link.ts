@@ -1,4 +1,4 @@
-import { environment } from "@environments/environment";
+import { environment } from "@environments/environment.development";
 
 export function linkCombine(...links: string[]): string {
   return links
@@ -8,9 +8,23 @@ export function linkCombine(...links: string[]): string {
 }
 
 export function linkServerConvert(...link: string[]): string {
-  return `/${linkCombine(environment.apiUrl, ...link)}`;
+  const url = getApiBaseUrl();
+  
+  return `${linkCombine(url, ...link)}`;
 }
 
 export function linkMerge(...link: string[]): string {
   return linkServerConvert(...link);
+}
+
+export function getApiBaseUrl(): string {
+  if (window.location.port === '4200') {
+    return environment.apiUrl;
+  }
+
+  if ((window as any).API_URL) {
+    return (window as any).API_URL;
+  }
+
+  return '/api';
 }

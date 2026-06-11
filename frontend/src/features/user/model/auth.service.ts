@@ -17,7 +17,7 @@ export class AuthService {
   private session = inject(SessionService)
   
    signin(body: SigninFormModel) {
-    return this.http.post<AuthResponse>(API_ENDPOINTS.AUTH.LOGIN, body)
+    return this.http.post<AuthResponse>(API_ENDPOINTS.AUTH.SIGNIN, body)
     .pipe(
       tap(response => {
         if(response && response.access_token) {

@@ -7,17 +7,19 @@ import { catchError, of, retry } from "rxjs";
 export const apiInterceptor: HttpInterceptorFn = (req, next) => {
   const accessToken = sessionStorage.getItem("access_token");
   const router = inject(Router);
+  console.log('Request URL: ', linkServerConvert(req.url));
   
-  if (!accessToken) {
+  
+  if (!accessToken) {    
     const apiReq = req.clone({
       url: linkServerConvert(req.url),
       withCredentials: true,
     });
     return next(apiReq);
   }
-  if (req.url.startsWith('/') || req.url.startsWith('http')) {
-      return next(req);
-  }
+  // if (req.url.startsWith('/') || req.url.startsWith('http')) {
+  //     return next(req);
+  // }
 
   const apiReq = req.clone({
     url: linkServerConvert(req.url),
