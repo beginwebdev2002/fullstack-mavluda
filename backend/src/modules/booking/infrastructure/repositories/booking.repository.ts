@@ -43,9 +43,11 @@ export class BookingRepository {
       return null;
     }
 
-    const safeUpdateData: Partial<
-      Pick<Booking, 'customerName' | 'date' | 'status'>
-    > = {};
+    const safeUpdateData: {
+      customerName?: string;
+      date?: Date;
+      status?: 'pending' | 'confirmed' | 'cancelled';
+    } = {};
 
     if (typeof updateData.customerName === 'string') {
       safeUpdateData.customerName = updateData.customerName;

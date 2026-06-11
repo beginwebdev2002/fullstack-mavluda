@@ -43,9 +43,11 @@ export class InventoryRepository {
       return null;
     }
 
-    const sanitizedUpdate: Partial<
-      Pick<Inventory, 'itemName' | 'quantity' | 'location'>
-    > = {};
+    const sanitizedUpdate: {
+      itemName?: string;
+      quantity?: number;
+      location?: string;
+    } = {};
 
     if (typeof updateData.itemName === 'string') {
       sanitizedUpdate.itemName = updateData.itemName;

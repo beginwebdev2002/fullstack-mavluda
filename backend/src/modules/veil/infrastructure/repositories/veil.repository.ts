@@ -64,7 +64,9 @@ export class VeilRepository {
     return !!result;
   }
 
-  private sanitizeUpdateData(updateData: Partial<Veil>): Partial<Veil> {
+  private sanitizeUpdateData(
+    updateData: Partial<Veil>,
+  ): Partial<{ -readonly [P in keyof Veil]: Veil[P] }> {
     const allowedKeys: Array<keyof Veil> = [
       'name',
       'description',
@@ -81,16 +83,16 @@ export class VeilRepository {
       'stock',
     ];
 
-    const sanitized: Partial<Veil> = {};
+    const sanitized: Record<string, unknown> = {};
 
     for (const key of allowedKeys) {
       const value = updateData[key];
       if (value !== undefined) {
-        sanitized[key] = value;
+        sanitized[key as string] = value;
       }
     }
 
-    return sanitized;
+    return sanitized as Partial<{ -readonly [P in keyof Veil]: Veil[P] }>;
   }
 
   private toDomain(doc: VeilDocument): Veil {

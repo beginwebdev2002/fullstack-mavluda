@@ -39,9 +39,12 @@ export class PartnershipRepository {
     id: string,
     updateData: Partial<Partnership>,
   ): Promise<Partnership | null> {
-    const safeUpdateData: Partial<
-      Pick<Partnership, 'partnerName' | 'contactEmail' | 'type' | 'status'>
-    > = {};
+    const safeUpdateData: {
+      partnerName?: string;
+      contactEmail?: string;
+      type?: string;
+      status?: 'active' | 'inactive';
+    } = {};
 
     if (typeof updateData.partnerName === 'string') {
       safeUpdateData.partnerName = updateData.partnerName;

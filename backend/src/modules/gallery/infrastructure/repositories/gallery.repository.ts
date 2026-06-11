@@ -53,7 +53,9 @@ export class GalleryRepository {
     return doc ? this.toDomain(doc) : null;
   }
 
-  private sanitizeUpdateData(updateData: Partial<Gallery>): Partial<Gallery> {
+  private sanitizeUpdateData(
+    updateData: Partial<Gallery>,
+  ): Partial<{ -readonly [P in keyof Gallery]: Gallery[P] }> {
     const allowedKeys: Array<keyof Gallery> = [
       'title',
       'imageUrl',
@@ -62,19 +64,19 @@ export class GalleryRepository {
       'alt',
     ];
 
-    const sanitized: Partial<Gallery> = {};
+    const sanitized: Record<string, unknown> = {};
 
     for (const key of allowedKeys) {
       const value = updateData[key];
       if (value !== undefined) {
         const keyAsString = String(key);
         if (!keyAsString.includes('$') && !keyAsString.includes('.')) {
-          sanitized[key] = value;
+          sanitized[keyAsString] = value;
         }
       }
     }
 
-    return sanitized;
+    return sanitized as Partial<{ -readonly [P in keyof Gallery]: Gallery[P] }>;
   }
 
   async delete(id: string): Promise<boolean> {

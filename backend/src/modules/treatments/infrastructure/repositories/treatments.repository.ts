@@ -57,7 +57,7 @@ export class TreatmentsRepository {
 
   private sanitizeUpdateData(
     updateData: Partial<Treatments>,
-  ): Partial<Treatments> {
+  ): Partial<{ -readonly [P in keyof Treatments]: Treatments[P] }> {
     const allowedFields: Array<keyof Treatments> = [
       'name',
       'description',
@@ -68,7 +68,7 @@ export class TreatmentsRepository {
       'active',
     ];
 
-    const sanitized: Partial<Treatments> = {};
+    const sanitized: Record<string, unknown> = {};
 
     for (const field of allowedFields) {
       const key = String(field);
@@ -78,12 +78,12 @@ export class TreatmentsRepository {
       ) {
         const value = updateData[field];
         if (this.isAllowedUpdateValue(value)) {
-          sanitized[field] = value;
+          sanitized[key] = value;
         }
       }
     }
 
-    return sanitized;
+    return sanitized as Partial<{ -readonly [P in keyof Treatments]: Treatments[P] }>;
   }
 
   private isSafeUpdateKey(key: string): boolean {

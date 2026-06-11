@@ -48,11 +48,11 @@ export class UserRepository {
       'passwordHash',
     ];
 
-    const safeUpdateData: Partial<User> = {};
+    const safeUpdateData: Record<string, unknown> = {};
     for (const field of allowedFields) {
       const value = updateData[field];
       if (value !== undefined) {
-        safeUpdateData[field] = value;
+        safeUpdateData[field as string] = value;
       }
     }
 
@@ -61,7 +61,11 @@ export class UserRepository {
     }
 
     const doc = await this.userModel
-      .findByIdAndUpdate(id, { $set: safeUpdateData }, { new: true })
+      .findByIdAndUpdate(
+        id,
+        { $set: safeUpdateData as Partial<{ -readonly [P in keyof User]: User[P] }> },
+        { new: true },
+      )
       .exec();
     return doc ? this.toDomain(doc) : null;
   }
