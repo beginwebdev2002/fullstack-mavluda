@@ -43,8 +43,9 @@ export class TreatmentsRepository {
     id: string,
     updateData: Partial<Treatments>,
   ): Promise<Treatments | null> {
+    const sanitizedUpdateData = this.sanitizeUpdateData(updateData);
     const doc = await this.treatmentsModel
-      .findByIdAndUpdate(id, { $set: updateData }, { new: true })
+      .findByIdAndUpdate(id, { $set: sanitizedUpdateData }, { new: true })
       .exec();
     return doc ? this.toDomain(doc) : null;
   }
@@ -52,6 +53,51 @@ export class TreatmentsRepository {
   async delete(id: string): Promise<Treatments | null> {
     const result = await this.treatmentsModel.findByIdAndDelete(id).exec();
     return result ? this.toDomain(result) : null;
+  }
+
+  private sanitizeUpdateData(
+    updateData: Partial<Treatments>,
+  ): Partial<Treatments> {
+    const allowedFields: Array<keyof Treatments> = [
+      'name',
+      'description',
+      'price',
+      'duration',
+      'category',
+      'imageUrl',
+      'active',
+    ];
+
+    const sanitized: Partial<Treatments> = {};
+
+    for (const field of allowedFields) {
+      const key = String(field);
+      if (
+        Object.prototype.hasOwnProperty.call(updateData, key) &&
+        this.isSafeUpdateKey(key)
+      ) {
+        const value = updateData[field];
+        if (this.isAllowedUpdateValue(value)) {
+          sanitized[field] = value;
+        }
+      }
+    }
+
+    return sanitized;
+  }
+
+  private isSafeUpdateKey(key: string): boolean {
+    return !key.startsWith('$') && !key.includes('.');
+  }
+
+  private isAllowedUpdateValue(value: unknown): boolean {
+    const valueType = typeof value;
+    return (
+      value === null ||
+      valueType === 'string' ||
+      valueType === 'number' ||
+      valueType === 'boolean'
+    );
   }
 
   private toDomain(doc: TreatmentsDocument): Treatments {
