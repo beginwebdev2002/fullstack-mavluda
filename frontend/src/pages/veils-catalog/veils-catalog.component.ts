@@ -44,7 +44,6 @@ export class VeilsCatalogComponent implements OnInit {
   selectedImage = signal<string | null>(null);
 
   ngOnInit() {
-    console.log("I am Catalog");
     if (!this.adminSettingsService.settings()) {
       this.adminSettingsService.getSettings().subscribe();
     }

@@ -41,16 +41,12 @@ export class AuthComponent {
 
   onSignInSubmit(body: SigninFormModel) {
     this.authService.signin(body)
-    .subscribe((data) => {
-      console.log('Signed in Correct!', data);
-    });
+    .subscribe();
   }
 
   onSignupSubmit(body: SignupFormModel) {
     this.authService.signup(body)
-    .subscribe((data) => {
-      console.log('Signed up Correct!', data);
-    });
+    .subscribe();
   }
 
 }

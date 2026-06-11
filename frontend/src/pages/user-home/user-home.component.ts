@@ -26,8 +26,6 @@ export class UserHomeComponent implements OnInit {
   http = inject(HttpClient);
 
   ngOnInit(): void {
-    this.http.get(API_ENDPOINTS.ADMIN.SETTINGS).subscribe((res) => {
-      console.log(res);
-    });
+    this.http.get(API_ENDPOINTS.ADMIN.SETTINGS).subscribe();
   }
 }

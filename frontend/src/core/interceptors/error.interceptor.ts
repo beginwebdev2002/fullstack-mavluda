@@ -9,7 +9,6 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
   return next(req).pipe(
     catchError((error: HttpErrorResponse) => {
       let message = "An unexpected error occurred";
-      console.log("Error: ", error);
 
       if (error.error instanceof ErrorEvent) {
         // Client-side error

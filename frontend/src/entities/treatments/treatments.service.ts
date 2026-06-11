@@ -49,7 +49,6 @@ export class TreatmentsService {
       "updatedAt",
     ]);
     const url = API_ENDPOINTS.TREATMENTS.URL_BY_ID(id);
-    console.log(url);
     return this.http
       .put<TreatmentItem>(
         url,

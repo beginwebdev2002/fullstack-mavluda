@@ -22,9 +22,7 @@ export class AuthService {
       tap(response => {
         if(response && response.access_token) {
           this.session.setSession(response);
-          this.router.navigate(['/user/home']);
-          console.log('signin response', response);
-          
+          this.router.navigate(['/user/home']);          
         }
       })
     );

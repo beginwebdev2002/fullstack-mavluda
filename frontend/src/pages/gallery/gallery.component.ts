@@ -160,8 +160,5 @@ export class GalleryComponent implements OnInit {
     event.preventDefault();
     this.isDragging.set(false);
     const files = event.dataTransfer?.files;
-    if (files && files.length > 0) {
-      console.log(`${files.length} files dropped`);
-    }
   }
 }

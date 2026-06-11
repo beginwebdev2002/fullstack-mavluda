@@ -65,15 +65,6 @@ export class AboutComponent implements OnInit {
   }
 
   onSubmit() {
-    const isNameValid = this.contactForm.fullName().valid();
-    const isPhoneValid = this.contactForm.phoneNumber().valid();
-    const isServiceValid = this.contactForm.serviceOfInterest().valid();
-
-    if (isNameValid && isPhoneValid && isServiceValid) {
-      console.log('Form Submitted', this.contactModel());
-    } else {
-      console.log('Form is invalid');
-    }
   }
 
   // Helper to get social icon name from key

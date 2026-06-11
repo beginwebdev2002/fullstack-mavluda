@@ -21,8 +21,6 @@ export class GalleryRepository {
   async findAll(): Promise<Gallery[]> {
     const docs = await this.galleryModel.find().exec();
     const doc = docs.map((doc) => this.toDomain(doc));
-    console.log('DOCS: ', doc);
-
     return doc;
   }
 
