@@ -6,9 +6,7 @@ import { catchError, of, retry } from "rxjs";
 
 export const apiInterceptor: HttpInterceptorFn = (req, next) => {
   const accessToken = sessionStorage.getItem("access_token");
-  const router = inject(Router);
-  console.log('Request URL: ', linkServerConvert(req.url));
-  
+  const router = inject(Router);  
   
   if (!accessToken) {    
     const apiReq = req.clone({

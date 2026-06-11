@@ -18,11 +18,14 @@ export function linkMerge(...link: string[]): string {
 }
 
 export function getApiBaseUrl(): string {
-  if (window.location.port === '4200') {
+  const port = window.location.port;
+  const isProduction = environment.production;
+  
+  if (port && !isProduction) {
     return environment.apiUrl;
   }
 
-  if ((window as any).API_URL) {
+  if (!port && isProduction) {
     return (window as any).API_URL;
   }
 

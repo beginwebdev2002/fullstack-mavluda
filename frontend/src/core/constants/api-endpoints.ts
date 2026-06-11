@@ -1,20 +1,20 @@
-import { linkServerConvert } from "@shared/lib";
+import { linkCombine, linkServerConvert } from "@shared/lib";
 
 export const API_ENDPOINTS = {
   VEILS: {
     URL: "veils",
     COUNT: "veils/count",
-    URL_BY_ID: (id: string) => linkServerConvert(API_ENDPOINTS.VEILS.URL, id),
+    URL_BY_ID: (id: string) => linkCombine(API_ENDPOINTS.VEILS.URL, id),
   },
   TREATMENTS: {
     URL: "treatments",
     COUNT: "treatments/count",
-    URL_BY_ID: (id: string) => linkServerConvert(API_ENDPOINTS.TREATMENTS.URL, id),
+    URL_BY_ID: (id: string) => linkCombine(API_ENDPOINTS.TREATMENTS.URL, id),
   },
   GALLERY: {
     URL: "gallery",
     COUNT: "gallery/count",
-    URL_BY_ID: (id: string) => linkServerConvert(API_ENDPOINTS.GALLERY.URL, id),
+    URL_BY_ID: (id: string) => linkCombine(API_ENDPOINTS.GALLERY.URL, id),
   },
   AUTH: {
     SIGNIN: "auth/login",
@@ -32,6 +32,6 @@ export const API_ENDPOINTS = {
   USERS: {
     URL: "users",
     COUNT: "users/count",
-    URL_BY_ID: (id: string) => linkServerConvert(API_ENDPOINTS.USERS.URL, id),
+    URL_BY_ID: (id: string) => linkCombine(API_ENDPOINTS.USERS.URL, id),
   }
 } as const;
