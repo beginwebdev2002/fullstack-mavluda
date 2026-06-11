@@ -33,8 +33,35 @@ export class UserRepository {
   }
 
   async update(id: string, updateData: Partial<User>): Promise<User | null> {
+    if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
+      return null;
+    }
+
+    const allowedFields: Array<keyof User> = [
+      'firstName',
+      'lastName',
+      'email',
+      'username',
+      'photoUrl',
+      'phone',
+      'role',
+      'passwordHash',
+    ];
+
+    const safeUpdateData: Partial<User> = {};
+    for (const field of allowedFields) {
+      const value = updateData[field];
+      if (value !== undefined) {
+        safeUpdateData[field] = value;
+      }
+    }
+
+    if (Object.keys(safeUpdateData).length === 0) {
+      return this.findById(id);
+    }
+
     const doc = await this.userModel
-      .findByIdAndUpdate(id, { $set: updateData }, { new: true })
+      .findByIdAndUpdate(id, { $set: safeUpdateData }, { new: true })
       .exec();
     return doc ? this.toDomain(doc) : null;
   }
