@@ -39,8 +39,28 @@ export class PartnershipRepository {
     id: string,
     updateData: Partial<Partnership>,
   ): Promise<Partnership | null> {
+    const safeUpdateData: Partial<
+      Pick<Partnership, 'partnerName' | 'contactEmail' | 'type' | 'status'>
+    > = {};
+
+    if (typeof updateData.partnerName === 'string') {
+      safeUpdateData.partnerName = updateData.partnerName;
+    }
+    if (typeof updateData.contactEmail === 'string') {
+      safeUpdateData.contactEmail = updateData.contactEmail;
+    }
+    if (typeof updateData.type === 'string') {
+      safeUpdateData.type = updateData.type;
+    }
+    if (
+      updateData.status === 'active' ||
+      updateData.status === 'inactive'
+    ) {
+      safeUpdateData.status = updateData.status;
+    }
+
     const doc = await this.partnershipModel
-      .findByIdAndUpdate(id, { $set: updateData }, { new: true })
+      .findByIdAndUpdate(id, { $set: safeUpdateData }, { new: true })
       .exec();
     return doc ? this.toDomain(doc) : null;
   }
