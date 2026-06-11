@@ -24,9 +24,7 @@ export class VeilController {
   constructor(private readonly veilService: VeilService) {}
 
   @Get('count')
-  async count(): Promise<number> {
-    console.log('count get...');
-    
+  async count(): Promise<number> {    
     try {
       return await this.veilService.count();
     } catch {
