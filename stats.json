@@ -6591,7 +6591,7 @@
       "format": "esm"
     },
     "src/core/interceptors/error.interceptor.ts": {
-      "bytes": 1707,
+      "bytes": 1670,
       "imports": [
         {
           "path": "@angular/common/http",
@@ -7004,7 +7004,7 @@
       "format": "esm"
     },
     "src/features/user/model/auth.service.ts": {
-      "bytes": 1906,
+      "bytes": 1848,
       "imports": [
         {
           "path": "node_modules/@angular/common/fesm2022/http.mjs",
@@ -7071,7 +7071,7 @@
       "format": "esm"
     },
     "src/pages/auth/auth.component.ts": {
-      "bytes": 7806,
+      "bytes": 7658,
       "imports": [
         {
           "path": "node_modules/@angular/common/fesm2022/common.mjs",
@@ -7450,7 +7450,7 @@
       "format": "esm"
     },
     "src/entities/treatments/treatments.service.ts": {
-      "bytes": 2730,
+      "bytes": 2704,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -8291,7 +8291,7 @@
       "format": "esm"
     },
     "src/pages/gallery/gallery.component.ts": {
-      "bytes": 17208,
+      "bytes": 17099,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -8696,7 +8696,7 @@
       "format": "esm"
     },
     "src/pages/user-home/user-home.component.ts": {
-      "bytes": 18524,
+      "bytes": 18474,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -8743,7 +8743,7 @@
       "format": "esm"
     },
     "src/pages/veils-catalog/veils-catalog.component.ts": {
-      "bytes": 20098,
+      "bytes": 20061,
       "imports": [
         {
           "path": "node_modules/@angular/common/fesm2022/common.mjs",
@@ -8924,7 +8924,7 @@
       "format": "esm"
     },
     "src/pages/about/about.component.ts": {
-      "bytes": 43488,
+      "bytes": 43073,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -9221,19 +9221,11 @@
       ],
       "format": "esm"
     },
-    "src/pages/auth/auth.component.scss": {
-      "bytes": 34,
+    "src/features/language-selection/language-switcher.component.scss": {
+      "bytes": 47,
       "imports": []
     },
-    "src/shared/ui/card-view/card-view.component.scss": {
-      "bytes": 244,
-      "imports": []
-    },
-    "src/pages/inventory/inventory.component.scss": {
-      "bytes": 39,
-      "imports": []
-    },
-    "src/pages/dashboard/dashboard.component.scss": {
+    "src/pages/user-home/user-home.component.scss": {
       "bytes": 39,
       "imports": []
     },
@@ -9241,52 +9233,60 @@
       "bytes": 304,
       "imports": []
     },
-    "src/pages/about/about.component.scss": {
-      "bytes": 35,
-      "imports": []
-    },
-    "src/pages/user-profile/user-profile.component.scss": {
-      "bytes": 42,
-      "imports": []
-    },
-    "src/app.component.scss": {
-      "bytes": 33,
-      "imports": []
-    },
-    "src/pages/gallery/gallery.component.scss": {
-      "bytes": 37,
-      "imports": []
-    },
-    "src/pages/treatments-catalog/treatments-catalog.component.scss": {
-      "bytes": 46,
-      "imports": []
-    },
-    "src/pages/portfolio/portfolio.component.scss": {
-      "bytes": 39,
+    "src/pages/auth/auth.component.scss": {
+      "bytes": 34,
       "imports": []
     },
     "src/pages/veil/veil.component.scss": {
       "bytes": 34,
       "imports": []
     },
-    "src/shared/ui/list-view/list-view.component.scss": {
-      "bytes": 239,
+    "src/pages/treatments-catalog/treatments-catalog.component.scss": {
+      "bytes": 46,
       "imports": []
     },
     "src/pages/treatments/treatments.component.scss": {
       "bytes": 38,
       "imports": []
     },
-    "src/pages/user-home/user-home.component.scss": {
-      "bytes": 39,
+    "src/shared/ui/list-view/list-view.component.scss": {
+      "bytes": 239,
       "imports": []
     },
-    "src/features/language-selection/language-switcher.component.scss": {
-      "bytes": 47,
+    "src/pages/gallery/gallery.component.scss": {
+      "bytes": 37,
+      "imports": []
+    },
+    "src/pages/user-profile/user-profile.component.scss": {
+      "bytes": 42,
+      "imports": []
+    },
+    "src/pages/about/about.component.scss": {
+      "bytes": 35,
+      "imports": []
+    },
+    "src/shared/ui/card-view/card-view.component.scss": {
+      "bytes": 244,
+      "imports": []
+    },
+    "src/pages/portfolio/portfolio.component.scss": {
+      "bytes": 39,
       "imports": []
     },
     "src/pages/settings/settings.component.scss": {
       "bytes": 38,
+      "imports": []
+    },
+    "src/pages/inventory/inventory.component.scss": {
+      "bytes": 39,
+      "imports": []
+    },
+    "src/app.component.scss": {
+      "bytes": 33,
+      "imports": []
+    },
+    "src/pages/dashboard/dashboard.component.scss": {
+      "bytes": 39,
       "imports": []
     },
     "angular:locale/data:en-US": {
@@ -9437,7 +9437,7 @@
       },
       "bytes": 184715
     },
-    "chunk-BZUN6MU4.js": {
+    "chunk-OPUVEZUP.js": {
       "imports": [
         {
           "path": "chunk-CZ6GUC4N.js",
@@ -9466,15 +9466,15 @@
       "entryPoint": "src/pages/user-home/index.ts",
       "inputs": {
         "src/pages/user-home/user-home.component.ts": {
-          "bytesInOutput": 9039
+          "bytesInOutput": 9020
         },
         "src/pages/user-home/index.ts": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 9351
+      "bytes": 9332
     },
-    "chunk-MQ4FJPYD.js": {
+    "chunk-3NNMCHXI.js": {
       "imports": [
         {
           "path": "chunk-FHVDMCFZ.js",
@@ -9511,22 +9511,22 @@
       "entryPoint": "src/pages/veils-catalog/index.ts",
       "inputs": {
         "src/pages/veils-catalog/veils-catalog.component.ts": {
-          "bytesInOutput": 8449
+          "bytesInOutput": 8421
         },
         "src/pages/veils-catalog/index.ts": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 9002
+      "bytes": 8974
     },
-    "chunk-QF5HN4Q4.js": {
+    "chunk-YZHDYJ3T.js": {
       "imports": [
         {
           "path": "chunk-EFN6VTQN.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-P3ORFLUG.js",
+          "path": "chunk-JI3AV3OV.js",
           "kind": "import-statement"
         },
         {
@@ -9609,7 +9609,7 @@
       },
       "bytes": 7500
     },
-    "chunk-C2BLQATS.js": {
+    "chunk-A2FEZ33P.js": {
       "imports": [
         {
           "path": "chunk-3OC4DKNS.js",
@@ -9642,13 +9642,13 @@
       "entryPoint": "src/pages/about/index.ts",
       "inputs": {
         "src/pages/about/about.component.ts": {
-          "bytesInOutput": 18488
+          "bytesInOutput": 18270
         },
         "src/pages/about/index.ts": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 18981
+      "bytes": 18763
     },
     "chunk-5ZWTCU3Z.js": {
       "imports": [
@@ -9695,10 +9695,10 @@
       },
       "bytes": 17250
     },
-    "main-RCHVSGN7.js": {
+    "main-WELNWUN2.js": {
       "imports": [
         {
-          "path": "chunk-VYXOGIT2.js",
+          "path": "chunk-TMY2JIPO.js",
           "kind": "import-statement"
         },
         {
@@ -9730,7 +9730,7 @@
           "kind": "import-statement"
         },
         {
-          "path": "chunk-J2JSS5EZ.js",
+          "path": "chunk-G2DB2WNF.js",
           "kind": "dynamic-import"
         },
         {
@@ -9738,7 +9738,7 @@
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-BYFOQVSC.js",
+          "path": "chunk-CFLFSKVL.js",
           "kind": "dynamic-import"
         },
         {
@@ -9746,7 +9746,7 @@
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-CUDZ5R5T.js",
+          "path": "chunk-5QBJSZ7C.js",
           "kind": "dynamic-import"
         },
         {
@@ -9754,7 +9754,7 @@
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-744CT7YE.js",
+          "path": "chunk-3UDE2SQC.js",
           "kind": "dynamic-import"
         },
         {
@@ -9766,15 +9766,15 @@
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-BZUN6MU4.js",
+          "path": "chunk-OPUVEZUP.js",
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-MQ4FJPYD.js",
+          "path": "chunk-3NNMCHXI.js",
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-QF5HN4Q4.js",
+          "path": "chunk-YZHDYJ3T.js",
           "kind": "dynamic-import"
         },
         {
@@ -9782,7 +9782,7 @@
           "kind": "dynamic-import"
         },
         {
-          "path": "chunk-C2BLQATS.js",
+          "path": "chunk-A2FEZ33P.js",
           "kind": "dynamic-import"
         },
         {
@@ -9812,7 +9812,7 @@
           "bytesInOutput": 0
         },
         "src/core/interceptors/error.interceptor.ts": {
-          "bytesInOutput": 670
+          "bytesInOutput": 645
         },
         "src/core/guards/admin.guard.ts": {
           "bytesInOutput": 164
@@ -9836,12 +9836,12 @@
           "bytesInOutput": 37
         }
       },
-      "bytes": 67185
+      "bytes": 67160
     },
-    "chunk-J2JSS5EZ.js": {
+    "chunk-G2DB2WNF.js": {
       "imports": [
         {
-          "path": "chunk-VYXOGIT2.js",
+          "path": "chunk-TMY2JIPO.js",
           "kind": "import-statement"
         },
         {
@@ -9899,15 +9899,15 @@
           "bytesInOutput": 6492
         },
         "src/pages/auth/auth.component.ts": {
-          "bytesInOutput": 3855
+          "bytesInOutput": 3775
         },
         "src/pages/auth/index.ts": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 16039
+      "bytes": 15959
     },
-    "chunk-VYXOGIT2.js": {
+    "chunk-TMY2JIPO.js": {
       "imports": [
         {
           "path": "chunk-PLKIZQBE.js",
@@ -9931,13 +9931,13 @@
       ],
       "inputs": {
         "src/features/user/model/auth.service.ts": {
-          "bytesInOutput": 649
+          "bytesInOutput": 616
         },
         "src/features/user/index.ts": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 847
+      "bytes": 814
     },
     "chunk-PLKIZQBE.js": {
       "imports": [
@@ -10102,14 +10102,14 @@
       },
       "bytes": 12853
     },
-    "chunk-BYFOQVSC.js": {
+    "chunk-CFLFSKVL.js": {
       "imports": [
         {
           "path": "chunk-TB3QFVJP.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-P3ORFLUG.js",
+          "path": "chunk-JI3AV3OV.js",
           "kind": "import-statement"
         },
         {
@@ -10244,14 +10244,14 @@
       },
       "bytes": 974
     },
-    "chunk-CUDZ5R5T.js": {
+    "chunk-5QBJSZ7C.js": {
       "imports": [
         {
           "path": "chunk-EFN6VTQN.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-P3ORFLUG.js",
+          "path": "chunk-JI3AV3OV.js",
           "kind": "import-statement"
         },
         {
@@ -10306,7 +10306,7 @@
       },
       "bytes": 0
     },
-    "chunk-P3ORFLUG.js": {
+    "chunk-JI3AV3OV.js": {
       "imports": [
         {
           "path": "chunk-CICMQ7RP.js",
@@ -10322,10 +10322,10 @@
       ],
       "inputs": {
         "src/entities/treatments/treatments.service.ts": {
-          "bytesInOutput": 953
+          "bytesInOutput": 938
         }
       },
-      "bytes": 1093
+      "bytes": 1078
     },
     "chunk-LTURQBWA.js": {
       "imports": [
@@ -10398,7 +10398,7 @@
       },
       "bytes": 600
     },
-    "chunk-744CT7YE.js": {
+    "chunk-3UDE2SQC.js": {
       "imports": [
         {
           "path": "chunk-MXICZ3CG.js",
@@ -10452,13 +10452,13 @@
           "bytesInOutput": 9015
         },
         "src/pages/gallery/gallery.component.ts": {
-          "bytesInOutput": 6592
+          "bytesInOutput": 6536
         },
         "src/pages/gallery/index.ts": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 16628
+      "bytes": 16572
     },
     "chunk-MXICZ3CG.js": {
       "imports": [],
@@ -11192,140 +11192,10 @@
       },
       "bytes": 221412
     },
-    "auth.component-IAK6YEY3.css": {
+    "language-switcher.component-GCS7LFEK.css": {
       "imports": [],
       "inputs": {
-        "src/pages/auth/auth.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "card-view.component-6XEUSBKE.css": {
-      "imports": [],
-      "inputs": {
-        "src/shared/ui/card-view/card-view.component.scss": {
-          "bytesInOutput": 182
-        }
-      },
-      "bytes": 183,
-      "ng-component": true
-    },
-    "inventory.component-ETSOI3KZ.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/inventory/inventory.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "dashboard.component-BRD6ARCA.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/dashboard/dashboard.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "veils-catalog.component-DRP3JBNJ.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/veils-catalog/veils-catalog.component.scss": {
-          "bytesInOutput": 260
-        }
-      },
-      "bytes": 261,
-      "ng-component": true
-    },
-    "about.component-IPUOG6NN.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/about/about.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "user-profile.component-5KYZPPUP.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/user-profile/user-profile.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "app.component-TJAU7YSO.css": {
-      "imports": [],
-      "inputs": {
-        "src/app.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "gallery.component-KJHEZ6BI.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/gallery/gallery.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "treatments-catalog.component-XJAGPTDO.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/treatments-catalog/treatments-catalog.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "portfolio.component-HVS6W3CR.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/portfolio/portfolio.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "veil.component-SLDJBJKH.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/veil/veil.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "list-view.component-43544S3S.css": {
-      "imports": [],
-      "inputs": {
-        "src/shared/ui/list-view/list-view.component.scss": {
-          "bytesInOutput": 158
-        }
-      },
-      "bytes": 159,
-      "ng-component": true
-    },
-    "treatments.component-3JU3J4R7.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/treatments/treatments.component.scss": {
+        "src/features/language-selection/language-switcher.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11342,10 +11212,110 @@
       "bytes": 0,
       "ng-component": true
     },
-    "language-switcher.component-GCS7LFEK.css": {
+    "veils-catalog.component-DRP3JBNJ.css": {
       "imports": [],
       "inputs": {
-        "src/features/language-selection/language-switcher.component.scss": {
+        "src/pages/veils-catalog/veils-catalog.component.scss": {
+          "bytesInOutput": 260
+        }
+      },
+      "bytes": 261,
+      "ng-component": true
+    },
+    "auth.component-IAK6YEY3.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/auth/auth.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "veil.component-SLDJBJKH.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/veil/veil.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "treatments-catalog.component-XJAGPTDO.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/treatments-catalog/treatments-catalog.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "treatments.component-3JU3J4R7.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/treatments/treatments.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "list-view.component-43544S3S.css": {
+      "imports": [],
+      "inputs": {
+        "src/shared/ui/list-view/list-view.component.scss": {
+          "bytesInOutput": 158
+        }
+      },
+      "bytes": 159,
+      "ng-component": true
+    },
+    "gallery.component-KJHEZ6BI.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/gallery/gallery.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "user-profile.component-5KYZPPUP.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/user-profile/user-profile.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "about.component-IPUOG6NN.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/about/about.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "card-view.component-6XEUSBKE.css": {
+      "imports": [],
+      "inputs": {
+        "src/shared/ui/card-view/card-view.component.scss": {
+          "bytesInOutput": 182
+        }
+      },
+      "bytes": 183,
+      "ng-component": true
+    },
+    "portfolio.component-HVS6W3CR.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/portfolio/portfolio.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11356,6 +11326,36 @@
       "imports": [],
       "inputs": {
         "src/pages/settings/settings.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "inventory.component-ETSOI3KZ.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/inventory/inventory.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "app.component-TJAU7YSO.css": {
+      "imports": [],
+      "inputs": {
+        "src/app.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "dashboard.component-BRD6ARCA.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/dashboard/dashboard.component.scss": {
           "bytesInOutput": 0
         }
       },
