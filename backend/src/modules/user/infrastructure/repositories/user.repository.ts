@@ -45,7 +45,10 @@ export class UserRepository {
   }
 
   async findByEmail(email: string): Promise<User | null> {
-    const doc = await this.userModel.findOne({ email }).exec();
+    if (typeof email !== 'string' || email.trim().length === 0) {
+      return null;
+    }
+    const doc = await this.userModel.findOne({ email: { $eq: email } }).exec();
     return doc ? this.toDomain(doc) : null;
   }
 
