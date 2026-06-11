@@ -50,8 +50,10 @@ export class VeilRepository {
       fileDelete(veil.image);
     }
 
+    const sanitizedUpdateData = this.sanitizeUpdateData(updateData);
+
     const doc = await this.veilModel
-      .findByIdAndUpdate(id, { $set: updateData }, { new: true })
+      .findByIdAndUpdate(id, { $set: sanitizedUpdateData }, { new: true })
       .exec();
 
     return doc ? this.toDomain(doc) : null;
@@ -60,6 +62,35 @@ export class VeilRepository {
   async delete(id: string): Promise<boolean> {
     const result = await this.veilModel.findByIdAndDelete(id).exec();
     return !!result;
+  }
+
+  private sanitizeUpdateData(updateData: Partial<Veil>): Partial<Veil> {
+    const allowedKeys: Array<keyof Veil> = [
+      'name',
+      'description',
+      'price',
+      'rentalPrice',
+      'image',
+      'category',
+      'isAvailable',
+      'sku',
+      'silhouette',
+      'neckline',
+      'fabric',
+      'trainLength',
+      'stock',
+    ];
+
+    const sanitized: Partial<Veil> = {};
+
+    for (const key of allowedKeys) {
+      const value = updateData[key];
+      if (value !== undefined) {
+        sanitized[key] = value;
+      }
+    }
+
+    return sanitized;
   }
 
   private toDomain(doc: VeilDocument): Veil {
