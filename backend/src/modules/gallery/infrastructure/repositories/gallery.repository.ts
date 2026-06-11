@@ -44,10 +44,39 @@ export class GalleryRepository {
     id: string,
     updateData: Partial<Gallery>,
   ): Promise<Gallery | null> {
+    if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
+      return null;
+    }
+
+    const safeUpdateData = this.sanitizeUpdateData(updateData);
     const doc = await this.galleryModel
-      .findByIdAndUpdate(id, { $set: updateData }, { new: true })
+      .findByIdAndUpdate(id, { $set: safeUpdateData }, { new: true })
       .exec();
     return doc ? this.toDomain(doc) : null;
+  }
+
+  private sanitizeUpdateData(updateData: Partial<Gallery>): Partial<Gallery> {
+    const allowedKeys: Array<keyof Gallery> = [
+      'title',
+      'imageUrl',
+      'category',
+      'status',
+      'alt',
+    ];
+
+    const sanitized: Partial<Gallery> = {};
+
+    for (const key of allowedKeys) {
+      const value = updateData[key];
+      if (value !== undefined) {
+        const keyAsString = String(key);
+        if (!keyAsString.includes('$') && !keyAsString.includes('.')) {
+          sanitized[key] = value;
+        }
+      }
+    }
+
+    return sanitized;
   }
 
   async delete(id: string): Promise<boolean> {
