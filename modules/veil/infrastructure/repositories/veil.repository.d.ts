@@ -11,5 +11,6 @@ export declare class VeilRepository {
     findById(id: string): Promise<Veil | null>;
     update(id: string, updateData: Partial<Veil>): Promise<Veil | null>;
     delete(id: string): Promise<boolean>;
+    private sanitizeUpdateData;
     private toDomain;
 }

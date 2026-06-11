@@ -43,8 +43,31 @@ let UserRepository = class UserRepository {
         return doc ? this.toDomain(doc) : null;
     }
     async update(id, updateData) {
+        if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
+            return null;
+        }
+        const allowedFields = [
+            'firstName',
+            'lastName',
+            'email',
+            'username',
+            'photoUrl',
+            'phone',
+            'role',
+            'passwordHash',
+        ];
+        const safeUpdateData = {};
+        for (const field of allowedFields) {
+            const value = updateData[field];
+            if (value !== undefined) {
+                safeUpdateData[field] = value;
+            }
+        }
+        if (Object.keys(safeUpdateData).length === 0) {
+            return this.findById(id);
+        }
         const doc = await this.userModel
-            .findByIdAndUpdate(id, { $set: updateData }, { new: true })
+            .findByIdAndUpdate(id, { $set: safeUpdateData }, { new: true })
             .exec();
         return doc ? this.toDomain(doc) : null;
     }

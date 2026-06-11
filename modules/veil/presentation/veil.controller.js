@@ -26,7 +26,6 @@ let VeilController = class VeilController {
         this.veilService = veilService;
     }
     async count() {
-        console.log('count get...');
         try {
             return await this.veilService.count();
         }

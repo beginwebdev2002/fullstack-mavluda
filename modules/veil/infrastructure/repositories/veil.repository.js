@@ -56,14 +56,40 @@ let VeilRepository = class VeilRepository {
         if (veil.image) {
             (0, file_system_1.fileDelete)(veil.image);
         }
+        const sanitizedUpdateData = this.sanitizeUpdateData(updateData);
         const doc = await this.veilModel
-            .findByIdAndUpdate(id, { $set: updateData }, { new: true })
+            .findByIdAndUpdate(id, { $set: sanitizedUpdateData }, { new: true })
             .exec();
         return doc ? this.toDomain(doc) : null;
     }
     async delete(id) {
         const result = await this.veilModel.findByIdAndDelete(id).exec();
         return !!result;
+    }
+    sanitizeUpdateData(updateData) {
+        const allowedKeys = [
+            'name',
+            'description',
+            'price',
+            'rentalPrice',
+            'image',
+            'category',
+            'isAvailable',
+            'sku',
+            'silhouette',
+            'neckline',
+            'fabric',
+            'trainLength',
+            'stock',
+        ];
+        const sanitized = {};
+        for (const key of allowedKeys) {
+            const value = updateData[key];
+            if (value !== undefined) {
+                sanitized[key] = value;
+            }
+        }
+        return sanitized;
     }
     toDomain(doc) {
         const { _id, name, description, price, rentalPrice, image, category, isAvailable, sku, silhouette, neckline, fabric, trainLength, stock, createdAt, updatedAt, } = doc;

@@ -10,5 +10,8 @@ export declare class TreatmentsRepository {
     findById(id: string): Promise<Treatments | null>;
     update(id: string, updateData: Partial<Treatments>): Promise<Treatments | null>;
     delete(id: string): Promise<Treatments | null>;
+    private sanitizeUpdateData;
+    private isSafeUpdateKey;
+    private isAllowedUpdateValue;
     private toDomain;
 }

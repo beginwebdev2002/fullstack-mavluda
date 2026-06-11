@@ -43,14 +43,48 @@ let TreatmentsRepository = class TreatmentsRepository {
         return doc ? this.toDomain(doc) : null;
     }
     async update(id, updateData) {
+        const sanitizedUpdateData = this.sanitizeUpdateData(updateData);
         const doc = await this.treatmentsModel
-            .findByIdAndUpdate(id, { $set: updateData }, { new: true })
+            .findByIdAndUpdate(id, { $set: sanitizedUpdateData }, { new: true })
             .exec();
         return doc ? this.toDomain(doc) : null;
     }
     async delete(id) {
         const result = await this.treatmentsModel.findByIdAndDelete(id).exec();
         return result ? this.toDomain(result) : null;
+    }
+    sanitizeUpdateData(updateData) {
+        const allowedFields = [
+            'name',
+            'description',
+            'price',
+            'duration',
+            'category',
+            'imageUrl',
+            'active',
+        ];
+        const sanitized = {};
+        for (const field of allowedFields) {
+            const key = String(field);
+            if (Object.prototype.hasOwnProperty.call(updateData, key) &&
+                this.isSafeUpdateKey(key)) {
+                const value = updateData[field];
+                if (this.isAllowedUpdateValue(value)) {
+                    sanitized[key] = value;
+                }
+            }
+        }
+        return sanitized;
+    }
+    isSafeUpdateKey(key) {
+        return !key.startsWith('$') && !key.includes('.');
+    }
+    isAllowedUpdateValue(value) {
+        const valueType = typeof value;
+        return (value === null ||
+            valueType === 'string' ||
+            valueType === 'number' ||
+            valueType === 'boolean');
     }
     toDomain(doc) {
         return new treatments_entity_1.Treatments(doc._id.toString(), doc.name, doc.description, doc.price, doc.duration, doc.category, doc.imageUrl, doc.active, doc.createdAt, doc.updatedAt);

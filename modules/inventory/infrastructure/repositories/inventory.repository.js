@@ -40,8 +40,21 @@ let InventoryRepository = class InventoryRepository {
         return doc ? this.toDomain(doc) : null;
     }
     async update(id, updateData) {
+        if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
+            return null;
+        }
+        const sanitizedUpdate = {};
+        if (typeof updateData.itemName === 'string') {
+            sanitizedUpdate.itemName = updateData.itemName;
+        }
+        if (typeof updateData.quantity === 'number') {
+            sanitizedUpdate.quantity = updateData.quantity;
+        }
+        if (typeof updateData.location === 'string') {
+            sanitizedUpdate.location = updateData.location;
+        }
         const doc = await this.inventoryModel
-            .findByIdAndUpdate(id, { $set: updateData }, { new: true })
+            .findByIdAndUpdate(id, { $set: sanitizedUpdate }, { new: true })
             .exec();
         return doc ? this.toDomain(doc) : null;
     }

@@ -29,7 +29,6 @@ let GalleryRepository = class GalleryRepository {
     async findAll() {
         const docs = await this.galleryModel.find().exec();
         const doc = docs.map((doc) => this.toDomain(doc));
-        console.log('DOCS: ', doc);
         return doc;
     }
     async create(gallery) {
@@ -45,10 +44,34 @@ let GalleryRepository = class GalleryRepository {
         return doc ? this.toDomain(doc) : null;
     }
     async update(id, updateData) {
+        if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
+            return null;
+        }
+        const safeUpdateData = this.sanitizeUpdateData(updateData);
         const doc = await this.galleryModel
-            .findByIdAndUpdate(id, { $set: updateData }, { new: true })
+            .findByIdAndUpdate(id, { $set: safeUpdateData }, { new: true })
             .exec();
         return doc ? this.toDomain(doc) : null;
+    }
+    sanitizeUpdateData(updateData) {
+        const allowedKeys = [
+            'title',
+            'imageUrl',
+            'category',
+            'status',
+            'alt',
+        ];
+        const sanitized = {};
+        for (const key of allowedKeys) {
+            const value = updateData[key];
+            if (value !== undefined) {
+                const keyAsString = String(key);
+                if (!keyAsString.includes('$') && !keyAsString.includes('.')) {
+                    sanitized[keyAsString] = value;
+                }
+            }
+        }
+        return sanitized;
     }
     async delete(id) {
         const result = await this.galleryModel.findByIdAndDelete(id).exec();

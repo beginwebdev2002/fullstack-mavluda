@@ -9,6 +9,7 @@ export declare class GalleryRepository {
     create(gallery: Omit<Gallery, 'id' | 'createdAt'>): Promise<Gallery>;
     findById(id: string): Promise<Gallery | null>;
     update(id: string, updateData: Partial<Gallery>): Promise<Gallery | null>;
+    private sanitizeUpdateData;
     delete(id: string): Promise<boolean>;
     private toDomain;
 }
