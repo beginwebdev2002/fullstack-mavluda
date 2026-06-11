@@ -39,8 +39,43 @@ export class BookingRepository {
     id: string,
     updateData: Partial<Booking>,
   ): Promise<Booking | null> {
+    if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
+      return null;
+    }
+
+    const safeUpdateData: Partial<
+      Pick<Booking, 'customerName' | 'date' | 'status'>
+    > = {};
+
+    if (typeof updateData.customerName === 'string') {
+      safeUpdateData.customerName = updateData.customerName;
+    }
+
+    if (
+      updateData.date instanceof Date ||
+      (typeof updateData.date === 'string' &&
+        !Number.isNaN(Date.parse(updateData.date)))
+    ) {
+      safeUpdateData.date =
+        updateData.date instanceof Date
+          ? updateData.date
+          : new Date(updateData.date);
+    }
+
+    if (
+      updateData.status === 'pending' ||
+      updateData.status === 'confirmed' ||
+      updateData.status === 'cancelled'
+    ) {
+      safeUpdateData.status = updateData.status;
+    }
+
+    if (Object.keys(safeUpdateData).length === 0) {
+      return this.findById(id);
+    }
+
     const doc = await this.bookingModel
-      .findByIdAndUpdate(id, { $set: updateData }, { new: true })
+      .findByIdAndUpdate(id, { $set: safeUpdateData }, { new: true })
       .exec();
     return doc ? this.toDomain(doc) : null;
   }
