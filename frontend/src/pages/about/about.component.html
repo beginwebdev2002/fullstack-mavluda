@@ -160,34 +160,56 @@
             <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] pointer-events-none"></div>
             <h3 class="font-serif text-2xl text-white mb-2" i18n="@@aboutVIPInquiry">VIP Inquiry</h3>
             <p class="text-gray-400 text-sm mb-8" i18n="@@aboutVIPDesc">Request a private consultation. Our team will contact you within 24 hours.</p>
-            <form (ngSubmit)="onSubmit()" class="space-y-6 relative z-10">
+            <form (submit)="onSubmit($event)" class="space-y-6 relative z-10">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="space-y-2">
                   <label class="text-xs uppercase tracking-wider text-gray-500 font-bold" i18n="@@formFullName">Full Name</label>
-                  <input [formField]="contactForm.fullName" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors placeholder:text-gray-600" placeholder="e.g. Malika Karimova" i18n-placeholder="@@formFullNamePlaceholder" type="text"/>
+                  <input [formField]="contactForm.fullName" [class.border-red-500]="contactForm.fullName().touched() && contactForm.fullName().invalid()" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors placeholder:text-gray-600" placeholder="e.g. Malika Karimova" i18n-placeholder="@@formFullNamePlaceholder" type="text"/>
+                  @if (contactForm.fullName().touched() && contactForm.fullName().invalid()) {
+                    <p class="text-xs text-red-500 mt-1" i18n="@@formFullNameRequired">Full Name is required</p>
+                  }
                 </div>
                 <div class="space-y-2">
                   <label class="text-xs uppercase tracking-wider text-gray-500 font-bold" i18n="@@formPhone">Phone Number</label>
-                  <input [formField]="contactForm.phoneNumber" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors placeholder:text-gray-600" placeholder="+992 ..." i18n-placeholder="@@formPhonePlaceholder" type="tel"/>
+                  <input [formField]="contactForm.phoneNumber" [class.border-red-500]="contactForm.phoneNumber().touched() && contactForm.phoneNumber().invalid()" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors placeholder:text-gray-600" placeholder="+992 ..." i18n-placeholder="@@formPhonePlaceholder" type="tel"/>
+                  @if (contactForm.phoneNumber().touched() && contactForm.phoneNumber().invalid()) {
+                    <p class="text-xs text-red-500 mt-1" i18n="@@formPhoneRequired">Phone Number is required</p>
+                  }
                 </div>
               </div>
               <div class="space-y-2">
                 <label class="text-xs uppercase tracking-wider text-gray-500 font-bold" i18n="@@formServiceInterest">Service of Interest</label>
-                <select [formField]="contactForm.serviceOfInterest" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors">
+                <select [formField]="contactForm.serviceOfInterest" [class.border-red-500]="contactForm.serviceOfInterest().touched() && contactForm.serviceOfInterest().invalid()" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors">
                   <option value="" disabled selected i18n="@@formSelectTreatment">Select a treatment...</option>
                   @for (cat of treatmentCategories(); track cat) {
                     <option [value]="cat">{{ cat }}</option>
                   }
                 </select>
+                @if (contactForm.serviceOfInterest().touched() && contactForm.serviceOfInterest().invalid()) {
+                  <p class="text-xs text-red-500 mt-1" i18n="@@formServiceRequired">Please select a service</p>
+                }
               </div>
               <div class="space-y-2">
                 <label class="text-xs uppercase tracking-wider text-gray-500 font-bold" i18n="@@formMessage">Message</label>
                 <textarea [formField]="contactForm.message" class="w-full bg-[#151515] border-0 border-b border-[#333] focus:border-primary focus:ring-0 text-white px-0 py-3 transition-colors placeholder:text-gray-600 resize-none" placeholder="Tell us about your aesthetic goals..." i18n-placeholder="@@formMessagePlaceholder" rows="3"></textarea>
               </div>
+
+              @if (submitSuccess()) {
+                <div class="bg-green-500/10 border border-green-500/20 text-green-400 p-4 rounded-lg flex items-start gap-3">
+                  <span class="material-symbols-outlined shrink-0">check_circle</span>
+                  <p class="text-sm font-medium" i18n="@@formSuccessMessage">Your request has been sent successfully. Our concierge will contact you shortly.</p>
+                </div>
+              }
+
               <div class="pt-4">
-                <button class="w-full h-14 bg-primary hover:bg-primary-hover text-background-dark font-bold uppercase tracking-wider rounded transition-all shadow-gold flex items-center justify-center gap-2 group btn-primary-shimmer active:scale-[0.98]" type="submit">
-                  <span i18n="@@formSubmit">Submit Request</span>
-                  <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                <button [disabled]="isSubmitting() || contactForm().invalid()" class="w-full h-14 bg-primary hover:bg-primary-hover text-background-dark font-bold uppercase tracking-wider rounded transition-all shadow-gold flex items-center justify-center gap-2 group btn-primary-shimmer active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:shadow-none" type="submit">
+                  @if (isSubmitting()) {
+                    <span class="material-symbols-outlined animate-spin text-sm">progress_activity</span>
+                    <span i18n="@@formSending">Sending...</span>
+                  } @else {
+                    <span i18n="@@formSubmit">Submit Request</span>
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                  }
                 </button>
               </div>
             </form>

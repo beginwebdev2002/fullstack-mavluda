@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, inject, signal, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { form, FormField, required } from '@angular/forms/signals';
+import { form, FormField, required, submit } from '@angular/forms/signals';
 import { AdminSettingsService } from '@entities/admin-settings';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
@@ -53,6 +53,9 @@ export class AboutComponent implements OnInit {
     required(schema.serviceOfInterest);
   });
 
+  isSubmitting = signal(false);
+  submitSuccess = signal(false);
+
   // Treatment categories for the service select dropdown
   treatmentCategories = computed(() =>
     this.settings()?.treatmentCategories ?? ['Medical Facial', 'Laser Treatment', 'Injectables', 'Visagiste']
@@ -64,7 +67,33 @@ export class AboutComponent implements OnInit {
     }
   }
 
-  onSubmit() {
+  onSubmit(event?: Event) {
+    if (event) {
+      event.preventDefault();
+    }
+    
+    submit(this.contactForm, async () => {
+      this.isSubmitting.set(true);
+      this.submitSuccess.set(false);
+      
+      // Simulate API call
+      setTimeout(() => {
+        this.isSubmitting.set(false);
+        this.submitSuccess.set(true);
+        
+        // Reset form
+        this.contactForm().reset();
+        this.contactModel.set({
+          fullName: '',
+          phoneNumber: '',
+          serviceOfInterest: '',
+          message: ''
+        });
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => this.submitSuccess.set(false), 5000);
+      }, 1500);
+    });
   }
 
   // Helper to get social icon name from key
