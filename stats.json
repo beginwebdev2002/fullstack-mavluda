@@ -9216,24 +9216,44 @@
       ],
       "format": "esm"
     },
-    "src/pages/treatments/treatments.component.scss": {
-      "bytes": 38,
+    "src/pages/auth/auth.component.scss": {
+      "bytes": 34,
       "imports": []
     },
     "src/shared/ui/list-view/list-view.component.scss": {
       "bytes": 239,
       "imports": []
     },
-    "src/shared/ui/card-view/card-view.component.scss": {
-      "bytes": 244,
-      "imports": []
-    },
     "src/app.component.scss": {
       "bytes": 33,
       "imports": []
     },
+    "src/pages/gallery/gallery.component.scss": {
+      "bytes": 37,
+      "imports": []
+    },
     "src/features/language-selection/language-switcher.component.scss": {
       "bytes": 47,
+      "imports": []
+    },
+    "src/pages/veils-catalog/veils-catalog.component.scss": {
+      "bytes": 304,
+      "imports": []
+    },
+    "src/pages/portfolio/portfolio.component.scss": {
+      "bytes": 39,
+      "imports": []
+    },
+    "src/pages/inventory/inventory.component.scss": {
+      "bytes": 39,
+      "imports": []
+    },
+    "src/pages/user-home/user-home.component.scss": {
+      "bytes": 39,
+      "imports": []
+    },
+    "src/pages/treatments/treatments.component.scss": {
+      "bytes": 38,
       "imports": []
     },
     "src/pages/settings/settings.component.scss": {
@@ -9244,44 +9264,24 @@
       "bytes": 35,
       "imports": []
     },
-    "src/pages/user-profile/user-profile.component.scss": {
-      "bytes": 42,
-      "imports": []
-    },
     "src/pages/treatments-catalog/treatments-catalog.component.scss": {
       "bytes": 46,
       "imports": []
     },
-    "src/pages/auth/auth.component.scss": {
+    "src/pages/veil/veil.component.scss": {
       "bytes": 34,
       "imports": []
     },
-    "src/pages/veils-catalog/veils-catalog.component.scss": {
-      "bytes": 304,
-      "imports": []
-    },
-    "src/pages/inventory/inventory.component.scss": {
-      "bytes": 39,
-      "imports": []
-    },
-    "src/pages/portfolio/portfolio.component.scss": {
-      "bytes": 39,
-      "imports": []
-    },
-    "src/pages/gallery/gallery.component.scss": {
-      "bytes": 37,
-      "imports": []
-    },
-    "src/pages/user-home/user-home.component.scss": {
-      "bytes": 39,
+    "src/pages/user-profile/user-profile.component.scss": {
+      "bytes": 42,
       "imports": []
     },
     "src/pages/dashboard/dashboard.component.scss": {
       "bytes": 39,
       "imports": []
     },
-    "src/pages/veil/veil.component.scss": {
-      "bytes": 34,
+    "src/shared/ui/card-view/card-view.component.scss": {
+      "bytes": 244,
       "imports": []
     },
     "angular:locale/data:en-US": {
@@ -11185,10 +11185,10 @@
       },
       "bytes": 221412
     },
-    "treatments.component-3JU3J4R7.css": {
+    "auth.component-IAK6YEY3.css": {
       "imports": [],
       "inputs": {
-        "src/pages/treatments/treatments.component.scss": {
+        "src/pages/auth/auth.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11205,16 +11205,6 @@
       "bytes": 159,
       "ng-component": true
     },
-    "card-view.component-6XEUSBKE.css": {
-      "imports": [],
-      "inputs": {
-        "src/shared/ui/card-view/card-view.component.scss": {
-          "bytesInOutput": 182
-        }
-      },
-      "bytes": 183,
-      "ng-component": true
-    },
     "app.component-TJAU7YSO.css": {
       "imports": [],
       "inputs": {
@@ -11225,10 +11215,70 @@
       "bytes": 0,
       "ng-component": true
     },
+    "gallery.component-KJHEZ6BI.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/gallery/gallery.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
     "language-switcher.component-GCS7LFEK.css": {
       "imports": [],
       "inputs": {
         "src/features/language-selection/language-switcher.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "veils-catalog.component-DRP3JBNJ.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/veils-catalog/veils-catalog.component.scss": {
+          "bytesInOutput": 260
+        }
+      },
+      "bytes": 261,
+      "ng-component": true
+    },
+    "portfolio.component-HVS6W3CR.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/portfolio/portfolio.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "inventory.component-ETSOI3KZ.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/inventory/inventory.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "user-home.component-VLFIUKKL.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/user-home/user-home.component.scss": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 0,
+      "ng-component": true
+    },
+    "treatments.component-3JU3J4R7.css": {
+      "imports": [],
+      "inputs": {
+        "src/pages/treatments/treatments.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11255,16 +11305,6 @@
       "bytes": 0,
       "ng-component": true
     },
-    "user-profile.component-5KYZPPUP.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/user-profile/user-profile.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
     "treatments-catalog.component-XJAGPTDO.css": {
       "imports": [],
       "inputs": {
@@ -11275,60 +11315,20 @@
       "bytes": 0,
       "ng-component": true
     },
-    "auth.component-IAK6YEY3.css": {
+    "veil.component-SLDJBJKH.css": {
       "imports": [],
       "inputs": {
-        "src/pages/auth/auth.component.scss": {
+        "src/pages/veil/veil.component.scss": {
           "bytesInOutput": 0
         }
       },
       "bytes": 0,
       "ng-component": true
     },
-    "veils-catalog.component-DRP3JBNJ.css": {
+    "user-profile.component-5KYZPPUP.css": {
       "imports": [],
       "inputs": {
-        "src/pages/veils-catalog/veils-catalog.component.scss": {
-          "bytesInOutput": 260
-        }
-      },
-      "bytes": 261,
-      "ng-component": true
-    },
-    "inventory.component-ETSOI3KZ.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/inventory/inventory.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "portfolio.component-HVS6W3CR.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/portfolio/portfolio.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "gallery.component-KJHEZ6BI.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/gallery/gallery.component.scss": {
-          "bytesInOutput": 0
-        }
-      },
-      "bytes": 0,
-      "ng-component": true
-    },
-    "user-home.component-VLFIUKKL.css": {
-      "imports": [],
-      "inputs": {
-        "src/pages/user-home/user-home.component.scss": {
+        "src/pages/user-profile/user-profile.component.scss": {
           "bytesInOutput": 0
         }
       },
@@ -11345,14 +11345,14 @@
       "bytes": 0,
       "ng-component": true
     },
-    "veil.component-SLDJBJKH.css": {
+    "card-view.component-6XEUSBKE.css": {
       "imports": [],
       "inputs": {
-        "src/pages/veil/veil.component.scss": {
-          "bytesInOutput": 0
+        "src/shared/ui/card-view/card-view.component.scss": {
+          "bytesInOutput": 182
         }
       },
-      "bytes": 0,
+      "bytes": 183,
       "ng-component": true
     },
     "polyfills-XUCFZZM5.js": {
